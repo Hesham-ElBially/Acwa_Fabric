@@ -1,0 +1,514 @@
+table 'A09 - Audit Plan 2025 & 2024'
+	lineageTag: 8b77fc08-b588-4002-8f6b-e71bb4890c46
+	sourceLineageTag: [sch_TeamMate].[A09 - Audit Plan 2025 & 2024]
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d01cddb3-b02e-468e-8505-8aa9adbacc44
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4bc9f781-298d-4083-9b88-90d9c1b12269
+		sourceLineageTag: ProjectCode
+		summarizeBy: none
+		sourceColumn: ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedHours
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2c1a7929-b3c2-48e9-ae52-9470dc0b07ab
+		sourceLineageTag: EstimatedHours
+		summarizeBy: sum
+		sourceColumn: EstimatedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveAuditPlanTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 59116968-7f23-42bf-a607-6cf7a69a284b
+		sourceLineageTag: ActiveAuditPlanTitle
+		summarizeBy: none
+		sourceColumn: ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveAuditPlanId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e355db3c-511b-4f39-8bdb-b218451eb12a
+		sourceLineageTag: ActiveAuditPlanId
+		summarizeBy: count
+		sourceColumn: ActiveAuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualHours
+		dataType: double
+		sourceProviderType: decimal(34, 6)
+		lineageTag: e2866537-d038-499a-96bb-0bdb1f4f468c
+		sourceLineageTag: ActualHours
+		summarizeBy: sum
+		sourceColumn: ActualHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 43a9d99d-9ab3-4617-ab2f-7d119ee5113e
+		sourceLineageTag: AssessmentId
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b36cf473-0df3-4508-9f49-718c6dee126b
+		sourceLineageTag: Category1
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: be4e3241-ab17-46cf-a9dc-2ce63e2d7185
+		sourceLineageTag: Category10
+		summarizeBy: none
+		sourceColumn: Category10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 41254cd8-0edd-4a0a-a1b9-922bca94280c
+		sourceLineageTag: Category10Id
+		summarizeBy: count
+		sourceColumn: Category10Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ffbf04c8-5e37-4e2b-acec-252ba992b19f
+		sourceLineageTag: Category11
+		summarizeBy: none
+		sourceColumn: Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a079112a-f122-43dd-8218-204d9fb58a6d
+		sourceLineageTag: Category11Id
+		summarizeBy: count
+		sourceColumn: Category11Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fa7266be-e5a8-4cb4-897f-9c11637a6e00
+		sourceLineageTag: Category12
+		summarizeBy: none
+		sourceColumn: Category12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e059d136-237c-4c93-8036-6a81258b97d7
+		sourceLineageTag: Category12Id
+		summarizeBy: count
+		sourceColumn: Category12Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 669a45fd-f6fa-4ec0-a139-c7f83eb96a63
+		sourceLineageTag: Category13
+		summarizeBy: none
+		sourceColumn: Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1483d029-1c29-4c66-a51a-331f4e18e6c4
+		sourceLineageTag: Category13Id
+		summarizeBy: count
+		sourceColumn: Category13Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c6bf4b5d-1722-4ff7-ba60-a4c3035fd5ac
+		sourceLineageTag: Category1Id
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e83f1b76-78b1-4949-a1a8-379bbaf2dc9d
+		sourceLineageTag: Category2
+		summarizeBy: none
+		sourceColumn: Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 40c947db-24d3-4622-b7a1-505d0a7e245b
+		sourceLineageTag: Category2Id
+		summarizeBy: count
+		sourceColumn: Category2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 51ff6199-132d-4aed-8f6e-204a8f6fc5a2
+		sourceLineageTag: Category3
+		summarizeBy: none
+		sourceColumn: Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8a225290-d0bb-4873-9a8f-765d73ffd27c
+		sourceLineageTag: Category3Id
+		summarizeBy: count
+		sourceColumn: Category3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5036f764-9b62-42ed-9f3d-960b28d44963
+		sourceLineageTag: Category4
+		summarizeBy: none
+		sourceColumn: Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: acd6bc52-ec26-4de8-a7fb-ea080783e09a
+		sourceLineageTag: Category4Id
+		summarizeBy: count
+		sourceColumn: Category4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1c287e0f-1bc1-456e-a4a1-8a9ca71b17b4
+		sourceLineageTag: Category5
+		summarizeBy: none
+		sourceColumn: Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5ba4a8c4-52bd-44cb-be5b-6bb24cdd778a
+		sourceLineageTag: Category5Id
+		summarizeBy: count
+		sourceColumn: Category5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 659899b5-51be-4143-9ba7-7f17fa6f9e2e
+		sourceLineageTag: Category6
+		summarizeBy: none
+		sourceColumn: Category6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4674ea2b-94a6-4481-af29-e3776dd8b766
+		sourceLineageTag: Category6Id
+		summarizeBy: count
+		sourceColumn: Category6Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1df92f99-deb6-49ea-9cb8-ccbb29741d95
+		sourceLineageTag: Category9
+		summarizeBy: none
+		sourceColumn: Category9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7d76ebcf-439b-4356-84a1-b8c6fed3fa17
+		sourceLineageTag: Category9Id
+		summarizeBy: count
+		sourceColumn: Category9Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column CombinedTotalHours
+		dataType: double
+		sourceProviderType: decimal(34, 6)
+		lineageTag: e87c0fd3-b544-4ca0-9ac0-af99962f71ce
+		sourceLineageTag: CombinedTotalHours
+		summarizeBy: sum
+		sourceColumn: CombinedTotalHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CurrentProjectPhaseMilestoneValue
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0f1781e9-4f15-4f5f-ab37-366eb039501f
+		sourceLineageTag: CurrentProjectPhaseMilestoneValue
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseMilestoneValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseValue
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1bbc3c60-2c65-4987-ba8d-cd3ee744c7d8
+		sourceLineageTag: CurrentProjectPhaseValue
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategory
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: df300538-1098-4c05-a3a6-b032cae0a116
+		sourceLineageTag: LocationCategory
+		summarizeBy: none
+		sourceColumn: LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategoryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b553cf38-8c90-45af-8208-51c27e530580
+		sourceLineageTag: LocationCategoryId
+		summarizeBy: count
+		sourceColumn: LocationCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 24a39e37-5aa8-432c-ad44-0e91d149fcab
+		sourceLineageTag: MultiSelectCategory1
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ab546bda-75cf-4bf4-b05d-7252143941cb
+		sourceLineageTag: MultiSelectCategory1Id
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 28413c16-1f8e-46ae-aaad-38eaed81b930
+		sourceLineageTag: MultiSelectCategory3
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 51f9295d-8a38-4c7b-88d5-4540b97c5fe4
+		sourceLineageTag: MultiSelectCategory3Id
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectState
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4bb7369b-285b-4504-86df-6392724ea280
+		sourceLineageTag: ProjectState
+		summarizeBy: none
+		sourceColumn: ProjectState
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectStateId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5b6422a4-942d-4432-87e4-3bc186312ace
+		sourceLineageTag: ProjectStateId
+		summarizeBy: count
+		sourceColumn: ProjectStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 548a0176-38ce-481f-ac92-74d4d90c1577
+		sourceLineageTag: ProjectTitle
+		summarizeBy: none
+		sourceColumn: ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1:Category2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cc31a919-b464-4cd7-ad7a-b7a198c83761
+		sourceLineageTag: Category1:Category2
+		summarizeBy: none
+		sourceColumn: Category1:Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planned Man-Day'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2e122a19-8b93-48f3-aedc-61c821d6b16a
+		sourceLineageTag: Planned Man-Day
+		summarizeBy: sum
+		sourceColumn: Planned Man-Day
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Man-Days'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 82d4e966-a293-41a1-a112-41d4a48eca13
+		sourceLineageTag: Actual Man-Days
+		summarizeBy: sum
+		sourceColumn: Actual Man-Days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cVariance
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2b552bbd-e83b-43a2-9aa9-74446ca77764
+		sourceLineageTag: cVariance
+		summarizeBy: sum
+		sourceColumn: cVariance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cPecentageOfCompletion
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ff1651a5-b874-45d7-922f-7a6bd63e8d2e
+		sourceLineageTag: cPecentageOfCompletion
+		summarizeBy: sum
+		sourceColumn: cPecentageOfCompletion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cType
+		dataType: string
+		sourceProviderType: varchar(21)
+		lineageTag: 89097711-88f3-40cd-9da3-8c9faa9ecaa3
+		sourceLineageTag: cType
+		summarizeBy: none
+		sourceColumn: cType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A09 - Audit Plan 2025 & 2024' = entity
+		mode: directLake
+		source
+			entityName: A09 - Audit Plan 2025 & 2024
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

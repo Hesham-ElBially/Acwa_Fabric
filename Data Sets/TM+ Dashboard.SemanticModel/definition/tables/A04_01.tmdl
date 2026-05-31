@@ -1,0 +1,103 @@
+table A04_01
+	lineageTag: 13767e3f-d945-45ac-a17c-63a965e2b842
+
+	measure A04_01OverduePercentage = SUM('A04_01'[No. of Overdue Observations]) / CALCULATE(SUM('A04_01'[No. of Open Observations]), ALLSELECTED('A04_01'[Issues.Category2]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d92c1683-5933-4080-be12-7bf7b66f1e86
+
+	measure A04_01_KPI_B_Status = ```
+			SWITCH( 
+			                        TRUE,
+			                        (SELECTEDVALUE(A04_01[Issues.Category2]) = "High") && ('A04_01'[A04_01OverduePercentage] >=0.05), "01. KPI B Breach",
+			                        (SELECTEDVALUE(A04_01[Issues.Category2]) = "Significant") && ('A04_01'[A04_01OverduePercentage] >=0.1), "01. KPI B Breach",
+			                        (SELECTEDVALUE(A04_01[Issues.Category2]) = "Medium") && ('A04_01'[A04_01OverduePercentage] >=0.1), "01. KPI B Breach",
+			                        "02. KPI B Non Breach"
+			)
+			```
+		lineageTag: 73fe72eb-8796-4df5-8164-66d213329108
+
+	column 'Recommendations.Category1'
+		lineageTag: ee7bcd23-922c-4e8c-ab5b-1a19c060088c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A04 - Open Observation Report Current Month-End[Recommendations.Category1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.Category2'
+		lineageTag: 466c00e9-da51-46dc-9506-4cd5fa3a36af
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A04 - Open Observation Report Current Month-End[Issues.Category2]
+		sortByColumn: 'Rating Order'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Overdue Observations'
+		formatString: 0
+		lineageTag: 14afa83c-c709-4417-a1af-f5773a9b7209
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [No. of Overdue Observations]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Non Overdue Observations'
+		formatString: 0
+		lineageTag: dc318c2e-2589-4686-affb-a325f9fc5cdf
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [No. of Non Overdue Observations]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Open Observations'
+		formatString: 0
+		lineageTag: f57281f3-5173-4f98-a9db-b7ba9da186e2
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [No. of Open Observations]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Percentage of Overdue Observations' = A04_01[No. of Overdue Observations]/A04_01[No. of Open Observations]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 54a11470-6c68-4ba1-9faa-f4d2fe196abd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI B Status' = ```
+			SWITCH( 
+			                        TRUE,
+			                        ('A04_01'[Issues.Category2] = "High") && ('A04_01'[Percentage of Overdue Observations] >=0.05), "01. KPI B Breach",
+			                        ('A04_01'[Issues.Category2] = "Significant") && ('A04_01'[Percentage of Overdue Observations] >=0.1), "01. KPI B Breach",
+			                        ('A04_01'[Issues.Category2] = "Medium") && ('A04_01'[Percentage of Overdue Observations] >=0.1), "01. KPI B Breach",
+			                        "02. KPI B Non Breach"
+			)
+			```
+		lineageTag: 7aaf047d-0127-4b7a-878a-b834008b4fb9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order' = RELATED('A00 - Rating Order'[Order])
+		formatString: 0
+		lineageTag: 77cd1c2a-7664-48b5-a839-bfb7e30b48e9
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A04_01 = calculated
+		mode: import
+		source = ```
+				SUMMARIZE('A04 - Open Observation Report Current Month-End',
+				'A04 - Open Observation Report Current Month-End'[Recommendations.Category1],
+				'A04 - Open Observation Report Current Month-End'[Issues.Category2], 
+				"No. of Overdue Observations", COUNTROWS (FILTER ('A04 - Open Observation Report Current Month-End', 'A04 - Open Observation Report Current Month-End'[Final_Status] = "01. Overdue")),
+				"No. of Non Overdue Observations", COUNTROWS (FILTER ('A04 - Open Observation Report Current Month-End', 'A04 - Open Observation Report Current Month-End'[Final_Status] = "02. Non-Overdue")),
+				"No. of Open Observations", COUNT('A04 - Open Observation Report Current Month-End'[RecommendationId]))
+				```
+
+	annotation PBI_Id = c3493bf85e31446ab8485380f13f4d8a
+

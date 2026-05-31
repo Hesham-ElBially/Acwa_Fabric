@@ -1,0 +1,49 @@
+table FolderTexts
+	lineageTag: d7a4fcf7-66f3-4ee2-b4a3-bf2cceb39ac6
+
+	column FolderId
+		dataType: int64
+		formatString: 0
+		lineageTag: 47588386-0704-446f-b8e5-118cda2a7f12
+		summarizeBy: none
+		sourceColumn: FolderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: 6c2c2b7e-7bfd-4feb-b21b-44a524659e71
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: d87ddf4c-30e7-41e6-830c-b579ec51b927
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: 912f7f90-7a1b-42a2-82c4-fbac5aecc53d
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FolderTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    FolderTexts_table = Source{[Name="FolderTexts",Signature="table"]}[Data]
+				in
+				    FolderTexts_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

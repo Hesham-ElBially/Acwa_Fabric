@@ -1,0 +1,47 @@
+table WorkpaperTexts
+	lineageTag: 0084c96b-7ff9-462f-a1dc-865aef04ba2e
+
+	column WorkpaperId
+		dataType: int64
+		formatString: 0
+		lineageTag: d623c2d4-9918-48c7-a144-e71dee43535e
+		summarizeBy: none
+		sourceColumn: WorkpaperId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: b03384f9-1f40-44ba-bcc4-98f5897c2684
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: 0b470f65-078e-4c9d-bdd0-242005b91896
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: 7f7870f6-7419-427f-9c6e-867b877e1665
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition WorkpaperTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    WorkpaperTexts_table = Source{[Name="WorkpaperTexts",Signature="table"]}[Data]
+				in
+				    WorkpaperTexts_table
+
+	annotation PBI_ResultType = Table
+

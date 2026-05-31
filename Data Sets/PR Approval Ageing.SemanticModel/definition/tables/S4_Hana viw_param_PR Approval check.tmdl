@@ -1,0 +1,201 @@
+table 'S4_Hana viw_param_PR Approval check'
+	lineageTag: 1fb14d95-0bdf-43fe-a975-4d2f15d80d03
+
+	column 'Plant Code'
+		dataType: string
+		lineageTag: 90d4ac95-27f6-4725-8980-718b50997c1f
+		summarizeBy: none
+		sourceColumn: Plant Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Name'
+		dataType: string
+		lineageTag: 17d11f29-8eaf-46aa-bc5a-dc8ceb9b670d
+		summarizeBy: none
+		sourceColumn: Plant Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase Requistion'
+		dataType: string
+		lineageTag: 4c0192a9-d6e8-46aa-b202-de9c02ac6ea7
+		summarizeBy: none
+		sourceColumn: Purchase Requistion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By'
+		dataType: string
+		lineageTag: 32285719-2baf-4d4b-a046-a5a85573454c
+		summarizeBy: none
+		sourceColumn: PR Created By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_FIRST_NAME'
+		dataType: string
+		lineageTag: e0827226-6fb9-4425-a212-faa92b6e796d
+		summarizeBy: none
+		sourceColumn: PR Created By_FIRST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_LAST_NAME'
+		dataType: string
+		lineageTag: 4bdefbb4-508d-49c2-864b-a9adff110b6e
+		summarizeBy: none
+		sourceColumn: PR Created By_LAST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_FULL_NAME'
+		dataType: string
+		lineageTag: 522a14ef-cd6e-4dde-a7d3-6c9e88057b26
+		summarizeBy: none
+		sourceColumn: PR Created By_FULL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_EMAIL'
+		dataType: string
+		lineageTag: 9a68c43e-e487-4ad6-9697-8c0921d81f18
+		summarizeBy: none
+		sourceColumn: PR Created By_EMAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Creation Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 32a00b7a-1974-425c-b0fa-59bd87ea7931
+		summarizeBy: none
+		sourceColumn: PR Creation Date
+
+		variation Variation
+			isDefault
+			relationship: ba09dffc-ceab-406a-8549-69ba398b3a3b
+			defaultHierarchy: LocalDateTable_9562c703-bce9-45f5-bcc4-70020b880163.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'PR Approved By'
+		dataType: string
+		lineageTag: 05c03b73-636b-444a-8a66-0039bc5980cf
+		summarizeBy: none
+		sourceColumn: PR Approved By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Approved By_FIRST_NAME'
+		dataType: string
+		lineageTag: 910d90e2-eef7-4923-a7b1-17b1389eb55e
+		summarizeBy: none
+		sourceColumn: PR Approved By_FIRST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Approved By_LAST_NAME'
+		dataType: string
+		lineageTag: c86d3018-d113-4b5e-a9f2-6689874e3e38
+		summarizeBy: none
+		sourceColumn: PR Approved By_LAST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Approved By_FULL_NAME'
+		dataType: string
+		lineageTag: 407ae8f6-eb7c-4d92-a74f-a82152fc150b
+		summarizeBy: none
+		sourceColumn: PR Approved By_FULL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Approved By_EMAIL'
+		dataType: string
+		lineageTag: 3fe1999f-6135-4e2b-8d7a-53ba07e436bc
+		summarizeBy: none
+		sourceColumn: PR Approved By_EMAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Approved Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6fb21faa-6205-4f02-b686-daa6ce136c3f
+		summarizeBy: none
+		sourceColumn: PR Approved Date
+
+		variation Variation
+			isDefault
+			relationship: f6d311d1-296a-48da-95aa-82b41d4f15a5
+			defaultHierarchy: LocalDateTable_7ff33be0-19a7-4e0e-8680-322bbf36c07b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column cDaysTakenToApprove
+		dataType: int64
+		formatString: 0
+		lineageTag: 1167f1d8-48cb-47b7-af3d-e9e152d3a1a9
+		summarizeBy: sum
+		sourceColumn: cDaysTakenToApprove
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Approved Date Time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d2c5ed36-c430-4884-a346-bc74f340ddad
+		summarizeBy: none
+		sourceColumn: PR Approved Date Time
+
+		variation Variation
+			isDefault
+			relationship: dfff3cd1-ef37-4ecf-8323-d4d1eeaeab8b
+			defaultHierarchy: LocalDateTable_63dde406-a747-4878-9953-a8fbe89df8d4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Name'
+		dataType: string
+		lineageTag: 991503ca-57f2-45ed-bab5-d4c90ef9672f
+		summarizeBy: none
+		sourceColumn: Company Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Code : Plant Name' = 'S4_Hana viw_param_PR Approval check'[Plant Code] & " : " & 'S4_Hana viw_param_PR Approval check'[Plant Name]
+		lineageTag: ce96d61a-a53e-4831-b4e3-ae4aa1098abf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BUKRS_Company Code'
+		dataType: string
+		lineageTag: 38235db8-29c7-4071-853a-5b5c590a87c1
+		summarizeBy: none
+		sourceColumn: BUKRS_Company Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code : Company Name' = 'S4_Hana viw_param_PR Approval check'[BUKRS_Company Code] & " : " & 'S4_Hana viw_param_PR Approval check'[Company Name]
+		lineageTag: 75d8f904-02e7-46cd-a0b2-a9693d6e6747
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'S4_Hana viw_param_PR Approval check' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("4quiwbo2nopupn6dkut4jokage-6nv4rrosqdyebioghi7mrs634e.datawarehouse.fabric.microsoft.com", "lh_IA_Bronze"),
+				    #"S4_Hana_viw_param_PR Approval check" = Source{[Schema="SAPHANADB",Item="viw_PR Approval Ageing"]}[Data]
+				in
+				    #"S4_Hana_viw_param_PR Approval check"
+
+	annotation PBI_ResultType = Table
+

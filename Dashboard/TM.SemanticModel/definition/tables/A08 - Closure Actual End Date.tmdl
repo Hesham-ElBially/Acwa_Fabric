@@ -1,0 +1,56 @@
+table 'A08 - Closure Actual End Date'
+	lineageTag: e906f0f4-7038-4a19-83ef-f4a01635964b
+	sourceLineageTag: [sch_TeamMate].[A08 - Closure Actual End Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9bf77bd1-acb1-412b-b92b-ec564e84008b
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d06eb449-b09b-49d5-9837-291958180386
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0e395e14-f975-4693-95cf-63737dc8e561
+		sourceLineageTag: ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 862e4b5d-252c-4a34-b1f9-5aa99560677e
+		sourceLineageTag: ActEndDate
+		summarizeBy: none
+		sourceColumn: ActEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Closure Actual End Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Closure Actual End Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

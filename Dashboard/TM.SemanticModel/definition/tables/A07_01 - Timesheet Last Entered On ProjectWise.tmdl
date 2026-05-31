@@ -1,0 +1,54 @@
+table 'A07_01 - Timesheet Last Entered On ProjectWise'
+	lineageTag: b80a91c2-eb17-4058-9343-72de589ee669
+	sourceLineageTag: [sch_TimeSheet].[A07_01 - Timesheet Last Entered On ProjectWise]
+
+	column 'Projects.ActiveAuditPlanTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7874c5ba-b1bc-4af2-a29d-96d25a514833
+		sourceLineageTag: Projects.ActiveAuditPlanTitle
+		summarizeBy: none
+		sourceColumn: Projects.ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 54f9eb93-2370-46de-8771-7fedd6e9e76b
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d296eadd-38c1-48ff-9b48-57783b6c576e
+		sourceLineageTag: Projects.ProjectTitle
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Entered On'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: fa8422fe-67d4-4834-b8c9-b471f819d180
+		sourceLineageTag: Last Entered On
+		summarizeBy: none
+		sourceColumn: Last Entered On
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A07_01 - Timesheet Last Entered On ProjectWise' = entity
+		mode: directLake
+		source
+			entityName: A07_01 - Timesheet Last Entered On ProjectWise
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

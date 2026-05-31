@@ -1,0 +1,72 @@
+table 'A07_01 - Timesheet Last Entered On ProjectWise'
+	lineageTag: fb6eeb66-dc26-4224-bef7-14b1add1970e
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		lineageTag: 65853fd1-b22f-4f11-b9d8-bfc824ea90cd
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		lineageTag: 003c33f7-e5e0-4b56-8d5c-56c5acabeaaa
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ActiveAuditPlanTitle'
+		dataType: string
+		lineageTag: 961ec555-2402-4728-a938-8371dfc97d3d
+		summarizeBy: none
+		sourceColumn: Projects.ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Entered On'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6fa4b943-78e4-4204-b5fd-f11328962f64
+		summarizeBy: none
+		sourceColumn: Last Entered On
+
+		variation Variation
+			isDefault
+			relationship: 0ba6e98f-eb9c-4aa6-9de9-d0fe9fa52a77
+			defaultHierarchy: LocalDateTable_48fb2d5e-4080-4d87-9bcf-b8462f2177dc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'A07_01 - Timesheet Last Entered On ProjectWise' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(TimeTrackingEntries, {"TimeTrackingEntryId"}, TimeTrackingEntries, {"TimeTrackingEntryId"}, "TimeTrackingEntries", JoinKind.LeftOuter),
+				    #"Expanded TimeTrackingEntries" = Table.ExpandTableColumn(Source, "TimeTrackingEntries", {"TimeTrackingEntryId", "DateOfEntry", "TimeEntryUserId", "TimeEntryUser", "TimesheetId", "AssessmentId", "ProjectId", "ProjectPhaseId", "TimeAdminId", "TimeNonWorkingId", "TimeHolidayId", "TimeEntryTypeId", "TimeEntryType", "AuditPlanId", "Hours", "Comment", "TimeCategory2Id", "TimeCategory3Id", "Timesheet", "Assessment", "Project", "ProjectPhase", "TimeAdmin", "TimeNonWorking", "TimeHoliday", "AuditPlan", "TimeCategory2", "TimeCategory3"}, {"TimeTrackingEntries.TimeTrackingEntryId", "TimeTrackingEntries.DateOfEntry", "TimeTrackingEntries.TimeEntryUserId", "TimeTrackingEntries.TimeEntryUser", "TimeTrackingEntries.TimesheetId", "TimeTrackingEntries.AssessmentId", "TimeTrackingEntries.ProjectId", "TimeTrackingEntries.ProjectPhaseId", "TimeTrackingEntries.TimeAdminId", "TimeTrackingEntries.TimeNonWorkingId", "TimeTrackingEntries.TimeHolidayId", "TimeTrackingEntries.TimeEntryTypeId", "TimeTrackingEntries.TimeEntryType", "TimeTrackingEntries.AuditPlanId", "TimeTrackingEntries.Hours", "TimeTrackingEntries.Comment", "TimeTrackingEntries.TimeCategory2Id", "TimeTrackingEntries.TimeCategory3Id", "TimeTrackingEntries.Timesheet", "TimeTrackingEntries.Assessment", "TimeTrackingEntries.Project", "TimeTrackingEntries.ProjectPhase", "TimeTrackingEntries.TimeAdmin", "TimeTrackingEntries.TimeNonWorking", "TimeTrackingEntries.TimeHoliday", "TimeTrackingEntries.AuditPlan", "TimeTrackingEntries.TimeCategory2", "TimeTrackingEntries.TimeCategory3"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded TimeTrackingEntries", each ([TimeEntryUser] <> "Alawi Al Dawood" and [TimeEntryUser] <> "Ali Hasany" and [TimeEntryUser] <> "Arunkumar Ramamurthy" and [TimeEntryUser] <> "CM Champion" and [TimeEntryUser] <> "Haitham Alqarawi" and [TimeEntryUser] <> "Hatem Alwabel" and [TimeEntryUser] <> "Ikram Razvi" and [TimeEntryUser] <> "Mir Fahad Iqbal" and [TimeEntryUser] <> "Pradeep Gupta" and [TimeEntryUser] <> "Soheira Yousaf" and [TimeEntryUser] <> "Sushil Singh")),
+				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows", {"TimesheetId"}, Timesheets, {"TimesheetId"}, "Timesheets", JoinKind.LeftOuter),
+				    #"Expanded Timesheets" = Table.ExpandTableColumn(#"Merged Queries", "Timesheets", {"TimesheetId", "BeginDate", "EndDate", "UserId", "User", "TimesheetStateId", "TimesheetState", "TimesheetStateSubActionId", "TimesheetStateSubAction"}, {"Timesheets.TimesheetId", "Timesheets.BeginDate", "Timesheets.EndDate", "Timesheets.UserId", "Timesheets.User", "Timesheets.TimesheetStateId", "Timesheets.TimesheetState", "Timesheets.TimesheetStateSubActionId", "Timesheets.TimesheetStateSubAction"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded Timesheets", {"ProjectId"}, Projects, {"ProjectId"}, "Projects", JoinKind.LeftOuter),
+				    #"Expanded Projects" = Table.ExpandTableColumn(#"Merged Queries1", "Projects", {"ProjectId", "AssessmentId", "ProjectTitle", "ProjectCode", "Category1Id", "Category1", "Category2Id", "Category2", "LocationCategoryId", "LocationCategory", "Category3Id", "Category3", "Category4Id", "Category4", "Category5Id", "Category5", "Category6Id", "Category6", "Category7Id", "Category7", "Category8Id", "Category8", "Category9Id", "Category9", "Category10Id", "Category10", "Category11Id", "Category11", "Category12Id", "Category12", "Category13Id", "Category13", "RiskCategoryId", "RiskCategory", "FinalRiskCategoryId", "FinalRiskCategory", "MultiSelectCategory1Id", "MultiSelectCategory1", "MultiSelectCategory2Id", "MultiSelectCategory2", "MultiSelectCategory3Id", "MultiSelectCategory3", "MultiSelectCategory4Id", "MultiSelectCategory4", "MultiSelectCategory5Id", "MultiSelectCategory5", "MultiSelectCategory6Id", "MultiSelectCategory6", "MultiSelectCategory7Id", "MultiSelectCategory7", "NumericValue1", "NumericValue2", "NumericValue3", "NumericValue4", "NumericValue5", "NumericValue6", "NumericValue7", "EstimatedStartDate", "EstimatedEndDate", "ActualStartDate", "ActualEndDate", "Date1", "Date2", "Date3", "Date4", "Date5", "Date6", "EstimatedHours", "ActualHours", "EstimatedResourceCosts", "ActualResourceCosts", "EstimatedExternalCosts", "ActualExternalCosts", "EstimatedExpenses", "ActualExpenses", "ProjectStateId", "ProjectState", "CurrentProjectPhaseValue", "CurrentProjectPhaseMilestoneValue", "CombinedTotalHours", "CompletedDate", "ScheduledStartDate", "ScheduledEndDate", "ActiveAuditPlanId", "ActiveAuditPlanTitle", "ProjectApprovalStateId", "ProjectApprovalState", "YesNo1", "YesNo2", "YesNo3", "YesNo4", "YesNo5", "IsMigrated", "IsOfflineMergeEnabled", "ExcludeAssessmentObjects", "LastModifiedDate", "LastModifiedUserId", "LastModifiedUser"}, {"Projects.ProjectId", "Projects.AssessmentId", "Projects.ProjectTitle", "Projects.ProjectCode", "Projects.Category1Id", "Projects.Category1", "Projects.Category2Id", "Projects.Category2", "Projects.LocationCategoryId", "Projects.LocationCategory", "Projects.Category3Id", "Projects.Category3", "Projects.Category4Id", "Projects.Category4", "Projects.Category5Id", "Projects.Category5", "Projects.Category6Id", "Projects.Category6", "Projects.Category7Id", "Projects.Category7", "Projects.Category8Id", "Projects.Category8", "Projects.Category9Id", "Projects.Category9", "Projects.Category10Id", "Projects.Category10", "Projects.Category11Id", "Projects.Category11", "Projects.Category12Id", "Projects.Category12", "Projects.Category13Id", "Projects.Category13", "Projects.RiskCategoryId", "Projects.RiskCategory", "Projects.FinalRiskCategoryId", "Projects.FinalRiskCategory", "Projects.MultiSelectCategory1Id", "Projects.MultiSelectCategory1", "Projects.MultiSelectCategory2Id", "Projects.MultiSelectCategory2", "Projects.MultiSelectCategory3Id", "Projects.MultiSelectCategory3", "Projects.MultiSelectCategory4Id", "Projects.MultiSelectCategory4", "Projects.MultiSelectCategory5Id", "Projects.MultiSelectCategory5", "Projects.MultiSelectCategory6Id", "Projects.MultiSelectCategory6", "Projects.MultiSelectCategory7Id", "Projects.MultiSelectCategory7", "Projects.NumericValue1", "Projects.NumericValue2", "Projects.NumericValue3", "Projects.NumericValue4", "Projects.NumericValue5", "Projects.NumericValue6", "Projects.NumericValue7", "Projects.EstimatedStartDate", "Projects.EstimatedEndDate", "Projects.ActualStartDate", "Projects.ActualEndDate", "Projects.Date1", "Projects.Date2", "Projects.Date3", "Projects.Date4", "Projects.Date5", "Projects.Date6", "Projects.EstimatedHours", "Projects.ActualHours", "Projects.EstimatedResourceCosts", "Projects.ActualResourceCosts", "Projects.EstimatedExternalCosts", "Projects.ActualExternalCosts", "Projects.EstimatedExpenses", "Projects.ActualExpenses", "Projects.ProjectStateId", "Projects.ProjectState", "Projects.CurrentProjectPhaseValue", "Projects.CurrentProjectPhaseMilestoneValue", "Projects.CombinedTotalHours", "Projects.CompletedDate", "Projects.ScheduledStartDate", "Projects.ScheduledEndDate", "Projects.ActiveAuditPlanId", "Projects.ActiveAuditPlanTitle", "Projects.ProjectApprovalStateId", "Projects.ProjectApprovalState", "Projects.YesNo1", "Projects.YesNo2", "Projects.YesNo3", "Projects.YesNo4", "Projects.YesNo5", "Projects.IsMigrated", "Projects.IsOfflineMergeEnabled", "Projects.ExcludeAssessmentObjects", "Projects.LastModifiedDate", "Projects.LastModifiedUserId", "Projects.LastModifiedUser"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded Projects", {"TimeAdminId"}, TimeAdmins, {"TimeAdminId"}, "TimeAdmins", JoinKind.LeftOuter),
+				    #"Expanded TimeAdmins" = Table.ExpandTableColumn(#"Merged Queries2", "TimeAdmins", {"TimeAdminId", "TimeAdminName", "IsTimeAdminActive"}, {"TimeAdmins.TimeAdminId", "TimeAdmins.TimeAdminName", "TimeAdmins.IsTimeAdminActive"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded TimeAdmins", {"TimeNonWorkingId"}, TimeNonWorkings, {"TimeNonWorkingId"}, "TimeNonWorkings", JoinKind.LeftOuter),
+				    #"Expanded TimeNonWorkings" = Table.ExpandTableColumn(#"Merged Queries3", "TimeNonWorkings", {"TimeNonWorkingId", "TimeNonWorkingName", "IsTimeNonWorkingActive"}, {"TimeNonWorkings.TimeNonWorkingId", "TimeNonWorkings.TimeNonWorkingName", "TimeNonWorkings.IsTimeNonWorkingActive"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Expanded TimeNonWorkings", {"TimeHolidayId"}, TimeHolidays, {"TimeHolidayId"}, "TimeHolidays", JoinKind.LeftOuter),
+				    #"Expanded TimeHolidays" = Table.ExpandTableColumn(#"Merged Queries4", "TimeHolidays", {"TimeHolidayId", "HolidayName", "HolidayDate", "IsHolidayActive"}, {"TimeHolidays.TimeHolidayId", "TimeHolidays.HolidayName", "TimeHolidays.HolidayDate", "TimeHolidays.IsHolidayActive"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Expanded TimeHolidays", each [Projects.ActiveAuditPlanTitle] = "2024 Audit Plan "),
+				    #"Merged Queries5" = Table.NestedJoin(#"Filtered Rows1", {"TimesheetId"}, TimesheetWorkflowHistory, {"TimesheetId"}, "TimesheetWorkflowHistory", JoinKind.LeftOuter),
+				    #"Expanded TimesheetWorkflowHistory" = Table.ExpandTableColumn(#"Merged Queries5", "TimesheetWorkflowHistory", {"ActionDate", "WorkflowState", "WorkflowSubAction"}, {"TimesheetWorkflowHistory.ActionDate", "TimesheetWorkflowHistory.WorkflowState", "TimesheetWorkflowHistory.WorkflowSubAction"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded TimesheetWorkflowHistory",{{"TimesheetWorkflowHistory.ActionDate", type date}}),
+					#"Grouped Rows" = Table.Group(#"Changed Type", {"Projects.ActiveAuditPlanTitle", "Projects.ProjectCode", "Projects.ProjectTitle"}, {{"Last Entered On", each List.Max([TimesheetWorkflowHistory.ActionDate]), type nullable date}})
+				in
+				    #"Grouped Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

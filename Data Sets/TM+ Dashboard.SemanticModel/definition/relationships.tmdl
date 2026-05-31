@@ -1,0 +1,4379 @@
+relationship 2a31b6af-35a8-4ae8-9ba4-175c441fb455
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Users.LastLogin
+	toColumn: LocalDateTable_0b5fdfa9-9fac-4b13-a787-f1a33ad55e3e.Date
+
+relationship 26ba96bd-3565-40f1-9006-1b64e921a171
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Users.LastLogout
+	toColumn: LocalDateTable_6b6db6fe-c8c9-42ef-8dfc-f8d8a0b704f3.Date
+
+relationship dcd7df96-9563-489f-bb08-94e71147d35f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Entities.LastAuditDate
+	toColumn: LocalDateTable_c2f66b3b-e9b6-499b-ad01-e917050f6b88.Date
+
+relationship 7f76c305-1df3-41a4-ae87-e9f7b3186a6d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Assessments.StartDate
+	toColumn: LocalDateTable_1916c2fe-9c7c-41e1-9899-8918dddd478e.Date
+
+relationship 850ffdce-fcf2-4c1f-8501-0ef90ad621b6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Assessments.EndDate
+	toColumn: LocalDateTable_f773f941-123e-4760-9c87-2a96cdb49088.Date
+
+relationship 8b89c3d3-0964-4165-91f1-925ff8d36106
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Assessments.CreatedDate
+	toColumn: LocalDateTable_4f8b8018-fb52-4fd5-80c0-f07c65945eaa.Date
+
+relationship c4277234-3873-4bd5-868b-57fcf381f189
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Assessments.LastModifiedDate
+	toColumn: LocalDateTable_eac7b1ba-3a34-41e8-9c1d-f981542e9459.Date
+
+relationship f61b281d-ae51-436f-94af-3956ab095972
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReports.DueDate
+	toColumn: LocalDateTable_f9451f8d-8d54-45b3-a153-8989ed3a61a2.Date
+
+relationship 5cbbda07-804b-4b0e-b248-e9d564600f9d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReports.ReviewDueDate
+	toColumn: LocalDateTable_ac93a41b-d25d-4cf7-a57d-e17ae62a4ff6.Date
+
+relationship d38ac927-6e68-4455-a4f8-bf4a739b560f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReports.BusinessReviewDueDate
+	toColumn: LocalDateTable_ee1ecd34-1f6e-4ac2-a6cd-a6a8561a9308.Date
+
+relationship 0597c735-0840-42e8-b680-2bcb4f8fb30a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReports.LastInProgressDate
+	toColumn: LocalDateTable_e6022033-f567-4ca4-af1d-daddf13320e8.Date
+
+relationship f610ffde-928b-48a4-bc00-4488461f38e0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReports.LastCompletedDate
+	toColumn: LocalDateTable_9885de24-969c-4237-af0b-9a9e934ad056.Date
+
+relationship ec8fb03e-a793-4187-b021-c5a6f320f2a9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReports.LastReviewedDate
+	toColumn: LocalDateTable_e7c26ab7-3f69-40db-bf1e-51bb7f7fef9d.Date
+
+relationship 563589be-92f1-4bdb-901a-84c438f64fb6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReports.LastModifiedDate
+	toColumn: LocalDateTable_a1cbc8ab-c735-4210-ad49-d1eb3007c255.Date
+
+relationship e7021c75-6c24-4ddf-be22-1671df60a805
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditReportWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_31df1463-077a-4139-bc16-6720e75697d2.Date
+
+relationship bc26de83-e78d-4310-a6d0-c68928f581d8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CoachingNoteComments.CommentDate
+	toColumn: LocalDateTable_d67388b6-25a0-4fa1-ad5d-7d142a448b06.Date
+
+relationship d9c0daf1-4892-4f1b-9f50-302ae76cebe5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CoachingNotes.DueDate
+	toColumn: LocalDateTable_f5639ee2-979d-485b-bf5b-bacefb1673c8.Date
+
+relationship 9dd0eaa9-1b64-4798-b831-4383164f8e33
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CoachingNotes.ReviewDueDate
+	toColumn: LocalDateTable_4ab8323f-46d4-417c-ba67-e08e05d3a63f.Date
+
+relationship 699313c2-409f-4ed1-9021-7d943072a75d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CoachingNotes.LastInProgressDate
+	toColumn: LocalDateTable_9769119c-0c87-4fd5-b3af-4fb92ebf4d1a.Date
+
+relationship 5081f54e-a414-425d-beaa-c7b5ff7ee843
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CoachingNotes.LastCompletedDate
+	toColumn: LocalDateTable_e1ad984b-82eb-4e14-8d56-c3c8fbefe597.Date
+
+relationship fd3a6321-b84d-4da0-9896-3175fdd9fc27
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CoachingNotes.LastReviewedDate
+	toColumn: LocalDateTable_91316600-4516-417b-a84c-3f44aaadf65a.Date
+
+relationship f33f0d99-c3cf-43f7-ac04-628bfd1d78a7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CoachingNoteWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_ef27a200-ecc2-4bf1-86ac-7c299975faaf.Date
+
+relationship 6b84a7ca-e0fd-424e-beea-71e4ef7edddc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Controls.DueDate
+	toColumn: LocalDateTable_336b646f-b9bf-4768-85da-7c0ae66772e1.Date
+
+relationship 45144304-ddc2-48eb-88ba-4076535d8282
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Controls.ReviewDueDate
+	toColumn: LocalDateTable_ee6c6f0e-e273-4642-9915-a855b7ca6305.Date
+
+relationship 0aebc117-7b2e-4f19-b14c-719d9f59e644
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Controls.LastNotStartedDate
+	toColumn: LocalDateTable_07a575ac-5347-476e-96cb-99a88203e69f.Date
+
+relationship bafe6ec3-e08a-48ae-ba53-d7d43fa8504e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Controls.LastInProgressDate
+	toColumn: LocalDateTable_396aa436-d539-4b90-bbe2-1c346cdc3c66.Date
+
+relationship 2343c00d-ab22-4c7c-b20b-b73684a003b9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Controls.LastCompletedDate
+	toColumn: LocalDateTable_cf4d04ed-70b2-4f0f-8830-c3a0074d8e43.Date
+
+relationship 426f2192-7b7b-4604-92ae-e3d182e7b857
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Controls.LastReviewedDate
+	toColumn: LocalDateTable_54071a3c-c1c0-4278-a57c-bd7f153a741f.Date
+
+relationship 0c0933f8-05c4-4139-a8e6-a010f632b9de
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Controls.LastModifiedDate
+	toColumn: LocalDateTable_431c8f86-079b-4ecf-aba0-cbeb3c896e18.Date
+
+relationship 58b721a4-858b-482b-bedd-7ea59e36103a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ControlWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_d673d7aa-4a5c-4499-bdb6-451e478c4a9c.Date
+
+relationship f473131a-1b94-42b1-b0b1-7f4a071b044e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DocumentRequests.DueDate
+	toColumn: LocalDateTable_bafec791-3e3d-44fa-8e4b-baf2c33b09f4.Date
+
+relationship 0ef4e993-3b30-463c-8730-8f63f243ab88
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DocumentRequests.SentDate
+	toColumn: LocalDateTable_004815c2-1294-4acc-872a-5ac54a0d2712.Date
+
+relationship 15532eda-bce8-41d7-ae44-fca85ae10597
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DocumentRequests.LastModifiedDate
+	toColumn: LocalDateTable_af19c897-8edd-4817-804c-6d3870b129bc.Date
+
+relationship 7f3c81d5-95f3-4999-bf57-a50679bcd88e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: EntityAssessmentDetails.Date2
+	toColumn: LocalDateTable_7e783cfd-9a3e-4364-9dd2-b02daf6f656e.Date
+
+relationship 1b152bb0-ddb5-4f5f-9219-f89455c52438
+	joinOnDateBehavior: datePartOnly
+	fromColumn: EntityAssessmentDetails.Date3
+	toColumn: LocalDateTable_5d2fba7f-e85c-4359-828e-27119773cc46.Date
+
+relationship c65bc4c4-a1b9-4731-b42e-537bf65e2eb5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: EntityAssessmentDetails.Date4
+	toColumn: LocalDateTable_c09303a2-8b3d-4962-880a-747dc038c98a.Date
+
+relationship 4ac6b73b-1420-40cb-a30e-11a5525b3a53
+	joinOnDateBehavior: datePartOnly
+	fromColumn: EntityAssessmentDetails.Date5
+	toColumn: LocalDateTable_6ab2cf3e-699e-4d13-8049-8fa0c13a106d.Date
+
+relationship 4a023bdc-0f10-4388-a375-7d190621c14d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: EntityAssessmentDetails.Date6
+	toColumn: LocalDateTable_a45c1523-f098-464e-8221-b76ed1b702fc.Date
+
+relationship d79d3ba3-de33-4a12-9f65-f72816c3809d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Folders.DueDate
+	toColumn: LocalDateTable_a3c3d9b9-58bc-43c7-adbe-881c19f62478.Date
+
+relationship d7e0faa8-c75f-44c4-b428-cb48b9b300b8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Folders.ReviewDueDate
+	toColumn: LocalDateTable_5d0aab8b-c1ba-479b-85d1-b9572aae1a18.Date
+
+relationship c9a91602-3cce-4445-9874-3b53e6f8fa68
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Folders.LastNotStartedDate
+	toColumn: LocalDateTable_0881ae13-fc75-4aa5-9e27-de0824e2101e.Date
+
+relationship 3c6acc4a-91ae-4533-9499-dd40a199017a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Folders.LastInProgressDate
+	toColumn: LocalDateTable_94596ff5-4723-4cea-8b22-25204d79a9c8.Date
+
+relationship 3593b583-bb05-4dd7-a7bd-09d80c6bfcc4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Folders.LastCompletedDate
+	toColumn: LocalDateTable_286704ea-45fe-407a-bbd3-7734e0042fd6.Date
+
+relationship d723c5e2-0f07-45d3-bf03-a0f1d04e66d7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Folders.LastReviewedDate
+	toColumn: LocalDateTable_d1d73412-6629-4540-a908-0ae4c473c398.Date
+
+relationship f711bfa5-da77-4b00-b46e-1f755b127e47
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Folders.LastModifiedDate
+	toColumn: LocalDateTable_73f93de1-16c8-453f-a838-f990d03e3300.Date
+
+relationship e5196c9d-f4f8-4053-bdf7-f4abf1149efa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FolderWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_283bce78-adf1-41b6-a454-4d92972a9ba8.Date
+
+relationship 19637690-342d-4d7f-80cd-faf0010e05ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.DueDate
+	toColumn: LocalDateTable_174434db-a31d-4564-b0b9-57627cb186b7.Date
+
+relationship f0df2ffd-705e-40ab-ba03-0d06c7cf064d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.CreatedDate
+	toColumn: LocalDateTable_3ef0aa26-fc7c-4505-90f9-1dc92124e635.Date
+
+relationship 65de8c73-2747-4152-8fc8-5a7780dcfe27
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.ReleaseDate
+	toColumn: LocalDateTable_7c35ab9a-e9fc-42b5-bc93-87c8f35d209b.Date
+
+relationship 708bf98b-2626-43ce-950c-6550d1e9540d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.ReviewDueDate
+	toColumn: LocalDateTable_4ae1d82f-4fde-42c0-b17a-6f8c90c9c443.Date
+
+relationship 71b2dae5-be6f-4d2d-9b67-095a62f5b325
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.ActualCreatedDate
+	toColumn: LocalDateTable_6f8e39dd-7826-4885-a921-aa9ceeaeec51.Date
+
+relationship cd637737-53ca-4fd0-a35b-aeb2486765f0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.ActualClosedDate
+	toColumn: LocalDateTable_1adf2610-a9ee-4c40-afab-cc4a7279b22d.Date
+
+relationship 9bfc7563-688c-4c0c-bc36-40dbf6659b00
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.LastNotStartedDate
+	toColumn: LocalDateTable_45a76c27-112c-43a2-8dbb-66a88ab2962f.Date
+
+relationship c31db883-65f3-4900-805c-2c521d33ec4c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.LastInProgressDate
+	toColumn: LocalDateTable_c4517a67-21a7-47a1-a7e0-9b114f80eb43.Date
+
+relationship acfbb7ec-90ed-4c14-9b68-d0321bf7f201
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.LastCompletedDate
+	toColumn: LocalDateTable_40c27448-8222-4caa-b855-b074f9e31d8d.Date
+
+relationship b35a0a16-5534-4978-aad1-a40b96ea7e7d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.LastReviewedDate
+	toColumn: LocalDateTable_21134a68-cc8d-45b7-97af-9a71dad2557d.Date
+
+relationship 4c9d06d1-dcee-4c31-8de4-72f30f75478b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.LastClosedDate
+	toColumn: LocalDateTable_68eaebb3-c4d3-45a7-a07e-577f5d440b42.Date
+
+relationship 9878df2c-a4f0-42f6-8e10-71d72925b0d9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Issues.LastModifiedDate
+	toColumn: LocalDateTable_85f576d1-9fd2-4c95-b9d1-ecf875903967.Date
+
+relationship 4719db57-94c0-4e82-a12d-92507549674a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: IssueWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_2d778286-136c-448c-8b6b-7b4fd7c6c43e.Date
+
+relationship 9e07066c-71b4-4983-b2f3-b9ed10ecdaa6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Objectives.LastModifiedDate
+	toColumn: LocalDateTable_571f1ac2-e18c-4fde-9e3c-232cc720e408.Date
+
+relationship 43a8eb6f-12c3-4cfc-bf64-119f08dd88e5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Procedures.DueDate
+	toColumn: LocalDateTable_7c7111cd-808b-4e40-8884-52799bdedb21.Date
+
+relationship 8badccbe-e2d0-403f-ab7f-dd2b9f34fc58
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Procedures.ReviewDueDate
+	toColumn: LocalDateTable_d6cbd77c-cda9-4eff-ac98-eedb44810245.Date
+
+relationship 7eea62c9-19d3-475d-b07f-87343bec4c79
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Procedures.LastNotStartedDate
+	toColumn: LocalDateTable_145c69bd-aef8-4ad4-b412-aaadbb9f35d0.Date
+
+relationship aa551e5e-ad4f-4266-a065-a06b72a1f627
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Procedures.LastInProgressDate
+	toColumn: LocalDateTable_726560b0-9333-4076-9f18-712a15dc26e3.Date
+
+relationship a9e4426a-8a99-41e4-ba21-826b985007da
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Procedures.LastCompletedDate
+	toColumn: LocalDateTable_b3938e0b-310e-4acb-a65a-7b14b71ab577.Date
+
+relationship d80b6e95-76da-4be4-9173-e9a217109f09
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Procedures.LastReviewedDate
+	toColumn: LocalDateTable_595d1b11-f215-4990-91dd-f860f3b57f17.Date
+
+relationship 7f023969-3106-498e-b811-81c68de5942a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Procedures.LastModifiedDate
+	toColumn: LocalDateTable_d7e948bf-69c1-4041-9bfb-e71f92a38c93.Date
+
+relationship b9b30bb0-c75c-4a2d-bb2f-9ad374caf77b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProcedureWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_ff716e41-a00d-4a32-9c7f-a00cc2a801f8.Date
+
+relationship d1d1364d-24c7-410e-b4f1-941abd21c545
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhaseMilestones.RevisedDueDate
+	toColumn: LocalDateTable_1ca793d9-5b8d-475c-ab3b-b5e7ea13230b.Date
+
+relationship ae7959c1-8700-4585-aa2b-ea7b3420773f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhaseMilestones.EstimatedEndDate
+	toColumn: LocalDateTable_84f5bca5-e8b1-4b01-9b29-92ace496fa44.Date
+
+relationship 29905aa6-7206-4f9c-8889-3594efcf963a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhaseMilestones.ActualEndDate
+	toColumn: LocalDateTable_b7eefa8a-20e3-4621-a07c-7b924caa637b.Date
+
+relationship bc479ff1-1cb3-4c1a-8d65-f7cdae0f1b6b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.EstStartDate
+	toColumn: LocalDateTable_5f6c66f4-db0b-4612-95e4-311ca2c0ff96.Date
+
+relationship 69836014-d252-42d6-a8cf-9b1519a7be71
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.EstEndDate
+	toColumn: LocalDateTable_1f9901a7-f7e1-4b78-872c-a24e5d848139.Date
+
+relationship dec79bb6-9d73-4e9b-84de-923b809433e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.ActStartDate
+	toColumn: LocalDateTable_a7df2bd7-b212-460c-bc60-e0730f7fb447.Date
+
+relationship 0ea1f076-b8a9-4f7f-82a3-9b257daffdd0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.ActEndDate
+	toColumn: LocalDateTable_04ea46e0-8f44-4a01-a6c8-a17420c1a28e.Date
+
+relationship 734f5d1a-7d60-48d5-b7b6-affed509ac43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.DueDate
+	toColumn: LocalDateTable_b363bb0a-e14f-409d-8107-c5d40e45cd2d.Date
+
+relationship a1c4a0fc-3eee-46b9-91d4-0a5fce91d9d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.RevisedDueDate
+	toColumn: LocalDateTable_fededafe-1d1f-4207-9b3f-3a58c8d40652.Date
+
+relationship 004107c9-67e0-43cd-b34d-3f5cffac2448
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.ReviewDueDate
+	toColumn: LocalDateTable_bf7846b1-3a2b-49ab-bc12-8ed015509646.Date
+
+relationship 06c2f318-bf5c-459b-b52a-a2739b53944c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.ScheduledStartDate
+	toColumn: LocalDateTable_9c1b17c1-74d2-4356-8277-6086f553abd5.Date
+
+relationship eaed0f2e-5a0b-40b9-aa1e-94b99886f164
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhases.ScheduledEndDate
+	toColumn: LocalDateTable_d4a00610-5cff-46fe-83a1-551ee7782f33.Date
+
+relationship fdd71e3e-10ba-4f10-b191-61de07435dbb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectPhaseWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_a31327f8-5a90-4ed5-86a0-f169eb586f9c.Date
+
+relationship 2bce66b2-52fb-4cce-ab48-68e6750adb86
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.EstimatedStartDate
+	toColumn: LocalDateTable_bb4e0f76-9f51-4a15-95ab-e69eed8b1a6c.Date
+
+relationship d3961f60-35d1-4fa1-8902-3d5898e076c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.EstimatedEndDate
+	toColumn: LocalDateTable_38ac5b61-16e4-4572-8b7f-3d25c3ad06a9.Date
+
+relationship 37bbd2cc-018d-4f03-8af3-fc5d3f0143e9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.ActualStartDate
+	toColumn: LocalDateTable_21b9cbd6-7adb-49ef-bb97-bcfbc5a76acb.Date
+
+relationship 9c1d5c8c-6e02-463b-8b8a-0f5d61ae11be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.ActualEndDate
+	toColumn: LocalDateTable_3eaded9a-5e27-4192-8817-608f8a29ad65.Date
+
+relationship 436dad20-d46f-4b4e-b127-3497348db02e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.Date1
+	toColumn: LocalDateTable_6a4f8509-edab-4360-8513-efc1f98c0dfa.Date
+
+relationship d5fe0805-7f50-4952-be21-8a3cd048874f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.Date2
+	toColumn: LocalDateTable_61825763-78df-4ed7-b4b6-63aa8d3e7b6d.Date
+
+relationship 8200edd2-8348-479b-bf91-7cbec9fe25b1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.Date3
+	toColumn: LocalDateTable_f83daa93-91d0-4129-848e-3f8dee2fa07b.Date
+
+relationship 456c0edb-d2f8-4cc4-9c27-e8cad2b06e10
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.Date4
+	toColumn: LocalDateTable_48012143-5c43-4b3d-af17-56fc923481c3.Date
+
+relationship af9da5e4-1eb0-4ff1-bd84-d45542d0d9d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.Date5
+	toColumn: LocalDateTable_892d569e-32c9-4a59-86e2-e8c25ec633a1.Date
+
+relationship 01d60f84-e959-497c-ade7-fcf8854d07f4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.Date6
+	toColumn: LocalDateTable_d4df7c84-71ff-4005-a61f-85860d363e6d.Date
+
+relationship 425ee245-a376-4875-9eff-04948847bc00
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.CompletedDate
+	toColumn: LocalDateTable_490005cc-fa0d-4984-b373-b201b6637b13.Date
+
+relationship 94a46a55-a8ec-43a6-9bdd-31a24490992b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.ScheduledStartDate
+	toColumn: LocalDateTable_c0e664a7-262f-4869-9871-a79b7ce9b31d.Date
+
+relationship a9df533d-010d-4792-a5e6-1502cd3b4fa1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.ScheduledEndDate
+	toColumn: LocalDateTable_d8258131-91a1-4305-82a0-3127dc0ff285.Date
+
+relationship f07f14a8-8fa3-44d7-aae7-4a2684bdbe9c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Projects.LastModifiedDate
+	toColumn: LocalDateTable_fe09739b-a271-4e78-a3d0-c5d51d967e2f.Date
+
+relationship 7cf0df52-4d9a-47e1-8ce6-85e95be34168
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.LastStatusUpdateDate
+	toColumn: LocalDateTable_89f6b9a2-8d5a-498f-847e-f5682f1a4994.Date
+
+relationship f82b66a2-9e50-41e9-8e07-1bc75dd7e2ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.Date1
+	toColumn: LocalDateTable_f67fbef5-742f-40c4-830e-b23ec31b32c3.Date
+
+relationship 92ae9cd3-cb9c-48ce-b559-f09848468b0e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.Date2
+	toColumn: LocalDateTable_dfa5e63e-4c07-47ff-8d03-9c508cb839b5.Date
+
+relationship 9e61f616-4cdc-4351-98f5-3adc53f7d7e0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.Date3
+	toColumn: LocalDateTable_b3801b0e-9f92-4f4a-96e9-c72459cdc8d5.Date
+
+relationship 6cb85c94-84a7-4706-a8f1-bc8c67c8f2bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.Date4
+	toColumn: LocalDateTable_9b4ca956-639c-45d9-8494-33e93614db08.Date
+
+relationship 566dd7a7-4398-4a1e-9adb-b0ac4c318635
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.DueDate
+	toColumn: LocalDateTable_b7b0b48c-6e38-4ad8-80d2-d68b4f131a21.Date
+
+relationship 254a3f24-b0ae-4123-b6e6-e25fbef08e03
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.ActualDate
+	toColumn: LocalDateTable_2217b6a9-d263-4cb5-b81d-521a609b6acf.Date
+
+relationship 9b37417c-f5c7-4dd1-8da1-a05d7cc5241b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.CreatedDate
+	toColumn: LocalDateTable_a292253b-f1db-42d1-bf88-8f005f9f6803.Date
+
+relationship 438ebbce-5fae-4028-abd3-7a47caa407d0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.ReviewDueDate
+	toColumn: LocalDateTable_538e2769-a5d4-46aa-a534-4aefec1698ea.Date
+
+relationship e517769c-8eaa-4c73-96d3-f4965e049aa1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.RevisedDueDate
+	toColumn: LocalDateTable_5d92fbe9-2ba1-46da-815b-77e4317b662a.Date
+
+relationship 7d8c1dd2-4c8a-472b-a012-c410afe775af
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.ActualClosedDate
+	toColumn: LocalDateTable_4d85aedf-33ca-4b4b-9177-93e73b7785fd.Date
+
+relationship 185e7246-433c-4da9-b08c-7233bf47210b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.ActualCreatedDate
+	toColumn: LocalDateTable_864b6698-56ab-4472-8287-75914a8faddd.Date
+
+relationship bc9e4fc6-0ec9-42e1-9e43-21b5718da4d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.ActualImplementationDate
+	toColumn: LocalDateTable_56ba9544-db36-4003-bbab-d25582fe1c20.Date
+
+relationship b8667a41-04c9-49ac-af81-ffecf22e83db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.ResponseDueDate
+	toColumn: LocalDateTable_edea86fc-cec9-4d58-b306-f0f61c96d82b.Date
+
+relationship cedade7f-8fe7-4f67-8ef3-611dc8f4b770
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.LastNotStartedDate
+	toColumn: LocalDateTable_0bdefc98-e921-4e95-a94c-4f61ebdd3862.Date
+
+relationship 7e81e964-c575-4a17-9c43-a4b34a3c4b10
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.LastInProgressDate
+	toColumn: LocalDateTable_34c04561-5965-4ece-ad1f-6421be456ed0.Date
+
+relationship 47f6f88c-9b19-4172-b4aa-c756a9e0b8d1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.LastImplementedDate
+	toColumn: LocalDateTable_d9eb42c9-73ef-4f75-842e-9e21496cde35.Date
+
+relationship 73a3a87f-c43d-4eac-85df-5cdca4083e79
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.LastReviewedDate
+	toColumn: LocalDateTable_17eefd0a-d8c6-49f5-8e76-43d52279dd2b.Date
+
+relationship f5dbc3b5-b041-4d83-90d0-f21e02fe56e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.LastClosedDate
+	toColumn: LocalDateTable_e0699345-a9b7-4b2a-a13d-b044ed501bc0.Date
+
+relationship 25208922-2055-4271-9701-9378c9b85ec6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Recommendations.LastModifiedDate
+	toColumn: LocalDateTable_c86b5e7e-849e-4be6-83cf-a5760375ade0.Date
+
+relationship 0251c6d2-771d-40ff-968f-1e923ef03aa9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RecommendationStatusUpdates.StatusUpdateDate
+	toColumn: LocalDateTable_33ae0aff-3e8e-4729-ab0c-ae8b956e04a8.Date
+
+relationship 1735304a-be91-4819-964a-1fd458dd6d18
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RecommendationWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_6df01d53-e7d6-45d1-9b2a-6e7b620427ca.Date
+
+relationship 25a4469a-42e6-4514-befb-fd637ce84dc1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Risks.DueDate
+	toColumn: LocalDateTable_bc42f0c0-c4f3-402e-aaf5-e2cba20f6df8.Date
+
+relationship 2ef87a80-7468-465b-a5cc-a82a4e68713c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Risks.ReviewDueDate
+	toColumn: LocalDateTable_13aac303-5b08-4813-9e74-a7c3c04b2d02.Date
+
+relationship 3408f081-981e-41db-8721-3aa8a642cb02
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Risks.LastNotStartedDate
+	toColumn: LocalDateTable_1a5477c6-9093-417f-8fb5-4b8445812f0c.Date
+
+relationship 4bfc844f-4100-44bb-a54d-c42e94503711
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Risks.LastInProgressDate
+	toColumn: LocalDateTable_36eb2067-50d9-4491-8be5-c5bd8701cd74.Date
+
+relationship daa5ec5d-0b91-48f4-b76b-92f5b571da4b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Risks.LastCompletedDate
+	toColumn: LocalDateTable_f0bf2cb4-a4c0-4c93-a2f8-216e07824088.Date
+
+relationship 2f9cadd5-f98a-42b3-93da-7b3d101bce12
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Risks.LastReviewedDate
+	toColumn: LocalDateTable_e3b4cc54-db38-4e71-8459-006960619da6.Date
+
+relationship 81e994b3-8327-48f7-85ec-b75982197ab6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Risks.LastModifiedDate
+	toColumn: LocalDateTable_71a51daa-b7f9-4602-89e8-4137baa21f4b.Date
+
+relationship 051293d0-280d-4ed1-8df0-d398df4ff2a7
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Entities.EntityId
+	toColumn: EntityTexts.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 734ae33c-9012-4215-b086-4e5e841f3250
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AuditReports.ProjectID
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 76de0ee5-572a-4d5a-9a27-8126225864bc
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AuditReports.AuditReportID
+	toColumn: AuditReportTexts.AuditReportId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a94a9822-0179-443a-bbf5-e5da6de38261
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AuditReportWorkflowHistory.AuditReportId
+	toColumn: AuditReports.AuditReportID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5d4e98de-3dba-4140-970e-61ac3e3d5e61
+	fromColumn: CoachingNoteComments.CoachingNoteId
+	toColumn: CoachingNotes.CoachingNoteId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ac0c3fa3-75d6-42d8-975b-3b5037d0e121
+	fromColumn: CoachingNotes.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 08f79b57-b35d-42fb-9d35-aca9a581eb58
+	fromColumn: CoachingNotes.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e6f31d0e-6660-4d02-b7c7-07bb537228b8
+	fromColumn: CoachingNotes.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship bef331c0-bcc8-4ebc-94a7-1ceca4c6548d
+	fromColumn: CoachingNotes.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7ac22620-eb71-483d-8850-0c366d57d46d
+	fromColumn: CoachingNotes.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 14bd3da9-6e0d-4aa7-90ba-0c97e30454a2
+	fromColumn: CoachingNotes.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ef82a9e5-ea25-4afa-946d-185c6d35b8d1
+	fromColumn: CoachingNotes.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7c390f1c-a121-43fa-8624-6de5a2ee85b4
+	fromColumn: CoachingNotes.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f8f8e84f-b751-4297-a683-f962710f89cc
+	fromColumn: CoachingNoteWorkflowHistory.CoachingNoteId
+	toColumn: CoachingNotes.CoachingNoteId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f0c0f83e-0df5-442b-a7ea-f9d8693a44b2
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Controls.ControlId
+	toColumn: ControlTexts.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9159f7b9-2c01-41b8-8e32-c58510ad33d1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: ControlWorkflowHistory.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 04dfb101-fa34-4597-a96f-9cc4a420d010
+	fromColumn: DocumentRequests.AssessmentID
+	toColumn: Assessments.AssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fdf114a0-7a7b-4739-afd9-240923543f06
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: DocumentRequests.ProjectID
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 415b7724-5b78-46db-ac8a-9d8de70cfaad
+	fromColumn: EntityScoringCalculations.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3d635dd1-6b38-40fc-b9e9-642f5a124916
+	fromColumn: Folders.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9295bc75-1452-43f2-aafa-ff47d9ab613f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Folders.FolderId
+	toColumn: FolderTexts.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship da630f9f-ddda-4013-89a8-c386e1e30637
+	fromColumn: FolderWorkflowHistory.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b99b23bd-e9d2-4de5-a422-a1c394a48673
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Issues.IssueId
+	toColumn: IssueTexts.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1efacaab-2f9e-44da-9da6-384951174752
+	fromColumn: IssueWorkflowHistory.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 99135959-205b-455f-a52e-ce6cac422e1f
+	fromColumn: ListItems.ListId
+	toColumn: Lists.ListId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 192bdfb0-8ca1-49dd-838f-edb25fd63b9c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Objectives.ObjectiveId
+	toColumn: ObjectiveTexts.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship db59cdbc-52e1-4ef7-807f-cde89710034a
+	fromColumn: ObjectRelationshipContexts.AssessmentId
+	toColumn: Assessments.AssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d249d9e3-05f3-4cde-b293-a49b068c0683
+	isActive: false
+	fromColumn: ObjectRelationshipContexts.CoachingNoteId
+	toColumn: CoachingNotes.CoachingNoteId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 683aac08-5ba8-417b-8b81-d823ada36d95
+	fromColumn: ObjectRelationshipContexts.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ad9a1ed0-4b33-4808-9adf-5b27b332017c
+	fromColumn: ObjectRelationshipContexts.DimensionId
+	toColumn: Dimensions.DimensionId
+
+	annotation PBI_IsFromSource = FS
+
+relationship de1c874a-73ec-4042-b058-572c370cdefb
+	fromColumn: ObjectRelationshipContexts.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9a9c9588-badc-4c19-b335-9e5bd2a25059
+	isActive: false
+	fromColumn: ObjectRelationshipContexts.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7bd53fc6-7c01-4d8e-813d-f38aae18b3dc
+	fromColumn: ObjectRelationshipContexts.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d66d9993-bdbf-4e1d-a431-dfc3ea4b4a3e
+	fromColumn: ObjectRelationshipContexts.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fcfe4f41-4c02-423c-8ada-a771d9dd6c4a
+	fromColumn: ObjectRelationshipContexts.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 05c5fa20-1862-4a87-9402-2fe8d934a014
+	isActive: false
+	fromColumn: ObjectRelationshipContexts.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 20b30e14-ff13-40e1-a91e-98243d907a02
+	fromColumn: ObjectRelationshipContexts.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7293d033-a369-4aea-bf3c-e5c61032c0a6
+	fromColumn: ObjectRelationshipContexts.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5ddace5f-f95d-40c3-9402-af9c4aa8d075
+	fromColumn: ObjectRelationships.AssessmentId
+	toColumn: Assessments.AssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship cb129d0e-e9ea-4e1c-b5e3-f8c098b36754
+	fromColumn: ObjectRelationships.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship cd367c76-4e6d-4ce4-bee2-3965cc8734ce
+	fromColumn: ObjectRelationships.DimensionId
+	toColumn: Dimensions.DimensionId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b6512dc5-3e65-48d8-848f-1e7d496bf0ad
+	fromColumn: ObjectRelationships.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 89889bca-5eac-41c8-8b38-43137c11b9d2
+	isActive: false
+	fromColumn: ObjectRelationships.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d128cd76-1433-49a4-89df-9d09c39a3519
+	fromColumn: ObjectRelationships.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d90616c9-e951-4843-8cd6-8d04cbb75166
+	fromColumn: ObjectRelationships.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 03320965-c531-458c-928b-9fe1b3e80491
+	fromColumn: ObjectRelationships.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6b60fafc-17d0-44fc-9c52-97f020e758b3
+	isActive: false
+	fromColumn: ObjectRelationships.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4ba91742-9202-45d7-af4a-4553fede1442
+	fromColumn: ObjectRelationships.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e612813a-bc39-40a6-ba42-db18006fa4fe
+	fromColumn: ObjectRelationships.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship edcac2b7-4433-453a-b67b-f98a7c9f5fe2
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Procedures.ProcedureId
+	toColumn: ProcedureTexts.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ba071a84-ea87-46a9-8826-cf50ef749f31
+	fromColumn: ProcedureWorkflowHistory.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0461b863-03a0-4b29-afde-b83b03a51b2d
+	fromColumn: ProjectPhaseMilestones.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7a7231df-2444-4a41-8d45-6aa16bd85cee
+	fromColumn: ProjectPhases.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 962fcd6d-c27f-4c21-ba6d-f96489345367
+	fromColumn: ProjectPhaseWorkflowHistory.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fe1f07db-401d-4f73-8f2f-056c63762a51
+	isActive: false
+	fromColumn: ProjectPhaseWorkflowHistory.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e940139f-6156-4139-a008-877823e05f8b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Projects.ProjectId
+	toColumn: ProjectTexts.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9f32dc5a-c06e-4ff3-b01a-689b331ea201
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Recommendations.RecommendationId
+	toColumn: RecommendationTexts.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4ba45b12-8d86-4867-833c-f8acc4845090
+	fromColumn: RecommendationStatusUpdates.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship bdf3a3a0-8624-47a9-9816-ae75f7193ba0
+	fromColumn: RecommendationWorkflowHistory.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1ab2f5ae-686e-47bf-998d-fec6fcb20128
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: RiskScoringCalculations.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9ae8d843-338f-4ef7-bfa8-2ffdc9e66e79
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: RiskScoringCalculationsAssessmentProject.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5fd83ba2-2df1-419c-a0ce-c01b7b751853
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: RiskScoringValues.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0845066a-3cb7-4b9d-a831-dc59ee0013cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A01 - Open Observation Report as of Today'.'Recommendations.DueDate'
+	toColumn: LocalDateTable_653d5f65-4cdc-4345-b84b-b9405be280ea.Date
+
+relationship 067d3ff9-35ca-48ed-b2c0-162b2b5732d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A01 - Open Observation Report as of Today'.'Recommendations.RevisedDueDate'
+	toColumn: LocalDateTable_00e63186-8c98-4e4a-b258-3834991bc5c4.Date
+
+relationship f4e07f89-998e-4ead-ba4d-4589caf24fcf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A01 - Open Observation Report as of Today'.'Issues.ReleaseDate'
+	toColumn: LocalDateTable_fde15fd3-1064-43ea-a986-718a905a8120.Date
+
+relationship 49370013-b728-4c6a-8868-30ddb08e9217
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A01 - Open Observation Report as of Today'.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f444d861-a009-4728-bd8a-04dd56b5726f
+	isActive: false
+	fromColumn: 'A01 - Open Observation Report as of Today'.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 34f409d0-1780-41d2-80dc-8599fb89ced5
+	isActive: false
+	fromColumn: 'A01 - Open Observation Report as of Today'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fc8322a8-bed4-4c83-9431-938f77034ffd
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A01 - Open Observation Report as of Today'.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 01c46f83-4d02-4faf-beba-8ba6d8571101
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A01 - Open Observation Report as of Today'.cReportingCutOff
+	toColumn: LocalDateTable_a1bf3db2-b0d2-47d1-a2b3-44d9d99ac583.Date
+
+relationship 8905fde4-76b9-47bf-8765-5390c20e759c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A01 - Open Observation Report as of Today'.Action_Due_Date__For_Ageing_
+	toColumn: LocalDateTable_ce6ae821-adee-47ee-b366-c9f2f18e46c1.Date
+
+relationship a08ba160-d283-4db6-88e0-a9a48d96ef37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.'Recommendations.DueDate'
+	toColumn: LocalDateTable_d7c3a192-89ff-4d9a-b906-f076d32febf0.Date
+
+relationship f798267d-843f-4188-9c1e-6a827e5bfd37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.'Recommendations.RevisedDueDate'
+	toColumn: LocalDateTable_7ab6daf5-a41b-4e1b-917c-49d28fa25f5b.Date
+
+relationship 8b851840-3504-42ef-b0ab-a0a4785224b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.'Issues.ReleaseDate'
+	toColumn: LocalDateTable_2276f6f4-995d-4ecb-bc70-3d1478bd9ee8.Date
+
+relationship 2a418929-7457-4097-9245-4500c0ff7a25
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2da6afc0-ed79-446c-9ea8-68570a976999
+	isActive: false
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6fb9687a-7740-440d-b582-4892cbccf8c3
+	isActive: false
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f0f8180b-5501-4212-aea6-d72be43b6fa4
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c12bf68c-0760-4d31-a195-d831f8dc047a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.cToday
+	toColumn: LocalDateTable_981c3725-7683-42aa-ad7e-5ddb597583aa.Date
+
+relationship 9dcf3d99-6c90-4b2d-8491-5d44c443007c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.cReportingCutOff
+	toColumn: LocalDateTable_73ee13aa-16e3-4283-bc58-b566a8cc21d0.Date
+
+relationship 9c314823-6ccd-4bc0-b80a-3b2adf34e4d0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.Action_Due_Date__For_Ageing_
+	toColumn: LocalDateTable_c10b5201-ca8f-4582-9fb3-6340b4d1601c.Date
+
+relationship 14774872-e790-4571-810e-5aa9c291ef6c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.'Recommendations.DueDate'
+	toColumn: LocalDateTable_61c8df34-e9f8-4520-b88d-5ca19dd0acf1.Date
+
+relationship c46f6476-24a0-4c81-8f48-e10599333440
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.'Recommendations.RevisedDueDate'
+	toColumn: LocalDateTable_f19c4095-0eb5-4fe8-8ee7-62238c3ad7f5.Date
+
+relationship 20b9f372-73f6-430a-b5ea-0fbd3a7f7d83
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.'Recommendations.LastClosedDate'
+	toColumn: LocalDateTable_a66c1e0f-2f1a-4c27-98a9-bf0ad9b9af5d.Date
+
+relationship a8a7c921-a6a9-4bb0-bf2c-94000045f7c3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.'Issues.ReleaseDate'
+	toColumn: LocalDateTable_cc890d08-cfff-4428-973d-f313b3b05078.Date
+
+relationship 97b32917-d843-44d4-93a5-c0374221428c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a31091db-81b6-420e-bfd2-ba7ac988add1
+	isActive: false
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f36886c6-96e3-4089-a2e2-04055fdc9f12
+	isActive: false
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 74860abe-f376-4df4-9a64-88192ce8f92e
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e57531ca-b64e-40ad-af59-3f7e10655121
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RiskWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_8650b023-5ed3-498f-a425-6342140b48d7.Date
+
+relationship dddfb139-aab3-418c-b797-da11b47ccb59
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentControls.LastInProgressDate
+	toColumn: LocalDateTable_1e55fe84-efd2-43d3-b546-b5beaa4e2a35.Date
+
+relationship c7ce8df1-46bd-49c2-a592-d03cea758c72
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentControls.LastCompletedDate
+	toColumn: LocalDateTable_86685d7b-db6e-43ee-b923-0a9b0517b7d0.Date
+
+relationship 8fdf84e5-35ea-4e42-96e3-e97098a702f0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentControls.LastReviewedDate
+	toColumn: LocalDateTable_47b1ffcf-f28a-4479-b288-da53112dd9c0.Date
+
+relationship c5e28a25-4544-451f-8e5b-1ae4dcacf8be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentEntitys.LastInProgressDate
+	toColumn: LocalDateTable_a63f2cee-3c0d-4b97-83a5-99eda351f6cf.Date
+
+relationship ec4332cd-bb78-43f7-88eb-d99b0794a60b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentEntitys.LastCompletedDate
+	toColumn: LocalDateTable_d9e1728f-6c38-457f-8e11-0bb990b02bc3.Date
+
+relationship a86ea913-a5ab-48de-bb5a-cf0932d1c0d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentEntitys.LastReviewedDate
+	toColumn: LocalDateTable_d0150873-ee2d-4788-ba72-ceb2eb793b01.Date
+
+relationship b756ae8c-f3d8-47cd-97f2-5a4e6203e780
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentItemWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_980cb2be-e88a-4527-a27c-ccbb0af2eb4a.Date
+
+relationship 6724ca29-5715-4e86-9fed-c936be9f433f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentRisks.LastInProgressDate
+	toColumn: LocalDateTable_99ad3d09-ee90-412a-afa4-78be75fe52c9.Date
+
+relationship ea917f4b-ed0a-4dcf-a74e-36661fb73cf5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentRisks.LastCompletedDate
+	toColumn: LocalDateTable_f99f1ee0-f484-4e64-bd6f-f7b842006d52.Date
+
+relationship b308f228-2759-4991-9004-034a6bf90231
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessmentRisks.LastReviewedDate
+	toColumn: LocalDateTable_80c67a4a-6986-4800-bcd4-aedc2768662a.Date
+
+relationship bda43536-a0c2-4a37-974b-dcd4e304ad45
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessments.StartDate
+	toColumn: LocalDateTable_8d96168e-a753-4a1b-b6ad-4b1e53c8e3f8.Date
+
+relationship 9cf33714-8dcc-428a-bff7-fa6b3e0b4ee6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessments.EndDate
+	toColumn: LocalDateTable_e4d7259d-5aa4-4d6c-b5cb-1e05f244b1d0.Date
+
+relationship f54f3797-b9a4-4408-b08c-59a2e4914b33
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SelfAssessments.DueDate
+	toColumn: LocalDateTable_7fa7956a-2935-428c-bae4-ca8d53022ef0.Date
+
+relationship f5b0189a-dc22-44c4-9fe7-b7d73467ff3e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sprints.SprintStartDate
+	toColumn: LocalDateTable_db88263b-b9c4-4492-a142-ae47462b3a3c.Date
+
+relationship 1ca0ca7e-1dbb-42b9-8725-383bafed5354
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Sprints.SprintEndDate
+	toColumn: LocalDateTable_360e365c-1842-44d3-9589-84d8898f8c74.Date
+
+relationship 39e35b3b-552f-4120-bb53-51290987cbe8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRisks.DueDate
+	toColumn: LocalDateTable_abd8da76-35a6-4062-b06b-b37a9defefe6.Date
+
+relationship 320263b4-2633-4192-89b5-e6a861fd40de
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRisks.ReviewDueDate
+	toColumn: LocalDateTable_ea9e8f9b-8336-4653-9dc1-697a85e9600a.Date
+
+relationship f6680a7c-1e8b-4687-a77c-ed0e35a9e273
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRisks.LastNotStartedDate
+	toColumn: LocalDateTable_4d56f551-7eae-4c0d-9f47-bdfd811ea356.Date
+
+relationship 2c79740d-446b-4452-8e8c-014f98fc7ef8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRisks.LastInProgressDate
+	toColumn: LocalDateTable_d5c6b383-6786-4681-9705-19e3dccf5b6c.Date
+
+relationship 21ffa0d9-bad6-4af9-a0bc-f7b372f47fc2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRisks.LastCompletedDate
+	toColumn: LocalDateTable_37602607-a61f-443e-b465-5c3d0173611f.Date
+
+relationship 22a53b38-1cf7-4909-bdf4-b8b2c7338d78
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRisks.LastReviewedDate
+	toColumn: LocalDateTable_e49cd549-ee32-4ffc-9cfc-6bcfdb6364c9.Date
+
+relationship a4cbe8ad-3b08-4d86-9b0c-eb185484a63d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRisks.LastModifiedDate
+	toColumn: LocalDateTable_da5ddb30-cc55-4f64-9ba2-94fe6b456430.Date
+
+relationship 963b073a-81a5-4e0e-b6d9-9a67f8c42298
+	joinOnDateBehavior: datePartOnly
+	fromColumn: StrategicRiskWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_3794a1d5-5b3c-4681-85ae-54b28769b9bf.Date
+
+relationship 7612f3e2-e2a7-4172-aae0-eab480d3540c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Workpapers.DueDate
+	toColumn: LocalDateTable_c98ff017-c99b-4fff-9295-0ee11d1dcb52.Date
+
+relationship 9b708af9-2f5a-4aa5-ac82-56f0c128f754
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Workpapers.ReviewDueDate
+	toColumn: LocalDateTable_ce3fb403-7d8f-4237-9c17-493184b19454.Date
+
+relationship bb5d1fb5-359e-467b-9a5a-c6ed64a644f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Workpapers.LastNotStartedDate
+	toColumn: LocalDateTable_2e450a90-cb9f-4626-9e03-b3eab7343b71.Date
+
+relationship 3722b7b1-7f32-46ac-a2d6-e034852c2b96
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Workpapers.LastInProgressDate
+	toColumn: LocalDateTable_85357794-1247-4b86-a2a5-13d4a755d627.Date
+
+relationship 69e1779f-fbdd-4d0a-ab90-132fa28d57ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Workpapers.LastCompletedDate
+	toColumn: LocalDateTable_2074a6f4-0134-465c-9433-f2277e6d09b3.Date
+
+relationship 008f4b51-d3ad-440a-9153-c4c9c42401a3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Workpapers.LastReviewedDate
+	toColumn: LocalDateTable_74aea921-1a02-4664-a16c-5dd811691571.Date
+
+relationship 99b4529a-fbbe-4d9a-abfd-557db060c93f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Workpapers.LastModifiedDate
+	toColumn: LocalDateTable_c7a9f8fd-7899-4815-8b63-87eb83d290c4.Date
+
+relationship 6fa9ef02-3d7d-414b-931e-c9a3ee73e4c2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: WorkpaperWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_dc95a240-d3e2-4e3f-9e33-c481d31c5caa.Date
+
+relationship c8996a67-4e66-43f4-a90a-24a47d9239f8
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: RiskScoringValuesAssessmentProject.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 665e3ee5-8cff-46d8-807e-4ce0cbaaba71
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: RiskWorkflowHistory.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7d7bdbd7-81ea-4f21-ac08-0b6a2072e620
+	fromColumn: SecurityAssignments.AuditReportId
+	toColumn: AuditReports.AuditReportID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1e8fffdd-40c0-462c-a7b1-70844c9ac7b6
+	isActive: false
+	fromColumn: SecurityAssignments.CoachingNoteId
+	toColumn: CoachingNotes.CoachingNoteId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a9d42b17-de50-4018-a39b-b80eb5b056c0
+	fromColumn: SecurityAssignments.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7da083f9-f17d-453d-8f89-2f2f875e1555
+	fromColumn: SecurityAssignments.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 159dd3ad-75a5-4ed9-be83-2a776ba0513b
+	isActive: false
+	fromColumn: SecurityAssignments.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship dd0c5ac5-2e45-45f3-997f-72902647ed10
+	fromColumn: SecurityAssignments.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e31caf4d-03f6-49d7-8694-f68933c53f9a
+	fromColumn: SecurityAssignments.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a47f4296-47d7-465d-8281-31b2a33f173b
+	fromColumn: SecurityAssignments.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ab14c981-0ff0-4b2f-a005-9a933d1146b2
+	fromColumn: SecurityAssignments.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6c635f74-6157-41d5-b8e2-8c35ecb68846
+	fromColumn: SecurityAssignments.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0402e998-1044-40db-a5e6-e9d205e478a6
+	fromColumn: SecurityAssignments.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4a195aa2-24f5-450c-abde-71ad8193ff1a
+	fromColumn: SecurityAssignments.WorkpaperId
+	toColumn: Workpapers.WorkpaperId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 845ce070-6f44-43fe-bb18-6dc02ca21139
+	fromColumn: SecurityAssignmentsAggregated.AuditReportId
+	toColumn: AuditReports.AuditReportID
+
+	annotation PBI_IsFromSource = FS
+
+relationship e228d074-9bc1-4ce6-a881-1df6e50d1f52
+	isActive: false
+	fromColumn: SecurityAssignmentsAggregated.CoachingNoteId
+	toColumn: CoachingNotes.CoachingNoteId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d9fa5459-4924-4627-a380-592742dcb054
+	fromColumn: SecurityAssignmentsAggregated.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ed09f628-d173-49f2-95f5-842607bd5070
+	fromColumn: SecurityAssignmentsAggregated.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 46f11268-033b-4dc0-a93d-6d97d9ceb6cb
+	isActive: false
+	fromColumn: SecurityAssignmentsAggregated.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d834a98a-a072-48fd-8b0a-f9e07e14bf3a
+	fromColumn: SecurityAssignmentsAggregated.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c6a7b695-576d-44c2-a784-855edd765f59
+	fromColumn: SecurityAssignmentsAggregated.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship cd96b843-5aa5-459c-9c41-aa4435181301
+	fromColumn: SecurityAssignmentsAggregated.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d59df0e4-9076-407c-9d62-c3577f56569a
+	fromColumn: SecurityAssignmentsAggregated.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 96a70e94-f173-432e-984e-8e518eb21c9e
+	fromColumn: SecurityAssignmentsAggregated.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6f368f94-c2b4-4dc4-b7a3-7369bb2dda4d
+	fromColumn: SecurityAssignmentsAggregated.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5cbca733-f59e-459e-aedb-eae4c3a8f03d
+	fromColumn: SecurityAssignmentsAggregated.WorkpaperId
+	toColumn: Workpapers.WorkpaperId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f8186875-2acd-43c4-b23f-80137f96892d
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SelfAssessmentControls.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5507986e-00dc-49fb-83a8-f63781fa7ad9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SelfAssessmentControls.SelfAssessmentId
+	toColumn: SelfAssessments.SelfAssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6d732207-2262-45cc-b687-47f17f78779d
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SelfAssessmentEntitys.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 70aff4d1-51ea-41cb-af16-5febf4dd2f05
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SelfAssessmentEntitys.SelfAssessmentId
+	toColumn: SelfAssessments.SelfAssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship aaa8e593-8164-4172-8ad2-e92e0e4a5099
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SelfAssessmentItemWorkflowHistory.SelfAssessmentId
+	toColumn: SelfAssessments.SelfAssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c3c26baa-b763-4f5f-8ff9-60fa72f44473
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SelfAssessmentRisks.SelfAssessmentId
+	toColumn: SelfAssessments.SelfAssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 51fb244b-d8f5-4af5-8e3b-93a27466aca8
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: SelfAssessmentRisks.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6f9ff341-bf6c-40f6-87a1-635ed0d9399e
+	fromColumn: StoryFieldDefinitions.FieldLookupListId
+	toColumn: Lists.ListId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7caa9aeb-4b0d-445d-8e67-8d9b6eaa94c1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: StoryFieldValues.StoryId
+	toColumn: Stories.StoryId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7b238ef9-c73e-442f-9840-0eb35fe33f55
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: StoryFieldValues.FieldDefinitionId
+	toColumn: StoryFieldDefinitions.FieldDefinitionId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8ba946c3-d255-4d88-9666-2bf60918888c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: StoryFieldValueTexts.StoryId
+	toColumn: Stories.StoryId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 77882346-2ad3-40a7-ac8f-6ccb7f836fea
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: StoryFieldValueTexts.FieldDefinitionId
+	toColumn: StoryFieldDefinitions.FieldDefinitionId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 18af05f5-6ab9-4c7d-bcc2-d43f94a04db3
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: StoryLinks.StoryId
+	toColumn: Stories.StoryId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5bb8bd37-3a58-478c-a5b2-08d81a8aa6cf
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: StoryOwners.StoryId
+	toColumn: Stories.StoryId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d55593d2-34e1-4615-bb7c-6e7fbe844c19
+	fromColumn: StoryStates.ReportingCategoryId
+	toColumn: StoryReportingCategories.ReportingCategoryId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b53590d9-88ab-4d45-86df-df51a7a781b8
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: StrategicRisks.StrategicRiskId
+	toColumn: StrategicRiskTexts.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7b4e2545-6673-4ddf-a7dd-9cd1c8b90b90
+	fromColumn: StrategicRiskScoringCalculations.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1723674f-0662-480b-a0c1-2a75ba3d2ba9
+	fromColumn: StrategicRiskScoringCalculationsAssessmentProject.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d98bbb2c-5920-4f9e-9c6a-fe9df4f4dbcf
+	fromColumn: StrategicRiskScoringValues.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 73dcdb22-2b3a-455f-a24e-9ac3e751f3fd
+	fromColumn: StrategicRiskScoringValuesAssessmentProject.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship cbbe6b96-e00e-4da4-bf59-801ae0ffec96
+	fromColumn: StrategicRiskWorkflowHistory.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5160bf4c-2910-44c0-8cd0-42d97bd52a9b
+	isActive: false
+	fromColumn: Workpapers.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 00643aff-1171-4acc-9d31-c2c7922448b4
+	isActive: false
+	fromColumn: Workpapers.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f8d8730f-bf92-4f85-9063-5d171eaf771a
+	isActive: false
+	fromColumn: Workpapers.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 83b48450-3b6a-4369-ad2d-8d9fe2c40da6
+	isActive: false
+	fromColumn: Workpapers.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a4f2beef-5872-40bc-86a3-ad8217111cad
+	isActive: false
+	fromColumn: Workpapers.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 973a9a4b-8425-4b9f-b5e0-eb755bc2ecfa
+	isActive: false
+	fromColumn: Workpapers.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4a99f15a-70f5-4714-bcd0-80fcad373188
+	isActive: false
+	fromColumn: Workpapers.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9f245cae-a75e-4976-a051-792181a2bb28
+	isActive: false
+	fromColumn: Workpapers.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship faaa5da5-8968-4da3-81ba-3590ed3b997f
+	isActive: false
+	fromColumn: Workpapers.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship dd17d709-a02a-4787-8914-a860684ab57c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Workpapers.WorkpaperId
+	toColumn: WorkpaperTexts.WorkpaperId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c9033d9a-d9df-4e2b-808e-f828fe155657
+	fromColumn: WorkpaperWorkflowHistory.WorkpaperId
+	toColumn: Workpapers.WorkpaperId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8909a5a9-50f6-4ddb-be4a-fdef7bd06e1c
+	fromColumn: CoachingNotes.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c952b2af-7195-4cad-9a9c-c2905ab31581
+	fromColumn: CoachingNotes.WorkpaperId
+	toColumn: Workpapers.WorkpaperId
+
+	annotation PBI_IsFromSource = FS
+
+relationship efdd0213-7020-439b-b5fb-5837e08ca2a0
+	fromColumn: ObjectRelationshipContexts.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 88aea43d-b4ba-4935-be83-08b0ecf3a200
+	fromColumn: ObjectRelationshipContexts.WorkpaperId
+	toColumn: Workpapers.WorkpaperId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b57efebd-e071-4969-8a61-3509af3ab260
+	fromColumn: ObjectRelationships.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship bec4aa49-d1da-4e02-b480-9624e90fb8ba
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Risks.RiskId
+	toColumn: RiskTexts.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 01825f98-aab7-43ba-aaaf-d499b46300b3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.'Recommendations.DueDate'
+	toColumn: LocalDateTable_0e1cbc0f-4a90-43b0-9fa9-abb193139b5c.Date
+
+relationship 209a353d-9b84-4d86-81a3-c4efb5093eb7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.'Recommendations.RevisedDueDate'
+	toColumn: LocalDateTable_7783facd-4dcb-4242-b206-81803b786495.Date
+
+relationship f97b68cc-9e40-4a69-9886-d5df6168d893
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.'Issues.ReleaseDate'
+	toColumn: LocalDateTable_bb4140a9-af67-4efe-b733-91ebfba9a670.Date
+
+relationship 22eda4dd-104e-4a90-8d47-d9616f003bad
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e9ceb940-22ad-4eac-8d59-247d951c8249
+	isActive: false
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 79dff693-429f-4111-8a01-c2978d32927a
+	isActive: false
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7d678693-378a-4be0-a586-ed4b6235ce95
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e2218bdb-05bf-48a8-a2e8-f3be9706e900
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.cToday
+	toColumn: LocalDateTable_1bb0ed74-7212-4ace-b5b7-dfe6c29ee26d.Date
+
+relationship 61933c89-7d70-491d-87f6-0f268bd87b66
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.cReportingCutOff
+	toColumn: LocalDateTable_83f3f93f-d563-4f82-b6dd-c39d15a1a7d2.Date
+
+relationship 97fc58bd-d9cd-4917-9f49-a9598a2bc94f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.Action_Due_Date__For_Ageing_
+	toColumn: LocalDateTable_9910f6d9-b6ee-4167-9b8e-68903d3f7673.Date
+
+relationship 1df8e52e-73e7-415f-a1da-54d207534fa5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Assessments (2)'.StartDate
+	toColumn: LocalDateTable_1cbba3b3-3bdb-4b15-aa2f-1710aabac238.Date
+
+relationship 6f51c055-3fba-405c-9d06-8466db7a7ac4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Assessments (2)'.EndDate
+	toColumn: LocalDateTable_00daf905-60f9-44a7-9b32-8a013687c82b.Date
+
+relationship 30df3af6-eacd-47a4-baf6-560a3ce2293a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Assessments (2)'.CreatedDate
+	toColumn: LocalDateTable_01ad1541-34fd-4d59-8678-566a514309fb.Date
+
+relationship f6934f9b-f3d3-49bf-b8a4-64ff09b87fcf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Assessments (2)'.LastModifiedDate
+	toColumn: LocalDateTable_dbb121c2-ff7d-4cd4-96fd-52954fb32a48.Date
+
+relationship 4161520a-88ba-4b96-b755-dfc69a0421fd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlans.ApprovedDate
+	toColumn: LocalDateTable_935b336e-2fc6-4064-8f3f-292f40b248e1.Date
+
+relationship ff62d3d2-4f10-4dcf-b384-dee03b33ac45
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlans.ClosedDate
+	toColumn: LocalDateTable_07870094-20c2-4347-a8d7-5a2876c19206.Date
+
+relationship ac2cd08a-253a-4cca-8867-02e19d429c09
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlans.StartDate
+	toColumn: LocalDateTable_ad3e8c05-c015-41e6-918d-42f6a7331d34.Date
+
+relationship 460aff3f-4bf3-46c4-a80f-7a3e9c1257f4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlans.EndDate
+	toColumn: LocalDateTable_dc11a382-669c-4ca7-916a-7be73bc6c4cb.Date
+
+relationship 8125efdd-0304-4350-b754-38b8d9057384
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlans.LastModifiedDate
+	toColumn: LocalDateTable_bc11d5f8-f17d-4c02-b21f-27a1b55e5b99.Date
+
+relationship 379697c9-7f6f-492e-a7c4-f809281da59d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlanSchedule.EstimatedStartDate
+	toColumn: LocalDateTable_ff240c15-de52-4af1-a657-3b8b2e01fbd1.Date
+
+relationship 30a56dd6-9d84-4615-8eae-a3724deeea14
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlanSchedule.EstimatedEndDate
+	toColumn: LocalDateTable_4e8233a5-7f20-44cc-a053-dc3a985a4818.Date
+
+relationship debb30b8-a99c-4fcc-b4b4-acb165097cee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlanSchedule.ScheduledStartDate
+	toColumn: LocalDateTable_50fab95d-2e88-4c4b-ad36-12032bc66e97.Date
+
+relationship e00c5704-49c4-4f1b-a599-14365ce202e5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: AuditPlanSchedule.ScheduledEndDate
+	toColumn: LocalDateTable_1f10629c-3506-47dd-a184-b01a3dfc3fff.Date
+
+relationship b3c0eb47-1918-4d01-8a72-29dd7c284e97
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.EstStartDate
+	toColumn: LocalDateTable_277a9cce-7362-4c6c-83b6-5646dfa9e695.Date
+
+relationship a3ae4d19-f6d8-4c43-95d6-260e8775b974
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.EstEndDate
+	toColumn: LocalDateTable_011be2ac-4391-47ce-b68f-fbe5239b9d94.Date
+
+relationship f8c3117a-9110-4f8e-8cc9-35abfa321d0a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.ActStartDate
+	toColumn: LocalDateTable_8c7aa89b-3106-4918-a1fa-38d86118d842.Date
+
+relationship 51047e5d-db56-48e5-8355-9878b6a39705
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.ActEndDate
+	toColumn: LocalDateTable_5f4a6867-1ab1-4dfa-b569-8f391ca01c50.Date
+
+relationship 6489c9ab-0665-44b4-a945-5f75f75b61c7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.DueDate
+	toColumn: LocalDateTable_075c645d-08fc-4a07-b061-2b385efc2d93.Date
+
+relationship 768f736b-3977-4ac4-a84c-02149f05d456
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.RevisedDueDate
+	toColumn: LocalDateTable_f3d91cfe-3927-4fd1-80c6-62ec651c38ac.Date
+
+relationship d25d2940-d670-4bc3-9536-b81c026cc1da
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.ReviewDueDate
+	toColumn: LocalDateTable_8b5a8c47-2d6b-4463-a2e9-94a576cd487e.Date
+
+relationship ff93a678-ee5d-4c37-bf54-2c5d6e65e732
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.ScheduledStartDate
+	toColumn: LocalDateTable_70318f86-1247-488a-92d7-6b71158afc2d.Date
+
+relationship 3af54bc2-81c8-42be-8239-ee289a086df7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhases (2)'.ScheduledEndDate
+	toColumn: LocalDateTable_10dd86c0-f001-4c26-aac4-f2f160886f6b.Date
+
+relationship 1612582e-7a53-4bab-8590-3d99254caaca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'ProjectPhaseWorkflowHistory (2)'.ActionDate
+	toColumn: LocalDateTable_67b0abc3-a60c-434b-824c-070afcf16ac0.Date
+
+relationship d9b35b5b-b04d-4030-8522-3430817225cf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.EstimatedStartDate
+	toColumn: LocalDateTable_42a5ddad-c99a-49e9-a4aa-3c4ca1f0c0f6.Date
+
+relationship ccbdee01-feee-44bf-8e3e-8766ff43cf0a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.EstimatedEndDate
+	toColumn: LocalDateTable_4c7ef6f6-da10-4a6c-a5fc-8a1bc22911c7.Date
+
+relationship 28df27e1-2cc1-4fc0-b1a0-342ec48b3311
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.ActualStartDate
+	toColumn: LocalDateTable_ce157ba5-2d1e-4ffe-ad6d-8e8e40e2410f.Date
+
+relationship bb17728d-6ed6-4131-ab11-2c557fc35f67
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.ActualEndDate
+	toColumn: LocalDateTable_72893b62-a3d4-4cc6-b1b4-3e2015625953.Date
+
+relationship 9400abc7-f22e-4fc1-9d37-5aafc1b721c9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.Date1
+	toColumn: LocalDateTable_4313b444-bbc0-4a3a-8a8e-0915fbc8d65a.Date
+
+relationship 36b69162-5d39-481c-9a3c-8431ee600236
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.Date2
+	toColumn: LocalDateTable_b58ae9e5-9d81-45ce-9735-5c2bcd7f6063.Date
+
+relationship 5575373e-9ba5-4e30-8bfb-a7849e5ffc37
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.Date3
+	toColumn: LocalDateTable_33d4e19f-d1e2-4f0c-b640-65866aca3819.Date
+
+relationship 787d628b-d5e3-446e-931c-0f04942a1175
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.Date4
+	toColumn: LocalDateTable_9d4361fc-b912-49ab-a665-f0a08423c4b4.Date
+
+relationship efa8a8b3-0024-4c7f-867b-3127d99315cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.Date5
+	toColumn: LocalDateTable_eead5497-a41b-426a-b77c-1f6b86cbdd16.Date
+
+relationship e48c93ec-f55c-46f8-bf3a-2db345156126
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.Date6
+	toColumn: LocalDateTable_e72c5d18-5bb5-4fe4-9100-0ba1c50bf2d5.Date
+
+relationship 579ed4d9-08bf-400d-8a34-bec71a0b218d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.CompletedDate
+	toColumn: LocalDateTable_7a7bb791-86cb-4f94-8b37-2c1c8012f454.Date
+
+relationship aca6f354-6cd8-4030-b153-e5e38aed8d95
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.ScheduledStartDate
+	toColumn: LocalDateTable_843763d0-36a6-48ed-ad94-474d517d6a35.Date
+
+relationship 6e661005-6e5b-43d1-8a7c-47f5f9e1ed13
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.ScheduledEndDate
+	toColumn: LocalDateTable_936bff33-c2d0-4c01-9759-87cb4980a574.Date
+
+relationship 964210de-9c96-472d-9c27-dd7ccd2b07ee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Projects (2)'.LastModifiedDate
+	toColumn: LocalDateTable_18dd3a50-ba1f-4976-86b5-be675baf9178.Date
+
+relationship d14864c3-aa6d-4f07-9424-45be15329ce6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: TimeHolidays.HolidayDate
+	toColumn: LocalDateTable_6bf0c910-bfc3-4adf-83f6-9b833bd00f09.Date
+
+relationship a8c9939f-1a2e-4912-a212-2b8737f33d18
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Timesheets.BeginDate
+	toColumn: LocalDateTable_551a9a53-830d-429b-b6c2-c4f38a321702.Date
+
+relationship 6a878e88-b210-4ba2-82b9-11ba233d6122
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Timesheets.EndDate
+	toColumn: LocalDateTable_d53675dd-0420-43b9-a788-125630ced196.Date
+
+relationship 11b7e4ff-0e3b-47fd-8a31-429d673ec423
+	joinOnDateBehavior: datePartOnly
+	fromColumn: TimesheetWorkflowHistory.ActionDate
+	toColumn: LocalDateTable_e3bc378b-c1d5-46c8-9f9d-cb5e05dd2021.Date
+
+relationship bcd7be83-23eb-48dc-b634-a7f30b3aa9ab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: TimeTrackingEntries.DateOfEntry
+	toColumn: LocalDateTable_a378f0e3-cbc0-454f-884f-59c2fa4ebcd2.Date
+
+relationship ef4ab136-a2ab-490e-b76e-9d6d310e36ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Users (2)'.LastLogin
+	toColumn: LocalDateTable_3f821b43-7568-4b76-b669-f84e9a207ef0.Date
+
+relationship a362c639-9917-4ef8-8f1d-bca693d63f81
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Users (2)'.LastLogout
+	toColumn: LocalDateTable_24c969a1-8356-455b-8a80-021571138a12.Date
+
+relationship e70a4753-9e1b-479d-be7a-f9781f251a9e
+	fromColumn: AuditPlanCapacityPlanning.AuditPlanId
+	toColumn: AuditPlans.AuditPlanId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 01301cb6-5006-4175-ae23-b26e54237fe5
+	fromColumn: AuditPlanCapacityPlanning.ProjectId
+	toColumn: 'Projects (2)'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 76712e8b-6c25-4cc4-8f4d-bb5f1ee94faf
+	fromColumn: AuditPlanCapacityPlanning.TimeAdminId
+	toColumn: TimeAdmins.TimeAdminId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0eb76d75-b5ef-4759-af8c-fdf57c3a0c44
+	fromColumn: AuditPlanCapacityPlanning.TimeHolidayId
+	toColumn: TimeHolidays.TimeHolidayId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a7831e32-1c83-4d1e-8ccd-36801476354a
+	fromColumn: AuditPlanCapacityPlanning.TimeNonWorkingId
+	toColumn: TimeNonWorkings.TimeNonWorkingId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 124b5a59-6925-4fce-ab73-ec4f54154203
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AuditPlanCapacityPlanningEntry.AuditPlanCapacityPlanningId
+	toColumn: AuditPlanCapacityPlanning.AuditPlanCapacityPlanningId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ff517b7a-5a6a-4aa9-a2ec-53a653f8c14b
+	fromColumn: AuditPlanCapacityPlanningRole.AuditPlanId
+	toColumn: AuditPlans.AuditPlanId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a9a76b79-8230-46dc-ada4-77641d48553b
+	fromColumn: AuditPlanSchedule.AuditPlanId
+	toColumn: AuditPlans.AuditPlanId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4c06c5d3-665c-4841-9bdc-d90c15aa3ae8
+	fromColumn: AuditPlanSchedule.ProjectId
+	toColumn: 'Projects (2)'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 52566b75-5fd8-4daa-ae38-443be426003f
+	fromColumn: AuditPlanSchedule.ProjectPhaseId
+	toColumn: 'ProjectPhases (2)'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6a9c6e9a-ef9d-489c-aa7e-b9f66c926dd3
+	fromColumn: AuditPlanSchedule.TimeAdminId
+	toColumn: TimeAdmins.TimeAdminId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 541ae3be-24e2-4bae-ae6f-ae29ed4ceef6
+	fromColumn: AuditPlanSchedule.TimeHolidayId
+	toColumn: TimeHolidays.TimeHolidayId
+
+	annotation PBI_IsFromSource = FS
+
+relationship bdf5f1bb-eb76-4152-91cf-a2ba843e7d48
+	fromColumn: AuditPlanSchedule.TimeNonWorkingId
+	toColumn: TimeNonWorkings.TimeNonWorkingId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 279636a0-a5d7-4aca-b1a2-9c4350526d80
+	fromColumn: AuditPlanSchedule.UserId
+	toColumn: 'Users (2)'.UserId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 862e8930-065b-43d8-b4de-eca04e20278b
+	isActive: false
+	fromColumn: 'ProjectPhases (2)'.ProjectId
+	toColumn: 'Projects (2)'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 53631799-e221-462d-b9c2-131f928fb755
+	fromColumn: 'ProjectPhaseWorkflowHistory (2)'.ProjectId
+	toColumn: 'Projects (2)'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f89fb60b-478b-410e-b2db-4f199baec7a7
+	fromColumn: 'ProjectPhaseWorkflowHistory (2)'.ProjectPhaseId
+	toColumn: 'ProjectPhases (2)'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a1107060-3c7f-42b5-9318-36d104ae4393
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: TeamApprovers.TeamId
+	toColumn: Teams.TeamId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9a47a782-5cd2-4512-9bad-57ec82a59058
+	fromColumn: TeamUsers.TeamId
+	toColumn: Teams.TeamId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f36b3a5c-a8fe-48e0-9b04-e2934fc3cf1b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: TeamUsers.UserId
+	toColumn: 'Users (2)'.UserId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 24eeff78-00c6-4ed9-97df-9a521efa2d0e
+	fromColumn: TimesheetWorkflowHistory.TimesheetId
+	toColumn: Timesheets.TimesheetId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a537bdd8-d398-4c6f-9f5a-f826800ee157
+	fromColumn: TimeTrackingEntries.AssessmentId
+	toColumn: 'Assessments (2)'.AssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6d99569d-840d-4026-a645-ccaa2ddc25e2
+	fromColumn: TimeTrackingEntries.AuditPlanId
+	toColumn: AuditPlans.AuditPlanId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8e355381-f08d-4c39-af3a-bdd45bc9973c
+	fromColumn: TimeTrackingEntries.ProjectId
+	toColumn: 'Projects (2)'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1a87fe48-d7db-4f52-95b5-56f8fe605d44
+	fromColumn: TimeTrackingEntries.ProjectPhaseId
+	toColumn: 'ProjectPhases (2)'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e54f9cae-c625-4996-b035-3418e0b75230
+	fromColumn: TimeTrackingEntries.TimeAdminId
+	toColumn: TimeAdmins.TimeAdminId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b342743e-6300-4495-b8e2-5446eac2c759
+	fromColumn: TimeTrackingEntries.TimeCategory2Id
+	toColumn: TimeCategories2.TimeCategory2Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1d7be71f-48bb-4db2-b6ed-96f12a23b8de
+	fromColumn: TimeTrackingEntries.TimeCategory3Id
+	toColumn: TimeCategories3.TimeCategory3Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship ae12fc4e-b51f-4fec-876c-026395392604
+	fromColumn: TimeTrackingEntries.TimeHolidayId
+	toColumn: TimeHolidays.TimeHolidayId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 62effe5a-152b-4cef-8016-ee49be18b0c5
+	fromColumn: TimeTrackingEntries.TimeNonWorkingId
+	toColumn: TimeNonWorkings.TimeNonWorkingId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3306750b-8043-42dc-a4d7-077ee4659773
+	fromColumn: TimeTrackingEntries.TimesheetId
+	toColumn: Timesheets.TimesheetId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0d78f3a6-64f0-48ef-9a19-f9d1305c7445
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A05 - Timesheet'.DateOfEntry
+	toColumn: LocalDateTable_d4d2845e-d92d-4f72-9d74-d44bc49e9589.Date
+
+relationship c1cfcf1e-dd10-4c99-8036-5a9ef1016d7e
+	fromColumn: 'A05 - Timesheet'.TimeAdminId
+	toColumn: TimeAdmins.TimeAdminId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d5b41028-a6a7-4033-b286-52aa6448a789
+	fromColumn: 'A05 - Timesheet'.TimeNonWorkingId
+	toColumn: TimeNonWorkings.TimeNonWorkingId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 29b7dbe4-534c-4939-b41f-ca37e9812fa1
+	fromColumn: 'A05 - Timesheet'.TimesheetId
+	toColumn: Timesheets.TimesheetId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0f041c09-8c48-411c-8519-f3b8ff61d9e6
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A05 - Timesheet'.TimeTrackingEntryId
+	toColumn: TimeTrackingEntries.TimeTrackingEntryId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 31dc2e41-50b3-4e07-acd4-1126cb5bbb12
+	fromColumn: 'A05 - Timesheet'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f54b829a-6fdd-a9b6-3ffe-e66b465d5720
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A05 - OverallTimesheetReport'.cPK
+	toColumn: A05_00_01.cPK
+
+relationship c7c59bdd-43e2-fa30-445a-cac3ea5bf23f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A05 - OverallTimesheetReport'.cPK
+	toColumn: A05_01_01.cPK
+
+relationship 79659805-6143-b742-37f6-31bdc4d7cbd5
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A05 - OverallTimesheetReport'.cPK
+	toColumn: A05_02_01.cPK
+
+relationship 9847e782-8ea5-7821-ef4e-3f63e612a8ee
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A05 - OverallTimesheetReport'.cPK
+	toColumn: A05_03_01.cPK
+
+relationship c884f8cd-fd0f-4016-9cb2-62814e4c4242
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A06 - Audit Plan'.ProjectId
+	toColumn: ProjectTexts.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 99321a82-9ef7-42ad-8dd4-6a007a15ab17
+	isActive: false
+	fromColumn: 'A01 - Open Observation Report as of Today'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 108e3aff-cc7d-40dd-92b3-584803d8a378
+	isActive: false
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ca224a3e-f32b-4894-8ca7-f06a705cd1ba
+	isActive: false
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3f62fe2d-8131-41f8-bdca-63fc0a809fcd
+	isActive: false
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b2ac1062-8930-43bd-931c-35ae753ae288
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AuditReports.ProjectID
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a1ecc82a-a226-4ae5-a225-cd5a4fcad3ba
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: DocumentRequests.ProjectID
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c77e93d5-adcb-4152-8cca-25002a8f9ffc
+	isActive: false
+	fromColumn: Folders.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fd30a462-83ca-4c89-a4b5-b6765992464b
+	isActive: false
+	fromColumn: ObjectRelationshipContexts.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 81a38938-5573-4834-be55-b83c47287b8d
+	isActive: false
+	fromColumn: ObjectRelationships.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a7190131-aaa9-4d14-aad9-c4e99008a1d9
+	isActive: false
+	fromColumn: ProjectPhases.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 12e3dd4d-03a4-41c2-a473-a7758784b222
+	isActive: false
+	fromColumn: ProjectPhaseWorkflowHistory.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b35b3fc2-447a-f6b1-0f46-3d6a0f3c8065
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - High'.'Projects.ProjectCode'
+
+relationship a10609c3-96cf-322c-3555-5d60ec8208ad
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - Significant'.'Projects.ProjectCode'
+
+relationship 907c4ca1-ad9e-59c1-b6eb-4c6376bad11a
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - Medium'.'Projects.ProjectCode'
+
+relationship c2fcad4b-c222-0d92-0b8d-5e0ea435a3d4
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - Low'.'Projects.ProjectCode'
+
+relationship 44a3780c-d954-4bae-bbd6-03d1fbfcfad5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A07 - Timesheet Last Submitted On'.'Last Submitted On'
+	toColumn: LocalDateTable_2e0355c9-8d73-4253-b7fd-24a549bd8ca4.Date
+
+relationship 6a48f333-fb3b-4d4b-8e6f-e6af7c8d2889
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.EstStartDate
+	toColumn: LocalDateTable_29ccdc29-2e38-45aa-b70d-1748c5c201e1.Date
+
+relationship 2939fcb4-a4ad-4565-b05c-8b7a5f3540db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.EstEndDate
+	toColumn: LocalDateTable_74c19e8e-ffc9-432b-ae52-01e80ce0d8b1.Date
+
+relationship aaa5c763-b0ed-41b8-af6c-0419c5ae0824
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.ActStartDate
+	toColumn: LocalDateTable_fe1284bf-611e-45be-b1bb-535263b5b111.Date
+
+relationship 208c92c1-51bb-420e-a931-3b29ce0f64bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.ActEndDate
+	toColumn: LocalDateTable_57966ae9-acc3-4ede-8e34-eafb87e722fa.Date
+
+relationship a1d8643f-c0df-464a-b783-03c0eb764837
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.DueDate
+	toColumn: LocalDateTable_ce0414e5-bafd-4116-a0a9-de09beb91bd6.Date
+
+relationship 96d2ab73-d5be-493c-a080-af1b8224f53f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.RevisedDueDate
+	toColumn: LocalDateTable_a2ef09dc-aae8-418e-b843-e69d18fb80b8.Date
+
+relationship 012f083e-4c4e-4d65-b437-e19d88809266
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.ReviewDueDate
+	toColumn: LocalDateTable_076738ae-15ac-4bc2-8966-f951af508f06.Date
+
+relationship 0528b3b6-e941-4f78-87a2-da2d02966fbf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.ScheduledStartDate
+	toColumn: LocalDateTable_9832f3a6-65ef-44f8-a13b-0daa78b41bb0.Date
+
+relationship 2df055df-e835-48bf-b242-e428417cf59b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.ScheduledEndDate
+	toColumn: LocalDateTable_323e924a-9b25-4d9f-af3b-110ceab0050d.Date
+
+relationship d677dd15-5244-4e14-8ebf-f9c04854cb6c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.'A08_00 - Final Report Issuance Date.ActualEndDate'
+	toColumn: LocalDateTable_c6c98843-2b04-4f92-985d-aa6cf46e40d9.Date
+
+relationship 528ea9c6-78f4-4369-aec4-0b8dbdd16113
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Phase And Milestone'.'A08_00 - TeamMate Updated Date.ActualEndDate'
+	toColumn: LocalDateTable_4e7d76f9-2b92-4011-95bb-7f5cd7a621c0.Date
+
+relationship b0f96800-625e-4cd8-9393-223cb8bced9b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.EstStartDate
+	toColumn: LocalDateTable_b3ea031c-b403-41b9-a2b8-50223b63bc6c.Date
+
+relationship d7a50548-6431-4a2d-b5db-b6c3a2f493e0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.EstEndDate
+	toColumn: LocalDateTable_8350a2fd-b099-4029-9f14-1455bfe48c67.Date
+
+relationship d9233cb0-c8b2-433b-be96-f7131bec85bd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.ActStartDate
+	toColumn: LocalDateTable_4b1704de-9169-445f-b454-ced5d5c876be.Date
+
+relationship 51d4040e-0ec3-4003-8776-34ed86abfcc4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.ActEndDate
+	toColumn: LocalDateTable_84913b7e-9552-4d3b-8010-8160567d77e2.Date
+
+relationship d0b0820b-36d5-4e30-bad9-9c6f78c0d036
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.DueDate
+	toColumn: LocalDateTable_3049ea78-4842-495b-835e-d15a87a4f6d7.Date
+
+relationship 7f73a9aa-6047-4d4a-9f0c-49645f05cbd5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.RevisedDueDate
+	toColumn: LocalDateTable_1985fbbf-b0ba-4042-b480-f1ce0c980898.Date
+
+relationship 9c9cc76c-fef7-4ee4-af20-a450af88baef
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.ReviewDueDate
+	toColumn: LocalDateTable_030a100c-f0b5-47c1-9c2c-3ca63fbb3368.Date
+
+relationship b57afbce-a0f2-4d9d-bf4b-42b14e7fdfa6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.ScheduledStartDate
+	toColumn: LocalDateTable_2e48079f-c656-4ffc-8128-57e28aab880f.Date
+
+relationship 6ebb17bb-bf0f-4013-8ea7-d4e484e1a0fc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - All Phase'.ScheduledEndDate
+	toColumn: LocalDateTable_373ff77e-3a1d-46d9-b151-7d43c67eb4aa.Date
+
+relationship 6850db4d-77b3-4175-aceb-91d29ae29851
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Final Report Issuance Date'.RevisedDueDate
+	toColumn: LocalDateTable_d26ccaee-2f81-4338-8b92-4b5e560c589b.Date
+
+relationship 0221e209-c63c-490e-b1bb-9968a5f6f87e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Final Report Issuance Date'.EstimatedEndDate
+	toColumn: LocalDateTable_f740f537-d118-495e-b9cf-c2906e48016f.Date
+
+relationship 75063acf-4973-4b41-aceb-49af0742dade
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Final Report Issuance Date'.ActualEndDate
+	toColumn: LocalDateTable_65a3c2c6-40ed-484e-b786-8caec2c97053.Date
+
+relationship f2355556-6f48-4b40-b55e-ce8c1010dbbb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - TeamMate Updated Date'.RevisedDueDate
+	toColumn: LocalDateTable_d944bbff-eaa2-45d0-82bf-fc831a990d81.Date
+
+relationship bdce99f6-2d79-401f-a66e-f1f57b79b0bb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - TeamMate Updated Date'.EstimatedEndDate
+	toColumn: LocalDateTable_35d75787-9370-41c7-9978-4e10d8e164d3.Date
+
+relationship 09674b4a-facc-485d-bf0c-fc76a12e4e8e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - TeamMate Updated Date'.ActualEndDate
+	toColumn: LocalDateTable_85f69e03-0fac-4a04-b129-28fba3d8cfe8.Date
+
+relationship 6b8dc31e-3bf2-4646-a36d-0bd90199b1bc
+	fromColumn: 'A08_00 - Phase And Milestone'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e7ec4955-63bb-4498-84a9-cb1c215f395a
+	isActive: false
+	fromColumn: 'A08_00 - Phase And Milestone'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d9afaede-4c96-412b-8503-d41db56d0d20
+	fromColumn: 'A08_00 - All Phase'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 545eb029-5323-4883-887a-5d764f9178f4
+	isActive: false
+	fromColumn: 'A08_00 - All Phase'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b4f00ddb-1b1c-4c45-9508-832adbea9799
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - Final Report Issuance Date'.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 286105c4-1457-49d6-8e84-54f469ecdf74
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - Final Report Issuance Date'.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4c5cbc5d-0785-44c1-b1aa-3e95ce268f22
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - TeamMate Updated Date'.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e1c16695-3c85-4b35-92fc-7b9104319c1e
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - TeamMate Updated Date'.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 935ca9e0-7696-4bd6-90da-dfb12b3b4344
+	isActive: false
+	fromColumn: ProjectPhaseMilestones.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 85d07a94-a9c7-45bd-a4e3-0386c2d5e0ce
+	isActive: false
+	fromColumn: ProjectPhaseWorkflowHistory.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 73e14d1b-c17d-4249-b1c2-bd2f3b296850
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - FieldWork Actual Start Date.ActStartDate'
+	toColumn: LocalDateTable_2f2381e3-f750-4382-b524-f56bc7ec286d.Date
+
+relationship d715df24-5d26-4967-8697-718ff25ef24e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa'
+	toColumn: LocalDateTable_0672eaf0-8b88-48b8-aa2f-c0d81c3c6bad.Date
+
+relationship 891c7b1b-b5ef-4e3f-b091-e461fe94dc3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate'
+	toColumn: LocalDateTable_dd488689-62a0-48ff-a888-22b007ce18e2.Date
+
+relationship 50a1e90e-2fa3-40b3-94b0-22e57218ad9d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - FieldWork Actual Start Date'.ActStartDate
+	toColumn: LocalDateTable_361008e3-48c1-4be0-a26e-5ebddc6aaf22.Date
+
+relationship 037a1904-56cc-43d7-8dbb-bd17f138f533
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Final Report Issuance Date'.'A08_00 - Final Report Issuance Date.ActualEndDate'
+	toColumn: LocalDateTable_c59d190b-75f3-4cd7-bce4-565a6ebcfc0a.Date
+
+relationship 27f5224f-2431-4fd6-ac13-a618b68285fe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - TeamMate Updated Date'.'A08_00 - TeamMate Updated Date.ActualEndDate'
+	toColumn: LocalDateTable_b0c5feb6-7af8-4fbb-97a4-2cf5823fbcf6.Date
+
+relationship 09adbc30-7d99-485b-bf2e-efdbc6e64c8d
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ed0ea8b6-4efb-46a9-b24a-b0e79c1d49f6
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Final Report Issuance Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 90d650c6-0bbf-457d-9909-96fae79bc99d
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - TeamMate Updated Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a8923742-926a-4226-832f-8634f230ce07
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+	toColumn: ProjectTexts.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 87d8aefe-31c4-4a9f-824a-7b5c87193367
+	isActive: false
+	fromColumn: 'A01 - Open Observation Report as of Today'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e90b876f-c56e-43d3-840a-e1f71b290186
+	isActive: false
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fee9665d-92db-4aa7-b7ee-695fc33bfd37
+	isActive: false
+	fromColumn: 'A03 - Reco Closed but Issue Still Open'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0472abf3-6fba-4d88-9d02-c35caa1aa9c3
+	isActive: false
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 87c439db-9629-4a7f-bbb7-b381e00b91d0
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A04 - Open Observation Report Current Month-End'.RecommendationId
+	toColumn: RecommendationTexts.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 97c9aa41-5eae-4916-9841-10387cc12559
+	isActive: false
+	fromColumn: 'A08_00 - All Phase'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3dbb53c7-e266-4180-b4cf-99ef3297aad5
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AuditReports.ProjectID
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0a1033bc-9244-40ab-aeb1-f364c8641dec
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: DocumentRequests.ProjectID
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2ca72bf5-b268-400e-8302-e8331f850a53
+	isActive: false
+	fromColumn: Folders.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 68f77864-43d6-434e-b11f-4bb124ca71f1
+	isActive: false
+	fromColumn: ObjectRelationshipContexts.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5eb4c27a-2aed-4347-8929-bd69368e7ea9
+	isActive: false
+	fromColumn: ObjectRelationships.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 3d77d968-31a1-4440-90bf-1a342142bbb6
+	isActive: false
+	fromColumn: ProjectPhases.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship cf04793e-a773-43d7-914c-9e845dd6aa20
+	isActive: false
+	fromColumn: ProjectPhaseWorkflowHistory.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 531156dc-9faa-4a69-a5b4-59382fd31daf
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.AssessmentId
+	toColumn: Assessments.AssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ccc462fa-d1d4-48fd-8d76-76ebe37167f7
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 521c240b-e2c3-4418-9274-a0a325a14391
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0ff2c2fa-c5e5-4b5b-b42d-38badf6f4586
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A11_02 - Score: Inherent Impact'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1911528d-4858-48a5-af5b-40886089e600
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A11_03 - Calc Score: Inherent'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b2ece1bf-8f5e-47df-8989-ae688ea0bdcb
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A11_04 - Score: Residual Likelihood'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c5d25af6-3c0e-4075-8993-0266ce60ed4e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A11_05 - Score: Residual Impact'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 56f6ecb8-1bda-41d3-aaff-d7bcd56fcd58
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A11_06 - Calc Score: Residual'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 21d3d050-b4a6-49c3-8391-5ac89bd2c545
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_00 - Auditable Units - Corporate'.Date2
+	toColumn: LocalDateTable_524f1e04-23c9-4694-ae40-2fa7a34689bb.Date
+
+relationship 9161a7ce-023e-4999-90e8-081a9381fbd1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_00 - Auditable Units - Corporate'.Date3
+	toColumn: LocalDateTable_3eddcbfd-04f2-4783-8153-c598ca9eb181.Date
+
+relationship 3d7ebef1-11da-406d-b29c-ad6dab79bd32
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_00 - Auditable Units - Corporate'.Date4
+	toColumn: LocalDateTable_795c2c06-bc7b-4606-b723-87e958ebb402.Date
+
+relationship a0ebc8ff-0be1-4701-b07b-c978afa6c5fa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_00 - Auditable Units - Corporate'.Date5
+	toColumn: LocalDateTable_4ca24301-3ce5-4244-b115-903e0b6fb291.Date
+
+relationship 6ec04c2d-a182-4028-a95b-d33074968a45
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_00 - Auditable Units - Corporate'.Date6
+	toColumn: LocalDateTable_aff095f9-13e1-4594-97da-c61b67fc122d.Date
+
+relationship 53a40e3e-9d55-41bd-9792-7829685f541c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_02 - Auditable Units - ProjectCompany'.Date2
+	toColumn: LocalDateTable_6d03e54e-7a14-4511-b61b-b1c6c261630c.Date
+
+relationship 58d79f59-8e83-4330-9de8-3adcdb560e17
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_02 - Auditable Units - ProjectCompany'.Date3
+	toColumn: LocalDateTable_c059598b-8706-4df9-80b6-ee3bbd005d49.Date
+
+relationship 0702a6a1-9f97-4948-af94-d6d95a16b17a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_02 - Auditable Units - ProjectCompany'.Date4
+	toColumn: LocalDateTable_0ad4888f-5f26-438b-b86d-a2db510cab25.Date
+
+relationship 11470302-1c30-4899-a499-6d98e9fe8822
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_02 - Auditable Units - ProjectCompany'.Date5
+	toColumn: LocalDateTable_b753301b-a423-47a6-bee4-3dffbb035610.Date
+
+relationship 0e9bed46-617e-435a-9e9e-039ec24cb044
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_02 - Auditable Units - ProjectCompany'.Date6
+	toColumn: LocalDateTable_7e6c2c97-54f5-49b4-8c7f-0cc7af1831a9.Date
+
+relationship d291a5b7-e4c2-4e32-a076-b8ac949f892e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A12_04 - Auditable Units with all score  - ProjectCompany'.EntityId
+	toColumn: 'A12_03 - Auditable Units Risk score  - ProjectCompany'.'Entities.ParentEntityId'
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5f0fbc75-7fec-4c71-80c9-906364d714c6
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A12_04 - Auditable Units with all score  - ProjectCompany'.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship efcbbd91-fb9c-4b4d-abed-f207207f4d40
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A11_01 - Score: Inherent Likelihood'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e1275419-84b6-499f-830b-222bceed509f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_05 - Auditable Units - ProjectCompanyCountryOffice'.Date2
+	toColumn: LocalDateTable_61e80d9b-147c-4022-b65d-10ae5fcba803.Date
+
+relationship c91f6c6e-9a22-4fa7-b4e6-2a4d910866ee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_05 - Auditable Units - ProjectCompanyCountryOffice'.Date3
+	toColumn: LocalDateTable_03d54b66-bb7b-48e8-a671-da011cc72d09.Date
+
+relationship caf8a87d-fc32-446a-8876-61c2ec8bffaf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_05 - Auditable Units - ProjectCompanyCountryOffice'.Date4
+	toColumn: LocalDateTable_ee8fed37-833b-402b-bf26-a1c8662165aa.Date
+
+relationship 5aa74a7a-86c9-4f58-af98-3525d6ba8dad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_05 - Auditable Units - ProjectCompanyCountryOffice'.Date5
+	toColumn: LocalDateTable_196640dc-b8fa-4057-8b96-3ada1c11a562.Date
+
+relationship 2c42b9bf-0ec6-418e-9452-400f2269709a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A12_05 - Auditable Units - ProjectCompanyCountryOffice'.Date6
+	toColumn: LocalDateTable_2bae4cdd-c522-4f49-87ac-d2a2f06e6524.Date
+
+relationship 5d020075-2dce-407b-8fb1-7ecf42afa65f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A12_07 - Auditable Units with all score  - ProjectCompanyCountryOfiice'.EntityId
+	toColumn: 'A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice'.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship df472b3a-9174-4e0f-b2ea-09567239bd4b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A12_07 - Auditable Units with all score  - ProjectCompanyCountryOfiice'.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 878333e1-3014-cfb5-ef95-341fab82fbf6
+	fromColumn: 'A12 - Entity Heat Map'.'Auditable Unit Prioritization'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 5b89e45d-1eba-c560-ff23-f08d1d99d6a7
+	fromColumn: 'A11 - Risk Heat Map'.'Risk Prioritization'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 8ab9bdc3-a031-5647-86dc-491bc99ab710
+	fromColumn: 'A12 - Entity Heat Map'.Country
+	toColumn: 'A00 - Country Order'.Country
+
+relationship 3ca77fec-41d4-50c2-95a9-38d9b5285878
+	fromColumn: 'A12 - Entity Heat Map'.Region
+	toColumn: 'A00 - Region Order'.Region
+
+relationship d113caa3-2806-694b-ee06-25f09db59a50
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.'EntityAssessmentDetails.Category1'
+	toColumn: 'A00 - Region Order'.Region
+
+relationship 6e4b0d0c-7037-bca9-feca-62b2e68429e3
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.'EntityAssessmentDetails.Category2'
+	toColumn: 'A00 - Country Order'.Country
+
+relationship 2e902c46-70f6-1bbc-6960-fcfa6839ebd3
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.'StrategicRisks.StrategicRiskCode'
+	toColumn: 'A11 - Risk Heat Map'.'StrategicRisks.StrategicRiskCode'
+
+relationship 4b69ec7c-d93e-401d-b710-40022dbbab93
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A13 - Audit Plan'.'Projects.EstimatedStartDate'
+	toColumn: LocalDateTable_18ea76d1-60bb-4668-86d3-b6263e1ebef0.Date
+
+relationship 78eaae28-b736-47ab-a6a3-3190b88a903e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A13 - Audit Plan'.'Projects.EstimatedEndDate'
+	toColumn: LocalDateTable_6b8a74d9-2316-41aa-8601-c7acd756ffaf.Date
+
+relationship 2d77ecdd-91a2-425e-9477-27f88fba3bbf
+	fromColumn: 'A13 - Audit Plan'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e538d440-1448-4f4f-bae1-6f8b3c6321db
+	isActive: false
+	fromColumn: 'A13 - Audit Plan'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 72d1ada4-3b31-4587-b5f0-2fae26f5f5db
+	isActive: false
+	fromColumn: 'A13 - Audit Plan'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 829d3c61-536f-4f33-b196-aa01cccdcc9b
+	fromColumn: 'A13 - Audit Plan'.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c18a3f16-b353-4114-a3f7-66e8dd2d56c2
+	isActive: false
+	fromColumn: 'A13 - Audit Plan'.'Entities.ParentEntityId'
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 825d8045-4f36-51b3-2c9c-763c999a6615
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.'Risk Rating'
+	toColumn: 'A00 - Risk Rating Order'.'Risk Rating'
+
+relationship 0ba6e98f-eb9c-4aa6-9de9-d0fe9fa52a77
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A07_01 - Timesheet Last Entered On ProjectWise'.'Last Entered On'
+	toColumn: LocalDateTable_48fb2d5e-4080-4d87-9bcf-b8462f2177dc.Date
+
+relationship 5b02d164-5a21-4b11-b3cf-fd2a5a80f66c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.'Issues.ReleaseDate'
+	toColumn: LocalDateTable_5c7c3bd1-3dc6-463c-855b-10ade092ce19.Date
+
+relationship fd12650e-b264-4f42-acda-54f0ca833adc
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A10 - Issues Root Cause'.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1b1204d5-11ad-4dcb-942d-8ffc0b3dfd17
+	isActive: false
+	fromColumn: 'A10 - Issues Root Cause'.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ff79c158-bd7e-4f7f-a208-33425043c5d6
+	isActive: false
+	fromColumn: 'A10 - Issues Root Cause'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 88b39c18-423b-4028-bdd8-7668b29079e4
+	isActive: false
+	fromColumn: 'A10 - Issues Root Cause'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 057981d3-44a8-470f-9ba0-214d38f4afce
+	isActive: false
+	fromColumn: 'A10 - Issues Root Cause'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 52a6baef-1a81-4faf-9228-5d7a469003ce
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A10 - Issues Root Cause'.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 667bc255-1905-457b-acef-e2cd4cf67067
+	isActive: false
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.ParentEntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 16620a75-00ed-f68a-71b1-26af04b6df82
+	fromColumn: A01_01.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 7dcd56a5-30ce-1a28-6ccf-9f9916571a6f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: A01_02.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 5edcf4d9-8953-c91d-d6b5-df6ca27202a8
+	fromColumn: 'A01 - Open Observation Report as of Today'.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship d52cb81e-4403-63b9-cb8e-ece494dd7205
+	fromColumn: A02_01.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship d27505bb-b714-d1f0-7d0c-9d62cb20e451
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: A02_02.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 928d6c5d-f18d-0584-349f-7d04fbacbb83
+	fromColumn: A04_01.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 96c9fdf4-9495-4fa7-918f-31ee8fdae046
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: A04_02.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 825c3f28-bceb-1582-3178-7165edb33d7d
+	fromColumn: 'A06 - Audit Plan'.Category6
+	toColumn: 'A00 - Report Rating Order'.'Report Rating'
+
+relationship bbf9a3ed-1b5b-48b0-9bba-230016fa3954
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.'Recommendations.DueDate'
+	toColumn: LocalDateTable_24b7f594-b5e0-471c-8857-c2e0aa76c9ad.Date
+
+relationship b2b36290-1468-4759-9ffc-880139cc3979
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.'Recommendations.CreatedDate'
+	toColumn: LocalDateTable_6af0e701-f2ea-483a-9dec-92b8c4d34645.Date
+
+relationship a871ddf3-7900-4021-8c15-e53115638792
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.'Recommendations.RevisedDueDate'
+	toColumn: LocalDateTable_21a0bcff-a299-4a87-b245-35a7acabcb37.Date
+
+relationship af626d56-c9d2-47fd-a13c-4380a3b1312a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.'Recommendations.LastImplementedDate'
+	toColumn: LocalDateTable_65ba5d42-a650-4c64-a2cf-62b558f28a1e.Date
+
+relationship 3899ed80-370f-47c8-915b-12362b41dd49
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.'Recommendations.LastClosedDate'
+	toColumn: LocalDateTable_cc9f9561-b501-4c41-8716-3afdf17b7220.Date
+
+relationship 5e625a78-e00e-468f-ab00-4a4c0a3525ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.cJanReportingCutOff
+	toColumn: LocalDateTable_f105435f-b768-4977-a6eb-878a882d79d9.Date
+
+relationship 6a8da122-7243-4899-983f-83e56acfdcfa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.cToday
+	toColumn: LocalDateTable_49fc2a0d-14a2-45c8-a642-45949df941da.Date
+
+relationship 8501ff30-c5de-490b-8aa5-7236c6dfa6b1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.Action_Due_Date__For_Ageing_Jan
+	toColumn: LocalDateTable_ba85e282-b5b6-4593-9791-92938f39c3d6.Date
+
+relationship 8fa7d99a-586f-4812-84a8-5989c38d6ab7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause'.'Recommendations.LastReviewedDate'
+	toColumn: LocalDateTable_8624c14f-bc01-4a62-afe4-e45977f5fd66.Date
+
+relationship 24afafe3-9d33-d98b-f748-09ba56aed14d
+	fromColumn: 'A10 - Issues Root Cause'.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship f48fcd12-0206-489c-aa22-8b3ab9495e77
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Planning Scheduled Start Date'.ScheduledStartDate
+	toColumn: LocalDateTable_e2ce7385-6067-481f-b6e7-4441e8e993a7.Date
+
+relationship 15737c1a-e7c4-4086-a0a3-18212aa0c3c7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Planning Scheduled End Date'.ScheduledEndDate
+	toColumn: LocalDateTable_72c18186-4fcd-4c20-88b2-64c4d364bde6.Date
+
+relationship ad4107b0-128b-4011-bb7c-9f8de64c476f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Planning Actual Start Date'.ActStartDate
+	toColumn: LocalDateTable_a638db49-e4c7-4ac4-815d-1982f24bcd01.Date
+
+relationship 6c48a2bb-5ef6-4667-a88d-a02fa681fec6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Planning Actual End Date'.ActEndDate
+	toColumn: LocalDateTable_6e60814c-845c-4271-857c-1f08e4e5aaf5.Date
+
+relationship 6ab2f1d1-0940-4274-a07c-840f4ce7e1dd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - AAL Issuance Date'.'A08_00 - AAL Issuance Date.ActualEndDate'
+	toColumn: LocalDateTable_7f16e25e-9dde-4415-ab66-01361e427cf0.Date
+
+relationship 7b62b041-5485-41e7-b518-a5ac6f251744
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - FieldWork Scheduled Start Date'.ScheduledStartDate
+	toColumn: LocalDateTable_46e3a100-2b2f-4be5-b5ed-88902f99f816.Date
+
+relationship bb5818cc-0f0d-406b-887a-d85cf1f80825
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - FieldWork Scheduled End Date'.ScheduledEndDate
+	toColumn: LocalDateTable_c3dc4903-7f0b-4aeb-b27b-bad8a9c16a57.Date
+
+relationship dfd21120-9b1d-4188-8eeb-c0f84303a527
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - FieldWork Actual End Date'.ActEndDate
+	toColumn: LocalDateTable_4ce1316c-1549-4a22-b2f3-1bcdb8e80641.Date
+
+relationship cefe5f52-cfbf-4673-a64a-d7283c13d117
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - FieldWork Completed Date'.'A08_00 - FieldWork Completed Date.ActualEndDate'
+	toColumn: LocalDateTable_49f2b902-526e-42d5-9d0b-8342a2f72f52.Date
+
+relationship 2d0ba156-a8f8-4185-ac5f-600b79125d21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Reporting Scheduled Start Date'.ScheduledStartDate
+	toColumn: LocalDateTable_3b73fd6d-9c0f-4422-99dc-8a1fef2257df.Date
+
+relationship e15af2c8-a1d6-4e5e-ba02-cdfc500a4aad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Reporting Scheduled End Date'.ScheduledEndDate
+	toColumn: LocalDateTable_718c70af-98c7-4435-8e0f-b7d6151a4311.Date
+
+relationship 3cd1a86a-c008-4372-86f8-63e09a6e4519
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Reporting Actual Start Date'.ActStartDate
+	toColumn: LocalDateTable_3dbcc042-d919-4593-a479-19b5998a4cef.Date
+
+relationship 261d013f-4aaf-4f6a-9900-688022f993a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Reporting Actual End Date'.ActEndDate
+	toColumn: LocalDateTable_50a26b84-d3ce-481a-9f97-c37c35896e20.Date
+
+relationship e994dc8b-1ff7-4cab-b812-d6eebea939a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Draft  Report Issuance Date'.'A08_00 - Draft Report Issuance Date.ActualEndDate'
+	toColumn: LocalDateTable_c26395c3-53b3-4f2c-a056-771c50d4570a.Date
+
+relationship d2565c76-933e-49ff-a886-3e159d0c8e9e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - AAL Issuance Date'.RevisedDueDate
+	toColumn: LocalDateTable_254b6aeb-06c0-4fee-b1f7-aeb3bb306535.Date
+
+relationship 883415f3-d051-40ff-89e6-1fa6110c8f27
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - AAL Issuance Date'.EstimatedEndDate
+	toColumn: LocalDateTable_59aebf09-504f-4284-9f3f-8573f1cfe266.Date
+
+relationship 74ae0e14-9e21-41c0-819d-8fc47b9cbf22
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - AAL Issuance Date'.ActualEndDate
+	toColumn: LocalDateTable_17a7a94c-4876-4242-b422-76fe1e86ce40.Date
+
+relationship f2c6097b-a6d4-403d-b4dc-496269d500d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - FieldWork Completed Date'.RevisedDueDate
+	toColumn: LocalDateTable_84c47b5e-9c94-44ba-841e-52cfa6efc81e.Date
+
+relationship b3c9d985-89ab-4010-b793-41fe4bfafa66
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - FieldWork Completed Date'.EstimatedEndDate
+	toColumn: LocalDateTable_16bd44ea-1acf-4ea9-88e9-5cf18e361a40.Date
+
+relationship 0b636634-94b3-4756-bf20-6c4d71ae2a1d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - FieldWork Completed Date'.ActualEndDate
+	toColumn: LocalDateTable_35d36ded-bb50-423b-815a-441fd3fbae59.Date
+
+relationship 21c25888-9793-4da0-b13a-034cb11e9fee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Draft Report Issuance Date'.RevisedDueDate
+	toColumn: LocalDateTable_5d17e382-9ef5-4a87-9d30-b9869381b3b3.Date
+
+relationship f5781b15-2730-4c4f-b39d-5d27b01edebf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Draft Report Issuance Date'.EstimatedEndDate
+	toColumn: LocalDateTable_8963575c-08e9-4f70-bdf2-3bf3364c8474.Date
+
+relationship 0b893485-1383-48b2-9a5d-eef111850a14
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Draft Report Issuance Date'.ActualEndDate
+	toColumn: LocalDateTable_58a0ac70-7753-44ec-abc9-f1a5a697aba1.Date
+
+relationship 80f0ef1d-2128-4aa1-92ea-9b36eee13127
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Project Closed Date'.RevisedDueDate
+	toColumn: LocalDateTable_97a0b1b3-8af9-4358-996f-fcf42a6026e5.Date
+
+relationship 9ae77337-8b87-4e7d-ab7a-f988d1805a31
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Project Closed Date'.EstimatedEndDate
+	toColumn: LocalDateTable_b28ebe48-c451-49aa-a56f-43f581ff9150.Date
+
+relationship 80635f76-f9f4-45de-b988-8b75a93b1a54
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08_00 - Project Closed Date'.ActualEndDate
+	toColumn: LocalDateTable_16b61bcf-7e9a-46aa-8e3a-ac841bbd8e57.Date
+
+relationship e98d217d-831c-469f-a85a-27b92ea3a6a9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Planning Scheduled Start Date.ScheduledStartDate'
+	toColumn: LocalDateTable_3ba10728-269b-4766-b9b2-f0144d85508a.Date
+
+relationship 07dc6b12-8036-4211-bc97-a07ad3fdd986
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Planning Scheduled End Date.ScheduledEndDate'
+	toColumn: LocalDateTable_87eb647e-f340-49e6-a128-a6f96083cdd8.Date
+
+relationship 2d74852d-1ae8-47c4-9f2c-bd9cfa1c8145
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Planning Actual Start Date.ActStartDate'
+	toColumn: LocalDateTable_0fcd5ec9-e51d-4fa8-b5f2-9b2e62a3ebf4.Date
+
+relationship 391deabb-ab1c-4814-b1e5-3f066eae1993
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Planning Actual End Date.ActEndDate'
+	toColumn: LocalDateTable_36eae290-a4ab-4533-8343-df3ec494fb19.Date
+
+relationship df860ea0-cc6a-4095-8055-5684c9228b86
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate'
+	toColumn: LocalDateTable_f65d5b13-710f-4ae1-be96-6479a0553ab7.Date
+
+relationship b6236cc2-a5bc-4659-a003-86b16f4c49b9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Scheduled Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 67a50107-3fc4-4e2f-a45d-fd45aefb32c3
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Scheduled Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c8700b9c-6511-4bd9-aa0f-7dfb292f3dac
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Scheduled Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 63886bb1-7709-4cb5-829d-c253e3074325
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Scheduled End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 01597ff8-92ca-43b5-a0ea-95409fedf604
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Scheduled End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5801e21b-cea4-47e5-9004-ab9a864e4676
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Scheduled End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ba943d69-e9df-4235-8490-e9b0721628f9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fa8811fb-ccd9-47ee-824e-dcf22ce7eee9
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Actual Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 62df2aa9-ad18-45b6-bf52-cbc72f093c8a
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Actual Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship acf42127-c91d-44d3-b8cd-3e59ce156c33
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Actual End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 006c8d0c-a4ad-467d-ae77-658f27f8b8c3
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Actual End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 402e9a73-6668-4fcc-8418-bdfc401d5211
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Planning Actual End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a9c561d0-e916-4679-99dc-f14a68b5e88c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - AAL Issuance Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship eddcf23f-831c-4eec-a0f3-3b8f68c6e0ad
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - AAL Issuance Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 257918a9-6b46-4ff1-b510-510a43f8a259
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - AAL Issuance Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 536bd0d4-4a4d-49fb-b9ed-53079167a63b
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Scheduled Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 08715db8-6263-4d45-8b55-6ba096634e7e
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Scheduled Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6b3eb64c-3078-486b-a65f-812754f0f1a5
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Scheduled Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4c61d64c-dc17-4c97-a982-07a15781b2f7
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Scheduled End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 552fec28-bd32-4b6e-9435-a4c630b37b52
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Scheduled End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6a743eb3-28dc-4e5a-a58a-6062d156ed06
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Scheduled End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9c1a7886-3d7d-462c-8c58-e0084efce4ee
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Actual End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 74576e7d-7883-4052-83ef-a306d2bc1acb
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Actual End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2dc7b1dd-1a07-4e2a-ab61-fd036fa930f4
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Actual End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 36e28474-84ae-4b09-a51c-ce531950d35d
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Completed Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9a8f976b-4af3-4898-84a5-97c45e8a3457
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Completed Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 787075b4-e003-476b-8d39-846d091aa76a
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Completed Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 42424500-4386-4c43-b3d0-96dd539c3676
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Scheduled Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship bd068b06-d699-4f54-82fd-be61c7686a54
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Scheduled Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4c485c04-5c3e-4112-b0b0-70fa0471b2ec
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Scheduled Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship eeb2cbf1-e75a-4461-b31e-1ffa5c03e948
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Scheduled End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 424f125a-ca90-4665-9743-060b770f8734
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Scheduled End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5f969e33-71e3-4769-9c81-53155901bc0c
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Scheduled End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4258d2d4-feb5-4e01-a5db-57ea86c2c88f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 6d15e3d2-5075-46c5-8c6c-bbe2552c6cfd
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Actual Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 39a077fa-7627-463e-97ac-8bf993c4b714
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Actual Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 908265a1-b9c2-4397-8b74-0161d4a1bc42
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Actual End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 24163a17-8c60-41d0-bf89-510f8492d97a
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Actual End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 30a97df8-6fa3-425d-8d80-d222ba7bdb24
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Reporting Actual End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9b952dd1-6ced-4f18-8094-f8065e20b5f6
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Draft  Report Issuance Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f6bbb845-8b27-42a3-9efb-1a7d1e377ec1
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Draft  Report Issuance Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0d94d24f-cce0-41d8-87dd-bfe471c43824
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Draft  Report Issuance Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8099c6c8-4f64-4c8a-9ee8-cd29bd9250c4
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - AAL Issuance Date'.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b639339e-4c6d-4230-8a89-276886e2fe49
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - AAL Issuance Date'.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 577b65de-a6c2-4f86-9d3f-05cfbe6d523e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - FieldWork Completed Date'.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 269a0a44-7666-46dc-8e5a-d4856d8796e4
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - FieldWork Completed Date'.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 88fed566-f027-47b0-a20a-05db6898a5c7
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - Draft Report Issuance Date'.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 94502aa5-6bac-4a79-839f-1544c9bb1cef
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - Draft Report Issuance Date'.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5090f647-e309-4e6b-b351-355e7ddb762c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - Project Closed Date'.ProjectPhaseId
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship dab61fa1-1b7d-42e7-8467-a3951f2f2be4
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08_00 - Project Closed Date'.ProjectPhaseId
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 59061ea8-6e11-42c2-87e2-d92d6a2d6f9b
+	fromColumn: 'A10 - Issues Root Cause'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fde15933-4c12-41e3-b02d-379968b72a81
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A10 - Issues Root Cause'.IssueId
+	toColumn: IssueTexts.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 608427b0-9c8c-4160-81e2-e6e5184546e7
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A10 - Issues Root Cause'.RecommendationId
+	toColumn: RecommendationTexts.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5100a7b4-bbda-4d17-aae5-5117c2387d4c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - FieldWork Scheduled Start Date.ScheduledStartDate'
+	toColumn: LocalDateTable_06e9d653-84c3-4fd6-b31a-b4f8c94d1e8c.Date
+
+relationship bcfaaaeb-d240-46fa-a3ac-0ff78a34427a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - FieldWork Scheduled End Date.ScheduledEndDate'
+	toColumn: LocalDateTable_336c1c3f-e02e-4568-bdfb-b6d52bfabd99.Date
+
+relationship 7f7b2278-a6ea-4b08-8fb0-1c47298d7715
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - FieldWork Actual End Date.ActEndDate'
+	toColumn: LocalDateTable_63bbdc61-d293-416c-86cc-ca26a3191489.Date
+
+relationship a26fff58-c32c-4c81-aa91-8150ed3e47a1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate'
+	toColumn: LocalDateTable_e3c90c25-e7a0-46aa-bcc3-89b8e9c97cc9.Date
+
+relationship 352ecb70-95b2-4b13-b837-4a0301b2fbe3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Reporting Scheduled Start Date.ScheduledStartDate'
+	toColumn: LocalDateTable_f4532868-b41e-42e9-a5f2-b2ba8ab938f1.Date
+
+relationship b7ee2503-d135-4663-9cd5-8422c43fd941
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Reporting Scheduled End Date.ScheduledEndDate'
+	toColumn: LocalDateTable_fac292be-4e00-4046-ab26-8a7f50d272f4.Date
+
+relationship 4f7c4370-4c0d-4b9e-9eff-e932721940ca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Reporting Actual Start Date.ActStartDate'
+	toColumn: LocalDateTable_fe4c05a0-a304-4eb5-b837-ddabad98554a.Date
+
+relationship 8ea590a1-d117-45d9-87c8-9f7a19ffbc8e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Reporting Actual End Date.ActEndDate'
+	toColumn: LocalDateTable_2e0e9c13-fd22-413c-923e-b99389f7be0e.Date
+
+relationship 99fa26ad-57ac-473f-9c41-ffc1af7283cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Draft  Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndD'
+	toColumn: LocalDateTable_061db9ac-e3cd-4279-aac7-19dab6a0bd5e.Date
+
+relationship bfcfbebe-dcfd-49ab-b518-37464371566d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEnd.1'
+	toColumn: LocalDateTable_6796a702-08d0-4035-95da-10780d922a2f.Date
+
+relationship 7461f130-0bf8-45a2-93f9-813f7fd80b8d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Closure Scheduled Start Date'.ScheduledStartDate
+	toColumn: LocalDateTable_af3bde70-30f0-4726-9a33-83b15fd26205.Date
+
+relationship a955364a-fa09-4d67-910b-b51e5902187c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Closure Scheduled End Date'.ScheduledEndDate
+	toColumn: LocalDateTable_11a80cd7-9c78-4656-8794-79c617af435f.Date
+
+relationship 4627e0bb-dffc-432c-ad53-0cc55ad91f2f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Closure Actual Start Date'.ActStartDate
+	toColumn: LocalDateTable_bda53b69-5189-4e10-b326-a9ab7f23518a.Date
+
+relationship ed3a374a-c01d-46d4-a454-42731944b838
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Closure Actual End Date'.ActEndDate
+	toColumn: LocalDateTable_4f57bfc2-91ab-4248-be44-088f7110c0ca.Date
+
+relationship 7c68f46a-4961-4b45-966d-992fcefeb734
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Project Closed Date'.'A08_00 - Project Closed Date.ActualEndDate'
+	toColumn: LocalDateTable_8b1d2a60-a55f-4fd2-8239-4a890670ec29.Date
+
+relationship 752c49b9-037a-4903-b762-833d89cc8ab9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Closure Scheduled Start Date.ScheduledStartDate'
+	toColumn: LocalDateTable_ecb26081-dea9-4c57-a497-5ef8b3173b8d.Date
+
+relationship 43bbe7c8-ee17-4913-852c-08fc98315c09
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Closure Scheduled End Date.ScheduledEndDate'
+	toColumn: LocalDateTable_8460bdeb-6937-4814-a64f-4df1cae6c6f9.Date
+
+relationship c43126c5-8d17-4851-9eab-363ef56d2ae3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Closure Actual Start Date.ActStartDate'
+	toColumn: LocalDateTable_f21a934c-755e-4736-82ca-0af6c6cb207c.Date
+
+relationship 46ad9811-79c8-4544-b8fa-aa5940b69d21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Closure Actual End Date.ActEndDate'
+	toColumn: LocalDateTable_aecbdd9c-ce31-403d-8836-61280b27cb8c.Date
+
+relationship 8adbe609-5fea-4b80-8ace-c4537ca79c59
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Audit Schedule KPIs'.'A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate'
+	toColumn: LocalDateTable_9ca88bd2-2542-401c-a50d-aa1fb3def8e5.Date
+
+relationship 56179fc2-8f64-4ed3-bd67-d979625765e2
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Project Closed Date'.'A08_00 - Project Closed Date.ProjectPhaseId'
+	toColumn: 'A08_00 - All Phase'.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fb7c55bd-bd7f-45d2-9a9f-8651ba384592
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure'.DueDate
+	toColumn: LocalDateTable_26f9db60-73af-49d2-a60e-1f7e3c212d4c.Date
+
+relationship b37742b1-fd78-4e1a-8714-652a6260db06
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure'.ReviewDueDate
+	toColumn: LocalDateTable_38587ac3-5432-4160-963a-1369736c9c72.Date
+
+relationship 9faac45c-ea3d-4268-b3a8-ca2e9663e829
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure'.LastNotStartedDate
+	toColumn: LocalDateTable_b3914cbf-6d74-479e-8e50-758f894c378d.Date
+
+relationship 61ee7f09-2ac5-4e41-bd62-8928bb20884f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure'.LastInProgressDate
+	toColumn: LocalDateTable_26cacfe2-4441-4bb8-83f2-208e35927e17.Date
+
+relationship cb6ad12e-de98-446c-93c8-778262a3d55c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure'.LastCompletedDate
+	toColumn: LocalDateTable_38406638-d117-4c2e-919f-9f65f3251a64.Date
+
+relationship 3836135a-f21f-4b96-929e-4af29d75acc3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure'.LastReviewedDate
+	toColumn: LocalDateTable_d49fa8c8-1e47-42c9-89fa-894ea055f05a.Date
+
+relationship 6f5c7620-28ad-40ab-89d6-c38e400ed78e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure'.LastModifiedDate
+	toColumn: LocalDateTable_10c3dd33-8b85-4323-aac1-6130851a2327.Date
+
+relationship 1ebcdebb-0dc5-42a0-b36b-f77805bc329d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure Details'.'A08 - Last Planning Procedure.LastNotStartedDate'
+	toColumn: LocalDateTable_700672dc-764f-4898-a714-5c64d612dae5.Date
+
+relationship ab1deb3b-9d33-4ff3-a3a6-4024ed675e20
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure Details'.'A08 - Last Planning Procedure.LastInProgressDate'
+	toColumn: LocalDateTable_bdaa9d57-5e9d-4794-a500-ccb9414c2090.Date
+
+relationship 70f96e0f-18bd-4047-9472-56787cded330
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure Details'.'A08 - Last Planning Procedure.LastCompletedDate'
+	toColumn: LocalDateTable_8dec1fc0-b46e-436d-bc7f-41b1b2b548ec.Date
+
+relationship e4128a9c-73a6-4d28-841e-3d173345b097
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A08 - Last Planning Procedure Details'.'A08 - Last Planning Procedure.LastReviewedDate'
+	toColumn: LocalDateTable_7af2f855-1c3a-45c8-9ef1-664a99a8b418.Date
+
+relationship 9ddf4150-8ccb-4123-96df-e20cc67f6c41
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Last Planning Procedure'.ProcedureId
+	toColumn: ProcedureTexts.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b89497f2-3367-47a1-a07c-07c3a8183c2b
+	fromColumn: 'A08 - Last Planning Procedure Details'.AssessmentId
+	toColumn: Assessments.AssessmentId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0193b458-c892-48a1-bcff-c1a6d9fe3338
+	fromColumn: 'A08 - Last Planning Procedure Details'.ControlId
+	toColumn: Controls.ControlId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 54c909fe-74c3-4a6e-b519-35a5abfa84a6
+	fromColumn: 'A08 - Last Planning Procedure Details'.DimensionId
+	toColumn: Dimensions.DimensionId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d78e6f8d-c000-4141-ad2c-c2822a4bdcb5
+	fromColumn: 'A08 - Last Planning Procedure Details'.EntityId
+	toColumn: Entities.EntityId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1337f503-fe3c-4c08-b2ff-2fc8f33c092b
+	isActive: false
+	fromColumn: 'A08 - Last Planning Procedure Details'.FolderId
+	toColumn: Folders.FolderId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 627f0cc6-6142-46b4-bb05-c937fe12cc60
+	fromColumn: 'A08 - Last Planning Procedure Details'.IssueId
+	toColumn: Issues.IssueId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4fdd572f-4799-49c8-9008-d1487ba78390
+	fromColumn: 'A08 - Last Planning Procedure Details'.ObjectiveId
+	toColumn: Objectives.ObjectiveId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4e9b98db-8f5d-4932-a1d2-00ec4d0d5fa2
+	fromColumn: 'A08 - Last Planning Procedure Details'.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e352267a-6fa2-4f85-bf07-84be286e3cf9
+	isActive: false
+	fromColumn: 'A08 - Last Planning Procedure Details'.ProcedureId
+	toColumn: Procedures.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 466c8460-5c9b-4941-8c57-fdcec8645cb7
+	isActive: false
+	fromColumn: 'A08 - Last Planning Procedure Details'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2c6a323a-c440-4bca-bb93-a21ecc3cbf3c
+	isActive: false
+	fromColumn: 'A08 - Last Planning Procedure Details'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship eb04f510-1428-49ca-b5ff-27fa00699987
+	isActive: false
+	fromColumn: 'A08 - Last Planning Procedure Details'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship d531ef42-de2a-49b2-a8a9-3363d271e332
+	isActive: false
+	fromColumn: 'A08 - Last Planning Procedure Details'.RecommendationId
+	toColumn: Recommendations.RecommendationId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1636a1a0-f317-449a-b040-7f356d027dd7
+	fromColumn: 'A08 - Last Planning Procedure Details'.RiskId
+	toColumn: Risks.RiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0a08b661-6e13-40fd-8dd7-7562a4fff6a0
+	fromColumn: 'A08 - Last Planning Procedure Details'.StrategicRiskId
+	toColumn: StrategicRisks.StrategicRiskId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fcea7653-a4ba-4fa1-980d-61475a27a98b
+	isActive: false
+	fromColumn: CoachingNotes.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 5479b36e-fc8f-4201-aaa6-9374e110ca3c
+	isActive: false
+	fromColumn: ObjectRelationshipContexts.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 67d77807-6b98-4686-9cea-05c0445b0bb5
+	isActive: false
+	fromColumn: ObjectRelationships.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 38e1ab78-a771-459d-8d56-29d12e2aeb8b
+	isActive: false
+	fromColumn: ProcedureWorkflowHistory.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e48fd277-7b4c-4765-a905-0aee4703ddcd
+	isActive: false
+	fromColumn: SecurityAssignments.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 988e5acf-9312-44e8-8732-ff3b3b37bf15
+	isActive: false
+	fromColumn: SecurityAssignmentsAggregated.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1da82ba3-bfff-4993-8513-08d11d8387dc
+	isActive: false
+	fromColumn: Workpapers.ProcedureId
+	toColumn: 'A08 - Last Planning Procedure'.ProcedureId
+
+	annotation PBI_IsFromSource = FS
+
+relationship ae4ada29-a090-4e2b-b20c-2b1d6c5a909f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Audit Schedule KPIs'.ProjectId
+	toColumn: ProjectTexts.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship e2474683-0120-4d1b-a110-fd13940a5aeb
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Actual Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0854e033-f5e4-4a0a-85c7-d2e10a834c12
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - FieldWork Actual Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 839ee629-9264-4146-9fe4-beef580db8f6
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Final Report Issuance Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1f72cf7c-46c8-4994-84cc-4b48eac98f2e
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Final Report Issuance Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2b2ea2ae-db09-4110-8da6-9b08c1c942f6
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Scheduled Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship c00369c7-f272-456b-9ad9-1d540b724eee
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Scheduled Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8c5896e8-a3e4-436b-8589-2c187f9cc977
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Scheduled Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 23533aba-79f4-4cdc-814a-9ad98a00f622
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Scheduled End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2f894bc5-7cd7-4ef8-90ba-854711008675
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Scheduled End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 13a538b9-b293-44be-98fe-99197cb90a69
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Scheduled End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship f5f559d1-3439-414a-bdb6-779d2c95fd62
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship cf5152c3-068c-4612-88e3-1d18f28a7728
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Actual Start Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 8f784415-8dc8-4bcb-8326-9dc56a1071d1
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Actual Start Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7b07c75e-6928-40e3-b9dd-2ea937a95430
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Actual End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship be0381ef-78bd-4b6c-a33b-d9a9fcdbba3b
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Actual End Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship fb919308-5cea-40bf-a249-ee224b02b3f4
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Closure Actual End Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 4172218f-6f8f-4517-bc1a-ee171b70a328
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - TeamMate Updated Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship a7a0d963-2524-4921-89df-63e0ff377d41
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - TeamMate Updated Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship bb8906aa-e2b6-4e90-84f8-9b2264f087e7
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Project Closed Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 15dc9958-c689-43a4-bec5-e7c2dea3d7a1
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Project Closed Date'.ProjectId
+	toColumn: 'A09 - Audit Plan 2025 & 2024'.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0ee3f033-827d-4f61-bd23-d42efdcf03e5
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Project Closed Date'.ProjectId
+	toColumn: Projects.ProjectId
+
+	annotation PBI_IsFromSource = FS
+
+relationship b45adb58-c324-40ca-9c3b-fa54ec48f83c
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'A08 - Project Closed Date'.'A08_00 - Project Closed Date.ProjectPhaseId'
+	toColumn: ProjectPhases.ProjectPhaseId
+
+	annotation PBI_IsFromSource = FS
+
+relationship 89a6cbc5-6c38-2768-b810-7d18a4f82426
+	fromColumn: A05_02.'Projects.ProjectCode'
+	toColumn: 'A06 - Audit Plan'.ProjectCode
+
+relationship b312ab46-be37-4fd0-a5e1-b69e73746b2f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause (Unreleased)'.'Issues.ReleaseDate'
+	toColumn: LocalDateTable_3aa425f6-6fe5-4f44-a165-b2a3274f6a05.Date
+
+relationship 522c9ca3-33be-4fc9-b285-9afb36dd6242
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause (Unreleased)'.'Recommendations.DueDate'
+	toColumn: LocalDateTable_58c69905-7644-47e9-9c13-84178f3a5e69.Date
+
+relationship 2d867a61-ee83-47b2-bbe3-23fe09e9b5b0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause (Unreleased)'.'Recommendations.CreatedDate'
+	toColumn: LocalDateTable_28c5e09d-77d0-4f2e-9b8e-a479350e3464.Date
+
+relationship df84d5b7-65bd-491c-81d4-394090d714ba
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause (Unreleased)'.'Recommendations.RevisedDueDate'
+	toColumn: LocalDateTable_9b26e521-6df3-4f30-a315-f0091d5710aa.Date
+
+relationship ea11c3f4-c874-4feb-9110-6343359a7260
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause (Unreleased)'.'Recommendations.LastImplementedDate'
+	toColumn: LocalDateTable_3188a914-439c-4ee0-9091-d78256335ea6.Date
+
+relationship 9edeedda-f7b0-40c9-8082-3698397c134f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause (Unreleased)'.'Recommendations.LastReviewedDate'
+	toColumn: LocalDateTable_64994b6f-1b3a-4206-bb2d-185b7a7b3d1c.Date
+
+relationship ee6a00b4-5da3-4314-aee8-a82a8bc78a0e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'A10 - Issues Root Cause (Unreleased)'.'Recommendations.LastClosedDate'
+	toColumn: LocalDateTable_241648a7-7434-4b08-90af-42fe602e057b.Date
+

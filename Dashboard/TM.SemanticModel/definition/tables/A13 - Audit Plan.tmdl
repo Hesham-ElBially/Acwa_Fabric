@@ -1,0 +1,448 @@
+table 'A13 - Audit Plan'
+	lineageTag: a4d00557-8607-4037-a27b-d85485838bd8
+	sourceLineageTag: [sch_TeamMate].[A13 - Audit Plan]
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8bea083f-25f5-4b6e-bfed-ee5130864478
+		sourceLineageTag: AssessmentId
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: eeb64205-846a-40b7-a577-4673fdaec798
+		sourceLineageTag: EntityId
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ea4e7039-3a40-42e8-81d4-228e07f035ff
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FY''26'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 821c4c19-50a2-47ee-8680-a86913a29329
+		sourceLineageTag: FY'26
+		summarizeBy: sum
+		sourceColumn: FY'26
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FY''27'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bbc8e191-9fb3-4caa-8caa-0f504382e116
+		sourceLineageTag: FY'27
+		summarizeBy: sum
+		sourceColumn: FY'27
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FY''28'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8ecbd69a-2a21-4af7-a401-65774e0a4fb5
+		sourceLineageTag: FY'28
+		summarizeBy: sum
+		sourceColumn: FY'28
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No, of Records'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 682735eb-2d10-4b2b-8cfc-948f3b05627e
+		sourceLineageTag: No, of Records
+		summarizeBy: sum
+		sourceColumn: No, of Records
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b4851508-1416-4619-a021-27d07ec2634c
+		sourceLineageTag: Projects.ProjectTitle
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 117a94a6-b94d-4428-aea9-0800005f3448
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4717f8f8-bd11-4784-8c5b-b668a9f3a92e
+		sourceLineageTag: Projects.Category1
+		summarizeBy: none
+		sourceColumn: Projects.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 94db8c12-3574-43a6-85bf-3ce14e3bd345
+		sourceLineageTag: Projects.Category2
+		summarizeBy: none
+		sourceColumn: Projects.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.LocationCategory'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5c08acd3-c653-46ff-9b94-c6790e91dd14
+		sourceLineageTag: Projects.LocationCategory
+		summarizeBy: none
+		sourceColumn: Projects.LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category3'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: df738f74-d182-4cee-939a-cce00a157648
+		sourceLineageTag: Projects.Category3
+		summarizeBy: none
+		sourceColumn: Projects.Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category4'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 08a10a31-acfa-4185-a9f4-bb8c70b185f1
+		sourceLineageTag: Projects.Category4
+		summarizeBy: none
+		sourceColumn: Projects.Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category5'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 94694872-0517-46b6-981d-4643755e1be8
+		sourceLineageTag: Projects.Category5
+		summarizeBy: none
+		sourceColumn: Projects.Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category6'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bd2871ca-f85c-4cfd-abe8-fbb71c6f27af
+		sourceLineageTag: Projects.Category6
+		summarizeBy: none
+		sourceColumn: Projects.Category6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category7'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3b47e945-d4d9-43ca-95f1-e85d42919fb2
+		sourceLineageTag: Projects.Category7
+		summarizeBy: none
+		sourceColumn: Projects.Category7
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category8'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c5e671a1-6b6f-4f1d-8792-88946021911c
+		sourceLineageTag: Projects.Category8
+		summarizeBy: none
+		sourceColumn: Projects.Category8
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category9'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b6cd1ede-189c-4a93-877e-2316d6fc2bad
+		sourceLineageTag: Projects.Category9
+		summarizeBy: none
+		sourceColumn: Projects.Category9
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category10'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 87c6b315-4ef2-47e8-b165-d78634d9964d
+		sourceLineageTag: Projects.Category10
+		summarizeBy: none
+		sourceColumn: Projects.Category10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category11'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e122fd6c-7aee-4939-be63-1a16a8dc0dc3
+		sourceLineageTag: Projects.Category11
+		summarizeBy: none
+		sourceColumn: Projects.Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category12'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6b2b45ff-659e-45c8-b01e-473a297b79a0
+		sourceLineageTag: Projects.Category12
+		summarizeBy: none
+		sourceColumn: Projects.Category12
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category13'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 64686b25-e7ad-4d77-b815-bcef8c02ad22
+		sourceLineageTag: Projects.Category13
+		summarizeBy: none
+		sourceColumn: Projects.Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.MultiSelectCategory1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b97d18b8-84e5-4f2b-8b40-4b8472644e22
+		sourceLineageTag: Projects.MultiSelectCategory1
+		summarizeBy: none
+		sourceColumn: Projects.MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.MultiSelectCategory3'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e4da0fdf-8351-4145-bcaf-ccd0e512b8ae
+		sourceLineageTag: Projects.MultiSelectCategory3
+		summarizeBy: none
+		sourceColumn: Projects.MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.EstimatedStartDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 8c993ac2-02b5-4d40-8219-306223c8dae5
+		sourceLineageTag: Projects.EstimatedStartDate
+		summarizeBy: none
+		sourceColumn: Projects.EstimatedStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.EstimatedEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: c4ce65ed-922d-4750-b054-83ae62175cdb
+		sourceLineageTag: Projects.EstimatedEndDate
+		summarizeBy: none
+		sourceColumn: Projects.EstimatedEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.EstimatedHours'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c9dbc129-39aa-417c-9788-08370f129435
+		sourceLineageTag: Projects.EstimatedHours
+		summarizeBy: sum
+		sourceColumn: Projects.EstimatedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.EntityTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 945271e1-10ea-4176-afb2-ae85f3d509de
+		sourceLineageTag: EntityAssessmentDetails.EntityTitle
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo2'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d2c91bdc-bfae-47b2-ab12-7b9a3a75ed87
+		sourceLineageTag: EntityAssessmentDetails.YesNo2
+		summarizeBy: sum
+		sourceColumn: EntityAssessmentDetails.YesNo2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo3'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2fca49d5-2983-4a30-9d1f-704d5700085e
+		sourceLineageTag: EntityAssessmentDetails.YesNo3
+		summarizeBy: sum
+		sourceColumn: EntityAssessmentDetails.YesNo3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo4'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b65d1902-2b34-4982-8e8e-369021a6af2a
+		sourceLineageTag: EntityAssessmentDetails.YesNo4
+		summarizeBy: sum
+		sourceColumn: EntityAssessmentDetails.YesNo4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo5'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4a594053-4fa0-402f-9af1-61cbc3d72c44
+		sourceLineageTag: EntityAssessmentDetails.YesNo5
+		summarizeBy: sum
+		sourceColumn: EntityAssessmentDetails.YesNo5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 39c7c17e-eab5-45ba-9787-9f9a371d9188
+		sourceLineageTag: EntityAssessmentDetails.Category1
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f25b3a42-883f-4f3f-9517-3806e6675161
+		sourceLineageTag: EntityAssessmentDetails.Category2
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category3'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c8563b08-0b23-4870-8db1-ad1ddc23d254
+		sourceLineageTag: EntityAssessmentDetails.Category3
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category4'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: af83d621-b319-45ed-ac78-6b4203ab875b
+		sourceLineageTag: EntityAssessmentDetails.Category4
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.ParentEntityId'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c9be3c09-0b4e-400f-81c0-dd1db2abc4ed
+		sourceLineageTag: Entities.ParentEntityId
+		summarizeBy: count
+		sourceColumn: Entities.ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76cb26d4-0d97-4072-a961-1a90692a5657
+		sourceLineageTag: Entities.OrgPath
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgSort'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f25b9f63-f85c-4685-a58b-2a1925aa3eae
+		sourceLineageTag: Entities.OrgSort
+		summarizeBy: none
+		sourceColumn: Entities.OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.EntityTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 430129f6-91fe-4216-8b8b-19a990a7c5f9
+		sourceLineageTag: Entities.EntityTitle
+		summarizeBy: none
+		sourceColumn: Entities.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.ParentEntityTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e87daa33-5e11-493c-8b8d-54698b0f7d51
+		sourceLineageTag: Entities.ParentEntityTitle
+		summarizeBy: none
+		sourceColumn: Entities.ParentEntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A13 - Audit Plan' = entity
+		mode: directLake
+		source
+			entityName: A13 - Audit Plan
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

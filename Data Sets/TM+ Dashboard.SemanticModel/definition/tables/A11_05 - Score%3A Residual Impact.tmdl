@@ -1,0 +1,115 @@
+table 'A11_05 - Score: Residual Impact'
+	lineageTag: 38b9c964-ef9b-4188-9b8a-68033d11fe0c
+
+	column StrategicRiskScoreId
+		dataType: int64
+		formatString: 0
+		lineageTag: 87a7492d-3651-453b-9ff2-8964905f8570
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: e18312b0-0105-4882-a8b3-b2ac3b71288a
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: 235d08d6-99c9-4d02-9a86-dc503a82fb6a
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableId
+		dataType: int64
+		formatString: 0
+		lineageTag: 74016210-a572-4b35-8259-6fc0d80391cb
+		summarizeBy: count
+		sourceColumn: VariableId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableTitle
+		dataType: string
+		lineageTag: eaf16cdd-3d79-4441-969b-b92aeb81e4d8
+		summarizeBy: none
+		sourceColumn: VariableTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreType
+		dataType: string
+		lineageTag: c4b04854-8f3c-484c-9c89-6e8d3d9db8ed
+		summarizeBy: none
+		sourceColumn: ScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetricTitle
+		dataType: string
+		lineageTag: b6087934-0ff5-4333-b335-5cde5f2c6faf
+		summarizeBy: none
+		sourceColumn: MetricTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreLabel
+		dataType: string
+		lineageTag: 11c68f2d-ce15-4569-b29b-c9fc24f1f521
+		summarizeBy: none
+		sourceColumn: ScoreLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreValue
+		dataType: double
+		lineageTag: 9fe230f8-9d9c-4f6d-a4aa-31245ee0e692
+		summarizeBy: sum
+		sourceColumn: ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: dd4756f8-c705-4a16-ab88-e861e114481f
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b292941-1ffe-4212-8182-028aa46cfd4d
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11_05 - Score: Residual Impact' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskScoringValuesAssessmentProject_table = Source{[Name="StrategicRiskScoringValuesAssessmentProject",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(StrategicRiskScoringValuesAssessmentProject_table, each ([AssessmentId] = 31)),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"StrategicRisk"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns",{"StrategicRiskScoreId", "StrategicRiskId", "StrategicRiskTitle", "VariableId", "VariableTitle", "ScoreType", "MetricTitle", "ScoreLabel", "ScoreValue", "AssessmentId", "ProjectId"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Reordered Columns", each ([ScoreType] = "Residual") and ([MetricTitle] = "Impact"))
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,5323 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "open_P_rs": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "open P rs": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Open_PRs": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "rs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "P rs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.purchase_req_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Purchase Req."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchase req.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.requisn_item": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Requisn Item"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisn item": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisn product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "requisn element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "requisn entry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "requisn article": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "requisn object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "requisn piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "requisn token": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.document_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Document Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "document type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "document category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "document genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "document manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "document variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "document brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "document class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "document kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.doc__category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Doc. Category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "doc. category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "doc. classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "doc. class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "doc. group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "doc. type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "doc. grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "doc. kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.deletion_flag_for_BOMs": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Deletion flag for BOMs"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "deletion flag for BOMs": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "deletion flag for BOM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "deletion ensign for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "deletion pennant for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "deletion pennon for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "deletion emblem for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "deletion streamer for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "deletion standard for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "deletion bunting for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "deletion banner for bom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.indicator_release_required": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Indicator: Release Required"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "indicator: release required": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "indicator: announcement required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "indicator: statement required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "indicator: publication required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "indicator: proclamation required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "indicator: issue required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "indicator: relief required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "indicator: freedom required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "indicator: liberation required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "indicator: emancipation required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "indicator: discharge required": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.release_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Release State"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "release state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {},
+			        {
+			          "release location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "release province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "release territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "release nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "release condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "release country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.release_strategy_in_the_purchase_requisition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Release strategy in the purchase requisition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "release strategy in the purchase requisition": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.purch__group": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Purch. Group"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purch. group": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "purch. category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "purch. organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "purch. bracket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "purch. class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "purch. crew": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "purch. team": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.created_by": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Created by"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created by": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "built by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        },
+			        {
+			          "caused by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        },
+			        {
+			          "designed by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        },
+			        {
+			          "developed by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        },
+			        {
+			          "generated by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        },
+			        {
+			          "invented by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        },
+			        {
+			          "made by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        },
+			        {
+			          "produced by": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.728
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.created_on": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Created on"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created on": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.created_on.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Created on",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created on date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.created_on.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Created on",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created on year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created on yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.created_on.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Created on",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created on quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created on qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.created_on.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Created on",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created on month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created on mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.created_on.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Created on",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created on day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.requisitioner": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Requisitioner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisitioner": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.short_text": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Short Text"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "short text": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "short manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "short transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "short typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "short edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "short version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Material"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "physical": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "substantial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "solid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "substantive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.plant": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Plant"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "plant": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vegetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "herbal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shrub": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "houseplant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "seedling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "bush": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "flower": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "herb": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "cutting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.requirement_tracking_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Requirement Tracking Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requirement tracking number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tracking number": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requirement tracking no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "tracking no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.quantity_in_base_unit_of_measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Quantity in base unit of measure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quantity in base unit of measure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in base unit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quantity in base unit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in base module": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "in base element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "in base entity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "in base group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "in base component": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "in base constituent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "in base item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "in base part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "in base section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "module": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.base_unit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Base Unit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "base unit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "base module": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "base element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "base entity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "module": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "entity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "base group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "base component": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "base constituent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "base item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.requisition_date_of_material_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Requisition Date of Material Order"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisition date of material order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "requisition moment of material order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "requisition period of material order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.requisition_date_of_material_order.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Requisition Date of Material Order",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisition date hierarchy of material order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.requisition_date_of_material_order.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Requisition Date of Material Order",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisition year of material order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisition date of material order year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisition yr of material order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.requisition_date_of_material_order.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Requisition Date of Material Order",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisition quarter of material order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisition date of material order quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisition qtr of material order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.867
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.requisition_date_of_material_order.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Requisition Date of Material Order",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisition month of material order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisition date of material order month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisition mth of material order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.requisition_date_of_material_order.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Requisition Date of Material Order",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requisition day of material order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "requisition date of material order day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.price_unit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Price unit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price unit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "price module": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "price element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "price entity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "module": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "entity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "price group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "price component": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "price constituent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "price item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.purchase_requisition_release_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Purchase Requisition Release Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchase requisition release date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "release date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "purchase requisition release moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "requisition release moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "release moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "purchase requisition release period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "requisition release period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "release period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.purchase_requisition_release_date.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Purchase Requisition Release Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchase requisition release date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "release date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.purchase_requisition_release_date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Purchase Requisition Release Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchase requisition release year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "purchase requisition release date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "release year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "release date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "purchase requisition release date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "purchase requisition release yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "requisition release date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "requisition release yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "release date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "release yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "purchase requisition release moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "requisition release moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.purchase_requisition_release_date.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Purchase Requisition Release Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchase requisition release quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "purchase requisition release date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "release quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "release date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "purchase requisition release date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.867
+			          }
+			        },
+			        {
+			          "purchase requisition release qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "requisition release date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "requisition release qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "release date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "release qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "purchase requisition release moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "requisition release moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.purchase_requisition_release_date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Purchase Requisition Release Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchase requisition release month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "purchase requisition release date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "release month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "release date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "purchase requisition release date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "purchase requisition release mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "requisition release date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "requisition release mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "release date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "release mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "purchase requisition release moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "requisition release moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.purchase_requisition_release_date.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "VariationSource": "Purchase Requisition Release Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchase requisition release day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "purchase requisition release date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "release day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "release date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requisition release date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "purchase requisition release moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "requisition release moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "release moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "purchase requisition release period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "requisition release period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "release period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "open_P_rs.item_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Item Category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "item category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "item classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "item class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "item group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "item type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "item grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "item kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.account_assignment_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Account Assignment Category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "account assignment category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "assignment category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "account assignment classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "assignment classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "account assignment class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "account assignment group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "account assignment type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "account assignment grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "account assignment kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "assignment class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "assignment group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.vendor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Vendor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vendor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "salesperson": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "retailer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "dealer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "hawker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "purveyor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "peddler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.blocking_indicator": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Blocking Indicator"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "blocking indicator": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "indicator": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "blocking pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "blocking needle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "blocking gage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "blocking gauge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "blocking dial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "blocking meter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "blocking display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "needle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.blocking_text": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Blocking Text"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "blocking text": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "blocking manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "blocking transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "blocking typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "blocking edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "blocking version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.requirement_urgency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Requirement Urgency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requirement urgency": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "urgency": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requirement earnestness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement insistence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement perseverance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement firmness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement determination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "earnestness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "insistence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "perseverance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "firmness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "open_P_rs.requirement_priority": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Open_PRs",
+			          "ConceptualProperty": "Requirement Priority"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "requirement priority": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "priority": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "requirement importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement precedence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "requirement primacy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "precedence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "primacy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "requirement import": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "import": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "list_of_all_pr_po.plant_code__plant_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "List_of_all_PR_PO",
+			          "ConceptualProperty": "Plant Code : Plant Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Plant Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "open_P_rs_purchase_requisition_release_date_date_hierarchy_has_open_P_rs_purchase_requisition_release_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.purchase_requisition_release_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.purchase_requisition_release_date.year": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "purchase_requisition_release_date_hierarchies_have_purchase_requisition_release_years"
+			        }
+			      ]
+			    },
+			    "open_P_rs_purchase_requisition_release_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.purchase_requisition_release_date": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date"
+			          }
+			        },
+			        "open_P_rs.purchase_requisition_release_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.purchase_requisition_release_date"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "purchase_requisition_release_dates_have_purchase_requisition_release_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "open_P_rs_requisition_date_of_material_order_date_hierarchy_has_open_P_rs_requisition_date_of_material_order_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.requisition_date_of_material_order.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.requisition_date_of_material_order.day": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "requisition_date_hierarchy_of_material_order_have_requisition_day_of_material_order"
+			        }
+			      ]
+			    },
+			    "open_P_rs_requisition_date_of_material_order_date_hierarchy_has_open_P_rs_requisition_date_of_material_order_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.requisition_date_of_material_order.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.requisition_date_of_material_order.month": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "requisition_date_hierarchy_of_material_order_have_requisition_month_of_material_order"
+			        }
+			      ]
+			    },
+			    "open_P_rs_requisition_date_of_material_order_date_hierarchy_has_open_P_rs_requisition_date_of_material_order_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.requisition_date_of_material_order.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.requisition_date_of_material_order.quarter": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "requisition_date_hierarchy_of_material_order_have_requisition_quarter_of_material_order"
+			        }
+			      ]
+			    },
+			    "open_P_rs_requisition_date_of_material_order_date_hierarchy_has_open_P_rs_requisition_date_of_material_order_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.requisition_date_of_material_order.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.requisition_date_of_material_order.year": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "requisition_date_hierarchy_of_material_order_have_requisition_year_of_material_order"
+			        }
+			      ]
+			    },
+			    "open_P_rs_requisition_date_of_material_order_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.requisition_date_of_material_order": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order"
+			          }
+			        },
+			        "open_P_rs.requisition_date_of_material_order.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.requisition_date_of_material_order"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisition_date_of_material_order.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "requisition_date_of_material_order_have_requisition_date_hierarchy_of_material_order"
+			        }
+			      ]
+			    },
+			    "open_P_rs_created_on_date_hierarchy_has_open_P_rs_created_on_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.created_on.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.created_on.day": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.created_on.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.created_on.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_on_date_hierarchy_have_created_on_day"
+			        }
+			      ]
+			    },
+			    "open_P_rs_created_on_date_hierarchy_has_open_P_rs_created_on_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.created_on.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.created_on.month": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.created_on.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.created_on.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_on_date_hierarchy_have_created_on_month"
+			        }
+			      ]
+			    },
+			    "open_P_rs_created_on_date_hierarchy_has_open_P_rs_created_on_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.created_on.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.created_on.quarter": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.created_on.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.created_on.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_on_date_hierarchy_have_created_on_quarter"
+			        }
+			      ]
+			    },
+			    "open_P_rs_created_on_date_hierarchy_has_open_P_rs_created_on_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.created_on.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.created_on.year": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.created_on.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.created_on.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_on_date_hierarchy_have_created_on_year"
+			        }
+			      ]
+			    },
+			    "open_P_rs_created_on_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.created_on": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on"
+			          }
+			        },
+			        "open_P_rs.created_on.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.created_on"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.created_on.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "created_on_have_created_on_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_requirement_priority": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.requirement_priority": {
+			          "Target": {
+			            "Entity": "open_P_rs.requirement_priority"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requirement_priority"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_requirement_priorities"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_requirement_urgency": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.requirement_urgency": {
+			          "Target": {
+			            "Entity": "open_P_rs.requirement_urgency"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requirement_urgency"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_requirement_urgencies"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_blocking_text": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.blocking_text": {
+			          "Target": {
+			            "Entity": "open_P_rs.blocking_text"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.blocking_text"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_blocking_texts"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_blocking_indicator": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.blocking_indicator": {
+			          "Target": {
+			            "Entity": "open_P_rs.blocking_indicator"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.blocking_indicator"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_blocking_indicators"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "open_P_rs.blocking_indicator"
+			            },
+			            "Verbs": [
+			              {
+			                "indicate": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "open_P_rs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "blocking_indicators_indicate_open_P_RSs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.blocking_indicator"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "blocking_indicators_have_open_P_RSs"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_vendor": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.vendor": {
+			          "Target": {
+			            "Entity": "open_P_rs.vendor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.vendor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_vendors"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "open_P_rs.vendor"
+			            },
+			            "Verbs": [
+			              {
+			                "vend": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "open_P_rs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "vendors_vend_open_P_RSs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.vendor"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vendors_have_open_P_RSs"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_account_assignment_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.account_assignment_category": {
+			          "Target": {
+			            "Entity": "open_P_rs.account_assignment_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.account_assignment_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_account_assignment_categories"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_item_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.item_category": {
+			          "Target": {
+			            "Entity": "open_P_rs.item_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.item_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_item_categories"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_purchase_requisition_release_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.purchase_requisition_release_date": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purchase_requisition_release_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_purchase_requisition_release_dates"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_price_unit": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.price_unit": {
+			          "Target": {
+			            "Entity": "open_P_rs.price_unit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.price_unit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_price_units"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_requisition_date_of_material_order": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.requisition_date_of_material_order": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisition_date_of_material_order"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisition_date_of_material_order"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_requisition_date_of_material_order"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_base_unit": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.base_unit": {
+			          "Target": {
+			            "Entity": "open_P_rs.base_unit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.base_unit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_base_units"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_quantity_in_base_unit_of_measure": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.quantity_in_base_unit_of_measure": {
+			          "Target": {
+			            "Entity": "open_P_rs.quantity_in_base_unit_of_measure"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.quantity_in_base_unit_of_measure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_quantity_in_base_unit_of_measure"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_requirement_tracking_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.requirement_tracking_number": {
+			          "Target": {
+			            "Entity": "open_P_rs.requirement_tracking_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requirement_tracking_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_requirement_tracking_numbers"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_plant": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.plant": {
+			          "Target": {
+			            "Entity": "open_P_rs.plant"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.plant"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_plants"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_material": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.material": {
+			          "Target": {
+			            "Entity": "open_P_rs.material"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.material"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_materials"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_short_text": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.short_text": {
+			          "Target": {
+			            "Entity": "open_P_rs.short_text"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.short_text"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_short_texts"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_requisitioner": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.requisitioner": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisitioner"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisitioner"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_requisitioners"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_created_on": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.created_on": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.created_on"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_created_on"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_created_by": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.created_by": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_by"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.created_by"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_created_by"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "open_P_rs.created_by"
+			            },
+			            "Verbs": [
+			              {
+			                "create": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "open_P_rs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "created_by_create_open_P_RSs"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_purch__group": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.purch__group": {
+			          "Target": {
+			            "Entity": "open_P_rs.purch__group"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purch__group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_purch__groups"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_release_strategy_in_the_purchase_requisition": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.release_strategy_in_the_purchase_requisition": {
+			          "Target": {
+			            "Entity": "open_P_rs.release_strategy_in_the_purchase_requisition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.release_strategy_in_the_purchase_requisition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_release_strategy_in_the_purchase_requisition"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_release_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.release_state": {
+			          "Target": {
+			            "Entity": "open_P_rs.release_state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.release_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_release_states"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_indicator_release_required": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.indicator_release_required": {
+			          "Target": {
+			            "Entity": "open_P_rs.indicator_release_required"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.indicator_release_required"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_indicator_release_required"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_deletion_flag_for_BOMs": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.deletion_flag_for_BOMs": {
+			          "Target": {
+			            "Entity": "open_P_rs.deletion_flag_for_BOMs"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.deletion_flag_for_BOMs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_deletion_flag_for_BOMs"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_doc__category": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.doc__category": {
+			          "Target": {
+			            "Entity": "open_P_rs.doc__category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.doc__category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_doc__categories"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_document_type": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.document_type": {
+			          "Target": {
+			            "Entity": "open_P_rs.document_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.document_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_document_types"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_requisn_item": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.requisn_item": {
+			          "Target": {
+			            "Entity": "open_P_rs.requisn_item"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.requisn_item"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_requisn_items"
+			        }
+			      ]
+			    },
+			    "open_P_rs_has_purchase_req_": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.purchase_req_": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_req_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purchase_req_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_have_purchase_req_"
+			        }
+			      ]
+			    },
+			    "open_P_rs_in_release_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.release_state": {
+			          "Target": {
+			            "Entity": "open_P_rs.release_state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "open_P_rs.release_state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "open_P_rs"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "open_P_rs.release_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "open_P_RSs_are_in_release_states"
+			        }
+			      ]
+			    },
+			    "open_P_rs_is_released_on_purchase_requisition_release_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.purchase_requisition_release_date": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "open_P_rs.purchase_requisition_release_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "release": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "open_P_rs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "open_P_RSs_are_released_on_purchase_requisition_release_dates"
+			        }
+			      ]
+			    },
+			    "open_P_rs_is_created_on_created_on": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs": {
+			          "Target": {
+			            "Entity": "open_P_rs"
+			          }
+			        },
+			        "open_P_rs.created_on": {
+			          "Target": {
+			            "Entity": "open_P_rs.created_on"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "open_P_rs.created_on"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "create": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "open_P_rs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "open_P_RSs_are_created_on_created_on"
+			        }
+			      ]
+			    },
+			    "open_P_rs_purchase_requisition_release_date_date_hierarchy_has_open_P_rs_purchase_requisition_release_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.purchase_requisition_release_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.purchase_requisition_release_date.quarter": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "purchase_requisition_release_date_hierarchies_have_purchase_requisition_release_quarters"
+			        }
+			      ]
+			    },
+			    "open_P_rs_purchase_requisition_release_date_date_hierarchy_has_open_P_rs_purchase_requisition_release_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.purchase_requisition_release_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.purchase_requisition_release_date.month": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "purchase_requisition_release_date_hierarchies_have_purchase_requisition_release_months"
+			        }
+			      ]
+			    },
+			    "open_P_rs_purchase_requisition_release_date_date_hierarchy_has_open_P_rs_purchase_requisition_release_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Open_PRs"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "open_P_rs.purchase_requisition_release_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			          }
+			        },
+			        "open_P_rs.purchase_requisition_release_date.day": {
+			          "Target": {
+			            "Entity": "open_P_rs.purchase_requisition_release_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "open_P_rs.purchase_requisition_release_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "purchase_requisition_release_date_hierarchies_have_purchase_requisition_release_days"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

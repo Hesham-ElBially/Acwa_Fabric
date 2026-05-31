@@ -1,0 +1,980 @@
+table 'A08 - Audit Schedule KPIs'
+	lineageTag: 7ec68e26-8b14-49d1-affa-3c521042517c
+	sourceLineageTag: [sch_TeamMate].[A08 - Audit Schedule KPIs]
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 60729f99-12be-4a96-aa5d-002fbebb5374
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0b40c8c2-45b2-46aa-b3d6-8198758f7bb4
+		sourceLineageTag: AssessmentId
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b50879dd-8323-4ecf-bf40-50c87cfd8367
+		sourceLineageTag: ProjectTitle
+		summarizeBy: none
+		sourceColumn: ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4f74b621-8f8d-4f68-b494-5fa5bee9402d
+		sourceLineageTag: ProjectCode
+		summarizeBy: none
+		sourceColumn: ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e64c6208-83bd-41e4-a2a9-6d77944c64f9
+		sourceLineageTag: Category1Id
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3151c61f-043d-4031-9447-b215b97f6199
+		sourceLineageTag: Category1
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d8a65bf9-7533-4c1c-98e3-d69aafba553c
+		sourceLineageTag: Category2Id
+		summarizeBy: count
+		sourceColumn: Category2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cf9b69ba-557c-4d2c-b4af-8ae09f1c0022
+		sourceLineageTag: Category2
+		summarizeBy: none
+		sourceColumn: Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategoryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 278a40d3-79a1-4a35-8669-733e02784c8c
+		sourceLineageTag: LocationCategoryId
+		summarizeBy: count
+		sourceColumn: LocationCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategory
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 876df6e9-77f5-4813-9241-e8ae2fbcd5e7
+		sourceLineageTag: LocationCategory
+		summarizeBy: none
+		sourceColumn: LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 756a623b-442e-4cda-9b59-8a90969084a1
+		sourceLineageTag: Category3Id
+		summarizeBy: count
+		sourceColumn: Category3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ec31f6dc-1da0-4682-b3cf-2d9bd872e33f
+		sourceLineageTag: Category3
+		summarizeBy: none
+		sourceColumn: Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0f7b43fd-4096-412c-a244-4dec21c997a5
+		sourceLineageTag: Category4Id
+		summarizeBy: count
+		sourceColumn: Category4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cd79eddc-4c99-4476-aa63-8da72b4da286
+		sourceLineageTag: Category4
+		summarizeBy: none
+		sourceColumn: Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 13654a14-15c5-42af-a454-9213e759fba5
+		sourceLineageTag: Category5Id
+		summarizeBy: count
+		sourceColumn: Category5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ff44a508-b0a8-4852-9b83-9e507070a3f6
+		sourceLineageTag: Category5
+		summarizeBy: none
+		sourceColumn: Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 858ede0f-2713-46ea-b8fc-bae19e90d2a2
+		sourceLineageTag: Category6Id
+		summarizeBy: count
+		sourceColumn: Category6Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ed1e2632-df9b-40b6-9f95-a254d3ae0a42
+		sourceLineageTag: Category6
+		summarizeBy: none
+		sourceColumn: Category6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e7ea3f9e-a2b6-49e5-b700-0e646e87bc64
+		sourceLineageTag: Category9Id
+		summarizeBy: count
+		sourceColumn: Category9Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 00dca5ce-ddb4-4e1d-b2fa-971779bdc07a
+		sourceLineageTag: Category9
+		summarizeBy: none
+		sourceColumn: Category9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7ff5f4d8-eb5f-4713-aee9-1dd445685d7c
+		sourceLineageTag: Category10Id
+		summarizeBy: count
+		sourceColumn: Category10Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a33334b0-60b1-426d-95f0-dbae4dc5aab6
+		sourceLineageTag: Category10
+		summarizeBy: none
+		sourceColumn: Category10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5fa3834f-3b80-4773-9d32-f369eddc5620
+		sourceLineageTag: Category11Id
+		summarizeBy: count
+		sourceColumn: Category11Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7d425d6b-c6a9-4002-8d0f-efee0c59eb10
+		sourceLineageTag: Category11
+		summarizeBy: none
+		sourceColumn: Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8dfda092-09b5-4d7d-80b6-9f558b92627a
+		sourceLineageTag: Category12Id
+		summarizeBy: count
+		sourceColumn: Category12Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 82b366e2-06b7-4ef4-9e13-f901fdf516b7
+		sourceLineageTag: Category12
+		summarizeBy: none
+		sourceColumn: Category12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fb426c50-387f-4d3b-8eb7-3561553c0d4d
+		sourceLineageTag: Category13Id
+		summarizeBy: count
+		sourceColumn: Category13Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 55240866-f4a6-48e3-9b33-6093b9c454b6
+		sourceLineageTag: Category13
+		summarizeBy: none
+		sourceColumn: Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cec98492-7967-4d56-b833-6f367092d50a
+		sourceLineageTag: MultiSelectCategory1Id
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1d487aac-aa74-46c5-ac6c-b5ea2c0fe060
+		sourceLineageTag: MultiSelectCategory1
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ed37d883-0b52-4b6b-b5df-3a3891181dfc
+		sourceLineageTag: MultiSelectCategory3Id
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9cbf01e1-69a8-4128-a990-497fba9020ba
+		sourceLineageTag: MultiSelectCategory3
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedHours
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 88e7e777-f50a-4335-a44d-e3ad51cdf763
+		sourceLineageTag: EstimatedHours
+		summarizeBy: none
+		sourceColumn: EstimatedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualHours
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 9bf658c1-be70-4f34-ab4c-230190c2ca45
+		sourceLineageTag: ActualHours
+		summarizeBy: none
+		sourceColumn: ActualHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectStateId
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: a58a00e2-a8bc-43df-b42b-ce456d38cf09
+		sourceLineageTag: ProjectStateId
+		summarizeBy: none
+		sourceColumn: ProjectStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectState
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 157efb0d-8ab1-4f55-97a5-399718c2ec93
+		sourceLineageTag: ProjectState
+		summarizeBy: none
+		sourceColumn: ProjectState
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseValue
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 682012b1-6f57-4746-b65b-35471dc71f5c
+		sourceLineageTag: CurrentProjectPhaseValue
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseMilestoneValue
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bbcf0f44-6eed-4eaf-aa5c-1b406d0e8c0e
+		sourceLineageTag: CurrentProjectPhaseMilestoneValue
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseMilestoneValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CombinedTotalHours
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: fd68c981-fc4d-496e-8ee4-1065af9a7b49
+		sourceLineageTag: CombinedTotalHours
+		summarizeBy: none
+		sourceColumn: CombinedTotalHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveAuditPlanId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0ec5407c-4607-45f8-950d-4324ce297215
+		sourceLineageTag: ActiveAuditPlanId
+		summarizeBy: count
+		sourceColumn: ActiveAuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveAuditPlanTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 73614706-55c6-4c89-a991-f5286d4f0fc5
+		sourceLineageTag: ActiveAuditPlanTitle
+		summarizeBy: none
+		sourceColumn: ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Actual Start Date.ActStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 86156358-1852-403b-922f-ad80eceb5bd3
+		sourceLineageTag: A08 - FieldWork Actual Start Date.ActStartDate
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Actual Start Date.ActStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Actual Start Date.ProjectPhaseName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e7143881-1fa3-40ef-93d5-0f35af9bb8a6
+		sourceLineageTag: A08 - FieldWork Actual Start Date.ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Actual Start Date.ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 494bc242-6b49-403d-bfd9-4d3b2042d8af
+		sourceLineageTag: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.MilestoneNa'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a107dce2-7422-4711-8d7c-85173d2b3dff
+		sourceLineageTag: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.MilestoneNa
+		summarizeBy: none
+		sourceColumn: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.MilestoneNa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 4491234e-46f0-4cb8-b09e-4e680f163186
+		sourceLineageTag: A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3975d468-002a-48d5-81bf-a1f2f85e7196
+		sourceLineageTag: A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Planning Scheduled Start Date.ScheduledStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 95699d9f-b27f-427a-9ddd-e949132198f4
+		sourceLineageTag: A08 - Planning Scheduled Start Date.ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: A08 - Planning Scheduled Start Date.ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Planning Scheduled End Date.ScheduledEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 14314d35-ebd5-42e6-aebf-de1c233c387e
+		sourceLineageTag: A08 - Planning Scheduled End Date.ScheduledEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Planning Scheduled End Date.ScheduledEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Planning Actual Start Date.ActStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: b98c4885-df2c-49b7-abe6-bd9e68e5cf72
+		sourceLineageTag: A08 - Planning Actual Start Date.ActStartDate
+		summarizeBy: none
+		sourceColumn: A08 - Planning Actual Start Date.ActStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Planning Actual End Date.ActEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 7ef997ab-8217-418a-b6d3-ede2bdb9aa18
+		sourceLineageTag: A08 - Planning Actual End Date.ActEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Planning Actual End Date.ActEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 6dc94eb7-06fd-4b8c-a4fd-66315648a491
+		sourceLineageTag: A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Scheduled Start Date.ScheduledStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 32473e26-2ebf-4550-89b1-1baccc404c93
+		sourceLineageTag: A08 - FieldWork Scheduled Start Date.ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Scheduled Start Date.ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Scheduled End Date.ScheduledEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 6049d458-68e1-4415-8137-157fe55a2f67
+		sourceLineageTag: A08 - FieldWork Scheduled End Date.ScheduledEndDate
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Scheduled End Date.ScheduledEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Actual End Date.ActEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: b4462fb3-44a6-4085-bdae-7798f813deed
+		sourceLineageTag: A08 - FieldWork Actual End Date.ActEndDate
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Actual End Date.ActEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 84400b89-6a7e-462a-9289-cd5ba8d509d4
+		sourceLineageTag: A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Reporting Scheduled Start Date.ScheduledStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: b159fb48-0ef2-4f98-a924-9e8c1ba09a9e
+		sourceLineageTag: A08 - Reporting Scheduled Start Date.ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Scheduled Start Date.ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Reporting Scheduled End Date.ScheduledEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 24c25321-9a29-4694-bb63-f6dc2367d3cc
+		sourceLineageTag: A08 - Reporting Scheduled End Date.ScheduledEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Scheduled End Date.ScheduledEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Reporting Actual Start Date.ActStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: c4d0538f-153a-4818-834e-30544a473099
+		sourceLineageTag: A08 - Reporting Actual Start Date.ActStartDate
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Actual Start Date.ActStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Reporting Actual End Date.ActEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 067f2a2c-67ee-4441-8bdc-9969e199dcf2
+		sourceLineageTag: A08 - Reporting Actual End Date.ActEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Actual End Date.ActEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Draft Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: e86fe191-169d-4aa1-a1ea-8c0c641bbd04
+		sourceLineageTag: A08 - Draft Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Draft Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDate.1'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: f6531feb-bb30-41b3-b18e-714d2336ad3a
+		sourceLineageTag: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDate.1
+		summarizeBy: none
+		sourceColumn: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDate.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Closure Scheduled Start Date.ScheduledStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 0fd232cc-7fc4-4e0e-b329-933f7f11199e
+		sourceLineageTag: A08 - Closure Scheduled Start Date.ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: A08 - Closure Scheduled Start Date.ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Closure Scheduled End Date.ScheduledEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 2558d701-4bdc-4411-9e0e-1529d6d25a3d
+		sourceLineageTag: A08 - Closure Scheduled End Date.ScheduledEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Closure Scheduled End Date.ScheduledEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Closure Actual Start Date.ActStartDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: 49513d8e-c4aa-4346-9e28-ecf23231003b
+		sourceLineageTag: A08 - Closure Actual Start Date.ActStartDate
+		summarizeBy: none
+		sourceColumn: A08 - Closure Actual Start Date.ActStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Closure Actual End Date.ActEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: d24ebd5b-c27b-4a1e-9b9c-2e2f07384f27
+		sourceLineageTag: A08 - Closure Actual End Date.ActEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Closure Actual End Date.ActEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: ec5448a6-92ca-4b49-8014-d7fdcb761c2a
+		sourceLineageTag: A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #1'
+		dataType: string
+		sourceProviderType: varchar(33)
+		lineageTag: f02d38fc-bbf9-488c-9dbc-4f5d23be76f8
+		sourceLineageTag: Closure Indicator #1
+		summarizeBy: none
+		sourceColumn: Closure Indicator #1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #2'
+		dataType: string
+		sourceProviderType: varchar(31)
+		lineageTag: aa210090-dadf-4ecf-b314-839e81d2731d
+		sourceLineageTag: Closure Indicator #2
+		summarizeBy: none
+		sourceColumn: Closure Indicator #2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #3'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: d91ee5e7-2c5c-4968-86bd-1832927b2ebf
+		sourceLineageTag: Closure Indicator #3
+		summarizeBy: none
+		sourceColumn: Closure Indicator #3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #4'
+		dataType: string
+		sourceProviderType: varchar(28)
+		lineageTag: a46d2953-0d04-4cb8-85dc-cbc248ee1636
+		sourceLineageTag: Closure Indicator #4
+		summarizeBy: none
+		sourceColumn: Closure Indicator #4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #5'
+		dataType: string
+		sourceProviderType: varchar(34)
+		lineageTag: 7a521e20-d392-4956-88c2-7a16eaeff563
+		sourceLineageTag: Closure Indicator #5
+		summarizeBy: none
+		sourceColumn: Closure Indicator #5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #6'
+		dataType: string
+		sourceProviderType: varchar(32)
+		lineageTag: d7447d23-34fc-4f85-a0b0-0547902be1c6
+		sourceLineageTag: Closure Indicator #6
+		summarizeBy: none
+		sourceColumn: Closure Indicator #6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Overall Indicator'
+		dataType: string
+		sourceProviderType: varchar(5)
+		lineageTag: 7332b253-354d-4f5b-ae07-60faad48782f
+		sourceLineageTag: Closure Overall Indicator
+		summarizeBy: none
+		sourceColumn: Closure Overall Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #1'
+		dataType: string
+		sourceProviderType: varchar(33)
+		lineageTag: 7d278f02-4502-416e-a591-6d2b688c3028
+		sourceLineageTag: FieldWork Indicator #1
+		summarizeBy: none
+		sourceColumn: FieldWork Indicator #1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #2'
+		dataType: string
+		sourceProviderType: varchar(31)
+		lineageTag: 9250aa39-8cc1-403f-9502-955abbfcffc6
+		sourceLineageTag: FieldWork Indicator #2
+		summarizeBy: none
+		sourceColumn: FieldWork Indicator #2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #3'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: b4da1a6c-7f19-4f6a-abf1-2d93b7d4b5c8
+		sourceLineageTag: FieldWork Indicator #3
+		summarizeBy: none
+		sourceColumn: FieldWork Indicator #3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #4'
+		dataType: string
+		sourceProviderType: varchar(28)
+		lineageTag: 1f2e139a-d993-4dfb-a563-fce77651fc4e
+		sourceLineageTag: FieldWork Indicator #4
+		summarizeBy: none
+		sourceColumn: FieldWork Indicator #4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #5'
+		dataType: string
+		sourceProviderType: varchar(37)
+		lineageTag: a7edc752-8cea-43e9-8c60-156699c6e1e2
+		sourceLineageTag: FieldWork Indicator #5
+		summarizeBy: none
+		sourceColumn: FieldWork Indicator #5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Overall Indicator'
+		dataType: string
+		sourceProviderType: varchar(5)
+		lineageTag: 0ea4b1fe-2acf-4653-a37d-39df9c2376d9
+		sourceLineageTag: FieldWork Overall Indicator
+		summarizeBy: none
+		sourceColumn: FieldWork Overall Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI A'
+		dataType: string
+		sourceProviderType: varchar(66)
+		lineageTag: f3a6c51e-0c7b-4028-9253-ffd16dfb1943
+		sourceLineageTag: KPI A
+		summarizeBy: none
+		sourceColumn: KPI A
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI B'
+		dataType: string
+		sourceProviderType: varchar(60)
+		lineageTag: b2114065-aa7a-46c2-9aa8-79dc2a37f4c9
+		sourceLineageTag: KPI B
+		summarizeBy: none
+		sourceColumn: KPI B
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #1'
+		dataType: string
+		sourceProviderType: varchar(33)
+		lineageTag: 1a9c21b3-5165-4fc7-8266-3c2affa3e5c4
+		sourceLineageTag: Planning Indicator #1
+		summarizeBy: none
+		sourceColumn: Planning Indicator #1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #2'
+		dataType: string
+		sourceProviderType: varchar(31)
+		lineageTag: 63d0acb4-ddc3-4094-a3f4-2039936d9e0b
+		sourceLineageTag: Planning Indicator #2
+		summarizeBy: none
+		sourceColumn: Planning Indicator #2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #3'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: dcff0bce-35cb-450c-9894-75e8729a3adb
+		sourceLineageTag: Planning Indicator #3
+		summarizeBy: none
+		sourceColumn: Planning Indicator #3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #4'
+		dataType: string
+		sourceProviderType: varchar(28)
+		lineageTag: 22b2dc53-8110-412f-9324-a2946eaefdb0
+		sourceLineageTag: Planning Indicator #4
+		summarizeBy: none
+		sourceColumn: Planning Indicator #4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #5'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: f45cea74-6516-472a-bac8-9bcd60616c7b
+		sourceLineageTag: Planning Indicator #5
+		summarizeBy: none
+		sourceColumn: Planning Indicator #5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Overall Indicator'
+		dataType: string
+		sourceProviderType: varchar(5)
+		lineageTag: 541f94e1-5390-4612-827d-d621b2144f0d
+		sourceLineageTag: Planning Overall Indicator
+		summarizeBy: none
+		sourceColumn: Planning Overall Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #1'
+		dataType: string
+		sourceProviderType: varchar(33)
+		lineageTag: 70527cd8-545c-4bf0-893b-f77d69e42f0b
+		sourceLineageTag: Reporting Indicator #1
+		summarizeBy: none
+		sourceColumn: Reporting Indicator #1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #2'
+		dataType: string
+		sourceProviderType: varchar(31)
+		lineageTag: 9e6aab2e-9db0-4218-b541-d222fa30782a
+		sourceLineageTag: Reporting Indicator #2
+		summarizeBy: none
+		sourceColumn: Reporting Indicator #2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #3'
+		dataType: string
+		sourceProviderType: varchar(30)
+		lineageTag: ce0b5fa0-76a9-4077-afd8-bfea971fdf89
+		sourceLineageTag: Reporting Indicator #3
+		summarizeBy: none
+		sourceColumn: Reporting Indicator #3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #4'
+		dataType: string
+		sourceProviderType: varchar(28)
+		lineageTag: cab55ec3-cc85-47d6-83da-3abb6ea525a7
+		sourceLineageTag: Reporting Indicator #4
+		summarizeBy: none
+		sourceColumn: Reporting Indicator #4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #5'
+		dataType: string
+		sourceProviderType: varchar(39)
+		lineageTag: 1e468677-df2e-40cf-a60b-85b7452bdeef
+		sourceLineageTag: Reporting Indicator #5
+		summarizeBy: none
+		sourceColumn: Reporting Indicator #5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #6'
+		dataType: string
+		sourceProviderType: varchar(39)
+		lineageTag: 8a31fe56-b211-44ab-87ca-318c7b374c78
+		sourceLineageTag: Reporting Indicator #6
+		summarizeBy: none
+		sourceColumn: Reporting Indicator #6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Overall Indicator'
+		dataType: string
+		sourceProviderType: varchar(5)
+		lineageTag: f3b9ce58-e7c8-400a-81d0-d371c875b7a3
+		sourceLineageTag: Reporting Overall Indicator
+		summarizeBy: none
+		sourceColumn: Reporting Overall Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Audit Schedule KPIs' = entity
+		mode: directLake
+		source
+			entityName: A08 - Audit Schedule KPIs
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

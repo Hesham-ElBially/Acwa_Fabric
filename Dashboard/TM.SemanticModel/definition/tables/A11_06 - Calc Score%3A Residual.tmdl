@@ -1,0 +1,89 @@
+table 'A11_06 - Calc Score: Residual'
+	lineageTag: 264da618-b77a-44aa-bef0-c9b0764b43ca
+	sourceLineageTag: [sch_TeamMate].[A11_06 - Calc Score: Residual]
+
+	column StrategicRiskScoringCalculatedId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 814bce11-bac3-4fa0-8f95-16bc9d97fe56
+		sourceLineageTag: StrategicRiskScoringCalculatedId
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoringCalculatedId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3eaaea17-5019-4a3b-abaa-8d6a52e9dc47
+		sourceLineageTag: StrategicRiskId
+		summarizeBy: count
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 306db4b4-a0ee-481e-9b5a-84c1c0bde873
+		sourceLineageTag: StrategicRiskTitle
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreType
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 722f6d7e-3c4a-4d3c-b33b-aaff40a66f17
+		sourceLineageTag: CalculatedScoreType
+		summarizeBy: none
+		sourceColumn: CalculatedScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreValue
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 91b67fe2-b8aa-42ce-baa8-1471c60c7d24
+		sourceLineageTag: CalculatedScoreValue
+		summarizeBy: sum
+		sourceColumn: CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 43482c3d-62cb-4f35-a1f0-c8161ecf7e7e
+		sourceLineageTag: AssessmentId
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 722cf673-a23b-46d5-a27f-50cba0b3a9d7
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11_06 - Calc Score: Residual' = entity
+		mode: directLake
+		source
+			entityName: A11_06 - Calc Score: Residual
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

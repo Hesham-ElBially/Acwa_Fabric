@@ -1,0 +1,76 @@
+table RiskScoringCalculationsAssessmentProject
+	lineageTag: 43150e25-b650-4887-874c-77c3ccff8e7c
+
+	column RiskScoringCalculatedId
+		dataType: int64
+		formatString: 0
+		lineageTag: 87a8d0b9-c18c-4d3d-9cdc-f54f5dbc0224
+		summarizeBy: count
+		sourceColumn: RiskScoringCalculatedId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ccf4312-596d-4b1a-892a-0e9361a3e692
+		summarizeBy: none
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskTitle
+		dataType: string
+		lineageTag: f5025a2e-d68f-47e3-a938-7cacf4c29ba4
+		summarizeBy: none
+		sourceColumn: RiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreType
+		dataType: string
+		lineageTag: d42b1bcb-a13e-4ca6-9048-dc6c903db4ad
+		summarizeBy: none
+		sourceColumn: CalculatedScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreValue
+		dataType: double
+		lineageTag: 7089ac12-85d0-42bc-a2c4-ef3f90bcc0c4
+		summarizeBy: sum
+		sourceColumn: CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: c2ac02eb-032a-4b89-b062-c605d607f2fd
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 175cb342-967b-4419-b80d-b5b322a0a5e9
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RiskScoringCalculationsAssessmentProject = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    RiskScoringCalculationsAssessmentProject_table = Source{[Name="RiskScoringCalculationsAssessmentProject",Signature="table"]}[Data]
+				in
+				    RiskScoringCalculationsAssessmentProject_table
+
+	annotation PBI_ResultType = Table
+

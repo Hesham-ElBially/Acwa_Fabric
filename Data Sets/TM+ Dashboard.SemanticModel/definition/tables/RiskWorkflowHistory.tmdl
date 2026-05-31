@@ -1,0 +1,150 @@
+table RiskWorkflowHistory
+	lineageTag: 43bf8a0c-f892-4c02-a7e5-3cfe8703d9fb
+
+	column RiskWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 18f7e602-9fd8-44a6-9054-facab7a92abe
+		summarizeBy: count
+		sourceColumn: RiskWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: c0736ef5-0861-41bb-a1c6-50bc6970247b
+		summarizeBy: none
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskTitle
+		dataType: string
+		lineageTag: 1bde71f1-8c1f-4d08-89b4-9b87ee32b7d9
+		summarizeBy: none
+		sourceColumn: RiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskCode
+		dataType: string
+		lineageTag: e0bb6d7d-0d4a-4625-8f83-e0e44e85c67c
+		summarizeBy: none
+		sourceColumn: RiskCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b798a4d7-a6e2-41ef-9ccc-ea9908d7d3dd
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: e57531ca-b64e-40ad-af59-3f7e10655121
+			defaultHierarchy: LocalDateTable_8650b023-5ed3-498f-a425-6342140b48d7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 15ee9d87-bd89-4354-aa6b-8e498944516f
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: 54d1d176-57e0-44ef-a173-728f71e4b25b
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: fa4c961d-f633-46f0-a9b1-bce82ddcd977
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 040e8ba0-cc9d-4a13-a4e8-986c648cb15b
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 942c6a02-0720-4f10-bf85-4ab6e0c85638
+		summarizeBy: sum
+		sourceColumn: ReviewSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequiredSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 38b30bba-578f-4454-9ce0-c085a6133c45
+		summarizeBy: sum
+		sourceColumn: RequiredSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompletedSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 07923050-d374-45d8-b04c-04970578e945
+		summarizeBy: sum
+		sourceColumn: CompletedSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c4b9efd-7473-4675-a9e9-b1ffdf74c3a1
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: f56b3f38-bd7c-44b5-9c06-22d326b50835
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: 1b62b5ba-ceed-4da8-aba9-621aa281cb36
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RiskWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    RiskWorkflowHistory_table = Source{[Name="RiskWorkflowHistory",Signature="table"]}[Data]
+				in
+				    RiskWorkflowHistory_table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

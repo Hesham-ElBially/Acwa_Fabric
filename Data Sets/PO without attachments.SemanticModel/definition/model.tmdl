@@ -1,0 +1,25 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["S4_Hana viw_param_PR Approval check","S4_Hana viw_Param2","S4_Hana viw_param_3","S4_Hana viw_scm_Param3"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+ref table 'S4_Hana viw_param_PR Approval check'
+ref table DateTableTemplate_830d234b-0a99-4008-90e0-7c97a2e0da8c
+ref table LocalDateTable_9562c703-bce9-45f5-bcc4-70020b880163
+ref table LocalDateTable_7ff33be0-19a7-4e0e-8680-322bbf36c07b
+ref table LocalDateTable_63dde406-a747-4878-9953-a8fbe89df8d4
+ref table 'S4_Hana viw_Param2'
+ref table 'S4_Hana viw_param_3'
+ref table 'S4_Hana viw_scm_Param3'
+ref table LocalDateTable_7dc4aab4-fdaf-4a83-8108-988906e540d4
+ref table LocalDateTable_51f2fb8f-2977-49e4-9a86-848267d5aa3a
+
+ref cultureInfo en-US
+

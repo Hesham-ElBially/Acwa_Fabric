@@ -1,0 +1,111 @@
+table ProjectTexts
+	lineageTag: c4a0bc2d-fd61-448e-8e9f-8ed6ecf3842d
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: f804ba4e-65d9-4248-82b1-02c22b6f7b71
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: 9ce34a03-fe96-45e7-a627-2e15a5de1c63
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: 9c922c41-5744-4a41-9e4c-9f87ebe40774
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: 8a504139-d9d7-4eb3-9f74-817b2a2a1eef
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text4
+		dataType: string
+		lineageTag: 32a9fd6c-da35-4fbd-b742-2646dd13c622
+		summarizeBy: none
+		sourceColumn: Text4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text5
+		dataType: string
+		lineageTag: 921693a8-79d0-40f4-a992-c54601c2a82f
+		summarizeBy: none
+		sourceColumn: Text5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text6
+		dataType: string
+		lineageTag: 7e0c1d5f-0f65-4a6e-8a27-ea72d8ee91f2
+		summarizeBy: none
+		sourceColumn: Text6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text7
+		dataType: string
+		lineageTag: cbfa9e43-b530-4296-bc04-1e75f58b38d7
+		summarizeBy: none
+		sourceColumn: Text7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text8
+		dataType: string
+		lineageTag: 203de836-fc2f-4fad-9f25-e02ee1af8073
+		summarizeBy: none
+		sourceColumn: Text8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text9
+		dataType: string
+		lineageTag: 6b89c5e6-10ed-46ee-bb4a-517b24717660
+		summarizeBy: none
+		sourceColumn: Text9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text10
+		dataType: string
+		lineageTag: 0db8ef98-2cfa-4118-b2b9-d5aefc1d9bc2
+		summarizeBy: none
+		sourceColumn: Text10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text11
+		dataType: string
+		lineageTag: cbc10655-32fa-46c9-84b6-87ff35d4e188
+		summarizeBy: none
+		sourceColumn: Text11
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ProjectTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProjectTexts_table = Source{[Name="ProjectTexts",Signature="table"]}[Data]
+				in
+				    ProjectTexts_table
+
+	annotation PBI_ResultType = Table
+

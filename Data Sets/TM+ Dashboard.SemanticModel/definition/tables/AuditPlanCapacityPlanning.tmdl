@@ -1,0 +1,96 @@
+table AuditPlanCapacityPlanning
+	lineageTag: bd5f2ea8-c251-409d-9a1c-75b48231f890
+
+	column AuditPlanCapacityPlanningId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ac8bc10-f5b5-4f37-b510-7e1c9e079947
+		summarizeBy: none
+		sourceColumn: AuditPlanCapacityPlanningId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditPlanId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d2f0a8b-7e75-4864-886d-b7e5f3fb4049
+		summarizeBy: none
+		sourceColumn: AuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ef33e03-65bb-459e-b185-cc71112202b6
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeAdminId
+		dataType: int64
+		formatString: 0
+		lineageTag: 23665960-24a5-40b6-9c20-98b25f342f28
+		summarizeBy: none
+		sourceColumn: TimeAdminId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeHolidayId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ed3fe31-1052-4cc1-a3ee-763704fb935d
+		summarizeBy: none
+		sourceColumn: TimeHolidayId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeNonWorkingId
+		dataType: int64
+		formatString: 0
+		lineageTag: 57954875-9d73-44ff-8dab-560250e3237c
+		summarizeBy: none
+		sourceColumn: TimeNonWorkingId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityRoleId
+		dataType: int64
+		formatString: 0
+		lineageTag: 51ba92ca-85a4-4e51-857c-7330cd0a2150
+		summarizeBy: count
+		sourceColumn: CapacityRoleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityRole
+		dataType: string
+		lineageTag: 8f1ba479-729f-4ab5-a0f8-5843b471b7bb
+		summarizeBy: none
+		sourceColumn: CapacityRole
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedTime
+		dataType: int64
+		formatString: 0
+		lineageTag: 7df98ea1-c715-4ea2-832f-83d3f62b33cd
+		summarizeBy: sum
+		sourceColumn: EstimatedTime
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AuditPlanCapacityPlanning = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1/timetracking", null, [Implementation="2.0"]),
+				    AuditPlanCapacityPlanning_table = Source{[Name="AuditPlanCapacityPlanning",Signature="table"]}[Data]
+				in
+				    AuditPlanCapacityPlanning_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

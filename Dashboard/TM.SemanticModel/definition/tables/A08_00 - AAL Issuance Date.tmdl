@@ -1,0 +1,120 @@
+table 'A08_00 - AAL Issuance Date'
+	lineageTag: ea4f9f60-521b-4bf4-81f7-1b9eaded19fd
+	sourceLineageTag: [sch_TeamMate].[A08_00 - AAL Issuance Date]
+
+	column ProjectPhaseMilestoneId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2fb2c3cc-60d1-416f-8d5f-43e5cd1e5833
+		sourceLineageTag: ProjectPhaseMilestoneId
+		summarizeBy: none
+		sourceColumn: ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8fa5dcc0-0ec1-4615-a259-7733a1687040
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: none
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilestoneName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3ea7685e-8eab-4248-9a9d-4616e97c98ac
+		sourceLineageTag: MilestoneName
+		summarizeBy: none
+		sourceColumn: MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7714da55-cc43-4c69-8429-db96df65913f
+		sourceLineageTag: PhaseName
+		summarizeBy: none
+		sourceColumn: PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: af12551e-d37e-4484-a99b-16a06f1e65c9
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 929898a8-c754-4212-871c-684b9d3f6bfe
+		sourceLineageTag: RevisedDueDate
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 1f9280e8-5cc7-431e-be4a-53e94f4b9808
+		sourceLineageTag: EstimatedEndDate
+		summarizeBy: none
+		sourceColumn: EstimatedEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 690f92ce-8703-4edc-9739-86faf76478a3
+		sourceLineageTag: ActualEndDate
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 88925ccb-a975-498d-bdf8-049866b2f27d
+		sourceLineageTag: SortOrder
+		summarizeBy: none
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f9d35f25-77d7-4585-b8c3-2f6ce6b711f8
+		sourceLineageTag: Comment
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - AAL Issuance Date' = entity
+		mode: directLake
+		source
+			entityName: A08_00 - AAL Issuance Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

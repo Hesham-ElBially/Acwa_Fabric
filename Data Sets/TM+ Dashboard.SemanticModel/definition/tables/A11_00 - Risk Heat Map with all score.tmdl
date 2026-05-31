@@ -1,0 +1,445 @@
+table 'A11_00 - Risk Heat Map with all score'
+	lineageTag: 02b10c74-afc3-4ffd-841a-48b494972157
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ea78823-8e32-459a-bc58-aaf65aad6e4b
+		summarizeBy: count
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ca6cc1b-41c5-40b5-87bb-989d4651c329
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ee722b3-b4a0-465c-937e-6e2694f3d3df
+		summarizeBy: none
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c888570-0d1c-4193-8d65-ca82ddc19f4c
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Records'
+		dataType: int64
+		formatString: 0
+		lineageTag: 469aca87-1632-4f32-9bb1-56decb227aef
+		summarizeBy: sum
+		sourceColumn: No. of Records
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assessments.AssessmentTitle'
+		dataType: string
+		lineageTag: 0fcfc5dd-0220-4432-8d0d-b3f58aa54f0e
+		summarizeBy: none
+		sourceColumn: Assessments.AssessmentTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.EntityTitle'
+		dataType: string
+		lineageTag: 214bcb14-3d02-40bb-842f-35af94d2dd82
+		summarizeBy: none
+		sourceColumn: Entities.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath'
+		dataType: string
+		lineageTag: 3a9ada68-d8f7-4614-ae51-5244a8194de2
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgSort'
+		dataType: string
+		lineageTag: 52c14dbd-5289-4b98-9bb8-29da935d914a
+		summarizeBy: none
+		sourceColumn: Entities.OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.1'
+		dataType: string
+		lineageTag: 9b6183d2-e953-4dc6-bde4-72aa2a78e806
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.2'
+		dataType: string
+		lineageTag: 91a329be-eade-4edd-b4a8-e5fb3cc88de5
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.3'
+		dataType: string
+		lineageTag: ecf5527f-4d5f-4697-a091-937878e2110c
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.4'
+		dataType: string
+		lineageTag: 98f1cd62-05bb-489b-b2cb-9a29f228b852
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.5'
+		dataType: string
+		lineageTag: 3c06aac3-473f-4102-bae9-ed2018146f70
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.6'
+		dataType: string
+		lineageTag: 9b89dfbe-3be2-47bf-b668-baf326db19d4
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskTitle'
+		dataType: string
+		lineageTag: d3a4df24-b659-42f2-8042-491ad68bb844
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode'
+		dataType: string
+		lineageTag: ef749baa-64fd-4e9f-a209-7598a58001d3
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskState'
+		dataType: string
+		lineageTag: c6f8fe68-ce7f-433c-b0a8-057a1281a930
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category1'
+		dataType: string
+		lineageTag: dbb0658f-3899-4e83-90e3-14ceaf1f350f
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category2'
+		dataType: string
+		lineageTag: 15eb5698-3a6b-4f4e-9768-10f27ce2f29c
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A11_00 - Score: Inherent Likelihood.ScoreValue'
+		dataType: double
+		lineageTag: d08e71d6-eb44-4615-a6be-52ceb0985f40
+		summarizeBy: sum
+		sourceColumn: A11_00 - Score: Inherent Likelihood.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_01 - Score: Inherent Impact.ScoreValue'
+		dataType: double
+		lineageTag: cd4e9865-8f36-4dc4-92c9-cf0835235017
+		summarizeBy: sum
+		sourceColumn: A11_01 - Score: Inherent Impact.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_02 - Score: Inherent Total.CalculatedScoreValue'
+		dataType: double
+		lineageTag: 0a0401dc-27cf-4c7f-a430-c3235550cb02
+		summarizeBy: sum
+		sourceColumn: A11_02 - Score: Inherent Total.CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_03 - Score: Residual Likelihood.ScoreValue'
+		dataType: double
+		lineageTag: 6223c6e5-6ab7-436a-9d31-6a957c3c9c75
+		summarizeBy: sum
+		sourceColumn: A11_03 - Score: Residual Likelihood.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_04 - Score: Residual Impact.ScoreValue'
+		dataType: double
+		lineageTag: f232174c-1d8c-4c84-8f6e-2c0a06a88cfa
+		summarizeBy: sum
+		sourceColumn: A11_04 - Score: Residual Impact.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_05 - Calc Score: Residual.CalculatedScoreValue'
+		dataType: double
+		lineageTag: 3a7de983-2592-44dd-a382-172d5381ff0e
+		summarizeBy: sum
+		sourceColumn: A11_05 - Calc Score: Residual.CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'EntityAssessmentDetails.Category3'
+		dataType: string
+		lineageTag: 4d5e948d-6280-494c-b481-681855714dfc
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.MultiSelectCategory2'
+		dataType: string
+		lineageTag: bc1e6885-3262-42c0-8636-157fefc38c07
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.MultiSelectCategory2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category1'
+		dataType: string
+		lineageTag: 6389be7c-db44-4040-acef-6c76b9b0e876
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category1
+		sortByColumn: 'Region Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category2'
+		dataType: string
+		lineageTag: af8af6f5-e47b-478c-bbc3-1f506be2b115
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category2
+		sortByColumn: 'Country Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category4'
+		dataType: string
+		lineageTag: 7abd9dbd-a58b-43fd-b569-c0ba523fdd3b
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Region Order' = RELATED('A00 - Region Order'[Order])
+		formatString: 0
+		lineageTag: 193cb103-1a96-453b-b249-0b8cce802ecc
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country Order' = ```
+			RELATED('A00 - Country Order'[Order]) 
+			```
+		formatString: 0
+		lineageTag: a659eefb-a59f-4dd2-9d9e-5ac0fbc3b781
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Level'
+		dataType: string
+		lineageTag: 9e282d2a-cc37-4f99-8d84-1df37bd31d45
+		summarizeBy: none
+		sourceColumn: Reporting Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Risk Rating'
+		dataType: string
+		lineageTag: 9db970ad-687c-4dcd-a1e5-86e4bd29e8f5
+		summarizeBy: none
+		sourceColumn: Risk Rating
+		sortByColumn: 'Risk Rating Sort'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.1'
+		dataType: string
+		lineageTag: bec69de1-3aa1-43f6-b8b9-d1e068d21ee4
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.2'
+		dataType: string
+		lineageTag: d96c1b3d-044f-4f31-8736-bace462b919e
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.3'
+		dataType: string
+		lineageTag: 6241039f-42e0-410f-b2ff-8ad6119e0d38
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.4'
+		dataType: string
+		lineageTag: 7818f33d-61ca-4daf-b3e5-0536c3b3b2bb
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Risk Rating Sort' = RELATED('A00 - Risk Rating Order'[Risk Rating Order])
+		formatString: 0
+		lineageTag: f37aa0a7-4deb-4409-82f1-a7f17e26e0dc
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentEntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 93ddec93-9cf1-44c8-9145-34e5dce1c00b
+		summarizeBy: count
+		sourceColumn: ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent Entity Title'
+		dataType: string
+		lineageTag: 92003816-352c-4923-b5be-e4d1e08407b2
+		summarizeBy: none
+		sourceColumn: Parent Entity Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportingLevel:RiskCode1:RiskCode2
+		dataType: string
+		lineageTag: b6f7011b-380d-4109-ac17-d708497d2af4
+		summarizeBy: none
+		sourceColumn: ReportingLevel:RiskCode1:RiskCode2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11_00 - Risk Heat Map with all score' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(ObjectRelationships_table,{"ProjectId", "RiskId", "ControlId", "ObjectiveId", "ProcedureId", "IssueId", "RecommendationId", "FolderId", "Dimension", "Entity", "Assessment", "Project", "StrategicRisk", "Risk", "Control", "Objective", "Procedure", "Issue", "Recommendation", "Folder"}),
+				    #"Grouped Rows" = Table.Group(#"Removed Columns", {"DimensionId", "EntityId", "AssessmentId", "StrategicRiskId"}, {{"No. of Records", each Table.RowCount(Table.Distinct(_)), Int64.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Grouped Rows", each ([AssessmentId] = 31)),
+				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows", {"AssessmentId"}, Assessments, {"AssessmentId"}, "Assessments", JoinKind.LeftOuter),
+				    #"Expanded Assessments" = Table.ExpandTableColumn(#"Merged Queries", "Assessments", {"AssessmentTitle"}, {"Assessments.AssessmentTitle"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded Assessments", {"EntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities" = Table.ExpandTableColumn(#"Merged Queries1", "Entities", {"EntityTitle", "OrgPath", "OrgSort", "ParentEntityId"}, {"Entities.EntityTitle", "Entities.OrgPath", "Entities.OrgSort", "Entities.ParentEntityId"}),
+				    #"Sorted Rows" = Table.Sort(#"Expanded Entities",{{"Entities.OrgSort", Order.Ascending}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Sorted Rows", "Entities.OrgPath", "Entities.OrgPath - Copy"),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Duplicated Column", "Entities.OrgPath - Copy", Splitter.SplitTextByDelimiter(">", QuoteStyle.Csv), {"Entities.OrgPath - Copy.1", "Entities.OrgPath - Copy.2", "Entities.OrgPath - Copy.3", "Entities.OrgPath - Copy.4", "Entities.OrgPath - Copy.5", "Entities.OrgPath - Copy.6"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Entities.OrgPath - Copy.1", type text}, {"Entities.OrgPath - Copy.2", type text}, {"Entities.OrgPath - Copy.3", type text}, {"Entities.OrgPath - Copy.4", type text}, {"Entities.OrgPath - Copy.5", type text}, {"Entities.OrgPath - Copy.6", type text}}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Changed Type", {"StrategicRiskId"}, StrategicRisks, {"StrategicRiskId"}, "StrategicRisks", JoinKind.LeftOuter),
+				    #"Expanded StrategicRisks" = Table.ExpandTableColumn(#"Merged Queries2", "StrategicRisks", {"StrategicRiskTitle", "StrategicRiskCode", "StrategicRiskState", "Category1", "Category2"}, {"StrategicRisks.StrategicRiskTitle", "StrategicRisks.StrategicRiskCode", "StrategicRisks.StrategicRiskState", "StrategicRisks.Category1", "StrategicRisks.Category2"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded StrategicRisks", {"StrategicRiskId"}, #"A11_01 - Score: Inherent Likelihood", {"StrategicRiskId"}, "A11_00 - Score: Inherent Likelihood", JoinKind.LeftOuter),
+				    #"Expanded A11_00 - Score: Inherent Likelihood" = Table.ExpandTableColumn(#"Merged Queries3", "A11_00 - Score: Inherent Likelihood", {"ScoreValue"}, {"A11_00 - Score: Inherent Likelihood.ScoreValue"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Expanded A11_00 - Score: Inherent Likelihood", {"StrategicRiskId"}, #"A11_02 - Score: Inherent Impact", {"StrategicRiskId"}, "A11_01 - Score: Inherent Impact", JoinKind.LeftOuter),
+				    #"Expanded A11_01 - Score: Inherent Impact" = Table.ExpandTableColumn(#"Merged Queries4", "A11_01 - Score: Inherent Impact", {"ScoreValue"}, {"A11_01 - Score: Inherent Impact.ScoreValue"}),
+				    #"Merged Queries5" = Table.NestedJoin(#"Expanded A11_01 - Score: Inherent Impact", {"StrategicRiskId"}, #"A11_03 - Calc Score: Inherent", {"StrategicRiskId"}, "A11_02 - Score: Inherent Total", JoinKind.LeftOuter),
+				    #"Expanded A11_02 - Score: Inherent Total" = Table.ExpandTableColumn(#"Merged Queries5", "A11_02 - Score: Inherent Total", {"CalculatedScoreValue"}, {"A11_02 - Score: Inherent Total.CalculatedScoreValue"}),
+				    #"Merged Queries6" = Table.NestedJoin(#"Expanded A11_02 - Score: Inherent Total", {"StrategicRiskId"}, #"A11_04 - Score: Residual Likelihood", {"StrategicRiskId"}, "A11_03 - Score: Residual Likelihood", JoinKind.LeftOuter),
+				    #"Expanded A11_03 - Score: Residual Likelihood" = Table.ExpandTableColumn(#"Merged Queries6", "A11_03 - Score: Residual Likelihood", {"ScoreValue"}, {"A11_03 - Score: Residual Likelihood.ScoreValue"}),
+				    #"Merged Queries7" = Table.NestedJoin(#"Expanded A11_03 - Score: Residual Likelihood", {"StrategicRiskId"}, #"A11_05 - Score: Residual Impact", {"StrategicRiskId"}, "A11_04 - Score: Residual Impact", JoinKind.LeftOuter),
+				    #"Expanded A11_04 - Score: Residual Impact" = Table.ExpandTableColumn(#"Merged Queries7", "A11_04 - Score: Residual Impact", {"ScoreValue"}, {"A11_04 - Score: Residual Impact.ScoreValue"}),
+				    #"Merged Queries8" = Table.NestedJoin(#"Expanded A11_04 - Score: Residual Impact", {"StrategicRiskId"}, #"A11_06 - Calc Score: Residual", {"StrategicRiskId"}, "A11_05 - Calc Score: Residual", JoinKind.LeftOuter),
+				    #"Expanded A11_05 - Calc Score: Residual" = Table.ExpandTableColumn(#"Merged Queries8", "A11_05 - Calc Score: Residual", {"CalculatedScoreValue"}, {"A11_05 - Calc Score: Residual.CalculatedScoreValue"}),
+				    #"Merged Queries9" = Table.NestedJoin(#"Expanded A11_05 - Calc Score: Residual", {"EntityId"}, EntityAssessmentDetails, {"EntityId"}, "EntityAssessmentDetails", JoinKind.LeftOuter),
+				    #"Expanded EntityAssessmentDetails" = Table.ExpandTableColumn(#"Merged Queries9", "EntityAssessmentDetails", {"Category1", "Category2", "Category3", "Category4", "MultiSelectCategory2"}, {"EntityAssessmentDetails.Category1", "EntityAssessmentDetails.Category2", "EntityAssessmentDetails.Category3", "EntityAssessmentDetails.Category4", "EntityAssessmentDetails.MultiSelectCategory2"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Expanded EntityAssessmentDetails", each ([StrategicRisks.StrategicRiskCode] <> null)),
+				    #"Filtered Rows2" = Table.SelectRows(#"Filtered Rows1", each ([#"A11_05 - Calc Score: Residual.CalculatedScoreValue"] <> null)),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Filtered Rows2", "EntityAssessmentDetails.Category3", "EntityAssessmentDetails.Category3 - Copy"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Duplicated Column1",{{"EntityAssessmentDetails.Category3 - Copy", "Reporting Level"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns",null,"Project Company",Replacer.ReplaceValue,{"Reporting Level"}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Replaced Value", "Risk Rating", each if [#"A11_05 - Calc Score: Residual.CalculatedScoreValue"] > 9 then "High" else if [#"A11_05 - Calc Score: Residual.CalculatedScoreValue"] <= 4 then "Low" else "Medium"),
+				    #"Duplicated Column2" = Table.DuplicateColumn(#"Added Conditional Column", "StrategicRisks.StrategicRiskCode", "StrategicRisks.StrategicRiskCode - Copy"),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Duplicated Column2", "StrategicRisks.StrategicRiskCode - Copy", Splitter.SplitTextByDelimiter("-", QuoteStyle.Csv), {"StrategicRisks.StrategicRiskCode - Copy.1", "StrategicRisks.StrategicRiskCode - Copy.2", "StrategicRisks.StrategicRiskCode - Copy.3", "StrategicRisks.StrategicRiskCode - Copy.4"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"StrategicRisks.StrategicRiskCode - Copy.1", type text}, {"StrategicRisks.StrategicRiskCode - Copy.2", type text}, {"StrategicRisks.StrategicRiskCode - Copy.3", type text}, {"StrategicRisks.StrategicRiskCode - Copy.4", type text}}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Changed Type1","GC","G&CC",Replacer.ReplaceText,{"StrategicRisks.StrategicRiskCode - Copy.2"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","FA","Finance",Replacer.ReplaceText,{"StrategicRisks.StrategicRiskCode - Copy.2"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","OPS","Operations",Replacer.ReplaceText,{"StrategicRisks.StrategicRiskCode - Copy.2"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","CON","Construction",Replacer.ReplaceText,{"StrategicRisks.StrategicRiskCode - Copy.2"}),
+				    #"Merged Queries10" = Table.NestedJoin(#"Replaced Value4", {"Entities.ParentEntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities1" = Table.ExpandTableColumn(#"Merged Queries10", "Entities", {"EntityTitle"}, {"Entities.EntityTitle.1"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Expanded Entities1",{{"Entities.ParentEntityId", "ParentEntityId"}, {"Entities.EntityTitle.1", "Parent Entity Title"}}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Renamed Columns1","Azerbaijan","Azerbaijan Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Turkey","Turkey Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","Uzbekistan","Uzbekistan Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","China","China Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","Egypt","Egypt Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","Indonesia","Indonesia Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10","Jordan","Jordan Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","Morocco","Morocco Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","Oman","Oman Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","South Africa","South Africa Country Office",Replacer.ReplaceValue,{"Parent Entity Title"}),
+				    #"Duplicated Column3" = Table.DuplicateColumn(#"Replaced Value14", "Reporting Level", "Reporting Level - Copy"),
+				    #"Duplicated Column4" = Table.DuplicateColumn(#"Duplicated Column3", "StrategicRisks.StrategicRiskCode - Copy.2", "StrategicRisks.StrategicRiskCode - Copy.2 - Copy"),
+				    #"Duplicated Column5" = Table.DuplicateColumn(#"Duplicated Column4", "StrategicRisks.StrategicRiskCode - Copy.1", "StrategicRisks.StrategicRiskCode - Copy.1 - Copy"),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Duplicated Column5",{"DimensionId", "EntityId", "AssessmentId", "StrategicRiskId", "No. of Records", "Assessments.AssessmentTitle", "Entities.EntityTitle", "Entities.OrgPath", "Entities.OrgSort", "ParentEntityId", "Entities.OrgPath - Copy.1", "Entities.OrgPath - Copy.2", "Entities.OrgPath - Copy.3", "Entities.OrgPath - Copy.4", "Entities.OrgPath - Copy.5", "Entities.OrgPath - Copy.6", "StrategicRisks.StrategicRiskTitle", "StrategicRisks.StrategicRiskCode", "StrategicRisks.StrategicRiskState", "StrategicRisks.Category1", "StrategicRisks.Category2", "A11_00 - Score: Inherent Likelihood.ScoreValue", "A11_01 - Score: Inherent Impact.ScoreValue", "A11_02 - Score: Inherent Total.CalculatedScoreValue", "A11_03 - Score: Residual Likelihood.ScoreValue", "A11_04 - Score: Residual Impact.ScoreValue", "A11_05 - Calc Score: Residual.CalculatedScoreValue", "EntityAssessmentDetails.Category1", "EntityAssessmentDetails.Category2", "EntityAssessmentDetails.Category3", "EntityAssessmentDetails.Category4", "EntityAssessmentDetails.MultiSelectCategory2", "Reporting Level", "Risk Rating", "StrategicRisks.StrategicRiskCode - Copy.1", "StrategicRisks.StrategicRiskCode - Copy.2", "StrategicRisks.StrategicRiskCode - Copy.3", "StrategicRisks.StrategicRiskCode - Copy.4", "Parent Entity Title", "Reporting Level - Copy", "StrategicRisks.StrategicRiskCode - Copy.1 - Copy", "StrategicRisks.StrategicRiskCode - Copy.2 - Copy"}),
+				    #"Merged Columns" = Table.CombineColumns(#"Reordered Columns",{"Reporting Level - Copy", "StrategicRisks.StrategicRiskCode - Copy.1 - Copy", "StrategicRisks.StrategicRiskCode - Copy.2 - Copy"},Combiner.CombineTextByDelimiter(":", QuoteStyle.None),"ReportingLevel:RiskCode1:RiskCode2"),
+				    #"Filtered Rows3" = Table.SelectRows(#"Merged Columns", each ([#"ReportingLevel:RiskCode1:RiskCode2"] <> "Corporate:PC:Construction" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Corporate:PC:Finance" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Corporate:PC:G&CC" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Corporate:PC:HR" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:CH" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:EN" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:HS" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:MN" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:PC" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:PL" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:PO" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:PW" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:SB" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:SC" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:OM:WH" and [#"ReportingLevel:RiskCode1:RiskCode2"] <> "Project Company:PC:Operations"))
+				in
+				    #"Filtered Rows3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

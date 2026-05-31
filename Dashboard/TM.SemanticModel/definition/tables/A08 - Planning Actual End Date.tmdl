@@ -1,0 +1,56 @@
+table 'A08 - Planning Actual End Date'
+	lineageTag: 0928284e-08be-4a7e-86e1-156a3331ddf6
+	sourceLineageTag: [sch_TeamMate].[A08 - Planning Actual End Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8e41f87e-5be1-4a8f-8b88-a54b2a53a208
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fef8c384-43c2-4835-b839-fc92092d20e9
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7706578d-4d3d-439f-8a0a-de6cece10a7b
+		sourceLineageTag: ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 8c44033f-834c-40c9-91de-7d3d115deb54
+		sourceLineageTag: ActEndDate
+		summarizeBy: none
+		sourceColumn: ActEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Planning Actual End Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Planning Actual End Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

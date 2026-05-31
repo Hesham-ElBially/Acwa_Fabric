@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "List of Related Party Transactions"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4fcb8bde-e2f6-8713-4160-3f2d71d8dbca"
+  }
+}

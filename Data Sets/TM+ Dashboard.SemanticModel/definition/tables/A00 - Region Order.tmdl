@@ -1,0 +1,33 @@
+table 'A00 - Region Order'
+	lineageTag: 24942514-2192-4f84-8759-1dff2ef485b5
+
+	column Region
+		dataType: string
+		lineageTag: cc5ba746-1c61-400e-a79b-deec506ddccf
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		dataType: int64
+		formatString: 0
+		lineageTag: 2999c1a2-49bb-428b-9ed4-1e255167975f
+		summarizeBy: sum
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Region Order' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45Wcs4vKsgvSixJVdJRMlSK1YlW8g52BLKNwGzn1LySosQcBcfizESgoDFEMCMzD8QzAfN8XR2DXUE6TJViYwE=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Region = _t, Order = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Region", type text}, {"Order", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

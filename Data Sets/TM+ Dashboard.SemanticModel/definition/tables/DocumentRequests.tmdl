@@ -1,0 +1,195 @@
+table DocumentRequests
+	lineageTag: 86e1da32-efb1-4ba2-b40c-366561efd20a
+
+	column DocumentRequestID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8066af2a-4d92-47bf-80c3-182a43eca5f3
+		summarizeBy: count
+		sourceColumn: DocumentRequestID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentRequestTitle
+		dataType: string
+		lineageTag: 61739c45-fdca-4a42-9a3b-b94ca2470c22
+		summarizeBy: none
+		sourceColumn: DocumentRequestTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 7d9fa1d2-c906-474c-ac8f-b2eb46e82ada
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecipientUserID
+		dataType: int64
+		formatString: 0
+		lineageTag: 961a33ed-ef76-460c-af31-a86534c756e1
+		summarizeBy: count
+		sourceColumn: RecipientUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecipientName
+		dataType: string
+		lineageTag: ef497570-7591-44a4-8604-50c9da4545d2
+		summarizeBy: none
+		sourceColumn: RecipientName
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecipientEmail
+		dataType: string
+		lineageTag: dd4cf7b0-8a05-40ef-a5b1-04e0a77682fa
+		summarizeBy: none
+		sourceColumn: RecipientEmail
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequestUserID
+		dataType: int64
+		formatString: 0
+		lineageTag: b23afb66-2b3b-4479-b3c4-8d798a2f1805
+		summarizeBy: count
+		sourceColumn: RequestUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequesterName
+		dataType: string
+		lineageTag: 57c20ace-0e36-49a9-aec4-07ac04916f33
+		summarizeBy: none
+		sourceColumn: RequesterName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 70c99a33-1b0e-4393-98de-51eedea23404
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: f473131a-1b94-42b1-b0b1-7f4a071b044e
+			defaultHierarchy: LocalDateTable_bafec791-3e3d-44fa-8e4b-baf2c33b09f4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SentDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6d0cf809-5f92-44ae-a1a2-89ac17fa865d
+		summarizeBy: none
+		sourceColumn: SentDate
+
+		variation Variation
+			isDefault
+			relationship: 0ef4e993-3b30-463c-8730-8f63f243ab88
+			defaultHierarchy: LocalDateTable_004815c2-1294-4acc-872a-5ac54a0d2712.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IsComplete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b7b5788b-c181-4644-9db6-390631d779e4
+		summarizeBy: none
+		sourceColumn: IsComplete
+
+		annotation SummarizationSetBy = Automatic
+
+	column Response
+		dataType: string
+		lineageTag: ff91af06-90de-4fc1-b38c-246fde151862
+		summarizeBy: none
+		sourceColumn: Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column AttachmentNames
+		dataType: string
+		lineageTag: 4a12bc99-a9af-4a9c-8de9-94bb10cc6e36
+		summarizeBy: none
+		sourceColumn: AttachmentNames
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 18dbf07d-7b09-49f5-ae26-07d31628bfd6
+		summarizeBy: none
+		sourceColumn: AssessmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5303435c-2a83-44c2-b253-4d0b4f7fec8e
+		summarizeBy: none
+		sourceColumn: ProjectID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectTitle
+		dataType: string
+		lineageTag: 66ca2c33-db45-4e6c-a596-d84722363cee
+		summarizeBy: none
+		sourceColumn: ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7c00863e-cbf0-43c2-a1a8-1c9d5086b3a8
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 15532eda-bce8-41d7-ae44-fca85ae10597
+			defaultHierarchy: LocalDateTable_af19c897-8edd-4817-804c-6d3870b129bc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: ba54f9b6-d3e3-4be9-9c1e-78c3e7638486
+		summarizeBy: count
+		sourceColumn: LastModifiedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUser
+		dataType: string
+		lineageTag: 4c11644c-96d1-483e-a35b-6d7ff09cad0c
+		summarizeBy: none
+		sourceColumn: LastModifiedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DocumentRequests = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    DocumentRequests_table = Source{[Name="DocumentRequests",Signature="table"]}[Data]
+				in
+				    DocumentRequests_table
+
+	annotation PBI_ResultType = Table
+

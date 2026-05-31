@@ -1,0 +1,58 @@
+table TimeHolidays
+	lineageTag: 8666f831-a8af-4ec7-89b5-139c25bd7292
+
+	column TimeHolidayId
+		dataType: int64
+		formatString: 0
+		lineageTag: fb221038-6223-4845-bd94-6535fa71ffed
+		summarizeBy: none
+		sourceColumn: TimeHolidayId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HolidayName
+		dataType: string
+		lineageTag: ae6b8a01-b075-4f63-8d71-da836800dfae
+		summarizeBy: none
+		sourceColumn: HolidayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column HolidayDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 630c5100-d60b-408a-b067-2236e33945d3
+		summarizeBy: none
+		sourceColumn: HolidayDate
+
+		variation Variation
+			isDefault
+			relationship: d14864c3-aa6d-4f07-9424-45be15329ce6
+			defaultHierarchy: LocalDateTable_6bf0c910-bfc3-4adf-83f6-9b833bd00f09.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IsHolidayActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3a1681d1-a153-4ff7-95aa-040ddc6b4722
+		summarizeBy: none
+		sourceColumn: IsHolidayActive
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TimeHolidays = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1/timetracking", null, [Implementation="2.0"]),
+				    TimeHolidays_table = Source{[Name="TimeHolidays",Signature="table"]}[Data]
+				in
+				    TimeHolidays_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

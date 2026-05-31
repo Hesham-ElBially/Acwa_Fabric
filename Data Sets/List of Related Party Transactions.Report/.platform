@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "List of Related Party Transactions"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "43b735c8-d108-90a6-45bb-9980ef898feb"
+  }
+}

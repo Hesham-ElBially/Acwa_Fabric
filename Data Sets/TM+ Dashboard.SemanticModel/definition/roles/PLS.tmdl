@@ -1,0 +1,7 @@
+role PLS
+	modelPermission: read
+
+	tablePermission 'A00 - PLS' = [UserName] = USERPRINCIPALNAME()
+
+	annotation PBI_Id = f655ca55f7aa42809bf247434d5b0e71
+

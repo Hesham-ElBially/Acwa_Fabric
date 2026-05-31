@@ -1,0 +1,86 @@
+table 'A08 - Project Closed Date'
+	lineageTag: df96d32b-850c-4bd8-a0cc-5f8f36bb8a12
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e7e4958-01b6-4aa7-884a-f75ce8dc04c0
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.ProjectPhaseMilestoneId'
+		dataType: int64
+		formatString: 0
+		lineageTag: ff4da1a2-feb9-4afb-8455-f635472cdd67
+		summarizeBy: count
+		sourceColumn: A08_00 - Project Closed Date.ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.ProjectPhaseId'
+		dataType: int64
+		formatString: 0
+		lineageTag: 59640505-8337-4163-96c4-69018d4e3da5
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.MilestoneName'
+		dataType: string
+		lineageTag: 55729ca2-c1ca-461f-be1d-9a1d6487b2d3
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.PhaseName'
+		dataType: string
+		lineageTag: 081acbac-193d-402d-a283-6a85dd98b97a
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.IsActive'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 25c6ce94-28b3-4bc6-bf13-67c8ae23a3f2
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 938a6f6c-7919-4ba0-a0dd-7369f4c2e893
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 7c68f46a-4961-4b45-966d-992fcefeb734
+			defaultHierarchy: LocalDateTable_8b1d2a60-a55f-4fd2-8239-4a890670ec29.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'A08 - Project Closed Date' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A08_00 - All Phase", {"ProjectPhaseId"}, #"A08_00 - Project Closed Date", {"ProjectPhaseId"}, "A08_00 - Project Closed Date", JoinKind.LeftOuter),
+				    #"Expanded A08_00 - Project Closed Date" = Table.ExpandTableColumn(Source, "A08_00 - Project Closed Date", {"ProjectPhaseMilestoneId", "ProjectPhaseId", "MilestoneName", "PhaseName", "IsActive", "ActualEndDate", "ProjectPhase"}, {"A08_00 - Project Closed Date.ProjectPhaseMilestoneId", "A08_00 - Project Closed Date.ProjectPhaseId", "A08_00 - Project Closed Date.MilestoneName", "A08_00 - Project Closed Date.PhaseName", "A08_00 - Project Closed Date.IsActive", "A08_00 - Project Closed Date.ActualEndDate", "A08_00 - Project Closed Date.ProjectPhase"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded A08_00 - Project Closed Date", each ([#"A08_00 - Project Closed Date.MilestoneName"] = "Project Closed")),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"A08_00 - Project Closed Date.ProjectPhase", "Project", "ScheduledEndDate", "ScheduledStartDate", "ReviewDueDate", "RevisedDueDate", "ActHours", "IsComplete", "DueDate", "EstHours", "ProjectPhaseName", "SortOrder", "EstStartDate", "EstEndDate", "ActStartDate", "ActEndDate", "IsActive", "ProjectPhaseId"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

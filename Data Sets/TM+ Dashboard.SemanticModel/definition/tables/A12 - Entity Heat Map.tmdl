@@ -1,0 +1,295 @@
+table 'A12 - Entity Heat Map'
+	lineageTag: 54a816de-7a0e-4d27-828b-96fd6c7bbaf6
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: b425033a-c417-4ff3-a72e-c72f062da146
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.EntityTitle'
+		dataType: string
+		lineageTag: a5660d68-daa7-42ea-ab38-2e9ab257a9a6
+		summarizeBy: none
+		sourceColumn: Entities.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath'
+		dataType: string
+		lineageTag: 013bf0f4-5971-4fcb-b4b2-ab9d7d821d2b
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgSort'
+		dataType: string
+		lineageTag: e761e698-9ede-485b-a458-09b9442c7d64
+		summarizeBy: none
+		sourceColumn: Entities.OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		lineageTag: a4a5fc3e-ab79-440a-bb7f-632e275bb72b
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		lineageTag: 2069c972-a0d7-45b8-9b18-f7d1c3939c7c
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		lineageTag: 86ffb2d1-a06d-44a6-ae5d-f8ec58330217
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Significance
+		dataType: double
+		lineageTag: 1e884da4-b8ea-47fd-b601-fee04c71e852
+		summarizeBy: sum
+		sourceColumn: Significance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Auditor''s Judgement'
+		dataType: double
+		lineageTag: bfd13753-dd51-4a2d-81b2-65a824bcdadf
+		summarizeBy: sum
+		sourceColumn: Auditor's Judgement
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Reporting Level'
+		dataType: string
+		lineageTag: 7d468281-8b15-4182-aaed-eb97ac9dbcf3
+		summarizeBy: none
+		sourceColumn: Reporting Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Portfolio Delivery Lead'
+		dataType: string
+		lineageTag: 3c22a9fd-e9b1-42cd-9994-2cdf6f853f6b
+		summarizeBy: none
+		sourceColumn: Portfolio Delivery Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auditable Unit Priority Score'
+		dataType: double
+		formatString: 0.00
+		lineageTag: fc1e5e2b-6f35-4972-8b3a-1a24d3144875
+		summarizeBy: sum
+		sourceColumn: Auditable Unit Priority Score
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auditable Unit Prioritization Score'
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 1e597825-2141-4808-9483-c31d05e98c22
+		summarizeBy: sum
+		sourceColumn: Auditable Unit Prioritization Score
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auditable Unit Prioritization'
+		dataType: string
+		lineageTag: d9a101a3-22e7-4eff-89fc-065e68d6f2cb
+		summarizeBy: none
+		sourceColumn: Auditable Unit Prioritization
+		sortByColumn: 'Rating Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 2728b261-793e-4923-8396-9f8f22c8c2ea
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order' = RELATED('A00 - Rating Order'[Order])
+		formatString: 0
+		lineageTag: 4dcfbb05-ee6d-4102-a2a8-e2e1c7a7cd5c
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: acb0c0ef-bc01-4e35-a35d-c5c19bed1c24
+		summarizeBy: none
+		sourceColumn: Region
+		sortByColumn: 'Region Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 2a52f099-3f58-483c-9975-422f10209ebd
+		summarizeBy: none
+		sourceColumn: Country
+		sortByColumn: 'Country Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MC Member'
+		dataType: string
+		lineageTag: 87ff9c7f-485d-47a7-847f-f9448e69b10d
+		summarizeBy: none
+		sourceColumn: MC Member
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Region Order' = RELATED('A00 - Region Order'[Order])
+		formatString: 0
+		lineageTag: 22567100-90ce-4a38-9e6c-be55ae61972f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country Order' = ```
+			RELATED('A00 - Country Order'[Order]) 
+			```
+		formatString: 0
+		lineageTag: bda2e78c-85a0-451f-8ece-e0aecd61bbbe
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Inherent Likelihood'
+		dataType: double
+		lineageTag: fe1cadda-cd92-477b-bc92-2a2439d745e4
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Impact'
+		dataType: double
+		lineageTag: d8c4c1e5-c733-435c-a9b4-4d10ccec32c0
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Calc Score'
+		dataType: double
+		lineageTag: 70a1e5a8-ccc0-48a4-b476-8a9ccf86faa2
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Auditable Unit Priority Score Category'
+		dataType: string
+		lineageTag: c973e656-98ab-4445-9e36-2e11f13660a7
+		summarizeBy: none
+		sourceColumn: Auditable Unit Priority Score Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Residual Score Category'
+		dataType: string
+		lineageTag: 07876d2b-011d-4ce6-ac12-c9da90eb732d
+		summarizeBy: none
+		sourceColumn: Residual Score Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inherent Score Category'
+		dataType: string
+		lineageTag: 737b3718-22d4-4d64-b5af-23ac999820c0
+		summarizeBy: none
+		sourceColumn: Inherent Score Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood - Round'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4747a460-5b04-4e2f-be34-06534387cd55
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood - Round
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Impact - Round'
+		dataType: int64
+		formatString: 0
+		lineageTag: 99a486fd-7616-43d2-8f55-934c2676d000
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact - Round
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Calc Score - Round'
+		dataType: string
+		lineageTag: 66d84037-8351-4d7b-9141-ea537f57d6c1
+		summarizeBy: none
+		sourceColumn: Avg. Residual Calc Score - Round
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A12 - Entity Heat Map' = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({#"A12_01 - Auditable Units with all score  - Corporate", #"A12_04 - Auditable Units with all score  - ProjectCompany"}),
+				    #"Sorted Rows" = Table.Sort(Source,{{"Entities.OrgSort", Order.Ascending}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows", "Index", 1, 1, Int64.Type),
+				    #"Added Conditional Column" = Table.AddColumn(#"Added Index", "Auditable Unit Priority Score Category", each if [Auditable Unit Priority Score] > 9 then "High" else if [Auditable Unit Priority Score] <= 4 then "Low" else "Medium"),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Added Conditional Column", "Residual Score Category", each if [Avg. Residual Calc Score] > 9 then "High" else if [Avg. Residual Calc Score] <= 4 then "Low" else "Medium"),
+				    #"Added Conditional Column2" = Table.AddColumn(#"Added Conditional Column1", "Inherent Score Category", each if [Avg. Inherent Calc Score] > 9 then "High" else if [Avg. Inherent Calc Score] <= 4 then "Low" else "Medium"),
+				    #"Filtered Rows" = Table.SelectRows(#"Added Conditional Column2", each ([EntityId] <> null))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,67 @@
+table A05_00
+	lineageTag: 1b8edc30-853c-445b-bbc2-6dd6d4c14528
+	sourceLineageTag: [sch_TimeSheet].[A05_00]
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 16108d5f-1fee-46ab-9790-b0ca486cffa1
+		sourceLineageTag: Year
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 268c6db7-b901-4f7e-a150-7053d1261628
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: count
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fc075c20-3794-4c47-899e-eccaaa9d328b
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TimeAdmins.TimeAdminName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 629259ee-5ee3-4b98-9eea-bf18283d0351
+		sourceLineageTag: TimeAdmins.TimeAdminName
+		summarizeBy: none
+		sourceColumn: TimeAdmins.TimeAdminName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Admin Hours (Non - Chargeable)'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: b2ba9673-b81b-4838-8b08-76ed97abca5a
+		sourceLineageTag: Admin Hours (Non - Chargeable)
+		summarizeBy: sum
+		sourceColumn: Admin Hours (Non - Chargeable)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition A05_00 = entity
+		mode: directLake
+		source
+			entityName: A05_00
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

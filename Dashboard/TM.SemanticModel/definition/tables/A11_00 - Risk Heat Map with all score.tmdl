@@ -1,0 +1,464 @@
+table 'A11_00 - Risk Heat Map with all score'
+	lineageTag: c5942ca9-0bf2-4d61-b145-8d5dd7bf1132
+	sourceLineageTag: [sch_TeamMate].[A11_00 - Risk Heat Map with all score]
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 84213d5a-5181-4c21-a99b-8bb9c344ca9d
+		sourceLineageTag: DimensionId
+		summarizeBy: count
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 224f4ac9-6195-4443-90bd-1faf5b1024fb
+		sourceLineageTag: EntityId
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4142ade8-4748-4289-bd06-1f33b5691ef8
+		sourceLineageTag: AssessmentId
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ebec3b73-4db0-4e0d-b3c1-4b026b9471e7
+		sourceLineageTag: StrategicRiskId
+		summarizeBy: count
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Records'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5b195a41-c662-454b-aaeb-45f5294b0c45
+		sourceLineageTag: No. of Records
+		summarizeBy: sum
+		sourceColumn: No. of Records
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assessments.AssessmentTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b1447eb-6773-41fe-a65d-c1f095443b42
+		sourceLineageTag: Assessments.AssessmentTitle
+		summarizeBy: none
+		sourceColumn: Assessments.AssessmentTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.EntityTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4e466617-74ac-4c67-811c-4af3addec1e4
+		sourceLineageTag: Entities.EntityTitle
+		summarizeBy: none
+		sourceColumn: Entities.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ad7d4c80-0b6d-4a17-8fd4-7a02d3c2c125
+		sourceLineageTag: Entities.OrgPath
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgSort'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1bd33ca6-c188-496d-92fc-9349a74c113f
+		sourceLineageTag: Entities.OrgSort
+		summarizeBy: none
+		sourceColumn: Entities.OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentEntityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8505c7d3-f33e-4708-9435-b0812069e0c1
+		sourceLineageTag: ParentEntityId
+		summarizeBy: count
+		sourceColumn: ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.1'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: c9a991a9-39a6-4cd0-b2fb-12e2a2ddacb1
+		sourceLineageTag: Entities.OrgPath - Copy.1
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.2'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: f50dcbad-2802-4ffa-98a8-7870935dd3b4
+		sourceLineageTag: Entities.OrgPath - Copy.2
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.3'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: e1aa974b-ba62-4074-8bbf-cd537c2d54e1
+		sourceLineageTag: Entities.OrgPath - Copy.3
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.4'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: 80a7ed90-e7f5-4443-ac90-29925e8f8d86
+		sourceLineageTag: Entities.OrgPath - Copy.4
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.5'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: 880a6a26-1158-42cb-8959-c17f1c88bbda
+		sourceLineageTag: Entities.OrgPath - Copy.5
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath - Copy.6'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: e50f3be8-93f1-41ae-9660-8bc17138cb6d
+		sourceLineageTag: Entities.OrgPath - Copy.6
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath - Copy.6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 19f9bbe6-041f-4872-a1b2-0bcad696c72e
+		sourceLineageTag: StrategicRisks.StrategicRiskTitle
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0e1bee02-36e0-4931-b93e-7d0aacb091e5
+		sourceLineageTag: StrategicRisks.StrategicRiskCode
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskState'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 16acea8d-5923-4bf1-8e2b-24f2ca4ccd31
+		sourceLineageTag: StrategicRisks.StrategicRiskState
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76b130ff-6f4e-4c3e-92ba-d1b6a446b60b
+		sourceLineageTag: StrategicRisks.Category1
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5b0740b4-4489-4b35-8059-e5b9c58b5f69
+		sourceLineageTag: StrategicRisks.Category2
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A11_00 - Score: Inherent Likelihood.ScoreValue'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4c2a5fba-3ee5-42c3-b68a-fcfc7ee496fd
+		sourceLineageTag: A11_00 - Score: Inherent Likelihood.ScoreValue
+		summarizeBy: sum
+		sourceColumn: A11_00 - Score: Inherent Likelihood.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_01 - Score: Inherent Impact.ScoreValue'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6b4ce873-0808-48b7-9434-4fd00e305493
+		sourceLineageTag: A11_01 - Score: Inherent Impact.ScoreValue
+		summarizeBy: sum
+		sourceColumn: A11_01 - Score: Inherent Impact.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_02 - Score: Inherent Total.CalculatedScoreValue'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 84a55309-8c6f-4d90-b040-22241ba165d8
+		sourceLineageTag: A11_02 - Score: Inherent Total.CalculatedScoreValue
+		summarizeBy: sum
+		sourceColumn: A11_02 - Score: Inherent Total.CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_03 - Score: Residual Likelihood.ScoreValue'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 98ec6857-829e-4acb-8a95-f22b680cf19f
+		sourceLineageTag: A11_03 - Score: Residual Likelihood.ScoreValue
+		summarizeBy: sum
+		sourceColumn: A11_03 - Score: Residual Likelihood.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_04 - Score: Residual Impact.ScoreValue'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: fdd241c4-3526-4813-ada6-0d9ddfb36350
+		sourceLineageTag: A11_04 - Score: Residual Impact.ScoreValue
+		summarizeBy: sum
+		sourceColumn: A11_04 - Score: Residual Impact.ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'A11_05 - Calc Score: Residual.CalculatedScoreValue'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: d08a1082-6403-4590-a9b4-cc91f93a38f5
+		sourceLineageTag: A11_05 - Calc Score: Residual.CalculatedScoreValue
+		summarizeBy: sum
+		sourceColumn: A11_05 - Calc Score: Residual.CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'EntityAssessmentDetails.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5fa60d72-4af3-4620-8e1e-3a5aa46fd567
+		sourceLineageTag: EntityAssessmentDetails.Category1
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6444b347-2d2e-48d0-8750-88b7d82faa8d
+		sourceLineageTag: EntityAssessmentDetails.Category2
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category3'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f619d893-f093-42a1-9b80-3542386b2073
+		sourceLineageTag: EntityAssessmentDetails.Category3
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category4'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b38d2918-99f7-442b-8ef9-e2d2309262e9
+		sourceLineageTag: EntityAssessmentDetails.Category4
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.MultiSelectCategory2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 94f37447-423a-4df2-b1a5-dabf417e217d
+		sourceLineageTag: EntityAssessmentDetails.MultiSelectCategory2
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.MultiSelectCategory2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Level'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b170104-5767-4e9e-880f-846a26ce8302
+		sourceLineageTag: Reporting Level
+		summarizeBy: none
+		sourceColumn: Reporting Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Risk Rating'
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 6a92d9ae-8988-4e30-9967-992c86ad331f
+		sourceLineageTag: Risk Rating
+		summarizeBy: none
+		sourceColumn: Risk Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.1'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: 9f424d1b-547e-4c4e-9c5a-365d04abce36
+		sourceLineageTag: StrategicRisks.StrategicRiskCode - Copy.1
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.2'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: d9ecce19-ac1c-46d1-9a54-36bfe36f6cf2
+		sourceLineageTag: StrategicRisks.StrategicRiskCode - Copy.2
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.3'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: 4bc863d6-0e89-47d9-8332-66c862067fd5
+		sourceLineageTag: StrategicRisks.StrategicRiskCode - Copy.3
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskCode - Copy.4'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: 3940b435-e716-4779-8990-2d0b740d2c9d
+		sourceLineageTag: StrategicRisks.StrategicRiskCode - Copy.4
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode - Copy.4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parent Entity Title'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 606426a8-cefe-4071-91d5-b617babc1615
+		sourceLineageTag: Parent Entity Title
+		summarizeBy: none
+		sourceColumn: Parent Entity Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportingLevel:RiskCode1:RiskCode2
+		dataType: string
+		sourceProviderType: nvarchar(8000)
+		lineageTag: 826ab768-bf1c-4301-8db8-8efeb2f64fa6
+		sourceLineageTag: ReportingLevel:RiskCode1:RiskCode2
+		summarizeBy: none
+		sourceColumn: ReportingLevel:RiskCode1:RiskCode2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country Order'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c72df1df-bbb9-4a85-b14a-96fa2b698279
+		sourceLineageTag: Country Order
+		summarizeBy: sum
+		sourceColumn: Country Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Region Order'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9008f711-1504-4f44-91cb-c5ab89eba707
+		sourceLineageTag: Region Order
+		summarizeBy: sum
+		sourceColumn: Region Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Risk Rating Sort'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5bc703ca-7f39-4858-938f-4d2bf7a980a2
+		sourceLineageTag: Risk Rating Sort
+		summarizeBy: sum
+		sourceColumn: Risk Rating Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11_00 - Risk Heat Map with all score' = entity
+		mode: directLake
+		source
+			entityName: A11_00 - Risk Heat Map with all score
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

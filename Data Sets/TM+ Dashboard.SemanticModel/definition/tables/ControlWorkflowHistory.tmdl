@@ -1,0 +1,150 @@
+table ControlWorkflowHistory
+	lineageTag: 1a82b91b-c041-496f-914a-ab7eb999caa5
+
+	column ControlWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: b3605e18-ee51-4c5a-ad20-eaf010d6f359
+		summarizeBy: count
+		sourceColumn: ControlWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlId
+		dataType: int64
+		formatString: 0
+		lineageTag: c0d28674-6cea-4ed2-ba01-bc5900fb75d2
+		summarizeBy: none
+		sourceColumn: ControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlTitle
+		dataType: string
+		lineageTag: 1dedcbfe-038c-47aa-83b0-0026e6b73842
+		summarizeBy: none
+		sourceColumn: ControlTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlCode
+		dataType: string
+		lineageTag: d3f450ce-0d54-4076-a57f-c5476838a780
+		summarizeBy: none
+		sourceColumn: ControlCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7322ceaa-9028-46a5-8ae9-5cd330455b8d
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: 58b721a4-858b-482b-bedd-7ea59e36103a
+			defaultHierarchy: LocalDateTable_d673d7aa-4a5c-4499-bdb6-451e478c4a9c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 43825a2a-22a9-4b85-9192-0b430213a8c1
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: df7be129-3a95-405a-af87-8654d5eede63
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d6c3857-2fa2-461b-b395-6903b392a21f
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 21e80280-ee90-4997-8fd7-9f7c07f2b9ee
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 72c05a8f-2f0b-48b0-a0c6-e146cd6840d5
+		summarizeBy: sum
+		sourceColumn: ReviewSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequiredSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: aabe9637-bca6-4772-bb3b-f8b86d31e804
+		summarizeBy: sum
+		sourceColumn: RequiredSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompletedSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: d35a73bf-856c-4413-aa02-4ca268e2d9af
+		summarizeBy: sum
+		sourceColumn: CompletedSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d9ef189-2bdf-430c-a5be-d8e610fbcdd1
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: 354d3af9-fc33-4fe5-96b3-7b266ab6ecba
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: bfc0b928-1839-48c7-9390-fa6320ff5710
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ControlWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ControlWorkflowHistory_table = Source{[Name="ControlWorkflowHistory",Signature="table"]}[Data]
+				in
+				    ControlWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

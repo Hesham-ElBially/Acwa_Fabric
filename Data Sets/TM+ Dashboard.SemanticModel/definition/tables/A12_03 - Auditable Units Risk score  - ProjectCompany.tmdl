@@ -1,0 +1,86 @@
+table 'A12_03 - Auditable Units Risk score  - ProjectCompany'
+	lineageTag: 9b45d62e-798d-4f10-b877-2afc713f2322
+
+	column 'Entities.ParentEntityId'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a3a9085-d3af-4a68-8dcd-aa54f2ff4cbc
+		summarizeBy: none
+		sourceColumn: Entities.ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		lineageTag: debd6ca3-c51a-4e77-9dcf-9f8ec2e341ea
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		lineageTag: 121ae160-4eda-412c-8ce7-3b8e6b736bd1
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		lineageTag: e3d92ff9-fcda-46c7-9654-61174cfbf04a
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Likelihood'
+		dataType: double
+		lineageTag: a1d45405-6fa3-404b-aa42-4fbaabe36995
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Impact'
+		dataType: double
+		lineageTag: 55c7dfa7-d27c-43c7-b12b-d5453fd0c14a
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Calc Score'
+		dataType: double
+		lineageTag: 62f531a1-fa23-4511-8f67-4588d9333a37
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'A12_03 - Auditable Units Risk score  - ProjectCompany' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A11_00 - Risk Heat Map with all score", {"EntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities" = Table.ExpandTableColumn(Source, "Entities", {"ParentEntityId", "EntityTitle", "OrgPath", "OrgSort"}, {"Entities.ParentEntityId", "Entities.EntityTitle.1", "Entities.OrgPath.1", "Entities.OrgSort.1"}),
+				    #"Grouped Rows" = Table.Group(#"Expanded Entities", {"Entities.ParentEntityId"}, {{"Avg. Residual Likelihood", each List.Average([#"A11_03 - Score: Residual Likelihood.ScoreValue"]), type nullable number}, {"Avg. Residual Impact", each List.Average([#"A11_04 - Score: Residual Impact.ScoreValue"]), type nullable number}, {"Avg. Residual Calc Score", each List.Average([#"A11_05 - Calc Score: Residual.CalculatedScoreValue"]), type nullable number}, {"Avg. Inherent Likelihood", each List.Average([#"A11_00 - Score: Inherent Likelihood.ScoreValue"]), type nullable number}, {"Avg. Inherent Impact", each List.Average([#"A11_01 - Score: Inherent Impact.ScoreValue"]), type nullable number}, {"Avg. Inherent Calc Score", each List.Average([#"A11_02 - Score: Inherent Total.CalculatedScoreValue"]), type nullable number}})
+				in
+				    #"Grouped Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

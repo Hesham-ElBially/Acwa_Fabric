@@ -1,0 +1,125 @@
+table 'A08_00 - AAL Issuance Date'
+	lineageTag: ac9945db-4cd2-472b-967c-b6ce18152289
+
+	column ProjectPhaseMilestoneId
+		dataType: int64
+		formatString: 0
+		lineageTag: dd86abab-15f5-43db-9c80-fbf164110cc6
+		summarizeBy: count
+		sourceColumn: ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: b8b075d0-f6d0-4205-91f9-44b913219a05
+		summarizeBy: none
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilestoneName
+		dataType: string
+		lineageTag: 58abb8f6-8850-4b72-b7ee-5a610792b175
+		summarizeBy: none
+		sourceColumn: MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhaseName
+		dataType: string
+		lineageTag: 87b7f3a1-d50c-4e3a-a112-7fd1a989a084
+		summarizeBy: none
+		sourceColumn: PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2e15feb2-b7e2-47c9-93df-514d70bb0e23
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1a80347d-bfb4-492b-b3a7-66498af1608c
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: d2565c76-933e-49ff-a886-3e159d0c8e9e
+			defaultHierarchy: LocalDateTable_254b6aeb-06c0-4fee-b1f7-aeb3bb306535.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstimatedEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9058c4ab-82a9-4835-bc70-73eeb91e4272
+		summarizeBy: none
+		sourceColumn: EstimatedEndDate
+
+		variation Variation
+			isDefault
+			relationship: 883415f3-d051-40ff-89e6-1fa6110c8f27
+			defaultHierarchy: LocalDateTable_59aebf09-504f-4284-9f3f-8573f1cfe266.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 85a7231a-c006-4b3b-9bda-f1eb96ccb482
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 74ae0e14-9e21-41c0-819d-8fc47b9cbf22
+			defaultHierarchy: LocalDateTable_17a7a94c-4876-4242-b422-76fe1e86ce40.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ce92907-fc27-4f73-815a-ecd3e0701ada
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: 614a7d94-3de6-4d35-8c84-50986b329162
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - AAL Issuance Date' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProjectPhaseMilestones_table = Source{[Name="ProjectPhaseMilestones",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(ProjectPhaseMilestones_table, each ([MilestoneName] = "AAL Issued"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

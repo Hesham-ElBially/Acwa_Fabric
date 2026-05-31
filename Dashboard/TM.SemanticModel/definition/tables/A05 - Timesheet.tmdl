@@ -1,0 +1,173 @@
+table 'A05 - Timesheet'
+	lineageTag: 923afd75-9dc8-4528-8310-7a0d1f135ea7
+	sourceLineageTag: [sch_TimeSheet].[A05 - Timesheet]
+
+	column TimeTrackingEntryId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 393f1e5c-58b8-4b87-887c-7455cf19eb58
+		sourceLineageTag: TimeTrackingEntryId
+		summarizeBy: count
+		sourceColumn: TimeTrackingEntryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateOfEntry
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 9e0ee3f1-8a36-48cb-a146-ed620ad8da89
+		sourceLineageTag: DateOfEntry
+		summarizeBy: none
+		sourceColumn: DateOfEntry
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7e210c5e-7c20-4c0e-bcdb-e2ad84cbfb31
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: count
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8bb1a101-832a-4be4-a2f2-597e109c75ba
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimesheetId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b026029a-7701-4110-898e-13e38b582518
+		sourceLineageTag: TimesheetId
+		summarizeBy: count
+		sourceColumn: TimesheetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 972a67e8-0f4e-44ba-aa25-12d873280a06
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeAdminId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d7d77b53-9151-48c6-a87f-fdcc02a1b7ff
+		sourceLineageTag: TimeAdminId
+		summarizeBy: count
+		sourceColumn: TimeAdminId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeNonWorkingId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0dbd1232-9411-4e48-954c-c911662452df
+		sourceLineageTag: TimeNonWorkingId
+		summarizeBy: count
+		sourceColumn: TimeNonWorkingId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryTypeId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0fe85d5b-a0dc-49f0-a6c1-94b461af16c9
+		sourceLineageTag: TimeEntryTypeId
+		summarizeBy: count
+		sourceColumn: TimeEntryTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryType
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ab025b1d-419f-4021-82bd-b3782ed3d3b3
+		sourceLineageTag: TimeEntryType
+		summarizeBy: none
+		sourceColumn: TimeEntryType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hours
+		dataType: double
+		sourceProviderType: decimal(34, 6)
+		lineageTag: f3c75704-f45d-458a-ab86-c093d50bb704
+		sourceLineageTag: Hours
+		summarizeBy: sum
+		sourceColumn: Hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dc3a3490-f0b6-4dcf-b1b8-fffd3f5c1c73
+		sourceLineageTag: Projects.ProjectTitle
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5778814c-c954-416e-80ba-9b116313ecba
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TimeAdmins.TimeAdminName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bc2ae9ae-0f1d-4e8a-8074-366b2a9c59d1
+		sourceLineageTag: TimeAdmins.TimeAdminName
+		summarizeBy: none
+		sourceColumn: TimeAdmins.TimeAdminName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TimeNonWorkings.TimeNonWorkingName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 11b14b33-9746-4794-8776-b679f9696e93
+		sourceLineageTag: TimeNonWorkings.TimeNonWorkingName
+		summarizeBy: none
+		sourceColumn: TimeNonWorkings.TimeNonWorkingName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A05 - Timesheet' = entity
+		mode: directLake
+		source
+			entityName: A05 - Timesheet
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

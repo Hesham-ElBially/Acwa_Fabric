@@ -1,0 +1,133 @@
+table ObjectRelationships
+	lineageTag: 33482bb5-1862-4bb1-bc66-4278fe61f982
+
+	column ObjectRelationshipId
+		dataType: int64
+		formatString: 0
+		lineageTag: 33c650b4-d7fc-441a-a661-4b1bec2371ad
+		summarizeBy: count
+		sourceColumn: ObjectRelationshipId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b68a87a-74e9-46cf-a3a8-45b59fa24f30
+		summarizeBy: none
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a0c6e48-23be-4360-adca-1afacf38bbde
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 12ade371-c876-4dbd-ab79-936119d93ca0
+		summarizeBy: none
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 579db370-a7c5-421d-ad5a-112dbd649e64
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: e15c14da-53a6-43d8-a033-cdca9bf7b67d
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ecbab44-e099-4843-9f90-54b5f6a1bbe2
+		summarizeBy: none
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6bac40f5-b7f1-4288-99af-7d63646d736f
+		summarizeBy: none
+		sourceColumn: ControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		lineageTag: 88023a5d-ac68-437e-848f-ba7e4bb89d52
+		summarizeBy: none
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcedureId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0109738b-6e1d-4eb8-b2a0-b42904f978d8
+		summarizeBy: none
+		sourceColumn: ProcedureId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		lineageTag: 72851c20-2a81-4bea-a73f-2e4b40433f5c
+		summarizeBy: none
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3cdd2b51-0e48-41e8-9b07-92d01edb898b
+		summarizeBy: none
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolderId
+		dataType: int64
+		formatString: 0
+		lineageTag: db632da6-4ce4-4fe3-b237-51d6899c3cd7
+		summarizeBy: count
+		sourceColumn: FolderId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ObjectRelationships = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data]
+				in
+				    ObjectRelationships_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

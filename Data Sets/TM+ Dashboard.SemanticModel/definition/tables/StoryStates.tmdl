@@ -1,0 +1,42 @@
+table StoryStates
+	lineageTag: 80b9057b-65ec-4780-8f1c-bd58bdd68a36
+
+	column StoryStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: f5e03e4f-3bff-4ef9-a084-98fc3217b1ba
+		summarizeBy: count
+		sourceColumn: StoryStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoryStateName
+		dataType: string
+		lineageTag: e7b9ec25-42f3-4218-9e98-1310be10316e
+		summarizeBy: none
+		sourceColumn: StoryStateName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportingCategoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 83a441cc-9ce4-425d-8e22-1a7390b67a6c
+		summarizeBy: none
+		sourceColumn: ReportingCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StoryStates = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StoryStates_table = Source{[Name="StoryStates",Signature="table"]}[Data]
+				in
+				    StoryStates_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

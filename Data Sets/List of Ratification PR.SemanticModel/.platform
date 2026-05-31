@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "List of Ratification PR"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4a62534b-cce0-a79e-4584-2be60941309c"
+  }
+}

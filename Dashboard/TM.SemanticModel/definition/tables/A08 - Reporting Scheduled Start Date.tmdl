@@ -1,0 +1,56 @@
+table 'A08 - Reporting Scheduled Start Date'
+	lineageTag: b744cf07-8670-4745-8416-8c8706e0dbe9
+	sourceLineageTag: [sch_TeamMate].[A08 - Reporting Scheduled Start Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6c3a4bff-26a9-4968-b9ab-9bf3ad139f97
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 585bc9d7-d1be-47b1-abfd-dc6595dec71d
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledStartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 16098933-7c6a-488a-8f22-618f3029bfb8
+		sourceLineageTag: ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 35901c7e-6db8-4b77-8497-fa8cfedcb3aa
+		sourceLineageTag: ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Reporting Scheduled Start Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Reporting Scheduled Start Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

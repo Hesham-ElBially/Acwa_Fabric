@@ -1,0 +1,111 @@
+table StrategicRiskScoringValuesAssessmentProject
+	lineageTag: 187c1b0a-3fc0-49dd-a193-7b4e0fe2fc06
+
+	column StrategicRiskScoreId
+		dataType: int64
+		formatString: 0
+		lineageTag: 064ee510-bec4-4f7a-a3e6-61c0e0871125
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: c7346ab2-3a38-49ca-a4b8-9389c6d52720
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: 84a41558-4ef6-407d-a675-e986f4cff3bf
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableId
+		dataType: int64
+		formatString: 0
+		lineageTag: cd754d6a-e650-4cb3-b6e7-3c6c9bcac307
+		summarizeBy: count
+		sourceColumn: VariableId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableTitle
+		dataType: string
+		lineageTag: 815ecb99-8f7f-4b82-a030-55474cf6d4de
+		summarizeBy: none
+		sourceColumn: VariableTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetricTitle
+		dataType: string
+		lineageTag: 96363fbf-0909-4521-80b5-c0d07e676be7
+		summarizeBy: none
+		sourceColumn: MetricTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreType
+		dataType: string
+		lineageTag: e2b1aa0e-515f-473d-a45d-f1f6e5b71dc6
+		summarizeBy: none
+		sourceColumn: ScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreLabel
+		dataType: string
+		lineageTag: 3403f9ca-f944-45b9-8578-459c191e5cd7
+		summarizeBy: none
+		sourceColumn: ScoreLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreValue
+		dataType: double
+		lineageTag: 0c4c8996-e1d2-47de-8076-34801d58af66
+		summarizeBy: sum
+		sourceColumn: ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: f7e1e574-37e3-42d1-817e-8d89c035bf9d
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9feb48d4-7398-4e8e-82f8-c2498d187ad4
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StrategicRiskScoringValuesAssessmentProject = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskScoringValuesAssessmentProject_table = Source{[Name="StrategicRiskScoringValuesAssessmentProject",Signature="table"]}[Data]
+				in
+				    StrategicRiskScoringValuesAssessmentProject_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

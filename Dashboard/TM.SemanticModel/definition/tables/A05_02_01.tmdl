@@ -1,0 +1,67 @@
+table A05_02_01
+	lineageTag: 4e1e397c-0e7b-4954-b7e1-efcb446f2cbc
+	sourceLineageTag: [sch_TimeSheet].[A05_02_01]
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 32a61cf8-f149-4b33-91ef-0170edcb0588
+		sourceLineageTag: Year
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8168b732-fe2e-4904-91e5-c03b5b909d80
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: none
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c69f2603-fac3-47c1-ae0e-1b8924e58940
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column cPK
+		dataType: string
+		sourceProviderType: varchar(14)
+		lineageTag: af84f923-1f38-49e6-a601-0c8dc2673387
+		sourceLineageTag: cPK
+		summarizeBy: none
+		sourceColumn: cPK
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Project Hrs'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: 3ff1e4eb-313c-478a-81f5-7e468878bdfd
+		sourceLineageTag: Total Project Hrs
+		summarizeBy: none
+		sourceColumn: Total Project Hrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition A05_02_01 = entity
+		mode: directLake
+		source
+			entityName: A05_02_01
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

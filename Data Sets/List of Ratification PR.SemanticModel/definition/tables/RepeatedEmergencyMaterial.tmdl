@@ -1,0 +1,69 @@
+table RepeatedEmergencyMaterial
+	lineageTag: c623f5a1-ec95-4cac-95b4-641b79d835e0
+
+	column Plant
+		lineageTag: 24de8077-05a9-45b6-bad6-84f4047ae312
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material : Short Text'
+		lineageTag: 4b7ef60a-f1b8-436e-a17c-3d21190c879d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Material : Short Text]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Code : Plant Name'
+		lineageTag: a1bfad5d-4a91-424c-825e-2af7f41a6be1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant Code : Plant Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCount
+		formatString: 0
+		lineageTag: ec89dacf-799e-44d8-bc9d-35d73f320284
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [OrderCount]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code : Company Name'
+		lineageTag: 6ced4f41-e4bf-48ac-9243-4c762fbbb187
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Company Code : Company Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RepeatedEmergencyMaterial = calculated
+		mode: import
+		source =
+				
+				VAR EmergencyOrders =
+				    FILTER (
+				        'List_of_all_PR_PO',
+				        'List_of_all_PR_PO'[Requirement Urgency] = "08"
+				    )
+				RETURN
+				FILTER (
+				    SUMMARIZE (
+				        EmergencyOrders,
+				        'List_of_all_PR_PO'[Plant],
+				        'List_of_all_PR_PO'[Material : Short Text],
+				        'List_of_all_PR_PO'[Plant Code : Plant Name],
+				        'List_of_all_PR_PO'[Company Code : Company Name],
+				        "OrderCount",
+				            DISTINCTCOUNT ( 'List_of_all_PR_PO'[Purchase Req.] )
+				    ),
+				    [OrderCount] > 1
+				)
+
+	annotation PBI_Id = f35de2420d1648c2b0ac8db6cbb0d67e
+

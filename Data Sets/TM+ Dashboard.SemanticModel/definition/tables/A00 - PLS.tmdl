@@ -1,0 +1,65 @@
+table 'A00 - PLS'
+	lineageTag: 10768ffe-7655-4a79-890d-9df104f35fbe
+
+	measure UPN = USERPRINCIPALNAME()
+		lineageTag: 38e6daa2-23f1-47dd-8542-a997dcf53a19
+
+	measure SelectedPage = SELECTEDVALUE('A00 - PLS'[Page])
+		lineageTag: 70690ec7-d06a-4527-9791-ecc25cd76006
+
+	column 'Sl No'
+		dataType: int64
+		formatString: 0
+		lineageTag: bb71dbcd-bcff-40bb-9c53-0657a1f5e091
+		summarizeBy: sum
+		sourceColumn: Sl No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 61c82d46-d47c-4be6-8ddf-5c425016bbd4
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: dc68fb50-88f8-4463-9d07-284d841f8642
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Module
+		dataType: string
+		lineageTag: 44da45e0-9978-43f0-9da6-c67ad08785ff
+		summarizeBy: none
+		sourceColumn: Module
+
+		annotation SummarizationSetBy = Automatic
+
+	column Page
+		dataType: string
+		lineageTag: 126d7f66-7980-4bb6-bd96-515fd187d7af
+		summarizeBy: none
+		sourceColumn: Page
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - PLS' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(Web.Contents("https://acwapi-my.sharepoint.com/personal/pperiyasamy_acwapower_com/Documents/00.%20TM+%20Dashboards/01.%20Work/PLS.xlsx"), null, true),
+				    PLS_Sheet = Source{[Item="PLS",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(PLS_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Sl No", Int64.Type}, {"Name", type text}, {"UserName", type text}, {"Module", type text}, {"Page", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

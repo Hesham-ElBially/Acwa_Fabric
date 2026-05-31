@@ -1,0 +1,62 @@
+table 'A08 - Planning Scheduled End Date'
+	lineageTag: cff87319-b3b4-4f19-8d46-45da2be79ae7
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: 447932f8-ec56-450e-b6cd-3f1bbf908f98
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cd2becd-e62d-41c5-b34e-47084e247917
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		lineageTag: e25856f1-9735-49c7-8d19-c4b89eedad9c
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d294f1a9-37d4-4f6a-af7e-fa04f94c5d1a
+		summarizeBy: none
+		sourceColumn: ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: 15737c1a-e7c4-4086-a0a3-18212aa0c3c7
+			defaultHierarchy: LocalDateTable_72c18186-4fcd-4c20-88b2-64c4d364bde6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'A08 - Planning Scheduled End Date' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A08_00 - All Phase", {"ProjectPhaseId"}, #"A08_00 - Final Report Issuance Date", {"ProjectPhaseId"}, "A08_00 - Final Report Issuance Date", JoinKind.LeftOuter),
+				    #"Expanded A08_00 - Final Report Issuance Date" = Table.ExpandTableColumn(Source, "A08_00 - Final Report Issuance Date", {"MilestoneName", "ActualEndDate"}, {"A08_00 - Final Report Issuance Date.MilestoneName", "A08_00 - Final Report Issuance Date.ActualEndDate"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Expanded A08_00 - Final Report Issuance Date", {"ProjectPhaseId"}, #"A08_00 - TeamMate Updated Date", {"ProjectPhaseId"}, "A08_00 - TeamMate Updated Date", JoinKind.LeftOuter),
+				    #"Expanded A08_00 - TeamMate Updated Date" = Table.ExpandTableColumn(#"Merged Queries", "A08_00 - TeamMate Updated Date", {"MilestoneName", "ActualEndDate"}, {"A08_00 - TeamMate Updated Date.MilestoneName", "A08_00 - TeamMate Updated Date.ActualEndDate"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded A08_00 - TeamMate Updated Date", each ([ProjectPhaseName] = "1. Planning")),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"SortOrder", "EstStartDate", "EstEndDate", "ActStartDate", "ActEndDate", "IsActive", "EstHours", "ActHours", "IsComplete", "DueDate", "RevisedDueDate", "A08_00 - Final Report Issuance Date.MilestoneName", "A08_00 - TeamMate Updated Date.MilestoneName", "A08_00 - TeamMate Updated Date.ActualEndDate", "A08_00 - Final Report Issuance Date.ActualEndDate", "ScheduledStartDate", "ReviewDueDate", "Project"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

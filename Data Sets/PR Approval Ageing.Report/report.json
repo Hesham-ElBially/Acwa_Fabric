@@ -1,0 +1,174 @@
+{
+  "config": "{\"version\":\"5.68\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":3,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"visible\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Acwa_PPT_Template_English_V5_321777802359050913.png",
+            "path": "Acwa_PPT_Template_English_V5_321777802359050913.png",
+            "type": 100
+          },
+          {
+            "name": "Latin_HorizontalLogoLockup_RGB34548294102650123.png",
+            "path": "Latin_HorizontalLogoLockup_RGB34548294102650123.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "496d6a390378d3047538",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"07b384698381ce201017\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":105.72687224669603,\"z\":0,\"width\":1280,\"height\":614.625550660793}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"S4_Hana viw_Param2.WERKS_Plant\",\"active\":true},{\"queryRef\":\"S4_Hana viw_Param2.Plant Name\",\"active\":true},{\"queryRef\":\"S4_Hana viw_Param2.BUKRS_Company Code\",\"active\":true},{\"queryRef\":\"S4_Hana viw_Param2.T001_Company Name\",\"active\":true},{\"queryRef\":\"S4_Hana viw_Param2.LIFNR_Vendor Code\",\"active\":true},{\"queryRef\":\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\",\"active\":true}],\"Columns\":[{\"queryRef\":\"S4_Hana viw_Param2.Purchase Year\",\"active\":true}],\"Values\":[{\"queryRef\":\"Min(S4_Hana viw_Param2.EBELN_Purchasing Doc.)\"},{\"queryRef\":\"Sum(S4_Hana viw_Param2.Net Value SAR)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_Param2\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"WERKS_Plant\"},\"Name\":\"S4_Hana viw_Param2.WERKS_Plant\",\"NativeReferenceName\":\"Plant Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"LIFNR_Vendor Code\"},\"Name\":\"S4_Hana viw_Param2.LIFNR_Vendor Code\",\"NativeReferenceName\":\"Vendor Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"LFA1.NAME1_Vendor Name\"},\"Name\":\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\",\"NativeReferenceName\":\"Vendor Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Year\"},\"Name\":\"S4_Hana viw_Param2.Purchase Year\",\"NativeReferenceName\":\"Purchase Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BUKRS_Company Code\"},\"Name\":\"S4_Hana viw_Param2.BUKRS_Company Code\",\"NativeReferenceName\":\"Company Code\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EBELN_Purchasing Doc.\"}},\"Function\":2},\"Name\":\"Min(S4_Hana viw_Param2.EBELN_Purchasing Doc.)\",\"NativeReferenceName\":\"Purchasing Doc.\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Net Value SAR\"}},\"Function\":0},\"Name\":\"Sum(S4_Hana viw_Param2.Net Value SAR)\",\"NativeReferenceName\":\"Net Value SAR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"T001_Company Name\"},\"Name\":\"S4_Hana viw_Param2.T001_Company Name\",\"NativeReferenceName\":\"Company Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Plant Name\"},\"Name\":\"S4_Hana viw_Param2.Plant Name\",\"NativeReferenceName\":\"Plant Name\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"S4_Hana viw_Param2.WERKS_Plant\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"WERKS_Plant\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.Plant Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"Plant Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.BUKRS_Company Code\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"BUKRS_Company Code\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.T001_Company Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"T001_Company Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.LIFNR_Vendor Code\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"LIFNR_Vendor Code\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"LFA1.NAME1_Vendor Name\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'AEC1'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'SHUAA ENERGY'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'AEC0'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'SHUAA ENERGY'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'0000012015'\"}}],\"isToggled\":true}]}]}]}]},{\"identityValues\":[{\"Literal\":{\"Value\":\"'AED1'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'AEF1'\"}}],\"isToggled\":true}]}}],\"columnProperties\":{\"S4_Hana viw_Param2.WERKS_Plant\":{\"displayName\":\"Plant Code\"},\"S4_Hana viw_Param2.LIFNR_Vendor Code\":{\"displayName\":\"Vendor Code\"},\"S4_Hana viw_Param2.BUKRS_Company Code\":{\"displayName\":\"Company Code\"},\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\":{\"displayName\":\"Vendor Name\"},\"Min(S4_Hana viw_Param2.EBELN_Purchasing Doc.)\":{\"displayName\":\"Purchasing Doc.\"},\"Sum(S4_Hana viw_Param2.Net Value SAR)\":{\"displayName\":\"Net Value SAR\"},\"S4_Hana viw_Param2.T001_Company Name\":{\"displayName\":\"Company Name\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Tabular'\"}}}}}],\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 614.63,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 105.73,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Acwa_PPT Template English V5 3 (1).png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Acwa_PPT_Template_English_V5_321777802359050913.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"visibility\":1}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "a5067db7b6a18aa3dc80",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"b147c6f103e766302aee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":81.10296274567322,\"y\":198.70225872689937,\"z\":0,\"width\":1198.9721325902024,\"height\":520.4106776180698}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Company Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_param_PR Approval check\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Company Name\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Company Name\",\"NativeReferenceName\":\"Company Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Requistion\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\",\"NativeReferenceName\":\"Purchase Requistion\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 520.41,
+          "width": 1198.97,
+          "x": 81.10,
+          "y": 198.70,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"visibility\":1}",
+      "displayName": "Page 3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f59688cc404c0ed257dd",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7d965be5eeda70b1b576\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":52.771929824561404,\"z\":0,\"width\":1280,\"height\":666.9473684210526}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_scm_Param3.AEDAT_Created On\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.BEDAT_Document Date\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.BUKRS_Company Code\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.EBELN_Purchasing Doc.\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.EBELP_Line Item\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_scm_Param3\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"AEDAT_Created On\"},\"Name\":\"S4_Hana viw_scm_Param3.AEDAT_Created On\",\"NativeReferenceName\":\"AEDAT_Created On\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BEDAT_Document Date\"},\"Name\":\"S4_Hana viw_scm_Param3.BEDAT_Document Date\",\"NativeReferenceName\":\"BEDAT_Document Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BUKRS_Company Code\"},\"Name\":\"S4_Hana viw_scm_Param3.BUKRS_Company Code\",\"NativeReferenceName\":\"BUKRS_Company Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EBELN_Purchasing Doc.\"},\"Name\":\"S4_Hana viw_scm_Param3.EBELN_Purchasing Doc.\",\"NativeReferenceName\":\"EBELN_Purchasing Doc.\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EBELP_Line Item\"},\"Name\":\"S4_Hana viw_scm_Param3.EBELP_Line Item\",\"NativeReferenceName\":\"EBELP_Line Item\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 666.95,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 52.77,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "PR Approval Aging",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f9118a5646de1d34a770",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"435ce6733598d3dba335\",\"layouts\":[{\"id\":0,\"position\":{\"x\":240.05265605627508,\"y\":48.35820895522388,\"z\":4000,\"width\":221.22186495176848,\"height\":70.9967845659164,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Company Code : Company Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_param_PR Approval check\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Company Code : Company Name\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Company Code : Company Name\",\"NativeReferenceName\":\"Company Code : Company Name\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"padding\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Company Name'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}],\"padding\":[{\"properties\":{\"left\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 71.00,
+          "width": 221.22,
+          "x": 240.05,
+          "y": 48.36,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"4ec6ce36098de66ce0c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":111.04477611940298,\"y\":3.582089552238806,\"z\":1000,\"width\":257.0149253731343,\"height\":44.776119402985074,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"PR Approval Aging\",\"textStyle\":{\"fontFamily\":\"Segoe UI Semibold\",\"fontSize\":\"16pt\",\"color\":\"#9372db\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "height": 44.78,
+          "width": 257.01,
+          "x": 111.04,
+          "y": 3.58,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a27a6ca03db0bc200b70\",\"layouts\":[{\"id\":0,\"position\":{\"x\":460.431654676259,\"y\":48.35820895522388,\"z\":5000,\"width\":221.0071942446043,\"height\":70.90647482014388,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_param_PR Approval check\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Requistion\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\",\"NativeReferenceName\":\"Purchase Requistion\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"padding\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Purchase Requistion No.'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}],\"padding\":[{\"properties\":{\"left\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 70.91,
+          "width": 221.01,
+          "x": 460.43,
+          "y": 48.36,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"b14eabb3b900c0b06008\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":126.26865671641791,\"height\":51.940298507462686,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"image\":[{\"properties\":{\"sourceFile\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Latin_HorizontalLogoLockup_RGB.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Latin_HorizontalLogoLockup_RGB34548294102650123.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}}}]}}}",
+          "height": 51.94,
+          "width": 126.27,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b3161f58d90500a01104\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.70149253731343,\"y\":135.22388059701493,\"z\":2000,\"width\":1260,\"height\":583.8805970149253,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Plant Code\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Plant Name\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.BUKRS_Company Code\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Company Name\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Creation Date\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Created By\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Created By_FULL_NAME\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Created By_EMAIL\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Approved Date\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Approved By\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Approved By_FULL_NAME\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.PR Approved By_EMAIL\"},{\"queryRef\":\"Sum(S4_Hana viw_param_PR Approval check.cDaysTakenToApprove)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_param_PR Approval check\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Plant Code\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Plant Code\",\"NativeReferenceName\":\"Plant Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Plant Name\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Plant Name\",\"NativeReferenceName\":\"Plant Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Company Name\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Company Name\",\"NativeReferenceName\":\"Company Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Requistion\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\",\"NativeReferenceName\":\"Purchase Requistion\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Creation Date\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Creation Date\",\"NativeReferenceName\":\"PR Creation Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Created By\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Created By\",\"NativeReferenceName\":\"PR Created By\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Created By_FULL_NAME\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Created By_FULL_NAME\",\"NativeReferenceName\":\"PR Created By_FULL_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Created By_EMAIL\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Created By_EMAIL\",\"NativeReferenceName\":\"PR Created By_EMAIL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Approved Date\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Approved Date\",\"NativeReferenceName\":\"PR Approved Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Approved By\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Approved By\",\"NativeReferenceName\":\"PR Approved By\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Approved By_FULL_NAME\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Approved By_FULL_NAME\",\"NativeReferenceName\":\"PR Approved By_FULL_NAME\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"PR Approved By_EMAIL\"},\"Name\":\"S4_Hana viw_param_PR Approval check.PR Approved By_EMAIL\",\"NativeReferenceName\":\"PR Approved By_EMAIL\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"cDaysTakenToApprove\"},\"Name\":\"Sum(S4_Hana viw_param_PR Approval check.cDaysTakenToApprove)\",\"NativeReferenceName\":\"cDaysTakenToApprove\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BUKRS_Company Code\"},\"Name\":\"S4_Hana viw_param_PR Approval check.BUKRS_Company Code\",\"NativeReferenceName\":\"Company Code\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Plant Code\"}}}]},\"columnProperties\":{\"S4_Hana viw_param_PR Approval check.BUKRS_Company Code\":{\"displayName\":\"Company Code\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"total\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 583.88,
+          "width": 1260.00,
+          "x": 19.70,
+          "y": 135.22,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"d8402ed07479804a4383\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.70149253731343,\"y\":48.35820895522388,\"z\":3000,\"width\":221.19402985074626,\"height\":70.74626865671641,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Plant Code : Plant Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_param_PR Approval check\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Plant Code : Plant Name\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Plant Code : Plant Name\",\"NativeReferenceName\":\"Plant Code : Plant Name\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"padding\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Plant Name'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}],\"padding\":[{\"properties\":{\"left\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 70.75,
+          "width": 221.19,
+          "x": 19.70,
+          "y": 48.36,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"dccf0cd406c72b787079\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.8955223880597015,\"y\":122.6865671641791,\"z\":5001,\"width\":1278.8059701492537,\"height\":12.53731343283582,\"tabOrder\":5001}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"0.5D\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372db'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "height": 12.54,
+          "width": 1278.81,
+          "x": 0.90,
+          "y": 122.69,
+          "z": 5001.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

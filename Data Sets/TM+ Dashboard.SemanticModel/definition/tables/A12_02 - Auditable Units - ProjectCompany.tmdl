@@ -1,0 +1,632 @@
+table 'A12_02 - Auditable Units - ProjectCompany'
+	lineageTag: d7b9afda-f859-475e-9bc1-d9c7c435db01
+
+	column EntityAssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: a53f437e-bced-4cf8-b983-e6c3f6b03a88
+		summarizeBy: count
+		sourceColumn: EntityAssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: c8fa5e82-d4f0-418f-bfe7-5820bf80ef8f
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityTitle
+		dataType: string
+		lineageTag: 74b129af-d3a8-418e-a9da-27aa61dd5dec
+		summarizeBy: none
+		sourceColumn: EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c6c4b4c-5e28-4e01-90cd-4a9d50e1f677
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentTitle
+		dataType: string
+		lineageTag: 5e1a1419-f757-44cb-bc19-152299ddda21
+		summarizeBy: none
+		sourceColumn: AssessmentTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date2
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2f450ef3-bb32-4a7b-b444-b16ac8592b65
+		summarizeBy: none
+		sourceColumn: Date2
+
+		variation Variation
+			isDefault
+			relationship: 53a40e3e-9d55-41bd-9792-7829685f541c
+			defaultHierarchy: LocalDateTable_6d03e54e-7a14-4511-b61b-b1c6c261630c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Date3
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f4791752-e856-4730-b015-b7b82b6a41d0
+		summarizeBy: none
+		sourceColumn: Date3
+
+		variation Variation
+			isDefault
+			relationship: 58d79f59-8e83-4330-9de8-3adcdb560e17
+			defaultHierarchy: LocalDateTable_c059598b-8706-4df9-80b6-ee3bbd005d49.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Date4
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8f023a34-9ddd-47d7-bca2-313bff9de912
+		summarizeBy: none
+		sourceColumn: Date4
+
+		variation Variation
+			isDefault
+			relationship: 0702a6a1-9f97-4948-af94-d6d95a16b17a
+			defaultHierarchy: LocalDateTable_0ad4888f-5f26-438b-b86d-a2db510cab25.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Date5
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 420b4f94-3377-4660-994e-ec0d4788b6e7
+		summarizeBy: none
+		sourceColumn: Date5
+
+		variation Variation
+			isDefault
+			relationship: 11470302-1c30-4899-a499-6d98e9fe8822
+			defaultHierarchy: LocalDateTable_b753301b-a423-47a6-bee4-3dffbb035610.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Date6
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3a5cb1d6-00ce-4f84-952e-8217ed707942
+		summarizeBy: none
+		sourceColumn: Date6
+
+		variation Variation
+			isDefault
+			relationship: 0e9bed46-617e-435a-9e9e-039ec24cb044
+			defaultHierarchy: LocalDateTable_7e6c2c97-54f5-49b4-8c7f-0cc7af1831a9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YesNo1
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 57842304-b96f-48b4-8cf2-1285b6969216
+		summarizeBy: none
+		sourceColumn: YesNo1
+
+		annotation SummarizationSetBy = Automatic
+
+	column YesNo2
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b250ea15-9f97-4417-a584-76c07b70c7e6
+		summarizeBy: none
+		sourceColumn: YesNo2
+
+		annotation SummarizationSetBy = Automatic
+
+	column YesNo3
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 42f1741d-1904-4f4e-94f9-e00932a66b5d
+		summarizeBy: none
+		sourceColumn: YesNo3
+
+		annotation SummarizationSetBy = Automatic
+
+	column YesNo4
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 14157d2c-4da5-4e4f-941f-1990b033461f
+		summarizeBy: none
+		sourceColumn: YesNo4
+
+		annotation SummarizationSetBy = Automatic
+
+	column YesNo5
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a7f79ced-28a0-4517-987e-344ce16ec787
+		summarizeBy: none
+		sourceColumn: YesNo5
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountBalance
+		dataType: double
+		lineageTag: 571250a3-fbad-408e-a962-578b6375b3c7
+		summarizeBy: sum
+		sourceColumn: AccountBalance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue1
+		dataType: double
+		lineageTag: b621541e-f1a9-4431-962a-cacb5ad37090
+		summarizeBy: sum
+		sourceColumn: NumericValue1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue2
+		dataType: double
+		lineageTag: 0c0f5ebb-b5a5-467f-b4be-6386815fb66d
+		summarizeBy: sum
+		sourceColumn: NumericValue2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue3
+		dataType: double
+		lineageTag: e5b32f9d-bdf7-4526-9e43-7f0958c73827
+		summarizeBy: sum
+		sourceColumn: NumericValue3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue4
+		dataType: double
+		lineageTag: c85b8d13-8648-45dd-911d-e79395b16be2
+		summarizeBy: sum
+		sourceColumn: NumericValue4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue5
+		dataType: double
+		lineageTag: 48200e65-f85b-4d24-ae0a-75f4d2174e43
+		summarizeBy: sum
+		sourceColumn: NumericValue5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue6
+		dataType: double
+		lineageTag: 144b305b-931c-43a6-98f0-0bc343b577d3
+		summarizeBy: sum
+		sourceColumn: NumericValue6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue7
+		dataType: double
+		lineageTag: 8836fe9f-1e5f-4257-9e07-e79dc9be293d
+		summarizeBy: sum
+		sourceColumn: NumericValue7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue8
+		dataType: double
+		lineageTag: c56ca9dc-7454-4c26-af9b-a34fc6279a58
+		summarizeBy: sum
+		sourceColumn: NumericValue8
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue9
+		dataType: double
+		lineageTag: e4169ddb-af91-414a-96a4-860b48536331
+		summarizeBy: sum
+		sourceColumn: NumericValue9
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue10
+		dataType: double
+		lineageTag: 421c2239-2ef2-4641-b35f-925b49b2890c
+		summarizeBy: sum
+		sourceColumn: NumericValue10
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue11
+		dataType: double
+		lineageTag: 2425e06f-47f9-400e-981e-1956f6e8f968
+		summarizeBy: sum
+		sourceColumn: NumericValue11
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue12
+		dataType: double
+		lineageTag: d726c36b-1012-456a-a4f7-4f081b201578
+		summarizeBy: sum
+		sourceColumn: NumericValue12
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue13
+		dataType: double
+		lineageTag: e189da32-f728-4d7d-9170-b6aebb9dc33e
+		summarizeBy: sum
+		sourceColumn: NumericValue13
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue14
+		dataType: double
+		lineageTag: 62389b76-c049-455f-981b-07137a74ab60
+		summarizeBy: sum
+		sourceColumn: NumericValue14
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue15
+		dataType: double
+		lineageTag: 5484e095-28ea-4578-b195-c42c7817fbdb
+		summarizeBy: sum
+		sourceColumn: NumericValue15
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue16
+		dataType: double
+		lineageTag: 91fca999-346d-43e4-a92b-ed2f86f8b3ba
+		summarizeBy: sum
+		sourceColumn: NumericValue16
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue17
+		dataType: double
+		lineageTag: f417a3e5-36bf-4f1d-bae8-63a146321faa
+		summarizeBy: sum
+		sourceColumn: NumericValue17
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue18
+		dataType: double
+		lineageTag: 5fb59050-5478-42aa-bbf6-1de155195679
+		summarizeBy: sum
+		sourceColumn: NumericValue18
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue19
+		dataType: double
+		lineageTag: 28862e7e-2926-4928-a191-78d35f32e38e
+		summarizeBy: sum
+		sourceColumn: NumericValue19
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue20
+		dataType: double
+		lineageTag: ffbb91e0-4725-4e8a-b110-cbeb037070a6
+		summarizeBy: sum
+		sourceColumn: NumericValue20
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue21
+		dataType: double
+		lineageTag: fff5ee0f-573c-48ac-ab14-bf778d42622e
+		summarizeBy: sum
+		sourceColumn: NumericValue21
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue22
+		dataType: double
+		lineageTag: 3260dded-bf98-4cde-aa49-de3f1af0eae7
+		summarizeBy: sum
+		sourceColumn: NumericValue22
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue23
+		dataType: double
+		lineageTag: 093f894c-8e76-4499-994a-17d155ef563a
+		summarizeBy: sum
+		sourceColumn: NumericValue23
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue24
+		dataType: double
+		lineageTag: fd5d1f79-2f98-4893-a0fb-f44deec8d704
+		summarizeBy: sum
+		sourceColumn: NumericValue24
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NumericValue25
+		dataType: double
+		lineageTag: bf345e32-3bb4-471a-94f6-0ea284d733df
+		summarizeBy: sum
+		sourceColumn: NumericValue25
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a81719d-99ee-4f2b-9eed-54da75d7faa6
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		lineageTag: df869678-752d-4add-96d9-b3a55163ee27
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f5b7ab8-f884-4b19-b976-ce5e3f0933e7
+		summarizeBy: count
+		sourceColumn: Category2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2
+		dataType: string
+		lineageTag: 6874b619-82d3-4591-9e1f-aad3b83443bd
+		summarizeBy: none
+		sourceColumn: Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 166a3388-258a-4a2f-8ee4-e5c7b3c6d5a1
+		summarizeBy: count
+		sourceColumn: Category3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3
+		dataType: string
+		lineageTag: 86770e8b-48b9-4c5e-a009-ebebe4948b1b
+		summarizeBy: none
+		sourceColumn: Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4Id
+		dataType: int64
+		formatString: 0
+		lineageTag: fea80dde-3957-42fc-acf1-f99e80a8e865
+		summarizeBy: count
+		sourceColumn: Category4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4
+		dataType: string
+		lineageTag: e82dbf83-ce57-4776-9d24-300f346cdc4c
+		summarizeBy: none
+		sourceColumn: Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 75540ac0-7272-427a-8da1-1da46a5db516
+		summarizeBy: count
+		sourceColumn: Category5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5
+		dataType: string
+		lineageTag: 2229e7ae-58ac-49e1-ad20-7a6134085757
+		summarizeBy: none
+		sourceColumn: Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column SAPeriodId
+		dataType: int64
+		formatString: 0
+		lineageTag: 85f6c5ba-34c4-42a2-a494-5418007613b4
+		summarizeBy: count
+		sourceColumn: SAPeriodId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SAPeriod
+		dataType: string
+		lineageTag: 7fc68a6c-169c-49d7-80b5-28c374d6cf59
+		summarizeBy: none
+		sourceColumn: SAPeriod
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5829407d-55f3-46a0-a618-1a67f782c7a9
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory2
+		dataType: string
+		lineageTag: 6fe6547e-2256-43b5-b979-5a139e3acc55
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory2
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 03c890df-1f6c-4882-9ddf-edf91fec80db
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3
+		dataType: string
+		lineageTag: 2564740d-cd47-4ef3-85ec-fcb221d0cc23
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory4Id
+		dataType: int64
+		formatString: 0
+		lineageTag: a30725a5-2ed4-4731-8fe6-54831518f623
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory4
+		dataType: string
+		lineageTag: 4ef86af6-ee76-4f00-aef1-c976de8959c2
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory4
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory5Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1eccfe10-06a3-4847-b249-50d436133dd4
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory5
+		dataType: string
+		lineageTag: 4be01d91-753f-4cc9-8e1a-266d0a54c5a2
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory5
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory6Id
+		dataType: int64
+		formatString: 0
+		lineageTag: d60e7af7-de33-42be-b9ed-136f38aaef3b
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory6Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory6
+		dataType: string
+		lineageTag: 27ae93d6-380e-4f1a-b474-f2e47f59d8d6
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory6
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A12_02 - Auditable Units - ProjectCompany' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    EntityAssessmentDetails_table = Source{[Name="EntityAssessmentDetails",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(EntityAssessmentDetails_table, each ([Category3] = "Project Company") and ([YesNo5] = false) and ([AssessmentId] = 31))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

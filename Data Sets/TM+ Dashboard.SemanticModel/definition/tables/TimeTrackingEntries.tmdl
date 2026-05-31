@@ -1,0 +1,183 @@
+table TimeTrackingEntries
+	lineageTag: 229339c4-2e6b-44e2-9024-d3ee6f1bc1e2
+
+	column TimeTrackingEntryId
+		dataType: int64
+		formatString: 0
+		lineageTag: b703f6c3-faac-4998-8102-b731866a383f
+		summarizeBy: count
+		sourceColumn: TimeTrackingEntryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateOfEntry
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8994ea11-4802-482e-be2d-d32ff7db8393
+		summarizeBy: none
+		sourceColumn: DateOfEntry
+
+		variation Variation
+			isDefault
+			relationship: bcd7be83-23eb-48dc-b634-a7f30b3aa9ab
+			defaultHierarchy: LocalDateTable_a378f0e3-cbc0-454f-884f-59c2fa4ebcd2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e126741-7ce9-4cb6-83b3-c30557e445fd
+		summarizeBy: count
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		lineageTag: 0f54e6e7-9e2f-4f43-934b-341b5e6319cf
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimesheetId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d271aab-6c00-4559-8313-a01e7b9d621a
+		summarizeBy: none
+		sourceColumn: TimesheetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: f459cba5-f685-49f2-a432-6ac5b3e29276
+		summarizeBy: none
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: a71a57fd-928e-4f06-a059-277ae840e272
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: 803b85b4-b4f0-4903-83d5-d97cda07790e
+		summarizeBy: none
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeAdminId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9af6b904-bfd9-4043-8f47-e486ab16b3e7
+		summarizeBy: none
+		sourceColumn: TimeAdminId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeNonWorkingId
+		dataType: int64
+		formatString: 0
+		lineageTag: b4eed7c4-3cd3-4066-9fa4-f6f2eb2522af
+		summarizeBy: none
+		sourceColumn: TimeNonWorkingId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeHolidayId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fcc509e-5bcb-4a3d-84c3-db59daca147f
+		summarizeBy: none
+		sourceColumn: TimeHolidayId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 46bcabea-839d-41a0-b346-34d7c526dcf4
+		summarizeBy: count
+		sourceColumn: TimeEntryTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryType
+		dataType: string
+		lineageTag: f2a0a791-72c5-429c-b7e0-6e0cb08e43d0
+		summarizeBy: none
+		sourceColumn: TimeEntryType
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditPlanId
+		dataType: int64
+		formatString: 0
+		lineageTag: 28e8ea39-7dab-4b6f-8359-67f7675c752f
+		summarizeBy: none
+		sourceColumn: AuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hours
+		dataType: double
+		lineageTag: 8881ce2d-ec6f-49d9-b7ba-06b16579267e
+		summarizeBy: sum
+		sourceColumn: Hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Comment
+		dataType: string
+		lineageTag: f90fb88e-ed93-48dd-817f-43ee02eee559
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeCategory2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: cc0f04b4-6ff0-4d73-8c47-b83f21a2a9a0
+		summarizeBy: none
+		sourceColumn: TimeCategory2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeCategory3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: e8ae1754-9906-4a93-be4a-f2a46c00d5cc
+		summarizeBy: none
+		sourceColumn: TimeCategory3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TimeTrackingEntries = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1/timetracking", null, [Implementation="2.0"]),
+				    TimeTrackingEntries_table = Source{[Name="TimeTrackingEntries",Signature="table"]}[Data]
+				in
+				    TimeTrackingEntries_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

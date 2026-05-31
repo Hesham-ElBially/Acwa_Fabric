@@ -1,0 +1,89 @@
+table StoryFieldDefinitions
+	lineageTag: f7e2aa22-f641-4655-93f4-6d222c4ff8f2
+
+	column FieldDefinitionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f4b1015-f8dd-46d5-b974-76ab497ec3b9
+		summarizeBy: none
+		sourceColumn: FieldDefinitionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldDefinitionName
+		dataType: string
+		lineageTag: 7c6d4f7e-9fe7-4c37-a23c-fa4df4e4e0c7
+		summarizeBy: none
+		sourceColumn: FieldDefinitionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldDefinitionLabel
+		dataType: string
+		lineageTag: 2a24f6dd-eb4b-4960-8aa2-de1e6dc91ddb
+		summarizeBy: none
+		sourceColumn: FieldDefinitionLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 0ab27f14-56fd-4150-be7d-cdea57e41a5f
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column DbDataType
+		dataType: string
+		lineageTag: ed0b2708-327c-4466-8ffa-0898468b0ba2
+		summarizeBy: none
+		sourceColumn: DbDataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column DbDataLength
+		dataType: int64
+		formatString: 0
+		lineageTag: 65f97f58-27d0-4d04-97d5-f98e85e7637d
+		summarizeBy: sum
+		sourceColumn: DbDataLength
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldDefinitionType
+		dataType: string
+		lineageTag: 8715c5f9-73db-4a4e-a513-b743c585cf02
+		summarizeBy: none
+		sourceColumn: FieldDefinitionType
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldType
+		dataType: string
+		lineageTag: 33a37ed0-d705-4848-8811-093213fe634a
+		summarizeBy: none
+		sourceColumn: FieldType
+
+		annotation SummarizationSetBy = Automatic
+
+	column FieldLookupListId
+		dataType: int64
+		formatString: 0
+		lineageTag: f3b0da5b-b3fa-4f8f-8bfc-4497874ef42c
+		summarizeBy: none
+		sourceColumn: FieldLookupListId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StoryFieldDefinitions = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StoryFieldDefinitions_table = Source{[Name="StoryFieldDefinitions",Signature="table"]}[Data]
+				in
+				    StoryFieldDefinitions_table
+
+	annotation PBI_ResultType = Table
+

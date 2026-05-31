@@ -1,0 +1,323 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "e1bf967434d265143901",
+  "position": {
+    "x": 0,
+    "y": 79.1232354517839,
+    "z": 3000,
+    "height": 640.8767645482161,
+    "width": 1279.0088748585383,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PlantVendor_EmergencyPR_Percent"
+                    }
+                  },
+                  "Property": "Plant Code : Plant Name"
+                }
+              },
+              "queryRef": "PlantVendor_EmergencyPR_Percent.Plant Code : Plant Name",
+              "nativeQueryRef": "Plant Code : Plant Name1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PlantVendor_EmergencyPR_Percent"
+                    }
+                  },
+                  "Property": "Company Code : Company Name"
+                }
+              },
+              "queryRef": "PlantVendor_EmergencyPR_Percent.Company Code : Company Name",
+              "nativeQueryRef": "Company Code : Company Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PlantVendor_EmergencyPR_Percent"
+                    }
+                  },
+                  "Property": "Vendor Code : Vendor Name"
+                }
+              },
+              "queryRef": "PlantVendor_EmergencyPR_Percent.Vendor Code : Vendor Name",
+              "nativeQueryRef": "Vendor Code : Vendor Name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PlantVendor_EmergencyPR_Percent"
+                        }
+                      },
+                      "Property": "Total PRs"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(PlantVendor_EmergencyPR_Percent.Total PRs)",
+              "nativeQueryRef": "Total No. of PRs",
+              "displayName": "Total No. of PRs"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PlantVendor_EmergencyPR_Percent"
+                        }
+                      },
+                      "Property": "Emergency PRs"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(PlantVendor_EmergencyPR_Percent.Emergency PRs)",
+              "nativeQueryRef": "Total No. of Emergency PRs",
+              "displayName": "Total No. of Emergency PRs"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PlantVendor_EmergencyPR_Percent"
+                    }
+                  },
+                  "Property": "% Emergency PRs"
+                }
+              },
+              "queryRef": "Sum(PlantVendor_EmergencyPR_Percent.% Emergency PRs)",
+              "nativeQueryRef": "% Emergency PRs"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "PlantVendor_EmergencyPR_Percent"
+                      }
+                    },
+                    "Property": "Emergency PRs"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9372DB'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "350.1814641918706D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "PlantVendor_EmergencyPR_Percent.Vendor Code : Vendor Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "262.1508205718901D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "PlantVendor_EmergencyPR_Percent.Plant Code : Plant Name"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

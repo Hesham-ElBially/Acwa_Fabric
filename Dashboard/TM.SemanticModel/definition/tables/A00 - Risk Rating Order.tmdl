@@ -1,0 +1,34 @@
+table 'A00 - Risk Rating Order'
+	lineageTag: e51be425-557e-40ea-8718-d5d7aae8e0e6
+	sourceLineageTag: [sch_TeamMate].[A00 - Risk Rating Order]
+
+	column 'Risk Rating'
+		dataType: string
+		sourceProviderType: varchar(11)
+		lineageTag: eec4ccf7-459d-46e3-8dba-40a401690858
+		sourceLineageTag: Risk Rating
+		summarizeBy: none
+		sourceColumn: Risk Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Risk Rating Order'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c08ea210-b285-43b6-8b06-4565ca263059
+		sourceLineageTag: Risk Rating Order
+		summarizeBy: sum
+		sourceColumn: Risk Rating Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Risk Rating Order' = entity
+		mode: directLake
+		source
+			entityName: A00 - Risk Rating Order
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

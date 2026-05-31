@@ -1,0 +1,57 @@
+table AuditReportTexts
+	lineageTag: 912e9268-e28e-407c-b824-73f75c83fe15
+
+	column AuditReportId
+		dataType: int64
+		formatString: 0
+		lineageTag: 18cfbafc-70d8-4db8-b5c2-bbc9480f4d88
+		summarizeBy: none
+		sourceColumn: AuditReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditReportTitle
+		dataType: string
+		lineageTag: 7029461a-2280-4687-b409-b85481092157
+		summarizeBy: none
+		sourceColumn: AuditReportTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: fcaa79b9-c598-45fa-bb9a-850a39e705a5
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: 59bdbb15-6289-4a13-9471-ec8ae500da88
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: 4cef0333-50e4-4542-9e48-0ee23bf900b6
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AuditReportTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    AuditReportTexts_table = Source{[Name="AuditReportTexts",Signature="table"]}[Data]
+				in
+				    AuditReportTexts_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

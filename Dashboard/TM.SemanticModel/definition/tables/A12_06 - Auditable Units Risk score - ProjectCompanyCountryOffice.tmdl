@@ -1,0 +1,60 @@
+table 'A12_06 - Auditable Units Risk score - ProjectCompanyCountryOffice'
+	lineageTag: 8f803ffa-9be3-45c7-8ff8-771a0fe385ca
+	sourceLineageTag: [sch_TeamMate].[A12_06 - Auditable Units Risk score - ProjectCompanyCountryOffice]
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 440cb938-13a5-4c0e-a19c-4f0498cb9181
+		sourceLineageTag: EntityId
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 513ead06-2cdd-4eb9-baf5-7c4417347544
+		sourceLineageTag: Avg. Residual Likelihood
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: dfd3ea01-1b46-481f-9f15-aca054f53ef3
+		sourceLineageTag: Avg. Residual Impact
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 46d386d7-560b-404f-a4a5-1ed6362bc311
+		sourceLineageTag: Avg. Residual Calc Score
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'A12_06 - Auditable Units Risk score - ProjectCompanyCountryOffice' = entity
+		mode: directLake
+		source
+			entityName: A12_06 - Auditable Units Risk score - ProjectCompanyCountryOffice
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

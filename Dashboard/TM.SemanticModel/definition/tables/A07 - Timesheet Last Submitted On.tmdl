@@ -1,0 +1,56 @@
+table 'A07 - Timesheet Last Submitted On'
+	lineageTag: f6bf08ef-406f-4686-8b40-3585c4c86159
+	sourceLineageTag: [sch_TimeSheet].[A07 - Timesheet Last Submitted On]
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 792e39af-0514-4fe0-b4ad-a3b5f0fb406c
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: count
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b31a6a1-ce8f-42d0-8df0-343350fce13e
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Submitted On'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ed9a7185-03ca-4f10-81dc-621e69b05303
+		sourceLineageTag: Last Submitted On
+		summarizeBy: none
+		sourceColumn: Last Submitted On
+
+		annotation SummarizationSetBy = Automatic
+
+	column cAgeing
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d8748330-19fe-489d-8e51-3a185e5ec3c9
+		sourceLineageTag: cAgeing
+		summarizeBy: sum
+		sourceColumn: cAgeing
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A07 - Timesheet Last Submitted On' = entity
+		mode: directLake
+		source
+			entityName: A07 - Timesheet Last Submitted On
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

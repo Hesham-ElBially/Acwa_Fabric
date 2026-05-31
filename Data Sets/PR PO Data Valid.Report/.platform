@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PR PO Data Valid"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5761c9e5-55ef-aa52-4936-2d67fa2bd545"
+  }
+}

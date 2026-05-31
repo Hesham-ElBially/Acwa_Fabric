@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "320f4f150e2007119153",
+  "displayName": "% of Ratification PRs",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

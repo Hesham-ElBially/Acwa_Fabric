@@ -1,0 +1,88 @@
+table PlantVendor_EmergencyPR_Percent
+	lineageTag: 41d84d19-36f6-4089-b46a-4c3d59273f8b
+
+	column 'Plant Code : Plant Name'
+		lineageTag: e45885fb-50b3-4ba0-abb7-276220a08e69
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant Code : Plant Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vendor Code : Vendor Name'
+		lineageTag: cddb6391-ba0b-4db8-bf95-871a45cf8b2a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Vendor Code : Vendor Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total PRs'
+		formatString: 0
+		lineageTag: fa97f130-31b5-459d-8625-2d0fd55e9134
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Total PRs]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Emergency PRs'
+		formatString: 0
+		lineageTag: 51ea49a3-7fab-484e-9500-17ca38a14932
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Emergency PRs]
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% Emergency PRs'
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8b4d22b4-3559-445a-a844-67b30e0bacfc
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [% Emergency PRs]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code : Company Name'
+		lineageTag: dc957360-344c-47fc-ac36-f92df391cd15
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Company Code : Company Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PlantVendor_EmergencyPR_Percent = calculated
+		mode: import
+		source =
+				
+				VAR Base =
+				    SUMMARIZE (
+				        'List_of_all_PR_PO',
+				        'List_of_all_PR_PO'[Plant Code : Plant Name],
+				        'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				        'List_of_all_PR_PO'[Company Code : Company Name]
+				    )
+				RETURN
+				ADDCOLUMNS (
+				    Base,
+				    "Total PRs",
+				        CALCULATE ( DISTINCTCOUNT ( 'List_of_all_PR_PO'[Purchase Req.] ) ),
+				    "Emergency PRs",
+				        CALCULATE (
+				            DISTINCTCOUNT ( 'List_of_all_PR_PO'[Purchase Req.] ),
+				            'List_of_all_PR_PO'[Requirement Urgency] = "08"
+				        ),
+				    "% Emergency PRs",
+				        DIVIDE (
+				            CALCULATE (
+				                DISTINCTCOUNT ( 'List_of_all_PR_PO'[Purchase Req.] ),
+				                'List_of_all_PR_PO'[Requirement Urgency] = "08"
+				            ),
+				            CALCULATE ( DISTINCTCOUNT ( 'List_of_all_PR_PO'[Purchase Req.] ) ),
+				            0
+				        )
+				)
+
+	annotation PBI_Id = f27366ee709544df85738085c88cc80d
+

@@ -1,0 +1,98 @@
+table 'A08 - Closure Scheduled Start Date'
+	lineageTag: d50eb049-4b15-45ad-ab1f-b9656fb2222f
+	sourceLineageTag: [sch_TeamMate].[A08 - Closure Scheduled Start Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0aaa81a0-a067-45c3-923b-397c3a7f2737
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 829c068f-3474-453a-abf3-76e51f03cd40
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f135fe5e-729c-4a8f-8dbf-a48a5697ecac
+		sourceLineageTag: ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledStartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 8286f3ff-7aaf-412b-bd04-7750a9216ca2
+		sourceLineageTag: ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Final Report Issuance Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cb0a97dd-3716-4f6f-ad47-5a530825bc03
+		sourceLineageTag: A08_00 - Final Report Issuance Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Final Report Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 59590831-fba3-441a-904b-7d1ba03074c2
+		sourceLineageTag: A08_00 - Final Report Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - TeamMate Updated Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6f0a238a-5a4a-42a2-94c6-dc60a9a1d664
+		sourceLineageTag: A08_00 - TeamMate Updated Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - TeamMate Updated Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 922897c6-5d4b-414d-9586-ae291b3a3824
+		sourceLineageTag: A08_00 - TeamMate Updated Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Closure Scheduled Start Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Closure Scheduled Start Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

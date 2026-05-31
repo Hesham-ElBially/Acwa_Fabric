@@ -1,0 +1,242 @@
+table 'A08_00 - Phase And Milestone'
+	lineageTag: a6136af1-3e62-4e02-9593-3861004509c4
+	sourceLineageTag: [sch_TeamMate].[A08_00 - Phase And Milestone]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d92df1fb-8d70-4f04-947e-bba4fe9129ef
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bfd5925f-530d-4439-bf4c-08d53492e35b
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3a1497ac-d0ee-4cc3-9a1f-201230cf5fad
+		sourceLineageTag: ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 76ecdf9e-4301-4b8f-a903-1539ec2306db
+		sourceLineageTag: SortOrder
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstStartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: a35b01a3-3326-42c4-bc33-54d6429e25b3
+		sourceLineageTag: EstStartDate
+		summarizeBy: none
+		sourceColumn: EstStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ca225cf8-fe91-4acf-ae22-65ca57790a04
+		sourceLineageTag: EstEndDate
+		summarizeBy: none
+		sourceColumn: EstEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActStartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: d8f66ad0-075d-4b5b-a344-433d03595b37
+		sourceLineageTag: ActStartDate
+		summarizeBy: none
+		sourceColumn: ActStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 76aaa998-87a3-4327-ae80-84f662336dd2
+		sourceLineageTag: ActEndDate
+		summarizeBy: none
+		sourceColumn: ActEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 18c68868-6c37-4be8-8f84-1ac47fc7456a
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstHours
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0a0c6e27-03f5-4411-aae6-4d5a732c60fc
+		sourceLineageTag: EstHours
+		summarizeBy: sum
+		sourceColumn: EstHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActHours
+		dataType: double
+		sourceProviderType: decimal(34, 6)
+		lineageTag: d2e4cb93-7ba9-43b6-b4af-8557955f4185
+		sourceLineageTag: ActHours
+		summarizeBy: sum
+		sourceColumn: ActHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsComplete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 4fe89a1b-e0c2-44f3-8005-575ee4ed9135
+		sourceLineageTag: IsComplete
+		summarizeBy: none
+		sourceColumn: IsComplete
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 90a0a561-870d-4647-8503-f58562befa4e
+		sourceLineageTag: DueDate
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: e3f36654-1b78-4301-a559-37b425783baf
+		sourceLineageTag: RevisedDueDate
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewDueDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: b328e2f9-787a-47e3-a5a5-5e6b384a3007
+		sourceLineageTag: ReviewDueDate
+		summarizeBy: none
+		sourceColumn: ReviewDueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledStartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ff092eb2-d0c5-42e9-b5e4-f06163f25e61
+		sourceLineageTag: ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ecee422b-6104-4409-96ed-48f8bc11e6ff
+		sourceLineageTag: ScheduledEndDate
+		summarizeBy: none
+		sourceColumn: ScheduledEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Final Report Issuance Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 870b202c-8ea2-4c78-bd93-60b875d5205e
+		sourceLineageTag: A08_00 - Final Report Issuance Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Final Report Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: bff3c247-71eb-4d94-8430-a16a5c238db2
+		sourceLineageTag: A08_00 - Final Report Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - TeamMate Updated Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9449284e-3a71-4143-bbf7-0bbb617e7361
+		sourceLineageTag: A08_00 - TeamMate Updated Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - TeamMate Updated Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 706d2358-0015-4bce-9f48-98ba0bb51317
+		sourceLineageTag: A08_00 - TeamMate Updated Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - Phase And Milestone' = entity
+		mode: directLake
+		source
+			entityName: A08_00 - Phase And Milestone
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

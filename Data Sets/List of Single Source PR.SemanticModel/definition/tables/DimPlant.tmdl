@@ -1,0 +1,33 @@
+table DimPlant
+	lineageTag: 41e772fc-a985-4b11-9400-8a892ff3529a
+
+	column Plant
+		lineageTag: 8611b837-8a20-43cc-a6a9-1205ad66cf28
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Plant]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Code : Plant Name'
+		lineageTag: b2e3adad-c236-43e4-9806-eec0b28a3d39
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Plant Code : Plant Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimPlant = calculated
+		mode: import
+		source =
+				
+				DISTINCT (
+				    SELECTCOLUMNS (
+				        'List_of_all_PR_PO',
+				        "Plant", 'List_of_all_PR_PO'[Plant],
+				        "Plant Code : Plant Name", 'List_of_all_PR_PO'[Plant Code : Plant Name]
+				    )
+				)
+
+	annotation PBI_Id = 8c61a4d17e0f4ab08d3f71b0db68867d
+

@@ -1,0 +1,97 @@
+table A05_02
+	lineageTag: 3a2db459-bcde-45cb-a26e-ebd1b7b79b7f
+	sourceLineageTag: [sch_TimeSheet].[A05_02]
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ba721b07-505a-4aa6-836a-ff4a27b28aeb
+		sourceLineageTag: Year
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 61bf9c7b-b407-4fc8-b6d8-7ba9154765c7
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: count
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 69d988f7-273b-4f6b-96d9-5c386295e20f
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e8885ff4-cae8-4167-a535-a720246720b8
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Audit Plan'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6145da62-7d56-4a09-90ae-65f40099c2cd
+		sourceLineageTag: Audit Plan
+		summarizeBy: none
+		sourceColumn: Audit Plan
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Portfolio Delivery Lead'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 37501705-9cea-44fa-a36e-05aca7ee8408
+		sourceLineageTag: Portfolio Delivery Lead
+		summarizeBy: none
+		sourceColumn: Portfolio Delivery Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Title'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 495c2a0f-666c-46e5-8331-dc3fd5aa7e31
+		sourceLineageTag: Project Title
+		summarizeBy: none
+		sourceColumn: Project Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Hours'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: 6c6c3f0f-a94b-472d-9a2b-058f96f3ed93
+		sourceLineageTag: Project Hours
+		summarizeBy: sum
+		sourceColumn: Project Hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition A05_02 = entity
+		mode: directLake
+		source
+			entityName: A05_02
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

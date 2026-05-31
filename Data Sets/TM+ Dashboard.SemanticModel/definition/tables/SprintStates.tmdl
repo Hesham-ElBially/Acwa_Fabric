@@ -1,0 +1,31 @@
+table SprintStates
+	lineageTag: 434624cf-f6f8-423e-8766-9f44211ea8bb
+
+	column SprintStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7dd9a565-923f-4b6d-b53a-3e929d8eed7e
+		summarizeBy: count
+		sourceColumn: SprintStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SprintStateName
+		dataType: string
+		lineageTag: f0065cbd-d950-4f03-87de-d6ed359c6fa7
+		summarizeBy: none
+		sourceColumn: SprintStateName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SprintStates = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    SprintStates_table = Source{[Name="SprintStates",Signature="table"]}[Data]
+				in
+				    SprintStates_table
+
+	annotation PBI_ResultType = Table
+

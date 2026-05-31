@@ -1,0 +1,265 @@
+table 'A08 - Last Planning Procedure Details'
+	lineageTag: e573d153-2b70-468c-b870-a33713c31ad3
+
+	column ObjectRelationshipId
+		dataType: int64
+		formatString: 0
+		lineageTag: ab0d07db-49bc-4cef-b632-a3bc4105d540
+		summarizeBy: count
+		sourceColumn: ObjectRelationshipId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 71a2faf5-9e6a-4399-bb05-ec97e445daa2
+		summarizeBy: none
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: eb75fa03-6a3d-473a-81ec-59eef971303f
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: b7cd6f69-e969-4d1f-aaaa-ce1324bc3e42
+		summarizeBy: none
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: a78307ea-010a-4dd3-9663-f70220ba13ed
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ff84f42-625d-41bd-94ab-b37c2d1e705b
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f36ae1b-9331-4b51-b5bd-c01a16670225
+		summarizeBy: none
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b3b9238-ced8-4ae3-9872-78f0db86d50a
+		summarizeBy: none
+		sourceColumn: ControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		lineageTag: 12f665e7-0e57-435f-9acb-07e6dc54400e
+		summarizeBy: none
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcedureId
+		dataType: int64
+		formatString: 0
+		lineageTag: dfbb229c-b56e-45ad-b019-94ad4b51365a
+		summarizeBy: none
+		sourceColumn: ProcedureId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		lineageTag: e6367d42-c216-41bb-b6f2-347790406926
+		summarizeBy: none
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: f8e67199-6308-45db-95af-df2c97d3ccc9
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolderId
+		dataType: int64
+		formatString: 0
+		lineageTag: 913ad6d0-3e64-44ae-8164-0542f89e54a6
+		summarizeBy: count
+		sourceColumn: FolderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Audit Schedule KPIs.ProjectTitle'
+		dataType: string
+		lineageTag: 2ffedd3f-8615-417f-be96-e4a32b02ebbe
+		summarizeBy: none
+		sourceColumn: A08 - Audit Schedule KPIs.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Audit Schedule KPIs.ProjectCode'
+		dataType: string
+		lineageTag: 830b8e97-71c5-43bb-96cd-c3df2c0ded21
+		summarizeBy: none
+		sourceColumn: A08 - Audit Schedule KPIs.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Audit Schedule KPIs.ActiveAuditPlanTitle'
+		dataType: string
+		lineageTag: 8a2b6377-9ed1-4b2b-8e59-e336368d815f
+		summarizeBy: none
+		sourceColumn: A08 - Audit Schedule KPIs.ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.ProcedureTitle'
+		dataType: string
+		lineageTag: 0e12d28c-75d5-4c70-983c-cc7426d8c950
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.ProcedureTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.ProcedureState'
+		dataType: string
+		lineageTag: f0cf2d58-5825-464e-9313-312805f4a6a4
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.ProcedureState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastNotStartedUser'
+		dataType: string
+		lineageTag: 0fe62928-6b0b-4b3f-9fc2-17e7e6c54da9
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastNotStartedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastNotStartedDate'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 45f4115a-e261-4f68-85dc-6d69b6127774
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastNotStartedDate
+
+		variation Variation
+			isDefault
+			relationship: 1ebcdebb-0dc5-42a0-b36b-f77805bc329d
+			defaultHierarchy: LocalDateTable_700672dc-764f-4898-a714-5c64d612dae5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastInProgressUser'
+		dataType: string
+		lineageTag: 8b57ce89-f7ae-45c4-8035-8474273be098
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastInProgressUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastInProgressDate'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 807bc26e-8188-42f2-bec1-d0fdf86ec3ca
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastInProgressDate
+
+		variation Variation
+			isDefault
+			relationship: ab1deb3b-9d33-4ff3-a3a6-4024ed675e20
+			defaultHierarchy: LocalDateTable_bdaa9d57-5e9d-4794-a500-ccb9414c2090.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastCompletedUser'
+		dataType: string
+		lineageTag: 3a1339ab-c292-480c-b73d-30391265ac3e
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastCompletedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastCompletedDate'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c388db3d-58e1-454a-8efa-f36019c92fe0
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastCompletedDate
+
+		variation Variation
+			isDefault
+			relationship: 70f96e0f-18bd-4047-9472-56787cded330
+			defaultHierarchy: LocalDateTable_8dec1fc0-b46e-436d-bc7f-41b1b2b548ec.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastReviewedUser'
+		dataType: string
+		lineageTag: 4c1898ec-fb1d-4af4-9e98-702806b4e5dd
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastReviewedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastReviewedDate'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8ea6bc22-85f5-4ed4-b706-1fb0d1fa4c3d
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastReviewedDate
+
+		variation Variation
+			isDefault
+			relationship: e4128a9c-73a6-4d28-841e-3d173345b097
+			defaultHierarchy: LocalDateTable_7af2f855-1c3a-45c8-9ef1-664a99a8b418.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Last Planning Procedure Details' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data],
+				    #"Merged Queries" = Table.NestedJoin(ObjectRelationships_table, {"ProjectId"}, #"A08 - Audit Schedule KPIs", {"ProjectId"}, "A08 - Audit Schedule KPIs", JoinKind.LeftOuter),
+				    #"Expanded A08 - Audit Schedule KPIs" = Table.ExpandTableColumn(#"Merged Queries", "A08 - Audit Schedule KPIs", {"ProjectTitle", "ProjectCode", "ActiveAuditPlanTitle"}, {"A08 - Audit Schedule KPIs.ProjectTitle", "A08 - Audit Schedule KPIs.ProjectCode", "A08 - Audit Schedule KPIs.ActiveAuditPlanTitle"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded A08 - Audit Schedule KPIs", {"ProcedureId"}, #"A08 - Last Planning Procedure", {"ProcedureId"}, "A08 - Last Planning Procedure", JoinKind.LeftOuter),
+				    #"Expanded A08 - Last Planning Procedure" = Table.ExpandTableColumn(#"Merged Queries1", "A08 - Last Planning Procedure", {"ProcedureTitle", "ProcedureState", "LastNotStartedUser", "LastNotStartedDate", "LastInProgressUser", "LastInProgressDate", "LastCompletedUser", "LastCompletedDate", "LastReviewedUser", "LastReviewedDate"}, {"A08 - Last Planning Procedure.ProcedureTitle", "A08 - Last Planning Procedure.ProcedureState", "A08 - Last Planning Procedure.LastNotStartedUser", "A08 - Last Planning Procedure.LastNotStartedDate", "A08 - Last Planning Procedure.LastInProgressUser", "A08 - Last Planning Procedure.LastInProgressDate", "A08 - Last Planning Procedure.LastCompletedUser", "A08 - Last Planning Procedure.LastCompletedDate", "A08 - Last Planning Procedure.LastReviewedUser", "A08 - Last Planning Procedure.LastReviewedDate"})
+				in
+				    #"Expanded A08 - Last Planning Procedure"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

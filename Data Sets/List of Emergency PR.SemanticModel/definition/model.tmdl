@@ -1,0 +1,37 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["List_of_all_PR_PO"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table List_of_all_PR_PO
+ref table DateTableTemplate_d4be0ee3-09ba-40b0-b662-7bfc05b93410
+ref table LocalDateTable_8fcb6802-a459-40f1-907f-3318e4c8d26d
+ref table LocalDateTable_781482ae-cd19-4e9f-b4bb-fd605d064bef
+ref table LocalDateTable_ca5be94b-1800-4a19-adac-aca9da51c615
+ref table LocalDateTable_f83b3fd6-3d12-42f9-9dcc-40cbb76bde24
+ref table LocalDateTable_c8a75a1d-404a-4f72-95ff-966ae4c758ba
+ref table DimMaterial
+ref table DimPlant
+ref table PlantVendor_EmergencyPR_Percent
+ref table DimVendor
+ref table RepeatedEmergencyVendors
+ref table RepeatedEmergencyMaterial
+ref table PriceDiff_MismatchOnly
+ref table DimCompany
+ref table LocalDateTable_e48df928-047c-4ca4-b37a-c188fae2d498
+ref table LocalDateTable_c511f94b-8b63-4dee-b1e8-e3d05da6a6fe
+ref table LocalDateTable_eedf8258-5926-4952-b0ec-30cf7977fd5a
+ref table LocalDateTable_e4d2395a-49f5-40e6-9490-a9edadef8a50
+ref table LocalDateTable_8c653c39-6d2e-4bd3-afb1-f36e0e986e4a
+
+ref cultureInfo en-US
+

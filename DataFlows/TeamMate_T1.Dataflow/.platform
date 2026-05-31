@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "TeamMate_T1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bb705c76-7434-a520-46df-4775a7c25a10"
+  }
+}

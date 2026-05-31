@@ -1,0 +1,83 @@
+table RecommendationStatusUpdates
+	lineageTag: 509b6ce7-9e22-4ef9-8221-45dcdc1e8808
+
+	column RecommendationStatusUpdateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1dcdf577-7823-4dfa-8566-be9093f431f3
+		summarizeBy: count
+		sourceColumn: RecommendationStatusUpdateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a75c125-3b64-45ee-a2c1-6357ad3c3a83
+		summarizeBy: none
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationTitle
+		dataType: string
+		lineageTag: 69875f32-b849-464b-8192-39f471fd6267
+		summarizeBy: none
+		sourceColumn: RecommendationTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatusUpdateComment
+		dataType: string
+		lineageTag: 433bad8f-f6e6-4211-8597-352b339e6e2b
+		summarizeBy: none
+		sourceColumn: StatusUpdateComment
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatusUpdateDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cbca6f47-c0c1-4d79-a001-2fbbd7a27f52
+		summarizeBy: none
+		sourceColumn: StatusUpdateDate
+
+		variation Variation
+			isDefault
+			relationship: 0251c6d2-771d-40ff-968f-1e923ef03aa9
+			defaultHierarchy: LocalDateTable_33ae0aff-3e8e-4729-ab0c-ae8b956e04a8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CreatedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 19b58623-1c65-4bf0-8966-bfad59340eac
+		summarizeBy: count
+		sourceColumn: CreatedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedUserName
+		dataType: string
+		lineageTag: 40050977-6947-46bc-a6ae-6338b6bbd3e9
+		summarizeBy: none
+		sourceColumn: CreatedUserName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RecommendationStatusUpdates = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    RecommendationStatusUpdates_table = Source{[Name="RecommendationStatusUpdates",Signature="table"]}[Data]
+				in
+				    RecommendationStatusUpdates_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

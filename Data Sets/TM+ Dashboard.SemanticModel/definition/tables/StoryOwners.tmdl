@@ -1,0 +1,43 @@
+table StoryOwners
+	lineageTag: 3032c57b-add7-4dfb-bea8-0c19c5bffd72
+
+	column StoryOwnerId
+		dataType: int64
+		formatString: 0
+		lineageTag: f2d9db2e-7587-41cc-a44f-c545b631d634
+		summarizeBy: count
+		sourceColumn: StoryOwnerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9131d8d9-be19-47b7-8cd2-13369e8c6baf
+		summarizeBy: none
+		sourceColumn: StoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerId
+		dataType: int64
+		formatString: 0
+		lineageTag: a51d21df-5185-4683-807e-0f8e26fefd96
+		summarizeBy: count
+		sourceColumn: OwnerId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StoryOwners = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StoryOwners_table = Source{[Name="StoryOwners",Signature="table"]}[Data]
+				in
+				    StoryOwners_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

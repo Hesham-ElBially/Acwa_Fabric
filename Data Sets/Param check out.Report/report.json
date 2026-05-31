@@ -1,0 +1,106 @@
+{
+  "config": "{\"version\":\"5.68\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Acwa_PPT_Template_English_V5_321777802359050913.png",
+            "path": "Acwa_PPT_Template_English_V5_321777802359050913.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "496d6a390378d3047538",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"07b384698381ce201017\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":105.72687224669603,\"z\":0,\"width\":1280,\"height\":614.625550660793}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"S4_Hana viw_Param2.WERKS_Plant\",\"active\":true},{\"queryRef\":\"S4_Hana viw_Param2.Plant Name\",\"active\":true},{\"queryRef\":\"S4_Hana viw_Param2.BUKRS_Company Code\"},{\"queryRef\":\"S4_Hana viw_Param2.T001_Company Name\"},{\"queryRef\":\"S4_Hana viw_Param2.LIFNR_Vendor Code\"},{\"queryRef\":\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\"}],\"Columns\":[{\"queryRef\":\"S4_Hana viw_Param2.Purchase Year\",\"active\":true}],\"Values\":[{\"queryRef\":\"Min(S4_Hana viw_Param2.EBELN_Purchasing Doc.)\"},{\"queryRef\":\"Sum(S4_Hana viw_Param2.Net Value SAR)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_Param2\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"WERKS_Plant\"},\"Name\":\"S4_Hana viw_Param2.WERKS_Plant\",\"NativeReferenceName\":\"Plant Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"LIFNR_Vendor Code\"},\"Name\":\"S4_Hana viw_Param2.LIFNR_Vendor Code\",\"NativeReferenceName\":\"Vendor Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"LFA1.NAME1_Vendor Name\"},\"Name\":\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\",\"NativeReferenceName\":\"Vendor Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Year\"},\"Name\":\"S4_Hana viw_Param2.Purchase Year\",\"NativeReferenceName\":\"Purchase Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BUKRS_Company Code\"},\"Name\":\"S4_Hana viw_Param2.BUKRS_Company Code\",\"NativeReferenceName\":\"Company Code\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EBELN_Purchasing Doc.\"}},\"Function\":2},\"Name\":\"Min(S4_Hana viw_Param2.EBELN_Purchasing Doc.)\",\"NativeReferenceName\":\"Purchasing Doc.\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Net Value SAR\"}},\"Function\":0},\"Name\":\"Sum(S4_Hana viw_Param2.Net Value SAR)\",\"NativeReferenceName\":\"Net Value SAR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"T001_Company Name\"},\"Name\":\"S4_Hana viw_Param2.T001_Company Name\",\"NativeReferenceName\":\"Company Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Plant Name\"},\"Name\":\"S4_Hana viw_Param2.Plant Name\",\"NativeReferenceName\":\"Plant Name\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"S4_Hana viw_Param2.WERKS_Plant\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"WERKS_Plant\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.Plant Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"Plant Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.BUKRS_Company Code\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"BUKRS_Company Code\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.T001_Company Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"T001_Company Name\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.LIFNR_Vendor Code\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"LIFNR_Vendor Code\"}}],\"isPinned\":true},{\"queryRefs\":[\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"S4_Hana viw_Param2\"}},\"Property\":\"LFA1.NAME1_Vendor Name\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'AEC1'\"}}],\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'SHUAA ENERGY'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'AEC0'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'SHUAA ENERGY'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'0000012015'\"}}],\"isToggled\":true}]}]}]}]},{\"identityValues\":[{\"Literal\":{\"Value\":\"'AED1'\"}}],\"isToggled\":true},{\"identityValues\":[{\"Literal\":{\"Value\":\"'AEF1'\"}}],\"isToggled\":true}]}}],\"columnProperties\":{\"S4_Hana viw_Param2.WERKS_Plant\":{\"displayName\":\"Plant Code\"},\"S4_Hana viw_Param2.LIFNR_Vendor Code\":{\"displayName\":\"Vendor Code\"},\"S4_Hana viw_Param2.BUKRS_Company Code\":{\"displayName\":\"Company Code\"},\"S4_Hana viw_Param2.LFA1.NAME1_Vendor Name\":{\"displayName\":\"Vendor Name\"},\"Min(S4_Hana viw_Param2.EBELN_Purchasing Doc.)\":{\"displayName\":\"Purchasing Doc.\"},\"Sum(S4_Hana viw_Param2.Net Value SAR)\":{\"displayName\":\"Net Value SAR\"},\"S4_Hana viw_Param2.T001_Company Name\":{\"displayName\":\"Company Name\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Tabular'\"}}}}}],\"subTotals\":[{\"properties\":{\"rowSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"columnSubtotals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 614.63,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 105.73,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"82b3d1f6a685a93e0754\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1,\"width\":245.868791500664,\"height\":105.5277556440903}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Min(S4_Hana viw_Param2.WERKS_Plant)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_Param2\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"WERKS_Plant\"}},\"Function\":2},\"Name\":\"Min(S4_Hana viw_Param2.WERKS_Plant)\",\"NativeReferenceName\":\"Count of WERKS_Plant\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"WERKS_Plant\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 105.53,
+          "width": 245.87,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Acwa_PPT Template English V5 3 (1).png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Acwa_PPT_Template_English_V5_321777802359050913.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "a5067db7b6a18aa3dc80",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"b147c6f103e766302aee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":80.91954022988506,\"y\":71.11111111111111,\"z\":0,\"width\":1199.0804597701149,\"height\":648.5823754789271}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\"},{\"queryRef\":\"S4_Hana viw_param_PR Approval check.Company Name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_param_PR Approval check\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Company Name\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Company Name\",\"NativeReferenceName\":\"Company Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Requistion\"},\"Name\":\"S4_Hana viw_param_PR Approval check.Purchase Requistion\",\"NativeReferenceName\":\"Purchase Requistion\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 648.58,
+          "width": 1199.08,
+          "x": 80.92,
+          "y": 71.11,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f59688cc404c0ed257dd",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"7d965be5eeda70b1b576\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":52.771929824561404,\"z\":0,\"width\":1280,\"height\":666.9473684210526}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana viw_scm_Param3.AEDAT_Created On\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.BEDAT_Document Date\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.BUKRS_Company Code\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.EBELN_Purchasing Doc.\"},{\"queryRef\":\"S4_Hana viw_scm_Param3.EBELP_Line Item\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"S4_Hana viw_scm_Param3\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"AEDAT_Created On\"},\"Name\":\"S4_Hana viw_scm_Param3.AEDAT_Created On\",\"NativeReferenceName\":\"AEDAT_Created On\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BEDAT_Document Date\"},\"Name\":\"S4_Hana viw_scm_Param3.BEDAT_Document Date\",\"NativeReferenceName\":\"BEDAT_Document Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"BUKRS_Company Code\"},\"Name\":\"S4_Hana viw_scm_Param3.BUKRS_Company Code\",\"NativeReferenceName\":\"BUKRS_Company Code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EBELN_Purchasing Doc.\"},\"Name\":\"S4_Hana viw_scm_Param3.EBELN_Purchasing Doc.\",\"NativeReferenceName\":\"EBELN_Purchasing Doc.\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EBELP_Line Item\"},\"Name\":\"S4_Hana viw_scm_Param3.EBELP_Line Item\",\"NativeReferenceName\":\"EBELP_Line Item\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 666.95,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 52.77,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

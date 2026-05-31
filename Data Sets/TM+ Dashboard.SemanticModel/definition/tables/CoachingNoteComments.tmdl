@@ -1,0 +1,75 @@
+table CoachingNoteComments
+	lineageTag: 499af04f-2061-4c5b-9476-02c4c1277dc6
+
+	column CoachingNoteCommentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bd06bef-491d-4352-ad38-4da349b64028
+		summarizeBy: count
+		sourceColumn: CoachingNoteCommentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoachingNoteId
+		dataType: int64
+		formatString: 0
+		lineageTag: d1ad3e75-4010-40bc-883b-4a81ef52b894
+		summarizeBy: none
+		sourceColumn: CoachingNoteId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Message
+		dataType: string
+		lineageTag: ece1b8c8-240e-4567-8a90-9287eb864162
+		summarizeBy: none
+		sourceColumn: Message
+
+		annotation SummarizationSetBy = Automatic
+
+	column CommentDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fdcaf0e9-759e-4d62-9671-23bdd0bd7dad
+		summarizeBy: none
+		sourceColumn: CommentDate
+
+		variation Variation
+			isDefault
+			relationship: bc26de83-e78d-4310-a6d0-c68928f581d8
+			defaultHierarchy: LocalDateTable_d67388b6-25a0-4fa1-ad5d-7d142a448b06.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CreatedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: b480fe03-61c8-416b-9c16-95ca83d88fe5
+		summarizeBy: count
+		sourceColumn: CreatedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedUserName
+		dataType: string
+		lineageTag: 015ac956-cdbb-42df-b413-664bfbfaa54f
+		summarizeBy: none
+		sourceColumn: CreatedUserName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CoachingNoteComments = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    CoachingNoteComments_table = Source{[Name="CoachingNoteComments",Signature="table"]}[Data]
+				in
+				    CoachingNoteComments_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

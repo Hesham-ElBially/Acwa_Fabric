@@ -1,0 +1,181 @@
+table 'A05 - OverallTimesheetReport'
+	lineageTag: 6112432b-e99f-4a31-a148-867569c15bf3
+	sourceLineageTag: [sch_TimeSheet].[A05 - OverallTimesheetReport]
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0a1bd9e1-7f83-48ce-8b57-e37c3bcaca70
+		sourceLineageTag: Year
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 823feae0-dcc3-4c48-812b-027c7ab3ade9
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: count
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0077ba1-b21e-44ee-9cb8-9f715242a741
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column cPK
+		dataType: string
+		sourceProviderType: varchar(14)
+		lineageTag: 6c6b9fb4-9910-4761-af26-5342a027d8cc
+		sourceLineageTag: cPK
+		summarizeBy: none
+		sourceColumn: cPK
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeType
+		dataType: string
+		sourceProviderType: varchar(14)
+		lineageTag: 23c931f6-978e-4c3b-974d-2da1db47d68a
+		sourceLineageTag: EmployeeType
+		summarizeBy: none
+		sourceColumn: EmployeeType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Admin Hrs (Chargeable)'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: a05ca125-3be5-4237-8358-4ed6f8ed9ae7
+		sourceLineageTag: Total Admin Hrs (Chargeable)
+		summarizeBy: sum
+		sourceColumn: Total Admin Hrs (Chargeable)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Admin Hrs (Non - Chargeable)'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: b13d5861-a904-4ea1-83a2-fb5587b960ee
+		sourceLineageTag: Total Admin Hrs (Non - Chargeable)
+		summarizeBy: sum
+		sourceColumn: Total Admin Hrs (Non - Chargeable)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Project Hrs'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: a6c6cf5e-de40-4749-9814-0832288ebda8
+		sourceLineageTag: Total Project Hrs
+		summarizeBy: sum
+		sourceColumn: Total Project Hrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Non Working Hrs'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: 4f9658dc-c5a8-4770-9380-e9df012f51c2
+		sourceLineageTag: Total Non Working Hrs
+		summarizeBy: sum
+		sourceColumn: Total Non Working Hrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Available Hrs'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: bfae49d0-c344-4d40-b0fe-25059559c0eb
+		sourceLineageTag: Total Available Hrs
+		summarizeBy: sum
+		sourceColumn: Total Available Hrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Chargeable Hrs'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: 5d8462b4-d04b-4aeb-9a5b-c2b7943cff6c
+		sourceLineageTag: Total Chargeable Hrs
+		summarizeBy: sum
+		sourceColumn: Total Chargeable Hrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Hrs'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: e688543f-287b-45ed-a3e5-97f4e9932e2f
+		sourceLineageTag: Total Hrs
+		summarizeBy: sum
+		sourceColumn: Total Hrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Utilization
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ba72590f-6d68-47bc-b29f-23520cf0398b
+		sourceLineageTag: Utilization
+		summarizeBy: sum
+		sourceColumn: Utilization
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Target
+		dataType: string
+		sourceProviderType: varchar(18)
+		lineageTag: 69dabd7e-efaa-473b-9a52-67128d012411
+		sourceLineageTag: Target
+		summarizeBy: none
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = Automatic
+
+	column cTarget
+		dataType: string
+		sourceProviderType: varchar(18)
+		lineageTag: 04564258-9863-4540-8ba4-459212e98f4d
+		sourceLineageTag: cTarget
+		summarizeBy: none
+		sourceColumn: cTarget
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A05 - OverallTimesheetReport' = entity
+		mode: directLake
+		source
+			entityName: A05 - OverallTimesheetReport
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

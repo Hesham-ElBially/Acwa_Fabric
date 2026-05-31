@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "PR PO Data Valid"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "69a35038-6382-b863-4088-df15186b7aae"
+  }
+}

@@ -1,0 +1,150 @@
+table StrategicRiskWorkflowHistory
+	lineageTag: ee77ce3b-113e-4a05-9f9d-11c21359495c
+
+	column StrategicRiskWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f9fb5fe-6213-4f62-8267-b40d4c2f00e5
+		summarizeBy: count
+		sourceColumn: StrategicRiskWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9292ff23-30c1-4bff-9826-310029bb4015
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: e7ff445a-22d7-4f06-9ddc-52a23e54e9d1
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskCode
+		dataType: string
+		lineageTag: f68caadc-52d3-40ec-bb59-409d4679fb26
+		summarizeBy: none
+		sourceColumn: StrategicRiskCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fc73b6d5-a743-4982-83c2-fc3384e0003f
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: 963b073a-81a5-4e0e-b6d9-9a67f8c42298
+			defaultHierarchy: LocalDateTable_3794a1d5-5b3c-4681-85ae-54b28769b9bf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e24fa03-e8d3-4766-983c-180bd6ec38be
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: d04c5b29-ba55-458d-bcdf-47fb072b4508
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d2ad538-79e9-4795-89aa-7383125c1bb9
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 7e713c40-af9f-40bd-be24-fdb2403efcb5
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 52a7447f-9af9-4d68-90d1-ded3c57ef148
+		summarizeBy: sum
+		sourceColumn: ReviewSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequiredSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 75e56fbb-d26d-4e3d-a72b-6fb327e2112c
+		summarizeBy: sum
+		sourceColumn: RequiredSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompletedSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a2e6aaa-c93b-4905-9c48-0a2002d9cc43
+		summarizeBy: sum
+		sourceColumn: CompletedSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: e2aaf933-5bae-4dee-ac8e-c15c7c993efe
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: e92be078-af52-4361-bc0f-68d46103b7f9
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: e16ff880-b0a4-4339-8d95-e6b1b9b344e1
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StrategicRiskWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskWorkflowHistory_table = Source{[Name="StrategicRiskWorkflowHistory",Signature="table"]}[Data]
+				in
+				    StrategicRiskWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

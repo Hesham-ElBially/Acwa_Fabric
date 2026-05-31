@@ -1,0 +1,51 @@
+table A05_02_01
+	lineageTag: 1ff9c8a1-1c62-49ef-b14e-41fca6c43929
+
+	column Year
+		formatString: 0
+		lineageTag: ab020f63-bc5b-47d0-929b-c3a0ee0483fb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: A05_02[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		formatString: 0
+		lineageTag: 5a7a62f1-5fed-4e26-8967-e60fe08b6ac3
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: A05_02[TimeEntryUserId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		lineageTag: 3eb4f2cb-0ea8-4fe0-9b1c-ec6ae4025926
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05_02[TimeEntryUser]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Project Hrs'
+		lineageTag: ab6b49ce-4363-4647-a9ef-80a69d883c00
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Total Project Hrs]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cPK = CONCATENATE(A05_02_01[Year], A05_02_01[TimeEntryUserId])
+		lineageTag: c42377fc-c6a9-455d-aa8c-01fa1e166e4f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A05_02_01 = calculated
+		mode: import
+		source = SUMMARIZE(A05_02, A05_02[Year], A05_02[TimeEntryUserId], A05_02[TimeEntryUser], "Total Project Hrs", SUM(A05_02[Project Hours]))
+
+	annotation PBI_Id = a8d986d144224af687c80ae03461f633
+

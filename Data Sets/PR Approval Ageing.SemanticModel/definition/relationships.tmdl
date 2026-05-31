@@ -1,0 +1,15 @@
+relationship ba09dffc-ceab-406a-8549-69ba398b3a3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_param_PR Approval check'.'PR Creation Date'
+	toColumn: LocalDateTable_9562c703-bce9-45f5-bcc4-70020b880163.Date
+
+relationship f6d311d1-296a-48da-95aa-82b41d4f15a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_param_PR Approval check'.'PR Approved Date'
+	toColumn: LocalDateTable_7ff33be0-19a7-4e0e-8680-322bbf36c07b.Date
+
+relationship dfff3cd1-ef37-4ecf-8323-d4d1eeaeab8b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_param_PR Approval check'.'PR Approved Date Time'
+	toColumn: LocalDateTable_63dde406-a747-4878-9953-a8fbe89df8d4.Date
+

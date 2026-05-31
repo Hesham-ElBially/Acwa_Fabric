@@ -1,0 +1,206 @@
+table 'A12_07 - Auditable Units with all score  - ProjectCompanyCountryOfiice'
+	lineageTag: aa4f2db3-1adc-47b1-bb22-25857972f757
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: a538b39c-54f6-490e-88e7-ca16b5a35068
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.EntityTitle'
+		dataType: string
+		lineageTag: 7caaf81b-5cf5-43b1-8511-44cbc8b1c508
+		summarizeBy: none
+		sourceColumn: Entities.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath'
+		dataType: string
+		lineageTag: d3062ebc-475d-47a7-8b60-279100699c09
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgSort'
+		dataType: string
+		lineageTag: 9939460a-49a7-4cca-b820-3a2aae421f68
+		summarizeBy: none
+		sourceColumn: Entities.OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		lineageTag: 2a11c759-92ba-41d4-99f0-4491cb01edff
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		lineageTag: bf0a505c-3323-4989-b259-f94e2a96b756
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		lineageTag: f9e4a04e-adbf-47b0-925b-c106717eb9ea
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Significance
+		dataType: double
+		lineageTag: c69996a4-5422-45dd-9ecc-26e1dccaab0f
+		summarizeBy: sum
+		sourceColumn: Significance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Auditor''s Judgement'
+		dataType: double
+		lineageTag: ad0328c1-6361-4058-b23b-e5f1a30427c5
+		summarizeBy: sum
+		sourceColumn: Auditor's Judgement
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Reporting Level'
+		dataType: string
+		lineageTag: be605c92-818b-41a6-ac2c-286e4b6e1733
+		summarizeBy: none
+		sourceColumn: Reporting Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Portfolio Delivery Lead'
+		dataType: string
+		lineageTag: 8d8a021a-d676-4817-b346-1962d8bc3327
+		summarizeBy: none
+		sourceColumn: Portfolio Delivery Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auditable Unit Priority Score'
+		dataType: string
+		lineageTag: 658a002e-6e6f-497c-a2fb-e17beb0470c8
+		summarizeBy: none
+		sourceColumn: Auditable Unit Priority Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auditable Unit Prioritization Score'
+		dataType: string
+		lineageTag: 5a3f4acf-611b-44d8-83b9-dc71c07189bc
+		summarizeBy: none
+		sourceColumn: Auditable Unit Prioritization Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auditable Unit Prioritization'
+		dataType: string
+		lineageTag: c4738279-8fd1-4f87-9757-bbc7abd9ff6b
+		summarizeBy: none
+		sourceColumn: Auditable Unit Prioritization
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: c016f4f0-f9c6-4371-aa64-cc2ac7b6951b
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 4f33d9e0-1e21-4a47-b0ca-89ab609dc770
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MC Member'
+		dataType: string
+		lineageTag: 7aef1d0b-311c-4e30-8a8a-12c2c4cab414
+		summarizeBy: none
+		sourceColumn: MC Member
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood - Round'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7de7f8a1-131b-417a-ba86-86ac296a48e8
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood - Round
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Impact - Round'
+		dataType: int64
+		formatString: 0
+		lineageTag: e4bef4bd-3dc3-4677-ad26-1c56ee456157
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact - Round
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Calc Score - Round'
+		dataType: string
+		lineageTag: 0b6a18c8-7746-4b28-a87c-d159628604f1
+		summarizeBy: none
+		sourceColumn: Avg. Residual Calc Score - Round
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A12_07 - Auditable Units with all score  - ProjectCompanyCountryOfiice' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A12_05 - Auditable Units - ProjectCompanyCountryOffice", {"EntityId"}, #"A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice", {"EntityId"}, "A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice", JoinKind.LeftOuter),
+				    #"Expanded A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice" = Table.ExpandTableColumn(Source, "A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice", {"Avg. Residual Likelihood", "Avg. Residual Impact", "Avg. Residual Calc Score"}, {"A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice.Avg. Residual Likelihood", "A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice.Avg. Residual Impact", "A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice.Avg. Residual Calc Score"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Expanded A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice",{"EntityAssessmentId"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Columns", {"EntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities" = Table.ExpandTableColumn(#"Merged Queries", "Entities", {"EntityTitle", "OrgPath", "OrgSort"}, {"Entities.EntityTitle", "Entities.OrgPath", "Entities.OrgSort"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded Entities",{{"A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice.Avg. Residual Likelihood", "Avg. Residual Likelihood"}, {"A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice.Avg. Residual Impact", "Avg. Residual Impact"}, {"A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice.Avg. Residual Calc Score", "Avg. Residual Calc Score"}, {"Category3", "Reporting Level"}, {"MultiSelectCategory2", "Portfolio Delivery Lead"}, {"NumericValue4", "Significance"}, {"NumericValue6", "Auditor's Judgement"}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Renamed Columns",{"EntityTitle", "AssessmentId", "AssessmentTitle", "Date2", "Date3", "Date4", "Date5", "Date6", "YesNo1", "YesNo2", "YesNo3", "YesNo4", "YesNo5", "AccountBalance", "NumericValue1", "NumericValue2", "NumericValue3", "NumericValue5", "NumericValue7", "NumericValue8", "NumericValue9", "NumericValue10", "NumericValue11", "NumericValue12", "NumericValue13", "NumericValue14", "NumericValue15", "NumericValue16", "NumericValue17", "NumericValue18", "NumericValue19", "NumericValue20", "NumericValue21", "NumericValue22", "NumericValue23", "NumericValue24", "NumericValue25", "Category1Id", "Category2Id","Category3Id", "Category4Id", "Category5Id", "Category5", "SAPeriodId", "SAPeriod", "MultiSelectCategory2Id", "MultiSelectCategory3Id", "MultiSelectCategory3", "MultiSelectCategory4Id", "MultiSelectCategory4", "MultiSelectCategory5Id", "MultiSelectCategory5", "MultiSelectCategory6Id", "MultiSelectCategory6"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns1",{"EntityId", "Entities.EntityTitle", "Entities.OrgPath", "Entities.OrgSort", "Avg. Residual Likelihood", "Avg. Residual Impact", "Significance", "Auditor's Judgement", "Reporting Level", "Portfolio Delivery Lead"}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Reordered Columns",{"EntityId", "Entities.EntityTitle", "Entities.OrgPath", "Entities.OrgSort", "Avg. Residual Likelihood", "Avg. Residual Impact", "Avg. Residual Calc Score", "Significance", "Auditor's Judgement", "Reporting Level", "Portfolio Delivery Lead"}),
+				    #"Inserted Round" = Table.AddColumn(#"Reordered Columns1", "Round", each Number.Round([Avg. Residual Likelihood]), Int64.Type),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Round",{{"Round", "Avg. Residual Likelihood - Round"}}),
+				    #"Inserted Round1" = Table.AddColumn(#"Renamed Columns1", "Round1", each Number.Round([Avg. Residual Impact]), Int64.Type),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Inserted Round1",{{"Round1", "Avg. Residual Impact - Round"}}),
+				    #"Added Custom1" = Table.AddColumn(#"Renamed Columns2", "Avg. Residual Calc Score - Round", each [#"Avg. Residual Likelihood - Round"]*[#"Avg. Residual Impact - Round"]),
+				    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "Auditable Unit Priority Score", each [#"Significance"]*[#"Auditor's Judgement"]),
+				    #"Added Custom3" = Table.AddColumn(#"Added Custom2", "Auditable Unit Prioritization Score", each [#"Avg. Residual Calc Score - Round"]+[Auditable Unit Priority Score]),
+				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom3", "Auditable Unit Prioritization", each if [Auditable Unit Prioritization Score] >= 35 then "High" else if [Auditable Unit Prioritization Score] <= 20 then "Low" else "Medium"),
+				    #"Sorted Rows" = Table.Sort(#"Added Conditional Column",{{"Entities.OrgSort", Order.Ascending}}),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Sorted Rows",{{"Category1", "Region"}, {"Category2", "Country"}, {"Category4", "MC Member"}})
+				in
+				    #"Renamed Columns3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

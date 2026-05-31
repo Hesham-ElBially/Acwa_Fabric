@@ -1,0 +1,33 @@
+table StoryReportingCategories
+	lineageTag: 3b994b0f-6e7b-4a30-80e9-57d41b23ea6c
+
+	column ReportingCategoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: b9f49f91-7b27-4f20-bd0d-d0047cdf6a05
+		summarizeBy: none
+		sourceColumn: ReportingCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoryStateName
+		dataType: string
+		lineageTag: 81ebdd42-388c-4489-a9d1-1ff6e3d0a717
+		summarizeBy: none
+		sourceColumn: StoryStateName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StoryReportingCategories = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StoryReportingCategories_table = Source{[Name="StoryReportingCategories",Signature="table"]}[Data]
+				in
+				    StoryReportingCategories_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

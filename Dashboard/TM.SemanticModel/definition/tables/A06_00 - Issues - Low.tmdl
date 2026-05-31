@@ -1,0 +1,34 @@
+table 'A06_00 - Issues - Low'
+	lineageTag: 4b90f38f-3d2b-4a37-a1c6-9a29f1a56419
+	sourceLineageTag: [sch_TeamMate].[A06_00 - Issues - Low]
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d5ced751-5784-4de9-aa24-63345c027749
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Low
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e3679e16-8366-4225-bccb-dbf827d9862a
+		sourceLineageTag: Low
+		summarizeBy: none
+		sourceColumn: Low
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A06_00 - Issues - Low' = entity
+		mode: directLake
+		source
+			entityName: A06_00 - Issues - Low
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,69 @@
+table EntityScoringCalculations
+	lineageTag: db22ec44-db8b-4105-a320-d98b23f15430
+
+	column EntityScoringCalculatedId
+		dataType: int64
+		formatString: 0
+		lineageTag: fb4f30ab-ae19-4e62-a8b4-054e464bd3c0
+		summarizeBy: count
+		sourceColumn: EntityScoringCalculatedId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0790f35f-e263-4555-8be7-f7bb7278af7e
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityTitle
+		dataType: string
+		lineageTag: 47a4c813-3d4f-4f62-a4bb-9c5c45a9aed2
+		summarizeBy: none
+		sourceColumn: EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreType
+		dataType: string
+		lineageTag: cb79c9da-ad2e-4994-9909-75add0834969
+		summarizeBy: none
+		sourceColumn: CalculatedScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreValue
+		dataType: double
+		lineageTag: 16e0c2f4-7319-4a48-b90f-b3b5212e0805
+		summarizeBy: sum
+		sourceColumn: CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: ea883cb6-cd70-4ce2-9fa5-574c9929e383
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EntityScoringCalculations = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    EntityScoringCalculations_table = Source{[Name="EntityScoringCalculations",Signature="table"]}[Data]
+				in
+				    EntityScoringCalculations_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

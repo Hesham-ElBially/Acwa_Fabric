@@ -1,0 +1,34 @@
+table 'A00 - Country Order'
+	lineageTag: f00091ae-cb73-49fa-9e24-0e6af3fbeb37
+	sourceLineageTag: [sch_TeamMate].[A00 - Country Order]
+
+	column Country
+		dataType: string
+		sourceProviderType: varchar(12)
+		lineageTag: c8eb5e72-1e98-4b6c-b77c-7046be18411f
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d145a335-79ae-454a-9d41-e1a4b680e3be
+		sourceLineageTag: Order
+		summarizeBy: none
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Country Order' = entity
+		mode: directLake
+		source
+			entityName: A00 - Country Order
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

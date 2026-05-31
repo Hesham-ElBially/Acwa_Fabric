@@ -1,0 +1,122 @@
+table SelfAssessmentItemWorkflowHistory
+	lineageTag: ca015dc5-f682-4e2a-b6e8-53bd39addccb
+
+	column SelfAssessmentItemWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 35c3afe5-97fb-4879-837b-583a7ecbe01a
+		summarizeBy: count
+		sourceColumn: SelfAssessmentItemWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentItemId
+		dataType: int64
+		formatString: 0
+		lineageTag: cc439038-2716-47bb-aabe-2d4ee8d6dd6d
+		summarizeBy: count
+		sourceColumn: SelfAssessmentItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 16b1801a-8e20-4c09-9cfb-4a059e916a98
+		summarizeBy: none
+		sourceColumn: SelfAssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentTitle
+		dataType: string
+		lineageTag: 5d842109-cd54-4a1e-98a9-6d7ffe4b8e50
+		summarizeBy: none
+		sourceColumn: SelfAssessmentTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fbf19f93-f8ba-4cf6-8eb7-9f99b8a0c384
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: b756ae8c-f3d8-47cd-97f2-5a4e6203e780
+			defaultHierarchy: LocalDateTable_980cb2be-e88a-4527-a27c-ccbb0af2eb4a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d8dfca5-0646-4786-bd19-ee86df01b9b6
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: 64478757-948f-4503-a796-57b3b8b88d52
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: a7cd4234-e34d-4f62-987e-39c20e445f59
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 38114ce8-c38c-49f0-a661-5f8c877a3655
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b63dcc9-4350-4620-942f-aee486dc8fd2
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: f023a7e7-376f-47de-94c0-beeb51784be5
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: 28606887-a295-45ec-8da8-5c735157b38a
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SelfAssessmentItemWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    SelfAssessmentItemWorkflowHistory_table = Source{[Name="SelfAssessmentItemWorkflowHistory",Signature="table"]}[Data]
+				in
+				    SelfAssessmentItemWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+

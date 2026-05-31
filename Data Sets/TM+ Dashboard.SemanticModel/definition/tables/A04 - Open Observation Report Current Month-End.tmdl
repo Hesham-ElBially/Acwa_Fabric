@@ -1,0 +1,368 @@
+table 'A04 - Open Observation Report Current Month-End'
+	lineageTag: 67c71d10-5efe-407d-b188-c16478cdc63c
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a07f5ff-1fa0-43b7-9be1-af7d0f5371c0
+		summarizeBy: count
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectRelationshipId
+		dataType: int64
+		formatString: 0
+		lineageTag: 098079be-2ba7-460b-ad3e-099b1ea12e40
+		summarizeBy: count
+		sourceColumn: ObjectRelationshipId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 53f1c734-aa9c-4795-93d0-a86fe70955e7
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		lineageTag: 30f92846-cbb6-48aa-8241-1fd60ceb1cba
+		summarizeBy: none
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8955c335-7660-4087-8548-7422eb9173a7
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationTitle'
+		dataType: string
+		lineageTag: 164689c1-0a46-48ab-bb23-c7c5ce7d098c
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationState'
+		dataType: string
+		lineageTag: 9beab4ca-9f56-4b85-b44f-b8b78cc1c918
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category1'
+		dataType: string
+		lineageTag: 9c575f3f-5691-459c-bd0d-1277d2102263
+		summarizeBy: none
+		sourceColumn: Recommendations.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category2'
+		dataType: string
+		lineageTag: e9c60f0e-5f5c-4c28-8488-5104d9a84062
+		summarizeBy: none
+		sourceColumn: Recommendations.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.DueDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4cb5af30-f000-463c-b182-b796d60bf8b1
+		summarizeBy: none
+		sourceColumn: Recommendations.DueDate
+
+		variation Variation
+			isDefault
+			relationship: 01825f98-aab7-43ba-aaaf-d499b46300b3
+			defaultHierarchy: LocalDateTable_0e1cbc0f-4a90-43b0-9fa9-abb193139b5c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Recommendations.RevisedDueDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d26e409e-e821-4ae0-8f77-c1d608cc0fc2
+		summarizeBy: none
+		sourceColumn: Recommendations.RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: 209a353d-9b84-4d86-81a3-c4efb5093eb7
+			defaultHierarchy: LocalDateTable_7783facd-4dcb-4242-b206-81803b786495.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		lineageTag: d815d21f-876a-41eb-9cd0-1c49121748cb
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		lineageTag: 5f41bc3c-ce14-484c-a1f6-9dd45c3437ff
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category1'
+		dataType: string
+		lineageTag: 6b8ba37f-d7b3-4af0-9878-98062b3f78ba
+		summarizeBy: none
+		sourceColumn: Projects.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category11'
+		dataType: string
+		lineageTag: 59ebc78d-5ec6-414c-83ee-476b4686bf93
+		summarizeBy: none
+		sourceColumn: Projects.Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IssueTitle'
+		dataType: string
+		lineageTag: a35b04e8-1d1d-4f2b-835a-ddc7017b16d1
+		summarizeBy: none
+		sourceColumn: Issues.IssueTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.ReleaseDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 669d2278-fb41-40f7-bf17-8ca56958cd4d
+		summarizeBy: none
+		sourceColumn: Issues.ReleaseDate
+
+		variation Variation
+			isDefault
+			relationship: f97b68cc-9e40-4a69-9886-d5df6168d893
+			defaultHierarchy: LocalDateTable_bb4140a9-af67-4efe-b733-91ebfba9a670.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Issues.IsReleased'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 115ce604-e343-4a8f-99c7-431aba9fd345
+		summarizeBy: none
+		sourceColumn: Issues.IsReleased
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.Category2'
+		dataType: string
+		lineageTag: 606036aa-49ed-4702-a601-cc92f2c774a5
+		summarizeBy: none
+		sourceColumn: Issues.Category2
+		sortByColumn: 'Rating Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SecurityAssignmentsAggregated.RoleTitle'
+		dataType: string
+		lineageTag: 96d2bb20-0336-4824-9c41-c15b7da430e6
+		summarizeBy: none
+		sourceColumn: SecurityAssignmentsAggregated.RoleTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SecurityAssignmentsAggregated.AssignedUserNames'
+		dataType: string
+		lineageTag: a09ac8e7-194e-44e6-8dde-e2e8523b58e6
+		summarizeBy: none
+		sourceColumn: SecurityAssignmentsAggregated.AssignedUserNames
+
+		annotation SummarizationSetBy = Automatic
+
+	column cToday = TODAY()
+		formatString: General Date
+		lineageTag: 1ea1808c-a14a-4d0b-866b-0886ca830bea
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: e2218bdb-05bf-48a8-a2e8-f3be9706e900
+			defaultHierarchy: LocalDateTable_1bb0ed74-7212-4ace-b5b7-dfe6c29ee26d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column cReportingCutOff = EOMONTH('A04 - Open Observation Report Current Month-End'[cToday].[Date], 0)
+		formatString: Short Date
+		lineageTag: 36091546-49dc-4f3b-a649-7f3b9882fee2
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 61933c89-7d70-491d-87f6-0f268bd87b66
+			defaultHierarchy: LocalDateTable_83f3f93f-d563-4f82-b6dd-c39d15a1a7d2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Action_Due_Date__For_Ageing_ = if('A04 - Open Observation Report Current Month-End'[Recommendations.RevisedDueDate]>'A04 - Open Observation Report Current Month-End'[Recommendations.DueDate], 'A04 - Open Observation Report Current Month-End'[Recommendations.RevisedDueDate], 'A04 - Open Observation Report Current Month-End'[Recommendations.DueDate])
+		formatString: Short Date
+		lineageTag: 5cfb52c1-be76-4023-a122-f93995645559
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 97fc58bd-d9cd-4917-9f49-a9598a2bc94f
+			defaultHierarchy: LocalDateTable_9910f6d9-b6ee-4167-9b8e-68903d3f7673.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ageing = DATEDIFF('A04 - Open Observation Report Current Month-End'[Action_Due_Date__For_Ageing_].[Date], 'A04 - Open Observation Report Current Month-End'[cReportingCutOff].[Date], DAY)
+		formatString: 0
+		lineageTag: edb16f88-c617-44c2-82ec-e3f1f82866ba
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ageing_Buckets = ```
+			SWITCH( 
+			                        TRUE,
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "01. Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] <=30), "01. Less Than or Equal to 30 days",
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "01. Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] <=60), "02. Between 31 and 60 days",
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "01. Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] <=90), "03. Between 61 and 90 days",
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "01. Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] >= 91), "04. Over 90 days",
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "02. Non-Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] >=-30), "05. This observation is going to become Overdue Less Than or Equal to 30 days",
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "02. Non-Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] >=-60), "06. This observation is going to become Overdue Between 31 and 60 days",
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "02. Non-Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] >=-90), "07. This observation is going to become Overdue Between 61 and 90 days",
+			                        ('A04 - Open Observation Report Current Month-End'[Final_Status] = "02. Non-Overdue") && ('A04 - Open Observation Report Current Month-End'[Ageing] <= -90), "08. This observation is going to become Overdue in 90+ days",
+			                        "09. Default"
+			)
+			```
+		lineageTag: 7f266156-419d-41b6-a71a-0fa9f0c55f03
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Final_Status =
+			SWITCH(
+			                        TRUE,
+			                        'A04 - Open Observation Report Current Month-End'[Ageing] > 0, "01. Overdue",
+			                        'A04 - Open Observation Report Current Month-End'[Ageing] <= 0, "02. Non-Overdue",
+			                        "Default")
+		lineageTag: 18da3172-6bee-47ce-bd04-dd0cfa7516a7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI A Status' =
+			SWITCH(
+			                    TRUE,
+			                    'A04 - Open Observation Report Current Month-End'[Issues.Category2] = "High" && 'A04 - Open Observation Report Current Month-End'[Ageing] >= 31, "01. KPI A Breach",
+			                    'A04 - Open Observation Report Current Month-End'[Issues.Category2] = "Significant" && 'A04 - Open Observation Report Current Month-End'[Ageing] >= 61, "01. KPI A Breach",
+			                    'A04 - Open Observation Report Current Month-End'[Issues.Category2] = "Medium" && 'A04 - Open Observation Report Current Month-End'[Ageing] >= 91, "01. KPI A Breach",
+			                    "02. KPI A Non-Breach")
+		lineageTag: 4e53f92a-258d-487a-8f7c-7e57449957d8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column isReported = 'A04 - Open Observation Report Current Month-End'[Issues.ReleaseDate].[Date] -'A04 - Open Observation Report Current Month-End'[cReportingCutOff].[Date]
+		dataType: int64
+		formatString: 0
+		lineageTag: 76fa07a4-aaf5-4163-86d9-213d68b76586
+		summarizeBy: sum
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RecommendationTexts.Text2'
+		dataType: string
+		lineageTag: 3ff4c192-d3cf-43aa-b949-2f9e4537bbf8
+		summarizeBy: none
+		sourceColumn: RecommendationTexts.Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RecommendationTexts.Text1'
+		dataType: string
+		lineageTag: 67e56731-2fde-4cec-a160-f47ef9f33949
+		summarizeBy: none
+		sourceColumn: RecommendationTexts.Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.LocationCategory'
+		dataType: string
+		lineageTag: 4cbb8a51-a089-43dd-9f87-84bc86c07799
+		summarizeBy: none
+		sourceColumn: Projects.LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order' = RELATED('A00 - Rating Order'[Order])
+		formatString: 0
+		lineageTag: bc72d1f2-3d24-4374-a6d7-32dcc2ba929e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category13'
+		dataType: string
+		lineageTag: 1507cc77-afe5-4bd4-8598-6499977c09f1
+		summarizeBy: none
+		sourceColumn: Projects.Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A04 - Open Observation Report Current Month-End' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(ObjectRelationships_table,{"DimensionId", "EntityId", "AssessmentId", "StrategicRiskId", "RiskId", "ControlId", "ProcedureId"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns",{"ObjectiveId", "ObjectRelationshipId", "ProjectId", "IssueId", "RecommendationId", "FolderId", "Dimension", "Entity", "Assessment", "Project", "StrategicRisk", "Risk", "Control", "Objective", "Procedure", "Issue", "Recommendation", "Folder"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns",{"FolderId"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Columns1", {"RecommendationId"}, Recommendations, {"RecommendationId"}, "Recommendations", JoinKind.LeftOuter),
+				    #"Expanded Recommendations" = Table.ExpandTableColumn(#"Merged Queries", "Recommendations", {"RecommendationTitle", "RecommendationState", "Category1", "Category2", "DueDate", "RevisedDueDate"}, {"Recommendations.RecommendationTitle", "Recommendations.RecommendationState", "Recommendations.Category1", "Recommendations.Category2", "Recommendations.DueDate", "Recommendations.RevisedDueDate"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded Recommendations", each ([Recommendations.RecommendationState] <> null and [Recommendations.RecommendationState] <> "Closed")),
+				    #"Merged Queries1" = Table.NestedJoin(#"Filtered Rows", {"ProjectId"}, Projects, {"ProjectId"}, "Projects", JoinKind.LeftOuter),
+				    #"Expanded Projects" = Table.ExpandTableColumn(#"Merged Queries1", "Projects", {"ProjectTitle", "ProjectCode", "Category1", "LocationCategory", "Category11", "Category13"}, {"Projects.ProjectTitle", "Projects.ProjectCode", "Projects.Category1", "Projects.LocationCategory", "Projects.Category11", "Projects.Category13"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded Projects", {"IssueId"}, Issues, {"IssueId"}, "Issues", JoinKind.LeftOuter),
+				    #"Expanded Issues" = Table.ExpandTableColumn(#"Merged Queries2", "Issues", {"IssueTitle", "ReleaseDate", "IsReleased", "Category2"}, {"Issues.IssueTitle", "Issues.ReleaseDate", "Issues.IsReleased", "Issues.Category2"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Expanded Issues", each ([Issues.Category2] = "High" or [Issues.Category2] = "Medium" or [Issues.Category2] = "Significant")),
+				    #"Filtered Rows2" = Table.SelectRows(#"Filtered Rows1", each [Issues.IsReleased] = true),
+				    #"Merged Queries3" = Table.NestedJoin(#"Filtered Rows2", {"RecommendationId"}, SecurityAssignmentsAggregated, {"RecommendationId"}, "SecurityAssignmentsAggregated", JoinKind.LeftOuter),
+				    #"Expanded SecurityAssignmentsAggregated" = Table.ExpandTableColumn(#"Merged Queries3", "SecurityAssignmentsAggregated", {"RoleTitle", "AssignedUserNames"}, {"SecurityAssignmentsAggregated.RoleTitle", "SecurityAssignmentsAggregated.AssignedUserNames"}),
+				    #"Filtered Rows3" = Table.SelectRows(#"Expanded SecurityAssignmentsAggregated", each ([SecurityAssignmentsAggregated.RoleTitle] = "Business Contact")),
+				    #"Merged Queries4" = Table.NestedJoin(#"Filtered Rows3", {"RecommendationId"}, RecommendationTexts, {"RecommendationId"}, "RecommendationTexts", JoinKind.LeftOuter),
+				    #"Expanded RecommendationTexts" = Table.ExpandTableColumn(#"Merged Queries4", "RecommendationTexts", {"Text1", "Text2"}, {"RecommendationTexts.Text1", "RecommendationTexts.Text2"})
+				in
+				    #"Expanded RecommendationTexts"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

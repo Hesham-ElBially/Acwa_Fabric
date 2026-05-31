@@ -1,0 +1,56 @@
+table 'A08 - AAL Issuance Date'
+	lineageTag: caf1f1e8-cf1b-417e-818c-427c164fe7f7
+	sourceLineageTag: [sch_TeamMate].[A08 - AAL Issuance Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 682b1120-806e-4c18-a012-37fbd8386c15
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 48060dde-212f-41de-8760-5fb74b3c210e
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - AAL Issuance Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 296b76c2-ca03-4190-be77-fe75af442677
+		sourceLineageTag: A08_00 - AAL Issuance Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - AAL Issuance Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - AAL Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 2957d366-238c-4262-9b6c-21f619bb8aaa
+		sourceLineageTag: A08_00 - AAL Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - AAL Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - AAL Issuance Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - AAL Issuance Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

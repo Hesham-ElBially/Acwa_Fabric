@@ -1,0 +1,53 @@
+table A05_01
+	lineageTag: 1015cccd-9018-4893-97b2-f2553aeefceb
+
+	column Year
+		formatString: 0
+		lineageTag: 670e87a4-750b-476f-9893-f21c0fe01d37
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: LocalDateTable_d4d2845e-d92d-4f72-9d74-d44bc49e9589[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		lineageTag: 6720f2a1-1a81-4d1d-9d4b-47f3e6305167
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUser]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TimeAdmins.TimeAdminName'
+		lineageTag: 905efa5f-1ece-4720-8a13-fb97e639a500
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeAdmins.TimeAdminName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		formatString: 0
+		lineageTag: fe2010b6-bb9c-4469-9407-2ffb8e894b7d
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUserId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Admin Hours (Chargeable)'
+		lineageTag: ccda07ee-078f-4313-abfb-aed5d3472e47
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Admin Hours (Chargeable)]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition A05_01 = calculated
+		mode: import
+		source = FILTER (SUMMARIZE('A05 - Timesheet', 'A05 - Timesheet'[DateOfEntry].[Year], 'A05 - Timesheet'[TimeEntryUserId], 'A05 - Timesheet'[TimeEntryUser], 'A05 - Timesheet'[TimeAdmins.TimeAdminName], "Admin Hours (Chargeable)",sum('A05 - Timesheet'[Hours])),'A05 - Timesheet'[TimeAdmins.TimeAdminName] = "01 - BAC Work (Chargeable)" || 'A05 - Timesheet'[TimeAdmins.TimeAdminName] = "02 - IA Follow-Up (Chargeable)" || 'A05 - Timesheet'[TimeAdmins.TimeAdminName] =  "03 - Investigation (Chargeable)")
+
+	annotation PBI_Id = dffee89e2af247b59bab039172160655
+

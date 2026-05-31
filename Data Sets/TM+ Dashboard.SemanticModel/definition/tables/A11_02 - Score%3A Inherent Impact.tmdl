@@ -1,0 +1,115 @@
+table 'A11_02 - Score: Inherent Impact'
+	lineageTag: 6a5ed578-18fb-4fcf-a83c-0d7a96b84f31
+
+	column StrategicRiskScoreId
+		dataType: int64
+		formatString: 0
+		lineageTag: 91112dc0-a782-46f8-82bc-e767625ebe12
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8797b004-2df9-44cb-a852-71ddc0329293
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: 04c9483b-2160-42cb-be36-5f0af1bb9894
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableId
+		dataType: int64
+		formatString: 0
+		lineageTag: df0ec535-89cb-4971-a6e2-b96613f03003
+		summarizeBy: count
+		sourceColumn: VariableId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableTitle
+		dataType: string
+		lineageTag: 71c4d5d8-f7ca-41c3-a6b4-9f296149f465
+		summarizeBy: none
+		sourceColumn: VariableTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreType
+		dataType: string
+		lineageTag: 25e01cc8-ac4f-451f-b7c2-a922e781052a
+		summarizeBy: none
+		sourceColumn: ScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetricTitle
+		dataType: string
+		lineageTag: bbdc30d8-0861-4fb7-a563-c78eba368874
+		summarizeBy: none
+		sourceColumn: MetricTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreLabel
+		dataType: string
+		lineageTag: 7a750ae9-8d66-4229-89b8-55a15f133d13
+		summarizeBy: none
+		sourceColumn: ScoreLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreValue
+		dataType: double
+		lineageTag: 65fbedb5-158a-4807-9d95-2687b12283a1
+		summarizeBy: sum
+		sourceColumn: ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 353199db-bccb-48a5-9def-231335ef5f92
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: d00219e0-77b5-43c5-8a9f-df3685e236d1
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11_02 - Score: Inherent Impact' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskScoringValuesAssessmentProject_table = Source{[Name="StrategicRiskScoringValuesAssessmentProject",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(StrategicRiskScoringValuesAssessmentProject_table, each ([AssessmentId] = 31)),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"StrategicRisk"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns",{"StrategicRiskScoreId", "StrategicRiskId", "StrategicRiskTitle", "VariableId", "VariableTitle", "ScoreType", "MetricTitle", "ScoreLabel", "ScoreValue", "AssessmentId", "ProjectId"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Reordered Columns", each ([ScoreType] = "Inherent") and ([MetricTitle] = "Impact"))
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

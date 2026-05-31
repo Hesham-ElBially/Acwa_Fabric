@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "PR Approval Ageing"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b6a891b2-5720-b53e-449f-32183a333987"
+  }
+}

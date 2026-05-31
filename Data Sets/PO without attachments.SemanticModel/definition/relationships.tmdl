@@ -1,0 +1,25 @@
+relationship ba09dffc-ceab-406a-8549-69ba398b3a3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_param_PR Approval check'.'PR Creation Date'
+	toColumn: LocalDateTable_9562c703-bce9-45f5-bcc4-70020b880163.Date
+
+relationship f6d311d1-296a-48da-95aa-82b41d4f15a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_param_PR Approval check'.'PR Approved Date'
+	toColumn: LocalDateTable_7ff33be0-19a7-4e0e-8680-322bbf36c07b.Date
+
+relationship dfff3cd1-ef37-4ecf-8323-d4d1eeaeab8b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_param_PR Approval check'.'PR Approved Date Time'
+	toColumn: LocalDateTable_63dde406-a747-4878-9953-a8fbe89df8d4.Date
+
+relationship 446bb478-ad1b-4171-9619-0cce2b3b68b0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_scm_Param3'.'BEDAT_Document Date'
+	toColumn: LocalDateTable_7dc4aab4-fdaf-4a83-8108-988906e540d4.Date
+
+relationship 1afde16e-9870-419c-bd32-df0139dce72b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'S4_Hana viw_scm_Param3'.'AEDAT_Created On'
+	toColumn: LocalDateTable_51f2fb8f-2977-49e4-9a86-848267d5aa3a.Date
+

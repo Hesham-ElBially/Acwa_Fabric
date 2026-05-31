@@ -1,0 +1,56 @@
+table 'A08 - FieldWork Scheduled Start Date'
+	lineageTag: e957548a-a964-4f35-b084-d7a12076e4fe
+	sourceLineageTag: [sch_TeamMate].[A08 - FieldWork Scheduled Start Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: aae5d8d9-af5e-489b-b752-15a7d63dd774
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4a5e94d7-6f9f-4ac0-b45e-903d4b4bd0a1
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledStartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: bdb1b537-da9a-456d-bd79-90d5d1539def
+		sourceLineageTag: ScheduledStartDate
+		summarizeBy: none
+		sourceColumn: ScheduledStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fb2b0041-8153-40ac-8a11-cb083416d889
+		sourceLineageTag: ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - FieldWork Scheduled Start Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - FieldWork Scheduled Start Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

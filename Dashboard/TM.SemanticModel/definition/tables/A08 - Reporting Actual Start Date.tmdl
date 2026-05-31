@@ -1,0 +1,56 @@
+table 'A08 - Reporting Actual Start Date'
+	lineageTag: 529b5f10-60ad-4b3d-ad22-af54b1f55b41
+	sourceLineageTag: [sch_TeamMate].[A08 - Reporting Actual Start Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 29dc0834-633e-4fcf-a41b-186878dcae46
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1fc27794-201b-4d97-8c83-4d94d991eeec
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 172367b4-64a1-45ae-b061-ded6213177e0
+		sourceLineageTag: ProjectPhaseName
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActStartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 1d418656-6cc4-47ac-94ad-db63b0c41929
+		sourceLineageTag: ActStartDate
+		summarizeBy: none
+		sourceColumn: ActStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Reporting Actual Start Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Reporting Actual Start Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

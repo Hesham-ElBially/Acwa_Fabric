@@ -1,0 +1,518 @@
+table All_Suppliers
+	lineageTag: d99dfddc-8dff-4ba6-a5ad-1df6e02731f3
+
+	column Business_Unit
+		dataType: string
+		lineageTag: 5f33800f-f333-48e7-8b05-5638ff191e7b
+		summarizeBy: none
+		sourceColumn: Business_Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Number
+		dataType: string
+		lineageTag: 0d3641df-e3f1-4614-9692-4c2e8198124d
+		summarizeBy: none
+		sourceColumn: Supplier_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Name
+		dataType: string
+		lineageTag: 054220cb-cf8d-4659-99a6-543d293b5da8
+		summarizeBy: none
+		sourceColumn: Supplier_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Type
+		dataType: string
+		lineageTag: b3d808e8-cb3e-4278-9934-45a261432624
+		summarizeBy: none
+		sourceColumn: Supplier_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Status
+		dataType: string
+		lineageTag: 56d3e34e-0655-484a-bd4c-f50759ddea02
+		summarizeBy: none
+		sourceColumn: Supplier_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Created_By
+		dataType: string
+		lineageTag: 3012412e-8031-4c07-af6a-03cd7d5e218b
+		summarizeBy: none
+		sourceColumn: Supplier_Created_By
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Creation_Date
+		dataType: string
+		lineageTag: 33b310d5-e68d-40e5-9405-6b90a4d73132
+		summarizeBy: none
+		sourceColumn: Supplier_Creation_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Last_Updated_By
+		dataType: string
+		lineageTag: 71be0693-c7f0-4ce2-a5fd-f17dd9247bd5
+		summarizeBy: none
+		sourceColumn: Supplier_Last_Updated_By
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Inactive_Date
+		dataType: string
+		lineageTag: 86f9608e-1db7-416f-8a4d-9267c006fc51
+		summarizeBy: none
+		sourceColumn: Supplier_Inactive_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address_Name
+		dataType: string
+		lineageTag: 771212eb-51e3-414e-a916-b65732e18612
+		summarizeBy: none
+		sourceColumn: Address_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address_Country
+		dataType: string
+		lineageTag: 9a94814f-6bc8-469d-918b-051ab65d086e
+		summarizeBy: none
+		sourceColumn: Address_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_Address1
+		dataType: string
+		lineageTag: 38b91d3e-c77b-4b99-a662-0c6dca89e3df
+		summarizeBy: none
+		sourceColumn: Location_Address1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_Address2
+		dataType: string
+		lineageTag: 3144757f-371d-437c-8069-0e3f6d0eec0a
+		summarizeBy: none
+		sourceColumn: Location_Address2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_Address3
+		dataType: string
+		lineageTag: ad93d1cf-75fa-452e-9abf-6b62c979c6b8
+		summarizeBy: none
+		sourceColumn: Location_Address3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_Address4
+		dataType: string
+		lineageTag: 64ddbe18-252a-42d0-a119-05ada0bb261c
+		summarizeBy: none
+		sourceColumn: Location_Address4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_City
+		dataType: string
+		lineageTag: 9b45a6a0-64b4-4f41-a80b-ebbc8bd41f1a
+		summarizeBy: none
+		sourceColumn: Location_City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_State
+		dataType: string
+		lineageTag: b7a2b348-9395-469a-ac4d-2c8c0ef0c544
+		summarizeBy: none
+		sourceColumn: Location_State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_County
+		dataType: string
+		lineageTag: b4f1ead8-b130-4474-8088-9c7cbe5c79dd
+		summarizeBy: none
+		sourceColumn: Location_County
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_Postal_Code
+		dataType: string
+		lineageTag: 229e3d7b-f321-4473-9199-2105af0b722b
+		summarizeBy: none
+		sourceColumn: Location_Postal_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_Province
+		dataType: string
+		lineageTag: e622980a-4bcc-49db-83d9-f144ba7abd97
+		summarizeBy: none
+		sourceColumn: Location_Province
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor_Site_Name
+		dataType: string
+		lineageTag: 1f395e8b-3ce9-40e4-accf-634612b188bb
+		summarizeBy: none
+		sourceColumn: Vendor_Site_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Site_Created_By
+		dataType: string
+		lineageTag: f5f7dc34-2a84-47d2-9e3e-62fc856e9689
+		summarizeBy: none
+		sourceColumn: Site_Created_By
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor_Site_Effective_Date
+		dataType: string
+		lineageTag: 3e823c37-871f-4a2e-8bbe-a834ba2946b0
+		summarizeBy: none
+		sourceColumn: Vendor_Site_Effective_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor_Site_End_Date
+		dataType: string
+		lineageTag: be6dec2a-87aa-45ec-8452-99c3b93b0aba
+		summarizeBy: none
+		sourceColumn: Vendor_Site_End_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Site_Country
+		dataType: string
+		lineageTag: 93543929-08d1-410d-8461-65da089cc43c
+		summarizeBy: none
+		sourceColumn: Site_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Purchasing_Site
+		dataType: string
+		lineageTag: 527d35e2-c3fc-4128-807d-82559d6df680
+		summarizeBy: none
+		sourceColumn: Purchasing_Site
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pay_on_Use
+		dataType: string
+		lineageTag: ee40d122-baef-4c6f-a3d8-a3571aae9a49
+		summarizeBy: none
+		sourceColumn: Pay_on_Use
+
+		annotation SummarizationSetBy = Automatic
+
+	column Primary_Site_Flag
+		dataType: string
+		lineageTag: c85caf34-211c-4135-a1e3-e50745e653e7
+		summarizeBy: none
+		sourceColumn: Primary_Site_Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bill_to_Location
+		dataType: string
+		lineageTag: 3e9cd490-e179-4d03-858c-e11dbf38c381
+		summarizeBy: none
+		sourceColumn: Bill_to_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ship_to_Location
+		dataType: string
+		lineageTag: 617a4833-5560-4aa4-9607-292108eccf6a
+		summarizeBy: none
+		sourceColumn: Ship_to_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Accrual_Liability_Account
+		dataType: string
+		lineageTag: 98d15e2b-eb93-429f-a2c4-2f819cf305ce
+		summarizeBy: none
+		sourceColumn: Accrual_Liability_Account
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bank_Name
+		dataType: string
+		lineageTag: 719b978b-5c77-4895-b9ae-92d3fff36e50
+		summarizeBy: none
+		sourceColumn: Bank_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bank_Country
+		dataType: string
+		lineageTag: e98ac866-63dc-4a49-ba61-4a9a4cee260a
+		summarizeBy: none
+		sourceColumn: Bank_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Allow_International_Payments
+		dataType: string
+		lineageTag: ef8be3e2-0107-4444-aae6-85fa7e670fe9
+		summarizeBy: none
+		sourceColumn: Allow_International_Payments
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bank_Account_Number
+		dataType: string
+		lineageTag: 7f4816ad-6659-477a-88ee-d1013457a283
+		summarizeBy: none
+		sourceColumn: Bank_Account_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bank_Account_Name
+		dataType: string
+		lineageTag: ca7d686f-9717-4a3b-9cf4-7aebecc88de6
+		summarizeBy: none
+		sourceColumn: Bank_Account_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bank_Account_Currency
+		dataType: string
+		lineageTag: 737f39b8-3926-4972-83d8-998a3b1dd7b5
+		summarizeBy: none
+		sourceColumn: Bank_Account_Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column IBAN
+		dataType: string
+		lineageTag: acbae8e0-1154-4ffd-afa5-88617231e7e4
+		summarizeBy: none
+		sourceColumn: IBAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bank_Account_Updated_By
+		dataType: string
+		lineageTag: b7982896-8eaa-477f-9e92-113b752a9926
+		summarizeBy: none
+		sourceColumn: Bank_Account_Updated_By
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bank_Account_Updated_Date
+		dataType: string
+		lineageTag: 0bd485ab-f234-49c5-a4f2-3b62c88a236d
+		summarizeBy: none
+		sourceColumn: Bank_Account_Updated_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Branch_Name
+		dataType: string
+		lineageTag: e785e6ac-feb2-468b-bf17-8051660a4b70
+		summarizeBy: none
+		sourceColumn: Branch_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assign_Account_Start_Date
+		dataType: string
+		lineageTag: 07f78c09-7ee0-4573-9762-577b77216fe5
+		summarizeBy: none
+		sourceColumn: Assign_Account_Start_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assign_Account_Updated_Date
+		dataType: string
+		lineageTag: 1aa76e66-c40f-4110-b11a-61f9a3bd0189
+		summarizeBy: none
+		sourceColumn: Assign_Account_Updated_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assign_Account_Updated_By
+		dataType: string
+		lineageTag: d169c756-1121-4a60-8de7-85c17f9bb905
+		summarizeBy: none
+		sourceColumn: Assign_Account_Updated_By
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assign_Inactive_Date
+		dataType: string
+		lineageTag: e9bb91f9-ae77-4595-9f89-b6be445ba37b
+		summarizeBy: none
+		sourceColumn: Assign_Inactive_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Allow_Offset_TAX
+		dataType: string
+		lineageTag: 3cda759f-33f0-48e7-89d0-91f71aa179c1
+		summarizeBy: none
+		sourceColumn: Allow_Offset_TAX
+
+		annotation SummarizationSetBy = Automatic
+
+	column Allow_TAX_Applicability
+		dataType: string
+		lineageTag: e68c011f-6ba6-4208-8a0d-39bdbeda27ac
+		summarizeBy: none
+		sourceColumn: Allow_TAX_Applicability
+
+		annotation SummarizationSetBy = Automatic
+
+	column Registration_Number
+		dataType: string
+		lineageTag: a196fd98-0953-4a90-8b01-5b276842ca85
+		summarizeBy: none
+		sourceColumn: Registration_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column TAX_Inclusive
+		dataType: string
+		lineageTag: 239c7d5f-890f-4cbe-b915-6a7c3429fa03
+		summarizeBy: none
+		sourceColumn: TAX_Inclusive
+
+		annotation SummarizationSetBy = Automatic
+
+	column TAX_Classification_Code
+		dataType: string
+		lineageTag: 39e557d4-efff-458a-9072-6f8f3a9035eb
+		summarizeBy: none
+		sourceColumn: TAX_Classification_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fiscal_Class_Code_Type
+		dataType: string
+		lineageTag: 715b2017-fc1e-432c-a205-7a0c71bbe3d1
+		summarizeBy: none
+		sourceColumn: Fiscal_Class_Code_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fiscal_Class_Code
+		dataType: string
+		lineageTag: 6e23beeb-94eb-431b-8da3-8d50bbe688ad
+		summarizeBy: none
+		sourceColumn: Fiscal_Class_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fiscal_Class_Type
+		dataType: string
+		lineageTag: da311b36-b87a-42c3-a3ca-5aa620c7e292
+		summarizeBy: none
+		sourceColumn: Fiscal_Class_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fiscal_Class_Name
+		dataType: string
+		lineageTag: b14d73a4-2ada-4067-b2dc-c2f04bab9931
+		summarizeBy: none
+		sourceColumn: Fiscal_Class_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fiscal_Class_Start_Date
+		dataType: string
+		lineageTag: b8ddbfd9-d518-48ec-9955-148d30cf8ccf
+		summarizeBy: none
+		sourceColumn: Fiscal_Class_Start_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fiscal_Class_End_Date
+		dataType: string
+		lineageTag: 80a12d91-bbf2-4f27-b6a6-a8ec2c2df409
+		summarizeBy: none
+		sourceColumn: Fiscal_Class_End_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column TAX
+		dataType: string
+		lineageTag: a30f16df-a104-4cce-b546-f076a763700c
+		summarizeBy: none
+		sourceColumn: TAX
+
+		annotation SummarizationSetBy = Automatic
+
+	column TAX_Regime_Code
+		dataType: string
+		lineageTag: 5ad29cc0-4051-4acf-81de-2490609ac84a
+		summarizeBy: none
+		sourceColumn: TAX_Regime_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column TAX_Regime_Country
+		dataType: string
+		lineageTag: aee891af-d1fb-4823-91bd-c1a626ddd0eb
+		summarizeBy: none
+		sourceColumn: TAX_Regime_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Registration_Type_Code
+		dataType: string
+		lineageTag: 93c47809-afed-40df-85d5-7beee0013c31
+		summarizeBy: none
+		sourceColumn: Registration_Type_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column TAX_Jurisdiction_Code
+		dataType: string
+		lineageTag: 50718876-c3af-4dc0-8fb6-2daac2fdf210
+		summarizeBy: none
+		sourceColumn: TAX_Jurisdiction_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Default_Registration_Flag
+		dataType: string
+		lineageTag: bedc1783-b8eb-40e3-ac11-735c74098755
+		summarizeBy: none
+		sourceColumn: Default_Registration_Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Registration_Start_Date
+		dataType: string
+		lineageTag: 84e998be-f623-404a-8124-edaeb69f522a
+		summarizeBy: none
+		sourceColumn: Registration_Start_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition All_Suppliers = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("4quiwbo2nopupn6dkut4jokage-6nv4rrosqdyebioghi7mrs634e.datawarehouse.fabric.microsoft.com", "lh_IA_Bronze"),
+				    sch_OracleCloud_ia_all_suppliers = Source{[Schema="ORACLE",Item="ia_all_suppliers"]}[Data]
+				in
+				    sch_OracleCloud_ia_all_suppliers
+
+	annotation PBI_ResultType = Table
+

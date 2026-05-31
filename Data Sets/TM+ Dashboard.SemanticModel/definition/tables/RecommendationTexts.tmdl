@@ -1,0 +1,121 @@
+table RecommendationTexts
+	lineageTag: 3dae0aa8-5557-4c88-a71c-ade6150d6066
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: c30f66eb-63d2-4cea-839d-35223988f33f
+		summarizeBy: none
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: 7e093b9c-c0b1-43b6-a961-0104d1180c06
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: 01679bd7-636f-4b4c-bcf8-7c82eb77151e
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: 10e29b99-349b-492a-a0cb-5d796e758e07
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text4
+		dataType: string
+		lineageTag: 9bcc01a4-97d2-4554-8955-0e0d2bb00bd9
+		summarizeBy: none
+		sourceColumn: Text4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text5
+		dataType: string
+		lineageTag: 60409a1e-c29b-428f-be75-1d0ae4538fc2
+		summarizeBy: none
+		sourceColumn: Text5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text6
+		dataType: string
+		lineageTag: f7ecde68-723e-4dbc-93af-f82c9b4c14ad
+		summarizeBy: none
+		sourceColumn: Text6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text7
+		dataType: string
+		lineageTag: a4401d0b-4050-456b-bad9-9fbddde6a5b8
+		summarizeBy: none
+		sourceColumn: Text7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text8
+		dataType: string
+		lineageTag: 6acf0200-e26b-42ed-b3f1-fe132992d055
+		summarizeBy: none
+		sourceColumn: Text8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text9
+		dataType: string
+		lineageTag: fe1bd232-467a-4cf8-a449-570f01e9faa1
+		summarizeBy: none
+		sourceColumn: Text9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text10
+		dataType: string
+		lineageTag: 1f044461-c0b4-4516-948c-c68661d58c95
+		summarizeBy: none
+		sourceColumn: Text10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text11
+		dataType: string
+		lineageTag: 3b18a53c-7a42-431f-82b0-fcf13b9c0780
+		summarizeBy: none
+		sourceColumn: Text11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text12
+		dataType: string
+		lineageTag: cde51fb5-ca28-41a3-9764-5f56e4a374ec
+		summarizeBy: none
+		sourceColumn: Text12
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RecommendationTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    RecommendationTexts_table = Source{[Name="RecommendationTexts",Signature="table"]}[Data]
+				in
+				    RecommendationTexts_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

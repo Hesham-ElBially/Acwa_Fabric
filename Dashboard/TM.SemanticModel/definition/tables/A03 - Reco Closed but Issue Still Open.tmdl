@@ -1,0 +1,253 @@
+table 'A03 - Reco Closed but Issue Still Open'
+	lineageTag: b41a203e-888f-4dea-8d2e-b500ceb30ad6
+	sourceLineageTag: [sch_TeamMate].[A03 - Reco Closed but Issue Still Open]
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 65ec9d67-efe1-4cda-b232-9673def52361
+		sourceLineageTag: ObjectiveId
+		summarizeBy: count
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectRelationshipId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fa0b71a4-f4b6-4326-9c9f-c7fd9cf65b6f
+		sourceLineageTag: ObjectRelationshipId
+		summarizeBy: count
+		sourceColumn: ObjectRelationshipId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ed0c568e-c0b6-41c7-8a41-e617baf161e5
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a6042dec-b8f2-488a-87b9-f78456045c67
+		sourceLineageTag: IssueId
+		summarizeBy: count
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4e19a370-4332-48a2-bc6f-8d2e4aaf1a6a
+		sourceLineageTag: RecommendationId
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aa5237aa-9427-4c3f-939d-d000041237ac
+		sourceLineageTag: Recommendations.RecommendationTitle
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationState'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 49fd178d-94cd-40fc-bb66-e27680a9cead
+		sourceLineageTag: Recommendations.RecommendationState
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bf556f03-f595-4f7f-afe8-a769827bf3e2
+		sourceLineageTag: Recommendations.Category1
+		summarizeBy: none
+		sourceColumn: Recommendations.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3d20e771-b47f-436f-8b03-221830f88a8c
+		sourceLineageTag: Recommendations.Category2
+		summarizeBy: none
+		sourceColumn: Recommendations.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.DueDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ceefadd3-e117-4f49-9d05-edde01e3dffa
+		sourceLineageTag: Recommendations.DueDate
+		summarizeBy: none
+		sourceColumn: Recommendations.DueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RevisedDueDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 7996897e-6eb0-4560-9aa8-79eb8de9160f
+		sourceLineageTag: Recommendations.RevisedDueDate
+		summarizeBy: none
+		sourceColumn: Recommendations.RevisedDueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.LastClosedUser'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 44da00d4-88d6-4164-b23c-f200768dca1c
+		sourceLineageTag: Recommendations.LastClosedUser
+		summarizeBy: none
+		sourceColumn: Recommendations.LastClosedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.LastClosedDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: a2de2551-4c47-44e7-adff-c232264d2abf
+		sourceLineageTag: Recommendations.LastClosedDate
+		summarizeBy: none
+		sourceColumn: Recommendations.LastClosedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c24f78f5-d8bb-424f-ac66-129868c9239f
+		sourceLineageTag: Projects.ProjectTitle
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0083406-2186-4ce1-9afa-6e2161ce0be5
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 03810d3f-a649-455b-8aff-4a7962d9e72c
+		sourceLineageTag: Projects.Category1
+		summarizeBy: none
+		sourceColumn: Projects.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category11'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ca557c02-57f7-4aed-ab8d-8ddaa81158e9
+		sourceLineageTag: Projects.Category11
+		summarizeBy: none
+		sourceColumn: Projects.Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category13'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 00acd7e7-6b71-4fbb-b340-adf8ad4d592c
+		sourceLineageTag: Projects.Category13
+		summarizeBy: none
+		sourceColumn: Projects.Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IssueTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4f2a67d3-54ae-4764-81ff-e897aa4a5e7a
+		sourceLineageTag: Issues.IssueTitle
+		summarizeBy: none
+		sourceColumn: Issues.IssueTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.ReleaseDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 0de2096b-f59d-4f59-b54e-df27966a0fdb
+		sourceLineageTag: Issues.ReleaseDate
+		summarizeBy: none
+		sourceColumn: Issues.ReleaseDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IssueState'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bbd0d297-9ed0-41af-8fc5-f4255bd46dc7
+		sourceLineageTag: Issues.IssueState
+		summarizeBy: none
+		sourceColumn: Issues.IssueState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IsReleased'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 1a9b2978-6654-4cc9-adb3-1783efcb6626
+		sourceLineageTag: Issues.IsReleased
+		summarizeBy: none
+		sourceColumn: Issues.IsReleased
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6bb6d137-179d-4e02-a512-2059acaae373
+		sourceLineageTag: Issues.Category2
+		summarizeBy: none
+		sourceColumn: Issues.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A03 - Reco Closed but Issue Still Open' = entity
+		mode: directLake
+		source
+			entityName: A03 - Reco Closed but Issue Still Open
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

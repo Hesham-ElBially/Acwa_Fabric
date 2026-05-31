@@ -1,0 +1,106 @@
+table EntityAssessmentTexts
+	lineageTag: 0277d437-41ec-4989-b8f5-0d89fbad36d1
+
+	column EntityAssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 626ee532-363b-4b5e-b4de-bdc618db5d8a
+		summarizeBy: count
+		sourceColumn: EntityAssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5aae62eb-df46-4794-a937-2f73177c6622
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: 8f21cb6d-e2ba-4a50-93be-d32f497d02c7
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: 794383ae-d36c-4c49-acd9-08a2eacfc063
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: c33d0751-9314-4ee9-8f28-a1659d62d2c2
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text4
+		dataType: string
+		lineageTag: c344049a-4806-4817-a97d-ef41799029fd
+		summarizeBy: none
+		sourceColumn: Text4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text5
+		dataType: string
+		lineageTag: ddb22d9e-4389-450d-8cd1-3039b00c2165
+		summarizeBy: none
+		sourceColumn: Text5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text6
+		dataType: string
+		lineageTag: 4d04f9f4-6e40-4476-a085-67d3c18257dd
+		summarizeBy: none
+		sourceColumn: Text6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text7
+		dataType: string
+		lineageTag: 0dac5232-0f7e-44a6-87dc-406eadb677f4
+		summarizeBy: none
+		sourceColumn: Text7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text8
+		dataType: string
+		lineageTag: 917d7e9e-0965-4138-8018-4111052fe728
+		summarizeBy: none
+		sourceColumn: Text8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text9
+		dataType: string
+		lineageTag: 310fb6b1-b051-432b-b3f1-4524146fa75a
+		summarizeBy: none
+		sourceColumn: Text9
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EntityAssessmentTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    EntityAssessmentTexts_table = Source{[Name="EntityAssessmentTexts",Signature="table"]}[Data]
+				in
+				    EntityAssessmentTexts_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

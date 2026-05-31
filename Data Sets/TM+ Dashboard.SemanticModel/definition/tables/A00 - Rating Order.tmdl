@@ -1,0 +1,33 @@
+table 'A00 - Rating Order'
+	lineageTag: ef09b986-c696-4b13-bf9a-4de1d1ded357
+
+	column Rating
+		dataType: string
+		lineageTag: 65bb168f-063d-492c-95c0-1ddc3cb73998
+		summarizeBy: none
+		sourceColumn: Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		dataType: int64
+		formatString: 0
+		lineageTag: f58a0c24-3fa1-4922-8512-67c15fc41c12
+		summarizeBy: sum
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Rating Order' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8shMz1DSUTJUitWJVgrOTM/LTMtMTswrAYoZgcV8U1MyS3OBXGMw1ye/HMg2UYqNBQA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Rating = _t, Order = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Rating", type text}, {"Order", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

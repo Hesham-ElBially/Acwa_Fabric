@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Business Volume"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "83d641bb-a806-a49c-4032-8d25e7135cb6"
+  }
+}

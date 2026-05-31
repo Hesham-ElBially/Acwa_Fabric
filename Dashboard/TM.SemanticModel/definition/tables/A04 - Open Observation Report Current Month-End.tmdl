@@ -1,0 +1,367 @@
+table 'A04 - Open Observation Report Current Month-End'
+	lineageTag: 705b848f-eeb9-43b5-a15d-b4181258223d
+	sourceLineageTag: [sch_TeamMate].[A04 - Open Observation Report Current Month-End]
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 583d1bd0-b52b-42ee-8d64-1f7b0d39ceac
+		sourceLineageTag: ObjectiveId
+		summarizeBy: count
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectRelationshipId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cb736dbf-2e44-41bf-8fc0-3aaf00009562
+		sourceLineageTag: ObjectRelationshipId
+		summarizeBy: count
+		sourceColumn: ObjectRelationshipId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2da75b4a-ac9d-43bb-91d8-5430b0833f99
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2a687066-4958-4226-9433-5a6d4283e1a9
+		sourceLineageTag: IssueId
+		summarizeBy: count
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 28082e9d-80b8-42d0-b76d-b3587e09e180
+		sourceLineageTag: RecommendationId
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 56de37fc-1a29-40f7-ae2c-0bb7e468dfdc
+		sourceLineageTag: Recommendations.RecommendationTitle
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationState'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ad53dedf-bb8d-44e6-9170-14d712be287a
+		sourceLineageTag: Recommendations.RecommendationState
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b7ee11b3-2ba2-4641-8b2a-96051bd61d20
+		sourceLineageTag: Recommendations.Category1
+		summarizeBy: none
+		sourceColumn: Recommendations.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c17e7c78-9d2a-4494-9240-18fc08f67228
+		sourceLineageTag: Recommendations.Category2
+		summarizeBy: none
+		sourceColumn: Recommendations.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.DueDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 818f9abb-738f-4e26-95e0-b4be07b28908
+		sourceLineageTag: Recommendations.DueDate
+		summarizeBy: none
+		sourceColumn: Recommendations.DueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RevisedDueDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: bf4455c9-cf3c-43f4-aa78-6a515463dadf
+		sourceLineageTag: Recommendations.RevisedDueDate
+		summarizeBy: none
+		sourceColumn: Recommendations.RevisedDueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 325d1a46-f025-4b06-a265-cba8f57ccfa2
+		sourceLineageTag: Projects.ProjectTitle
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cbef4fd4-97cb-4936-8a48-43d19949fd69
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ee3a377c-107b-4423-acbb-bf257028f671
+		sourceLineageTag: Projects.Category1
+		summarizeBy: none
+		sourceColumn: Projects.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.LocationCategory'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3d061b7a-b2ae-4e7f-8bf6-89175c521eda
+		sourceLineageTag: Projects.LocationCategory
+		summarizeBy: none
+		sourceColumn: Projects.LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category11'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e2e9c279-7a99-463c-bdf4-4ee651ec3c07
+		sourceLineageTag: Projects.Category11
+		summarizeBy: none
+		sourceColumn: Projects.Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category13'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7f33cf30-b19f-4223-8ced-09049350c402
+		sourceLineageTag: Projects.Category13
+		summarizeBy: none
+		sourceColumn: Projects.Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IssueTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fa58b208-2828-4e15-be57-5d545062d64e
+		sourceLineageTag: Issues.IssueTitle
+		summarizeBy: none
+		sourceColumn: Issues.IssueTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.ReleaseDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 30d929e8-a47a-4d2d-8483-22fc59876ea9
+		sourceLineageTag: Issues.ReleaseDate
+		summarizeBy: none
+		sourceColumn: Issues.ReleaseDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IsReleased'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: bfea4b50-a544-45d1-8509-4bb5b272ea35
+		sourceLineageTag: Issues.IsReleased
+		summarizeBy: none
+		sourceColumn: Issues.IsReleased
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 74d8eb56-3081-408d-b000-cac182cb085f
+		sourceLineageTag: Issues.Category2
+		summarizeBy: none
+		sourceColumn: Issues.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SecurityAssignmentsAggregated.RoleTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f60f5aba-7026-47cc-be20-4d08d8647331
+		sourceLineageTag: SecurityAssignmentsAggregated.RoleTitle
+		summarizeBy: none
+		sourceColumn: SecurityAssignmentsAggregated.RoleTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SecurityAssignmentsAggregated.AssignedUserNames'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2afabfc5-c8a3-4d34-af6a-ac9e64b35ba1
+		sourceLineageTag: SecurityAssignmentsAggregated.AssignedUserNames
+		summarizeBy: none
+		sourceColumn: SecurityAssignmentsAggregated.AssignedUserNames
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RecommendationTexts.Text1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0372932a-c4d8-4848-a55d-cf1faec8535b
+		sourceLineageTag: RecommendationTexts.Text1
+		summarizeBy: none
+		sourceColumn: RecommendationTexts.Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RecommendationTexts.Text2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 91a39f7f-91a7-4e37-bd22-387e26e87b7d
+		sourceLineageTag: RecommendationTexts.Text2
+		summarizeBy: none
+		sourceColumn: RecommendationTexts.Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column cToday
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 87e2e370-9d2c-4bbe-8da2-78cb91f8516f
+		sourceLineageTag: cToday
+		summarizeBy: none
+		sourceColumn: cToday
+
+		annotation SummarizationSetBy = Automatic
+
+	column cReportingCutOff
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: 78efb8a4-7ae0-4f7b-934c-6d780eba55f8
+		sourceLineageTag: cReportingCutOff
+		summarizeBy: none
+		sourceColumn: cReportingCutOff
+
+		annotation SummarizationSetBy = Automatic
+
+	column Action_Due_Date__For_Ageing_
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 53e33b8c-b155-45c1-9436-d60a8ba833f1
+		sourceLineageTag: Action_Due_Date__For_Ageing_
+		summarizeBy: none
+		sourceColumn: Action_Due_Date__For_Ageing_
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ageing
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 56f60465-6f58-43c4-a223-5d39e0538a45
+		sourceLineageTag: Ageing
+		summarizeBy: sum
+		sourceColumn: Ageing
+
+		annotation SummarizationSetBy = Automatic
+
+	column Final_Status
+		dataType: string
+		sourceProviderType: varchar(15)
+		lineageTag: d6cd46cf-bb79-4575-9882-1e280f135bd8
+		sourceLineageTag: Final_Status
+		summarizeBy: none
+		sourceColumn: Final_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ageing_Buckets
+		dataType: string
+		sourceProviderType: varchar(77)
+		lineageTag: 874a1c9e-c25d-4404-916d-4c8117e23888
+		sourceLineageTag: Ageing_Buckets
+		summarizeBy: none
+		sourceColumn: Ageing_Buckets
+
+		annotation SummarizationSetBy = Automatic
+
+	column isReported
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 71b9201d-d728-4264-b93b-ca4998b0305a
+		sourceLineageTag: isReported
+		summarizeBy: sum
+		sourceColumn: isReported
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI A Status'
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: 24ebc4c2-c2cf-4958-a563-41bdac98becf
+		sourceLineageTag: KPI A Status
+		summarizeBy: none
+		sourceColumn: KPI A Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0cb46ccd-4f3b-47ae-a069-d61d55bc37d5
+		sourceLineageTag: Rating Order
+		summarizeBy: sum
+		sourceColumn: Rating Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A04 - Open Observation Report Current Month-End' = entity
+		mode: directLake
+		source
+			entityName: A04 - Open Observation Report Current Month-End
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

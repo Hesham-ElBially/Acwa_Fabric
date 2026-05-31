@@ -1,0 +1,150 @@
+table AuditReportWorkflowHistory
+	lineageTag: 0a8e2a24-cf3c-46ef-803a-b68864802e13
+
+	column AuditReportWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a73eb10-246a-4e77-a03f-fc55ca465226
+		summarizeBy: count
+		sourceColumn: AuditReportWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditReportId
+		dataType: int64
+		formatString: 0
+		lineageTag: ac4dce3d-2393-48c2-aaf0-259d8740f922
+		summarizeBy: none
+		sourceColumn: AuditReportId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditReportTitle
+		dataType: string
+		lineageTag: 6dc9f19f-d93b-48ad-84dd-e3ddf5804f42
+		summarizeBy: none
+		sourceColumn: AuditReportTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditReportCode
+		dataType: string
+		lineageTag: 20327ca3-eb5a-44bc-8457-d6e44b2fc8db
+		summarizeBy: none
+		sourceColumn: AuditReportCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 611d392a-2bf9-4cf4-8c47-2f054610c70f
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: e7021c75-6c24-4ddf-be22-1671df60a805
+			defaultHierarchy: LocalDateTable_31df1463-077a-4139-bc16-6720e75697d2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d9f1ad4-44b3-4d8c-9675-29f8160bda83
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: 5157bf2f-7bd7-43aa-b05a-d46fdcf11ed6
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: e0407c5e-51eb-45cc-a875-a792d80fc25d
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 643edbaf-92ee-42d2-a3e4-0e07c063d1fa
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: ae36b882-71a5-4518-9168-5a1965b6ba7b
+		summarizeBy: sum
+		sourceColumn: ReviewSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequiredSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 78403480-f117-4999-a6ad-fd76f083fbad
+		summarizeBy: sum
+		sourceColumn: RequiredSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompletedSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b3c7cb2-e0eb-4db1-8059-f831f21ba96c
+		summarizeBy: sum
+		sourceColumn: CompletedSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 68037e0a-1c9b-4e50-9131-9dc0f357bf6d
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: 6a750d8a-6cf4-409c-a24f-9b62cc097e2b
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: f1341596-2581-444b-a752-67ce09339a5b
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AuditReportWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    AuditReportWorkflowHistory_table = Source{[Name="AuditReportWorkflowHistory",Signature="table"]}[Data]
+				in
+				    AuditReportWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,127 @@
+table Entities
+	lineageTag: 5275d318-0f3a-4d86-8e21-a78f8e4968db
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 49491db8-93fc-4563-9fe7-401a66a7ee51
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentEntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: a3625862-a5cb-4995-ba35-46d2ba159aef
+		summarizeBy: count
+		sourceColumn: ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityTitle
+		dataType: string
+		lineageTag: 4db3fd15-91b4-4283-9e09-ab872a435cc4
+		summarizeBy: none
+		sourceColumn: EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityCode
+		dataType: string
+		lineageTag: d26576f9-57c8-44c7-80e4-a5f36196cb83
+		summarizeBy: none
+		sourceColumn: EntityCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsAuditable
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e65777a1-4a8d-4216-a0a5-adcf93594193
+		summarizeBy: none
+		sourceColumn: IsAuditable
+
+		annotation SummarizationSetBy = Automatic
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		lineageTag: de102ead-67f5-4b51-a5e2-5e0039620570
+		summarizeBy: count
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cc84271-a626-4224-b5e2-c45b19ea023f
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column GlobalEntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: ef7e8e19-4996-4899-b0cf-9db089e94353
+		summarizeBy: count
+		sourceColumn: GlobalEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsEntityActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ac73eeee-6e52-4bdc-aa19-54f748faec19
+		summarizeBy: none
+		sourceColumn: IsEntityActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgPath
+		dataType: string
+		lineageTag: d83b76a3-6b67-45ab-b589-e99a69f931df
+		summarizeBy: none
+		sourceColumn: OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgSort
+		dataType: string
+		lineageTag: 0c47a6b1-1eee-4fc8-8bd1-a3af7f762607
+		summarizeBy: none
+		sourceColumn: OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastAuditDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a4fe1515-4cdf-4c82-a21b-c4fdde1ec3f4
+		summarizeBy: none
+		sourceColumn: LastAuditDate
+
+		variation Variation
+			isDefault
+			relationship: dcd7df96-9563-489f-bb08-94e71147d35f
+			defaultHierarchy: LocalDateTable_c2f66b3b-e9b6-499b-ad01-e917050f6b88.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Entities = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Entities_table = Source{[Name="Entities",Signature="table"]}[Data]
+				in
+				    Entities_table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

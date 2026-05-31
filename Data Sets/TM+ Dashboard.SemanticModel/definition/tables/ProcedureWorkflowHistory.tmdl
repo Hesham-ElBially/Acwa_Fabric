@@ -1,0 +1,140 @@
+table ProcedureWorkflowHistory
+	lineageTag: b4b36b42-0133-4593-bd71-561bf5cfe238
+
+	column ProcedureWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d4788e9-3ff2-410a-aaec-2f72966cd507
+		summarizeBy: count
+		sourceColumn: ProcedureWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcedureId
+		dataType: int64
+		formatString: 0
+		lineageTag: 098241a3-806f-4af7-92ef-fb72a78da78e
+		summarizeBy: none
+		sourceColumn: ProcedureId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcedureTitle
+		dataType: string
+		lineageTag: 61f380c2-6bb4-4385-be7c-5b5c8eaa430d
+		summarizeBy: none
+		sourceColumn: ProcedureTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 99f4cb65-3dd7-45cf-8086-682a92580dc6
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: b9b30bb0-c75c-4a2d-bb2f-9ad374caf77b
+			defaultHierarchy: LocalDateTable_ff716e41-a00d-4a32-9c7f-a00cc2a801f8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 11f7b673-1514-4b96-be90-1d5ef0bea82a
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: 729dc8ab-c876-4980-9321-8c4eb8622fca
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 16c68be9-1005-4acb-b757-c38ad075f085
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 1d2c14ba-f6b2-4aca-8bfb-570a5e37b14e
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: d681ab0d-162a-4654-9d13-06942e3e4a46
+		summarizeBy: sum
+		sourceColumn: ReviewSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequiredSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 9887aa8c-fcde-4783-8a0d-e56960dce28d
+		summarizeBy: sum
+		sourceColumn: RequiredSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompletedSequences
+		dataType: int64
+		formatString: 0
+		lineageTag: 76c812cd-b222-41a0-9bbe-4faea7d63f20
+		summarizeBy: sum
+		sourceColumn: CompletedSequences
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: a5d5de33-e89b-4bd6-8419-acde83556008
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: 4f0b37cb-caa5-42cb-aa31-bc1b76cdc3bd
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: 70a6e87c-3bd9-4cf4-97cb-fff5fb32a2c7
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ProcedureWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProcedureWorkflowHistory_table = Source{[Name="ProcedureWorkflowHistory",Signature="table"]}[Data]
+				in
+				    ProcedureWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+

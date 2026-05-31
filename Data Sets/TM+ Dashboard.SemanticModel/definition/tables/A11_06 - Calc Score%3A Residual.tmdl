@@ -1,0 +1,81 @@
+table 'A11_06 - Calc Score: Residual'
+	lineageTag: 5db80a8f-32d3-4b77-bb81-bd3960ee3267
+
+	column StrategicRiskScoringCalculatedId
+		dataType: int64
+		formatString: 0
+		lineageTag: dfc5519d-4853-46e7-a805-64217f70f037
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoringCalculatedId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 232402a1-2088-4fc5-9577-a886c4a6cb90
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: a3d05d53-b6e8-4837-9634-30469d9d04d5
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreType
+		dataType: string
+		lineageTag: f55ea922-fdce-4fec-8585-e6dac2ba43c6
+		summarizeBy: none
+		sourceColumn: CalculatedScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreValue
+		dataType: double
+		lineageTag: 1407ae37-bea2-49df-b12a-58ea7a727a3a
+		summarizeBy: sum
+		sourceColumn: CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6405f4f0-b848-4393-a732-b7abf59c01f9
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: c0d897c8-258b-4027-9dd0-da04422efa67
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11_06 - Calc Score: Residual' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskScoringCalculationsAssessmentProject_table = Source{[Name="StrategicRiskScoringCalculationsAssessmentProject",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(StrategicRiskScoringCalculationsAssessmentProject_table, each ([AssessmentId] = 31)),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"StrategicRisk"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Removed Columns", each ([CalculatedScoreType] = "Residual"))
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

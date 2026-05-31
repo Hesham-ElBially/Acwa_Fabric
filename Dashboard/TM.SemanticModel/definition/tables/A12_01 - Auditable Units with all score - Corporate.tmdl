@@ -1,0 +1,270 @@
+table 'A12_01 - Auditable Units with all score - Corporate'
+	lineageTag: cd4c37d3-492f-4c51-88f5-4b5afd7fbbed
+	sourceLineageTag: [sch_TeamMate].[A12_01 - Auditable Units with all score - Corporate]
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 45c8d73f-59c9-40df-af1b-98ac3cd0d425
+		sourceLineageTag: EntityId
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.EntityTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 789c74ef-2c44-4441-9b6c-81f24a523060
+		sourceLineageTag: Entities.EntityTitle
+		summarizeBy: none
+		sourceColumn: Entities.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1d28eb06-d1fe-4d39-9266-8e3a2c6ad9fe
+		sourceLineageTag: Entities.OrgPath
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgSort'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a6810746-0075-4be9-b49b-055de3062c9c
+		sourceLineageTag: Entities.OrgSort
+		summarizeBy: none
+		sourceColumn: Entities.OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 150b3e25-93e3-4544-a1e2-6edb3ab5f142
+		sourceLineageTag: Avg. Residual Likelihood
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 76be9d9b-9470-476d-850c-3b516d7de517
+		sourceLineageTag: Avg. Residual Impact
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: b41f065c-0b99-477a-98fa-547461387bef
+		sourceLineageTag: Avg. Residual Calc Score
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Likelihood'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 239c39d7-e7e9-4289-b00d-5ff8c2ac9df4
+		sourceLineageTag: Avg. Inherent Likelihood
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Impact'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 45787ba3-b321-4978-bdaf-35c3fbf479ab
+		sourceLineageTag: Avg. Inherent Impact
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Calc Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ca9fe213-b401-43e1-b046-143866de97a7
+		sourceLineageTag: Avg. Inherent Calc Score
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Significance
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e9e33dc2-02ee-4774-9203-bcc4a03be70a
+		sourceLineageTag: Significance
+		summarizeBy: sum
+		sourceColumn: Significance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Auditor''s Judgement'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: a33ab6b2-8c41-4ab7-bfab-b8c79f7d2e8d
+		sourceLineageTag: Auditor's Judgement
+		summarizeBy: sum
+		sourceColumn: Auditor's Judgement
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Region
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bc34b222-6c92-4727-bf80-d55e04c34ec4
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e300a842-5d29-42d7-8ef7-885cfdb53ac4
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Level'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 82a5d544-0323-4e74-bc86-fa7f1f6f683f
+		sourceLineageTag: Reporting Level
+		summarizeBy: none
+		sourceColumn: Reporting Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MC Member'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6d410d0a-6eca-4fac-9e69-bd40bb6b1b41
+		sourceLineageTag: MC Member
+		summarizeBy: none
+		sourceColumn: MC Member
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Portfolio Delivery Lead'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f2ab6a97-32b4-4989-98c9-6c5db4482149
+		sourceLineageTag: Portfolio Delivery Lead
+		summarizeBy: none
+		sourceColumn: Portfolio Delivery Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood - Round'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2d5c1516-6cfa-4159-96e8-82fd7e95d238
+		sourceLineageTag: Avg. Residual Likelihood - Round
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact - Round'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 8ba4ab19-f386-4caf-91b3-f2e78bb5d1a8
+		sourceLineageTag: Avg. Residual Impact - Round
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score - Round'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 3a262e2e-bf44-47b8-a3a9-9c454b870683
+		sourceLineageTag: Avg. Residual Calc Score - Round
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Auditable Unit Priority Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 93f931f0-5003-4c66-b42c-8eb80ac22c9a
+		sourceLineageTag: Auditable Unit Priority Score
+		summarizeBy: sum
+		sourceColumn: Auditable Unit Priority Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Auditable Unit Prioritization Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 7cc3be9b-bc02-4868-b8b5-fb52be600b5c
+		sourceLineageTag: Auditable Unit Prioritization Score
+		summarizeBy: sum
+		sourceColumn: Auditable Unit Prioritization Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Auditable Unit Prioritization'
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: 95a37f08-1f0f-4b55-bd9d-21cd51d4ba8c
+		sourceLineageTag: Auditable Unit Prioritization
+		summarizeBy: none
+		sourceColumn: Auditable Unit Prioritization
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A12_01 - Auditable Units with all score - Corporate' = entity
+		mode: directLake
+		source
+			entityName: A12_01 - Auditable Units with all score - Corporate
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

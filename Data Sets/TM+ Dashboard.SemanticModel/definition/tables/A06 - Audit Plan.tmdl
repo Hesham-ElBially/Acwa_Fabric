@@ -1,0 +1,418 @@
+table 'A06 - Audit Plan'
+	lineageTag: dbc5a73d-9871-4088-882c-3e51bca960e8
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: a12b2d22-7f44-46a8-bc36-7c80154e93b0
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: f6c63570-3d5f-4b0e-a7d7-a6c8b6499ec0
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectTitle
+		dataType: string
+		lineageTag: 960aed61-136c-4c96-99c2-4be1f2318661
+		summarizeBy: none
+		sourceColumn: ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectCode
+		dataType: string
+		lineageTag: 77353d1c-a5e0-4ecb-9ad0-bdbed832a449
+		summarizeBy: none
+		sourceColumn: ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 752b35a2-6e37-44dd-8f72-f9a2887deb7b
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		lineageTag: 3377ff97-b443-47c8-87da-a62ef34b4b03
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 513817bc-fff8-465f-a84a-a424ee0321f2
+		summarizeBy: count
+		sourceColumn: Category2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2
+		dataType: string
+		lineageTag: 601bfd21-d7d2-407f-86d7-f1f365b983da
+		summarizeBy: none
+		sourceColumn: Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 047806c8-b4c4-40c3-b22f-4f69544b1a80
+		summarizeBy: count
+		sourceColumn: LocationCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategory
+		dataType: string
+		lineageTag: 7255c040-544b-4ef4-8fb0-825ebe9b64ff
+		summarizeBy: none
+		sourceColumn: LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 98f57d2a-4738-49d8-9921-0f46a9adb200
+		summarizeBy: count
+		sourceColumn: Category3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3
+		dataType: string
+		lineageTag: 7969869f-1955-4e7d-a414-725216b9ce4c
+		summarizeBy: none
+		sourceColumn: Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f5f6acb-f35c-4392-8a05-fa3589debcb3
+		summarizeBy: count
+		sourceColumn: Category4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4
+		dataType: string
+		lineageTag: 594b21f3-abed-4c4d-87e5-93ef753bfd10
+		summarizeBy: none
+		sourceColumn: Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5Id
+		dataType: int64
+		formatString: 0
+		lineageTag: fdc7e42f-e63b-46e9-a133-addd8da34821
+		summarizeBy: count
+		sourceColumn: Category5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5
+		dataType: string
+		lineageTag: fd5edbfd-d5c6-46c4-a78a-8627d76092e2
+		summarizeBy: none
+		sourceColumn: Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 41130a72-5861-4bd8-9b79-3c41e4d8e9e9
+		summarizeBy: count
+		sourceColumn: Category6Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6
+		dataType: string
+		lineageTag: 13988a3f-b9be-4d07-aa9f-9768863e007b
+		summarizeBy: none
+		sourceColumn: Category6
+		sortByColumn: 'Report Rating Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 86eb26d2-d11f-444e-9fce-78160fd1bd8c
+		summarizeBy: count
+		sourceColumn: Category9Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9
+		dataType: string
+		lineageTag: 0ae3334d-4fe7-4de3-a7ec-a94213e12e14
+		summarizeBy: none
+		sourceColumn: Category9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10Id
+		dataType: int64
+		formatString: 0
+		lineageTag: c492dab5-311b-4113-a9c1-36fccfab06f4
+		summarizeBy: count
+		sourceColumn: Category10Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10
+		dataType: string
+		lineageTag: eb994ea8-3d09-48eb-8124-dc4b81a3c10b
+		summarizeBy: none
+		sourceColumn: Category10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e14d4d3-721b-4da1-9953-1c5f26fa1a9c
+		summarizeBy: count
+		sourceColumn: Category11Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11
+		dataType: string
+		lineageTag: 47733631-10b9-4b53-be14-2fdd4a41239c
+		summarizeBy: none
+		sourceColumn: Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 88fbe8d9-5f13-423f-9d89-ab32b529a458
+		summarizeBy: count
+		sourceColumn: Category12Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12
+		dataType: string
+		lineageTag: 17054b6f-db08-4172-a059-1e693855e40e
+		summarizeBy: none
+		sourceColumn: Category12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f843fee-29fd-42ff-b6e3-bd83bcb7e932
+		summarizeBy: count
+		sourceColumn: Category13Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13
+		dataType: string
+		lineageTag: 42e43f63-f5cf-4797-ac85-669705ce63d3
+		summarizeBy: none
+		sourceColumn: Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: c42da9f1-1a9f-45e8-b82f-9f5473c8faff
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1
+		dataType: string
+		lineageTag: d0f41c67-ff0c-4ed0-a5fa-390e677b243a
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ac8b66d-00b7-4815-b327-339cbacbd1b2
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3
+		dataType: string
+		lineageTag: 30ecd66e-5759-4fec-bf0f-944df1b6478b
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedHours
+		dataType: int64
+		formatString: 0
+		lineageTag: a19c24f8-946c-47a1-b6a3-d472622ef0c1
+		summarizeBy: sum
+		sourceColumn: EstimatedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualHours
+		dataType: double
+		lineageTag: 95405009-4621-4f78-b1f8-4a8f0ba99a13
+		summarizeBy: sum
+		sourceColumn: ActualHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProjectStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 58cc1f4f-92f8-44f1-9e29-cee91945c09d
+		summarizeBy: count
+		sourceColumn: ProjectStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectState
+		dataType: string
+		lineageTag: 0a4fd665-9f6b-4fb7-b004-c65a1a064462
+		summarizeBy: none
+		sourceColumn: ProjectState
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseValue
+		dataType: string
+		lineageTag: 2925f5ca-5943-4e5c-841c-32334eaa3f3d
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseMilestoneValue
+		dataType: string
+		lineageTag: dc3695c7-aac5-40b3-aa96-1f3c477d1ab9
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseMilestoneValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CombinedTotalHours
+		dataType: double
+		lineageTag: 23cbb188-0704-40e7-be01-c541c8f69185
+		summarizeBy: sum
+		sourceColumn: CombinedTotalHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActiveAuditPlanId
+		dataType: int64
+		formatString: 0
+		lineageTag: f2338eb7-cfad-405b-93b3-da0eb3edc940
+		summarizeBy: count
+		sourceColumn: ActiveAuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveAuditPlanTitle
+		dataType: string
+		lineageTag: 77b1d434-4707-403c-8f6d-ec3fc0be0371
+		summarizeBy: none
+		sourceColumn: ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column High = RELATED('A06_00 - Issues - High'[High])
+		formatString: 0
+		lineageTag: 69b559cd-b1b2-49cf-bf25-cafba2bce9d1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Significant = RELATED('A06_00 - Issues - Significant'[Significant])
+		formatString: 0
+		lineageTag: 137b2756-f331-471e-a293-097e3d577ead
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medium = ```
+			RELATED('A06_00 - Issues - Medium'[Medium]) 
+			```
+		formatString: 0
+		lineageTag: fce8deed-841b-4a6a-92ba-1a548149c778
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Low = ```
+			RELATED('A06_00 - Issues - Low'[Low]) 
+			```
+		formatString: 0
+		lineageTag: 119d3389-6c9c-4cae-933c-0a2313eae873
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total = 'A06 - Audit Plan'[High]+'A06 - Audit Plan'[Significant]+'A06 - Audit Plan'[Medium]+'A06 - Audit Plan'[Low]
+		formatString: 0
+		lineageTag: 0e5c052e-d63b-4533-ac1d-189c45b2ef7a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report Rating Order' = RELATED('A00 - Report Rating Order'[Report Rating Order])
+		formatString: 0
+		lineageTag: 2e0bcbf9-3a01-4bd5-af4f-9392300e3294
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A06 - Audit Plan' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Projects_table = Source{[Name="Projects",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(Projects_table,{"Category7Id", "Category7", "Category8Id", "Category8", "RiskCategoryId", "RiskCategory", "FinalRiskCategoryId", "FinalRiskCategory", "MultiSelectCategory2Id", "MultiSelectCategory2", "MultiSelectCategory4Id", "MultiSelectCategory4", "MultiSelectCategory5Id", "MultiSelectCategory5", "MultiSelectCategory6Id", "MultiSelectCategory6", "MultiSelectCategory7Id", "MultiSelectCategory7", "NumericValue1", "NumericValue2", "NumericValue3", "NumericValue4", "NumericValue5", "NumericValue6", "NumericValue7", "EstimatedStartDate", "EstimatedEndDate", "ActualStartDate", "ActualEndDate", "Date1", "Date2", "Date3", "Date4", "Date5", "Date6", "EstimatedResourceCosts", "ActualResourceCosts", "EstimatedExternalCosts", "ActualExternalCosts", "EstimatedExpenses", "ActualExpenses", "CompletedDate", "ScheduledStartDate", "ScheduledEndDate", "YesNo1", "YesNo2", "YesNo3", "YesNo4", "YesNo5", "IsMigrated", "IsOfflineMergeEnabled", "ExcludeAssessmentObjects", "LastModifiedDate", "LastModifiedUserId", "LastModifiedUser", "ProjectApprovalStateId", "ProjectApprovalState"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([AssessmentId] = 14 or [AssessmentId] = 25))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

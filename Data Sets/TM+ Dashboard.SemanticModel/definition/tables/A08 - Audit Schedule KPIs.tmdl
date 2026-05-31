@@ -1,0 +1,1136 @@
+table 'A08 - Audit Schedule KPIs'
+	lineageTag: 40fac61d-45f8-4b86-9a9f-1689c0c1a413
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4657d167-a301-4eec-a76b-fe1279a62c3f
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 55a5043a-5572-4ef8-812d-28258f7da50a
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectTitle
+		dataType: string
+		lineageTag: cb08ffac-91a0-422d-a4d5-0fec207709ed
+		summarizeBy: none
+		sourceColumn: ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectCode
+		dataType: string
+		lineageTag: 721a1fc4-b1e4-4b69-960c-c3165dd7950d
+		summarizeBy: none
+		sourceColumn: ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: bdf6b87a-0997-4d43-89fd-93cb4aaf9864
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		lineageTag: e279e6e7-4040-490e-bc1e-3c57a649ca71
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: b1483dc3-9bdd-4141-b31d-3e59458ddc15
+		summarizeBy: count
+		sourceColumn: Category2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2
+		dataType: string
+		lineageTag: b20eab89-b7df-4ef6-af70-5f5a85c7b665
+		summarizeBy: none
+		sourceColumn: Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: d79c2ac7-452b-49dc-8874-19b53e2bd5d2
+		summarizeBy: count
+		sourceColumn: LocationCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategory
+		dataType: string
+		lineageTag: 1e8f43d4-f678-495c-b67c-a60f4e0a7733
+		summarizeBy: none
+		sourceColumn: LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3de71b4f-b107-46a5-adbb-5f1b170d1b16
+		summarizeBy: count
+		sourceColumn: Category3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3
+		dataType: string
+		lineageTag: d619b294-4eef-49b6-855e-da3598640e1a
+		summarizeBy: none
+		sourceColumn: Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 062f1cf6-a712-40f6-ad71-8cd2a5429f3d
+		summarizeBy: count
+		sourceColumn: Category4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4
+		dataType: string
+		lineageTag: 593926c2-3658-4172-a3c4-515853cac41b
+		summarizeBy: none
+		sourceColumn: Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 442e07a6-ea82-42f0-b0b6-970444eebf59
+		summarizeBy: count
+		sourceColumn: Category5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5
+		dataType: string
+		lineageTag: e2cb9245-39aa-48aa-b62e-e2f0937096e2
+		summarizeBy: none
+		sourceColumn: Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ef93829-3411-49e1-9c42-29c9245e32ee
+		summarizeBy: count
+		sourceColumn: Category6Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6
+		dataType: string
+		lineageTag: 66972de4-411b-4748-98d1-18c9faff6f5d
+		summarizeBy: none
+		sourceColumn: Category6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 06f25d0e-1bec-4063-9740-deb5497f1964
+		summarizeBy: count
+		sourceColumn: Category9Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9
+		dataType: string
+		lineageTag: 51cf8441-9465-4e0d-a512-37c04cae8a18
+		summarizeBy: none
+		sourceColumn: Category9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2573e31f-4c54-437e-9be3-14c7cfc3ceba
+		summarizeBy: count
+		sourceColumn: Category10Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10
+		dataType: string
+		lineageTag: afdcbecc-6e06-43c1-8d04-c8746f4c2d71
+		summarizeBy: none
+		sourceColumn: Category10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6886511e-2588-48ab-b34f-b96f3aa62586
+		summarizeBy: count
+		sourceColumn: Category11Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11
+		dataType: string
+		lineageTag: 7f992922-d326-4285-8c9d-5ae25304d076
+		summarizeBy: none
+		sourceColumn: Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12Id
+		dataType: int64
+		formatString: 0
+		lineageTag: ed8aa968-4852-4d93-ade5-bbde5af5e61e
+		summarizeBy: count
+		sourceColumn: Category12Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12
+		dataType: string
+		lineageTag: 354efb0b-0a94-4105-aed1-c38748a395b1
+		summarizeBy: none
+		sourceColumn: Category12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 69d8a8dd-d8f7-40ff-b5ad-15547927d38a
+		summarizeBy: count
+		sourceColumn: Category13Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13
+		dataType: string
+		lineageTag: fa63e427-149d-4939-ac36-4fe9f7c6d541
+		summarizeBy: none
+		sourceColumn: Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: ef17fe09-5aae-4b08-8007-19706a0ea820
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1
+		dataType: string
+		lineageTag: 2c02315d-6a39-4663-8522-17676be71680
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 18545137-25f6-4d41-96ae-657e3787c7a2
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3
+		dataType: string
+		lineageTag: a1e4c849-afa3-4e98-858f-741006296757
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedHours
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c8b7311-f0fc-4ae4-82a5-57649210a9ee
+		summarizeBy: sum
+		sourceColumn: EstimatedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualHours
+		dataType: double
+		lineageTag: a8368688-b8ba-4523-8971-ec2246c9c049
+		summarizeBy: sum
+		sourceColumn: ActualHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProjectStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 807ca510-e222-41df-b298-bc97f0a36ace
+		summarizeBy: count
+		sourceColumn: ProjectStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectState
+		dataType: string
+		lineageTag: b3409215-7306-4374-8f79-93b03efeb960
+		summarizeBy: none
+		sourceColumn: ProjectState
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseValue
+		dataType: string
+		lineageTag: d7894e8a-34da-4394-97e5-da5ac7eda24f
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseMilestoneValue
+		dataType: string
+		lineageTag: b44fa8f0-c2cb-4853-8fe4-650a220deb5a
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseMilestoneValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CombinedTotalHours
+		dataType: double
+		lineageTag: b0f0b701-c836-4558-95ef-d8902845417b
+		summarizeBy: sum
+		sourceColumn: CombinedTotalHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActiveAuditPlanId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ff0ff74-30da-46ae-a480-a72b31908924
+		summarizeBy: count
+		sourceColumn: ActiveAuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveAuditPlanTitle
+		dataType: string
+		lineageTag: d313c4af-4138-4870-9a9f-cbf9fd6245a9
+		summarizeBy: none
+		sourceColumn: ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Actual Start Date.ProjectPhaseName'
+		dataType: string
+		lineageTag: f01c6969-aa78-435d-be3d-1fa480edffa0
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Actual Start Date.ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Actual Start Date.ActStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 404e1735-a7e1-46fe-baf6-059d91cbe6c1
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Actual Start Date.ActStartDate
+
+		variation Variation
+			isDefault
+			relationship: 73e14d1b-c17d-4249-b1c2-bd2f3b296850
+			defaultHierarchy: LocalDateTable_2f2381e3-f750-4382-b524-f56bc7ec286d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.MilestoneNa'
+		dataType: string
+		lineageTag: cf0d5e7a-4f7d-4cf7-a980-0de9ff479f7a
+		summarizeBy: none
+		sourceColumn: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.MilestoneNa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cdb3f67c-d0cb-4cea-9d80-805a8675a8f4
+		summarizeBy: none
+		sourceColumn: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa
+
+		variation Variation
+			isDefault
+			relationship: d715df24-5d26-4967-8697-718ff25ef24e
+			defaultHierarchy: LocalDateTable_0672eaf0-8b88-48b8-aa2f-c0d81c3c6bad.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.MilestoneName'
+		dataType: string
+		lineageTag: 89e7af1a-bbee-4a0a-9ba1-bc0c6dadbedb
+		summarizeBy: none
+		sourceColumn: A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1f7fca10-9c2c-4d44-85b8-539f6bf7d1d8
+		summarizeBy: none
+		sourceColumn: A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 891c7b1b-b5ef-4e3f-b091-e461fe94dc3b
+			defaultHierarchy: LocalDateTable_dd488689-62a0-48ff-a888-22b007ce18e2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'KPI A' = IF(ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Actual Start Date.ActStartDate].[Date]) && ISBLANK('A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa].[Date]),"FieldWork Actual Start Date & Final Report Issuance Date are blank", IF(ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Actual Start Date.ActStartDate].[Date]),"FieldWork Actual Start Date is blank", IF(ISBLANK('A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa].[Date]),"Final Report Issuance Date is blank", FORMAT(1+DATEDIFF('A08 - Audit Schedule KPIs'[A08 - FieldWork Actual Start Date.ActStartDate].[Date], 'A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa].[Date], DAY), "General Number"))))
+		lineageTag: 5f659ec4-2334-45bc-a8c3-7fe2f304ea72
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI B' = IF(ISBLANK('A08 - Audit Schedule KPIs'[A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate].[Date]) && ISBLANK('A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa].[Date]),"Final Report Issuance Date & TeamMate Updated Date are blank", IF(ISBLANK('A08 - Audit Schedule KPIs'[A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate].[Date]),"TeamMate Updated Date is blank", IF(ISBLANK('A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa].[Date]),"Final Report Issuance Date is blank", FORMAT(1+DATEDIFF('A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa].[Date], 'A08 - Audit Schedule KPIs'[A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate].[Date], DAY), "General Number"))))
+		lineageTag: 5a63ef54-d644-408e-b0c3-6b012cb7a007
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Planning Scheduled Start Date.ScheduledStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 62ec6d70-b51b-4c88-b075-7e574f4e060e
+		summarizeBy: none
+		sourceColumn: A08 - Planning Scheduled Start Date.ScheduledStartDate
+
+		variation Variation
+			isDefault
+			relationship: e98d217d-831c-469f-a85a-27b92ea3a6a9
+			defaultHierarchy: LocalDateTable_3ba10728-269b-4766-b9b2-f0144d85508a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Planning Scheduled End Date.ScheduledEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 88bbf5e4-0bbf-4309-8f09-2d9c3e80544c
+		summarizeBy: none
+		sourceColumn: A08 - Planning Scheduled End Date.ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: 07dc6b12-8036-4211-bc97-a07ad3fdd986
+			defaultHierarchy: LocalDateTable_87eb647e-f340-49e6-a128-a6f96083cdd8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Planning Actual Start Date.ActStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d204cbcc-e716-4651-83a1-0c1e9b91b556
+		summarizeBy: none
+		sourceColumn: A08 - Planning Actual Start Date.ActStartDate
+
+		variation Variation
+			isDefault
+			relationship: 2d74852d-1ae8-47c4-9f2c-bd9cfa1c8145
+			defaultHierarchy: LocalDateTable_0fcd5ec9-e51d-4fa8-b5f2-9b2e62a3ebf4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Planning Actual End Date.ActEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9d584534-8604-4973-94d3-ea94492ce170
+		summarizeBy: none
+		sourceColumn: A08 - Planning Actual End Date.ActEndDate
+
+		variation Variation
+			isDefault
+			relationship: 391deabb-ab1c-4814-b1e5-3f066eae1993
+			defaultHierarchy: LocalDateTable_36eae290-a4ab-4533-8343-df3ec494fb19.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c2320f6b-ce88-43c1-8a02-18eb586c0e0c
+		summarizeBy: none
+		sourceColumn: A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: df860ea0-cc6a-4095-8055-5684c9228b86
+			defaultHierarchy: LocalDateTable_f65d5b13-710f-4ae1-be96-6479a0553ab7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Planning Indicator #1' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Blank"
+			                    )
+		lineageTag: 587e9782-0e7c-4cb1-ba82-a07189725122
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #2' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Blank"
+			                    )
+		lineageTag: c4f7e5f8-d1ce-402f-b2e5-8939063b7430
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #3' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Actual Start Date.ActStartDate]), "Actual Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Actual Start Date.ActStartDate]), "Actual Start Date is Blank"
+			                    )
+		lineageTag: fd597664-f161-4b9f-8b01-290b6f7f6f4a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #4' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Actual End Date.ActEndDate]), "Actual End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Planning Actual End Date.ActEndDate]), "Actual End Date is Blank"
+			                    )
+		lineageTag: 88d54f3b-288b-4be0-923a-b018b7a412bd
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Indicator #5' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate]), "AAL Issuance Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate]), "AAL Issuance Date is Blank"
+			                    )
+		lineageTag: 441ea10b-d332-4752-af33-4a6ca8cf8b9c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planning Overall Indicator' = ```
+			SWITCH(
+			                    TRUE,
+			                    ('A08 - Audit Schedule KPIs'[Planning Indicator #1] = "Scheduled Start Date is Blank") || ('A08 - Audit Schedule KPIs'[Planning Indicator #2] = "Scheduled End Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[Planning Indicator #3] = "Actual Start Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[Planning Indicator #4] = "Actual End Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[Planning Indicator #5] = "AAL Issuance Date is Blank"), "Red",
+			                    ('A08 - Audit Schedule KPIs'[Planning Indicator #1] = "Scheduled Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Planning Indicator #2] = "Scheduled End Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Planning Indicator #3] = "Actual Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Planning Indicator #4] = "Actual End Date is Not Blank") ||
+								('A08 - Audit Schedule KPIs'[Planning Indicator #5] = "AAL Issuance Date is Not Blank"),"Green")
+			```
+		lineageTag: 75c55085-d69b-47db-b830-b45d7a190ad1
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - FieldWork Scheduled Start Date.ScheduledStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: addcc01f-29ef-42d3-96a8-a1ac57724c9b
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Scheduled Start Date.ScheduledStartDate
+
+		variation Variation
+			isDefault
+			relationship: 5100a7b4-bbda-4d17-aae5-5117c2387d4c
+			defaultHierarchy: LocalDateTable_06e9d653-84c3-4fd6-b31a-b4f8c94d1e8c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - FieldWork Scheduled End Date.ScheduledEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7e0fb15c-72fb-45e8-af74-39c40d3633b1
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Scheduled End Date.ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: bcfaaaeb-d240-46fa-a3ac-0ff78a34427a
+			defaultHierarchy: LocalDateTable_336c1c3f-e02e-4568-bdfb-b6d52bfabd99.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - FieldWork Actual End Date.ActEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0cb1cbf7-6dab-4526-86c9-51412760d492
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Actual End Date.ActEndDate
+
+		variation Variation
+			isDefault
+			relationship: 7f7b2278-a6ea-4b08-8fb0-1c47298d7715
+			defaultHierarchy: LocalDateTable_63bbdc61-d293-416c-86cc-ca26a3191489.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b8ac74d4-7651-4562-9c70-2c58773e50f4
+		summarizeBy: none
+		sourceColumn: A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: a26fff58-c32c-4c81-aa91-8150ed3e47a1
+			defaultHierarchy: LocalDateTable_e3c90c25-e7a0-46aa-bcc3-89b8e9c97cc9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'FieldWork Indicator #1' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Blank"
+			                    )
+		lineageTag: e6a4ff33-eddf-49dd-943a-d3a8ed74e803
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #2' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Blank"
+			                    )
+		lineageTag: 8bdaf72d-eda3-42d1-8ffa-ffbf814f3180
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #3' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Actual Start Date.ActStartDate]), "Actual Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Actual Start Date.ActStartDate]), "Actual Start Date is Blank"
+			                    )
+		lineageTag: abac6b34-6c2c-4301-8b87-f01a4a33a5d0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #4' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Actual End Date.ActEndDate]), "Actual End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Actual End Date.ActEndDate]), "Actual End Date is Blank"
+			                    )
+		lineageTag: 207b1dfd-4844-41b5-8710-6650f4940b47
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Indicator #5' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate]), "FieldWork Completed Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate]), "FieldWork Completed Date is Blank"
+			                    )
+		lineageTag: 1f0e8231-cc84-4fef-94a9-30847c24de50
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FieldWork Overall Indicator' = ```
+			SWITCH(
+			                    TRUE,
+			                    ('A08 - Audit Schedule KPIs'[FieldWork Indicator #1] = "Scheduled Start Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[FieldWork Indicator #2] = "Scheduled End Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[FieldWork Indicator #3] = "Actual Start Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[FieldWork Indicator #4] = "Actual End Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[FieldWork Indicator #5] = "FieldWork Completed Date is Blank"), "Red",
+			                    ('A08 - Audit Schedule KPIs'[FieldWork Indicator #1] = "Scheduled Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[FieldWork Indicator #2] = "Scheduled End Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[FieldWork Indicator #3] = "Actual Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[FieldWork Indicator #4] = "Actual End Date is Not Blank") ||
+								('A08 - Audit Schedule KPIs'[FieldWork Indicator #5] = "FieldWork Completed Date is Not Blank"),"Green")
+			```
+		lineageTag: e0d2dcfb-d09e-412d-9e86-3fa0423f56a7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Reporting Scheduled Start Date.ScheduledStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6bd4d8e4-961e-4cdc-913f-5f57fab4a62a
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Scheduled Start Date.ScheduledStartDate
+
+		variation Variation
+			isDefault
+			relationship: 352ecb70-95b2-4b13-b837-4a0301b2fbe3
+			defaultHierarchy: LocalDateTable_f4532868-b41e-42e9-a5f2-b2ba8ab938f1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Reporting Scheduled End Date.ScheduledEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5686b07f-69e8-4768-bb0a-b4f548f96e89
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Scheduled End Date.ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: b7ee2503-d135-4663-9cd5-8422c43fd941
+			defaultHierarchy: LocalDateTable_fac292be-4e00-4046-ab26-8a7f50d272f4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Reporting Actual Start Date.ActStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bdda1d1d-5013-4f45-90ac-2c2c2e77ff62
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Actual Start Date.ActStartDate
+
+		variation Variation
+			isDefault
+			relationship: 4f7c4370-4c0d-4b9e-9eff-e932721940ca
+			defaultHierarchy: LocalDateTable_fe4c05a0-a304-4eb5-b837-ddabad98554a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Reporting Actual End Date.ActEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a23a4c6e-e2c7-4bac-af37-5cdf4151ef42
+		summarizeBy: none
+		sourceColumn: A08 - Reporting Actual End Date.ActEndDate
+
+		variation Variation
+			isDefault
+			relationship: 8ea590a1-d117-45d9-87c8-9f7a19ffbc8e
+			defaultHierarchy: LocalDateTable_2e0e9c13-fd22-413c-923e-b99389f7be0e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Draft  Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndD'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 02a6345a-ddeb-472b-be7c-8be80203b356
+		summarizeBy: none
+		sourceColumn: A08 - Draft  Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndD
+
+		variation Variation
+			isDefault
+			relationship: 99fa26ad-57ac-473f-9c41-ffc1af7283cb
+			defaultHierarchy: LocalDateTable_061db9ac-e3cd-4279-aac7-19dab6a0bd5e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEnd.1'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 91243f3a-406a-49c6-a81a-97dfc2bef20b
+		summarizeBy: none
+		sourceColumn: A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEnd.1
+
+		variation Variation
+			isDefault
+			relationship: bfcfbebe-dcfd-49ab-b518-37464371566d
+			defaultHierarchy: LocalDateTable_6796a702-08d0-4035-95da-10780d922a2f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Reporting Indicator #1' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Blank"
+			                    )
+		lineageTag: b1d09818-8397-4474-8962-8bbf00c6b1f6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #2' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Blank"
+			                    )
+		lineageTag: 2e02b567-d1d3-4079-9fc8-45ce43dea913
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #3' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Actual Start Date.ActStartDate]), "Actual Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Actual Start Date.ActStartDate]), "Actual Start Date is Blank"
+			                    )
+		lineageTag: e1a40321-27c1-49f9-be37-d642e124c37c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #4' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Actual End Date.ActEndDate]), "Actual End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Reporting Actual End Date.ActEndDate]), "Actual End Date is Blank"
+			                    )
+		lineageTag: 239d50ec-72dc-410a-94a6-d40b59ab1497
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #5' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Draft  Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndD]), "Draft Report Issuance Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Draft  Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndD]), "Draft Report Issuance Date is Blank"
+			                    )
+		lineageTag: f1fd2634-faa5-42a4-84cf-d9767dfeff68
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Indicator #6' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa]), "Final Report Issuance Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa]), "Final Report Issuance Date is Blank"
+			                    )
+		lineageTag: 7f1829c6-6a15-4dff-9cd5-8f4d9f8c635e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Overall Indicator' = ```
+			SWITCH(
+			                    TRUE,
+			                    ('A08 - Audit Schedule KPIs'[Reporting Indicator #1] = "Scheduled Start Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[Reporting Indicator #2] = "Scheduled End Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[Reporting Indicator #3] = "Actual Start Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[Reporting Indicator #4] = "Actual End Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[Reporting Indicator #5] = "Draft Report Issuance Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[Reporting Indicator #6] = "Final Report Issuance Date is Blank"), "Red",
+			                    ('A08 - Audit Schedule KPIs'[Reporting Indicator #1] = "Scheduled Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Reporting Indicator #2] = "Scheduled End Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Reporting Indicator #3] = "Actual Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Reporting Indicator #4] = "Actual End Date is Not Blank") ||
+								('A08 - Audit Schedule KPIs'[Reporting Indicator #5] = "Draft Report Issuance Date is Not Blank") ||
+								('A08 - Audit Schedule KPIs'[Reporting Indicator #6] = "Final Report Issuance Date is Not Blank"),"Green")
+			```
+		lineageTag: 4d26fb7d-61bb-42dc-a219-8bab7562ae62
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Closure Scheduled Start Date.ScheduledStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9fbc8129-f4a0-4842-afd5-59e3048052e4
+		summarizeBy: none
+		sourceColumn: A08 - Closure Scheduled Start Date.ScheduledStartDate
+
+		variation Variation
+			isDefault
+			relationship: 752c49b9-037a-4903-b762-833d89cc8ab9
+			defaultHierarchy: LocalDateTable_ecb26081-dea9-4c57-a497-5ef8b3173b8d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Closure Scheduled End Date.ScheduledEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 56999bd0-cdd9-4bc1-a234-09b0761da806
+		summarizeBy: none
+		sourceColumn: A08 - Closure Scheduled End Date.ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: 43bbe7c8-ee17-4913-852c-08fc98315c09
+			defaultHierarchy: LocalDateTable_8460bdeb-6937-4814-a64f-4df1cae6c6f9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Closure Actual Start Date.ActStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4555dcc5-a7e0-4cbc-b671-10102c534a2a
+		summarizeBy: none
+		sourceColumn: A08 - Closure Actual Start Date.ActStartDate
+
+		variation Variation
+			isDefault
+			relationship: c43126c5-8d17-4851-9eab-363ef56d2ae3
+			defaultHierarchy: LocalDateTable_f21a934c-755e-4736-82ca-0af6c6cb207c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Closure Actual End Date.ActEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5fffab09-a01d-4fdc-be68-a436bc2f0d2a
+		summarizeBy: none
+		sourceColumn: A08 - Closure Actual End Date.ActEndDate
+
+		variation Variation
+			isDefault
+			relationship: 46ad9811-79c8-4544-b8fa-aa5940b69d21
+			defaultHierarchy: LocalDateTable_aecbdd9c-ce31-403d-8836-61280b27cb8c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fc6e9add-6112-4a6d-98f3-18a6b4ceab24
+		summarizeBy: none
+		sourceColumn: A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 8adbe609-5fea-4b80-8ace-c4537ca79c59
+			defaultHierarchy: LocalDateTable_9ca88bd2-2542-401c-a50d-aa1fb3def8e5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Closure Indicator #1' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Scheduled Start Date.ScheduledStartDate]), "Scheduled Start Date is Blank"
+			                    )
+		lineageTag: d2dd9c11-9254-4a0e-b563-50ec5a3ed82d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #2' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Scheduled End Date.ScheduledEndDate]), "Scheduled End Date is Blank"
+			                    )
+		lineageTag: 6a7e735c-376f-42ab-b14d-c6153168821e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #3' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Actual Start Date.ActStartDate]), "Actual Start Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Actual Start Date.ActStartDate]), "Actual Start Date is Blank"
+			                    )
+		lineageTag: e09984c3-5894-4700-88c0-16b199ff8d3d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #4' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Actual End Date.ActEndDate]), "Actual End Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Closure Actual End Date.ActEndDate]), "Actual End Date is Blank"
+			                    )
+		lineageTag: acb0af45-1973-4200-a6db-2d2694300a4a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #5' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate]), "TeamMate Updated Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate]), "TeamMate Updated Date is Blank"
+			                    )
+		lineageTag: 238b84ad-00a5-4d6d-a2fd-c70faf037508
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Indicator #6' =
+			SWITCH(
+			                    TRUE,
+			                    NOT ISBLANK('A08 - Audit Schedule KPIs'[A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate]), "Project Closed Date is Not Blank",
+			                    ISBLANK('A08 - Audit Schedule KPIs'[A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate]), "Project Closed Date is Blank"
+			                    )
+		lineageTag: 925b1796-6431-48a1-84ef-af8a9c220883
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closure Overall Indicator' = ```
+			SWITCH(
+			                    TRUE,
+			                    ('A08 - Audit Schedule KPIs'[Closure Indicator #1] = "Scheduled Start Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[Closure Indicator #2] = "Scheduled End Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[Closure Indicator #3] = "Actual Start Date is Blank") || 
+			                    ('A08 - Audit Schedule KPIs'[Closure Indicator #4] = "Actual End Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[Closure Indicator #5] = "TeamMate Updated Date is Blank") ||
+								('A08 - Audit Schedule KPIs'[Closure Indicator #6] = "Project Closed Date is Blank"), "Red",
+			                    ('A08 - Audit Schedule KPIs'[Closure Indicator #1] = "Scheduled Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Closure Indicator #2] = "Scheduled End Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Closure Indicator #3] = "Actual Start Date is Not Blank") ||
+			                    ('A08 - Audit Schedule KPIs'[Closure Indicator #4] = "Actual End Date is Not Blank") ||
+								('A08 - Audit Schedule KPIs'[Closure Indicator #5] = "TeamMate Updated Date is Not Blank") ||
+								('A08 - Audit Schedule KPIs'[Closure Indicator #6] = "Project Closed Date is Not Blank"),"Green")
+			```
+		lineageTag: 49d43e53-0cfb-4f2f-bf7b-a844e7badebb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Audit Schedule KPIs' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A06 - Audit Plan", {"ProjectId"}, #"A08 - FieldWork Actual Start Date", {"ProjectId"}, "A08 - FieldWork Actual Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - FieldWork Actual Start Date" = Table.ExpandTableColumn(Source, "A08 - FieldWork Actual Start Date", {"ProjectPhaseName", "ActStartDate"}, {"A08 - FieldWork Actual Start Date.ProjectPhaseName", "A08 - FieldWork Actual Start Date.ActStartDate"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Expanded A08 - FieldWork Actual Start Date", {"ProjectId"}, #"A08 - Final Report Issuance Date", {"ProjectId"}, "A08 - Final Report Issuance Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Final Report Issuance Date" = Table.ExpandTableColumn(#"Merged Queries", "A08 - Final Report Issuance Date", {"A08_00 - Final Report Issuance Date.MilestoneName", "A08_00 - Final Report Issuance Date.ActualEndDate"}, {"A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.MilestoneNa", "A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEndDa"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded A08 - Final Report Issuance Date", {"ProjectId"}, #"A08 - TeamMate Updated Date", {"ProjectId"}, "A08 - TeamMate Updated Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - TeamMate Updated Date" = Table.ExpandTableColumn(#"Merged Queries1", "A08 - TeamMate Updated Date", {"A08_00 - TeamMate Updated Date.MilestoneName", "A08_00 - TeamMate Updated Date.ActualEndDate"}, {"A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.MilestoneName", "A08 - TeamMate Updated Date.A08_00 - TeamMate Updated Date.ActualEndDate"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded A08 - TeamMate Updated Date", {"ProjectId"}, #"A08 - Planning Scheduled Start Date", {"ProjectId"}, "A08 - Planning Scheduled Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Planning Scheduled Start Date" = Table.ExpandTableColumn(#"Merged Queries2", "A08 - Planning Scheduled Start Date", {"ScheduledStartDate"}, {"A08 - Planning Scheduled Start Date.ScheduledStartDate"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded A08 - Planning Scheduled Start Date", {"ProjectId"}, #"A08 - Planning Scheduled End Date", {"ProjectId"}, "A08 - Planning Scheduled End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Planning Scheduled End Date" = Table.ExpandTableColumn(#"Merged Queries3", "A08 - Planning Scheduled End Date", {"ScheduledEndDate"}, {"A08 - Planning Scheduled End Date.ScheduledEndDate"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Expanded A08 - Planning Scheduled End Date", {"ProjectId"}, #"A08 - Planning Actual Start Date", {"ProjectId"}, "A08 - Planning Actual Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Planning Actual Start Date" = Table.ExpandTableColumn(#"Merged Queries4", "A08 - Planning Actual Start Date", {"ActStartDate"}, {"A08 - Planning Actual Start Date.ActStartDate"}),
+				    #"Merged Queries5" = Table.NestedJoin(#"Expanded A08 - Planning Actual Start Date", {"ProjectId"}, #"A08 - Planning Actual End Date", {"ProjectId"}, "A08 - Planning Actual End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Planning Actual End Date" = Table.ExpandTableColumn(#"Merged Queries5", "A08 - Planning Actual End Date", {"ActEndDate"}, {"A08 - Planning Actual End Date.ActEndDate"}),
+				    #"Merged Queries6" = Table.NestedJoin(#"Expanded A08 - Planning Actual End Date", {"ProjectId"}, #"A08 - AAL Issuance Date", {"ProjectId"}, "A08 - AAL Issuance Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - AAL Issuance Date" = Table.ExpandTableColumn(#"Merged Queries6", "A08 - AAL Issuance Date", {"A08_00 - AAL Issuance Date.ActualEndDate"}, {"A08 - AAL Issuance Date.A08_00 - AAL Issuance Date.ActualEndDate"}),
+				    #"Merged Queries7" = Table.NestedJoin(#"Expanded A08 - AAL Issuance Date", {"ProjectId"}, #"A08 - FieldWork Scheduled Start Date", {"ProjectId"}, "A08 - FieldWork Scheduled Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - FieldWork Scheduled Start Date" = Table.ExpandTableColumn(#"Merged Queries7", "A08 - FieldWork Scheduled Start Date", {"ScheduledStartDate"}, {"A08 - FieldWork Scheduled Start Date.ScheduledStartDate"}),
+				    #"Merged Queries8" = Table.NestedJoin(#"Expanded A08 - FieldWork Scheduled Start Date", {"ProjectId"}, #"A08 - FieldWork Scheduled End Date", {"ProjectId"}, "A08 - FieldWork Scheduled End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - FieldWork Scheduled End Date" = Table.ExpandTableColumn(#"Merged Queries8", "A08 - FieldWork Scheduled End Date", {"ScheduledEndDate"}, {"A08 - FieldWork Scheduled End Date.ScheduledEndDate"}),
+				    #"Merged Queries9" = Table.NestedJoin(#"Expanded A08 - FieldWork Scheduled End Date", {"ProjectId"}, #"A08 - FieldWork Actual End Date", {"ProjectId"}, "A08 - FieldWork Actual End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - FieldWork Actual End Date" = Table.ExpandTableColumn(#"Merged Queries9", "A08 - FieldWork Actual End Date", {"ActEndDate"}, {"A08 - FieldWork Actual End Date.ActEndDate"}),
+				    #"Merged Queries10" = Table.NestedJoin(#"Expanded A08 - FieldWork Actual End Date", {"ProjectId"}, #"A08 - FieldWork Completed Date", {"ProjectId"}, "A08 - FieldWork Completed Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - FieldWork Completed Date" = Table.ExpandTableColumn(#"Merged Queries10", "A08 - FieldWork Completed Date", {"A08_00 - FieldWork Completed Date.ActualEndDate"}, {"A08 - FieldWork Completed Date.A08_00 - FieldWork Completed Date.ActualEndDate"}),
+				    #"Merged Queries11" = Table.NestedJoin(#"Expanded A08 - FieldWork Completed Date", {"ProjectId"}, #"A08 - Reporting Scheduled Start Date", {"ProjectId"}, "A08 - Reporting Scheduled Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Reporting Scheduled Start Date" = Table.ExpandTableColumn(#"Merged Queries11", "A08 - Reporting Scheduled Start Date", {"ScheduledStartDate"}, {"A08 - Reporting Scheduled Start Date.ScheduledStartDate"}),
+				    #"Merged Queries12" = Table.NestedJoin(#"Expanded A08 - Reporting Scheduled Start Date", {"ProjectId"}, #"A08 - Reporting Scheduled End Date", {"ProjectId"}, "A08 - Reporting Scheduled End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Reporting Scheduled End Date" = Table.ExpandTableColumn(#"Merged Queries12", "A08 - Reporting Scheduled End Date", {"ScheduledEndDate"}, {"A08 - Reporting Scheduled End Date.ScheduledEndDate"}),
+				    #"Merged Queries13" = Table.NestedJoin(#"Expanded A08 - Reporting Scheduled End Date", {"ProjectId"}, #"A08 - Reporting Actual Start Date", {"ProjectId"}, "A08 - Reporting Actual Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Reporting Actual Start Date" = Table.ExpandTableColumn(#"Merged Queries13", "A08 - Reporting Actual Start Date", {"ActStartDate"}, {"A08 - Reporting Actual Start Date.ActStartDate"}),
+				    #"Merged Queries14" = Table.NestedJoin(#"Expanded A08 - Reporting Actual Start Date", {"ProjectId"}, #"A08 - Reporting Actual End Date", {"ProjectId"}, "A08 - Reporting Actual End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Reporting Actual End Date" = Table.ExpandTableColumn(#"Merged Queries14", "A08 - Reporting Actual End Date", {"ActEndDate"}, {"A08 - Reporting Actual End Date.ActEndDate"}),
+				    #"Merged Queries15" = Table.NestedJoin(#"Expanded A08 - Reporting Actual End Date", {"ProjectId"}, #"A08 - Draft  Report Issuance Date", {"ProjectId"}, "A08 - Draft  Report Issuance Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Draft  Report Issuance Date" = Table.ExpandTableColumn(#"Merged Queries15", "A08 - Draft  Report Issuance Date", {"A08_00 - Draft Report Issuance Date.ActualEndDate"}, {"A08 - Draft  Report Issuance Date.A08_00 - Draft Report Issuance Date.ActualEndD"}),
+				    #"Merged Queries16" = Table.NestedJoin(#"Expanded A08 - Draft  Report Issuance Date", {"ProjectId"}, #"A08 - Final Report Issuance Date", {"ProjectId"}, "A08 - Final Report Issuance Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Final Report Issuance Date1" = Table.ExpandTableColumn(#"Merged Queries16", "A08 - Final Report Issuance Date", {"A08_00 - Final Report Issuance Date.ActualEndDate"}, {"A08 - Final Report Issuance Date.A08_00 - Final Report Issuance Date.ActualEnd.1"}),
+				    #"Merged Queries17" = Table.NestedJoin(#"Expanded A08 - Final Report Issuance Date1", {"ProjectId"}, #"A08 - Closure Scheduled Start Date", {"ProjectId"}, "A08 - Closure Scheduled Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Closure Scheduled Start Date" = Table.ExpandTableColumn(#"Merged Queries17", "A08 - Closure Scheduled Start Date", {"ScheduledStartDate"}, {"A08 - Closure Scheduled Start Date.ScheduledStartDate"}),
+				    #"Merged Queries18" = Table.NestedJoin(#"Expanded A08 - Closure Scheduled Start Date", {"ProjectId"}, #"A08 - Closure Scheduled End Date", {"ProjectId"}, "A08 - Closure Scheduled End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Closure Scheduled End Date" = Table.ExpandTableColumn(#"Merged Queries18", "A08 - Closure Scheduled End Date", {"ScheduledEndDate"}, {"A08 - Closure Scheduled End Date.ScheduledEndDate"}),
+				    #"Merged Queries19" = Table.NestedJoin(#"Expanded A08 - Closure Scheduled End Date", {"ProjectId"}, #"A08 - Closure Actual Start Date", {"ProjectId"}, "A08 - Closure Actual Start Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Closure Actual Start Date" = Table.ExpandTableColumn(#"Merged Queries19", "A08 - Closure Actual Start Date", {"ActStartDate"}, {"A08 - Closure Actual Start Date.ActStartDate"}),
+				    #"Merged Queries20" = Table.NestedJoin(#"Expanded A08 - Closure Actual Start Date", {"ProjectId"}, #"A08 - Closure Actual End Date", {"ProjectId"}, "A08 - Closure Actual End Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Closure Actual End Date" = Table.ExpandTableColumn(#"Merged Queries20", "A08 - Closure Actual End Date", {"ActEndDate"}, {"A08 - Closure Actual End Date.ActEndDate"}),
+				    #"Merged Queries21" = Table.NestedJoin(#"Expanded A08 - Closure Actual End Date", {"ProjectId"}, #"A08 - Project Closed Date", {"ProjectId"}, "A08 - Project Closed Date", JoinKind.LeftOuter),
+				    #"Expanded A08 - Project Closed Date" = Table.ExpandTableColumn(#"Merged Queries21", "A08 - Project Closed Date", {"A08_00 - Project Closed Date.ActualEndDate"}, {"A08 - Project Closed Date.A08_00 - Project Closed Date.ActualEndDate"})
+				in
+				    #"Expanded A08 - Project Closed Date"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

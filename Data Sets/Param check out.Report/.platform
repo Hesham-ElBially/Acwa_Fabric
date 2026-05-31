@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Param check out"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1a22d659-b5c3-8754-4e5d-1b7361f88150"
+  }
+}

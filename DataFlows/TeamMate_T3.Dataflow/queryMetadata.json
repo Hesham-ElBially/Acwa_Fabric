@@ -1,0 +1,362 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "TeamMate_T3",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "StrategicRiskScoringCalculations": {
+      "queryId": "82bb76fa-4446-436d-b04b-99a15ce5bae8",
+      "queryName": "StrategicRiskScoringCalculations",
+      "loadEnabled": false
+    },
+    "StrategicRiskScoringCalculationsAssessmentProject": {
+      "queryId": "1980093d-50a9-4e7a-85ab-b72796f4be93",
+      "queryName": "StrategicRiskScoringCalculationsAssessmentProject",
+      "loadEnabled": false
+    },
+    "StrategicRiskScoringValues": {
+      "queryId": "94a9558d-006c-495f-919f-0bf37f5e05ff",
+      "queryName": "StrategicRiskScoringValues",
+      "loadEnabled": false
+    },
+    "StrategicRiskScoringValuesAssessmentProject": {
+      "queryId": "651f2388-7347-4748-86e5-cbdf1a4caf65",
+      "queryName": "StrategicRiskScoringValuesAssessmentProject",
+      "loadEnabled": false
+    },
+    "StrategicRiskTexts": {
+      "queryId": "1aba03dc-c004-41de-8160-e251bac6c91a",
+      "queryName": "StrategicRiskTexts",
+      "loadEnabled": false
+    },
+    "StrategicRiskWorkflowHistory": {
+      "queryId": "e9f81941-5e2c-43ad-93d9-e7650b307fa8",
+      "queryName": "StrategicRiskWorkflowHistory",
+      "loadEnabled": false
+    },
+    "SurveyQuestionAnswerChoices": {
+      "queryId": "e34c286a-d276-495f-a40b-935afc97a4d0",
+      "queryName": "SurveyQuestionAnswerChoices",
+      "loadEnabled": false
+    },
+    "SurveyRecipients": {
+      "queryId": "0bc4d1e0-e448-4ba4-ae2f-75a66e1de202",
+      "queryName": "SurveyRecipients",
+      "loadEnabled": false
+    },
+    "SurveyRecipientSelfAssessments": {
+      "queryId": "8fa58224-73fe-45e1-a8da-31361c1cd018",
+      "queryName": "SurveyRecipientSelfAssessments",
+      "loadEnabled": false
+    },
+    "SurveyResponses": {
+      "queryId": "8b514972-dd5e-4d1c-9db6-2537c3042d96",
+      "queryName": "SurveyResponses",
+      "loadEnabled": false
+    },
+    "SurveyResponseSelfAssessments": {
+      "queryId": "f7bba617-7d64-4ead-ab4d-3a6e99aba941",
+      "queryName": "SurveyResponseSelfAssessments",
+      "loadEnabled": false
+    },
+    "Surveys": {
+      "queryId": "c08ce74d-8694-4808-911d-008a3ce14add",
+      "queryName": "Surveys",
+      "loadEnabled": false
+    },
+    "TeamStoreControls": {
+      "queryId": "e27aa8cd-9d11-4a74-ad72-f3ea8f93a265",
+      "queryName": "TeamStoreControls",
+      "loadEnabled": false
+    },
+    "TeamStoreControlTexts": {
+      "queryId": "94a6c0db-a0a0-4f08-a11a-e1dfa2f8a75f",
+      "queryName": "TeamStoreControlTexts",
+      "loadEnabled": false
+    },
+    "TeamStoreIssues": {
+      "queryId": "e59acfe3-ade3-40cd-aef4-5983b0c2a44f",
+      "queryName": "TeamStoreIssues",
+      "loadEnabled": false
+    },
+    "TeamStoreIssueTexts": {
+      "queryId": "0693f88e-100d-44f3-9a8f-acf181ca3e37",
+      "queryName": "TeamStoreIssueTexts",
+      "loadEnabled": false
+    },
+    "TeamStoreObjectives": {
+      "queryId": "02a09a27-e4bc-49b5-a329-686c9674ab20",
+      "queryName": "TeamStoreObjectives",
+      "loadEnabled": false
+    },
+    "TeamStoreObjectiveTexts": {
+      "queryId": "687ee9a9-18ed-43e5-96f5-0016130426ee",
+      "queryName": "TeamStoreObjectiveTexts",
+      "loadEnabled": false
+    },
+    "TeamStoreProcedures": {
+      "queryId": "23b43293-a5e3-462b-a883-a8cad34adf4d",
+      "queryName": "TeamStoreProcedures",
+      "loadEnabled": false
+    },
+    "TeamStoreProcedureTexts": {
+      "queryId": "764bbf70-258d-48ee-b696-ff04299c2db1",
+      "queryName": "TeamStoreProcedureTexts",
+      "loadEnabled": false
+    },
+    "TeamStoreRecommendations": {
+      "queryId": "d7525d0d-a719-451d-8617-5b655e290287",
+      "queryName": "TeamStoreRecommendations",
+      "loadEnabled": false
+    },
+    "TeamStoreRecommendationTexts": {
+      "queryId": "4165c4ff-d666-4f15-8be8-3972eed63e89",
+      "queryName": "TeamStoreRecommendationTexts",
+      "loadEnabled": false
+    },
+    "TeamStoreRisks": {
+      "queryId": "2aa2553d-4d9f-4637-a8d9-e55d06de7bed",
+      "queryName": "TeamStoreRisks",
+      "loadEnabled": false
+    },
+    "TeamStoreRiskTexts": {
+      "queryId": "fbed7a6d-4911-42e8-a4f9-fa49b6187216",
+      "queryName": "TeamStoreRiskTexts",
+      "loadEnabled": false
+    },
+    "TeamStoreStrategicRisks": {
+      "queryId": "16c76e42-2295-4fb2-a3de-4ca6c99399ec",
+      "queryName": "TeamStoreStrategicRisks",
+      "loadEnabled": false
+    },
+    "TeamStoreStrategicRiskTexts": {
+      "queryId": "3066ca36-1494-455c-bc04-f08cfa8d47a1",
+      "queryName": "TeamStoreStrategicRiskTexts",
+      "loadEnabled": false
+    },
+    "Terminologies": {
+      "queryId": "6b659a6f-4716-437b-897c-8efa1c09d3df",
+      "queryName": "Terminologies",
+      "loadEnabled": false
+    },
+    "Users": {
+      "queryId": "33434528-09c3-4501-ae07-3c5fa89ded84",
+      "queryName": "Users",
+      "loadEnabled": false
+    },
+    "Workpapers": {
+      "queryId": "214408c8-a403-478a-a4f7-a0e84c63c034",
+      "queryName": "Workpapers",
+      "loadEnabled": false
+    },
+    "WorkpaperTexts": {
+      "queryId": "1d872193-51d3-4acd-930a-f9d894ea079d",
+      "queryName": "WorkpaperTexts",
+      "loadEnabled": false
+    },
+    "WorkpaperWorkflowHistory": {
+      "queryId": "6b8a8222-e7ff-4a49-bf16-c094c023745a",
+      "queryName": "WorkpaperWorkflowHistory",
+      "loadEnabled": false
+    },
+    "StrategicRiskScoringCalculations_DataDestination": {
+      "queryId": "e9c0596c-831e-40e6-a31e-a6080f291848",
+      "queryName": "StrategicRiskScoringCalculations_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "StrategicRiskScoringCalculationsAssessmentProject_DataDestination": {
+      "queryId": "c4a685ba-a090-4faa-90a5-6bceacd1459b",
+      "queryName": "StrategicRiskScoringCalculationsAssessmentProject_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "StrategicRiskScoringValues_DataDestination": {
+      "queryId": "2b5dbf06-419e-4023-bf15-09267b54d5c8",
+      "queryName": "StrategicRiskScoringValues_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "StrategicRiskScoringValuesAssessmentProject_DataDestination": {
+      "queryId": "011c8a7d-2df0-489f-b884-69739d32be41",
+      "queryName": "StrategicRiskScoringValuesAssessmentProject_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "StrategicRiskTexts_DataDestination": {
+      "queryId": "2059bce6-cf71-4024-a804-14f21c015ced",
+      "queryName": "StrategicRiskTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "StrategicRiskWorkflowHistory_DataDestination": {
+      "queryId": "52799f60-19ba-43e6-a99f-1cf96dbba2fb",
+      "queryName": "StrategicRiskWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "SurveyRecipients_DataDestination": {
+      "queryId": "52d8ef61-ae30-4db5-9413-cfb53cb87c5d",
+      "queryName": "SurveyRecipients_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "SurveyRecipientSelfAssessments_DataDestination": {
+      "queryId": "e4457f78-c2b6-4ce1-ad06-91426c082fc4",
+      "queryName": "SurveyRecipientSelfAssessments_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "SurveyResponses_DataDestination": {
+      "queryId": "e06c2988-472a-4469-b445-b06de3bef1b4",
+      "queryName": "SurveyResponses_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "SurveyResponseSelfAssessments_DataDestination": {
+      "queryId": "0b9db470-f7e3-4464-9078-751f48cfb883",
+      "queryName": "SurveyResponseSelfAssessments_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Surveys_DataDestination": {
+      "queryId": "39d19a49-ec25-4095-a33a-26c93ed899d6",
+      "queryName": "Surveys_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreControls_DataDestination": {
+      "queryId": "2e5f9532-9f91-4e7d-8f6a-2603ebbd4a58",
+      "queryName": "TeamStoreControls_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreControlTexts_DataDestination": {
+      "queryId": "9910efa3-1c77-4907-aea0-9d3143e3b416",
+      "queryName": "TeamStoreControlTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreIssues_DataDestination": {
+      "queryId": "b6255498-2435-4eb9-a434-a54b8ca83d71",
+      "queryName": "TeamStoreIssues_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreIssueTexts_DataDestination": {
+      "queryId": "dcf8fdf4-89bd-4d54-87be-fb5e620c8946",
+      "queryName": "TeamStoreIssueTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreObjectives_DataDestination": {
+      "queryId": "1049dc58-605b-4b31-b3f9-c556ffb35fb8",
+      "queryName": "TeamStoreObjectives_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreObjectiveTexts_DataDestination": {
+      "queryId": "6a400ced-6905-4e41-8091-b626fc044f38",
+      "queryName": "TeamStoreObjectiveTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreProcedures_DataDestination": {
+      "queryId": "7a94ef30-a3e6-4b67-be06-859db88caeb7",
+      "queryName": "TeamStoreProcedures_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreProcedureTexts_DataDestination": {
+      "queryId": "7e37aae3-a617-441a-94bb-056c06278804",
+      "queryName": "TeamStoreProcedureTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreRecommendationTexts_DataDestination": {
+      "queryId": "e4a7b47a-3094-43aa-aabc-86d445257900",
+      "queryName": "TeamStoreRecommendationTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreRisks_DataDestination": {
+      "queryId": "8a2d1115-62c6-4c9f-bde8-cace5f62d305",
+      "queryName": "TeamStoreRisks_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreRiskTexts_DataDestination": {
+      "queryId": "f855e52c-6ef7-4372-b5f4-e9c6a9f8d86f",
+      "queryName": "TeamStoreRiskTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreStrategicRisks_DataDestination": {
+      "queryId": "f5b50d98-e4d2-4346-8f8c-f813662971c6",
+      "queryName": "TeamStoreStrategicRisks_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Terminologies_DataDestination": {
+      "queryId": "a92bfc0b-6e54-48dd-808c-46a7758e6fb3",
+      "queryName": "Terminologies_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Users_DataDestination": {
+      "queryId": "4c8bed96-9a2f-48a3-a11b-3b6fa02eec8e",
+      "queryName": "Users_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Workpapers_DataDestination": {
+      "queryId": "532ab530-d36c-4cb5-8872-dea1c26a4da9",
+      "queryName": "Workpapers_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "WorkpaperTexts_DataDestination": {
+      "queryId": "a466269f-a005-4475-adf6-008ea735d2cc",
+      "queryName": "WorkpaperTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "WorkpaperWorkflowHistory_DataDestination": {
+      "queryId": "3049e392-521e-49d9-ab46-f8f98b224bdf",
+      "queryName": "WorkpaperWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "SurveyQuestionAnswerChoices_DataDestination": {
+      "queryId": "15b36b23-f4ba-45fe-99ae-c41357de9342",
+      "queryName": "SurveyQuestionAnswerChoices_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreRecommendations_DataDestination": {
+      "queryId": "ea4239e7-e399-4b24-875a-48f43331623b",
+      "queryName": "TeamStoreRecommendations_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamStoreStrategicRiskTexts_DataDestination": {
+      "queryId": "ee5d92b7-d0f7-4203-8930-95b6bc4bebde",
+      "queryName": "TeamStoreStrategicRiskTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://acwapoweria.teammatehosting.com/TeamMate/odata/v1",
+      "kind": "OData",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"f88d786e-43c1-4e58-85b7-bf95ef7a2131\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"515f52c1-dca8-434e-bfcd-e60d636ecd9e\"}"
+    }
+  ]
+}

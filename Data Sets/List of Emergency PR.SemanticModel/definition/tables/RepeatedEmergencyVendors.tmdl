@@ -1,0 +1,78 @@
+table RepeatedEmergencyVendors
+	lineageTag: 287f5e72-35c6-4ed3-a18d-081795028003
+
+	column Plant
+		lineageTag: 38127260-9018-428b-bf86-889945b8d80a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor
+		lineageTag: 45853887-9ec1-4676-a526-53a0f73e30fc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Vendor]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Code : Plant Name'
+		lineageTag: d7ad7442-d405-4e95-80e6-8de2b4075954
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant Code : Plant Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vendor Code : Vendor Name'
+		lineageTag: 9ae2f342-aaa2-42b1-9c34-b05881b3d300
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Vendor Code : Vendor Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCount
+		formatString: 0
+		lineageTag: 2c31fb05-be2a-4f82-8d17-a90bb4b06e56
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [OrderCount]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code : Company Name'
+		lineageTag: b412a4e0-91e5-4f6d-9fca-e63df477e5c4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Company Code : Company Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RepeatedEmergencyVendors = calculated
+		mode: import
+		source =
+				
+				VAR EmergencyOrders =
+				    FILTER (
+				        'List_of_all_PR_PO',
+				        'List_of_all_PR_PO'[Requirement Urgency] = "01"
+				    )
+				RETURN
+				FILTER (
+				    SUMMARIZE (
+				        EmergencyOrders,
+				        'List_of_all_PR_PO'[Plant],
+				        'List_of_all_PR_PO'[Vendor],
+				        'List_of_all_PR_PO'[Plant Code : Plant Name],
+				        'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				        'List_of_all_PR_PO'[Company Code : Company Name],
+				        "OrderCount",
+				            DISTINCTCOUNT ( 'List_of_all_PR_PO'[Purchase Req.] )
+				    ),
+				    [OrderCount] > 1
+				)
+
+	annotation PBI_Id = b9e69becdfb9421a8ae1fa7aebe9f6ab
+

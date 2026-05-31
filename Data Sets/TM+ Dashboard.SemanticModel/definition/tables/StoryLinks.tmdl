@@ -1,0 +1,115 @@
+table StoryLinks
+	lineageTag: 6f39e9f3-6068-4664-8416-b946386a782f
+
+	column StoryLinkId
+		dataType: int64
+		formatString: 0
+		lineageTag: a222d631-901f-4379-bfc1-a2cd459cddf6
+		summarizeBy: count
+		sourceColumn: StoryLinkId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fdd4d9a-3401-4232-b478-9d70218d40bf
+		summarizeBy: none
+		sourceColumn: StoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: decb2a67-bb84-425d-81cd-5105fcceb9a4
+		summarizeBy: count
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 330397db-612b-493d-8720-fb08e8c0b774
+		summarizeBy: count
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlId
+		dataType: int64
+		formatString: 0
+		lineageTag: 267e14f3-62d0-4c5a-b591-3e1a49791c8c
+		summarizeBy: count
+		sourceColumn: ControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ea83bf1-9c4d-4ac7-a300-b131eb2f95fc
+		summarizeBy: count
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcedureId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0fd02939-abea-44c6-aa55-3d435264077b
+		summarizeBy: count
+		sourceColumn: ProcedureId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8840de98-9218-44d2-b755-fdebd94ea3c8
+		summarizeBy: count
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: 500b07c7-e310-4823-a8b5-46dcf579e173
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoachingNoteId
+		dataType: int64
+		formatString: 0
+		lineageTag: ac8b26c3-42a9-443f-aad8-da58af77473f
+		summarizeBy: count
+		sourceColumn: CoachingNoteId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkpaperId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7db3f3cb-8002-414c-8cd9-9108ff457f50
+		summarizeBy: count
+		sourceColumn: WorkpaperId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StoryLinks = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StoryLinks_table = Source{[Name="StoryLinks",Signature="table"]}[Data]
+				in
+				    StoryLinks_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,88 @@
+table 'A08 - Project Closed Date'
+	lineageTag: fe363e4c-39f3-4fad-a576-d0bae1efaf5d
+	sourceLineageTag: [sch_TeamMate].[A08 - Project Closed Date]
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cb13b4be-2269-42ee-bd1f-1fa62df8a817
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a7ab9489-db9b-4199-9c65-60d94a9ae8a2
+		sourceLineageTag: A08_00 - Project Closed Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.PhaseName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 47ddd9cf-d66c-4525-a6fc-36f6bb2b3d0f
+		sourceLineageTag: A08_00 - Project Closed Date.PhaseName
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 6987b5da-850c-45f8-869f-41d759a92ecf
+		sourceLineageTag: A08_00 - Project Closed Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.ProjectPhaseMilestoneId'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 813d54c3-7d20-4e10-b45f-39c68fd12274
+		sourceLineageTag: A08_00 - Project Closed Date.ProjectPhaseMilestoneId
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.ProjectPhaseId'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8ac55795-3afc-4f13-aa9e-1c6897a7819c
+		sourceLineageTag: A08_00 - Project Closed Date.ProjectPhaseId
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Project Closed Date.IsActive'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: d7d62143-94ee-4ecc-ae4d-f207a5d93025
+		sourceLineageTag: A08_00 - Project Closed Date.IsActive
+		summarizeBy: none
+		sourceColumn: A08_00 - Project Closed Date.IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Project Closed Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Project Closed Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

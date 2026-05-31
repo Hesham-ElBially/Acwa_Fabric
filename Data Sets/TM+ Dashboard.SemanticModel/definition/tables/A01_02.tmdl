@@ -1,0 +1,79 @@
+table A01_02
+	lineageTag: cee77f02-1704-4df0-891b-05f034a34092
+
+	column 'Issues.Category2'
+		lineageTag: 4d259d82-5593-4990-a83b-ccfe59c1b08c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A01 - Open Observation Report as of Today[Issues.Category2]
+		sortByColumn: 'Rating Order'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Overdue Observations'
+		formatString: 0
+		lineageTag: 44bc06f4-35d1-4899-83cf-d37af332ea2d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [No. of Overdue Observations]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Non Overdue Observations'
+		formatString: 0
+		lineageTag: adde348b-bb76-4981-8455-d92e59d6243f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [No. of Non Overdue Observations]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Open Observations'
+		formatString: 0
+		lineageTag: b4a12394-f932-4072-b8c8-67a1f557f4eb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [No. of Open Observations]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Percentage of Overdue Observations' = A01_02[No. of Overdue Observations]/A01_02[No. of Open Observations]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3da94713-09f7-45bd-b869-62f918d0fd38
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI B Status' = ```
+			SWITCH( 
+			                        TRUE,
+			                        ('A01_02'[Issues.Category2] = "High") && ('A01_02'[Percentage of Overdue Observations] >=0.05), "01. KPI B Breach",
+			                        ('A01_02'[Issues.Category2] = "Significant") && ('A01_02'[Percentage of Overdue Observations] >=0.1), "01. KPI B Breach",
+			                        ('A01_02'[Issues.Category2] = "Medium") && ('A01_02'[Percentage of Overdue Observations] >=0.1), "01. KPI B Breach",
+			                        "02. KPI B Non Breach"
+			)
+			```
+		lineageTag: 77e27c71-7664-4db5-b141-594df8387263
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order' = RELATED('A00 - Rating Order'[Order])
+		formatString: 0
+		lineageTag: ee3d07c9-8c3a-4c98-99d7-045588215659
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A01_02 = calculated
+		mode: import
+		source = ```
+				SUMMARIZE('A01 - Open Observation Report as of Today',
+				'A01 - Open Observation Report as of Today'[Issues.Category2], 
+				"No. of Overdue Observations", COUNTROWS (FILTER ('A01 - Open Observation Report as of Today', 'A01 - Open Observation Report as of Today'[Final_Status] = "01. Overdue")),
+				"No. of Non Overdue Observations", COUNTROWS (FILTER ('A01 - Open Observation Report as of Today', 'A01 - Open Observation Report as of Today'[Final_Status] = "02. Non-Overdue")),
+				"No. of Open Observations", COUNT('A01 - Open Observation Report as of Today'[RecommendationId]))
+				```
+
+	annotation PBI_Id = d522fd706afc48abab163008f3f5a0cf
+

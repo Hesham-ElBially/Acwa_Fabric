@@ -1,0 +1,33 @@
+table DimVendor
+	lineageTag: d521af86-5fb1-493c-96bf-eb4683fdafba
+
+	column Vendor
+		lineageTag: 84b25456-ab93-4f2f-b088-4d0b2e7bc987
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Vendor]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vendor Code : Vendor Name'
+		lineageTag: 61d3dc0c-3b88-4dae-ae3b-8e5ce84ce77b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Vendor Code : Vendor Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimVendor = calculated
+		mode: import
+		source =
+				
+				DISTINCT (
+				    SELECTCOLUMNS (
+				        'List_of_all_PR_PO',
+				        "Vendor", 'List_of_all_PR_PO'[Vendor],
+				        "Vendor Code : Vendor Name", 'List_of_all_PR_PO'[Vendor Code : Vendor Name]
+				    )
+				)
+
+	annotation PBI_Id = 00a6ef7a13994e9da8f424a600a536d5
+

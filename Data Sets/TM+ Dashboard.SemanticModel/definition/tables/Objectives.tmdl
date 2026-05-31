@@ -1,0 +1,184 @@
+table Objectives
+	lineageTag: 80c93e84-d677-4743-8ae7-8cfe6059310e
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		lineageTag: eb8ce872-e30e-4b15-93d2-c77ecd47a67b
+		summarizeBy: none
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectiveTitle
+		dataType: string
+		lineageTag: 5350c9ac-3db1-419d-8fed-ddb715d36011
+		summarizeBy: none
+		sourceColumn: ObjectiveTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectiveCode
+		dataType: string
+		lineageTag: e947e728-452b-4971-84e9-732563abfee7
+		summarizeBy: none
+		sourceColumn: ObjectiveCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column YesNo1
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a7a54f8b-9cf6-4260-af6e-c3db5f50629f
+		summarizeBy: none
+		sourceColumn: YesNo1
+
+		annotation SummarizationSetBy = Automatic
+
+	column YesNo2
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: de5f5e04-0342-4bf4-990b-9bce627252b0
+		summarizeBy: none
+		sourceColumn: YesNo2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 521ac009-1823-4ba0-b347-2e4eb3d86fb9
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		lineageTag: 2a426f68-e4dd-4d28-849a-a9c951f9e2fd
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e578e4f-23df-427d-8045-01899578f153
+		summarizeBy: count
+		sourceColumn: Category2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2
+		dataType: string
+		lineageTag: 5e047212-c4ef-4cdb-b41e-99796f00e3a9
+		summarizeBy: none
+		sourceColumn: Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: aff467fe-0279-41f7-93ca-4b71116d5a2d
+		summarizeBy: count
+		sourceColumn: Category3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3
+		dataType: string
+		lineageTag: 6aeda974-2624-40bb-981d-d67dd0c25869
+		summarizeBy: none
+		sourceColumn: Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 03e4b182-dadf-4576-858f-75166fef10e8
+		summarizeBy: count
+		sourceColumn: Category4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4
+		dataType: string
+		lineageTag: 993d28b9-58bb-4877-9f5f-de3bf7e6a0f4
+		summarizeBy: none
+		sourceColumn: Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 649c531a-9f81-4db9-b0c1-4c4b5d70f352
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1
+		dataType: string
+		lineageTag: be5a5269-80a5-4ec9-803f-949731b32138
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column TeamStoreObjectiveID
+		dataType: int64
+		formatString: 0
+		lineageTag: ba49d613-fe42-453a-8d2c-1cb7572ddf13
+		summarizeBy: count
+		sourceColumn: TeamStoreObjectiveID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 43a7b231-de7e-466b-990f-7e4cb1c2009e
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 9e07066c-71b4-4983-b2f3-b9ed10ecdaa6
+			defaultHierarchy: LocalDateTable_571f1ac2-e18c-4fde-9e3c-232cc720e408.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 930df59d-e8ac-4e39-bbbb-6495781bef27
+		summarizeBy: count
+		sourceColumn: LastModifiedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUser
+		dataType: string
+		lineageTag: cd65053d-032c-40db-896b-f5f20ffcfbe0
+		summarizeBy: none
+		sourceColumn: LastModifiedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Objectives = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Objectives_table = Source{[Name="Objectives",Signature="table"]}[Data]
+				in
+				    Objectives_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

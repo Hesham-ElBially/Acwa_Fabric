@@ -1,0 +1,34 @@
+table 'A06_00 - Issues - Significant'
+	lineageTag: b020868e-ffe9-4261-bb9c-3d5259de31eb
+	sourceLineageTag: [sch_TeamMate].[A06_00 - Issues - Significant]
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4bc9143f-300f-43b4-b20f-3542a72734a4
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Significant
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 88e696f4-7606-40a3-a244-88e95c7f98b9
+		sourceLineageTag: Significant
+		summarizeBy: none
+		sourceColumn: Significant
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A06_00 - Issues - Significant' = entity
+		mode: directLake
+		source
+			entityName: A06_00 - Issues - Significant
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

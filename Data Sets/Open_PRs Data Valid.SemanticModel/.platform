@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Open_PRs Data Valid"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f6526e64-537c-bdf1-4272-2ad3f8fb064a"
+  }
+}

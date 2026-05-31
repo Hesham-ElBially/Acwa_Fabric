@@ -1,0 +1,190 @@
+table 'S4_Hana viw_param_3'
+	lineageTag: 60fde768-5f78-4dad-8422-e46d879c07d4
+
+	column 'EBELN_Purchasing Doc.'
+		dataType: string
+		lineageTag: bb0e901a-6ef5-4865-957a-b6bb555ee4ef
+		summarizeBy: none
+		sourceColumn: EBELN_Purchasing Doc.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EBELP_Line Item'
+		dataType: string
+		lineageTag: 0cebdb23-0ac9-44a2-ae1c-b04dad787c8b
+		summarizeBy: none
+		sourceColumn: EBELP_Line Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BUKRS_Company Code'
+		dataType: string
+		lineageTag: c7ed8979-7161-446d-a77d-32750e58a3a3
+		summarizeBy: none
+		sourceColumn: BUKRS_Company Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'T001_Company Name'
+		dataType: string
+		lineageTag: 9cd6eadd-7896-40e9-a00b-16197a40e230
+		summarizeBy: none
+		sourceColumn: T001_Company Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BEDAT_Document Date'
+		dataType: string
+		lineageTag: 7c054f3b-9f94-4efb-bd73-2f35fc2adf23
+		summarizeBy: none
+		sourceColumn: BEDAT_Document Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AEDAT_Created On'
+		dataType: string
+		lineageTag: 7cbe31c8-9a8d-4d1a-8463-622051f34710
+		summarizeBy: none
+		sourceColumn: AEDAT_Created On
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ERNAM_Created by'
+		dataType: string
+		lineageTag: 291dd2d2-b3cc-4a3a-9eb6-a7fd5d2e7d97
+		summarizeBy: none
+		sourceColumn: ERNAM_Created by
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_FIRST_NAME'
+		dataType: string
+		lineageTag: f6ad6a3e-cc61-4f92-91f5-13eac96530f3
+		summarizeBy: none
+		sourceColumn: PR Created By_FIRST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_LAST_NAME'
+		dataType: string
+		lineageTag: c2d3dd86-309b-4c4a-92ee-098a0f5a8e77
+		summarizeBy: none
+		sourceColumn: PR Created By_LAST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_FULL_NAME'
+		dataType: string
+		lineageTag: 9f847fa5-8885-4079-9090-fc809107d041
+		summarizeBy: none
+		sourceColumn: PR Created By_FULL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PR Created By_EMAIL'
+		dataType: string
+		lineageTag: 166e9d3f-d4c1-4355-9669-363d7412dbf9
+		summarizeBy: none
+		sourceColumn: PR Created By_EMAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LIFNR_Vendor Code'
+		dataType: string
+		lineageTag: 0d68f5fe-c0b3-4e1f-966a-38d40e057d82
+		summarizeBy: none
+		sourceColumn: LIFNR_Vendor Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LFA1.NAME1_Vendor Name'
+		dataType: string
+		lineageTag: face2188-7733-4fda-abe5-a2d3cc491779
+		summarizeBy: none
+		sourceColumn: LFA1.NAME1_Vendor Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column WERKS_Plant
+		dataType: string
+		lineageTag: e60e1e49-5c13-4b35-9fd6-336e673a7a86
+		summarizeBy: none
+		sourceColumn: WERKS_Plant
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant Name'
+		dataType: string
+		lineageTag: a33484bc-281f-417b-b2e6-24c33743597f
+		summarizeBy: none
+		sourceColumn: Plant Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column MATNR
+		dataType: string
+		lineageTag: 0446ba0f-8c7d-46f2-a60c-8a50cd2f7cf3
+		summarizeBy: none
+		sourceColumn: MATNR
+
+		annotation SummarizationSetBy = Automatic
+
+	column MATNR_Material
+		dataType: string
+		lineageTag: 4ba0bd1b-17a2-4961-9b7c-fbfe3bb1482c
+		summarizeBy: none
+		sourceColumn: MATNR_Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MAKTX_Description of Vehicle Model'
+		dataType: string
+		lineageTag: df75bd65-bb85-4549-96e7-c181ebcb8f88
+		summarizeBy: none
+		sourceColumn: MAKTX_Description of Vehicle Model
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MATKL_Material Group'
+		dataType: string
+		lineageTag: bc5b77d7-00dc-4934-8319-553e33dc0926
+		summarizeBy: none
+		sourceColumn: MATKL_Material Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column WGBEZ_MATERIAL_GROUP_DESCRIPTION
+		dataType: string
+		lineageTag: 7a0b73f2-fbc5-43b4-b611-cd3fb74419f7
+		summarizeBy: none
+		sourceColumn: WGBEZ_MATERIAL_GROUP_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MTART_Material Type'
+		dataType: string
+		lineageTag: 2a6da6dc-3548-4cf3-92fc-d5007cf92353
+		summarizeBy: none
+		sourceColumn: MTART_Material Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MTBEZ_Description of material type'
+		dataType: string
+		lineageTag: f84d51cb-231c-484a-b1b6-fe922fbc118c
+		summarizeBy: none
+		sourceColumn: MTBEZ_Description of material type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'S4_Hana viw_param_3' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("4quiwbo2nopupn6dkut4jokage-6nv4rrosqdyebioghi7mrs634e.datawarehouse.fabric.microsoft.com", "lh_IA_Bronze"),
+				    S4_Hana_viw_param_3 = Source{[Schema="SAPHANADB",Item="viw_PO without attachments"]}[Data]
+				in
+				    S4_Hana_viw_param_3
+
+	annotation PBI_ResultType = Table
+

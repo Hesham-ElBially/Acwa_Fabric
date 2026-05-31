@@ -1,0 +1,58 @@
+table Terminologies
+	lineageTag: 2cab1b96-832b-4de4-ae3a-8eb310f89c12
+
+	column TerminologyId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e17dd58-e437-47ec-999b-ed4d53985ffd
+		summarizeBy: count
+		sourceColumn: TerminologyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerminologyName
+		dataType: string
+		lineageTag: c818fd19-8501-46fb-aa34-2356e3a66a14
+		summarizeBy: none
+		sourceColumn: TerminologyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerminologyValue
+		dataType: string
+		lineageTag: 02e6538e-e5b5-45fc-b7f5-951ec7c560c3
+		summarizeBy: none
+		sourceColumn: TerminologyValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsVisible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 85550277-b40b-4594-add5-044993a69aa0
+		summarizeBy: none
+		sourceColumn: IsVisible
+
+		annotation SummarizationSetBy = Automatic
+
+	column TermSource
+		dataType: string
+		lineageTag: cadb02b9-d404-4f80-82bb-33f1c5a3bfa6
+		summarizeBy: none
+		sourceColumn: TermSource
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Terminologies = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Terminologies_table = Source{[Name="Terminologies",Signature="table"]}[Data]
+				in
+				    Terminologies_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

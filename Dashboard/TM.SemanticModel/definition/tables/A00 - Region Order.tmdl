@@ -1,0 +1,34 @@
+table 'A00 - Region Order'
+	lineageTag: 1179661f-86e4-4463-a6f7-b7d6e1f1277b
+	sourceLineageTag: [sch_TeamMate].[A00 - Region Order]
+
+	column Region
+		dataType: string
+		sourceProviderType: varchar(12)
+		lineageTag: 08798db9-449c-4727-8d0b-7d8e0359f24d
+		sourceLineageTag: Region
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7b03aaef-02fc-46d1-81c3-00fd3be88608
+		sourceLineageTag: Order
+		summarizeBy: none
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Region Order' = entity
+		mode: directLake
+		source
+			entityName: A00 - Region Order
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

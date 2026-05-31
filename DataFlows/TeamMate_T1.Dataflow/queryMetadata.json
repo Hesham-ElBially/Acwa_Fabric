@@ -1,0 +1,406 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "TeamMate_T1",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Assessments": {
+      "queryId": "96fdfafc-1bd3-48b7-8d78-a1ab71c8c0aa",
+      "queryName": "Assessments",
+      "loadEnabled": false
+    },
+    "AuditReports": {
+      "queryId": "9316e5ae-495e-446b-b528-9dda03c244de",
+      "queryName": "AuditReports",
+      "loadEnabled": false
+    },
+    "AuditReportTexts": {
+      "queryId": "74cde6f2-4d0f-4fb4-a7ef-012f759e51fd",
+      "queryName": "AuditReportTexts",
+      "loadEnabled": false
+    },
+    "AuditReportWorkflowHistory": {
+      "queryId": "cc5b782a-aec1-4648-af68-d865ba771ddf",
+      "queryName": "AuditReportWorkflowHistory",
+      "loadEnabled": false
+    },
+    "CoachingNoteComments": {
+      "queryId": "22b30611-7844-49b9-b41d-80c88545e6e6",
+      "queryName": "CoachingNoteComments",
+      "loadEnabled": false
+    },
+    "CoachingNotes": {
+      "queryId": "d06c62bb-585e-4382-8e62-4b440f9c06a8",
+      "queryName": "CoachingNotes",
+      "loadEnabled": false
+    },
+    "CoachingNoteWorkflowHistory": {
+      "queryId": "957a6e99-568a-4f3e-bb9d-6dd8f8b1f54d",
+      "queryName": "CoachingNoteWorkflowHistory",
+      "loadEnabled": false
+    },
+    "Controls": {
+      "queryId": "d1e36194-49a1-4a35-aa83-3a1bd620d464",
+      "queryName": "Controls",
+      "loadEnabled": false
+    },
+    "ControlTexts": {
+      "queryId": "37e2ff48-25d0-4ae7-997f-9f8e5832da87",
+      "queryName": "ControlTexts",
+      "loadEnabled": false
+    },
+    "ControlWorkflowHistory": {
+      "queryId": "1cea984f-0376-4b04-8c12-6b8442dcd964",
+      "queryName": "ControlWorkflowHistory",
+      "loadEnabled": false
+    },
+    "DimensionAssignmentEntity": {
+      "queryId": "a5a7243d-b995-4e08-b043-fd31c34ad26e",
+      "queryName": "DimensionAssignmentEntity",
+      "loadEnabled": false
+    },
+    "DimensionAssignments": {
+      "queryId": "ae121005-b41a-4609-8dc7-4c8ed6b98bf1",
+      "queryName": "DimensionAssignments",
+      "loadEnabled": false
+    },
+    "Dimensions": {
+      "queryId": "c2ec3245-7051-4419-ac3e-804b238b3eb7",
+      "queryName": "Dimensions",
+      "loadEnabled": false
+    },
+    "DocumentRequestRecipients": {
+      "queryId": "e4f0c219-f8b9-4e10-8c53-3fc7d4dd151f",
+      "queryName": "DocumentRequestRecipients",
+      "loadEnabled": false
+    },
+    "DocumentRequests": {
+      "queryId": "710876ab-d406-4337-a37e-c65a714081c1",
+      "queryName": "DocumentRequests",
+      "loadEnabled": false
+    },
+    "Entities": {
+      "queryId": "47e8ee99-5c8c-4905-9aa9-79cf2ad312a5",
+      "queryName": "Entities",
+      "loadEnabled": false
+    },
+    "EntityAssessmentDetails": {
+      "queryId": "52bd351e-d040-4424-a73d-7295f20aa583",
+      "queryName": "EntityAssessmentDetails",
+      "loadEnabled": false
+    },
+    "EntityAssessmentTexts": {
+      "queryId": "5cd37517-63e3-46b4-8ac9-ee7f17cd4399",
+      "queryName": "EntityAssessmentTexts",
+      "loadEnabled": false
+    },
+    "EntityScoringCalculations": {
+      "queryId": "038d6429-e306-43e5-818a-8e0fd19e059f",
+      "queryName": "EntityScoringCalculations",
+      "loadEnabled": false
+    },
+    "EntityTexts": {
+      "queryId": "e1d9b78f-1056-4bc2-8fc0-80ebcf8af721",
+      "queryName": "EntityTexts",
+      "loadEnabled": false
+    },
+    "Folders": {
+      "queryId": "d6096f94-3900-4ccd-b3d2-1231ea1e2fbd",
+      "queryName": "Folders",
+      "loadEnabled": false
+    },
+    "FolderTexts": {
+      "queryId": "4d77a09f-bb67-490a-964d-6fdccfc1b3c9",
+      "queryName": "FolderTexts",
+      "loadEnabled": false
+    },
+    "FolderWorkflowHistory": {
+      "queryId": "3cfe7ea5-8ac4-45b2-ad39-7b2cccba156a",
+      "queryName": "FolderWorkflowHistory",
+      "loadEnabled": false
+    },
+    "Issues": {
+      "queryId": "cc4a9959-a3fc-4033-8028-6e251ea9b1e2",
+      "queryName": "Issues",
+      "loadEnabled": false
+    },
+    "IssueTexts": {
+      "queryId": "606f326a-9ae8-4d62-9a53-a1c848bfda8e",
+      "queryName": "IssueTexts",
+      "loadEnabled": false
+    },
+    "IssueWorkflowHistory": {
+      "queryId": "d6ac8dbe-3e67-4dfb-9421-87ac854e479e",
+      "queryName": "IssueWorkflowHistory",
+      "loadEnabled": false
+    },
+    "ListItems": {
+      "queryId": "98aef97e-4c14-4271-9ac4-123f424d9ca1",
+      "queryName": "ListItems",
+      "loadEnabled": false
+    },
+    "Lists": {
+      "queryId": "8bb25ee7-4596-4b49-babb-aa8e6c28b71a",
+      "queryName": "Lists",
+      "loadEnabled": false
+    },
+    "Objectives": {
+      "queryId": "27ac73aa-cf00-43fe-b90b-a49273a53cc0",
+      "queryName": "Objectives",
+      "loadEnabled": false
+    },
+    "ObjectiveTexts": {
+      "queryId": "d06d6101-1b99-4e0a-a126-e36091d87dd5",
+      "queryName": "ObjectiveTexts",
+      "loadEnabled": false
+    },
+    "ObjectRelationshipContexts": {
+      "queryId": "095939c2-2bdb-41f4-b42f-a53778d4a712",
+      "queryName": "ObjectRelationshipContexts",
+      "loadEnabled": false
+    },
+    "ObjectRelationshipLinks": {
+      "queryId": "afd3abe4-6362-4deb-bfc5-2c4da1cdbabb",
+      "queryName": "ObjectRelationshipLinks",
+      "loadEnabled": false
+    },
+    "ObjectRelationships": {
+      "queryId": "d3f5b02f-9785-4d8e-a122-3cf0a8fe21b7",
+      "queryName": "ObjectRelationships",
+      "loadEnabled": false
+    },
+    "Procedures": {
+      "queryId": "513b0979-c7e5-4913-adf2-038ac03ad939",
+      "queryName": "Procedures",
+      "loadEnabled": false
+    },
+    "ProcedureTexts": {
+      "queryId": "604ec937-a93a-4f9f-a365-53cc4fbed893",
+      "queryName": "ProcedureTexts",
+      "loadEnabled": false
+    },
+    "Assessments_DataDestination": {
+      "queryId": "7dc08dea-a72d-4899-8f06-8f28e0aca5db",
+      "queryName": "Assessments_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditReports_DataDestination": {
+      "queryId": "be3b7ce4-6435-4f41-9c59-2d0ce460beb3",
+      "queryName": "AuditReports_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditReportTexts_DataDestination": {
+      "queryId": "772ac1b4-a5fe-48a9-80f8-0055a6ca5537",
+      "queryName": "AuditReportTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditReportWorkflowHistory_DataDestination": {
+      "queryId": "f9e8dcbb-a1a6-4d1b-88b3-c7a97b348de3",
+      "queryName": "AuditReportWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "CoachingNoteComments_DataDestination": {
+      "queryId": "be617995-8620-4121-8ceb-5d162c77d0c7",
+      "queryName": "CoachingNoteComments_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "CoachingNotes_DataDestination": {
+      "queryId": "f21b887c-b142-4d94-9152-12d1d276251e",
+      "queryName": "CoachingNotes_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "CoachingNoteWorkflowHistory_DataDestination": {
+      "queryId": "f48c669c-c786-4529-b803-47f26702f5f3",
+      "queryName": "CoachingNoteWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Controls_DataDestination": {
+      "queryId": "558b37b6-9d8b-4e86-8a16-bcc68c7ebaf1",
+      "queryName": "Controls_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ControlTexts_DataDestination": {
+      "queryId": "3506d219-ddc6-454a-921d-321fc90d35ec",
+      "queryName": "ControlTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ControlWorkflowHistory_DataDestination": {
+      "queryId": "232fb3bf-fded-49b7-a886-a39632e4b1fb",
+      "queryName": "ControlWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "DimensionAssignmentEntity_DataDestination": {
+      "queryId": "f76164a6-fc14-4456-b783-13f8e042e1b9",
+      "queryName": "DimensionAssignmentEntity_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "DimensionAssignments_DataDestination": {
+      "queryId": "22720517-df0b-4981-a993-88dac294d524",
+      "queryName": "DimensionAssignments_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Dimensions_DataDestination": {
+      "queryId": "f1de0982-ee41-44bb-b5d9-d22854c5270d",
+      "queryName": "Dimensions_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "DocumentRequestRecipients_DataDestination": {
+      "queryId": "9286e4a5-385f-4c13-92e8-000ee611c3cb",
+      "queryName": "DocumentRequestRecipients_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "DocumentRequests_DataDestination": {
+      "queryId": "dde53ad0-941f-4e49-9dba-a90a7fad2529",
+      "queryName": "DocumentRequests_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Entities_DataDestination": {
+      "queryId": "f5d544e3-2c46-4079-a4ff-bf1e4246f0e2",
+      "queryName": "Entities_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "EntityAssessmentDetails_DataDestination": {
+      "queryId": "357c627d-406d-412a-a5a7-14f4a82ad3bf",
+      "queryName": "EntityAssessmentDetails_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "EntityAssessmentTexts_DataDestination": {
+      "queryId": "155c99ee-d86d-4f49-99b2-17b67c4ca554",
+      "queryName": "EntityAssessmentTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "EntityScoringCalculations_DataDestination": {
+      "queryId": "8354c058-2744-422c-9e73-e8d0ef22b104",
+      "queryName": "EntityScoringCalculations_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "EntityTexts_DataDestination": {
+      "queryId": "6ba23d20-092e-4db3-9e61-92fb64884b9b",
+      "queryName": "EntityTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Folders_DataDestination": {
+      "queryId": "80df8ae3-4952-4b3f-bc53-b609cb028819",
+      "queryName": "Folders_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "FolderTexts_DataDestination": {
+      "queryId": "81b2d383-b3be-46a3-b14e-f615628d73f9",
+      "queryName": "FolderTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "FolderWorkflowHistory_DataDestination": {
+      "queryId": "ee4f0ebb-4543-49ae-bc71-1edae0137d4f",
+      "queryName": "FolderWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Issues_DataDestination": {
+      "queryId": "f4e28908-2447-42c1-90ac-68831e318c97",
+      "queryName": "Issues_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "IssueTexts_DataDestination": {
+      "queryId": "1e4e9539-2363-4960-9e36-5a002788c234",
+      "queryName": "IssueTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "IssueWorkflowHistory_DataDestination": {
+      "queryId": "92917c0b-eb36-4cbc-9f8f-ad578fcad035",
+      "queryName": "IssueWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ListItems_DataDestination": {
+      "queryId": "92f88260-ea23-4170-8afe-987aa01c5440",
+      "queryName": "ListItems_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Lists_DataDestination": {
+      "queryId": "b21648de-940b-487b-9aba-db90e28af769",
+      "queryName": "Lists_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Objectives_DataDestination": {
+      "queryId": "f5fda415-4b57-4f7c-8410-238c7df0238a",
+      "queryName": "Objectives_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ObjectiveTexts_DataDestination": {
+      "queryId": "741f52c7-c4c7-4271-b321-a3879c911235",
+      "queryName": "ObjectiveTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ObjectRelationshipContexts_DataDestination": {
+      "queryId": "e11fcc36-e72e-4105-8041-1b193c222178",
+      "queryName": "ObjectRelationshipContexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ObjectRelationshipLinks_DataDestination": {
+      "queryId": "809a91ee-ccc4-4293-90aa-a76ccb9161ee",
+      "queryName": "ObjectRelationshipLinks_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ObjectRelationships_DataDestination": {
+      "queryId": "4ab1c2a9-2299-49f2-9bd6-de756c9610a5",
+      "queryName": "ObjectRelationships_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Procedures_DataDestination": {
+      "queryId": "8a4f9a6e-770c-45ed-ab78-3ecf5e88e0b0",
+      "queryName": "Procedures_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ProcedureTexts_DataDestination": {
+      "queryId": "573f7c18-0e93-4ef5-841c-80f593503bfd",
+      "queryName": "ProcedureTexts_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://acwapoweria.teammatehosting.com/TeamMate/odata/v1",
+      "kind": "OData",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"f88d786e-43c1-4e58-85b7-bf95ef7a2131\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"515f52c1-dca8-434e-bfcd-e60d636ecd9e\"}"
+    }
+  ]
+}

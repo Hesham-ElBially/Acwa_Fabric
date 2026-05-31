@@ -1,0 +1,60 @@
+table StrategicRiskScoringCalculations
+	lineageTag: aabd4526-7389-4f7a-846e-010fb9860b2a
+
+	column StrategicRiskScoringCalculatedId
+		dataType: int64
+		formatString: 0
+		lineageTag: ed655d5d-3b32-4e06-b356-52fb47703a4c
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoringCalculatedId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f4c0891-6e7b-49ba-8a39-1a02742d94a2
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: c602aff3-c8a7-4f83-81b9-a02b85432d5e
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreType
+		dataType: string
+		lineageTag: d2c36d9c-9703-4c2e-99b6-670078955313
+		summarizeBy: none
+		sourceColumn: CalculatedScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreValue
+		dataType: double
+		lineageTag: aa350b8d-dacf-490b-aa1b-86ae7937a14b
+		summarizeBy: sum
+		sourceColumn: CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition StrategicRiskScoringCalculations = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskScoringCalculations_table = Source{[Name="StrategicRiskScoringCalculations",Signature="table"]}[Data]
+				in
+				    StrategicRiskScoringCalculations_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

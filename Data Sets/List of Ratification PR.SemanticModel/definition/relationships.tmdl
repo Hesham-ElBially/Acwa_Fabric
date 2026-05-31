@@ -1,0 +1,114 @@
+relationship 35867695-a092-4bc8-83fd-0abb5c0ece2c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.PR_Created_On
+	toColumn: LocalDateTable_8fcb6802-a459-40f1-907f-3318e4c8d26d.Date
+
+relationship c664d564-5cf0-4ff6-bd72-538542304135
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.Document_Date
+	toColumn: LocalDateTable_781482ae-cd19-4e9f-b4bb-fd605d064bef.Date
+
+relationship 1d79bd9a-5599-4f51-9fa4-45bbdaa926b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.'Requisition Date of Material Order'
+	toColumn: LocalDateTable_ca5be94b-1800-4a19-adac-aca9da51c615.Date
+
+relationship 9b7d8857-242f-4221-b584-702c3d28ce85
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.'Purchase Requisition Release Date'
+	toColumn: LocalDateTable_f83b3fd6-3d12-42f9-9dcc-40cbb76bde24.Date
+
+relationship eef31ca6-49c1-438d-82dc-c40ffe28f2f8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.Changed_on
+	toColumn: LocalDateTable_c8a75a1d-404a-4f72-95ff-966ae4c758ba.Date
+
+relationship 1412744b-7cc3-d0a8-40db-b2d20ab6cf67
+	fromColumn: List_of_all_PR_PO.'Vendor Code : Vendor Name'
+	toColumn: DimVendor.'Vendor Code : Vendor Name'
+
+relationship 4827687e-b934-8052-e0dd-ac4c9dad941c
+	fromColumn: List_of_all_PR_PO.'Plant Code : Plant Name'
+	toColumn: DimPlant.'Plant Code : Plant Name'
+
+relationship 3b6b211d-88d1-9585-a903-05b0e161a702
+	fromColumn: List_of_all_PR_PO.'Material : Short Text'
+	toColumn: DimMaterial.'Material Description'
+
+relationship 53205524-41ba-4a17-9a5d-8967f77baa23
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PriceDiff_MismatchOnly.PR_Created_On
+	toColumn: LocalDateTable_e48df928-047c-4ca4-b37a-c188fae2d498.Date
+
+relationship c2257762-14e6-47ab-8571-ecf659dc9971
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PriceDiff_MismatchOnly.Document_Date
+	toColumn: LocalDateTable_c511f94b-8b63-4dee-b1e8-e3d05da6a6fe.Date
+
+relationship ca3d5b87-220a-4720-9121-ed27d5ab0d4b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PriceDiff_MismatchOnly.'Requisition Date of Material Order'
+	toColumn: LocalDateTable_eedf8258-5926-4952-b0ec-30cf7977fd5a.Date
+
+relationship 1655dacd-2fd9-43e1-96b7-433f715408f3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PriceDiff_MismatchOnly.'Purchase Requisition Release Date'
+	toColumn: LocalDateTable_e4d2395a-49f5-40e6-9490-a9edadef8a50.Date
+
+relationship 38a96b67-b247-45e2-949a-e1309937cb07
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PriceDiff_MismatchOnly.Changed_on
+	toColumn: LocalDateTable_8c653c39-6d2e-4bd3-afb1-f36e0e986e4a.Date
+
+relationship 0774b950-edb5-53a2-0dc4-653147ee61fd
+	fromColumn: PriceDiff_MismatchOnly.'Plant Code : Plant Name'
+	toColumn: DimPlant.'Plant Code : Plant Name'
+
+relationship ffb4b59e-b72e-7329-32da-1f6d5d6436fb
+	fromColumn: PriceDiff_MismatchOnly.'Vendor Code : Vendor Name'
+	toColumn: DimVendor.'Vendor Code : Vendor Name'
+
+relationship 0c5bafd0-6aae-d8db-dfce-a22ad43555a8
+	fromColumn: PriceDiff_MismatchOnly.'Material : Short Text'
+	toColumn: DimMaterial.'Material Description'
+
+relationship ae954911-bb4e-46b5-f4ea-19e1e8950839
+	fromColumn: List_of_all_PR_PO.'Company Code : Company Name'
+	toColumn: DimCompany.'Company Code : Company Name'
+
+relationship c406ae54-550a-717f-a113-1956483f971a
+	fromColumn: PlantVendor_EmergencyPR_Percent.'Plant Code : Plant Name'
+	toColumn: DimPlant.'Plant Code : Plant Name'
+
+relationship fe973dff-4520-0a3a-3a9c-3f4fd8fcc162
+	fromColumn: PlantVendor_EmergencyPR_Percent.'Vendor Code : Vendor Name'
+	toColumn: DimVendor.'Vendor Code : Vendor Name'
+
+relationship ce12b292-d9ec-c0e2-71f6-c6fbf142e369
+	fromColumn: RepeatedEmergencyVendors.'Plant Code : Plant Name'
+	toColumn: DimPlant.'Plant Code : Plant Name'
+
+relationship 46202668-b366-47df-0c27-60e1049119de
+	fromColumn: RepeatedEmergencyVendors.'Vendor Code : Vendor Name'
+	toColumn: DimVendor.'Vendor Code : Vendor Name'
+
+relationship ef5e1820-b98a-767e-674d-40f9c69efdd4
+	fromColumn: RepeatedEmergencyMaterial.'Material : Short Text'
+	toColumn: DimMaterial.'Material Description'
+
+relationship 86dfe055-fcb1-cdd1-072c-e8568f69d56a
+	fromColumn: RepeatedEmergencyMaterial.'Plant Code : Plant Name'
+	toColumn: DimPlant.'Plant Code : Plant Name'
+
+relationship 576767d5-9bdf-0fa0-e871-9906a84f20e3
+	fromColumn: RepeatedEmergencyVendors.'Company Code : Company Name'
+	toColumn: DimCompany.'Company Code : Company Name'
+
+relationship cd08732b-374b-1bec-8b75-a10360a0f3c5
+	fromColumn: PlantVendor_EmergencyPR_Percent.'Company Code : Company Name'
+	toColumn: DimCompany.'Company Code : Company Name'
+
+relationship 50ddf7c8-c66d-25cd-1670-154cd43d627b
+	fromColumn: RepeatedEmergencyMaterial.'Company Code : Company Name'
+	toColumn: DimCompany.'Company Code : Company Name'
+

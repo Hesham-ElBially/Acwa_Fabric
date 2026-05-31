@@ -1,0 +1,56 @@
+table 'A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice'
+	lineageTag: 6d425d3a-aa44-4c07-81ea-8f497f405692
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f7289f3-d6d6-467f-9f72-eae87fe84ab7
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		lineageTag: 2235081f-a981-4879-baf7-dacb5b448b51
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		lineageTag: c12f497e-9c85-4fe4-88f7-9884fcb45aad
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		lineageTag: b3c3c0df-2d0b-4e68-b9a2-56d15d23cd01
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A11_00 - Risk Heat Map with all score", {"EntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities" = Table.ExpandTableColumn(Source, "Entities", {"ParentEntityId", "EntityTitle", "OrgPath", "OrgSort"}, {"Entities.ParentEntityId", "Entities.EntityTitle.1", "Entities.OrgPath.1", "Entities.OrgSort.1"}),
+				    #"Grouped Rows" = Table.Group(#"Expanded Entities", {"EntityId"}, {{"Avg. Residual Likelihood", each List.Average([#"A11_03 - Score: Residual Likelihood.ScoreValue"]), type nullable number}, {"Avg. Residual Impact", each List.Average([#"A11_04 - Score: Residual Impact.ScoreValue"]), type nullable number}, {"Avg. Residual Calc Score", each List.Average([#"A11_05 - Calc Score: Residual.CalculatedScoreValue"]), type nullable number}})
+				in
+				    #"Grouped Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

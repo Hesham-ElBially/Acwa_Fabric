@@ -1,0 +1,146 @@
+table 'A11 - Risk Heat Map'
+	lineageTag: 208a3d59-2bf3-4038-9276-73df0e9a0d31
+	sourceLineageTag: [sch_TeamMate].[A11 - Risk Heat Map]
+
+	column 'StrategicRisks.StrategicRiskCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aaa5c699-4548-4ea5-a847-6f13b23dd22f
+		sourceLineageTag: StrategicRisks.StrategicRiskCode
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f7745424-e0c7-473a-aea6-ac5341548363
+		sourceLineageTag: StrategicRisks.StrategicRiskTitle
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 165b870e-c43d-4ef8-a66f-743472acf3b2
+		sourceLineageTag: StrategicRisks.Category1
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cc49d6fa-8c9a-4e7f-acb1-ec86dad9960c
+		sourceLineageTag: StrategicRisks.Category2
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 48ab27a8-e211-4640-b007-908847153075
+		sourceLineageTag: Avg. Residual Likelihood
+		summarizeBy: none
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 413f9cf5-ed19-4a69-bf8e-1f2fd21494ee
+		sourceLineageTag: Avg. Residual Impact
+		summarizeBy: none
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ce38a662-582a-437c-9127-a77a04df4a4a
+		sourceLineageTag: Avg. Residual Calc Score
+		summarizeBy: none
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Likelihood - Round'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 9b0c37b8-bc13-49f6-b93b-79f1b76dfc3c
+		sourceLineageTag: Avg. Residual Likelihood - Round
+		summarizeBy: none
+		sourceColumn: Avg. Residual Likelihood - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact - Round'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 9fbb8955-3a6b-421c-a5aa-1ddca029d37c
+		sourceLineageTag: Avg. Residual Impact - Round
+		summarizeBy: none
+		sourceColumn: Avg. Residual Impact - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score - Round'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 4a372c6e-c7e8-4dca-86f6-4b401447c797
+		sourceLineageTag: Avg. Residual Calc Score - Round
+		summarizeBy: none
+		sourceColumn: Avg. Residual Calc Score - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Risk Prioritization'
+		dataType: string
+		sourceProviderType: varchar(6)
+		lineageTag: b77ccf4a-321c-46a5-ae25-28073c8526fd
+		sourceLineageTag: Risk Prioritization
+		summarizeBy: none
+		sourceColumn: Risk Prioritization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a4fe09d5-2302-495e-87ec-38f3fa934b52
+		sourceLineageTag: Rating Order
+		summarizeBy: none
+		sourceColumn: Rating Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11 - Risk Heat Map' = entity
+		mode: directLake
+		source
+			entityName: A11 - Risk Heat Map
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

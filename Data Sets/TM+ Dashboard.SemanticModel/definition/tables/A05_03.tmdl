@@ -1,0 +1,53 @@
+table A05_03
+	lineageTag: 71d8c814-c871-4771-ac6b-92d54fac892c
+
+	column Year
+		formatString: 0
+		lineageTag: 8a00762b-4489-49b0-ac7e-c5b3f49ab05f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: LocalDateTable_d4d2845e-d92d-4f72-9d74-d44bc49e9589[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		formatString: 0
+		lineageTag: 8321c52b-155c-4adf-84df-bd5a605eaa42
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUserId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		lineageTag: 562f68eb-4c5c-4b14-b37c-1e0b77bd425d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUser]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TimeNonWorkings.TimeNonWorkingName'
+		lineageTag: b3360a0f-0ccf-4ab8-bcf6-9de2e31b70a0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeNonWorkings.TimeNonWorkingName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Non Working Hours'
+		lineageTag: ec717492-184f-4603-ae29-75089e41d445
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Non Working Hours]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition A05_03 = calculated
+		mode: import
+		source = FILTER(SUMMARIZE('A05 - Timesheet', 'A05 - Timesheet'[DateOfEntry].[Year], 'A05 - Timesheet'[TimeEntryUserId], 'A05 - Timesheet'[TimeEntryUser], 'A05 - Timesheet'[TimeNonWorkings.TimeNonWorkingName], "Non Working Hours",sum('A05 - Timesheet'[Hours])), 'A05 - Timesheet'[TimeNonWorkings.TimeNonWorkingName] <> "")
+
+	annotation PBI_Id = 6ad4bff8f71845eaa1a6a81b3e015c15
+

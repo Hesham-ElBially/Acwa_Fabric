@@ -1,0 +1,95 @@
+table ProcedureTexts
+	lineageTag: ab8f2f6a-6b37-44cc-9dfd-bf5ae010367d
+
+	column ProcedureId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f0139ef-2ce3-4c65-ae0d-acdedf843de3
+		summarizeBy: none
+		sourceColumn: ProcedureId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: a45e348d-4fa8-4dfa-87ef-142eb418bdd8
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: c6f0ef68-a996-4211-9501-51e787cef61f
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: 33118b52-c337-4751-9107-95a1b6bacec5
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text4
+		dataType: string
+		lineageTag: d19641af-ab8f-4f07-b3ca-bcec4d9b4530
+		summarizeBy: none
+		sourceColumn: Text4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text5
+		dataType: string
+		lineageTag: 864def54-a308-476b-9db0-466cdec186d5
+		summarizeBy: none
+		sourceColumn: Text5
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResultsText1
+		dataType: string
+		lineageTag: efc3613c-3deb-4ff1-9d61-1b383fdf3a1c
+		summarizeBy: none
+		sourceColumn: ResultsText1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResultsText2
+		dataType: string
+		lineageTag: cd0d207a-9562-4068-9d27-2e3436b1fc05
+		summarizeBy: none
+		sourceColumn: ResultsText2
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResultsText3
+		dataType: string
+		lineageTag: effc5e38-a8c2-4b67-952a-c98f62f69e86
+		summarizeBy: none
+		sourceColumn: ResultsText3
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResultsText4
+		dataType: string
+		lineageTag: ec7d61c1-8ad7-43ff-8b90-4a0a9345435a
+		summarizeBy: none
+		sourceColumn: ResultsText4
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ProcedureTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProcedureTexts_table = Source{[Name="ProcedureTexts",Signature="table"]}[Data]
+				in
+				    ProcedureTexts_table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,57 @@
+table EntityTexts
+	lineageTag: aca02271-32c9-4447-a1eb-b1b004a6b6d2
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: ccbdef24-3b02-4d48-afc8-a65cd40bad9b
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Objective
+		dataType: string
+		lineageTag: 4eba40d1-b172-4ee5-ac1b-fcff3455d6ae
+		summarizeBy: none
+		sourceColumn: Objective
+
+		annotation SummarizationSetBy = Automatic
+
+	column Background
+		dataType: string
+		lineageTag: ff735398-1c7e-45ee-a8b2-2a4fa1f5bfd6
+		summarizeBy: none
+		sourceColumn: Background
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planning
+		dataType: string
+		lineageTag: 830e9e6f-c041-4641-9a58-54de61bc6975
+		summarizeBy: none
+		sourceColumn: Planning
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 78ce6fa5-0427-4b08-9c68-8ccaae9f09b3
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EntityTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    EntityTexts_table = Source{[Name="EntityTexts",Signature="table"]}[Data]
+				in
+				    EntityTexts_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

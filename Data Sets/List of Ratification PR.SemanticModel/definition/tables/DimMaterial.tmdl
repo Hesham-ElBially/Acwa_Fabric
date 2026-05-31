@@ -1,0 +1,33 @@
+table DimMaterial
+	lineageTag: 4b0c92b3-0152-439e-b6e2-14f6dfa68e9c
+
+	column Material
+		lineageTag: 16bf70b1-771a-4a96-89ef-566783739187
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Material]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Description'
+		lineageTag: ac03a614-8176-40ed-948d-08fa00c7c2b0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Material Description]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimMaterial = calculated
+		mode: import
+		source =
+				
+				DISTINCT (
+				    SELECTCOLUMNS (
+				        'List_of_all_PR_PO',
+				        "Material", 'List_of_all_PR_PO'[Material],
+				        "Material Description", 'List_of_all_PR_PO'[Material : Short Text]
+				    )
+				)
+
+	annotation PBI_Id = 1af52feaf25945a6a1d18e36f8c7fd64
+

@@ -1,0 +1,80 @@
+table Sprints
+	lineageTag: 26c65370-e98c-4b57-86c4-7cab61bb9abc
+
+	column SprintId
+		dataType: int64
+		formatString: 0
+		lineageTag: 478e727c-72cf-4efa-b4ab-93aa1f24bda0
+		summarizeBy: count
+		sourceColumn: SprintId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SprintName
+		dataType: string
+		lineageTag: bf6c5d1a-7dfa-4f03-b68a-8188808e16e6
+		summarizeBy: none
+		sourceColumn: SprintName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SprintStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ea830e30-dd0d-4fc7-a7d0-71cbc293d937
+		summarizeBy: none
+		sourceColumn: SprintStartDate
+
+		variation Variation
+			isDefault
+			relationship: f5b0189a-dc22-44c4-9fe7-b7d73467ff3e
+			defaultHierarchy: LocalDateTable_db88263b-b9c4-4492-a142-ae47462b3a3c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SprintEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 336099b3-efad-412e-839a-e6c1ffda9bdc
+		summarizeBy: none
+		sourceColumn: SprintEndDate
+
+		variation Variation
+			isDefault
+			relationship: 1ca0ca7e-1dbb-42b9-8725-383bafed5354
+			defaultHierarchy: LocalDateTable_360e365c-1842-44d3-9589-84d8898f8c74.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SprintStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: c1cd561f-07a0-4385-ad45-b48e3835611c
+		summarizeBy: count
+		sourceColumn: SprintStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Goal
+		dataType: string
+		lineageTag: a3d52a6b-4420-48d0-b3a6-b68ef9e22f9a
+		summarizeBy: none
+		sourceColumn: Goal
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sprints = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Sprints_table = Source{[Name="Sprints",Signature="table"]}[Data]
+				in
+				    Sprints_table
+
+	annotation PBI_ResultType = Table
+

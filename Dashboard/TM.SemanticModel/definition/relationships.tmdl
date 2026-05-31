@@ -1,0 +1,222 @@
+relationship a7ca738b-f048-339f-a28e-ff1001e2a109
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.'StrategicRisks.StrategicRiskCode'
+	toColumn: 'A11 - Risk Heat Map'.'StrategicRisks.StrategicRiskCode'
+
+relationship 3d32bb6f-d7b2-3b0c-d788-51a0d14eddc0
+	fromColumn: 'A11_00 - Risk Heat Map with all score'.'EntityAssessmentDetails.Category1'
+	toColumn: 'A00 - Region Order'.Region
+
+relationship d2b1cc97-651b-43dc-ce16-b86028a08a31
+	fromColumn: 'A12 - Entity Heat Map'.Country
+	toColumn: 'A00 - Country Order'.Country
+
+relationship aa404c7c-d345-883a-f91e-59e29756f845
+	fromColumn: 'A12 - Entity Heat Map'.Region
+	toColumn: 'A00 - Region Order'.Region
+
+relationship fc21f59b-832e-324d-c4fb-a56f1f957f6f
+	fromColumn: 'A12 - Entity Heat Map'.'Auditable Unit Prioritization'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship b3a39d4f-b3da-047e-b526-6837b1572161
+	fromColumn: A01_01.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship d947ea03-0ed2-8ca3-63c3-366d6f699386
+	fromColumn: A01_02.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 4cd98f38-7fcd-ae99-01cf-b8f385edbc83
+	fromColumn: A02_02.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship d5bd3728-3503-3282-fe2e-961363ed48c2
+	fromColumn: A02_01.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship 2586e043-d934-f603-b2f2-b2e06ce99d66
+	fromColumn: A04_01.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship f98b92f6-9459-6445-d0fa-fe525d8fbe64
+	fromColumn: A04_02.'Issues.Category2'
+	toColumn: 'A00 - Rating Order'.Rating
+
+relationship aefff0b4-6283-896d-2b86-66b6d8ec0557
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A05 - OverallTimesheetReport'.cPK
+	toColumn: A05_02_01.cPK
+
+relationship 4acbc015-3658-6458-1cb8-80ed2401fe2b
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A05 - OverallTimesheetReport'.cPK
+	toColumn: A05_00_01.cPK
+
+relationship 5d6d5469-ed0e-7acd-190d-077362ce7e88
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A05 - OverallTimesheetReport'.cPK
+	toColumn: A05_01_01.cPK
+
+relationship a345c3b2-de4e-d8b8-8f14-561fa0803636
+	crossFilteringBehavior: bothDirections
+	fromColumn: A05_03_01.cPK
+	toColumn: 'A05 - OverallTimesheetReport'.cPK
+
+relationship af7e1435-58cf-0302-3dce-8f70e3aa8213
+	fromColumn: A05_02.'Projects.ProjectCode'
+	toColumn: 'A06 - Audit Plan'.ProjectCode
+
+relationship a78d39e8-ce7b-bed7-36db-4e0e1c39fc9f
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - High'.'Projects.ProjectCode'
+
+relationship 59bb4e65-05c5-a703-b7e7-4c78c3d052fc
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - Significant'.'Projects.ProjectCode'
+
+relationship ac46c969-0857-92c5-f88a-cfb64b36a548
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - Medium'.'Projects.ProjectCode'
+
+relationship e6704149-23eb-c477-be3d-5585410a3eec
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A06 - Audit Plan'.ProjectCode
+	toColumn: 'A06_00 - Issues - Low'.'Projects.ProjectCode'
+
+relationship 6de7a7d8-ef3f-56aa-c259-78ecb5fd49d8
+	fromColumn: 'A08_00 - All Phase'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 99b47144-3c6b-a318-0d83-3378f1089d97
+	fromColumn: 'A08_00 - Phase And Milestone'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 9e616dc8-d438-b8f7-3289-bba267932457
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - FieldWork Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship ee8a1a8b-fc35-80bd-4d7a-8b5f6f27e4d0
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Final Report Issuance Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 787492c4-f414-54cc-46cf-dd867f68af56
+	fromColumn: 'A08 - TeamMate Updated Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 2d004ada-2c34-1bc3-5e43-66aff0440dfd
+	fromColumn: 'A13 - Audit Plan'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship c2aa2a1e-b7e6-a74a-78f9-50d47b41092f
+	fromColumn: 'A08 - AAL Issuance Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 2ea7a12a-4c12-9626-8edc-ef11725240bf
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Closure Actual End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 6f67a56b-55a3-eb0d-440e-fcb22443ccf5
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Closure Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 92a1d0b2-adb6-ecc6-7240-601a4037e7e7
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Closure Scheduled End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 9a05c853-3367-0404-a2fc-6853d20baba8
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Closure Scheduled Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 55466c3c-954d-0048-141f-e95255389dc2
+	fromColumn: 'A02 - Open Observation Report Last Month-End'.'Rating Order'
+	toColumn: 'A00 - Region Order'.Order
+
+relationship 938871b6-8456-1f6d-a2a3-23cc825fd6a4
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A06 - Audit Plan'.ProjectId
+	toColumn: 'A08 - FieldWork Actual End Date'.ProjectId
+
+relationship fdec1558-7702-7637-5a06-a273cb9ab7e1
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Draft  Report Issuance Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 5b47c288-afbc-1762-a9c6-72f1a0260bd9
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - FieldWork Completed Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 414cb4e7-c472-cc62-7ca9-4ef446025b03
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - FieldWork Scheduled Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 7940d214-7376-94c2-4acf-afb56ddf7005
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Planning Actual End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 0ab1a5a9-00f4-33c8-4183-f84f583dd938
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Planning Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 38959caf-ff36-2e4c-67e6-ac17353dcfc4
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Planning Scheduled End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 79b86f26-7576-c2e2-a75d-8c67cd6ca456
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A06 - Audit Plan'.ProjectId
+	toColumn: 'A08 - Planning Scheduled Start Date'.ProjectId
+
+relationship cd2de323-1424-8d49-a1d9-221db3ba8724
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Reporting Actual End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 1a3cb167-98bc-9dfd-b0ee-64a5093924e4
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Reporting Actual Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 5e04d12a-e7da-7d07-e0b9-852075235851
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Reporting Scheduled End Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 96982769-7ae2-9f81-7b9f-9c8a22c3b91f
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08 - Reporting Scheduled Start Date'.ProjectId
+	toColumn: 'A06 - Audit Plan'.ProjectId
+
+relationship 6803ee3e-21dc-8e5d-fea9-9cbae3113f26
+	fromColumn: 'A06 - Audit Plan'.Category6
+	toColumn: 'A00 - Report Rating Order'.'Report Rating'
+
+relationship 611c9b56-156a-45d3-b231-0fc561ddda7c
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08_00 - All Phase'.ProjectPhaseId
+	toColumn: 'A08 - Project Closed Date'.'A08_00 - Project Closed Date.ProjectPhaseId'
+
+relationship e0038e1d-674b-879b-a9b1-fd33ddf34f8b
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08_00 - All Phase'.ProjectPhaseId
+	toColumn: 'A08_00 - AAL Issuance Date'.ProjectPhaseId
+
+relationship 7ab771d8-5b1a-cd2a-3e0c-e9ccdb4d8bbc
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'A08_00 - All Phase'.ProjectPhaseId
+	toColumn: 'A08_00 - Draft Report Issuance Date'.ProjectPhaseId
+

@@ -1,0 +1,78 @@
+table StrategicRiskScoringCalculationsAssessmentProject
+	lineageTag: 73e0c084-a3d1-454d-8b15-276bcd4f2d36
+
+	column StrategicRiskScoringCalculatedId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c81d139-4f5c-4241-9485-d586d7d2058a
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoringCalculatedId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d1e8e99-3dec-4bb3-8d70-fc4ead36c046
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: 40fc1ccd-891f-4b79-a383-b75026b22278
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreType
+		dataType: string
+		lineageTag: d0affee0-c5ff-4a1c-b9b9-4d0f8da27ffe
+		summarizeBy: none
+		sourceColumn: CalculatedScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalculatedScoreValue
+		dataType: double
+		lineageTag: 08942370-715e-4146-a08d-6e58f4ce8d77
+		summarizeBy: sum
+		sourceColumn: CalculatedScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: dff146e1-f8aa-4035-861a-316465f4ffe7
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c97d1d3-60d2-4721-a00a-55ce868b6951
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition StrategicRiskScoringCalculationsAssessmentProject = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskScoringCalculationsAssessmentProject_table = Source{[Name="StrategicRiskScoringCalculationsAssessmentProject",Signature="table"]}[Data]
+				in
+				    StrategicRiskScoringCalculationsAssessmentProject_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

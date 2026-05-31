@@ -1,0 +1,120 @@
+table 'A08_00 - Final Report Issuance Date'
+	lineageTag: ba0936cc-84e3-414f-ada5-46f8f935e333
+	sourceLineageTag: [sch_TeamMate].[A08_00 - Final Report Issuance Date]
+
+	column ProjectPhaseMilestoneId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e39b0522-272d-4e6f-8f1a-052c16c939b6
+		sourceLineageTag: ProjectPhaseMilestoneId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 20604841-3d6b-4481-a3db-c7ae24a4d65c
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilestoneName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f103d4bf-5c83-4b31-a6af-d067cc9839ff
+		sourceLineageTag: MilestoneName
+		summarizeBy: none
+		sourceColumn: MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9ca5d938-410b-4725-a2db-98e1a635d27d
+		sourceLineageTag: PhaseName
+		summarizeBy: none
+		sourceColumn: PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 6d2ea2cb-9ef7-4b4a-8707-0790c463b0e5
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 7ec84f92-5450-43e7-868a-3e7fdb41e1b1
+		sourceLineageTag: RevisedDueDate
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 006195f9-733e-4233-81aa-73d09a47680b
+		sourceLineageTag: EstimatedEndDate
+		summarizeBy: none
+		sourceColumn: EstimatedEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: dba4f14a-05bc-401b-a882-e81f3203e1c6
+		sourceLineageTag: ActualEndDate
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: aa04798c-2918-42ea-981b-9a5fd20f6c1f
+		sourceLineageTag: SortOrder
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 67f0655d-9bd9-4c32-aa39-205888891f27
+		sourceLineageTag: Comment
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - Final Report Issuance Date' = entity
+		mode: directLake
+		source
+			entityName: A08_00 - Final Report Issuance Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

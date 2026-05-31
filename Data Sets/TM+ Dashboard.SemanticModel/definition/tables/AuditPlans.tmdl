@@ -1,0 +1,284 @@
+table AuditPlans
+	lineageTag: 0f2bffc9-cc19-41d8-a301-bc709f703722
+
+	column AuditPlanId
+		dataType: int64
+		formatString: 0
+		lineageTag: 23a29d44-44dd-411c-9eda-3416b7ab68ff
+		summarizeBy: none
+		sourceColumn: AuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditPlanTitle
+		dataType: string
+		lineageTag: 5e9ac39b-6dae-4790-b5a0-60306326a94b
+		summarizeBy: none
+		sourceColumn: AuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditPlanStateID
+		dataType: int64
+		formatString: 0
+		lineageTag: 30ea402b-9f1f-4078-8a24-0ff77cf0fe80
+		summarizeBy: count
+		sourceColumn: AuditPlanStateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuditPlanState
+		dataType: string
+		lineageTag: 4271333a-cd48-4ba7-8ba3-f127e676b2f3
+		summarizeBy: none
+		sourceColumn: AuditPlanState
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsApproved
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 734d7970-7c83-4ab5-af06-d3c944f24783
+		summarizeBy: none
+		sourceColumn: IsApproved
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApprovedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: be4cdfcf-adbe-44aa-8c7c-78c4f16c404e
+		summarizeBy: count
+		sourceColumn: ApprovedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApprovedUserName
+		dataType: string
+		lineageTag: 017c999a-e3ae-4c80-802c-11fd56394352
+		summarizeBy: none
+		sourceColumn: ApprovedUserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApprovedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4ac87c7f-eb47-4a47-afc4-4bd21ae1752c
+		summarizeBy: none
+		sourceColumn: ApprovedDate
+
+		variation Variation
+			isDefault
+			relationship: 4161520a-88ba-4b96-b755-dfc69a0421fd
+			defaultHierarchy: LocalDateTable_935b336e-2fc6-4064-8f3f-292f40b248e1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ClosedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 378a8612-b6e9-4d2f-8e57-9fbbddf625f5
+		summarizeBy: count
+		sourceColumn: ClosedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosedUserName
+		dataType: string
+		lineageTag: f078c657-b219-432c-b144-a1fa2f467717
+		summarizeBy: none
+		sourceColumn: ClosedUserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2ac9c6d0-2137-43df-9498-0a2046771a6a
+		summarizeBy: none
+		sourceColumn: ClosedDate
+
+		variation Variation
+			isDefault
+			relationship: ff62d3d2-4f10-4dcf-b384-dee03b33ac45
+			defaultHierarchy: LocalDateTable_07870094-20c2-4347-a8d7-5a2876c19206.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 75aeaf49-c869-4d12-8bf6-10770b7d7464
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: ac2cd08a-253a-4cca-8867-02e19d429c09
+			defaultHierarchy: LocalDateTable_ad3e8c05-c015-41e6-918d-42f6a7331d34.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5720f51d-5612-4e23-bb31-4d2b6f79ce1b
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: 460aff3f-4bf3-46c4-a80f-7a3e9c1257f4
+			defaultHierarchy: LocalDateTable_dc11a382-669c-4ca7-916a-7be73bc6c4cb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column BudgetedHours
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b4548ac-2d1e-4ae8-9fb3-e9a652e3e31a
+		summarizeBy: sum
+		sourceColumn: BudgetedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedResourceCosts
+		dataType: double
+		lineageTag: f37dccc1-4a5d-48b4-bcce-4c2285c1bd9b
+		summarizeBy: sum
+		sourceColumn: EstimatedResourceCosts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualResourceCosts
+		dataType: double
+		lineageTag: e0d94f36-1d3e-4dc6-a890-88207bf27a58
+		summarizeBy: sum
+		sourceColumn: ActualResourceCosts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstimatedExternalCosts
+		dataType: double
+		lineageTag: 39e97e84-a078-40bf-a1d6-5eaa4c60fdd8
+		summarizeBy: sum
+		sourceColumn: EstimatedExternalCosts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualExternalCosts
+		dataType: double
+		lineageTag: bc91afa8-379d-4a09-b007-66e0633f18de
+		summarizeBy: sum
+		sourceColumn: ActualExternalCosts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstimatedExpenses
+		dataType: double
+		lineageTag: 135319e7-9394-46c5-89dc-6f6576a04440
+		summarizeBy: sum
+		sourceColumn: EstimatedExpenses
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualExpenses
+		dataType: double
+		lineageTag: 2e297190-2f4e-4a54-97ee-a7d6391428ef
+		summarizeBy: sum
+		sourceColumn: ActualExpenses
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActualHours
+		dataType: int64
+		formatString: 0
+		lineageTag: d6522596-aac2-4763-9df3-2035e2cb7f60
+		summarizeBy: sum
+		sourceColumn: ActualHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapacityPlanningFrequencyId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f6f2948-2b4f-4dbc-9b28-fff2ae3a8a7a
+		summarizeBy: count
+		sourceColumn: CapacityPlanningFrequencyId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SchedulingLevelId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9188c119-a3a6-488f-bc97-b9f08b217c1c
+		summarizeBy: count
+		sourceColumn: SchedulingLevelId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5a56a802-3979-46b6-86d1-2190796c8a89
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 8125efdd-0304-4350-b754-38b8d9057384
+			defaultHierarchy: LocalDateTable_bc11d5f8-f17d-4c02-b21f-27a1b55e5b99.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 83c34783-4bfe-42f6-9d8c-c39670d4403f
+		summarizeBy: count
+		sourceColumn: LastModifiedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUser
+		dataType: string
+		lineageTag: 6c0c6602-6fd7-4f40-87ba-e38f1fdc247e
+		summarizeBy: none
+		sourceColumn: LastModifiedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AuditPlans = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1/timetracking", null, [Implementation="2.0"]),
+				    AuditPlans_table = Source{[Name="AuditPlans",Signature="table"]}[Data]
+				in
+				    AuditPlans_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

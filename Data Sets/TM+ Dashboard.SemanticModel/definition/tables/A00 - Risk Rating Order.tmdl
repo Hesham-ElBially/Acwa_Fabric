@@ -1,0 +1,33 @@
+table 'A00 - Risk Rating Order'
+	lineageTag: 24169446-d1f4-435b-9abf-de1ffd2df5b7
+
+	column 'Risk Rating'
+		dataType: string
+		lineageTag: b456820b-bef4-412f-910b-e335da3f1489
+		summarizeBy: none
+		sourceColumn: Risk Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Risk Rating Order'
+		dataType: int64
+		formatString: 0
+		lineageTag: 75af2fcf-1304-4710-9aa5-e84f0352184c
+		summarizeBy: none
+		sourceColumn: Risk Rating Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Risk Rating Order' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8shMz1DSUTJUitWJVgrOTM/LTMtMTswrAYoZgcV8U1MyS3OBXGMw1ye/HMg2UYqNBQA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Risk Rating" = _t, #"Risk Rating Order" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Risk Rating", type text}, {"Risk Rating Order", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

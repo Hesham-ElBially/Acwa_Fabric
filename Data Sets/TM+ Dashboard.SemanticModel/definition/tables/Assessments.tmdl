@@ -1,0 +1,188 @@
+table Assessments
+	lineageTag: 2d169bd9-573f-4406-bb12-4335ffab6430
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bee449f-a7a9-40a7-bd46-c30cc054e71f
+		summarizeBy: none
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentTitle
+		dataType: string
+		lineageTag: 64b0dc2c-bf70-42f5-bdf7-cc854610ace4
+		summarizeBy: none
+		sourceColumn: AssessmentTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 027f3610-2d28-41b6-904b-163788b45004
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: 7f76c305-1df3-41a4-ae87-e9f7b3186a6d
+			defaultHierarchy: LocalDateTable_1916c2fe-9c7c-41e1-9899-8918dddd478e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0619b97e-048b-4748-a98a-c37eb91b13d9
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: 850ffdce-fcf2-4c1f-8501-0ef90ad621b6
+			defaultHierarchy: LocalDateTable_f773f941-123e-4760-9c87-2a96cdb49088.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d766992b-ec4b-4368-9183-8df1bf06db4b
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 8b89c3d3-0964-4165-91f1-925ff8d36106
+			defaultHierarchy: LocalDateTable_4f8b8018-fb52-4fd5-80c0-f07c65945eaa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e198f4e-5ed8-49c2-a103-cc76e9874ffb
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		lineageTag: b5435ad4-8db7-4c81-993c-5d5169e64b88
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: eb03d67c-0db8-4657-b317-6de9224095a6
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrimaryDimensionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 10a2ffeb-764e-4590-8269-a4d19b369eb3
+		summarizeBy: count
+		sourceColumn: PrimaryDimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrimaryDimensionName
+		dataType: string
+		lineageTag: c0030414-742a-4b99-b227-75674c3eae3b
+		summarizeBy: none
+		sourceColumn: PrimaryDimensionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: bb9f1b42-4d72-4e42-8913-fc3c4acae898
+		summarizeBy: count
+		sourceColumn: AssessmentStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentState
+		dataType: string
+		lineageTag: e34e406c-8005-49ef-8604-527ee18f334e
+		summarizeBy: none
+		sourceColumn: AssessmentState
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: c4d65df4-3ff8-4ec9-b8c1-40a01473a45d
+		summarizeBy: count
+		sourceColumn: CreatedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedUserName
+		dataType: string
+		lineageTag: 19026d1a-1138-47ee-b6f0-1f03384e732d
+		summarizeBy: none
+		sourceColumn: CreatedUserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1ffd0c79-31a6-4356-962e-21e0ea5552bc
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: c4277234-3873-4bd5-868b-57fcf381f189
+			defaultHierarchy: LocalDateTable_eac7b1ba-3a34-41e8-9c1d-f981542e9459.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 240eb9cd-1921-4111-81e5-d9a52f7b9ded
+		summarizeBy: count
+		sourceColumn: LastModifiedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUser
+		dataType: string
+		lineageTag: 9b610aaa-a27f-425d-a24a-25bc0315ebef
+		summarizeBy: none
+		sourceColumn: LastModifiedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Assessments = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Assessments_table = Source{[Name="Assessments",Signature="table"]}[Data]
+				in
+				    Assessments_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

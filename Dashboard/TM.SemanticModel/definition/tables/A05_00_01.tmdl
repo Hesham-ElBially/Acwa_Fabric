@@ -1,0 +1,67 @@
+table A05_00_01
+	lineageTag: ae09d668-9876-4da0-885f-591f0996a30a
+	sourceLineageTag: [sch_TimeSheet].[A05_00_01]
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0ddb7a67-8887-42d0-a946-b4cb2f20bc6f
+		sourceLineageTag: Year
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c8704f33-96c4-49a4-b38a-44555b7355ce
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: none
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76b5d31d-c86c-4475-9505-6289c60cea44
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column cPK
+		dataType: string
+		sourceProviderType: varchar(14)
+		lineageTag: 9130b3be-b868-44d1-9535-33a2871004e2
+		sourceLineageTag: cPK
+		summarizeBy: none
+		sourceColumn: cPK
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Admin Hrs (Non - Chargeable)'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: f8392e7b-c3dc-4dde-9167-0fde7badb322
+		sourceLineageTag: Total Admin Hrs (Non - Chargeable)
+		summarizeBy: none
+		sourceColumn: Total Admin Hrs (Non - Chargeable)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition A05_00_01 = entity
+		mode: directLake
+		source
+			entityName: A05_00_01
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

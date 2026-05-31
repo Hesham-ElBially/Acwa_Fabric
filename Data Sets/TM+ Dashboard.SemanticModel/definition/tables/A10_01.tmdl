@@ -1,0 +1,478 @@
+table A10_01
+	lineageTag: feef96ac-47a8-488e-a142-da311913de3d
+
+	measure flag =
+			
+			
+			IF(CONTAINSSTRING(MAX('A10 - Issues Root Cause'[Issues.MultiSelectCategory3]),VALUES(A10_01[@RootCauseCategory])),1,0)
+		formatString: 0
+		lineageTag: 3ef0c917-bea1-4dae-8a30-702dc96fba6c
+
+	measure 'No. of Root Cause' =
+			COUNTROWS(FILTER(ADDCOLUMNS('A10 - Issues Root Cause',"YES",
+			 CONTAINSSTRING('A10 - Issues Root Cause'[Issues.MultiSelectCategory3],VALUES(A10_01[@RootCauseCategory]))),[YES]=true))
+		formatString: 0
+		lineageTag: 1459cfa8-b96a-4549-81d6-67a746d49109
+
+	measure Governance =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 70801bd7-6b57-49e0-8932-cc5565af9b3c
+
+	measure Judgement =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: b22d21e9-04b8-4d98-bd9b-b7608d128695
+
+	measure Management =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 82a4fd71-f8e3-44a1-a60a-75a3b87ade3b
+
+	measure People =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 60bea9aa-8ea6-4e98-8491-8675864d8643
+
+	measure Process =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 0042b269-96af-4e9e-b3fd-025a05fc0593
+
+	measure System =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 614fbb1a-48ec-4d79-a042-0d4a4b5c820a
+
+	measure Total = [Governance]+[Judgement]+[Management]+[People]+[Process]+[System]
+		formatString: 0
+		lineageTag: 29d8bf09-847f-47e7-8ad8-76dfe8706cba
+
+	measure Gov% = ```
+			[Governance]/[Total] 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c15298b1-fe5a-4402-b730-5279c516a0f4
+
+	measure Jdg% = [Judgement]/[Total]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5844a433-59da-4703-bbdd-f9b9a8b20891
+
+	measure Mgmt% = [Management]/[Total]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5d0a2cb0-efe5-41ba-8a97-208a2e0d533b
+
+	measure Ppl% = [People]/[Total]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 112a4eb0-390e-4b16-87ec-22b9ffe3f929
+
+	measure Pro% = [Process]/[Total]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4224c290-f1a5-43f8-a0d7-9406d6abb1ea
+
+	measure Sys% = [System]/[Total]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0ba82368-0c5b-43cc-a202-1d1a1a9e40b5
+
+	measure 'GOV: Objectives' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Objectives", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 18e49656-e36b-41a4-aa0f-677f4276caf2
+
+	measure 'GOV: Ownership' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Ownership", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 865162c3-06db-44be-8333-623c6b601c65
+
+	measure 'GOV: Structure' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Structure", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: d3b70f9b-f091-4d6e-9350-1c8e1969b3be
+
+	measure 'GOV: Policy' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Policy", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 6363c545-280d-44e5-88da-0316a9dcf1b9
+
+	measure 'JDG: Decision-Making' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Decision-Making", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: c47546de-483c-48bc-8115-1c95bd17c18c
+
+	measure 'JDG: Risk Evaluation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Risk Evaluation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 6259c254-a7ec-4e74-8144-892206b02383
+
+	measure 'JDG: Regulation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Regulation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: acbe86ce-72c5-4066-ba65-7ad9e086ff69
+
+	measure 'JDG: Planning' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Planning", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: c75ed474-2b98-40b2-92f8-51a2495030b9
+
+	measure 'MGT: Resources' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Resources", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 876b294c-53f9-48a9-b2c7-86257cf3ba97
+
+	measure 'MGT: Change' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Change", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: e596f840-e0de-43ce-84e5-ee4a737f2b5f
+
+	measure 'MGT: Communication' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Communication", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 156d4641-a997-4128-abce-8b3c0c37c18a
+
+	measure 'MGT: Monitoring' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Monitoring", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 5b861a59-e172-456c-b527-f460eacf8f92
+
+	measure 'PPL: Job Design' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Job Design", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: d60d022f-c604-40f6-881c-4815f694b575
+
+	measure 'PPL: Competence' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Competence", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 55de9c1d-f623-4b94-9adb-54c38f1bdf38
+
+	measure 'PPL: Training & Awareness' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Training & Awareness", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 21e863f0-a553-4272-92ef-c62ba7cc2687
+
+	measure 'PPL: Human Error' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Human Error", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 2b78fd32-12e7-4528-960d-d2d7b594c1a5
+
+	measure 'PRO: Process Design' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO: Process Design", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 75756b12-389c-414f-890f-82b1b532e2e4
+
+	measure 'PRO: Documentation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO: Documentation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: b73eff22-a57d-4f21-b085-0b70256b81c4
+
+	measure 'PRO: Data Quality' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO: Data Quality", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 763cacea-a1a7-4e8d-b5f5-cf8ef0873d17
+
+	measure 'SYS: System Design' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: System Design", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: e45e9e49-6f5c-4a69-b656-76a9e8de9333
+
+	measure 'SYS: System Operation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: System Operation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 2ea92243-b3cd-4997-8409-90fa64db0d26
+
+	measure 'SYS: Maintenance' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: Maintenance", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: a8597d68-2c80-46aa-96f0-4f3f26ef3793
+
+	measure 'SYS: Cybersecurity' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: Cybersecurity", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 472d2eca-a255-4de9-b0f7-54b6bf40578c
+
+	measure TotalGov = [GOV: Objectives]+[GOV: Ownership]+[GOV: Policy]+[GOV: Structure]
+		formatString: 0
+		lineageTag: cca364a6-e891-4344-a624-6d350f6ce59c
+
+	measure TotalJdg = [JDG: Decision-Making]+[JDG: Planning]+[JDG: Regulation]+[JDG: Risk Evaluation]
+		formatString: 0
+		lineageTag: c20f7b90-88d9-48ed-bdd0-8eaf1ae8bd06
+
+	measure TotalMgt = [MGT: Change]+[MGT: Communication]+[MGT: Monitoring]+[MGT: Resources]
+		formatString: 0
+		lineageTag: db95bf58-f8f6-4ba1-8230-f32a3b7b3a3e
+
+	measure TotalPPl = [PPL: Competence]+[PPL: Human Error]+[PPL: Job Design]+[PPL: Training & Awareness]
+		formatString: 0
+		lineageTag: 9e1ed0ec-8f79-4478-8e25-24df86fa5e0b
+
+	measure TotalPro = [PRO: Data Quality]+[PRO: Documentation]+[PRO: Process Design]
+		formatString: 0
+		lineageTag: 096b3152-1ede-44a7-9ca1-473ec087f2b5
+
+	measure TotalSys = [SYS: Cybersecurity]+[SYS: Maintenance]+[SYS: System Design]+[SYS: System Operation]
+		formatString: 0
+		lineageTag: a56dcac9-1f8e-4949-ad92-33e5362832ca
+
+	measure TotalSubCategory = [TotalGov]+[TotalJdg]+[TotalMgt]+[TotalPPl]+[TotalPro]+[TotalSys]
+		formatString: 0
+		lineageTag: 88b867a3-b1e2-41ff-a6cf-9dd6a7502c4f
+
+	measure 'GOV: Objectives%' = ```
+			[GOV: Objectives]/[TotalSubCategory] 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 14870780-1a46-4007-a461-e9b380652e34
+
+	measure 'GOV: Ownership%' = [GOV: Ownership]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5da331be-ec58-4f9b-bfb5-58d771b9e72c
+
+	measure 'GOV: Policy%' = [GOV: Policy]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 6c348bfc-b352-44e8-a535-4bce59aa9878
+
+	measure 'GOV: Structure%' = [GOV: Structure]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f59eb3eb-cbdd-4468-8a53-92ba918411df
+
+	measure 'JDG: Decision-Making%' = [JDG: Decision-Making]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b6687765-cebc-406f-8dbc-c2d5972755b5
+
+	measure 'JDG: Planning%' = [JDG: Planning]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cd4a9cdd-7387-46ee-87b5-87bcca1da9ab
+
+	measure 'JDG: Regulation%' = [JDG: Regulation]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 9ed53df1-7c7e-48b7-b606-dd7ae4db47ee
+
+	measure 'JDG: Risk Evaluation%' = [JDG: Risk Evaluation]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c1195ec4-2f96-48f6-9337-c088fa166c2b
+
+	measure 'MGT: Change%' = [MGT: Change]/[TotalSubCategory]
+		lineageTag: 793f7a71-5418-42f0-9966-eadd67bbe9a2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MGT: Communication%' = [MGT: Communication]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 56704ae9-9d47-47bf-9ee0-ae1168ab81de
+
+	measure 'MGT: Monitoring%' = [MGT: Monitoring]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 719f6e14-9d8a-468f-80fc-7278a3c15b3c
+
+	measure 'MGT: Resources%' = [MGT: Resources]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 217343a3-634a-40d7-aea9-77ef00ec428c
+
+	measure 'PPL: Competence%' = [PPL: Competence]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 55857b5d-4dc7-4605-9262-62035d13d304
+
+	measure 'PPL: Human Error%' = [PPL: Human Error]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 6b345316-6abc-4b96-b52d-3af6955f78f4
+
+	measure 'PPL: Job Design%' = [PPL: Job Design]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 10245a7b-b64d-4f1b-bb44-bac5f5ae8d2e
+
+	measure 'PPL: Training & Awareness%' = [PPL: Training & Awareness]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8ee193c0-c8b1-48a6-98f3-72a79ff3146b
+
+	measure 'PRO: Data Quality%' = [PRO: Data Quality]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 12dc0a86-93ff-43ef-b87d-6bff39aa23db
+
+	measure 'PRO: Documentation%' = [PRO: Documentation]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d13c7d2d-e324-4a1b-b707-51b006e61110
+
+	measure 'PRO: Process Design%' = [PRO: Process Design]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4363c60f-2714-4e09-a60f-2e69dd119ac1
+
+	measure 'SYS: Cybersecurity%' = [SYS: Cybersecurity]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4ab11362-7d76-466f-ad0f-d5c12a1ac05f
+
+	measure 'SYS: Maintenance%' = [SYS: Maintenance]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ad67d148-0e58-4891-b762-e933b6c22163
+
+	measure 'SYS: System Design%' = [SYS: System Design]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c1f24f8a-7835-4f21-80fc-a2a0c0b57a60
+
+	measure 'SYS: System Operation%' = [SYS: System Operation]/[TotalSubCategory]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bc4cd341-6d50-4b4a-aca9-3735db7128f4
+
+	column @RootCauseCategory
+		lineageTag: 77e9e5bd-6cb1-483f-82c2-44a51f904728
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [@RootCauseCategory]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Root Cause Label' = TRIM(PATHITEM(SUBSTITUTE(A10_01[@RootCauseCategory], ":", "|"), 1))
+		lineageTag: 705f00f4-5457-4a29-83e7-762b457a2dcd
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Root Cause Sub Category' = TRIM(PATHITEM(SUBSTITUTE(A10_01[@RootCauseCategory], ":", "|"), 2))
+		lineageTag: fd04acf4-c741-4c06-9c90-c07388622df2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Root Cause' = ```
+			SWITCH( 
+			                        TRUE,
+			                        ('A10_01'[Root Cause Label] = "SYS"), "System",
+			                        ('A10_01'[Root Cause Label] = "MGT"), "Management",
+			                        ('A10_01'[Root Cause Label] = "GOV"), "Governance",
+			                        ('A10_01'[Root Cause Label] = "PPL"), "People",
+			                        ('A10_01'[Root Cause Label] = "PRO"), "Process",
+			                        ('A10_01'[Root Cause Label] = "JDG"), "Judgement",
+			                        "Default"
+			)
+			```
+		lineageTag: 769758d2-f64f-4576-9a11-1364458716a3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A10_01 = calculated
+		mode: import
+		source =
+				DISTINCT(FILTER(SELECTCOLUMNS(UNION(
+				ADDCOLUMNS(
+				VALUES('A10 - Issues Root Cause'[Issues.MultiSelectCategory3]),"RootCauseCategory", PATHITEM( SUBSTITUTE('A10 - Issues Root Cause'[Issues.MultiSelectCategory3],",","|"),1)),
+				ADDCOLUMNS(
+				VALUES('A10 - Issues Root Cause'[Issues.MultiSelectCategory3]),"RootCauseCategory", PATHITEM( SUBSTITUTE('A10 - Issues Root Cause'[Issues.MultiSelectCategory3],",","|"),2))),"@RootCauseCategory",[RootCauseCategory]),[@RootCauseCategory]<>BLANK()))
+
+	annotation PBI_Id = 74fc9152e1854bd8b57969bf77f9e66b
+

@@ -1,0 +1,33 @@
+table DimCompany
+	lineageTag: fa8610ab-5801-488f-975d-5476ca5cf208
+
+	column Company
+		lineageTag: a86b5e96-fcb2-41e9-8670-77634314fa90
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Company]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code : Company Name'
+		lineageTag: d8c1ebc5-38f3-4290-9859-79d2bcf4695a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Company Code : Company Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCompany = calculated
+		mode: import
+		source =
+				
+				DISTINCT (
+				    SELECTCOLUMNS (
+				        'List_of_all_PR_PO',
+				        "Company", 'List_of_all_PR_PO'[Company Code],
+				        "Company Code : Company Name", 'List_of_all_PR_PO'[Company Code : Company Name]
+				    )
+				)
+
+	annotation PBI_Id = 9c4b071a8c63456c8b08c562edfb1403
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "pl_SAP_IA"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dc7597d1-c1ca-89ee-44d1-4f58c58b6d90"
+  }
+}

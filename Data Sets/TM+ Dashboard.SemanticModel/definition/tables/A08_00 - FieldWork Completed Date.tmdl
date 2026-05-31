@@ -1,0 +1,125 @@
+table 'A08_00 - FieldWork Completed Date'
+	lineageTag: b27bbd43-2c59-4787-a862-6f09a88c3b33
+
+	column ProjectPhaseMilestoneId
+		dataType: int64
+		formatString: 0
+		lineageTag: cb2cd987-98be-4b2d-ba6d-8be8963f84e4
+		summarizeBy: count
+		sourceColumn: ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: 711fff67-8def-483a-9b1a-32e34096f6ab
+		summarizeBy: none
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilestoneName
+		dataType: string
+		lineageTag: 8a461fe6-8726-478b-8939-d8ee6e52ac0f
+		summarizeBy: none
+		sourceColumn: MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhaseName
+		dataType: string
+		lineageTag: 57349b5d-750b-450a-81dc-85ac6b0f07c4
+		summarizeBy: none
+		sourceColumn: PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b8dbd850-be24-4ab2-b411-449ef592b6d3
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 42257c9d-5945-4018-9dcc-a7c8e6a6294b
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: f2c6097b-a6d4-403d-b4dc-496269d500d5
+			defaultHierarchy: LocalDateTable_84c47b5e-9c94-44ba-841e-52cfa6efc81e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstimatedEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 054414cc-af9f-4654-a165-4c00ab0392d1
+		summarizeBy: none
+		sourceColumn: EstimatedEndDate
+
+		variation Variation
+			isDefault
+			relationship: b3c9d985-89ab-4010-b793-41fe4bfafa66
+			defaultHierarchy: LocalDateTable_16bd44ea-1acf-4ea9-88e9-5cf18e361a40.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fead799e-1261-4c3c-9344-ac41c34503b2
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 0b636634-94b3-4756-bf20-6c4d71ae2a1d
+			defaultHierarchy: LocalDateTable_35d36ded-bb50-423b-815a-441fd3fbae59.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: d6b1749b-4f8b-494d-89c7-3a430dff2b90
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: af39b689-77b8-490e-bcf6-a67396982979
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - FieldWork Completed Date' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProjectPhaseMilestones_table = Source{[Name="ProjectPhaseMilestones",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(ProjectPhaseMilestones_table, each ([MilestoneName] = "Fieldwork Completed"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

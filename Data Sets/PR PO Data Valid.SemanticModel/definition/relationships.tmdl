@@ -1,0 +1,25 @@
+relationship 35867695-a092-4bc8-83fd-0abb5c0ece2c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.PR_Created_On
+	toColumn: LocalDateTable_8fcb6802-a459-40f1-907f-3318e4c8d26d.Date
+
+relationship c664d564-5cf0-4ff6-bd72-538542304135
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.Document_Date
+	toColumn: LocalDateTable_781482ae-cd19-4e9f-b4bb-fd605d064bef.Date
+
+relationship 1d79bd9a-5599-4f51-9fa4-45bbdaa926b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.'Requisition Date of Material Order'
+	toColumn: LocalDateTable_ca5be94b-1800-4a19-adac-aca9da51c615.Date
+
+relationship 9b7d8857-242f-4221-b584-702c3d28ce85
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.'Purchase Requisition Release Date'
+	toColumn: LocalDateTable_f83b3fd6-3d12-42f9-9dcc-40cbb76bde24.Date
+
+relationship eef31ca6-49c1-438d-82dc-c40ffe28f2f8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: List_of_all_PR_PO.Changed_on
+	toColumn: LocalDateTable_c8a75a1d-404a-4f72-95ff-966ae4c758ba.Date
+

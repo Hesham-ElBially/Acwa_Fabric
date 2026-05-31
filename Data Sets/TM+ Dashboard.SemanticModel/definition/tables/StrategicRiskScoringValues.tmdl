@@ -1,0 +1,93 @@
+table StrategicRiskScoringValues
+	lineageTag: 02bbb6f6-a1ef-402a-8b00-70923bc85f37
+
+	column StrategicRiskScoreId
+		dataType: int64
+		formatString: 0
+		lineageTag: a482c850-e52a-477e-9b3e-5fdcb68651ab
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e6482d6-f329-43ac-9844-614599877fcc
+		summarizeBy: none
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		lineageTag: 5d92dffe-9c5e-4f8f-8a1b-4d816f6ce759
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8acdf507-a674-4147-810f-be9ce9510dba
+		summarizeBy: count
+		sourceColumn: VariableId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableTitle
+		dataType: string
+		lineageTag: de995f4d-a424-4480-9866-a2ff27d575c1
+		summarizeBy: none
+		sourceColumn: VariableTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetricTitle
+		dataType: string
+		lineageTag: ff68c6ea-0cb9-4ed9-8c79-bf30faa82f41
+		summarizeBy: none
+		sourceColumn: MetricTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreType
+		dataType: string
+		lineageTag: 9c9032b9-116c-4346-9037-36319a168825
+		summarizeBy: none
+		sourceColumn: ScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreLabel
+		dataType: string
+		lineageTag: bc779eb3-82dd-4122-9491-015f3f4c0cae
+		summarizeBy: none
+		sourceColumn: ScoreLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreValue
+		dataType: double
+		lineageTag: 1d70445a-efe1-4e38-9414-fd290ec8a596
+		summarizeBy: sum
+		sourceColumn: ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition StrategicRiskScoringValues = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    StrategicRiskScoringValues_table = Source{[Name="StrategicRiskScoringValues",Signature="table"]}[Data]
+				in
+				    StrategicRiskScoringValues_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

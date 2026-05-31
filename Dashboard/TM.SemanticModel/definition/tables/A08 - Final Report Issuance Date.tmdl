@@ -1,0 +1,77 @@
+table 'A08 - Final Report Issuance Date'
+	lineageTag: dfadb058-c440-443e-b455-51a0259e84ea
+	sourceLineageTag: [sch_TeamMate].[A08 - Final Report Issuance Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0e1aeddb-6ec3-4068-936c-180ad1b42aec
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4b73ea0e-69dd-4dfe-aba4-dd094b68d282
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Final Report Issuance Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b6743dc-7271-4495-a004-8d0ebb7dde3c
+		sourceLineageTag: A08_00 - Final Report Issuance Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Final Report Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 0901d402-6d22-4241-8dba-35a27525b0a9
+		sourceLineageTag: A08_00 - Final Report Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - TeamMate Updated Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e655fdcc-ab28-46b2-8081-531ff72cb51b
+		sourceLineageTag: A08_00 - TeamMate Updated Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - TeamMate Updated Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 3c6d9623-b150-44d7-8320-25bb62defc1f
+		sourceLineageTag: A08_00 - TeamMate Updated Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Final Report Issuance Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Final Report Issuance Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

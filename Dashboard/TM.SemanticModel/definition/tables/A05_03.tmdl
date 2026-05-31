@@ -1,0 +1,67 @@
+table A05_03
+	lineageTag: e41e8029-3516-4167-be5d-38bc33a49a9a
+	sourceLineageTag: [sch_TimeSheet].[A05_03]
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 602e8222-1f2d-441f-be0b-e55c0f36fa47
+		sourceLineageTag: Year
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c7fb45a6-d3f5-45ef-9f33-218cd3751b52
+		sourceLineageTag: TimeEntryUserId
+		summarizeBy: count
+		sourceColumn: TimeEntryUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e90cdab5-5248-4bda-987a-48bd34599f12
+		sourceLineageTag: TimeEntryUser
+		summarizeBy: none
+		sourceColumn: TimeEntryUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TimeNonWorkings.TimeNonWorkingName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 527a1911-dfa3-4803-8ae9-b48b44d2017d
+		sourceLineageTag: TimeNonWorkings.TimeNonWorkingName
+		summarizeBy: none
+		sourceColumn: TimeNonWorkings.TimeNonWorkingName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Non Working Hours'
+		dataType: double
+		sourceProviderType: decimal(38, 6)
+		lineageTag: eaeaaba4-4120-415c-8edd-1b5a88920882
+		sourceLineageTag: Non Working Hours
+		summarizeBy: sum
+		sourceColumn: Non Working Hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition A05_03 = entity
+		mode: directLake
+		source
+			entityName: A05_03
+			schemaName: sch_TimeSheet
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

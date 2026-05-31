@@ -1,0 +1,252 @@
+table 'A03 - Reco Closed but Issue Still Open'
+	lineageTag: 0e5b2844-d9f5-4446-a23d-f2df033751a4
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3223a91c-d47d-483b-8a93-c83502680ab6
+		summarizeBy: count
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectRelationshipId
+		dataType: int64
+		formatString: 0
+		lineageTag: 79695cbc-c7a4-428a-84c0-ad13a143970e
+		summarizeBy: count
+		sourceColumn: ObjectRelationshipId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b910f9b-861f-4bcb-ad37-a431744cad1f
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ea58af1-028f-4e5a-aa8d-b84945fe20ea
+		summarizeBy: none
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: d889f36e-c17f-44a4-8704-7fd7a761a4a7
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationTitle'
+		dataType: string
+		lineageTag: 14a9578b-5151-4dd0-9217-b5c0734debd0
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.RecommendationState'
+		dataType: string
+		lineageTag: fa4c5f1e-caab-440d-bc00-eba1c93a2ef6
+		summarizeBy: none
+		sourceColumn: Recommendations.RecommendationState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category1'
+		dataType: string
+		lineageTag: 9775b07a-0b28-4bc9-9489-548eceb1f4bf
+		summarizeBy: none
+		sourceColumn: Recommendations.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.Category2'
+		dataType: string
+		lineageTag: 87990ec3-6511-47a8-9ee5-c97fcfaa16ba
+		summarizeBy: none
+		sourceColumn: Recommendations.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.DueDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9677c181-2c82-4b4a-b655-9ac095b51b8e
+		summarizeBy: none
+		sourceColumn: Recommendations.DueDate
+
+		variation Variation
+			isDefault
+			relationship: 14774872-e790-4571-810e-5aa9c291ef6c
+			defaultHierarchy: LocalDateTable_61c8df34-e9f8-4520-b88d-5ca19dd0acf1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Recommendations.RevisedDueDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f687c8ff-58d8-43c5-b368-b79f5eeaa707
+		summarizeBy: none
+		sourceColumn: Recommendations.RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: c46f6476-24a0-4c81-8f48-e10599333440
+			defaultHierarchy: LocalDateTable_f19c4095-0eb5-4fe8-8ee7-62238c3ad7f5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Recommendations.LastClosedUser'
+		dataType: string
+		lineageTag: 0a265cbf-2943-4eab-9b83-03d7043e66ad
+		summarizeBy: none
+		sourceColumn: Recommendations.LastClosedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recommendations.LastClosedDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 62b03ccc-acd4-444c-8134-8fca42b56118
+		summarizeBy: none
+		sourceColumn: Recommendations.LastClosedDate
+
+		variation Variation
+			isDefault
+			relationship: 20b9f372-73f6-430a-b5ea-0fbd3a7f7d83
+			defaultHierarchy: LocalDateTable_a66c1e0f-2f1a-4c27-98a9-bf0ad9b9af5d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		lineageTag: fbf63b0b-3f44-40d2-8ec4-1d554c4471b5
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		lineageTag: de6fd7b0-88d0-4fa1-bdaa-0084fbce627f
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category1'
+		dataType: string
+		lineageTag: 2f074796-a8ef-4740-83c9-998170ca6e52
+		summarizeBy: none
+		sourceColumn: Projects.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category11'
+		dataType: string
+		lineageTag: 97a7e2e5-f587-460c-b94c-94e86641d9d0
+		summarizeBy: none
+		sourceColumn: Projects.Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IssueTitle'
+		dataType: string
+		lineageTag: 87b26b27-518c-4824-a11a-621ce783c92f
+		summarizeBy: none
+		sourceColumn: Issues.IssueTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.ReleaseDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bc509bb4-219b-4b3c-a369-ac0566164744
+		summarizeBy: none
+		sourceColumn: Issues.ReleaseDate
+
+		variation Variation
+			isDefault
+			relationship: a8a7c921-a6a9-4bb0-bf2c-94000045f7c3
+			defaultHierarchy: LocalDateTable_cc890d08-cfff-4428-973d-f313b3b05078.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Issues.IssueState'
+		dataType: string
+		lineageTag: d878852b-055e-4957-9273-e8a04766062c
+		summarizeBy: none
+		sourceColumn: Issues.IssueState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.IsReleased'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d2bea9b7-8b4e-4e7c-b2b1-3c597666a8f0
+		summarizeBy: none
+		sourceColumn: Issues.IsReleased
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.Category2'
+		dataType: string
+		lineageTag: 37becf0b-7264-4ebc-8990-c13e11edf5d9
+		summarizeBy: none
+		sourceColumn: Issues.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category13'
+		dataType: string
+		lineageTag: 621b1970-fff8-4e1d-9abd-692de8584a3a
+		summarizeBy: none
+		sourceColumn: Projects.Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A03 - Reco Closed but Issue Still Open' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(ObjectRelationships_table,{"DimensionId", "EntityId", "AssessmentId", "StrategicRiskId", "RiskId", "ControlId", "ProcedureId"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns",{"ObjectiveId", "ObjectRelationshipId", "ProjectId", "IssueId", "RecommendationId", "FolderId", "Dimension", "Entity", "Assessment", "Project", "StrategicRisk", "Risk", "Control", "Objective", "Procedure", "Issue", "Recommendation", "Folder"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns",{"FolderId"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Columns1", {"RecommendationId"}, Recommendations, {"RecommendationId"}, "Recommendations", JoinKind.LeftOuter),
+				    #"Expanded Recommendations" = Table.ExpandTableColumn(#"Merged Queries", "Recommendations", {"RecommendationTitle", "RecommendationState", "Category1", "Category2", "DueDate", "RevisedDueDate", "LastClosedUser", "LastClosedDate"}, {"Recommendations.RecommendationTitle", "Recommendations.RecommendationState", "Recommendations.Category1", "Recommendations.Category2", "Recommendations.DueDate", "Recommendations.RevisedDueDate", "Recommendations.LastClosedUser", "Recommendations.LastClosedDate"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded Recommendations", each ([Recommendations.RecommendationState] <> null and [Recommendations.RecommendationState] = "Closed")),
+				    #"Merged Queries1" = Table.NestedJoin(#"Filtered Rows", {"ProjectId"}, Projects, {"ProjectId"}, "Projects", JoinKind.LeftOuter),
+				    #"Expanded Projects" = Table.ExpandTableColumn(#"Merged Queries1", "Projects", {"ProjectTitle", "ProjectCode", "Category1", "Category11", "Category13"}, {"Projects.ProjectTitle", "Projects.ProjectCode", "Projects.Category1", "Projects.Category11", "Projects.Category13"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded Projects", {"IssueId"}, Issues, {"IssueId"}, "Issues", JoinKind.LeftOuter),
+				    #"Expanded Issues" = Table.ExpandTableColumn(#"Merged Queries2", "Issues", {"IssueTitle", "ReleaseDate", "IssueState", "IsReleased", "Category2"}, {"Issues.IssueTitle", "Issues.ReleaseDate", "Issues.IssueState", "Issues.IsReleased", "Issues.Category2"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Expanded Issues", each ([Issues.IssueState] <> "Closed")),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows1",{{"Recommendations.LastClosedDate", type date}}),
+				    #"Filtered Rows2" = Table.SelectRows(#"Changed Type", each [Recommendations.LastClosedDate] >= #date(2024, 7, 1)),
+				    #"Filtered Rows3" = Table.SelectRows(#"Filtered Rows2", each [Issues.IsReleased] = true)
+				in
+				    #"Filtered Rows3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

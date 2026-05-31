@@ -1,0 +1,126 @@
+table 'A08_00 - TeamMate Updated Date'
+	lineageTag: 39b2e92f-295f-4e8a-8af6-05d86072f0c6
+
+	column ProjectPhaseMilestoneId
+		dataType: int64
+		formatString: 0
+		lineageTag: af2abc1d-18ea-401a-95f7-f677c9ee4b2a
+		summarizeBy: count
+		sourceColumn: ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d6d64f5-f621-47eb-9025-3ce085833338
+		summarizeBy: none
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilestoneName
+		dataType: string
+		lineageTag: 95fdd334-7562-4cea-a7f8-fb944e51367d
+		summarizeBy: none
+		sourceColumn: MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhaseName
+		dataType: string
+		lineageTag: f576c4b3-a825-422d-b4a9-db1fb042d55f
+		summarizeBy: none
+		sourceColumn: PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2f3e2c78-cfac-44e3-8125-0a8b922982d9
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d11bf413-8299-462a-98c7-d0dd6f78c5ee
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: f2355556-6f48-4b40-b55e-ce8c1010dbbb
+			defaultHierarchy: LocalDateTable_d944bbff-eaa2-45d0-82bf-fc831a990d81.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstimatedEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1dd1b3a9-cd57-4d29-8f4e-911b4618dc44
+		summarizeBy: none
+		sourceColumn: EstimatedEndDate
+
+		variation Variation
+			isDefault
+			relationship: bdce99f6-2d79-401f-a66e-f1f57b79b0bb
+			defaultHierarchy: LocalDateTable_35d75787-9370-41c7-9978-4e10d8e164d3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 88eee9a4-1556-4258-b8bd-7e49b8845535
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 09674b4a-facc-485d-bf0c-fc76a12e4e8e
+			defaultHierarchy: LocalDateTable_85f69e03-0fac-4a04-b129-28fba3d8cfe8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: b2fc5116-0ed8-49a4-92e0-54b4aa924760
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: b11d4525-721b-499d-81f2-6635905fcf5a
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - TeamMate Updated Date' = m
+		mode: import
+		source =
+				// ProjectPhaseMilestones
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProjectPhaseMilestones_table = Source{[Name="ProjectPhaseMilestones",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(ProjectPhaseMilestones_table, each ([MilestoneName] = "TeamMate Updated"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,130 @@
+table 'A11_05 - Score: Residual Impact'
+	lineageTag: e4e2c21b-71d0-4b9f-aa58-5a9b82b6edd8
+	sourceLineageTag: [sch_TeamMate].[A11_05 - Score: Residual Impact]
+
+	column StrategicRiskScoreId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1fac4474-4cc4-44b6-9f11-7a4c25ca8703
+		sourceLineageTag: StrategicRiskScoreId
+		summarizeBy: count
+		sourceColumn: StrategicRiskScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d70fd3d3-0113-470b-a1fe-61e9eff3e244
+		sourceLineageTag: StrategicRiskId
+		summarizeBy: count
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6cb8f573-7337-4418-b334-d88963be3248
+		sourceLineageTag: StrategicRiskTitle
+		summarizeBy: none
+		sourceColumn: StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a348598f-233e-4491-90ae-449f575f1e22
+		sourceLineageTag: VariableId
+		summarizeBy: count
+		sourceColumn: VariableId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a820e672-0228-45c9-82c3-ab2b39f57274
+		sourceLineageTag: VariableTitle
+		summarizeBy: none
+		sourceColumn: VariableTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreType
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 021e7346-69b6-44f6-aaf0-d9aa17e57302
+		sourceLineageTag: ScoreType
+		summarizeBy: none
+		sourceColumn: ScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetricTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 666d3535-cc82-4c17-9a9c-c402eccc6c00
+		sourceLineageTag: MetricTitle
+		summarizeBy: none
+		sourceColumn: MetricTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreLabel
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: daddbbf3-5912-40b3-a9f7-1a794114c710
+		sourceLineageTag: ScoreLabel
+		summarizeBy: none
+		sourceColumn: ScoreLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreValue
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 3867c4f8-503a-44ad-ab08-60bfc5d1c4e8
+		sourceLineageTag: ScoreValue
+		summarizeBy: sum
+		sourceColumn: ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ee9a462c-f6a1-48c0-acb1-b0a1775afc23
+		sourceLineageTag: AssessmentId
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 02409abc-df34-4586-a098-35dbdacef61c
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A11_05 - Score: Residual Impact' = entity
+		mode: directLake
+		source
+			entityName: A11_05 - Score: Residual Impact
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

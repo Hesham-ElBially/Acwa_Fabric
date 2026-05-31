@@ -1,0 +1,126 @@
+table 'A08_00 - Final Report Issuance Date'
+	lineageTag: 9d19ae57-5693-4bce-bcd0-bc2683a55313
+
+	column ProjectPhaseMilestoneId
+		dataType: int64
+		formatString: 0
+		lineageTag: e2a48e76-1282-4190-986f-ef106612174d
+		summarizeBy: count
+		sourceColumn: ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: ea4eebb5-2442-4110-bd73-5a20648dc5dc
+		summarizeBy: none
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilestoneName
+		dataType: string
+		lineageTag: ee566a05-a43b-4703-9a92-91b19c179a99
+		summarizeBy: none
+		sourceColumn: MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhaseName
+		dataType: string
+		lineageTag: dd9ff601-f827-4e02-8b7d-6d91702cf620
+		summarizeBy: none
+		sourceColumn: PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d9f47776-60d3-4e55-9417-ed9ec139adaa
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f93b4e47-0844-4cbe-8098-12a556a14ca5
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: 6850db4d-77b3-4175-aceb-91d29ae29851
+			defaultHierarchy: LocalDateTable_d26ccaee-2f81-4338-8b92-4b5e560c589b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstimatedEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f36c4930-ef00-4b5e-9f30-48c79b24e63d
+		summarizeBy: none
+		sourceColumn: EstimatedEndDate
+
+		variation Variation
+			isDefault
+			relationship: 0221e209-c63c-490e-b1bb-9968a5f6f87e
+			defaultHierarchy: LocalDateTable_f740f537-d118-495e-b9cf-c2906e48016f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 76d2635a-6163-4e9d-989c-fe9540f0dea1
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 75063acf-4973-4b41-aceb-49af0742dade
+			defaultHierarchy: LocalDateTable_65a3c2c6-40ed-484e-b786-8caec2c97053.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: aade31fc-9a51-41cb-8dea-cb80acdeeb23
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: e010f192-3765-4f4a-b62c-dfe15bbc3573
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - Final Report Issuance Date' = m
+		mode: import
+		source =
+				// ProjectPhaseMilestones
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProjectPhaseMilestones_table = Source{[Name="ProjectPhaseMilestones",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(ProjectPhaseMilestones_table, each ([MilestoneName] = "Final Report Issued"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

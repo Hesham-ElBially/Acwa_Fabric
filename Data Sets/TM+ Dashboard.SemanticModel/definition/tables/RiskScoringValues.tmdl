@@ -1,0 +1,91 @@
+table RiskScoringValues
+	lineageTag: a0aea41c-390f-40f6-a518-4c680c4b4df3
+
+	column RiskScoreId
+		dataType: int64
+		formatString: 0
+		lineageTag: 78655196-f23f-4dfb-9c76-30b136037685
+		summarizeBy: count
+		sourceColumn: RiskScoreId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ad10ff4-fd25-4eb9-a3f5-b3ccae486890
+		summarizeBy: none
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskTitle
+		dataType: string
+		lineageTag: be426f41-e1e4-4bac-afd6-1d53184b86c6
+		summarizeBy: none
+		sourceColumn: RiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableId
+		dataType: int64
+		formatString: 0
+		lineageTag: ce501e74-543a-4d96-b00d-6acc9b837ac3
+		summarizeBy: count
+		sourceColumn: VariableId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VariableTitle
+		dataType: string
+		lineageTag: c36a60b5-a7c2-427d-bd3d-21812aacfe7f
+		summarizeBy: none
+		sourceColumn: VariableTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetricTitle
+		dataType: string
+		lineageTag: 823c8486-3273-4503-8941-ee7bd3bad155
+		summarizeBy: none
+		sourceColumn: MetricTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreType
+		dataType: string
+		lineageTag: fd5d5342-daa8-46e1-a63f-636ccab06607
+		summarizeBy: none
+		sourceColumn: ScoreType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreLabel
+		dataType: string
+		lineageTag: 5180455b-393c-4ccf-896f-d864352f57d5
+		summarizeBy: none
+		sourceColumn: ScoreLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScoreValue
+		dataType: double
+		lineageTag: f4f7c8ec-8695-4e5f-b7d7-3c55407aec72
+		summarizeBy: sum
+		sourceColumn: ScoreValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition RiskScoringValues = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    RiskScoringValues_table = Source{[Name="RiskScoringValues",Signature="table"]}[Data]
+				in
+				    RiskScoringValues_table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,562 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["A00 - PLS","A00 - Report Rating Order","A00 - Rating Order","A00 - Risk Rating Order","A00 - Region Order","A00 - Country Order","A01 - Open Observation Report as of Today","A02 - Open Observation Report Last Month-End","A03 - Reco Closed but Issue Still Open","A04 - Open Observation Report Current Month-End","A05 - Timesheet","A06 - Audit Plan","A06_00 - Issues - High","A06_00 - Issues - Significant","A06_00 - Issues - Medium","A06_00 - Issues - Low","A07 - Timesheet Last Submitted On","A07_01 - Timesheet Last Entered On ProjectWise","A08 - Audit Schedule KPIs","A08 - Planning Scheduled Start Date","A08 - Planning Scheduled End Date","A08 - Planning Actual Start Date","A08 - Planning Actual End Date","A08 - AAL Issuance Date","A08 - FieldWork Scheduled Start Date","A08 - FieldWork Scheduled End Date","A08 - FieldWork Actual Start Date","A08 - FieldWork Actual End Date","A08 - FieldWork Completed Date","A08 - Reporting Scheduled Start Date","A08 - Reporting Scheduled End Date","A08 - Reporting Actual Start Date","A08 - Reporting Actual End Date","A08 - Final Report Issuance Date","A08 - Draft  Report Issuance Date","A08 - Closure Scheduled Start Date","A08 - Closure Scheduled End Date","A08 - Closure Actual Start Date","A08 - Closure Actual End Date","A08 - TeamMate Updated Date","A08 - Project Closed Date","A08_00 - Phase And Milestone","A08_00 - All Phase","A08_00 - AAL Issuance Date","A08_00 - FieldWork Completed Date","A08_00 - Final Report Issuance Date","A08_00 - Draft Report Issuance Date","A08_00 - TeamMate Updated Date","A08_00 - Project Closed Date","A09 - Audit Plan 2025 & 2024","A10 - Issues Root Cause","A10 - Issues Root Cause (Unreleased)","Users","Entities","Assessments","AuditReports","AuditReportWorkflowHistory","CoachingNoteComments","AuditReportTexts","CoachingNotes","CoachingNoteWorkflowHistory","Controls","ControlTexts","ControlWorkflowHistory","DimensionAssignmentEntity","DimensionAssignments","Dimensions","DocumentRequests","EntityAssessmentDetails","EntityAssessmentTexts","EntityScoringCalculations","EntityTexts","Folders","FolderTexts","FolderWorkflowHistory","Issues","IssueTexts","IssueWorkflowHistory","ListItems","Lists","Objectives","ObjectiveTexts","ObjectRelationshipContexts","ObjectRelationships","Procedures","ProcedureTexts","ProcedureWorkflowHistory","ProjectPhaseMilestones","ProjectPhases","ProjectPhaseWorkflowHistory","Projects","ProjectTexts","Recommendations","RecommendationStatusUpdates","RecommendationTexts","RecommendationWorkflowHistory","Risks","RiskScoringCalculations","RiskScoringCalculationsAssessmentProject","RiskScoringValues","RiskScoringValuesAssessmentProject","RiskTexts","RiskWorkflowHistory","SecurityAssignments","SecurityAssignmentsAggregated","SelfAssessmentControls","SelfAssessmentEntitys","SelfAssessmentItemWorkflowHistory","SelfAssessmentRisks","SelfAssessments","Sprints","SprintStates","Stories","StoryFieldDefinitions","StoryFieldValues","StoryFieldValueTexts","StoryLinks","StoryOwners","StoryReportingCategories","StoryStates","StrategicRisks","StrategicRiskScoringCalculations","StrategicRiskScoringCalculationsAssessmentProject","StrategicRiskScoringValues","StrategicRiskScoringValuesAssessmentProject","StrategicRiskTexts","StrategicRiskWorkflowHistory","Terminologies","Workpapers","WorkpaperTexts","WorkpaperWorkflowHistory","Assessments (2)","AuditPlanCapacityPlanning","AuditPlanCapacityPlanningEntry","AuditPlanCapacityPlanningRole","AuditPlans","AuditPlanSchedule","ProjectPhases (2)","ProjectPhaseWorkflowHistory (2)","Projects (2)","TeamApprovers","Teams","TeamUsers","TimeCategories2","TimeAdmins","TimeCategories3","TimeHolidays","TimeNonWorkings","Timesheets","TimesheetWorkflowHistory","TimeTrackingEntries","Users (2)","A11 - Risk Heat Map","A11_00 - Risk Heat Map with all score","A11_01 - Score: Inherent Likelihood","A11_02 - Score: Inherent Impact","A11_03 - Calc Score: Inherent","A11_04 - Score: Residual Likelihood","A11_05 - Score: Residual Impact","A11_06 - Calc Score: Residual","A12 - Entity Heat Map","A12_00 - Auditable Units - Corporate","A12_01 - Auditable Units with all score  - Corporate","A12_02 - Auditable Units - ProjectCompany","A12_03 - Auditable Units Risk score  - ProjectCompany","A12_04 - Auditable Units with all score  - ProjectCompany","A12_05 - Auditable Units - ProjectCompanyCountryOffice","A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice","A12_07 - Auditable Units with all score  - ProjectCompanyCountryOfiice","A13 - Audit Plan","A08 - Last Planning Procedure","A08 - Last Planning Procedure Details"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop"]
+
+ref table Users
+ref table DateTableTemplate_48a15fc1-79cd-4377-b2ee-22eb0e1fb8b0
+ref table LocalDateTable_0b5fdfa9-9fac-4b13-a787-f1a33ad55e3e
+ref table LocalDateTable_6b6db6fe-c8c9-42ef-8dfc-f8d8a0b704f3
+ref table Entities
+ref table LocalDateTable_c2f66b3b-e9b6-499b-ad01-e917050f6b88
+ref table Assessments
+ref table LocalDateTable_1916c2fe-9c7c-41e1-9899-8918dddd478e
+ref table LocalDateTable_f773f941-123e-4760-9c87-2a96cdb49088
+ref table LocalDateTable_4f8b8018-fb52-4fd5-80c0-f07c65945eaa
+ref table LocalDateTable_eac7b1ba-3a34-41e8-9c1d-f981542e9459
+ref table AuditReports
+ref table LocalDateTable_f9451f8d-8d54-45b3-a153-8989ed3a61a2
+ref table LocalDateTable_ac93a41b-d25d-4cf7-a57d-e17ae62a4ff6
+ref table LocalDateTable_ee1ecd34-1f6e-4ac2-a6cd-a6a8561a9308
+ref table LocalDateTable_e6022033-f567-4ca4-af1d-daddf13320e8
+ref table LocalDateTable_9885de24-969c-4237-af0b-9a9e934ad056
+ref table LocalDateTable_e7c26ab7-3f69-40db-bf1e-51bb7f7fef9d
+ref table LocalDateTable_a1cbc8ab-c735-4210-ad49-d1eb3007c255
+ref table AuditReportWorkflowHistory
+ref table LocalDateTable_31df1463-077a-4139-bc16-6720e75697d2
+ref table AuditReportTexts
+ref table CoachingNoteComments
+ref table LocalDateTable_d67388b6-25a0-4fa1-ad5d-7d142a448b06
+ref table CoachingNotes
+ref table LocalDateTable_f5639ee2-979d-485b-bf5b-bacefb1673c8
+ref table LocalDateTable_4ab8323f-46d4-417c-ba67-e08e05d3a63f
+ref table LocalDateTable_9769119c-0c87-4fd5-b3af-4fb92ebf4d1a
+ref table LocalDateTable_e1ad984b-82eb-4e14-8d56-c3c8fbefe597
+ref table LocalDateTable_91316600-4516-417b-a84c-3f44aaadf65a
+ref table CoachingNoteWorkflowHistory
+ref table LocalDateTable_ef27a200-ecc2-4bf1-86ac-7c299975faaf
+ref table Controls
+ref table LocalDateTable_336b646f-b9bf-4768-85da-7c0ae66772e1
+ref table LocalDateTable_ee6c6f0e-e273-4642-9915-a855b7ca6305
+ref table LocalDateTable_07a575ac-5347-476e-96cb-99a88203e69f
+ref table LocalDateTable_396aa436-d539-4b90-bbe2-1c346cdc3c66
+ref table LocalDateTable_cf4d04ed-70b2-4f0f-8830-c3a0074d8e43
+ref table LocalDateTable_54071a3c-c1c0-4278-a57c-bd7f153a741f
+ref table LocalDateTable_431c8f86-079b-4ecf-aba0-cbeb3c896e18
+ref table ControlTexts
+ref table ControlWorkflowHistory
+ref table LocalDateTable_d673d7aa-4a5c-4499-bdb6-451e478c4a9c
+ref table DimensionAssignmentEntity
+ref table DimensionAssignments
+ref table Dimensions
+ref table DocumentRequests
+ref table LocalDateTable_bafec791-3e3d-44fa-8e4b-baf2c33b09f4
+ref table LocalDateTable_004815c2-1294-4acc-872a-5ac54a0d2712
+ref table LocalDateTable_af19c897-8edd-4817-804c-6d3870b129bc
+ref table EntityAssessmentDetails
+ref table LocalDateTable_7e783cfd-9a3e-4364-9dd2-b02daf6f656e
+ref table LocalDateTable_5d2fba7f-e85c-4359-828e-27119773cc46
+ref table LocalDateTable_c09303a2-8b3d-4962-880a-747dc038c98a
+ref table LocalDateTable_6ab2cf3e-699e-4d13-8049-8fa0c13a106d
+ref table LocalDateTable_a45c1523-f098-464e-8221-b76ed1b702fc
+ref table EntityAssessmentTexts
+ref table EntityScoringCalculations
+ref table EntityTexts
+ref table Folders
+ref table LocalDateTable_a3c3d9b9-58bc-43c7-adbe-881c19f62478
+ref table LocalDateTable_5d0aab8b-c1ba-479b-85d1-b9572aae1a18
+ref table LocalDateTable_0881ae13-fc75-4aa5-9e27-de0824e2101e
+ref table LocalDateTable_94596ff5-4723-4cea-8b22-25204d79a9c8
+ref table LocalDateTable_286704ea-45fe-407a-bbd3-7734e0042fd6
+ref table LocalDateTable_d1d73412-6629-4540-a908-0ae4c473c398
+ref table LocalDateTable_73f93de1-16c8-453f-a838-f990d03e3300
+ref table FolderTexts
+ref table FolderWorkflowHistory
+ref table LocalDateTable_283bce78-adf1-41b6-a454-4d92972a9ba8
+ref table Issues
+ref table LocalDateTable_174434db-a31d-4564-b0b9-57627cb186b7
+ref table LocalDateTable_3ef0aa26-fc7c-4505-90f9-1dc92124e635
+ref table LocalDateTable_7c35ab9a-e9fc-42b5-bc93-87c8f35d209b
+ref table LocalDateTable_4ae1d82f-4fde-42c0-b17a-6f8c90c9c443
+ref table LocalDateTable_6f8e39dd-7826-4885-a921-aa9ceeaeec51
+ref table LocalDateTable_1adf2610-a9ee-4c40-afab-cc4a7279b22d
+ref table LocalDateTable_45a76c27-112c-43a2-8dbb-66a88ab2962f
+ref table LocalDateTable_c4517a67-21a7-47a1-a7e0-9b114f80eb43
+ref table LocalDateTable_40c27448-8222-4caa-b855-b074f9e31d8d
+ref table LocalDateTable_21134a68-cc8d-45b7-97af-9a71dad2557d
+ref table LocalDateTable_68eaebb3-c4d3-45a7-a07e-577f5d440b42
+ref table LocalDateTable_85f576d1-9fd2-4c95-b9d1-ecf875903967
+ref table IssueTexts
+ref table IssueWorkflowHistory
+ref table LocalDateTable_2d778286-136c-448c-8b6b-7b4fd7c6c43e
+ref table ListItems
+ref table Lists
+ref table Objectives
+ref table LocalDateTable_571f1ac2-e18c-4fde-9e3c-232cc720e408
+ref table ObjectiveTexts
+ref table ObjectRelationshipContexts
+ref table ObjectRelationships
+ref table Procedures
+ref table LocalDateTable_7c7111cd-808b-4e40-8884-52799bdedb21
+ref table LocalDateTable_d6cbd77c-cda9-4eff-ac98-eedb44810245
+ref table LocalDateTable_145c69bd-aef8-4ad4-b412-aaadbb9f35d0
+ref table LocalDateTable_726560b0-9333-4076-9f18-712a15dc26e3
+ref table LocalDateTable_b3938e0b-310e-4acb-a65a-7b14b71ab577
+ref table LocalDateTable_595d1b11-f215-4990-91dd-f860f3b57f17
+ref table LocalDateTable_d7e948bf-69c1-4041-9bfb-e71f92a38c93
+ref table ProcedureTexts
+ref table ProcedureWorkflowHistory
+ref table LocalDateTable_ff716e41-a00d-4a32-9c7f-a00cc2a801f8
+ref table ProjectPhaseMilestones
+ref table LocalDateTable_1ca793d9-5b8d-475c-ab3b-b5e7ea13230b
+ref table LocalDateTable_84f5bca5-e8b1-4b01-9b29-92ace496fa44
+ref table LocalDateTable_b7eefa8a-20e3-4621-a07c-7b924caa637b
+ref table ProjectPhases
+ref table LocalDateTable_5f6c66f4-db0b-4612-95e4-311ca2c0ff96
+ref table LocalDateTable_1f9901a7-f7e1-4b78-872c-a24e5d848139
+ref table LocalDateTable_a7df2bd7-b212-460c-bc60-e0730f7fb447
+ref table LocalDateTable_04ea46e0-8f44-4a01-a6c8-a17420c1a28e
+ref table LocalDateTable_b363bb0a-e14f-409d-8107-c5d40e45cd2d
+ref table LocalDateTable_fededafe-1d1f-4207-9b3f-3a58c8d40652
+ref table LocalDateTable_bf7846b1-3a2b-49ab-bc12-8ed015509646
+ref table LocalDateTable_9c1b17c1-74d2-4356-8277-6086f553abd5
+ref table LocalDateTable_d4a00610-5cff-46fe-83a1-551ee7782f33
+ref table ProjectPhaseWorkflowHistory
+ref table LocalDateTable_a31327f8-5a90-4ed5-86a0-f169eb586f9c
+ref table Projects
+ref table LocalDateTable_bb4e0f76-9f51-4a15-95ab-e69eed8b1a6c
+ref table LocalDateTable_38ac5b61-16e4-4572-8b7f-3d25c3ad06a9
+ref table LocalDateTable_21b9cbd6-7adb-49ef-bb97-bcfbc5a76acb
+ref table LocalDateTable_3eaded9a-5e27-4192-8817-608f8a29ad65
+ref table LocalDateTable_6a4f8509-edab-4360-8513-efc1f98c0dfa
+ref table LocalDateTable_61825763-78df-4ed7-b4b6-63aa8d3e7b6d
+ref table LocalDateTable_f83daa93-91d0-4129-848e-3f8dee2fa07b
+ref table LocalDateTable_48012143-5c43-4b3d-af17-56fc923481c3
+ref table LocalDateTable_892d569e-32c9-4a59-86e2-e8c25ec633a1
+ref table LocalDateTable_d4df7c84-71ff-4005-a61f-85860d363e6d
+ref table LocalDateTable_490005cc-fa0d-4984-b373-b201b6637b13
+ref table LocalDateTable_c0e664a7-262f-4869-9871-a79b7ce9b31d
+ref table LocalDateTable_d8258131-91a1-4305-82a0-3127dc0ff285
+ref table LocalDateTable_fe09739b-a271-4e78-a3d0-c5d51d967e2f
+ref table ProjectTexts
+ref table Recommendations
+ref table LocalDateTable_89f6b9a2-8d5a-498f-847e-f5682f1a4994
+ref table LocalDateTable_f67fbef5-742f-40c4-830e-b23ec31b32c3
+ref table LocalDateTable_dfa5e63e-4c07-47ff-8d03-9c508cb839b5
+ref table LocalDateTable_b3801b0e-9f92-4f4a-96e9-c72459cdc8d5
+ref table LocalDateTable_9b4ca956-639c-45d9-8494-33e93614db08
+ref table LocalDateTable_b7b0b48c-6e38-4ad8-80d2-d68b4f131a21
+ref table LocalDateTable_2217b6a9-d263-4cb5-b81d-521a609b6acf
+ref table LocalDateTable_a292253b-f1db-42d1-bf88-8f005f9f6803
+ref table LocalDateTable_538e2769-a5d4-46aa-a534-4aefec1698ea
+ref table LocalDateTable_5d92fbe9-2ba1-46da-815b-77e4317b662a
+ref table LocalDateTable_4d85aedf-33ca-4b4b-9177-93e73b7785fd
+ref table LocalDateTable_864b6698-56ab-4472-8287-75914a8faddd
+ref table LocalDateTable_56ba9544-db36-4003-bbab-d25582fe1c20
+ref table LocalDateTable_edea86fc-cec9-4d58-b306-f0f61c96d82b
+ref table LocalDateTable_0bdefc98-e921-4e95-a94c-4f61ebdd3862
+ref table LocalDateTable_34c04561-5965-4ece-ad1f-6421be456ed0
+ref table LocalDateTable_d9eb42c9-73ef-4f75-842e-9e21496cde35
+ref table LocalDateTable_17eefd0a-d8c6-49f5-8e76-43d52279dd2b
+ref table LocalDateTable_e0699345-a9b7-4b2a-a13d-b044ed501bc0
+ref table LocalDateTable_c86b5e7e-849e-4be6-83cf-a5760375ade0
+ref table RecommendationStatusUpdates
+ref table LocalDateTable_33ae0aff-3e8e-4729-ab0c-ae8b956e04a8
+ref table RecommendationTexts
+ref table RecommendationWorkflowHistory
+ref table LocalDateTable_6df01d53-e7d6-45d1-9b2a-6e7b620427ca
+ref table Risks
+ref table LocalDateTable_bc42f0c0-c4f3-402e-aaf5-e2cba20f6df8
+ref table LocalDateTable_13aac303-5b08-4813-9e74-a7c3c04b2d02
+ref table LocalDateTable_1a5477c6-9093-417f-8fb5-4b8445812f0c
+ref table LocalDateTable_36eb2067-50d9-4491-8be5-c5bd8701cd74
+ref table LocalDateTable_f0bf2cb4-a4c0-4c93-a2f8-216e07824088
+ref table LocalDateTable_e3b4cc54-db38-4e71-8459-006960619da6
+ref table LocalDateTable_71a51daa-b7f9-4602-89e8-4137baa21f4b
+ref table RiskScoringCalculations
+ref table RiskScoringCalculationsAssessmentProject
+ref table RiskScoringValues
+ref table 'A01 - Open Observation Report as of Today'
+ref table LocalDateTable_653d5f65-4cdc-4345-b84b-b9405be280ea
+ref table LocalDateTable_00e63186-8c98-4e4a-b258-3834991bc5c4
+ref table LocalDateTable_fde15fd3-1064-43ea-a986-718a905a8120
+ref table LocalDateTable_a1bf3db2-b0d2-47d1-a2b3-44d9d99ac583
+ref table LocalDateTable_ce6ae821-adee-47ee-b366-c9f2f18e46c1
+ref table 'A02 - Open Observation Report Last Month-End'
+ref table LocalDateTable_d7c3a192-89ff-4d9a-b906-f076d32febf0
+ref table LocalDateTable_7ab6daf5-a41b-4e1b-917c-49d28fa25f5b
+ref table LocalDateTable_2276f6f4-995d-4ecb-bc70-3d1478bd9ee8
+ref table LocalDateTable_981c3725-7683-42aa-ad7e-5ddb597583aa
+ref table LocalDateTable_73ee13aa-16e3-4283-bc58-b566a8cc21d0
+ref table LocalDateTable_c10b5201-ca8f-4582-9fb3-6340b4d1601c
+ref table 'A00 - PLS'
+ref table 'A03 - Reco Closed but Issue Still Open'
+ref table LocalDateTable_61c8df34-e9f8-4520-b88d-5ca19dd0acf1
+ref table LocalDateTable_f19c4095-0eb5-4fe8-8ee7-62238c3ad7f5
+ref table LocalDateTable_a66c1e0f-2f1a-4c27-98a9-bf0ad9b9af5d
+ref table LocalDateTable_cc890d08-cfff-4428-973d-f313b3b05078
+ref table RiskScoringValuesAssessmentProject
+ref table RiskTexts
+ref table RiskWorkflowHistory
+ref table LocalDateTable_8650b023-5ed3-498f-a425-6342140b48d7
+ref table SecurityAssignments
+ref table SecurityAssignmentsAggregated
+ref table SelfAssessmentControls
+ref table LocalDateTable_1e55fe84-efd2-43d3-b546-b5beaa4e2a35
+ref table LocalDateTable_86685d7b-db6e-43ee-b923-0a9b0517b7d0
+ref table LocalDateTable_47b1ffcf-f28a-4479-b288-da53112dd9c0
+ref table SelfAssessmentEntitys
+ref table LocalDateTable_a63f2cee-3c0d-4b97-83a5-99eda351f6cf
+ref table LocalDateTable_d9e1728f-6c38-457f-8e11-0bb990b02bc3
+ref table LocalDateTable_d0150873-ee2d-4788-ba72-ceb2eb793b01
+ref table SelfAssessmentItemWorkflowHistory
+ref table LocalDateTable_980cb2be-e88a-4527-a27c-ccbb0af2eb4a
+ref table SelfAssessmentRisks
+ref table LocalDateTable_99ad3d09-ee90-412a-afa4-78be75fe52c9
+ref table LocalDateTable_f99f1ee0-f484-4e64-bd6f-f7b842006d52
+ref table LocalDateTable_80c67a4a-6986-4800-bcd4-aedc2768662a
+ref table SelfAssessments
+ref table LocalDateTable_8d96168e-a753-4a1b-b6ad-4b1e53c8e3f8
+ref table LocalDateTable_e4d7259d-5aa4-4d6c-b5cb-1e05f244b1d0
+ref table LocalDateTable_7fa7956a-2935-428c-bae4-ca8d53022ef0
+ref table Sprints
+ref table LocalDateTable_db88263b-b9c4-4492-a142-ae47462b3a3c
+ref table LocalDateTable_360e365c-1842-44d3-9589-84d8898f8c74
+ref table SprintStates
+ref table Stories
+ref table StoryFieldDefinitions
+ref table StoryFieldValues
+ref table StoryFieldValueTexts
+ref table StoryLinks
+ref table StoryOwners
+ref table StoryReportingCategories
+ref table StoryStates
+ref table StrategicRisks
+ref table LocalDateTable_abd8da76-35a6-4062-b06b-b37a9defefe6
+ref table LocalDateTable_ea9e8f9b-8336-4653-9dc1-697a85e9600a
+ref table LocalDateTable_4d56f551-7eae-4c0d-9f47-bdfd811ea356
+ref table LocalDateTable_d5c6b383-6786-4681-9705-19e3dccf5b6c
+ref table LocalDateTable_37602607-a61f-443e-b465-5c3d0173611f
+ref table LocalDateTable_e49cd549-ee32-4ffc-9cfc-6bcfdb6364c9
+ref table LocalDateTable_da5ddb30-cc55-4f64-9ba2-94fe6b456430
+ref table StrategicRiskScoringCalculations
+ref table StrategicRiskScoringCalculationsAssessmentProject
+ref table StrategicRiskScoringValues
+ref table StrategicRiskScoringValuesAssessmentProject
+ref table StrategicRiskTexts
+ref table StrategicRiskWorkflowHistory
+ref table LocalDateTable_3794a1d5-5b3c-4681-85ae-54b28769b9bf
+ref table Terminologies
+ref table Workpapers
+ref table LocalDateTable_c98ff017-c99b-4fff-9295-0ee11d1dcb52
+ref table LocalDateTable_ce3fb403-7d8f-4237-9c17-493184b19454
+ref table LocalDateTable_2e450a90-cb9f-4626-9e03-b3eab7343b71
+ref table LocalDateTable_85357794-1247-4b86-a2a5-13d4a755d627
+ref table LocalDateTable_2074a6f4-0134-465c-9433-f2277e6d09b3
+ref table LocalDateTable_74aea921-1a02-4664-a16c-5dd811691571
+ref table LocalDateTable_c7a9f8fd-7899-4815-8b63-87eb83d290c4
+ref table WorkpaperTexts
+ref table WorkpaperWorkflowHistory
+ref table LocalDateTable_dc95a240-d3e2-4e3f-9e33-c481d31c5caa
+ref table 'A04 - Open Observation Report Current Month-End'
+ref table LocalDateTable_0e1cbc0f-4a90-43b0-9fa9-abb193139b5c
+ref table LocalDateTable_7783facd-4dcb-4242-b206-81803b786495
+ref table LocalDateTable_bb4140a9-af67-4efe-b733-91ebfba9a670
+ref table LocalDateTable_1bb0ed74-7212-4ace-b5b7-dfe6c29ee26d
+ref table LocalDateTable_83f3f93f-d563-4f82-b6dd-c39d15a1a7d2
+ref table LocalDateTable_9910f6d9-b6ee-4167-9b8e-68903d3f7673
+ref table 'Assessments (2)'
+ref table LocalDateTable_1cbba3b3-3bdb-4b15-aa2f-1710aabac238
+ref table LocalDateTable_00daf905-60f9-44a7-9b32-8a013687c82b
+ref table LocalDateTable_01ad1541-34fd-4d59-8678-566a514309fb
+ref table LocalDateTable_dbb121c2-ff7d-4cd4-96fd-52954fb32a48
+ref table AuditPlanCapacityPlanning
+ref table AuditPlanCapacityPlanningEntry
+ref table AuditPlanCapacityPlanningRole
+ref table AuditPlans
+ref table LocalDateTable_935b336e-2fc6-4064-8f3f-292f40b248e1
+ref table LocalDateTable_07870094-20c2-4347-a8d7-5a2876c19206
+ref table LocalDateTable_ad3e8c05-c015-41e6-918d-42f6a7331d34
+ref table LocalDateTable_dc11a382-669c-4ca7-916a-7be73bc6c4cb
+ref table LocalDateTable_bc11d5f8-f17d-4c02-b21f-27a1b55e5b99
+ref table AuditPlanSchedule
+ref table LocalDateTable_ff240c15-de52-4af1-a657-3b8b2e01fbd1
+ref table LocalDateTable_4e8233a5-7f20-44cc-a053-dc3a985a4818
+ref table LocalDateTable_50fab95d-2e88-4c4b-ad36-12032bc66e97
+ref table LocalDateTable_1f10629c-3506-47dd-a184-b01a3dfc3fff
+ref table 'ProjectPhases (2)'
+ref table LocalDateTable_277a9cce-7362-4c6c-83b6-5646dfa9e695
+ref table LocalDateTable_011be2ac-4391-47ce-b68f-fbe5239b9d94
+ref table LocalDateTable_8c7aa89b-3106-4918-a1fa-38d86118d842
+ref table LocalDateTable_5f4a6867-1ab1-4dfa-b569-8f391ca01c50
+ref table LocalDateTable_075c645d-08fc-4a07-b061-2b385efc2d93
+ref table LocalDateTable_f3d91cfe-3927-4fd1-80c6-62ec651c38ac
+ref table LocalDateTable_8b5a8c47-2d6b-4463-a2e9-94a576cd487e
+ref table LocalDateTable_70318f86-1247-488a-92d7-6b71158afc2d
+ref table LocalDateTable_10dd86c0-f001-4c26-aac4-f2f160886f6b
+ref table 'ProjectPhaseWorkflowHistory (2)'
+ref table LocalDateTable_67b0abc3-a60c-434b-824c-070afcf16ac0
+ref table 'Projects (2)'
+ref table LocalDateTable_42a5ddad-c99a-49e9-a4aa-3c4ca1f0c0f6
+ref table LocalDateTable_4c7ef6f6-da10-4a6c-a5fc-8a1bc22911c7
+ref table LocalDateTable_ce157ba5-2d1e-4ffe-ad6d-8e8e40e2410f
+ref table LocalDateTable_72893b62-a3d4-4cc6-b1b4-3e2015625953
+ref table LocalDateTable_4313b444-bbc0-4a3a-8a8e-0915fbc8d65a
+ref table LocalDateTable_b58ae9e5-9d81-45ce-9735-5c2bcd7f6063
+ref table LocalDateTable_33d4e19f-d1e2-4f0c-b640-65866aca3819
+ref table LocalDateTable_9d4361fc-b912-49ab-a665-f0a08423c4b4
+ref table LocalDateTable_eead5497-a41b-426a-b77c-1f6b86cbdd16
+ref table LocalDateTable_e72c5d18-5bb5-4fe4-9100-0ba1c50bf2d5
+ref table LocalDateTable_7a7bb791-86cb-4f94-8b37-2c1c8012f454
+ref table LocalDateTable_843763d0-36a6-48ed-ad94-474d517d6a35
+ref table LocalDateTable_936bff33-c2d0-4c01-9759-87cb4980a574
+ref table LocalDateTable_18dd3a50-ba1f-4976-86b5-be675baf9178
+ref table TeamApprovers
+ref table Teams
+ref table TeamUsers
+ref table TimeCategories2
+ref table TimeAdmins
+ref table TimeCategories3
+ref table TimeHolidays
+ref table LocalDateTable_6bf0c910-bfc3-4adf-83f6-9b833bd00f09
+ref table TimeNonWorkings
+ref table Timesheets
+ref table LocalDateTable_551a9a53-830d-429b-b6c2-c4f38a321702
+ref table LocalDateTable_d53675dd-0420-43b9-a788-125630ced196
+ref table TimesheetWorkflowHistory
+ref table LocalDateTable_e3bc378b-c1d5-46c8-9f9d-cb5e05dd2021
+ref table TimeTrackingEntries
+ref table LocalDateTable_a378f0e3-cbc0-454f-884f-59c2fa4ebcd2
+ref table 'Users (2)'
+ref table LocalDateTable_3f821b43-7568-4b76-b669-f84e9a207ef0
+ref table LocalDateTable_24c969a1-8356-455b-8a80-021571138a12
+ref table 'A05 - Timesheet'
+ref table LocalDateTable_d4d2845e-d92d-4f72-9d74-d44bc49e9589
+ref table A05_01
+ref table A05_02
+ref table A05_00
+ref table A05_03
+ref table A05_00_01
+ref table A05_01_01
+ref table A05_02_01
+ref table A05_03_01
+ref table 'A05 - OverallTimesheetReport'
+ref table 'A06 - Audit Plan'
+ref table 'A06_00 - Issues - High'
+ref table 'A06_00 - Issues - Significant'
+ref table 'A06_00 - Issues - Medium'
+ref table 'A06_00 - Issues - Low'
+ref table 'A07 - Timesheet Last Submitted On'
+ref table LocalDateTable_2e0355c9-8d73-4253-b7fd-24a549bd8ca4
+ref table 'A08_00 - Phase And Milestone'
+ref table LocalDateTable_29ccdc29-2e38-45aa-b70d-1748c5c201e1
+ref table LocalDateTable_74c19e8e-ffc9-432b-ae52-01e80ce0d8b1
+ref table LocalDateTable_fe1284bf-611e-45be-b1bb-535263b5b111
+ref table LocalDateTable_57966ae9-acc3-4ede-8e34-eafb87e722fa
+ref table LocalDateTable_ce0414e5-bafd-4116-a0a9-de09beb91bd6
+ref table LocalDateTable_a2ef09dc-aae8-418e-b843-e69d18fb80b8
+ref table LocalDateTable_076738ae-15ac-4bc2-8966-f951af508f06
+ref table LocalDateTable_9832f3a6-65ef-44f8-a13b-0daa78b41bb0
+ref table LocalDateTable_323e924a-9b25-4d9f-af3b-110ceab0050d
+ref table LocalDateTable_c6c98843-2b04-4f92-985d-aa6cf46e40d9
+ref table LocalDateTable_4e7d76f9-2b92-4011-95bb-7f5cd7a621c0
+ref table 'A08_00 - All Phase'
+ref table LocalDateTable_b3ea031c-b403-41b9-a2b8-50223b63bc6c
+ref table LocalDateTable_8350a2fd-b099-4029-9f14-1455bfe48c67
+ref table LocalDateTable_4b1704de-9169-445f-b454-ced5d5c876be
+ref table LocalDateTable_84913b7e-9552-4d3b-8010-8160567d77e2
+ref table LocalDateTable_3049ea78-4842-495b-835e-d15a87a4f6d7
+ref table LocalDateTable_1985fbbf-b0ba-4042-b480-f1ce0c980898
+ref table LocalDateTable_030a100c-f0b5-47c1-9c2c-3ca63fbb3368
+ref table LocalDateTable_2e48079f-c656-4ffc-8128-57e28aab880f
+ref table LocalDateTable_373ff77e-3a1d-46d9-b151-7d43c67eb4aa
+ref table 'A08_00 - Final Report Issuance Date'
+ref table LocalDateTable_d26ccaee-2f81-4338-8b92-4b5e560c589b
+ref table LocalDateTable_f740f537-d118-495e-b9cf-c2906e48016f
+ref table LocalDateTable_65a3c2c6-40ed-484e-b786-8caec2c97053
+ref table 'A08_00 - TeamMate Updated Date'
+ref table LocalDateTable_d944bbff-eaa2-45d0-82bf-fc831a990d81
+ref table LocalDateTable_35d75787-9370-41c7-9978-4e10d8e164d3
+ref table LocalDateTable_85f69e03-0fac-4a04-b129-28fba3d8cfe8
+ref table 'A08 - Audit Schedule KPIs'
+ref table LocalDateTable_2f2381e3-f750-4382-b524-f56bc7ec286d
+ref table LocalDateTable_0672eaf0-8b88-48b8-aa2f-c0d81c3c6bad
+ref table LocalDateTable_dd488689-62a0-48ff-a888-22b007ce18e2
+ref table 'A08 - FieldWork Actual Start Date'
+ref table LocalDateTable_361008e3-48c1-4be0-a26e-5ebddc6aaf22
+ref table 'A08 - Final Report Issuance Date'
+ref table LocalDateTable_c59d190b-75f3-4cd7-bce4-565a6ebcfc0a
+ref table 'A08 - TeamMate Updated Date'
+ref table LocalDateTable_b0c5feb6-7af8-4fbb-97a4-2cf5823fbcf6
+ref table 'A09 - Audit Plan 2025 & 2024'
+ref table 'A11_01 - Score: Inherent Likelihood'
+ref table 'A11 - Risk Heat Map'
+ref table 'A11_00 - Risk Heat Map with all score'
+ref table 'A11_02 - Score: Inherent Impact'
+ref table 'A11_03 - Calc Score: Inherent'
+ref table 'A11_04 - Score: Residual Likelihood'
+ref table 'A11_05 - Score: Residual Impact'
+ref table 'A11_06 - Calc Score: Residual'
+ref table 'A12_00 - Auditable Units - Corporate'
+ref table LocalDateTable_524f1e04-23c9-4694-ae40-2fa7a34689bb
+ref table LocalDateTable_3eddcbfd-04f2-4783-8153-c598ca9eb181
+ref table LocalDateTable_795c2c06-bc7b-4606-b723-87e958ebb402
+ref table LocalDateTable_4ca24301-3ce5-4244-b115-903e0b6fb291
+ref table LocalDateTable_aff095f9-13e1-4594-97da-c61b67fc122d
+ref table 'A12_01 - Auditable Units with all score  - Corporate'
+ref table 'A12_02 - Auditable Units - ProjectCompany'
+ref table LocalDateTable_6d03e54e-7a14-4511-b61b-b1c6c261630c
+ref table LocalDateTable_c059598b-8706-4df9-80b6-ee3bbd005d49
+ref table LocalDateTable_0ad4888f-5f26-438b-b86d-a2db510cab25
+ref table LocalDateTable_b753301b-a423-47a6-bee4-3dffbb035610
+ref table LocalDateTable_7e6c2c97-54f5-49b4-8c7f-0cc7af1831a9
+ref table 'A12_03 - Auditable Units Risk score  - ProjectCompany'
+ref table 'A12_04 - Auditable Units with all score  - ProjectCompany'
+ref table 'A12 - Entity Heat Map'
+ref table 'A00 - Rating Order'
+ref table 'A12_05 - Auditable Units - ProjectCompanyCountryOffice'
+ref table LocalDateTable_61e80d9b-147c-4022-b65d-10ae5fcba803
+ref table LocalDateTable_03d54b66-bb7b-48e8-a671-da011cc72d09
+ref table LocalDateTable_ee8fed37-833b-402b-bf26-a1c8662165aa
+ref table LocalDateTable_196640dc-b8fa-4057-8b96-3ada1c11a562
+ref table LocalDateTable_2bae4cdd-c522-4f49-87ac-d2a2f06e6524
+ref table 'A12_06 - Auditable Units Risk score  - ProjectCompanyCountryOffice'
+ref table 'A12_07 - Auditable Units with all score  - ProjectCompanyCountryOfiice'
+ref table 'A00 - Region Order'
+ref table 'A00 - Country Order'
+ref table 'A13 - Audit Plan'
+ref table LocalDateTable_18ea76d1-60bb-4668-86d3-b6263e1ebef0
+ref table LocalDateTable_6b8a74d9-2316-41aa-8601-c7acd756ffaf
+ref table 'A00 - Risk Rating Order'
+ref table 'A07_01 - Timesheet Last Entered On ProjectWise'
+ref table LocalDateTable_48fb2d5e-4080-4d87-9bcf-b8462f2177dc
+ref table A02_01
+ref table A01_01
+ref table A04_01
+ref table 'A10 - Issues Root Cause'
+ref table LocalDateTable_5c7c3bd1-3dc6-463c-855b-10ade092ce19
+ref table A01_02
+ref table A02_02
+ref table A04_02
+ref table A10_01
+ref table 'A00 - Report Rating Order'
+ref table LocalDateTable_24b7f594-b5e0-471c-8857-c2e0aa76c9ad
+ref table LocalDateTable_6af0e701-f2ea-483a-9dec-92b8c4d34645
+ref table LocalDateTable_21a0bcff-a299-4a87-b245-35a7acabcb37
+ref table LocalDateTable_65ba5d42-a650-4c64-a2cf-62b558f28a1e
+ref table LocalDateTable_cc9f9561-b501-4c41-8716-3afdf17b7220
+ref table LocalDateTable_f105435f-b768-4977-a6eb-878a882d79d9
+ref table LocalDateTable_49fc2a0d-14a2-45c8-a642-45949df941da
+ref table LocalDateTable_ba85e282-b5b6-4593-9791-92938f39c3d6
+ref table LocalDateTable_8624c14f-bc01-4a62-afe4-e45977f5fd66
+ref table 'A08 - Planning Scheduled Start Date'
+ref table LocalDateTable_e2ce7385-6067-481f-b6e7-4441e8e993a7
+ref table 'A08 - Planning Scheduled End Date'
+ref table LocalDateTable_72c18186-4fcd-4c20-88b2-64c4d364bde6
+ref table 'A08 - Planning Actual Start Date'
+ref table LocalDateTable_a638db49-e4c7-4ac4-815d-1982f24bcd01
+ref table 'A08 - Planning Actual End Date'
+ref table LocalDateTable_6e60814c-845c-4271-857c-1f08e4e5aaf5
+ref table 'A08 - AAL Issuance Date'
+ref table LocalDateTable_7f16e25e-9dde-4415-ab66-01361e427cf0
+ref table 'A08 - FieldWork Scheduled Start Date'
+ref table LocalDateTable_46e3a100-2b2f-4be5-b5ed-88902f99f816
+ref table 'A08 - FieldWork Scheduled End Date'
+ref table LocalDateTable_c3dc4903-7f0b-4aeb-b27b-bad8a9c16a57
+ref table 'A08 - FieldWork Actual End Date'
+ref table LocalDateTable_4ce1316c-1549-4a22-b2f3-1bcdb8e80641
+ref table 'A08 - FieldWork Completed Date'
+ref table LocalDateTable_49f2b902-526e-42d5-9d0b-8342a2f72f52
+ref table 'A08 - Reporting Scheduled Start Date'
+ref table LocalDateTable_3b73fd6d-9c0f-4422-99dc-8a1fef2257df
+ref table 'A08 - Reporting Scheduled End Date'
+ref table LocalDateTable_718c70af-98c7-4435-8e0f-b7d6151a4311
+ref table 'A08 - Reporting Actual Start Date'
+ref table LocalDateTable_3dbcc042-d919-4593-a479-19b5998a4cef
+ref table 'A08 - Reporting Actual End Date'
+ref table LocalDateTable_50a26b84-d3ce-481a-9f97-c37c35896e20
+ref table 'A08 - Draft  Report Issuance Date'
+ref table LocalDateTable_c26395c3-53b3-4f2c-a056-771c50d4570a
+ref table 'A08_00 - AAL Issuance Date'
+ref table LocalDateTable_254b6aeb-06c0-4fee-b1f7-aeb3bb306535
+ref table LocalDateTable_59aebf09-504f-4284-9f3f-8573f1cfe266
+ref table LocalDateTable_17a7a94c-4876-4242-b422-76fe1e86ce40
+ref table 'A08_00 - FieldWork Completed Date'
+ref table LocalDateTable_84c47b5e-9c94-44ba-841e-52cfa6efc81e
+ref table LocalDateTable_16bd44ea-1acf-4ea9-88e9-5cf18e361a40
+ref table LocalDateTable_35d36ded-bb50-423b-815a-441fd3fbae59
+ref table 'A08_00 - Draft Report Issuance Date'
+ref table LocalDateTable_5d17e382-9ef5-4a87-9d30-b9869381b3b3
+ref table LocalDateTable_8963575c-08e9-4f70-bdf2-3bf3364c8474
+ref table LocalDateTable_58a0ac70-7753-44ec-abc9-f1a5a697aba1
+ref table 'A08_00 - Project Closed Date'
+ref table LocalDateTable_97a0b1b3-8af9-4358-996f-fcf42a6026e5
+ref table LocalDateTable_b28ebe48-c451-49aa-a56f-43f581ff9150
+ref table LocalDateTable_16b61bcf-7e9a-46aa-8e3a-ac841bbd8e57
+ref table LocalDateTable_3ba10728-269b-4766-b9b2-f0144d85508a
+ref table LocalDateTable_87eb647e-f340-49e6-a128-a6f96083cdd8
+ref table LocalDateTable_0fcd5ec9-e51d-4fa8-b5f2-9b2e62a3ebf4
+ref table LocalDateTable_36eae290-a4ab-4533-8343-df3ec494fb19
+ref table LocalDateTable_f65d5b13-710f-4ae1-be96-6479a0553ab7
+ref table LocalDateTable_06e9d653-84c3-4fd6-b31a-b4f8c94d1e8c
+ref table LocalDateTable_336c1c3f-e02e-4568-bdfb-b6d52bfabd99
+ref table LocalDateTable_63bbdc61-d293-416c-86cc-ca26a3191489
+ref table LocalDateTable_e3c90c25-e7a0-46aa-bcc3-89b8e9c97cc9
+ref table LocalDateTable_f4532868-b41e-42e9-a5f2-b2ba8ab938f1
+ref table LocalDateTable_fac292be-4e00-4046-ab26-8a7f50d272f4
+ref table LocalDateTable_fe4c05a0-a304-4eb5-b837-ddabad98554a
+ref table LocalDateTable_2e0e9c13-fd22-413c-923e-b99389f7be0e
+ref table LocalDateTable_061db9ac-e3cd-4279-aac7-19dab6a0bd5e
+ref table LocalDateTable_6796a702-08d0-4035-95da-10780d922a2f
+ref table 'A08 - Closure Scheduled Start Date'
+ref table LocalDateTable_af3bde70-30f0-4726-9a33-83b15fd26205
+ref table 'A08 - Closure Scheduled End Date'
+ref table LocalDateTable_11a80cd7-9c78-4656-8794-79c617af435f
+ref table 'A08 - Closure Actual Start Date'
+ref table LocalDateTable_bda53b69-5189-4e10-b326-a9ab7f23518a
+ref table 'A08 - Closure Actual End Date'
+ref table LocalDateTable_4f57bfc2-91ab-4248-be44-088f7110c0ca
+ref table 'A08 - Project Closed Date'
+ref table LocalDateTable_8b1d2a60-a55f-4fd2-8239-4a890670ec29
+ref table LocalDateTable_ecb26081-dea9-4c57-a497-5ef8b3173b8d
+ref table LocalDateTable_8460bdeb-6937-4814-a64f-4df1cae6c6f9
+ref table LocalDateTable_f21a934c-755e-4736-82ca-0af6c6cb207c
+ref table LocalDateTable_aecbdd9c-ce31-403d-8836-61280b27cb8c
+ref table LocalDateTable_9ca88bd2-2542-401c-a50d-aa1fb3def8e5
+ref table 'A08 - Last Planning Procedure'
+ref table LocalDateTable_26f9db60-73af-49d2-a60e-1f7e3c212d4c
+ref table LocalDateTable_38587ac3-5432-4160-963a-1369736c9c72
+ref table LocalDateTable_b3914cbf-6d74-479e-8e50-758f894c378d
+ref table LocalDateTable_26cacfe2-4441-4bb8-83f2-208e35927e17
+ref table LocalDateTable_38406638-d117-4c2e-919f-9f65f3251a64
+ref table LocalDateTable_d49fa8c8-1e47-42c9-89fa-894ea055f05a
+ref table LocalDateTable_10c3dd33-8b85-4323-aac1-6130851a2327
+ref table 'A08 - Last Planning Procedure Details'
+ref table LocalDateTable_700672dc-764f-4898-a714-5c64d612dae5
+ref table LocalDateTable_bdaa9d57-5e9d-4794-a500-ccb9414c2090
+ref table LocalDateTable_8dec1fc0-b46e-436d-bc7f-41b1b2b548ec
+ref table LocalDateTable_7af2f855-1c3a-45c8-9ef1-664a99a8b418
+ref table 'A10 - Issues Root Cause (Unreleased)'
+ref table LocalDateTable_3aa425f6-6fe5-4f44-a165-b2a3274f6a05
+ref table LocalDateTable_58c69905-7644-47e9-9c13-84178f3a5e69
+ref table LocalDateTable_28c5e09d-77d0-4f2e-9b8e-a479350e3464
+ref table LocalDateTable_9b26e521-6df3-4f30-a315-f0091d5710aa
+ref table LocalDateTable_3188a914-439c-4ee0-9091-d78256335ea6
+ref table LocalDateTable_64994b6f-1b3a-4206-bb2d-185b7a7b3d1c
+ref table LocalDateTable_241648a7-7434-4b08-90af-42fe602e057b
+
+ref role PLS
+
+ref cultureInfo en-US
+

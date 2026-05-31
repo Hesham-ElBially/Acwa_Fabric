@@ -1,0 +1,33 @@
+table 'A00 - Country Order'
+	lineageTag: 1688aa8d-40ae-4f14-8608-de7d2f4e9519
+
+	column Country
+		dataType: string
+		lineageTag: d2c31221-4c2d-4bea-b4d9-473c0bd0589d
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		dataType: int64
+		formatString: 0
+		lineageTag: b91f06a8-e30f-4159-8039-bd4ea21981a6
+		summarizeBy: sum
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Country Order' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Jc69DsIgFAXgVzHMHcR/R2wao8Y41E6kA7Qo2Mo1lA7t0wuX7X4HcnI4J+cepOhJRiipM07YrJwU5iNsiFYYnYR2wkSv0bk2VgRtUMV7+vmgLepiW7BqMPF9h8kVXItle+StZOE+4H0HB00DwUf044sf6RJVwuj1gr2caWIbTfueo+vUFJ3GVayISMuqWarODD7VhH31Hw==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Country = _t, Order = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Country", type text}, {"Order", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

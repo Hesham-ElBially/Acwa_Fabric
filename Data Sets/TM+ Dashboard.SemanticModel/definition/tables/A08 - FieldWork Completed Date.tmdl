@@ -1,0 +1,60 @@
+table 'A08 - FieldWork Completed Date'
+	lineageTag: 373a51f1-46e9-4efb-aa4a-d5b0e6e06220
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: 78392902-895e-47b1-9bbb-c7d070c8e1b7
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cd9a69d-8d93-4932-97a9-e51e23161636
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - FieldWork Completed Date.MilestoneName'
+		dataType: string
+		lineageTag: 218600a3-62ea-478a-9135-cea919b9201c
+		summarizeBy: none
+		sourceColumn: A08_00 - FieldWork Completed Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - FieldWork Completed Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 31b0d130-e121-4a6e-9e5e-40630df1c7d8
+		summarizeBy: none
+		sourceColumn: A08_00 - FieldWork Completed Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: cefe5f52-cfbf-4673-a64a-d7283c13d117
+			defaultHierarchy: LocalDateTable_49f2b902-526e-42d5-9d0b-8342a2f72f52.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'A08 - FieldWork Completed Date' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A08_00 - All Phase", {"ProjectPhaseId"}, #"A08_00 - FieldWork Completed Date", {"ProjectPhaseId"}, "A08_00 - FieldWork Completed Date", JoinKind.LeftOuter),
+				    #"Expanded A08_00 - FieldWork Completed Date" = Table.ExpandTableColumn(Source, "A08_00 - FieldWork Completed Date", {"MilestoneName", "ActualEndDate"}, {"A08_00 - FieldWork Completed Date.MilestoneName", "A08_00 - FieldWork Completed Date.ActualEndDate"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded A08_00 - FieldWork Completed Date", each ([ProjectPhaseName] = "2. FieldWork")),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"SortOrder", "EstStartDate", "EstEndDate", "ActEndDate", "IsActive", "EstHours", "ActHours", "IsComplete", "DueDate", "RevisedDueDate", "ScheduledEndDate", "ScheduledStartDate", "ReviewDueDate", "Project", "ProjectPhaseName", "ActStartDate"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

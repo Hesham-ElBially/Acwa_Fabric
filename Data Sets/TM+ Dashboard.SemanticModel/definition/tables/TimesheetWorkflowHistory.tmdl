@@ -1,0 +1,107 @@
+table TimesheetWorkflowHistory
+	lineageTag: 908381f5-61f5-494f-84d5-f3eed4b6c075
+
+	column TimesheetWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c171273-fae6-4e0b-b14d-d0abbc9c0a98
+		summarizeBy: count
+		sourceColumn: TimesheetWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimesheetId
+		dataType: int64
+		formatString: 0
+		lineageTag: 32849ab3-b37d-4a61-bd4c-a8156358cec9
+		summarizeBy: none
+		sourceColumn: TimesheetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e94caab7-16d5-46f8-9421-85d27dc52ff3
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: 11b7e4ff-0e3b-47fd-8a31-429d673ec423
+			defaultHierarchy: LocalDateTable_e3bc378b-c1d5-46c8-9f9d-cb5e05dd2021.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: ea71aa67-ad7b-43d7-a504-8088816dd5d5
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: 73206763-380e-4eca-81c0-df40801d274f
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a6c38b0-68c3-4429-9422-c90cb48101c1
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 26e49643-d099-450d-94cb-d39ffc0d2002
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1590a159-ae47-42f7-8177-3a4737707e4c
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: f558ef22-215e-45aa-8ffc-49da11774e35
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: f11bec91-3296-4576-9102-608b57be2789
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TimesheetWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1/timetracking", null, [Implementation="2.0"]),
+				    TimesheetWorkflowHistory_table = Source{[Name="TimesheetWorkflowHistory",Signature="table"]}[Data]
+				in
+				    TimesheetWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

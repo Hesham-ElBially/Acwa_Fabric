@@ -1,0 +1,34 @@
+table 'A06_00 - Issues - Medium'
+	lineageTag: a7f4499d-bb51-400b-bc73-0cbd540e6dbd
+	sourceLineageTag: [sch_TeamMate].[A06_00 - Issues - Medium]
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 24799511-de40-44ae-9ac5-bfe011a76c41
+		sourceLineageTag: Projects.ProjectCode
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medium
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 72ad5f4f-4c4d-4d3b-b343-1aea58c743ec
+		sourceLineageTag: Medium
+		summarizeBy: none
+		sourceColumn: Medium
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A06_00 - Issues - Medium' = entity
+		mode: directLake
+		source
+			entityName: A06_00 - Issues - Medium
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,66 @@
+table Stories
+	lineageTag: 6c3f4038-63c3-4ff3-9b7d-8f08e26a684a
+
+	column StoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5696b182-a975-40e4-b36b-a88a5cd28b34
+		summarizeBy: none
+		sourceColumn: StoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoryTitle
+		dataType: string
+		lineageTag: 37a662b6-0548-4461-8a6c-95b392d17a26
+		summarizeBy: none
+		sourceColumn: StoryTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoryCode
+		dataType: string
+		lineageTag: e489173a-aa0f-462b-96af-c0b09959f981
+		summarizeBy: none
+		sourceColumn: StoryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: f4575f21-adbc-4e66-aeac-90d26a0c28ae
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SprintId
+		dataType: int64
+		formatString: 0
+		lineageTag: 62650222-76e2-4a8f-8432-c1211ee51397
+		summarizeBy: count
+		sourceColumn: SprintId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoryStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e4c9bbf-d607-429f-addf-655d7ef83594
+		summarizeBy: count
+		sourceColumn: StoryStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Stories = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Stories_table = Source{[Name="Stories",Signature="table"]}[Data]
+				in
+				    Stories_table
+
+	annotation PBI_ResultType = Table
+

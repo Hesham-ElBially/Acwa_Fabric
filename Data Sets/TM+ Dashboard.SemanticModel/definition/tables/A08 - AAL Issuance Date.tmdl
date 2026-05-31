@@ -1,0 +1,60 @@
+table 'A08 - AAL Issuance Date'
+	lineageTag: 3f7b7bd5-2d83-4566-953c-0b0dde6c5feb
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: ebc0278d-6341-45a5-bef7-09a2e11572ae
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: f6b9f3c9-ce29-4f48-bc3c-d7d19f0ab5f1
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - AAL Issuance Date.MilestoneName'
+		dataType: string
+		lineageTag: 0e08a746-4ef9-4a2d-b592-19315431bc13
+		summarizeBy: none
+		sourceColumn: A08_00 - AAL Issuance Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - AAL Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e75e2582-e50e-4127-8096-e7b56349c519
+		summarizeBy: none
+		sourceColumn: A08_00 - AAL Issuance Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 6ab2f1d1-0940-4274-a07c-840f4ce7e1dd
+			defaultHierarchy: LocalDateTable_7f16e25e-9dde-4415-ab66-01361e427cf0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'A08 - AAL Issuance Date' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A08_00 - All Phase", {"ProjectPhaseId"}, #"A08_00 - AAL Issuance Date", {"ProjectPhaseId"}, "A08_00 - AAL Issuance Date", JoinKind.LeftOuter),
+				    #"Expanded A08_00 - AAL Issuance Date" = Table.ExpandTableColumn(Source, "A08_00 - AAL Issuance Date", {"MilestoneName", "ActualEndDate"}, {"A08_00 - AAL Issuance Date.MilestoneName", "A08_00 - AAL Issuance Date.ActualEndDate"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded A08_00 - AAL Issuance Date", each ([ProjectPhaseName] = "1. Planning")),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"SortOrder", "EstStartDate", "EstEndDate", "ActEndDate", "IsActive", "EstHours", "ActHours", "IsComplete", "DueDate", "RevisedDueDate", "ScheduledEndDate", "ScheduledStartDate", "ReviewDueDate", "Project", "ProjectPhaseName", "ActStartDate"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

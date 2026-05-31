@@ -1,0 +1,81 @@
+table RiskTexts
+	lineageTag: ed492fde-89c7-427a-b5ff-e99ddb38d11f
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3eb650a6-69f8-4168-a373-2d29213af62e
+		summarizeBy: none
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: 11dac79f-d632-4f2b-9547-7fa607c5e4a4
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: 9c4929ba-cf7b-445b-a246-264e8f857fbe
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: 65d601ea-2c8b-4ecd-a699-c4096c5ccbbf
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text4
+		dataType: string
+		lineageTag: 7ea8bd26-7cc8-453e-80bc-11665d117dc5
+		summarizeBy: none
+		sourceColumn: Text4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text5
+		dataType: string
+		lineageTag: 40559d5b-99e4-4acc-86a0-fc66abb1a0c4
+		summarizeBy: none
+		sourceColumn: Text5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text6
+		dataType: string
+		lineageTag: 9a24fd8f-c750-4fcd-aaa4-fd3e8b5a4ad0
+		summarizeBy: none
+		sourceColumn: Text6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text7
+		dataType: string
+		lineageTag: 356bfae7-4ea9-4728-92db-2c6620c6e1eb
+		summarizeBy: none
+		sourceColumn: Text7
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RiskTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    RiskTexts_table = Source{[Name="RiskTexts",Signature="table"]}[Data]
+				in
+				    RiskTexts_table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

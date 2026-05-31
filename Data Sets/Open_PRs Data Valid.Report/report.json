@@ -1,0 +1,79 @@
+{
+  "config": "{\"version\":\"5.70\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU02\",\"type\":2,\"version\":{\"visual\":\"2.6.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU02",
+            "path": "BaseThemes/CY26SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Latin_HorizontalLogoLockup_RGB34548294102650123.png",
+            "path": "Latin_HorizontalLogoLockup_RGB34548294102650123.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F5FAFE'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "Details",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "d1262fb015da0bd71a04",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"354e21a004d39c488cee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":107.45325121970727,\"y\":13.104055026793569,\"z\":1000,\"width\":129.73014476525634,\"height\":44.55378709109814,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"OPEN PRs\",\"textStyle\":{\"fontFamily\":\"Segoe UI Semibold\",\"fontSize\":\"16pt\",\"color\":\"#9372db\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "height": 44.55,
+          "width": 129.73,
+          "x": 107.45,
+          "y": 13.10,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"466dbf585984b8b30e38\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":9.651525068726272,\"z\":0,\"width\":109.78609765676136,\"height\":51.876947244403716,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"image\":[{\"properties\":{\"sourceFile\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Latin_HorizontalLogoLockup_RGB.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Latin_HorizontalLogoLockup_RGB34548294102650123.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}}}]}}}",
+          "height": 51.88,
+          "width": 109.79,
+          "x": 0.00,
+          "y": 9.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8851fa8104e1ce7568b0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":55.03703111253299,\"z\":2000,\"width\":1280.2661761177317,\"height\":13.104055026793569,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"0.5D\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372db'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "height": 13.10,
+          "width": 1280.27,
+          "x": 0.00,
+          "y": 55.04,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"c22cc7d55abc26260874\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.656082540190354,\"y\":72.07230264736464,\"z\":3000,\"width\":1242.2644165400304,\"height\":635.5466687994881,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"S4_Hana vw_Open_PRs.Purchase Req.\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Requisn Item\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Document Type\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Doc. Category\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Deletion flag for BOMs\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Indicator: Release Required\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Release State\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Release strategy in the purchase requisition\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Purch. Group\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Created by\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Created on\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Requisitioner\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Short Text\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Material\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Plant\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Requirement Tracking Number\"},{\"queryRef\":\"Sum(S4_Hana vw_Open_PRs.Quantity in base unit of measure)\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Base Unit\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Requisition Date of Material Order\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Price unit\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Purchase Requisition Release Date\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Item Category\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Account Assignment Category\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Vendor\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Blocking Indicator\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Blocking Text\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Requirement Urgency\"},{\"queryRef\":\"S4_Hana vw_Open_PRs.Requirement Priority\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Open_PRs\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Req.\"},\"Name\":\"S4_Hana vw_Open_PRs.Purchase Req.\",\"NativeReferenceName\":\"Purchase Req.\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Requisn Item\"},\"Name\":\"S4_Hana vw_Open_PRs.Requisn Item\",\"NativeReferenceName\":\"Requisn Item\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Document Type\"},\"Name\":\"S4_Hana vw_Open_PRs.Document Type\",\"NativeReferenceName\":\"Document Type\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Doc. Category\"},\"Name\":\"S4_Hana vw_Open_PRs.Doc. Category\",\"NativeReferenceName\":\"Doc. Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Deletion flag for BOMs\"},\"Name\":\"S4_Hana vw_Open_PRs.Deletion flag for BOMs\",\"NativeReferenceName\":\"Deletion flag for BOMs\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Indicator: Release Required\"},\"Name\":\"S4_Hana vw_Open_PRs.Indicator: Release Required\",\"NativeReferenceName\":\"Indicator: Release Required\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Release State\"},\"Name\":\"S4_Hana vw_Open_PRs.Release State\",\"NativeReferenceName\":\"Release State\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Release strategy in the purchase requisition\"},\"Name\":\"S4_Hana vw_Open_PRs.Release strategy in the purchase requisition\",\"NativeReferenceName\":\"Release strategy in the purchase requisition\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purch. Group\"},\"Name\":\"S4_Hana vw_Open_PRs.Purch. Group\",\"NativeReferenceName\":\"Purch. Group\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Created by\"},\"Name\":\"S4_Hana vw_Open_PRs.Created by\",\"NativeReferenceName\":\"Created by\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Created on\"},\"Name\":\"S4_Hana vw_Open_PRs.Created on\",\"NativeReferenceName\":\"Created on\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Requisitioner\"},\"Name\":\"S4_Hana vw_Open_PRs.Requisitioner\",\"NativeReferenceName\":\"Requisitioner\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Short Text\"},\"Name\":\"S4_Hana vw_Open_PRs.Short Text\",\"NativeReferenceName\":\"Short Text\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Material\"},\"Name\":\"S4_Hana vw_Open_PRs.Material\",\"NativeReferenceName\":\"Material\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Plant\"},\"Name\":\"S4_Hana vw_Open_PRs.Plant\",\"NativeReferenceName\":\"Plant\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Requirement Tracking Number\"},\"Name\":\"S4_Hana vw_Open_PRs.Requirement Tracking Number\",\"NativeReferenceName\":\"Requirement Tracking Number\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity in base unit of measure\"}},\"Function\":0},\"Name\":\"Sum(S4_Hana vw_Open_PRs.Quantity in base unit of measure)\",\"NativeReferenceName\":\"Quantity in base unit of measure\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Base Unit\"},\"Name\":\"S4_Hana vw_Open_PRs.Base Unit\",\"NativeReferenceName\":\"Base Unit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Purchase Requisition Release Date\"},\"Name\":\"S4_Hana vw_Open_PRs.Purchase Requisition Release Date\",\"NativeReferenceName\":\"Purchase Requisition Release Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Price unit\"},\"Name\":\"S4_Hana vw_Open_PRs.Price unit\",\"NativeReferenceName\":\"Price unit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Requisition Date of Material Order\"},\"Name\":\"S4_Hana vw_Open_PRs.Requisition Date of Material Order\",\"NativeReferenceName\":\"Requisition Date of Material Order\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Item Category\"},\"Name\":\"S4_Hana vw_Open_PRs.Item Category\",\"NativeReferenceName\":\"Item Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Account Assignment Category\"},\"Name\":\"S4_Hana vw_Open_PRs.Account Assignment Category\",\"NativeReferenceName\":\"Account Assignment Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Vendor\"},\"Name\":\"S4_Hana vw_Open_PRs.Vendor\",\"NativeReferenceName\":\"Vendor\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Blocking Indicator\"},\"Name\":\"S4_Hana vw_Open_PRs.Blocking Indicator\",\"NativeReferenceName\":\"Blocking Indicator\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Blocking Text\"},\"Name\":\"S4_Hana vw_Open_PRs.Blocking Text\",\"NativeReferenceName\":\"Blocking Text\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Requirement Urgency\"},\"Name\":\"S4_Hana vw_Open_PRs.Requirement Urgency\",\"NativeReferenceName\":\"Requirement Urgency\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Requirement Priority\"},\"Name\":\"S4_Hana vw_Open_PRs.Requirement Priority\",\"NativeReferenceName\":\"Requirement Priority\"}]},\"columnProperties\":{\"List_of_all_PR_PO.Purchase Req.\":{\"displayName\":\"Purchase_Requisition\"},\"List_of_all_PR_PO.Indicator: Release Required\":{\"displayName\":\"Release_indicator\"},\"List_of_all_PR_PO.Vendor\":{\"displayName\":\"supplier\"},\"List_of_all_PR_PO.Agreement\":{\"displayName\":\"Outline_agreement\"},\"List_of_all_PR_PO.Short Text\":{\"displayName\":\"Short_Text\"},\"Sum(List_of_all_PR_PO.Quantity in base unit of measure)\":{\"displayName\":\"Order_Quantity\"},\"List_of_all_PR_PO.Base Unit\":{\"displayName\":\"Order_Unit\"},\"Sum(List_of_all_PR_PO.Net Price SAR)\":{\"displayName\":\"Net_Order_Price_SAR\"},\"Sum(List_of_all_PR_PO.Net Value SAR)\":{\"displayName\":\"Net_Order_Value_SAR\"},\"Sum(List_of_all_PR_PO.Gross Value SAR)\":{\"displayName\":\"Gross_order_value_SAR\"},\"List_of_all_PR_PO.Deliv. Compl.\":{\"displayName\":\"Delivery_Completed\"},\"List_of_all_PR_PO.PR_Created_by\":{\"displayName\":\"Created_by\"},\"List_of_all_PR_PO.Requisition Date of Material Order\":{\"displayName\":\"Requisition_date\"},\"List_of_all_PR_PO.Purchase Requisition Release Date\":{\"displayName\":\"Release_Date\"},\"List_of_all_PR_PO.PR_Created_On\":{\"displayName\":\"Created_On\"},\"List_of_all_PR_PO.Plant_Purchasing_Org\":{\"displayName\":\"Purch__Organization\"},\"List_of_all_PR_PO.Purch. Group\":{\"displayName\":\"Purchasing_Group\"},\"Sum(List_of_all_PR_PO.Net price)\":{\"displayName\":\"Net Order price\"},\"Sum(List_of_all_PR_PO.Net value)\":{\"displayName\":\"Net Order Value\"},\"Sum(List_of_all_PR_PO.Gross Price)\":{\"displayName\":\"Gross Order Price\"},\"Sum(S4_Hana vw_Open_PRs.Quantity in base unit of measure)\":{\"displayName\":\"Quantity in base unit of measure\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9372DB'\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"total\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 635.55,
+          "width": 1242.26,
+          "x": 19.66,
+          "y": 72.07,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

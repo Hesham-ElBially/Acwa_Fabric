@@ -1,0 +1,51 @@
+table TeamApprovers
+	lineageTag: 9cd95d4d-e72f-4d80-ba67-29474b84cf19
+
+	column ApproverAssignmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 810cf3d2-4b8b-4d8c-8619-b5392bb66215
+		summarizeBy: count
+		sourceColumn: ApproverAssignmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TeamId
+		dataType: int64
+		formatString: 0
+		lineageTag: f8e43f08-4f74-44a8-9571-13ec25fb3fab
+		summarizeBy: none
+		sourceColumn: TeamId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApproverUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0758d8b3-cebc-4beb-91a1-c163535f82f0
+		summarizeBy: count
+		sourceColumn: ApproverUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApproverName
+		dataType: string
+		lineageTag: 6f7431cc-730f-4143-96ce-40741efe09ea
+		summarizeBy: none
+		sourceColumn: ApproverName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TeamApprovers = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1/timetracking", null, [Implementation="2.0"]),
+				    TeamApprovers_table = Source{[Name="TeamApprovers",Signature="table"]}[Data]
+				in
+				    TeamApprovers_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

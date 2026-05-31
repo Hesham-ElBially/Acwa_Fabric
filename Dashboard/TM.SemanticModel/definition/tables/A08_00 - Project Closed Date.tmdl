@@ -1,0 +1,120 @@
+table 'A08_00 - Project Closed Date'
+	lineageTag: 85da0287-42c9-4c53-820d-0ddb69ac38ec
+	sourceLineageTag: [sch_TeamMate].[A08_00 - Project Closed Date]
+
+	column ProjectPhaseMilestoneId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 573e6b4d-f60c-4c32-b392-e065f5f12e53
+		sourceLineageTag: ProjectPhaseMilestoneId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseMilestoneId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9b27c926-e80c-4b74-992e-d746f941670e
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilestoneName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fae0fe05-6536-4eac-a8a6-ca636c675fc1
+		sourceLineageTag: MilestoneName
+		summarizeBy: none
+		sourceColumn: MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhaseName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a6bd1530-eba2-4872-9ddc-c0194755fe8a
+		sourceLineageTag: PhaseName
+		summarizeBy: none
+		sourceColumn: PhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: c1596634-324f-4269-a489-082972532614
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 0bb452f4-a6ff-400d-b402-f3a6e6e75066
+		sourceLineageTag: RevisedDueDate
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ba186855-6560-4ecc-9c75-0f70a62fde4a
+		sourceLineageTag: EstimatedEndDate
+		summarizeBy: none
+		sourceColumn: EstimatedEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 8aac2132-365f-4c1d-b152-26a555998810
+		sourceLineageTag: ActualEndDate
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c22d14d4-c924-4efb-bd1a-b96ba194b199
+		sourceLineageTag: SortOrder
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7230a78a-832e-47fe-959f-3e736de902bc
+		sourceLineageTag: Comment
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08_00 - Project Closed Date' = entity
+		mode: directLake
+		source
+			entityName: A08_00 - Project Closed Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Param check out"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "28c8448e-8aba-9202-4810-01e51df2ed7d"
+  }
+}

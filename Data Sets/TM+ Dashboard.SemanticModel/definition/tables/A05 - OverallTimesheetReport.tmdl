@@ -1,0 +1,139 @@
+table 'A05 - OverallTimesheetReport'
+	lineageTag: e8e7135f-b320-439c-bda4-81275f666c0e
+
+	column cPK = CONCATENATE('A05 - OverallTimesheetReport'[Year], 'A05 - OverallTimesheetReport'[TimeEntryUserId])
+		lineageTag: 797b68b3-8785-4518-9aa9-d094c21e00b8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Admin Hrs (Non - Chargeable)' = RELATED(A05_00_01[Total Admin Hrs (Non - Chargeable)])
+		lineageTag: 889d4df5-ff54-4df7-986f-9a50808f0302
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Year
+		formatString: 0
+		lineageTag: 6f426925-0579-4040-9d33-9e01b8762a78
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: LocalDateTable_d4d2845e-d92d-4f72-9d74-d44bc49e9589[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		formatString: 0
+		lineageTag: 83a21902-8330-4f46-9a9d-08f3b99ce42f
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUserId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		lineageTag: 320717ca-215b-4cdb-b1b4-f92c718c1ef6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUser]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Admin Hrs (Chargeable)' = RELATED(A05_01_01[Total Admin Hrs (Chargeable)])
+		lineageTag: 5df478f7-adb2-43f3-ab09-762602ba4ba7
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Project Hrs' = RELATED(A05_02_01[Total Project Hrs])
+		lineageTag: 3291f158-4046-4df1-9a64-514c30ce2f9f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Non Working Hrs' = RELATED(A05_03_01[Total Non Working Hrs])
+		lineageTag: b1ba4d4a-44cc-42be-89ec-3fc775aee186
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Hrs' = ```
+			'A05 - OverallTimesheetReport'[Total Project Hrs]+'A05 - OverallTimesheetReport'[Total Non Working Hrs]+'A05 - OverallTimesheetReport'[Total Admin Hrs (Chargeable)]+ 'A05 - OverallTimesheetReport'[Total Admin Hrs (Non - Chargeable)] 
+			```
+		lineageTag: 4012d347-8ae0-4f49-9149-e557851fa0e1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Available Hrs' = 'A05 - OverallTimesheetReport'[Total Project Hrs]+'A05 - OverallTimesheetReport'[Total Admin Hrs (Chargeable)]+'A05 - OverallTimesheetReport'[Total Admin Hrs (Non - Chargeable)]
+		lineageTag: 5d1290ba-c045-4b49-8099-bbaf9fbc63ce
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Chargeable Hrs' = 'A05 - OverallTimesheetReport'[Total Project Hrs]+ 'A05 - OverallTimesheetReport'[Total Admin Hrs (Chargeable)]
+		lineageTag: 73c5bf69-04ba-4f5a-b569-dd064dea0cc7
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Utilization = ```
+			'A05 - OverallTimesheetReport'[Total Chargeable Hrs]/'A05 - OverallTimesheetReport'[Total Available Hrs] 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c15958cd-2f0b-4cf8-8083-e9d2d3fe696f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeType =
+			SWITCH(TRUE,
+									('A05 - OverallTimesheetReport'[TimeEntryUserId] = 939) || ('A05 - OverallTimesheetReport'[TimeEntryUserId] = 981) || ('A05 - OverallTimesheetReport'[TimeEntryUserId] = 16) || ('A05 - OverallTimesheetReport'[TimeEntryUserId] = 19) || ('A05 - OverallTimesheetReport'[TimeEntryUserId] = 10) || ('A05 - OverallTimesheetReport'[TimeEntryUserId] = 15), "Portfolio Lead",
+									"Lead Auditor"
+			)
+		lineageTag: 6aa01ed4-5307-4452-91a3-f917624696d0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Target =
+			SWITCH(TRUE,
+									('A05 - OverallTimesheetReport'[EmployeeType] = "Portfolio Lead") && ('A05 - OverallTimesheetReport'[Utilization] < 0.75), "Under Utilization",
+			                        ('A05 - OverallTimesheetReport'[EmployeeType] = "Portfolio Lead") && ('A05 - OverallTimesheetReport'[Utilization] = 0.75), "At Par Utilization",
+			                        ('A05 - OverallTimesheetReport'[EmployeeType] = "Portfolio Lead") && ('A05 - OverallTimesheetReport'[Utilization] > 0.75), "Over Utilization",
+			                        ('A05 - OverallTimesheetReport'[EmployeeType] = "Lead Auditor") && ('A05 - OverallTimesheetReport'[Utilization] < 0.80), "Under Utilization",
+			                        ('A05 - OverallTimesheetReport'[EmployeeType] = "Lead Auditor") && ('A05 - OverallTimesheetReport'[Utilization] = 0.80), "At Par Utilization",
+			                        ('A05 - OverallTimesheetReport'[EmployeeType] = "Lead Auditor") && ('A05 - OverallTimesheetReport'[Utilization] > 0.80), "Over Utilization",
+									"Default"
+			)
+		lineageTag: 2fd19acd-9751-44f0-ab57-90946b7e8122
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column cTarget = SELECTEDVALUE('A05 - OverallTimesheetReport'[Target])
+		lineageTag: 8306bd75-6cd7-4805-83ec-e5feeaf4a5b9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A05 - OverallTimesheetReport' = calculated
+		mode: import
+		source = SUMMARIZE('A05 - Timesheet', 'A05 - Timesheet'[DateOfEntry].[Year], 'A05 - Timesheet'[TimeEntryUserId], 'A05 - Timesheet'[TimeEntryUser])
+
+	annotation PBI_Id = 4b4daac5915b418e9ec064aa4384fbb9
+

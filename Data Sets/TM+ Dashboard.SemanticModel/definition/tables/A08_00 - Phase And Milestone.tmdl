@@ -1,0 +1,282 @@
+table 'A08_00 - Phase And Milestone'
+	lineageTag: acc6318b-712e-4cd6-9309-f19a5eb9723f
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: 026c77e5-253a-499d-82c0-8214be12e419
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: 322798b9-9e60-4f9d-9087-f7382ca00d2a
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		lineageTag: 07425923-c4ad-43b0-9f71-daf23d0ee260
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b09ba74-30d4-403b-9128-1186b36b0955
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c9194b6e-f666-4f75-b15f-f00fe263049a
+		summarizeBy: none
+		sourceColumn: EstStartDate
+
+		variation Variation
+			isDefault
+			relationship: 6a48f333-fb3b-4d4b-8e6f-e6af7c8d2889
+			defaultHierarchy: LocalDateTable_29ccdc29-2e38-45aa-b70d-1748c5c201e1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 01a19077-9d30-4464-9794-6a74618763a7
+		summarizeBy: none
+		sourceColumn: EstEndDate
+
+		variation Variation
+			isDefault
+			relationship: 2939fcb4-a4ad-4565-b05c-8b7a5f3540db
+			defaultHierarchy: LocalDateTable_74c19e8e-ffc9-432b-ae52-01e80ce0d8b1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9abccf56-445d-493c-90b2-381f001f030e
+		summarizeBy: none
+		sourceColumn: ActStartDate
+
+		variation Variation
+			isDefault
+			relationship: aaa5c763-b0ed-41b8-af6c-0419c5ae0824
+			defaultHierarchy: LocalDateTable_fe1284bf-611e-45be-b1bb-535263b5b111.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 237311fd-25bd-4e39-b875-9031b30452f8
+		summarizeBy: none
+		sourceColumn: ActEndDate
+
+		variation Variation
+			isDefault
+			relationship: 208c92c1-51bb-420e-a931-3b29ce0f64bf
+			defaultHierarchy: LocalDateTable_57966ae9-acc3-4ede-8e34-eafb87e722fa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ef48a932-f1e4-4748-b0cb-d8f9cce0dca2
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstHours
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c3917c4-f9b4-4287-a772-402c2d21a3e4
+		summarizeBy: sum
+		sourceColumn: EstHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActHours
+		dataType: double
+		lineageTag: b9c8a713-bcd6-4bee-829c-d8cd310fd8dc
+		summarizeBy: sum
+		sourceColumn: ActHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsComplete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 776798d0-811f-4804-bac4-6bb3d5b21e95
+		summarizeBy: none
+		sourceColumn: IsComplete
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a9cbf423-4d6c-4334-b2e5-a2cc191b797c
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: a1d8643f-c0df-464a-b783-03c0eb764837
+			defaultHierarchy: LocalDateTable_ce0414e5-bafd-4116-a0a9-de09beb91bd6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1f9cabbe-11b4-4531-ad5a-baf6d7511815
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: 96d2ab73-d5be-493c-a080-af1b8224f53f
+			defaultHierarchy: LocalDateTable_a2ef09dc-aae8-418e-b843-e69d18fb80b8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ReviewDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ea5fa7f6-bbdd-467d-820c-b009c7d614af
+		summarizeBy: none
+		sourceColumn: ReviewDueDate
+
+		variation Variation
+			isDefault
+			relationship: 012f083e-4c4e-4d65-b437-e19d88809266
+			defaultHierarchy: LocalDateTable_076738ae-15ac-4bc2-8966-f951af508f06.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ScheduledStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a77297ed-a4ea-4a00-b622-2611eb482983
+		summarizeBy: none
+		sourceColumn: ScheduledStartDate
+
+		variation Variation
+			isDefault
+			relationship: 0528b3b6-e941-4f78-87a2-da2d02966fbf
+			defaultHierarchy: LocalDateTable_9832f3a6-65ef-44f8-a13b-0daa78b41bb0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ScheduledEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fe072ca7-b757-467a-ad57-90f5303fca73
+		summarizeBy: none
+		sourceColumn: ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: 2df055df-e835-48bf-b242-e428417cf59b
+			defaultHierarchy: LocalDateTable_323e924a-9b25-4d9f-af3b-110ceab0050d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08_00 - Final Report Issuance Date.MilestoneName'
+		dataType: string
+		lineageTag: 31b931af-eeef-4c45-9156-c159b4110388
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Final Report Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c7e881b8-49c5-48ff-ab9e-6ec5ecbe8579
+		summarizeBy: none
+		sourceColumn: A08_00 - Final Report Issuance Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: d677dd15-5244-4e14-8ebf-f9c04854cb6c
+			defaultHierarchy: LocalDateTable_c6c98843-2b04-4f92-985d-aa6cf46e40d9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'A08_00 - TeamMate Updated Date.MilestoneName'
+		dataType: string
+		lineageTag: 5b3230cd-10ba-4499-94ed-c319791e11f1
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - TeamMate Updated Date.ActualEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 66dbab2a-4668-4a2f-ad1e-609252440864
+		summarizeBy: none
+		sourceColumn: A08_00 - TeamMate Updated Date.ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 528ea9c6-78f4-4369-aec4-0b8dbdd16113
+			defaultHierarchy: LocalDateTable_4e7d76f9-2b92-4011-95bb-7f5cd7a621c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'A08_00 - Phase And Milestone' = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(#"A08_00 - All Phase", {"ProjectPhaseId"}, #"A08_00 - Final Report Issuance Date", {"ProjectPhaseId"}, "A08_00 - Final Report Issuance Date", JoinKind.LeftOuter),
+				    #"Expanded A08_00 - Final Report Issuance Date" = Table.ExpandTableColumn(Source, "A08_00 - Final Report Issuance Date", {"MilestoneName", "ActualEndDate"}, {"A08_00 - Final Report Issuance Date.MilestoneName", "A08_00 - Final Report Issuance Date.ActualEndDate"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Expanded A08_00 - Final Report Issuance Date", {"ProjectPhaseId"}, #"A08_00 - TeamMate Updated Date", {"ProjectPhaseId"}, "A08_00 - TeamMate Updated Date", JoinKind.LeftOuter),
+				    #"Expanded A08_00 - TeamMate Updated Date" = Table.ExpandTableColumn(#"Merged Queries", "A08_00 - TeamMate Updated Date", {"MilestoneName", "ActualEndDate"}, {"A08_00 - TeamMate Updated Date.MilestoneName", "A08_00 - TeamMate Updated Date.ActualEndDate"})
+				in
+				    #"Expanded A08_00 - TeamMate Updated Date"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

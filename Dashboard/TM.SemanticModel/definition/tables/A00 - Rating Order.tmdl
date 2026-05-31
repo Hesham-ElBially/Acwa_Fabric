@@ -1,0 +1,34 @@
+table 'A00 - Rating Order'
+	lineageTag: ebe2d1d7-2997-48c9-a3b0-4498a77a09bf
+	sourceLineageTag: [sch_TeamMate].[A00 - Rating Order]
+
+	column Rating
+		dataType: string
+		sourceProviderType: varchar(11)
+		lineageTag: 73e6322b-724c-4e19-b434-76ad254a0afb
+		sourceLineageTag: Rating
+		summarizeBy: none
+		sourceColumn: Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: abc27c8b-6097-4a12-8ac3-f4cb98889f0e
+		sourceLineageTag: Order
+		summarizeBy: sum
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A00 - Rating Order' = entity
+		mode: directLake
+		source
+			entityName: A00 - Rating Order
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

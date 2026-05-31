@@ -1,0 +1,119 @@
+table A02_01
+	lineageTag: 34946c1e-8fca-44ad-97cc-c66f8e19aadd
+	sourceLineageTag: [sch_TeamMate].[A02_01]
+
+	measure A02_01OverduePercentage = SUM('A02_01'[No. of Overdue Observations]) / CALCULATE(SUM('A02_01'[No. of Open Observations]), ALLSELECTED('A02_01'[Issues.Category2]))
+		lineageTag: 133ece50-b5bb-4811-b638-6f169be01e00
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure A02_01_KPI_B_Status = ```
+			SWITCH( 
+			                        TRUE,
+			                        (SELECTEDVALUE(A02_01[Issues.Category2]) = "High") && ('A02_01'[A02_01OverduePercentage] >=0.05), "01. KPI B Breach",
+			                        (SELECTEDVALUE(A02_01[Issues.Category2]) = "Significant") && ('A02_01'[A02_01OverduePercentage] >=0.1), "01. KPI B Breach",
+			                        (SELECTEDVALUE(A02_01[Issues.Category2]) = "Medium") && ('A02_01'[A02_01OverduePercentage] >=0.1), "01. KPI B Breach",
+			                        "02. KPI B Non Breach"
+			)
+			```
+		lineageTag: f690d5a9-b540-438d-b91b-e7e355efd80d
+
+		changedProperty = Name
+
+	column 'Recommendations.Category1'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b2520881-f7ca-4347-a825-fb57cd09a413
+		sourceLineageTag: Recommendations.Category1
+		summarizeBy: none
+		sourceColumn: Recommendations.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issues.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 64d9ff97-f061-4e7c-8891-621c33f26f85
+		sourceLineageTag: Issues.Category2
+		summarizeBy: none
+		sourceColumn: Issues.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Overdue Observations'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e45a0651-28b1-4af6-b835-c0c14d5053d6
+		sourceLineageTag: No. of Overdue Observations
+		summarizeBy: sum
+		sourceColumn: No. of Overdue Observations
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Non Overdue Observations'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 281a4005-681e-406d-a341-1757678cf136
+		sourceLineageTag: No. of Non Overdue Observations
+		summarizeBy: sum
+		sourceColumn: No. of Non Overdue Observations
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Open Observations'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4f2ffb10-0f0f-4a7d-8543-beb8e6afc33b
+		sourceLineageTag: No. of Open Observations
+		summarizeBy: sum
+		sourceColumn: No. of Open Observations
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Percentage of Overdue Observations'
+		dataType: double
+		sourceProviderType: decimal(21, 15)
+		lineageTag: 976b2dce-0360-48fd-bf87-5631040e504b
+		sourceLineageTag: Percentage of Overdue Observations
+		summarizeBy: sum
+		sourceColumn: Percentage of Overdue Observations
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI B Status'
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: 106a820e-cb2c-48cb-8d25-ac152cf45f26
+		sourceLineageTag: KPI B Status
+		summarizeBy: none
+		sourceColumn: KPI B Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 15a2d0ee-3a0f-452e-94fb-325dfc0bf2a1
+		sourceLineageTag: Rating Order
+		summarizeBy: sum
+		sourceColumn: Rating Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A02_01 = entity
+		mode: directLake
+		source
+			entityName: A02_01
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

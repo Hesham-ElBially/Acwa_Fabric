@@ -1,0 +1,123 @@
+table CoachingNoteWorkflowHistory
+	lineageTag: 5de2e1e9-f56c-454d-b835-7495bde83099
+
+	column CoachingNoteWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: a5b12194-c0e8-4b83-909b-517a407edbda
+		summarizeBy: count
+		sourceColumn: CoachingNoteWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoachingNoteId
+		dataType: int64
+		formatString: 0
+		lineageTag: 579ab17e-d5f0-43d0-ab27-680ba8d69f4d
+		summarizeBy: none
+		sourceColumn: CoachingNoteId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoachingNoteTitle
+		dataType: string
+		lineageTag: cc3178a4-5a09-48c1-a1e4-5366b2b98d14
+		summarizeBy: none
+		sourceColumn: CoachingNoteTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column CoachingNoteCode
+		dataType: string
+		lineageTag: 5fa02f5c-3a76-4863-8c06-09846bcc8f9c
+		summarizeBy: none
+		sourceColumn: CoachingNoteCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f5b0db3e-da3b-41f3-9409-8d431d52fc13
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: f33f0d99-c3cf-43f7-ac04-628bfd1d78a7
+			defaultHierarchy: LocalDateTable_ef27a200-ecc2-4bf1-86ac-7c299975faaf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9fb30f82-0765-4027-b3cf-242f810e33f6
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: d7225f89-6ef8-424d-bc55-7923cd1ba085
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: d69dc8ea-d092-405b-93ef-1ffcbfe88a3b
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: f2c77074-713f-4774-92cd-cf67b826612a
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 62330b00-b98b-440d-9e3a-1ee6cfc0680a
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: d6f9cd64-4a66-4c46-9697-05ef88c7970b
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: fde271ec-30f4-41e7-9275-0eb971b408b6
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CoachingNoteWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    CoachingNoteWorkflowHistory_table = Source{[Name="CoachingNoteWorkflowHistory",Signature="table"]}[Data]
+				in
+				    CoachingNoteWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

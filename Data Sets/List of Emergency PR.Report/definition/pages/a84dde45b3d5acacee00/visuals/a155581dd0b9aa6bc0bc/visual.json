@@ -1,0 +1,318 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "a155581dd0b9aa6bc0bc",
+  "position": {
+    "x": 0,
+    "y": 78.222645779974982,
+    "z": 3000,
+    "height": 640.8767645482161,
+    "width": 1279.0088748585383,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RepeatedEmergencyMaterial"
+                    }
+                  },
+                  "Property": "Plant Code : Plant Name"
+                }
+              },
+              "queryRef": "RepeatedEmergencyMaterial.Plant Code : Plant Name",
+              "nativeQueryRef": "Plant Code : Plant Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RepeatedEmergencyMaterial"
+                    }
+                  },
+                  "Property": "Company Code : Company Name"
+                }
+              },
+              "queryRef": "RepeatedEmergencyMaterial.Company Code : Company Name",
+              "nativeQueryRef": "Company Code : Company Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RepeatedEmergencyMaterial"
+                    }
+                  },
+                  "Property": "Material : Short Text"
+                }
+              },
+              "queryRef": "RepeatedEmergencyMaterial.Material : Short Text",
+              "nativeQueryRef": "Material Description",
+              "displayName": "Material Description"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "RepeatedEmergencyMaterial"
+                        }
+                      },
+                      "Property": "OrderCount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(RepeatedEmergencyMaterial.OrderCount)",
+              "nativeQueryRef": "No. of PRs1",
+              "displayName": "No. of PRs"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "RepeatedEmergencyMaterial"
+                      }
+                    },
+                    "Property": "OrderCount"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9372DB'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "75.53212152412982D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(RepeatedEmergencyMaterial.OrderCount)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "466.54186442791695D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "RepeatedEmergencyMaterial.Material : Short Text"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "377.2817990100564D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "RepeatedEmergencyMaterial.Plant Code : Plant Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "336.77611364318255D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "RepeatedEmergencyMaterial.Company Code : Company Name"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

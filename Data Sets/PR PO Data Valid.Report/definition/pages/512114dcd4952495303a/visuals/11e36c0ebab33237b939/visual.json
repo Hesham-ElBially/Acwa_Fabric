@@ -1,0 +1,765 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "11e36c0ebab33237b939",
+  "position": {
+    "x": 19.303050137452544,
+    "y": 155.63084173321116,
+    "z": 9000,
+    "height": 550.13692891739754,
+    "width": 1243.8402932320985,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Plant"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Plant",
+              "nativeQueryRef": "Plant"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Plant_Name"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Plant_Name",
+              "nativeQueryRef": "Plant_Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Company Code"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Company Code",
+              "nativeQueryRef": "Company Code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Company_Name"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Company_Name",
+              "nativeQueryRef": "Company_Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Purchase Req."
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Purchase Req.",
+              "nativeQueryRef": "Purchase_Requisition",
+              "displayName": "Purchase_Requisition"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Purchasing Doc."
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Purchasing Doc.",
+              "nativeQueryRef": "Purchasing Doc."
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Document_Date"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Document_Date",
+              "nativeQueryRef": "Document_Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "PO_Release_Indicator"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.PO_Release_Indicator",
+              "nativeQueryRef": "PO_Release_Indicator"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Vendor"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Vendor",
+              "nativeQueryRef": "supplier",
+              "displayName": "supplier"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Name",
+              "nativeQueryRef": "Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Supplier_Account_Group"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Supplier_Account_Group",
+              "nativeQueryRef": "Supplier_Account_Group"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Agreement"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Agreement",
+              "nativeQueryRef": "Outline_agreement",
+              "displayName": "Outline_agreement"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Material"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Material",
+              "nativeQueryRef": "Material"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Short Text"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Short Text",
+              "nativeQueryRef": "Short_Text",
+              "displayName": "Short_Text"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Material Group"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Material Group",
+              "nativeQueryRef": "Material Group"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "List_of_all_PR_PO"
+                        }
+                      },
+                      "Property": "Quantity in base unit of measure"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Quantity in base unit of measure)",
+              "nativeQueryRef": "Order_Quantity",
+              "displayName": "Order_Quantity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Base Unit"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Base Unit",
+              "nativeQueryRef": "Order_Unit",
+              "displayName": "Order_Unit"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Price Unit"
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Price Unit)",
+              "nativeQueryRef": "Price Unit"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Currency"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Currency",
+              "nativeQueryRef": "Currency"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "List_of_all_PR_PO"
+                        }
+                      },
+                      "Property": "Net price"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Net price)",
+              "nativeQueryRef": "Net Order Price",
+              "displayName": "Net Order Price"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "List_of_all_PR_PO"
+                        }
+                      },
+                      "Property": "Net value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Net value)",
+              "nativeQueryRef": "Net Order Value",
+              "displayName": "Net Order Value"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "List_of_all_PR_PO"
+                        }
+                      },
+                      "Property": "Gross Price"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Gross Price)",
+              "nativeQueryRef": "Gross Order Price",
+              "displayName": "Gross Order Price"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "List_of_all_PR_PO"
+                        }
+                      },
+                      "Property": "Net Price SAR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Net Price SAR)",
+              "nativeQueryRef": "Net_Order_Price_SAR",
+              "displayName": "Net_Order_Price_SAR"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "List_of_all_PR_PO"
+                        }
+                      },
+                      "Property": "Net Value SAR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Net Value SAR)",
+              "nativeQueryRef": "Net_Order_Value_SAR",
+              "displayName": "Net_Order_Value_SAR"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "List_of_all_PR_PO"
+                        }
+                      },
+                      "Property": "Gross Value SAR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(List_of_all_PR_PO.Gross Value SAR)",
+              "nativeQueryRef": "Gross_order_price_SAR",
+              "displayName": "Gross_order_price_SAR"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Deliv. Compl."
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Deliv. Compl.",
+              "nativeQueryRef": "Delivery_Completed",
+              "displayName": "Delivery_Completed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Final Invoice"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Final Invoice",
+              "nativeQueryRef": "Final Invoice"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "PR_Created_by"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.PR_Created_by",
+              "nativeQueryRef": "Created_by",
+              "displayName": "Created_by"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Changed_on"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Changed_on",
+              "nativeQueryRef": "Changed_on"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Requisition Date of Material Order"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Requisition Date of Material Order",
+              "nativeQueryRef": "Requisition_date",
+              "displayName": "Requisition_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Purchase Requisition Release Date"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Purchase Requisition Release Date",
+              "nativeQueryRef": "Release_Date",
+              "displayName": "Release_Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Requirement Urgency"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Requirement Urgency",
+              "nativeQueryRef": "Requirement Urgency"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Requirement Priority"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Requirement Priority",
+              "nativeQueryRef": "Requirement Priority"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "PR_Created_On"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.PR_Created_On",
+              "nativeQueryRef": "Created_On",
+              "displayName": "Created_On"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Requisitioner"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Requisitioner",
+              "nativeQueryRef": "Requisitioner"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Created by"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Created by",
+              "nativeQueryRef": "Created by"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Plant_Purchasing_Org"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Plant_Purchasing_Org",
+              "nativeQueryRef": "Purch__Organization",
+              "displayName": "Purch__Organization"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Purch. Group"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Purch. Group",
+              "nativeQueryRef": "Purchasing_Group",
+              "displayName": "Purchasing_Group"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Blocking Indicator"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Blocking Indicator",
+              "nativeQueryRef": "Blocking Indicator"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "List_of_all_PR_PO"
+                    }
+                  },
+                  "Property": "Blocking Text"
+                }
+              },
+              "queryRef": "List_of_all_PR_PO.Blocking Text",
+              "nativeQueryRef": "Blocking Text"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9372DB'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "178.329976527599D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "List_of_all_PR_PO.Company_Name"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

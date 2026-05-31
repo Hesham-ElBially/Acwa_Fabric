@@ -1,0 +1,43 @@
+table 'A06_00 - Issues - Low'
+	lineageTag: de7d7f52-59c3-4cca-b057-c29400c48a50
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		lineageTag: 890fb394-f24f-403b-afd5-4787bb87c6c0
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Low
+		dataType: int64
+		formatString: 0
+		lineageTag: 5862d626-f8c8-4f4c-a813-829dc05ad76f
+		summarizeBy: sum
+		sourceColumn: Low
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A06_00 - Issues - Low' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(ObjectRelationships_table, each ([AssessmentId] = 14 or [AssessmentId] = 25)),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"DimensionId", "EntityId", "AssessmentId", "StrategicRiskId", "RiskId", "ControlId", "ProcedureId", "FolderId"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns",{"ObjectiveId", "ObjectRelationshipId", "ProjectId", "IssueId", "RecommendationId", "Dimension", "Entity", "Assessment", "Project", "StrategicRisk", "Risk", "Control", "Objective", "Procedure", "Issue", "Recommendation", "Folder"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Reordered Columns", {"ProjectId"}, Projects, {"ProjectId"}, "Projects", JoinKind.LeftOuter),
+				    #"Expanded Projects" = Table.ExpandTableColumn(#"Merged Queries1", "Projects", {"ProjectTitle", "ProjectCode", "Category1", "Category11"}, {"Projects.ProjectTitle", "Projects.ProjectCode", "Projects.Category1", "Projects.Category11"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded Projects", {"IssueId"}, Issues, {"IssueId"}, "Issues", JoinKind.LeftOuter),
+				    #"Expanded Issues" = Table.ExpandTableColumn(#"Merged Queries2", "Issues", {"IssueTitle", "ReleaseDate", "IsReleased", "Category2"}, {"Issues.IssueTitle", "Issues.ReleaseDate", "Issues.IsReleased", "Issues.Category2"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Expanded Issues", each ([Issues.Category2] = "Low") and ([Issues.IsReleased] = true)),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Filtered Rows1",{"Projects.ProjectCode", "Issues.IssueTitle", "Issues.Category2"}),
+				    #"Grouped Rows" = Table.Group(#"Removed Other Columns", {"Projects.ProjectCode"}, {{"Low", each Table.RowCount(Table.Distinct(_)), Int64.Type}})
+				in
+				    #"Grouped Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

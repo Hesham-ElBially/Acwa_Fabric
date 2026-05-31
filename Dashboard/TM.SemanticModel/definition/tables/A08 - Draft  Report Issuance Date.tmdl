@@ -1,0 +1,56 @@
+table 'A08 - Draft  Report Issuance Date'
+	lineageTag: 845382ed-9533-4c9d-8925-aea88e4802f6
+	sourceLineageTag: [sch_TeamMate].[A08 - Draft  Report Issuance Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6a7c7f85-47ac-4df8-afd6-ea51cb77606f
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: efe1461d-7fe1-4e98-af0c-24a2e5a3111d
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Draft Report Issuance Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 814f77f5-ce44-4be4-a127-6fd689a4d44e
+		sourceLineageTag: A08_00 - Draft Report Issuance Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - Draft Report Issuance Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - Draft Report Issuance Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: b8e6bbf2-f106-43c7-a12f-98dc05d6eb14
+		sourceLineageTag: A08_00 - Draft Report Issuance Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - Draft Report Issuance Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Draft  Report Issuance Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - Draft  Report Issuance Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

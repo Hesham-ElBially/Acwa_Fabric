@@ -1,0 +1,132 @@
+table DimensionAssignments
+	lineageTag: 4543f810-3136-484d-9f04-e939f97e7a32
+
+	column DimensionAssignmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d4070df-32b1-431f-8608-4d1578543eaf
+		summarizeBy: count
+		sourceColumn: DimensionAssignmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		lineageTag: c24898ca-be1f-4b43-b4b2-286c4c21aea7
+		summarizeBy: count
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: fa974d1c-7f38-43f2-811a-1df9509f4456
+		summarizeBy: count
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		lineageTag: b9630cd8-df1a-4a2a-8a64-798f4ec0bfba
+		summarizeBy: count
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlId
+		dataType: int64
+		formatString: 0
+		lineageTag: f58eef5a-ed32-400b-8d36-31b26651e382
+		summarizeBy: count
+		sourceColumn: ControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcedureId
+		dataType: int64
+		formatString: 0
+		lineageTag: ca0efb28-8a38-4fae-aed8-a5c536a0aebd
+		summarizeBy: count
+		sourceColumn: ProcedureId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkpaperId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e8f2a4d-91fd-43d4-97b6-25efd0ccbb42
+		summarizeBy: count
+		sourceColumn: WorkpaperId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		lineageTag: cf4a5f6d-c330-4bdf-9730-6e15631d7527
+		summarizeBy: count
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		lineageTag: 80804ea9-f258-495d-8358-b205b09b8e8c
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: b43e307b-78f7-4d50-8423-fed693c478d1
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolderId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ab3178c-0b50-4ed7-8f2a-979b47a96732
+		summarizeBy: count
+		sourceColumn: FolderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fa6969c-177a-4c42-9d26-eb07b201e54a
+		summarizeBy: count
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityValues
+		dataType: string
+		lineageTag: db4bdcec-b3a9-4903-988b-c5fc6900f418
+		summarizeBy: none
+		sourceColumn: EntityValues
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimensionAssignments = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    DimensionAssignments_table = Source{[Name="DimensionAssignments",Signature="table"]}[Data]
+				in
+				    DimensionAssignments_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,96 @@
+table 'A12_03 - Auditable Units Risk score - ProjectCompany'
+	lineageTag: fc9dee3c-d4b1-4495-b62a-e22515a7f10f
+	sourceLineageTag: [sch_TeamMate].[A12_03 - Auditable Units Risk score - ProjectCompany]
+
+	column ParentEntityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f3bf7a34-c052-4296-8076-4875134c1963
+		sourceLineageTag: ParentEntityId
+		summarizeBy: count
+		sourceColumn: ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6a8a0b4e-a336-4198-a643-74f55f58ca20
+		sourceLineageTag: Avg. Residual Likelihood
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: b1861370-b277-4a6c-87cd-d5930743a786
+		sourceLineageTag: Avg. Residual Impact
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e1ec4c85-0550-4956-be17-e9ab1e10dd0b
+		sourceLineageTag: Avg. Residual Calc Score
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Likelihood'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: f963f2c5-6a0c-48e6-b22f-1bb37e41eede
+		sourceLineageTag: Avg. Inherent Likelihood
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Impact'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 1f973224-a19f-473c-be14-4dfcec5d6b4a
+		sourceLineageTag: Avg. Inherent Impact
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Inherent Calc Score'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: e4e51836-39ac-4917-b2a1-80436b61cb65
+		sourceLineageTag: Avg. Inherent Calc Score
+		summarizeBy: sum
+		sourceColumn: Avg. Inherent Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'A12_03 - Auditable Units Risk score - ProjectCompany' = entity
+		mode: directLake
+		source
+			entityName: A12_03 - Auditable Units Risk score - ProjectCompany
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

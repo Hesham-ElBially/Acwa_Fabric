@@ -1,0 +1,89 @@
+table A02_02
+	lineageTag: e4b4596d-2436-44a0-856c-ce5f15271300
+	sourceLineageTag: [sch_TeamMate].[A02_02]
+
+	column 'Issues.Category2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 140db6ea-ca64-4db7-a6fb-366335dbf69e
+		sourceLineageTag: Issues.Category2
+		summarizeBy: none
+		sourceColumn: Issues.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Overdue Observations'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bacd78ec-0e5c-484c-91c7-a92953bfd3df
+		sourceLineageTag: No. of Overdue Observations
+		summarizeBy: sum
+		sourceColumn: No. of Overdue Observations
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Non Overdue Observations'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1855d425-75d6-4292-9466-7895b8b8c937
+		sourceLineageTag: No. of Non Overdue Observations
+		summarizeBy: sum
+		sourceColumn: No. of Non Overdue Observations
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No. of Open Observations'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3874b684-f195-4ab3-ab34-257a7ca5567c
+		sourceLineageTag: No. of Open Observations
+		summarizeBy: sum
+		sourceColumn: No. of Open Observations
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Percentage of Overdue Observations'
+		dataType: double
+		sourceProviderType: decimal(21, 15)
+		lineageTag: f42bda5d-0836-4654-a1b5-c8746a307da1
+		sourceLineageTag: Percentage of Overdue Observations
+		summarizeBy: sum
+		sourceColumn: Percentage of Overdue Observations
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI B Status'
+		dataType: string
+		sourceProviderType: varchar(20)
+		lineageTag: f11bb71c-c2b2-492f-925f-b958c6ae1b82
+		sourceLineageTag: KPI B Status
+		summarizeBy: none
+		sourceColumn: KPI B Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bceb4946-e7bd-4d31-8c70-26483a5d3d9f
+		sourceLineageTag: Rating Order
+		summarizeBy: sum
+		sourceColumn: Rating Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A02_02 = entity
+		mode: directLake
+		source
+			entityName: A02_02
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

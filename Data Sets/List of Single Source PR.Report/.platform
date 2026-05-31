@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "List of Single Source PR"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3a74e1d0-e7d0-9a1f-4128-f155b14922d1"
+  }
+}

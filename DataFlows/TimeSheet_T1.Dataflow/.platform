@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "TimeSheet_T1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "93d5e541-2fce-a98f-4c3e-4d3b7f61f845"
+  }
+}

@@ -1,0 +1,280 @@
+table SelfAssessmentControls
+	lineageTag: dcb30eb9-f754-4e71-9bf8-cee9db7bc0d2
+
+	column SelfAssessmentControlId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d7adcf1-a479-4392-9087-d313e63327c8
+		summarizeBy: count
+		sourceColumn: SelfAssessmentControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentItemId
+		dataType: int64
+		formatString: 0
+		lineageTag: 77f1decd-9abf-4653-b0f6-a2800ff142a5
+		summarizeBy: count
+		sourceColumn: SelfAssessmentItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlId
+		dataType: int64
+		formatString: 0
+		lineageTag: 68e5531f-52cc-468d-aa2e-b965861b0c34
+		summarizeBy: none
+		sourceColumn: ControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentControlTitle
+		dataType: string
+		lineageTag: a7cf5a25-bb2c-4f0f-af0c-0a29a7a5a061
+		summarizeBy: none
+		sourceColumn: SelfAssessmentControlTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: d01cd646-47cf-4912-b287-3706aa6313e6
+		summarizeBy: none
+		sourceColumn: SelfAssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d322921-72fc-415b-bdd6-6be71f38deac
+		summarizeBy: count
+		sourceColumn: SelfAssessmentStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SelfAssessmentState
+		dataType: string
+		lineageTag: 3b24983a-77ef-4f39-bfe3-1f86cb79de51
+		summarizeBy: none
+		sourceColumn: SelfAssessmentState
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 86e80ffd-483f-45df-806d-13f55f9a7f70
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessContactUserID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c3e36fa-6797-4c5d-80c5-b521430a6578
+		summarizeBy: count
+		sourceColumn: BusinessContactUserID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessContactUserName
+		dataType: string
+		lineageTag: 76ecdad8-0ff5-4c16-8f5e-25cba907e5f0
+		summarizeBy: none
+		sourceColumn: BusinessContactUserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessReviewerUserNames
+		dataType: string
+		lineageTag: d93559d5-8ae1-4790-8297-7f67f3d18025
+		summarizeBy: none
+		sourceColumn: BusinessReviewerUserNames
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlTitle
+		dataType: string
+		lineageTag: 5cb7d851-d910-4750-b4d6-1f7c8edbfd35
+		summarizeBy: none
+		sourceColumn: ControlTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentEntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e6cbdaf-60bc-4edc-b988-eaa90b7ef2db
+		summarizeBy: count
+		sourceColumn: ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentEntityTitle
+		dataType: string
+		lineageTag: 54543f5e-7851-4cfb-b951-28f9e86127a5
+		summarizeBy: none
+		sourceColumn: ParentEntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberIssuesAdded
+		dataType: int64
+		formatString: 0
+		lineageTag: b3a7b38c-1505-4766-a8cd-559b1743241e
+		summarizeBy: sum
+		sourceColumn: NumberIssuesAdded
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberWorkpapersAdded
+		dataType: int64
+		formatString: 0
+		lineageTag: 9759a163-222b-4932-bf2c-7029f61ecc88
+		summarizeBy: sum
+		sourceColumn: NumberWorkpapersAdded
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsEditted
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ae609dbb-959a-4e6d-aa08-71d1e216de55
+		summarizeBy: none
+		sourceColumn: IsEditted
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastInProgressLabel
+		dataType: string
+		lineageTag: 7ca15c95-940d-4391-9578-efa4b6948ddb
+		summarizeBy: none
+		sourceColumn: LastInProgressLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastInProgressUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: db1ff865-81fa-4454-a6b6-ff7ec60daeb9
+		summarizeBy: count
+		sourceColumn: LastInProgressUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastInProgressUser
+		dataType: string
+		lineageTag: a3e14bfe-b28f-473b-91a8-4745f73271a5
+		summarizeBy: none
+		sourceColumn: LastInProgressUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastInProgressDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7d104901-931e-4257-8a55-a7a586bcc587
+		summarizeBy: none
+		sourceColumn: LastInProgressDate
+
+		variation Variation
+			isDefault
+			relationship: dddfb139-aab3-418c-b797-da11b47ccb59
+			defaultHierarchy: LocalDateTable_1e55fe84-efd2-43d3-b546-b5beaa4e2a35.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastCompletedLabel
+		dataType: string
+		lineageTag: f375e480-7f32-4337-a037-8ffacf743188
+		summarizeBy: none
+		sourceColumn: LastCompletedLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastCompletedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a736837-9c60-40e5-931c-8129a484a9f4
+		summarizeBy: count
+		sourceColumn: LastCompletedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastCompletedUser
+		dataType: string
+		lineageTag: edb17de3-db94-46d2-b70e-ace234c982ca
+		summarizeBy: none
+		sourceColumn: LastCompletedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastCompletedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0677a0bf-cc3b-4f61-aa52-b4d63511f2b0
+		summarizeBy: none
+		sourceColumn: LastCompletedDate
+
+		variation Variation
+			isDefault
+			relationship: c7ce8df1-46bd-49c2-a592-d03cea758c72
+			defaultHierarchy: LocalDateTable_86685d7b-db6e-43ee-b923-0a9b0517b7d0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReviewedLabel
+		dataType: string
+		lineageTag: e4eae1c0-cb8b-451e-bd60-c3268bb78bee
+		summarizeBy: none
+		sourceColumn: LastReviewedLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReviewedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 95947f97-c551-4e93-8255-38c49210c305
+		summarizeBy: count
+		sourceColumn: LastReviewedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReviewedUser
+		dataType: string
+		lineageTag: 75d2a4c7-fffb-4e0d-974f-ad4e09d72746
+		summarizeBy: none
+		sourceColumn: LastReviewedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReviewedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e4a47158-8109-44fd-84e8-3425cb05f22a
+		summarizeBy: none
+		sourceColumn: LastReviewedDate
+
+		variation Variation
+			isDefault
+			relationship: 8fdf84e5-35ea-4e42-96e3-e97098a702f0
+			defaultHierarchy: LocalDateTable_47b1ffcf-f28a-4479-b288-da53112dd9c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SelfAssessmentControls = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    SelfAssessmentControls_table = Source{[Name="SelfAssessmentControls",Signature="table"]}[Data]
+				in
+				    SelfAssessmentControls_table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

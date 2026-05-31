@@ -1,0 +1,42 @@
+table ListItems
+	lineageTag: 96117d57-64a8-4cbd-9d78-b5c0431adb84
+
+	column ListItemId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c54cd58-081c-42da-9921-32c28305f714
+		summarizeBy: count
+		sourceColumn: ListItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ListId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7414b64e-c367-4d11-afe9-3c8ab70087f7
+		summarizeBy: none
+		sourceColumn: ListId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ListItemName
+		dataType: string
+		lineageTag: c57aa33d-17be-40ac-8798-d1f00ea035c0
+		summarizeBy: none
+		sourceColumn: ListItemName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ListItems = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ListItems_table = Source{[Name="ListItems",Signature="table"]}[Data]
+				in
+				    ListItems_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

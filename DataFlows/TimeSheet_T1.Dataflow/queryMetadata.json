@@ -1,0 +1,252 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "TimeSheet_T1",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Assessments": {
+      "queryId": "bc6de90b-84ce-40cf-a183-54a4b182685a",
+      "queryName": "Assessments",
+      "loadEnabled": false
+    },
+    "AuditPlanCapacityPlanning": {
+      "queryId": "78eeadee-6233-4059-9d32-ad3a330cae81",
+      "queryName": "AuditPlanCapacityPlanning",
+      "loadEnabled": false
+    },
+    "AuditPlanCapacityPlanningEntry": {
+      "queryId": "3b4b737c-f323-46fd-9d5b-18d421e781cc",
+      "queryName": "AuditPlanCapacityPlanningEntry",
+      "loadEnabled": false
+    },
+    "AuditPlanCapacityPlanningRole": {
+      "queryId": "ee106b98-b297-47bd-9959-0e7710201431",
+      "queryName": "AuditPlanCapacityPlanningRole",
+      "loadEnabled": false
+    },
+    "AuditPlans": {
+      "queryId": "537f7ac0-44fb-49cf-a1a3-0efd5e1ffdf0",
+      "queryName": "AuditPlans",
+      "loadEnabled": false
+    },
+    "AuditPlanSchedule": {
+      "queryId": "b98e96ac-cb07-4d08-bb60-7c34a5a5a58a",
+      "queryName": "AuditPlanSchedule",
+      "loadEnabled": false
+    },
+    "ProjectPhases": {
+      "queryId": "16e11ca3-5109-4098-a360-25c810219b4e",
+      "queryName": "ProjectPhases",
+      "loadEnabled": false
+    },
+    "ProjectPhaseWorkflowHistory": {
+      "queryId": "f5afb58b-6546-4568-a323-be4c58f2d20d",
+      "queryName": "ProjectPhaseWorkflowHistory",
+      "loadEnabled": false
+    },
+    "Projects": {
+      "queryId": "b54c5e18-f5e2-4760-a002-ed05c4750ad1",
+      "queryName": "Projects",
+      "loadEnabled": false
+    },
+    "TeamApprovers": {
+      "queryId": "e7118efb-9cae-4105-8b12-7f710d013208",
+      "queryName": "TeamApprovers",
+      "loadEnabled": false
+    },
+    "Teams": {
+      "queryId": "2b59439f-5451-4e3e-ae04-65c6ef11a184",
+      "queryName": "Teams",
+      "loadEnabled": false
+    },
+    "TeamUsers": {
+      "queryId": "eb9b287a-7599-4a23-b222-a27efe8575ea",
+      "queryName": "TeamUsers",
+      "loadEnabled": false
+    },
+    "TimeAdmins": {
+      "queryId": "695c19eb-c6b1-47cb-848c-d07ed3db42e5",
+      "queryName": "TimeAdmins",
+      "loadEnabled": false
+    },
+    "TimeCategories2": {
+      "queryId": "ac126656-8565-4dbc-8ad5-130cf258040c",
+      "queryName": "TimeCategories2",
+      "loadEnabled": false
+    },
+    "TimeCategories3": {
+      "queryId": "ff0ae200-6701-47eb-808f-90243097658e",
+      "queryName": "TimeCategories3",
+      "loadEnabled": false
+    },
+    "TimeHolidays": {
+      "queryId": "ef07a56c-8d8c-41af-8fcc-fbbdb5c2a44b",
+      "queryName": "TimeHolidays",
+      "loadEnabled": false
+    },
+    "TimeNonWorkings": {
+      "queryId": "fee8ca05-9ef7-4585-8e4d-ad7cba42287a",
+      "queryName": "TimeNonWorkings",
+      "loadEnabled": false
+    },
+    "Timesheets": {
+      "queryId": "2bdfa2d2-f512-4d16-aeaf-7576a5a6fb07",
+      "queryName": "Timesheets",
+      "loadEnabled": false
+    },
+    "TimesheetWorkflowHistory": {
+      "queryId": "5e1904e6-6b80-4696-a003-f2b3eb4a89e8",
+      "queryName": "TimesheetWorkflowHistory",
+      "loadEnabled": false
+    },
+    "TimeTrackingEntries": {
+      "queryId": "47558bc3-0292-45c8-a892-550fbc335171",
+      "queryName": "TimeTrackingEntries",
+      "loadEnabled": false
+    },
+    "Users": {
+      "queryId": "d822a81e-2cfe-4fe8-80a5-e7e1bc8e1cc6",
+      "queryName": "Users",
+      "loadEnabled": false
+    },
+    "Assessments_DataDestination": {
+      "queryId": "56c8ff57-8553-4a0e-9f4c-263bb6f36b44",
+      "queryName": "Assessments_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditPlanCapacityPlanning_DataDestination": {
+      "queryId": "40b66ba0-d3a5-4968-8bf0-f32150f50b14",
+      "queryName": "AuditPlanCapacityPlanning_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditPlanCapacityPlanningEntry_DataDestination": {
+      "queryId": "b77389cf-b34b-4524-b9c5-f33c728a5438",
+      "queryName": "AuditPlanCapacityPlanningEntry_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditPlanCapacityPlanningRole_DataDestination": {
+      "queryId": "2f5f446d-191f-454e-bacb-bcd71969d2a1",
+      "queryName": "AuditPlanCapacityPlanningRole_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditPlans_DataDestination": {
+      "queryId": "2383464e-7ca0-4777-9ae6-203f295a9a24",
+      "queryName": "AuditPlans_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "AuditPlanSchedule_DataDestination": {
+      "queryId": "9eb31b83-2a11-4c1b-9b9c-49608bdbe1c0",
+      "queryName": "AuditPlanSchedule_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ProjectPhases_DataDestination": {
+      "queryId": "51b6bc46-c984-4d23-b288-ba7670046c8f",
+      "queryName": "ProjectPhases_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "ProjectPhaseWorkflowHistory_DataDestination": {
+      "queryId": "b1135c50-7784-4e8b-a6b3-e6f796c2ac87",
+      "queryName": "ProjectPhaseWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Projects_DataDestination": {
+      "queryId": "5afd8446-52f3-42e8-b034-cea629175c29",
+      "queryName": "Projects_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamApprovers_DataDestination": {
+      "queryId": "7bd072f6-d4d8-4415-9dc9-aa2169c44c0f",
+      "queryName": "TeamApprovers_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Teams_DataDestination": {
+      "queryId": "7d50f499-19fe-4237-818d-11f1dbcbd47a",
+      "queryName": "Teams_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TeamUsers_DataDestination": {
+      "queryId": "a28157b4-b94c-41b0-8924-13feafd1b125",
+      "queryName": "TeamUsers_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TimeAdmins_DataDestination": {
+      "queryId": "48698cba-ff8f-4d5b-9324-6b9a92c40d2c",
+      "queryName": "TimeAdmins_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TimeCategories2_DataDestination": {
+      "queryId": "0e09b181-4e22-4688-94b4-6b172819b740",
+      "queryName": "TimeCategories2_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TimeCategories3_DataDestination": {
+      "queryId": "9645e6e2-309b-4dcb-8b15-62fd05e08ec5",
+      "queryName": "TimeCategories3_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TimeHolidays_DataDestination": {
+      "queryId": "a140e230-891a-4f4d-ba43-d0a623154a65",
+      "queryName": "TimeHolidays_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TimeNonWorkings_DataDestination": {
+      "queryId": "19f2fa02-77ee-4474-8941-db1c0af771cb",
+      "queryName": "TimeNonWorkings_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Timesheets_DataDestination": {
+      "queryId": "b18a388f-c351-4873-99e1-20aa76a959e6",
+      "queryName": "Timesheets_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TimesheetWorkflowHistory_DataDestination": {
+      "queryId": "58a0e367-d498-44e4-8ca7-0d4b0fddb064",
+      "queryName": "TimesheetWorkflowHistory_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "TimeTrackingEntries_DataDestination": {
+      "queryId": "0a49a3d4-97f8-4c41-8019-28c2f8230064",
+      "queryName": "TimeTrackingEntries_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Users_DataDestination": {
+      "queryId": "2d187527-4c59-4139-8a97-f2ea2ba7e051",
+      "queryName": "Users_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://acwapoweria.teammatehosting.com/TeamMate/odata/v1",
+      "kind": "OData",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"f88d786e-43c1-4e58-85b7-bf95ef7a2131\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"515f52c1-dca8-434e-bfcd-e60d636ecd9e\"}"
+    }
+  ]
+}

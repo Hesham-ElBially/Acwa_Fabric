@@ -1,0 +1,15 @@
+relationship e2bf14af-ce0a-460b-aabf-031295d121ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Open_PRs.'Created on'
+	toColumn: LocalDateTable_82f2fa19-94f1-4239-bdc9-cbfa2546bbce.Date
+
+relationship de8be80a-c7b0-47f4-85a0-227ba4a9eafa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Open_PRs.'Requisition Date of Material Order'
+	toColumn: LocalDateTable_b49e03c1-fe00-4b71-89a8-41d725a97bdc.Date
+
+relationship b44bbca9-c80c-4179-99d9-66b9b52c476f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Open_PRs.'Purchase Requisition Release Date'
+	toColumn: LocalDateTable_c2e78520-31a8-42cc-95e1-dd622fa8e03c.Date
+

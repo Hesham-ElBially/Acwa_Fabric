@@ -1,0 +1,290 @@
+table 'A08 - Last Planning Procedure Details'
+	lineageTag: e8ef6ede-69de-46aa-a1a6-1954114102dc
+	sourceLineageTag: [sch_TeamMate].[A08 - Last Planning Procedure Details]
+
+	column ObjectRelationshipId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6c2390d2-93b1-4b6b-aa0b-6684db4f980d
+		sourceLineageTag: ObjectRelationshipId
+		summarizeBy: count
+		sourceColumn: ObjectRelationshipId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6a1e3040-3cdd-4183-8d8b-e20cb66d4c1b
+		sourceLineageTag: DimensionId
+		summarizeBy: count
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1358d82b-08c1-45aa-9530-dec461b0245a
+		sourceLineageTag: EntityId
+		summarizeBy: count
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2cce9292-339d-4c38-b546-102230d66272
+		sourceLineageTag: AssessmentId
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b4f6c7c4-8cf8-405d-b577-30b3d808adbc
+		sourceLineageTag: ProjectId
+		summarizeBy: count
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column StrategicRiskId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 047d5b5a-899e-4cb4-b01a-424dfa1fdaad
+		sourceLineageTag: StrategicRiskId
+		summarizeBy: count
+		sourceColumn: StrategicRiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiskId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 92353af3-6db1-4aba-bd5b-6b5b7c093a7b
+		sourceLineageTag: RiskId
+		summarizeBy: count
+		sourceColumn: RiskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControlId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c32fa22f-35c5-45de-bb67-1ca78fb4bab7
+		sourceLineageTag: ControlId
+		summarizeBy: count
+		sourceColumn: ControlId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjectiveId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a9aa534c-5ee3-46f6-8cc5-305021b86a59
+		sourceLineageTag: ObjectiveId
+		summarizeBy: count
+		sourceColumn: ObjectiveId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProcedureId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 646ffcf3-1db5-4332-9657-c7062114d951
+		sourceLineageTag: ProcedureId
+		summarizeBy: count
+		sourceColumn: ProcedureId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d5ab4cd6-fd69-4cb7-b5ca-71847f73113c
+		sourceLineageTag: IssueId
+		summarizeBy: count
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecommendationId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: efcd4790-07ea-4f90-9bc2-46cca35c37bc
+		sourceLineageTag: RecommendationId
+		summarizeBy: count
+		sourceColumn: RecommendationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolderId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bf692256-2b28-41f1-81d2-b96f7d90984b
+		sourceLineageTag: FolderId
+		summarizeBy: count
+		sourceColumn: FolderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Audit Schedule KPIs.ProjectTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e0e25540-38f8-4f0e-b9f7-9240d114e6a3
+		sourceLineageTag: A08 - Audit Schedule KPIs.ProjectTitle
+		summarizeBy: none
+		sourceColumn: A08 - Audit Schedule KPIs.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Audit Schedule KPIs.ProjectCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 31e062d3-1083-458e-b0fe-6441c4fbc7c4
+		sourceLineageTag: A08 - Audit Schedule KPIs.ProjectCode
+		summarizeBy: none
+		sourceColumn: A08 - Audit Schedule KPIs.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Audit Schedule KPIs.ActiveAuditPlanTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 73f7e304-7f75-4c83-a31d-85220dcd7b81
+		sourceLineageTag: A08 - Audit Schedule KPIs.ActiveAuditPlanTitle
+		summarizeBy: none
+		sourceColumn: A08 - Audit Schedule KPIs.ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.ProcedureTitle'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 17bc01ee-18f0-4b12-9bb6-a2eff8d1b9f9
+		sourceLineageTag: A08 - Last Planning Procedure.ProcedureTitle
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.ProcedureTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.ProcedureState'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 684a3210-32ba-419c-833b-54134e384063
+		sourceLineageTag: A08 - Last Planning Procedure.ProcedureState
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.ProcedureState
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastNotStartedUser'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aa53c263-1144-4a10-9e02-23e51dd1a52e
+		sourceLineageTag: A08 - Last Planning Procedure.LastNotStartedUser
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastNotStartedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastNotStartedDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 407970e4-a538-4638-8bde-3f6c92b8c964
+		sourceLineageTag: A08 - Last Planning Procedure.LastNotStartedDate
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastNotStartedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastInProgressUser'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5a2fd53c-d621-4d6b-8595-795dfb9341fe
+		sourceLineageTag: A08 - Last Planning Procedure.LastInProgressUser
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastInProgressUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastInProgressDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ce275952-c690-4a0e-b0cf-c7be794ed6c7
+		sourceLineageTag: A08 - Last Planning Procedure.LastInProgressDate
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastInProgressDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastCompletedUser'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4952887b-610c-4978-a812-d76b3c7b9763
+		sourceLineageTag: A08 - Last Planning Procedure.LastCompletedUser
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastCompletedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastCompletedDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 0d7cfc43-687f-4b89-b685-2759e06a01c6
+		sourceLineageTag: A08 - Last Planning Procedure.LastCompletedDate
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastCompletedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastReviewedUser'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 05b5d1b1-7a76-4fb3-845b-51f20cc43f8f
+		sourceLineageTag: A08 - Last Planning Procedure.LastReviewedUser
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastReviewedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08 - Last Planning Procedure.LastReviewedDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: bbc61925-f3fe-459d-b92e-7bd5a1913cb7
+		sourceLineageTag: A08 - Last Planning Procedure.LastReviewedDate
+		summarizeBy: none
+		sourceColumn: A08 - Last Planning Procedure.LastReviewedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - Last Planning Procedure Details' = entity
+		mode: directLake
+		source
+			entityName: A08 - Last Planning Procedure Details
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

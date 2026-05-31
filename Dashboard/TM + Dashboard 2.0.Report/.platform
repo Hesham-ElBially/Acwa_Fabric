@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TM + Dashboard 2.0"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0fcf53a3-6194-86b0-42d7-947dd5a1a7e5"
+  }
+}

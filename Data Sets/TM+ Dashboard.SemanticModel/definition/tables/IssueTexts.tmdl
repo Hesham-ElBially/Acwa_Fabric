@@ -1,0 +1,105 @@
+table IssueTexts
+	lineageTag: a76dabea-aaae-45b9-bb2a-caa09fc29934
+
+	column IssueId
+		dataType: int64
+		formatString: 0
+		lineageTag: be48e319-a85b-4c6e-aca3-d53ded1e5ad5
+		summarizeBy: none
+		sourceColumn: IssueId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text1
+		dataType: string
+		lineageTag: 38cb1611-ad6a-4060-800f-a70ab9a94deb
+		summarizeBy: none
+		sourceColumn: Text1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text2
+		dataType: string
+		lineageTag: 00444c1a-6acd-4675-b2c0-4881932a9abe
+		summarizeBy: none
+		sourceColumn: Text2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text3
+		dataType: string
+		lineageTag: fc6171be-cead-4159-bd6c-5cd1204107b4
+		summarizeBy: none
+		sourceColumn: Text3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text4
+		dataType: string
+		lineageTag: 105be510-c87e-477c-9559-c71434085692
+		summarizeBy: none
+		sourceColumn: Text4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text5
+		dataType: string
+		lineageTag: 123731b8-f497-4871-a158-3a560d8e61f6
+		summarizeBy: none
+		sourceColumn: Text5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text6
+		dataType: string
+		lineageTag: b0b1a406-b01c-4e03-86bf-f352717f727b
+		summarizeBy: none
+		sourceColumn: Text6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text7
+		dataType: string
+		lineageTag: 566faaca-9c2e-448a-95cf-7038b4a158f2
+		summarizeBy: none
+		sourceColumn: Text7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text8
+		dataType: string
+		lineageTag: b0ec38a5-5df3-4a5e-b077-128048786662
+		summarizeBy: none
+		sourceColumn: Text8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text9
+		dataType: string
+		lineageTag: 5fc7b384-e913-4daa-a684-c03131a5f3bd
+		summarizeBy: none
+		sourceColumn: Text9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text10
+		dataType: string
+		lineageTag: 56a2332d-2a6c-4183-bd24-3e97e9006a33
+		summarizeBy: none
+		sourceColumn: Text10
+
+		annotation SummarizationSetBy = Automatic
+
+	partition IssueTexts = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    IssueTexts_table = Source{[Name="IssueTexts",Signature="table"]}[Data]
+				in
+				    IssueTexts_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

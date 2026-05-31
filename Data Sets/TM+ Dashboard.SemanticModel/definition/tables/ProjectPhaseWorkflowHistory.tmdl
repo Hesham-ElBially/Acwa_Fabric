@@ -1,0 +1,138 @@
+table ProjectPhaseWorkflowHistory
+	lineageTag: 6ddb4cf7-e2b0-49d4-bd2e-908332997ba2
+
+	column ProjectPhaseWorkflowHistoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f228876-8bc6-4075-b292-eee02464d5be
+		summarizeBy: count
+		sourceColumn: ProjectPhaseWorkflowHistoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: 82be0982-8f04-4541-b58d-cbb3ac01ebf2
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		lineageTag: 5a695277-ff95-473b-878e-701d430abc3e
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: b820f2b2-792b-4298-a495-bf74b24e5f1a
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectTitle
+		dataType: string
+		lineageTag: ec7c3b82-5015-4a21-b3bd-29019c6bcbfa
+		summarizeBy: none
+		sourceColumn: ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectCode
+		dataType: string
+		lineageTag: eb0f8eac-f491-4b57-a48b-230c9f40a82c
+		summarizeBy: none
+		sourceColumn: ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActionDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3ad0bb73-dd24-4b30-a08b-32f1d3828d31
+		summarizeBy: none
+		sourceColumn: ActionDate
+
+		variation Variation
+			isDefault
+			relationship: fdd71e3e-10ba-4f10-b191-61de07435dbb
+			defaultHierarchy: LocalDateTable_a31327f8-5a90-4ed5-86a0-f169eb586f9c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: e5617157-b4a8-4e29-9725-4b54b07ae2a2
+		summarizeBy: count
+		sourceColumn: WorkflowStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowState
+		dataType: string
+		lineageTag: 93be89ed-1094-4124-bd15-c959fa2253e5
+		summarizeBy: none
+		sourceColumn: WorkflowState
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubActionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c895753-243a-42a2-b832-06ed115e587a
+		summarizeBy: count
+		sourceColumn: WorkflowSubActionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkflowSubAction
+		dataType: string
+		lineageTag: 9fbe8626-1b3e-44d2-8f86-3c14ca647bf3
+		summarizeBy: none
+		sourceColumn: WorkflowSubAction
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserId
+		dataType: int64
+		formatString: 0
+		lineageTag: f66f19cf-8274-47a9-aeee-ec8ca6f66e14
+		summarizeBy: count
+		sourceColumn: UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		lineageTag: f489d2b0-7a65-453d-a6e8-24bea95789ac
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: 0019c414-dd85-4b6a-b83d-4a335fae2bf0
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ProjectPhaseWorkflowHistory = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProjectPhaseWorkflowHistory_table = Source{[Name="ProjectPhaseWorkflowHistory",Signature="table"]}[Data]
+				in
+				    ProjectPhaseWorkflowHistory_table
+
+	annotation PBI_ResultType = Table
+

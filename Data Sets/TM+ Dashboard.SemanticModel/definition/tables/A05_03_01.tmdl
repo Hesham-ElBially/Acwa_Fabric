@@ -1,0 +1,51 @@
+table A05_03_01
+	lineageTag: edb27f94-ba64-4fa1-ad7d-8fe2c7d9dcd8
+
+	column Year
+		formatString: 0
+		lineageTag: 61ba6c86-d7bf-441e-bcec-d4ce58131cef
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: A05_03[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		formatString: 0
+		lineageTag: 05b2d1e9-a777-485d-987a-2c51f594503e
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: A05_03[TimeEntryUserId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		lineageTag: 1bfb436f-ece3-42ee-8cd5-af93b6968da5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05_03[TimeEntryUser]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Non Working Hrs'
+		lineageTag: 3c5c5b14-c8fb-4703-bac5-6d0af498d602
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Total Non Working Hrs]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cPK = CONCATENATE(A05_03_01[Year], A05_03_01[TimeEntryUserId])
+		lineageTag: e46afa55-6ad8-468e-9a55-5c3c66c23955
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A05_03_01 = calculated
+		mode: import
+		source = SUMMARIZE(A05_03, A05_03[Year], A05_03[TimeEntryUserId], A05_03[TimeEntryUser], "Total Non Working Hrs", SUM(A05_03[Non Working Hours]))
+
+	annotation PBI_Id = 52d61c32ee1f41b3bee6df187744f9ed
+

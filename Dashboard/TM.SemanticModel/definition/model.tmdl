@@ -1,0 +1,103 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table A01_01
+ref table A02_01
+ref table A04_01
+ref table A10_01
+ref table 'A10 - Issues Root Cause'
+ref table A05_01
+ref table A05_01_01
+ref table A05_02
+ref table A05_02_01
+ref table A05_03
+ref table A05_03_01
+ref table 'A05 - OverallTimesheetReport'
+ref table 'A11 - Risk Heat Map'
+ref table 'A00 - Country Order'
+ref table 'A00 - Region Order'
+ref table 'A00 - Risk Rating Order'
+ref table 'A00 - Rating Order'
+ref table A01_02
+ref table A02_02
+ref table A04_02
+ref table 'A01 - Open Observation Report as of Today'
+ref table 'A02 - Open Observation Report Last Month-End'
+ref table 'A03 - Reco Closed but Issue Still Open'
+ref table 'A04 - Open Observation Report Current Month-End'
+ref table 'A06 - Audit Plan'
+ref table 'A06_00 - Issues - Low'
+ref table 'A06_00 - Issues - High'
+ref table 'A06_00 - Issues - Medium'
+ref table 'A06_00 - Issues - Significant'
+ref table 'A00 - Report Rating Order'
+ref table 'A08_00 - AAL Issuance Date'
+ref table 'A08_00 - All Phase'
+ref table 'A08_00 - Draft Report Issuance Date'
+ref table 'A08_00 - FieldWork Completed Date'
+ref table 'A08_00 - Final Report Issuance Date'
+ref table 'A08_00 - Project Closed Date'
+ref table 'A08_00 - TeamMate Updated Date'
+ref table 'A10 - Issues Root Cause (Unreleased)'
+ref table 'A11_01 - Score: Inherent Likelihood'
+ref table 'A11_02 - Score: Inherent Impact'
+ref table 'A11_03 - Calc Score: Inherent'
+ref table 'A11_04 - Score: Residual Likelihood'
+ref table 'A11_05 - Score: Residual Impact'
+ref table 'A11_06 - Calc Score: Residual'
+ref table 'A12_00 - Auditable Units - Corporate'
+ref table 'A11_00 - Risk Heat Map with all score'
+ref table 'A12_01 - Auditable Units with all score - Corporate'
+ref table 'A12_02 - Auditable Units - ProjectCompany'
+ref table 'A12_03 - Auditable Units Risk score - ProjectCompany'
+ref table 'A12_04 - Auditable Units with all score - ProjectCompany'
+ref table 'A12_05 - Auditable Units - ProjectCompanyCountryOffice'
+ref table 'A12_06 - Auditable Units Risk score - ProjectCompanyCountryOffice'
+ref table 'A12_07 - Auditable Units with all score - ProjectCompanyCountryOffice'
+ref table 'A13 - Audit Plan'
+ref table 'A12 - Entity Heat Map'
+ref table 'A08 - AAL Issuance Date'
+ref table 'A08 - FieldWork Actual Start Date'
+ref table 'A08 - Final Report Issuance Date'
+ref table 'A08 - TeamMate Updated Date'
+ref table 'A08 - Planning Scheduled Start Date'
+ref table 'A08 - Planning Scheduled End Date'
+ref table 'A08 - Planning Actual Start Date'
+ref table 'A08 - Planning Actual End Date'
+ref table 'A08 - FieldWork Actual End Date'
+ref table 'A08 - FieldWork Completed Date'
+ref table 'A08 - FieldWork Scheduled End Date'
+ref table 'A08 - FieldWork Scheduled Start Date'
+ref table 'A08 - Project Closed Date'
+ref table 'A08 - Reporting Actual End Date'
+ref table 'A08 - Reporting Actual Start Date'
+ref table 'A08 - Reporting Scheduled End Date'
+ref table 'A08 - Reporting Scheduled Start Date'
+ref table 'A08 - Closure Actual End Date'
+ref table 'A08 - Closure Actual Start Date'
+ref table 'A08 - Closure Scheduled End Date'
+ref table 'A08 - Closure Scheduled Start Date'
+ref table 'A08 - Draft  Report Issuance Date'
+ref table 'A08 - Last Planning Procedure'
+ref table 'A08 - Audit Schedule KPIs'
+ref table 'A08 - Last Planning Procedure Details'
+ref table 'A05 - Timesheet'
+ref table 'A07 - Timesheet Last Submitted On'
+ref table 'A07_01 - Timesheet Last Entered On ProjectWise'
+ref table A05_00
+ref table A05_00_01
+ref table 'A09 - Audit Plan 2025 & 2024'
+ref table 'A08_00 - Phase And Milestone'
+

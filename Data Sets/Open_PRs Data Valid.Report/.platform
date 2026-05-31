@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Open_PRs Data Valid"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d499f271-1c0c-95b9-4672-0ea3f7d06eab"
+  }
+}

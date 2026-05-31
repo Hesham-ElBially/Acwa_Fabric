@@ -1,0 +1,403 @@
+table 'A13 - Audit Plan'
+	lineageTag: 89809596-db7b-4329-a9d2-84c83d3b2f10
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: b478f91e-130d-46ed-90d7-57e6e0070b15
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f46c76e-bcb1-459d-8cbb-ff6eafba09cd
+		summarizeBy: none
+		sourceColumn: EntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: bf8adb27-716b-4e88-9cd8-41ad2fdeaabb
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No, of Records'
+		dataType: int64
+		formatString: 0
+		lineageTag: dcd21baf-ccf0-4b71-8229-bf04de4b276a
+		summarizeBy: sum
+		sourceColumn: No, of Records
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectTitle'
+		dataType: string
+		lineageTag: 3dc48afb-04bd-4980-9482-752a1683ddf1
+		summarizeBy: none
+		sourceColumn: Projects.ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		dataType: string
+		lineageTag: d994aa76-a5be-48a7-8c03-67e0ffe0e234
+		summarizeBy: none
+		sourceColumn: Projects.ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category1'
+		dataType: string
+		lineageTag: 354f9a82-cdf5-41a2-a0be-f80a39bbde0c
+		summarizeBy: none
+		sourceColumn: Projects.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category2'
+		dataType: string
+		lineageTag: 0ff6e873-72f8-4d6f-9c01-f051a3390802
+		summarizeBy: none
+		sourceColumn: Projects.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category3'
+		dataType: string
+		lineageTag: 33b60e45-1b18-4df8-a0ee-698fd5916958
+		summarizeBy: none
+		sourceColumn: Projects.Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category4'
+		dataType: string
+		lineageTag: 57b20da5-f944-4a80-99ac-58c9fc9f9474
+		summarizeBy: none
+		sourceColumn: Projects.Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category5'
+		dataType: string
+		lineageTag: 4e443394-5079-471d-bcdc-345050f5d672
+		summarizeBy: none
+		sourceColumn: Projects.Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category6'
+		dataType: string
+		lineageTag: 826d384a-bca4-4235-9c55-40fdc0de2e64
+		summarizeBy: none
+		sourceColumn: Projects.Category6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category7'
+		dataType: string
+		lineageTag: a57840fc-e6d8-4940-8726-24e5f063abf6
+		summarizeBy: none
+		sourceColumn: Projects.Category7
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category8'
+		dataType: string
+		lineageTag: 869b5f91-3766-44a7-ad3c-7e1689fff4ed
+		summarizeBy: none
+		sourceColumn: Projects.Category8
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category9'
+		dataType: string
+		lineageTag: ceaf8064-f961-406f-a373-81ac81733b6a
+		summarizeBy: none
+		sourceColumn: Projects.Category9
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category10'
+		dataType: string
+		lineageTag: b5e04abb-e2d9-43a2-9ece-8c5575561e1f
+		summarizeBy: none
+		sourceColumn: Projects.Category10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category11'
+		dataType: string
+		lineageTag: c85ffba6-d065-40f8-88a1-48edf481ea0d
+		summarizeBy: none
+		sourceColumn: Projects.Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category12'
+		dataType: string
+		lineageTag: 51cc5799-5e0e-4d22-b31a-78cd7e9fc422
+		summarizeBy: none
+		sourceColumn: Projects.Category12
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.Category13'
+		dataType: string
+		lineageTag: da637cf2-9b50-472c-b944-d278afd88045
+		summarizeBy: none
+		sourceColumn: Projects.Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.MultiSelectCategory1'
+		dataType: string
+		lineageTag: 59d59ea4-578f-406a-ab2b-6a77f9f15bf3
+		summarizeBy: none
+		sourceColumn: Projects.MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.MultiSelectCategory3'
+		dataType: string
+		lineageTag: e2965636-4999-48f3-abe8-95615e5113f4
+		summarizeBy: none
+		sourceColumn: Projects.MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.EstimatedStartDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 52fa5795-c433-4df8-b144-4e448efb4b94
+		summarizeBy: none
+		sourceColumn: Projects.EstimatedStartDate
+
+		variation Variation
+			isDefault
+			relationship: 4b69ec7c-d93e-401d-b710-40022dbbab93
+			defaultHierarchy: LocalDateTable_18ea76d1-60bb-4668-86d3-b6263e1ebef0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Projects.EstimatedEndDate'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d1eaf53b-a800-4948-8c8e-da1f1f08829e
+		summarizeBy: none
+		sourceColumn: Projects.EstimatedEndDate
+
+		variation Variation
+			isDefault
+			relationship: 78eaae28-b736-47ab-a6a3-3190b88a903e
+			defaultHierarchy: LocalDateTable_6b8a74d9-2316-41aa-8601-c7acd756ffaf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Projects.EstimatedHours'
+		dataType: int64
+		formatString: 0
+		lineageTag: 40bbb92f-2973-4277-a6be-a0d1981918fc
+		summarizeBy: sum
+		sourceColumn: Projects.EstimatedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.EntityTitle'
+		dataType: string
+		lineageTag: 7311e4e3-b371-445b-b22d-aa0366a9909d
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo2'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 70f3f079-d548-41fe-881d-0755d7e17a4d
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.YesNo2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo3'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3c4a3d23-cf08-4b72-95a2-884aa794f528
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.YesNo3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo4'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b56c404f-5d76-4a5a-98b2-d5c23a1ed62e
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.YesNo4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category1'
+		dataType: string
+		lineageTag: 101cb39c-0d06-49a0-84ff-babe9fd2d21f
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category2'
+		dataType: string
+		lineageTag: 747d1822-b6e3-4fa4-b9c9-cc7f2de3419e
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category3'
+		dataType: string
+		lineageTag: eaa0113f-a93f-4a08-a391-e94ecd37e6ab
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.Category4'
+		dataType: string
+		lineageTag: 377cf917-41e3-4180-be7d-3a19c84c6d3a
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.ParentEntityId'
+		dataType: int64
+		formatString: 0
+		lineageTag: 53ea7a2e-4ee8-42ff-9676-7f0154b9fe7a
+		summarizeBy: count
+		sourceColumn: Entities.ParentEntityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgPath'
+		dataType: string
+		lineageTag: 69f087d4-6877-40e0-98e8-f5bd0dd2a624
+		summarizeBy: none
+		sourceColumn: Entities.OrgPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.OrgSort'
+		dataType: string
+		lineageTag: 13eed6cf-f696-4c05-9c09-eaf0c3c6d041
+		summarizeBy: none
+		sourceColumn: Entities.OrgSort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entities.EntityTitle'
+		dataType: string
+		lineageTag: 54b87f46-e994-42a7-b048-77baf8a244c9
+		summarizeBy: none
+		sourceColumn: Entities.EntityTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.LocationCategory'
+		dataType: string
+		lineageTag: fb00b38a-a31a-4c46-8872-9a1bd71352fd
+		summarizeBy: none
+		sourceColumn: Projects.LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EntityAssessmentDetails.YesNo5'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ced9c7bc-a84d-4155-b9d1-a5d145e0a919
+		summarizeBy: none
+		sourceColumn: EntityAssessmentDetails.YesNo5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FY''26'
+		dataType: int64
+		formatString: 0
+		lineageTag: 670df2d5-49a1-4311-9ad9-58387bd643f6
+		summarizeBy: sum
+		sourceColumn: FY'26
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FY''27'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f76ce89-8cf6-4420-a223-c869868d1153
+		summarizeBy: sum
+		sourceColumn: FY'27
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FY''28'
+		dataType: int64
+		formatString: 0
+		lineageTag: 74f444f3-f4e0-4009-8a8f-5624bb341a76
+		summarizeBy: sum
+		sourceColumn: FY'28
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A13 - Audit Plan' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(ObjectRelationships_table, each ([AssessmentId] = 31)),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"ObjectRelationshipId", "DimensionId", "StrategicRiskId", "RiskId", "ControlId", "ObjectiveId", "ProcedureId", "IssueId", "RecommendationId", "FolderId", "Dimension", "Entity", "Assessment", "Project", "StrategicRisk", "Risk", "Control", "Objective", "Procedure", "Issue", "Recommendation", "Folder"}),
+				    #"Grouped Rows" = Table.Group(#"Removed Columns", {"AssessmentId", "EntityId", "ProjectId"}, {{"No, of Records", each Table.RowCount(_), Int64.Type}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Grouped Rows", {"ProjectId"}, Projects, {"ProjectId"}, "Projects", JoinKind.LeftOuter),
+				    #"Filtered Rows1" = Table.SelectRows(#"Merged Queries", each ([EntityId] <> null)),
+				    #"Expanded Projects" = Table.ExpandTableColumn(#"Filtered Rows1", "Projects", {"ProjectTitle", "ProjectCode", "Category1", "Category2", "LocationCategory", "Category3", "Category4", "Category5", "Category6", "Category7", "Category8", "Category9", "Category10", "Category11", "Category12", "Category13", "MultiSelectCategory1", "MultiSelectCategory3", "EstimatedStartDate", "EstimatedEndDate", "EstimatedHours"}, {"Projects.ProjectTitle", "Projects.ProjectCode", "Projects.Category1", "Projects.Category2", "Projects.LocationCategory", "Projects.Category3", "Projects.Category4", "Projects.Category5", "Projects.Category6", "Projects.Category7", "Projects.Category8", "Projects.Category9", "Projects.Category10", "Projects.Category11", "Projects.Category12", "Projects.Category13", "Projects.MultiSelectCategory1", "Projects.MultiSelectCategory3", "Projects.EstimatedStartDate", "Projects.EstimatedEndDate", "Projects.EstimatedHours"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded Projects", {"EntityId"}, EntityAssessmentDetails, {"EntityId"}, "EntityAssessmentDetails", JoinKind.LeftOuter),
+				    #"Expanded EntityAssessmentDetails" = Table.ExpandTableColumn(#"Merged Queries1", "EntityAssessmentDetails", {"EntityTitle", "YesNo2", "YesNo3", "YesNo4", "YesNo5", "Category1", "Category2", "Category3", "Category4"}, {"EntityAssessmentDetails.EntityTitle", "EntityAssessmentDetails.YesNo2", "EntityAssessmentDetails.YesNo3", "EntityAssessmentDetails.YesNo4", "EntityAssessmentDetails.YesNo5", "EntityAssessmentDetails.Category1", "EntityAssessmentDetails.Category2", "EntityAssessmentDetails.Category3", "EntityAssessmentDetails.Category4"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Expanded EntityAssessmentDetails", {"EntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities" = Table.ExpandTableColumn(#"Merged Queries2", "Entities", {"ParentEntityId", "OrgPath", "OrgSort"}, {"Entities.ParentEntityId", "Entities.OrgPath", "Entities.OrgSort"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded Entities", {"Entities.ParentEntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities1" = Table.ExpandTableColumn(#"Merged Queries3", "Entities", {"EntityTitle"}, {"Entities.EntityTitle"}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Expanded Entities1", "EntityAssessmentDetails.YesNo2", "EntityAssessmentDetails.YesNo2 - Copy"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Duplicated Column",{{"EntityAssessmentDetails.YesNo2 - Copy", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","true","1",Replacer.ReplaceText,{"EntityAssessmentDetails.YesNo2 - Copy"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","false","0",Replacer.ReplaceText,{"EntityAssessmentDetails.YesNo2 - Copy"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value1",{{"EntityAssessmentDetails.YesNo2 - Copy", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"EntityAssessmentDetails.YesNo2 - Copy", "FY'26"}}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Renamed Columns", "EntityAssessmentDetails.YesNo3", "EntityAssessmentDetails.YesNo3 - Copy"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Duplicated Column1",{{"EntityAssessmentDetails.YesNo3 - Copy", type text}}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Changed Type2","true","1",Replacer.ReplaceText,{"EntityAssessmentDetails.YesNo3 - Copy"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","false","0",Replacer.ReplaceText,{"EntityAssessmentDetails.YesNo3 - Copy"}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Replaced Value3",{{"EntityAssessmentDetails.YesNo3 - Copy", Int64.Type}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type3",{{"EntityAssessmentDetails.YesNo3 - Copy", "FY'27"}}),
+				    #"Duplicated Column2" = Table.DuplicateColumn(#"Renamed Columns1", "EntityAssessmentDetails.YesNo4", "EntityAssessmentDetails.YesNo4 - Copy"),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Duplicated Column2",{{"EntityAssessmentDetails.YesNo4 - Copy", type text}}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Changed Type4","true","1",Replacer.ReplaceText,{"EntityAssessmentDetails.YesNo4 - Copy"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","false","0",Replacer.ReplaceText,{"EntityAssessmentDetails.YesNo4 - Copy"}),
+				    #"Changed Type5" = Table.TransformColumnTypes(#"Replaced Value5",{{"EntityAssessmentDetails.YesNo4 - Copy", Int64.Type}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Changed Type5",{{"EntityAssessmentDetails.YesNo4 - Copy", "FY'28"}})
+				in
+				    #"Renamed Columns2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

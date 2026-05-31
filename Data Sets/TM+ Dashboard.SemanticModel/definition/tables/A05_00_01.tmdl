@@ -1,0 +1,51 @@
+table A05_00_01
+	lineageTag: 9e50ae93-10f6-4bb3-98a0-59db99418978
+
+	column Year
+		formatString: 0
+		lineageTag: dfcef2c6-66e8-4e7c-9dd1-4165b641038f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: A05_00[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		formatString: 0
+		lineageTag: 88a2a191-e477-4ef2-8124-d8790aa00b6a
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: A05_00[TimeEntryUserId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		lineageTag: 8380fb34-613e-4850-8f1a-1d420a06b3a4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05_00[TimeEntryUser]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Admin Hrs (Non - Chargeable)'
+		lineageTag: cf867028-80f4-44da-9c5a-3313add1b562
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Total Admin Hrs (Non - Chargeable)]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cPK = CONCATENATE(A05_00_01[Year], A05_00_01[TimeEntryUserId])
+		lineageTag: acc965eb-d7e5-4ce8-b9dc-704c505aef2b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A05_00_01 = calculated
+		mode: import
+		source = SUMMARIZE(A05_00, A05_00[Year], A05_00[TimeEntryUserId], A05_00[TimeEntryUser], "Total Admin Hrs (Non - Chargeable)", SUM(A05_00[Admin Hours (Non - Chargeable)]))
+
+	annotation PBI_Id = 6c21bc7eddfd44cf9cbe7ca5e8466fa7
+

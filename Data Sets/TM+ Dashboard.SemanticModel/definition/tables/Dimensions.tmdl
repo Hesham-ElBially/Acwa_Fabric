@@ -1,0 +1,102 @@
+table Dimensions
+	lineageTag: 1509b6c7-d281-46f5-9e62-8f385a3e2e70
+
+	column DimensionId
+		dataType: int64
+		formatString: 0
+		lineageTag: 493aaad5-76dc-4d04-8cd1-668a31f8ad90
+		summarizeBy: none
+		sourceColumn: DimensionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column GlobalParentId
+		dataType: int64
+		formatString: 0
+		lineageTag: b17642ba-ff9c-4ec1-b839-a8488c73b9c5
+		summarizeBy: count
+		sourceColumn: GlobalParentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DimensionTitle
+		dataType: string
+		lineageTag: 6b45ecf1-abc0-4e2f-9d7e-6fabef4fbc96
+		summarizeBy: none
+		sourceColumn: DimensionTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column DimensionDescription
+		dataType: string
+		lineageTag: 79ce2711-c9a2-49e5-84be-ee8f6e760407
+		summarizeBy: none
+		sourceColumn: DimensionDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsGlobal
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5397e243-0c00-49e9-9b80-8610c43c8ad8
+		summarizeBy: none
+		sourceColumn: IsGlobal
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: d8f5a6dc-0ec9-4320-ba99-1d6588a25db1
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 866c87af-bfab-4306-bd06-b0925248bec9
+		summarizeBy: count
+		sourceColumn: CreatedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedUser
+		dataType: string
+		lineageTag: 9f3d03db-0590-4bab-b40f-e2fa982801d0
+		summarizeBy: none
+		sourceColumn: CreatedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUserId
+		dataType: int64
+		formatString: 0
+		lineageTag: 43bde106-eb18-494a-8ef2-6f3a99753ff3
+		summarizeBy: count
+		sourceColumn: LastModifiedUserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedUser
+		dataType: string
+		lineageTag: 2d5eec55-4b92-4944-89fb-23a95914a617
+		summarizeBy: none
+		sourceColumn: LastModifiedUser
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dimensions = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Dimensions_table = Source{[Name="Dimensions",Signature="table"]}[Data]
+				in
+				    Dimensions_table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

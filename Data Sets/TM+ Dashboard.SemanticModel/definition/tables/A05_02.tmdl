@@ -1,0 +1,71 @@
+table A05_02
+	lineageTag: 86c81d96-6de9-408e-a994-9bcde32c278b
+
+	column Year
+		formatString: 0
+		lineageTag: 9700cf2f-7d2c-4563-92fe-4bfeda9afd34
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: LocalDateTable_d4d2845e-d92d-4f72-9d74-d44bc49e9589[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUserId
+		formatString: 0
+		lineageTag: 95866842-11de-474b-a94b-9690b8b1c5cd
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUserId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeEntryUser
+		lineageTag: 44f0bdec-d582-48cb-8842-44f58531c206
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05 - Timesheet[TimeEntryUser]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projects.ProjectCode'
+		lineageTag: f012c38e-40cd-416b-971d-a3926e16018f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: A05 - Timesheet[Projects.ProjectCode]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Hours'
+		lineageTag: e3dfab4b-a21b-40f6-bea1-0329495be37a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Project Hours]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Audit Plan' = RELATED('A06 - Audit Plan'[ActiveAuditPlanTitle])
+		lineageTag: 472c4a13-e16b-46da-a7aa-ae59d9ed38dc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Portfolio Delivery Lead' = RELATED('A06 - Audit Plan'[Category13])
+		lineageTag: e8b6abad-2e61-48ad-8b44-c2030a411db4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Title' = RELATED('A06 - Audit Plan'[ProjectTitle])
+		lineageTag: 7cb2e9af-306f-4371-b0de-62612531f743
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A05_02 = calculated
+		mode: import
+		source = FILTER(SUMMARIZE('A05 - Timesheet', 'A05 - Timesheet'[DateOfEntry].[Year], 'A05 - Timesheet'[TimeEntryUserId], 'A05 - Timesheet'[TimeEntryUser], 'A05 - Timesheet'[Projects.ProjectCode], "Project Hours",sum('A05 - Timesheet'[Hours])), 'A05 - Timesheet'[Projects.ProjectCode] <> "")
+
+	annotation PBI_Id = 1f2f79c1013642839262a50f5de2fbf3
+

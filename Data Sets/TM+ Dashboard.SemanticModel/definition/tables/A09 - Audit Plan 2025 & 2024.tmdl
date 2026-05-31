@@ -1,0 +1,471 @@
+table 'A09 - Audit Plan 2025 & 2024'
+	lineageTag: 554df615-c400-4874-b4ab-6b2f1f267038
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: bc41bead-82a8-41f5-9f5a-08bfaf4b3bd4
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssessmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ffb04eb-5be5-4ef8-950b-8d70da4ab22c
+		summarizeBy: count
+		sourceColumn: AssessmentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectTitle
+		dataType: string
+		lineageTag: b306f074-e55f-4b88-836d-06c0bcb27a3f
+		summarizeBy: none
+		sourceColumn: ProjectTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectCode
+		dataType: string
+		lineageTag: cfd9784d-2b2f-4113-a9f0-f43312be602b
+		summarizeBy: none
+		sourceColumn: ProjectCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: a1fb1f79-ee58-411a-9d32-28c576524551
+		summarizeBy: count
+		sourceColumn: Category1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1
+		dataType: string
+		lineageTag: 75fb3d9b-b625-44fd-985b-d3de87134443
+		summarizeBy: none
+		sourceColumn: Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: dd403dee-a018-4b05-9d5c-9ad58c3a3774
+		summarizeBy: count
+		sourceColumn: Category2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category2
+		dataType: string
+		lineageTag: 0666f640-c4c9-4ed1-b2f0-8f0f935950c3
+		summarizeBy: none
+		sourceColumn: Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: 93aa00bf-aff7-453e-b8de-29ba7353a48b
+		summarizeBy: count
+		sourceColumn: LocationCategoryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCategory
+		dataType: string
+		lineageTag: 99f23989-f313-4ad0-b4ba-335057cd84ba
+		summarizeBy: none
+		sourceColumn: LocationCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bc6d8ea-d8ee-4888-a640-529ae67f9525
+		summarizeBy: count
+		sourceColumn: Category3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category3
+		dataType: string
+		lineageTag: d2d7d04c-6921-4531-8e26-858b7bca9c70
+		summarizeBy: none
+		sourceColumn: Category3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3214da32-45db-4be0-b916-fac6a82961db
+		summarizeBy: count
+		sourceColumn: Category4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category4
+		dataType: string
+		lineageTag: a3dc038d-d517-4c78-a384-c08d5790cf9d
+		summarizeBy: none
+		sourceColumn: Category4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5Id
+		dataType: int64
+		formatString: 0
+		lineageTag: e68f8561-d3fe-4f2b-897b-57ec80dc7621
+		summarizeBy: count
+		sourceColumn: Category5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category5
+		dataType: string
+		lineageTag: 7a173e50-7a60-4cbb-8be0-2ce380f661da
+		summarizeBy: none
+		sourceColumn: Category5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 446a8b1f-5810-494e-bf72-c091679ab0a2
+		summarizeBy: count
+		sourceColumn: Category6Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category6
+		dataType: string
+		lineageTag: 46fbbd49-05dc-4165-ad1a-5da76f3f3d2d
+		summarizeBy: none
+		sourceColumn: Category6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 35b2b053-bde9-44f4-ad20-67abdde8f25d
+		summarizeBy: count
+		sourceColumn: Category9Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category9
+		dataType: string
+		lineageTag: e46f5576-d021-486f-87c0-1fe823cdc86a
+		summarizeBy: none
+		sourceColumn: Category9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a812f4d-618c-4962-b341-99a0cfeea02e
+		summarizeBy: count
+		sourceColumn: Category10Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category10
+		dataType: string
+		lineageTag: 4aeedbf7-af7d-4a7a-98c0-a50a8d13658b
+		summarizeBy: none
+		sourceColumn: Category10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ade3cf5-1e0e-4d7e-ab80-f1f04d4c6f60
+		summarizeBy: count
+		sourceColumn: Category11Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category11
+		dataType: string
+		lineageTag: ab59ca1f-0811-4790-8c34-2bff3e193adc
+		summarizeBy: none
+		sourceColumn: Category11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c574b4e-24b5-4749-8a3a-4d1e208d32a8
+		summarizeBy: count
+		sourceColumn: Category12Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category12
+		dataType: string
+		lineageTag: 0cceeac0-3aa6-4031-95f5-0822302fb78f
+		summarizeBy: none
+		sourceColumn: Category12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 709f4718-067f-4d5d-bc79-bd4fea776971
+		summarizeBy: count
+		sourceColumn: Category13Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category13
+		dataType: string
+		lineageTag: 1f0cdbb5-1e12-4e77-9217-656afa9b4fce
+		summarizeBy: none
+		sourceColumn: Category13
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 46c5215e-85c8-4aea-8dde-f405129ca15f
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory1
+		dataType: string
+		lineageTag: d867dbfe-ce3c-4712-b41b-d7f5cc583e1a
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory1
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 72d97e01-7df5-4c74-b765-001726c836f6
+		summarizeBy: count
+		sourceColumn: MultiSelectCategory3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultiSelectCategory3
+		dataType: string
+		lineageTag: a96c6451-8486-496d-a75a-d6773c3e013f
+		summarizeBy: none
+		sourceColumn: MultiSelectCategory3
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedHours
+		dataType: int64
+		formatString: 0.00
+		lineageTag: 3e069101-fd82-4eb4-9f34-2823f407be37
+		summarizeBy: sum
+		sourceColumn: EstimatedHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualHours
+		dataType: double
+		lineageTag: a6a8aaed-4c27-40f0-b0f7-ff02d6373f17
+		summarizeBy: sum
+		sourceColumn: ActualHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProjectStateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4be785e9-ec4e-438e-b639-3a862337e7eb
+		summarizeBy: count
+		sourceColumn: ProjectStateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectState
+		dataType: string
+		lineageTag: 0825989c-073b-4fac-bda8-833c4d950b01
+		summarizeBy: none
+		sourceColumn: ProjectState
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseValue
+		dataType: string
+		lineageTag: d76d59e7-5ae0-4a46-bbfe-808cff0c723b
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentProjectPhaseMilestoneValue
+		dataType: string
+		lineageTag: 4528dbe9-46e7-40e5-9f5a-89e87f731160
+		summarizeBy: none
+		sourceColumn: CurrentProjectPhaseMilestoneValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CombinedTotalHours
+		dataType: double
+		lineageTag: e15e35ff-a1b2-4d0d-a70d-3c3247914a83
+		summarizeBy: sum
+		sourceColumn: CombinedTotalHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActiveAuditPlanId
+		dataType: int64
+		formatString: 0
+		lineageTag: 7eb643eb-25cb-48c2-a151-93941c0c5c24
+		summarizeBy: count
+		sourceColumn: ActiveAuditPlanId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveAuditPlanTitle
+		dataType: string
+		lineageTag: baf047e4-ee3e-465a-a130-dfb6bbc80039
+		summarizeBy: none
+		sourceColumn: ActiveAuditPlanTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category1:Category2
+		dataType: string
+		lineageTag: 4dd1e0d8-a67e-470d-ae4d-fa3525de1b97
+		summarizeBy: none
+		sourceColumn: Category1:Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planned Man-Day' = 'A09 - Audit Plan 2025 & 2024'[EstimatedHours]/8
+		lineageTag: 37589625-5ee5-4aad-a98e-401be1e42a06
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Man-Days' = 'A09 - Audit Plan 2025 & 2024'[CombinedTotalHours]/8
+		lineageTag: 77196ba7-2433-423e-bf56-77b34d3cb413
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cVariance = if ('A09 - Audit Plan 2025 & 2024'[Actual Man-Days] = 0, 0.00, 'A09 - Audit Plan 2025 & 2024'[Actual Man-Days]-'A09 - Audit Plan 2025 & 2024'[Planned Man-Day])
+		lineageTag: 0f6e8941-f68b-45e1-aeb5-9da7c4236b1b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cType = ```
+			SWITCH(TRUE,
+								('A09 - Audit Plan 2025 & 2024'[Actual Man-Days] = 0), "Time Yet to be booked", 
+			                    ('A09 - Audit Plan 2025 & 2024'[Actual Man-Days] <> 0) && ('A09 - Audit Plan 2025 & 2024'[cVariance] < 0), "Under Utilization",
+			                    ('A09 - Audit Plan 2025 & 2024'[Actual Man-Days] <> 0) && ('A09 - Audit Plan 2025 & 2024'[cVariance] = 0), "At Par Utilization", 
+			                    ('A09 - Audit Plan 2025 & 2024'[Actual Man-Days] <> 0) && ('A09 - Audit Plan 2025 & 2024'[cVariance] > 0), "Over Utilization",  
+								"Default"
+			)
+			```
+		lineageTag: 7265baa5-80fa-4aec-87c8-988fea24f81e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column cPecentageOfCompletion = ```
+			'A09 - Audit Plan 2025 & 2024'[Actual Man-Days]/'A09 - Audit Plan 2025 & 2024'[Planned Man-Day] 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 74df14e7-62c7-4311-a094-5599c1d7912d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A09 - Audit Plan 2025 & 2024' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    Projects_table = Source{[Name="Projects",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(Projects_table,{"Category7Id", "Category7", "Category8Id", "Category8", "RiskCategoryId", "RiskCategory", "FinalRiskCategoryId", "FinalRiskCategory", "MultiSelectCategory2Id", "MultiSelectCategory2", "MultiSelectCategory4Id", "MultiSelectCategory4", "MultiSelectCategory5Id", "MultiSelectCategory5", "MultiSelectCategory6Id", "MultiSelectCategory6", "MultiSelectCategory7Id", "MultiSelectCategory7", "NumericValue1", "NumericValue2", "NumericValue3", "NumericValue4", "NumericValue5", "NumericValue6", "NumericValue7", "EstimatedStartDate", "EstimatedEndDate", "ActualStartDate", "ActualEndDate", "Date1", "Date2", "Date3", "Date4", "Date5", "Date6", "EstimatedResourceCosts", "ActualResourceCosts", "EstimatedExternalCosts", "ActualExternalCosts", "EstimatedExpenses", "ActualExpenses", "CompletedDate", "ScheduledStartDate", "ScheduledEndDate", "YesNo1", "YesNo2", "YesNo3", "YesNo4", "YesNo5", "IsMigrated", "IsOfflineMergeEnabled", "ExcludeAssessmentObjects", "LastModifiedDate", "LastModifiedUserId", "LastModifiedUser", "ProjectApprovalStateId", "ProjectApprovalState"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns", each ([ActiveAuditPlanTitle] = "2025 Audit Plan" or [ActiveAuditPlanTitle] = "2024 Audit Plan ")),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Filtered Rows", "Category1", "Category1 - Copy"),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Duplicated Column", "Category2", "Category2 - Copy"),
+				    #"Merged Columns" = Table.CombineColumns(#"Duplicated Column1",{"Category1 - Copy", "Category2 - Copy"},Combiner.CombineTextByDelimiter(":", QuoteStyle.None),"Category1:Category2"),
+				    #"Replaced Value" = Table.ReplaceValue(#"Merged Columns","Project Company (MEASEA & Central Asia):Technical - Operations Oversight","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Project Company (KSA):Technical - Operations Oversight","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Project Company (KSA):Construction Oversight","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","O and M:Operations, Construction, HSSE & Technical","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Project Company (MEASEA & Central Asia):Construction Oversight","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","O and M:Technical - Operations & Maintenance","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Project Company (KSA):Technical - Construction Oversight","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","Project Company (MEASEA & Central Asia):Technical - Construction Oversight","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Project Company (MEASEA & Central Asia):Technical - Operations & Maintenance","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","Project Company (MEASEA & Central Asia):Governance, Legal & Compliance","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","Project Company (KSA):Governance, Legal & Compliance","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10","Project Company (MEASEA & Central Asia):Enabling Functions","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","Project Company (MEASEA & Central Asia):People & Culture","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","Project Company (KSA):Information Technology","03. IT/OT Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","Project Company (MEASEA & Central Asia):Finance","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14","Project Company (KSA):People & Culture","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value16" = Table.ReplaceValue(#"Replaced Value15","Project Company (MEASEA & Central Asia):Digital and Cybersecurity","03. IT/OT Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value17" = Table.ReplaceValue(#"Replaced Value16","Project Company (KSA):Finance","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value18" = Table.ReplaceValue(#"Replaced Value17","Project Company (KSA):Contract Compliance","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value19" = Table.ReplaceValue(#"Replaced Value18","Project Company (KSA):Digital and Cybersecurity","03. IT/OT Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value20" = Table.ReplaceValue(#"Replaced Value19","Project Company (MEASEA & Central Asia):Information Technology","03. IT/OT Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value21" = Table.ReplaceValue(#"Replaced Value20","Project Company (KSA):Enabling Functions","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value22" = Table.ReplaceValue(#"Replaced Value21","Project Company (MEASEA & Central Asia):Portfolio Management","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value23" = Table.ReplaceValue(#"Replaced Value22","Project Company (KSA):Operational","01. Enabling Functions",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value24" = Table.ReplaceValue(#"Replaced Value23","Digital:Information Technology","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value25" = Table.ReplaceValue(#"Replaced Value24","Corporate:Portfolio Management","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value26" = Table.ReplaceValue(#"Replaced Value25","Corporate:Supply Chain","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value27" = Table.ReplaceValue(#"Replaced Value26","Corporate:Finance","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value28" = Table.ReplaceValue(#"Replaced Value27","Corporate:Risk, Strategy & Sustainability","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value29" = Table.ReplaceValue(#"Replaced Value28","Corporate:People & Culture","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value30" = Table.ReplaceValue(#"Replaced Value29","Corporate:Operations, Construction, HSSE & Technical","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value31" = Table.ReplaceValue(#"Replaced Value30","Digital:Digital and Cybersecurity","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value32" = Table.ReplaceValue(#"Replaced Value31","Corporate:Technical - Operations & Maintenance","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value33" = Table.ReplaceValue(#"Replaced Value32","Corporate:Digital and Cybersecurity","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value34" = Table.ReplaceValue(#"Replaced Value33","Corporate:Business Development","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value35" = Table.ReplaceValue(#"Replaced Value34","Corporate:Technical - Operations Oversight","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value36" = Table.ReplaceValue(#"Replaced Value35","Corporate:Legal & Compliance","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value37" = Table.ReplaceValue(#"Replaced Value36","Corporate:Governance, Legal & Compliance","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value38" = Table.ReplaceValue(#"Replaced Value37","O and M:Enabling Functions","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value39" = Table.ReplaceValue(#"Replaced Value38","Corporate:Enabling Functions","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value40" = Table.ReplaceValue(#"Replaced Value39","Corporate:Operational","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value41" = Table.ReplaceValue(#"Replaced Value40","Corporate:Health and Safety","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value42" = Table.ReplaceValue(#"Replaced Value41","Corporate:Technical - HSSE","00. Corporate",Replacer.ReplaceText,{"Category1:Category2"}),
+				    #"Replaced Value43" = Table.ReplaceValue(#"Replaced Value42","Project Company (KSA):Technical - Operations & Maintenance","02. Technical Functions",Replacer.ReplaceText,{"Category1:Category2"})
+				in
+				    #"Replaced Value43"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

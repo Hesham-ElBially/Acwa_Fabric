@@ -1,0 +1,160 @@
+table 'A11 - Risk Heat Map'
+	lineageTag: 0102aeed-db20-469f-ab4e-6a45365f6822
+
+	column 'StrategicRisks.StrategicRiskCode'
+		dataType: string
+		lineageTag: f406cfe6-6bf3-444a-9125-398ca56bf46d
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.StrategicRiskTitle'
+		dataType: string
+		lineageTag: 6ccacf4b-8037-4226-a335-73cea52a077b
+		summarizeBy: none
+		sourceColumn: StrategicRisks.StrategicRiskTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category1'
+		dataType: string
+		lineageTag: 8d812995-1072-46eb-9850-206829c85495
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StrategicRisks.Category2'
+		dataType: string
+		lineageTag: 6c3b0e0e-0776-4fcc-9c6c-b20fb7b8d4de
+		summarizeBy: none
+		sourceColumn: StrategicRisks.Category2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood'
+		dataType: double
+		lineageTag: e1ec41c8-60cb-4894-b6d3-53b35acd204e
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact'
+		dataType: double
+		lineageTag: 220f2fc2-a2d6-4fe6-b5f6-8fae637996ae
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score'
+		dataType: double
+		lineageTag: c5759199-3ad3-4c38-8071-5f85ed804c16
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Risk Prioritization'
+		dataType: string
+		lineageTag: c7d2895c-9ee5-41b5-8c07-1a2b9767778e
+		summarizeBy: none
+		sourceColumn: Risk Prioritization
+		sortByColumn: 'Rating Order'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Order' = RELATED('A00 - Rating Order'[Order])
+		formatString: 0
+		lineageTag: e412a7ea-3bef-4d08-9139-abac7f5a20cb
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Avg. Residual Likelihood - Round'
+		dataType: double
+		lineageTag: 8d30d011-8802-4f09-98b4-402f8034ecb9
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Likelihood - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Impact - Round'
+		dataType: double
+		lineageTag: 33fa9b59-d0bd-46d9-aa8a-7071d1a6cf85
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Impact - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Avg. Residual Calc Score - Round'
+		dataType: double
+		lineageTag: 265e4532-a401-4974-a350-f4b74530242a
+		summarizeBy: sum
+		sourceColumn: Avg. Residual Calc Score - Round
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'A11 - Risk Heat Map' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ObjectRelationships_table = Source{[Name="ObjectRelationships",Signature="table"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(ObjectRelationships_table,{"ProjectId", "RiskId", "ControlId", "ObjectiveId", "ProcedureId", "IssueId", "RecommendationId", "FolderId", "Dimension", "Entity", "Assessment", "Project", "StrategicRisk", "Risk", "Control", "Objective", "Procedure", "Issue", "Recommendation", "Folder"}),
+				    #"Grouped Rows" = Table.Group(#"Removed Columns", {"DimensionId", "EntityId", "AssessmentId", "StrategicRiskId"}, {{"No. of Records", each Table.RowCount(Table.Distinct(_)), Int64.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Grouped Rows", each ([AssessmentId] = 31)),
+				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows", {"AssessmentId"}, Assessments, {"AssessmentId"}, "Assessments", JoinKind.LeftOuter),
+				    #"Expanded Assessments" = Table.ExpandTableColumn(#"Merged Queries", "Assessments", {"AssessmentTitle"}, {"Assessments.AssessmentTitle"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Expanded Assessments", {"EntityId"}, Entities, {"EntityId"}, "Entities", JoinKind.LeftOuter),
+				    #"Expanded Entities" = Table.ExpandTableColumn(#"Merged Queries1", "Entities", {"EntityTitle", "OrgPath", "OrgSort"}, {"Entities.EntityTitle", "Entities.OrgPath", "Entities.OrgSort"}),
+				    #"Sorted Rows" = Table.Sort(#"Expanded Entities",{{"Entities.OrgSort", Order.Ascending}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Sorted Rows", "Entities.OrgPath", "Entities.OrgPath - Copy"),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Duplicated Column", "Entities.OrgPath - Copy", Splitter.SplitTextByDelimiter(">", QuoteStyle.Csv), {"Entities.OrgPath - Copy.1", "Entities.OrgPath - Copy.2", "Entities.OrgPath - Copy.3", "Entities.OrgPath - Copy.4", "Entities.OrgPath - Copy.5", "Entities.OrgPath - Copy.6"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Entities.OrgPath - Copy.1", type text}, {"Entities.OrgPath - Copy.2", type text}, {"Entities.OrgPath - Copy.3", type text}, {"Entities.OrgPath - Copy.4", type text}, {"Entities.OrgPath - Copy.5", type text}, {"Entities.OrgPath - Copy.6", type text}}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Changed Type", {"StrategicRiskId"}, StrategicRisks, {"StrategicRiskId"}, "StrategicRisks", JoinKind.LeftOuter),
+				    #"Expanded StrategicRisks" = Table.ExpandTableColumn(#"Merged Queries2", "StrategicRisks", {"StrategicRiskTitle", "StrategicRiskCode", "StrategicRiskState", "Category1", "Category2"}, {"StrategicRisks.StrategicRiskTitle", "StrategicRisks.StrategicRiskCode", "StrategicRisks.StrategicRiskState", "StrategicRisks.Category1", "StrategicRisks.Category2"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Expanded StrategicRisks", {"StrategicRiskId"}, #"A11_01 - Score: Inherent Likelihood", {"StrategicRiskId"}, "A11_00 - Score: Inherent Likelihood", JoinKind.LeftOuter),
+				    #"Expanded A11_00 - Score: Inherent Likelihood" = Table.ExpandTableColumn(#"Merged Queries3", "A11_00 - Score: Inherent Likelihood", {"ScoreValue"}, {"A11_00 - Score: Inherent Likelihood.ScoreValue"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Expanded A11_00 - Score: Inherent Likelihood", {"StrategicRiskId"}, #"A11_02 - Score: Inherent Impact", {"StrategicRiskId"}, "A11_01 - Score: Inherent Impact", JoinKind.LeftOuter),
+				    #"Expanded A11_01 - Score: Inherent Impact" = Table.ExpandTableColumn(#"Merged Queries4", "A11_01 - Score: Inherent Impact", {"ScoreValue"}, {"A11_01 - Score: Inherent Impact.ScoreValue"}),
+				    #"Merged Queries5" = Table.NestedJoin(#"Expanded A11_01 - Score: Inherent Impact", {"StrategicRiskId"}, #"A11_03 - Calc Score: Inherent", {"StrategicRiskId"}, "A11_02 - Score: Inherent Total", JoinKind.LeftOuter),
+				    #"Expanded A11_02 - Score: Inherent Total" = Table.ExpandTableColumn(#"Merged Queries5", "A11_02 - Score: Inherent Total", {"CalculatedScoreValue"}, {"A11_02 - Score: Inherent Total.CalculatedScoreValue"}),
+				    #"Merged Queries6" = Table.NestedJoin(#"Expanded A11_02 - Score: Inherent Total", {"StrategicRiskId"}, #"A11_04 - Score: Residual Likelihood", {"StrategicRiskId"}, "A11_03 - Score: Residual Likelihood", JoinKind.LeftOuter),
+				    #"Expanded A11_03 - Score: Residual Likelihood" = Table.ExpandTableColumn(#"Merged Queries6", "A11_03 - Score: Residual Likelihood", {"ScoreValue"}, {"A11_03 - Score: Residual Likelihood.ScoreValue"}),
+				    #"Merged Queries7" = Table.NestedJoin(#"Expanded A11_03 - Score: Residual Likelihood", {"StrategicRiskId"}, #"A11_05 - Score: Residual Impact", {"StrategicRiskId"}, "A11_04 - Score: Residual Impact", JoinKind.LeftOuter),
+				    #"Expanded A11_04 - Score: Residual Impact" = Table.ExpandTableColumn(#"Merged Queries7", "A11_04 - Score: Residual Impact", {"ScoreValue"}, {"A11_04 - Score: Residual Impact.ScoreValue"}),
+				    #"Merged Queries8" = Table.NestedJoin(#"Expanded A11_04 - Score: Residual Impact", {"StrategicRiskId"}, #"A11_06 - Calc Score: Residual", {"StrategicRiskId"}, "A11_05 - Calc Score: Residual", JoinKind.LeftOuter),
+				    #"Expanded A11_05 - Calc Score: Residual" = Table.ExpandTableColumn(#"Merged Queries8", "A11_05 - Calc Score: Residual", {"CalculatedScoreValue"}, {"A11_05 - Calc Score: Residual.CalculatedScoreValue"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Expanded A11_05 - Calc Score: Residual", each ([#"A11_05 - Calc Score: Residual.CalculatedScoreValue"] <> null)),
+				    #"Grouped Rows1" = Table.Group(#"Filtered Rows1", {"StrategicRisks.StrategicRiskCode", "StrategicRisks.StrategicRiskTitle", "StrategicRisks.Category1", "StrategicRisks.Category2"}, {{"Avg. Residual Likelihood", each List.Average([#"A11_03 - Score: Residual Likelihood.ScoreValue"]), type nullable number}, {"Avg. Residual Impact", each List.Average([#"A11_04 - Score: Residual Impact.ScoreValue"]), type nullable number}, {"Avg. Residual Calc Score", each List.Average([#"A11_05 - Calc Score: Residual.CalculatedScoreValue"]), type nullable number}}),
+				    #"Inserted Rounding" = Table.AddColumn(#"Grouped Rows1", "Round", each Number.Round([Avg. Residual Likelihood], 0), type number),
+				    #"Renamed Columns" = Table.RenameColumns(#"Inserted Rounding",{{"Round", "Avg. Residual Likelihood - Round"}}),
+				    #"Inserted Rounding1" = Table.AddColumn(#"Renamed Columns", "Round", each Number.Round([Avg. Residual Impact], 0), type number),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Rounding1",{{"Round", "Avg. Residual Impact - Round"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Avg. Residual Calc Score - Round", each [#"Avg. Residual Likelihood - Round"]*[#"Avg. Residual Impact - Round"]),
+				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "Risk Prioritization", each if [#"Avg. Residual Calc Score - Round"] > 9 then "High" else if [#"Avg. Residual Calc Score - Round"] <= 4 then "Low" else "Medium"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Avg. Residual Calc Score - Round", type number}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

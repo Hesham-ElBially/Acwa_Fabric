@@ -1,0 +1,233 @@
+table 'A08_00 - All Phase'
+	lineageTag: fe53dba2-b797-4230-af89-cdf8b2bb1883
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		lineageTag: fda16a60-9ba2-4fa6-b8ac-6292b5f88d0d
+		summarizeBy: none
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		lineageTag: b8c22cc1-3c8b-48fc-8190-0562e9d13690
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectPhaseName
+		dataType: string
+		lineageTag: 2b88395b-7216-4f27-97b6-bfbf7748fcc6
+		summarizeBy: none
+		sourceColumn: ProjectPhaseName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ba14c51-1052-4993-b2ed-3990a7d27ae6
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 91398b88-c384-4f3e-b00e-ddb00feac5c4
+		summarizeBy: none
+		sourceColumn: EstStartDate
+
+		variation Variation
+			isDefault
+			relationship: b0f96800-625e-4cd8-9393-223cb8bced9b
+			defaultHierarchy: LocalDateTable_b3ea031c-b403-41b9-a2b8-50223b63bc6c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EstEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7199813d-ae57-4e6f-82a1-9acddf700c73
+		summarizeBy: none
+		sourceColumn: EstEndDate
+
+		variation Variation
+			isDefault
+			relationship: d7a50548-6431-4a2d-b5db-b6c3a2f493e0
+			defaultHierarchy: LocalDateTable_8350a2fd-b099-4029-9f14-1455bfe48c67.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6e8e8cdf-c650-4b3d-ad8b-0e9493e7a22a
+		summarizeBy: none
+		sourceColumn: ActStartDate
+
+		variation Variation
+			isDefault
+			relationship: d9233cb0-c8b2-433b-be96-f7131bec85bd
+			defaultHierarchy: LocalDateTable_4b1704de-9169-445f-b454-ced5d5c876be.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0728b99d-55f3-44a5-9673-3d61143efb0c
+		summarizeBy: none
+		sourceColumn: ActEndDate
+
+		variation Variation
+			isDefault
+			relationship: 51d4040e-0ec3-4003-8776-34ed86abfcc4
+			defaultHierarchy: LocalDateTable_84913b7e-9552-4d3b-8010-8160567d77e2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0911a5eb-db6a-4e61-8fc4-fe240174fe60
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstHours
+		dataType: int64
+		formatString: 0
+		lineageTag: af206639-7dbb-4cad-b4c4-eb3895c1b276
+		summarizeBy: sum
+		sourceColumn: EstHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActHours
+		dataType: double
+		lineageTag: fb930ba0-9323-4602-a38c-7cf05c38abb4
+		summarizeBy: sum
+		sourceColumn: ActHours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsComplete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c89eed10-55a4-465e-b92f-f1382e71cec9
+		summarizeBy: none
+		sourceColumn: IsComplete
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0212080c-813b-4fa2-9ce8-f20ac7498392
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: d0b0820b-36d5-4e30-bad9-9c6f78c0d036
+			defaultHierarchy: LocalDateTable_3049ea78-4842-495b-835e-d15a87a4f6d7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column RevisedDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7e9a5068-b649-42a6-81de-7151aa5f4bd9
+		summarizeBy: none
+		sourceColumn: RevisedDueDate
+
+		variation Variation
+			isDefault
+			relationship: 7f73a9aa-6047-4d4a-9f0c-49645f05cbd5
+			defaultHierarchy: LocalDateTable_1985fbbf-b0ba-4042-b480-f1ce0c980898.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ReviewDueDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8297cbdd-e20a-41d4-b77b-b257a38c7402
+		summarizeBy: none
+		sourceColumn: ReviewDueDate
+
+		variation Variation
+			isDefault
+			relationship: 9c9cc76c-fef7-4ee4-af20-a450af88baef
+			defaultHierarchy: LocalDateTable_030a100c-f0b5-47c1-9c2c-3ca63fbb3368.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ScheduledStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a3070c1f-6af2-4736-a2bf-d5e15b5cb872
+		summarizeBy: none
+		sourceColumn: ScheduledStartDate
+
+		variation Variation
+			isDefault
+			relationship: b57afbce-a0f2-4d9d-bf4b-42b14e7fdfa6
+			defaultHierarchy: LocalDateTable_2e48079f-c656-4ffc-8128-57e28aab880f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ScheduledEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5f07ef93-6486-4dca-9529-b53f54867caf
+		summarizeBy: none
+		sourceColumn: ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: 6ebb17bb-bf0f-4013-8ea7-d4e484e1a0fc
+			defaultHierarchy: LocalDateTable_373ff77e-3a1d-46d9-b151-7d43c67eb4aa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'A08_00 - All Phase' = m
+		mode: import
+		source =
+				let
+				    Source = OData.Feed("https://acwapoweria.teammatehosting.com/TeamMate/odata/v1", null, [Implementation="2.0"]),
+				    ProjectPhases_table = Source{[Name="ProjectPhases",Signature="table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(ProjectPhases_table, each ([ProjectPhaseName] = "4. Closure" or [ProjectPhaseName] = "2. Fieldwork" or [ProjectPhaseName] = "1. Planning" or [ProjectPhaseName] = "3. Reporting"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

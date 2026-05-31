@@ -1,0 +1,831 @@
+table PriceDiff_MismatchOnly
+	lineageTag: 7ac3cc6b-ba6e-4426-9ab9-9851a803003a
+
+	column 'Purchasing Doc.'
+		lineageTag: a307c73f-5b79-43d3-a95e-f10b0a4d8cfd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Purchasing Doc.]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item number'
+		lineageTag: 587ad95a-466c-48d2-abfb-3341805e9cbe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Item number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Deletion flag for BOMs'
+		lineageTag: 6504290c-a6c2-43d3-8ff1-4bfdcecd3a63
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Deletion flag for BOMs]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Text'
+		lineageTag: a9cb12bd-7c14-403e-8646-59c27bb7700a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Short Text]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		lineageTag: a9560390-73ae-440d-ac69-461a75e1f6a8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Material]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant
+		lineageTag: e58aab20-6a76-4388-9b23-a0a1faadd275
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stor. Location'
+		lineageTag: 2a5dbad7-298a-4e5c-bb15-51bef4112d97
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Stor. Location]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Group'
+		lineageTag: 920ac7ea-e869-4764-be41-34351c865611
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Material Group]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quantity in base unit of measure'
+		lineageTag: 79f7b793-19c2-49db-84a4-85f3656058f2
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Quantity in base unit of measure]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Base Unit'
+		lineageTag: ea3fd261-e703-4ea8-a30a-bc28cf19ca09
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Base Unit]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net price'
+		lineageTag: abd7d75b-7f93-4c45-af79-63e77340a971
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Net price]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Price Unit'
+		lineageTag: 657ae92b-e50e-4b4a-8742-aaa9076c9a19
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Price Unit]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net value'
+		lineageTag: 7e2e6e32-7402-427c-93f5-35c59b2a79f1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Net value]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Gross Price'
+		lineageTag: bb8f2c27-f390-4aec-b30a-c007427a0c45
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Gross Price]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Deliv. Compl.'
+		lineageTag: 9e654070-79ea-43b6-a40a-930f6bccccbd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Deliv. Compl.]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Final Invoice'
+		lineageTag: 04a9b2d3-2372-4ecb-82a8-e7def3ef291e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Final Invoice]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Category'
+		lineageTag: 7a83fb2e-97c8-4353-8154-170a77b604fe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Item Category]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Assignment Category'
+		lineageTag: 481c8fab-618a-4c5a-a83d-47f5471303a4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Account Assignment Category]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Agreement
+		lineageTag: c63c0792-cbbb-4907-9b3a-5c422371e08f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Agreement]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Profit Center'
+		lineageTag: 9d14049d-e118-408e-a1b1-382620a08fa2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Profit Center]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase Req.'
+		lineageTag: 48d9a61c-2511-44cb-b0b3-41a801b6ce59
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Purchase Req.]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requisn Item'
+		lineageTag: e42db783-34a6-42a9-af24-7be62f337853
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Requisn Item]
+
+		annotation SummarizationSetBy = Automatic
+
+	column GL_Account
+		lineageTag: 894fefea-55c5-4d3e-a834-5d65354220f4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[GL_Account]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PR_Created_On
+		formatString: General Date
+		lineageTag: b781337a-1804-4e06-a895-e0968a85c806
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[PR_Created_On]
+
+		variation Variation
+			isDefault
+			relationship: bc2f1175-2b1f-463e-b355-36d6593fabde
+			defaultHierarchy: LocalDateTable_e48df928-047c-4ca4-b37a-c188fae2d498.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Requisitioner
+		lineageTag: 95ebaff0-db4a-42a5-9342-b1e21e552e5d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Requisitioner]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor
+		lineageTag: 64856054-1c90-420a-b04c-bd557fa688f4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Vendor]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		lineageTag: b97f9d2e-bd5b-42bd-9279-db46ad4109b8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Currency]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Document_Date
+		formatString: General Date
+		lineageTag: a4bb3f45-dc18-4fd6-85d0-ac87ebf74a2f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Document_Date]
+
+		variation Variation
+			isDefault
+			relationship: de9de49a-dee8-49d2-b325-b1a5ce3c3684
+			defaultHierarchy: LocalDateTable_c511f94b-8b63-4dee-b1e8-e3d05da6a6fe.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LFA1_Vendor
+		lineageTag: e23db765-742a-41c0-a79d-84d7bd6e0103
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[LFA1_Vendor]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		lineageTag: 6361ebed-dd6c-430c-8043-f9415cc8d3ea
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Name 2'
+		lineageTag: 9a66f67f-52cd-4deb-a24a-0406c5d93db6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Name 2]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Name 3'
+		lineageTag: 22a27b22-702d-4c78-912e-803d5ab19a76
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Name 3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Name 4'
+		lineageTag: 9c1b8c53-61c7-408b-a547-abf5daf2f45c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Name 4]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LFA1_Currency
+		lineageTag: 18aecadd-2a36-4e8f-8f83-b7de129f403a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[LFA1_Currency]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Code'
+		lineageTag: a57aaea8-2122-475f-84ae-7373b3a2ca71
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Company Code]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_City
+		lineageTag: 0f79d83a-d329-41f1-bf51-8ad6d2572819
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[CC_City]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC_Country
+		lineageTag: b1f77380-9d5e-4845-9556-8bd5fcd2e39f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[CC_Country]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Chart of Accounts'
+		lineageTag: d719022b-228b-429d-9ebb-4fbeda0fbae5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Chart of Accounts]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Allocation Indicator'
+		lineageTag: 12c8877e-1d4e-41ad-be6d-2f77081825df
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Allocation Indicator]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		lineageTag: d4617c93-332c-4c44-844a-3851fadb501b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Address]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant_Name
+		lineageTag: f0283112-888d-47b5-a13a-94f9465ff3d5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant_Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant_Name2
+		lineageTag: baae60c0-2882-414f-ae62-6652ecca294f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant_Name2]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant_City
+		lineageTag: 28863254-4c83-4deb-92f0-b4d961427aab
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant_City]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant_Country
+		lineageTag: 39f55ba9-e568-4aeb-850a-6a99740f4983
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant_Country]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		lineageTag: e2ead897-bd0c-4622-9363-482c4deaffde
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Region]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'County code'
+		lineageTag: c49d85f3-8986-4b25-bd97-0fafbb533203
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[County code]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'City Code'
+		lineageTag: a16877a0-f342-457e-a5ed-8d71e5edecd7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[City Code]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plant cat.'
+		lineageTag: 82c7a421-faf3-41c5-ab1a-99c431d57ad2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant cat.]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant_Purchasing_Org
+		lineageTag: ff92a823-bc4b-41bd-af63-c63dbe11c8aa
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant_Purchasing_Org]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Org.'
+		lineageTag: e786ecda-0de3-402e-870f-064f88a849cd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Sales Org.]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Conditions at plant level'
+		lineageTag: 0e88f84c-7401-4846-9551-d6c4019ed6dc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Conditions at plant level]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source list requirement'
+		lineageTag: e4107459-eb04-4cdb-85b9-1deb6eb71993
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Source list requirement]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant_Customer
+		lineageTag: 5f4009fa-e362-4253-befc-84377324693c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant_Customer]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant_Vendor
+		lineageTag: f8cd0852-7137-4db3-b50a-138a2066e2cd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant_Vendor]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Indicator: Release Required'
+		lineageTag: 81e0f517-4c1a-4c26-932b-ee7ca6dd2ac7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Indicator: Release Required]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purch. Group'
+		lineageTag: 7a5ded7a-d86d-4d4e-a94d-541cdeb79244
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Purch. Group]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PR_Created_by
+		lineageTag: f5bf204b-0001-4894-b4d1-d1f88c6221d8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[PR_Created_by]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requisition Date of Material Order'
+		formatString: General Date
+		lineageTag: 4d956c80-cd74-498d-ad93-665678a5b85d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Requisition Date of Material Order]
+
+		variation Variation
+			isDefault
+			relationship: d79fca5b-b926-44ab-a2db-82940ce7bcde
+			defaultHierarchy: LocalDateTable_eedf8258-5926-4952-b0ec-30cf7977fd5a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase Requisition Release Date'
+		formatString: General Date
+		lineageTag: 8a0ddc15-e707-4011-a12b-fd93e174faef
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Purchase Requisition Release Date]
+
+		variation Variation
+			isDefault
+			relationship: 59d9549c-10f6-4b5e-8eb6-3ed8ecdcb9bd
+			defaultHierarchy: LocalDateTable_e4d2395a-49f5-40e6-9490-a9edadef8a50.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requirement Urgency'
+		lineageTag: 461d45c0-b8c8-49c3-a203-4bc104fe1422
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Requirement Urgency]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requirement Priority'
+		lineageTag: 8540dc02-f12d-4d8e-b995-f0ce959e9f14
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Requirement Priority]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Changed_on
+		formatString: General Date
+		lineageTag: b7f8a07e-ed61-4026-b0bf-f960c3a93c24
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Changed_on]
+
+		variation Variation
+			isDefault
+			relationship: ed528437-bb30-40d6-b3cf-5ead651effea
+			defaultHierarchy: LocalDateTable_8c653c39-6d2e-4bd3-afb1-f36e0e986e4a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created by'
+		lineageTag: f96d20ff-d26f-4d12-9996-d4199f00bd0e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Created by]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Exchange Rate'
+		lineageTag: 3981b48c-5931-419b-b633-4ab6e6b91706
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Exchange Rate]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net Price SAR'
+		lineageTag: 48a320fb-11bd-40f7-b8f6-458f6072c09d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Net Price SAR]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net Value SAR'
+		lineageTag: 305be7e7-a739-4d6b-a14d-8136f373fc4c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Net Value SAR]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Gross Value SAR'
+		lineageTag: 43663bca-3f63-4e26-8104-6eef2362cfb3
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Gross Value SAR]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Plant Code : Plant Name'
+		lineageTag: 12d549f6-4f0d-4e24-bdca-925aac0da1d2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Plant Code : Plant Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vendor Code : Vendor Name'
+		lineageTag: 41ae9c1e-da09-4937-8c47-ee03bbaa8d73
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Vendor Code : Vendor Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material : Short Text'
+		lineageTag: 928082a6-64af-461a-839d-0b432abf54e1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Material : Short Text]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blocking Indicator'
+		lineageTag: e21d6d8f-122d-4b1b-a10f-79843bb04cb7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Blocking Indicator]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company_Name
+		lineageTag: 43cc12c4-1b94-48ef-8a08-44758eeef748
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Company_Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		lineageTag: 28a13429-227f-42bb-bcce-6b11f4d91434
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Country]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Geo
+		lineageTag: 47c1b83c-084c-4d7c-957a-2788bebcbae5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Geo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ekpo_Deletion flag for BOMs'
+		lineageTag: 20ee6c03-b798-48ba-99ba-ab4dafb27e5c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[ekpo_Deletion flag for BOMs]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blocking Text'
+		lineageTag: 7d1b4e53-4b4a-4049-b8bf-73f041d5622b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Blocking Text]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PO_Release_Indicator
+		lineageTag: 56cfd3ea-6f7d-444a-a37e-4d6a238edc9e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[PO_Release_Indicator]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supplier_Account_Group
+		lineageTag: c0f1f8d2-1b1f-4d79-afc7-ce31f4227df3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Supplier_Account_Group]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PO_Release_Indicator - Copy'
+		lineageTag: 286b8b83-e560-49a2-a10f-51f85dd2cc57
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[PO_Release_Indicator - Copy]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Display Currency'
+		lineageTag: aa48a171-23e8-4f30-ab98-a539f7b0cc49
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Display Currency]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FX_Rate_Used
+		lineageTag: 087a5773-b179-4f6a-a5b3-29cf6cca9b17
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[FX_Rate_Used]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Company Code : Company Name'
+		lineageTag: ad4dd5a1-071a-4b7b-9748-99450abbbb64
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[Company Code : Company Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNIQUEID
+		lineageTag: 35479bc2-34cf-488d-9bf2-5363ce3e1a07
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: List_of_all_PR_PO[UNIQUEID]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PriceDiff_MismatchOnly = calculated
+		mode: import
+		source =
+				
+				VAR GroupsBothRoutes =
+				    FILTER (
+				        ADDCOLUMNS (
+				            SUMMARIZE (
+				                'List_of_all_PR_PO',
+				                'List_of_all_PR_PO'[Plant Code : Plant Name],
+				                'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				                'List_of_all_PR_PO'[Material : Short Text]
+				            ),
+				            "HasEmergency",
+				                CALCULATE (
+				                    COUNTROWS ( 'List_of_all_PR_PO' ),
+				                    'List_of_all_PR_PO'[Requirement Urgency] = "01",
+				                    NOT ISBLANK ( 'List_of_all_PR_PO'[Net Price SAR] )
+				                ),
+				            "HasRegular",
+				                CALCULATE (
+				                    COUNTROWS ( 'List_of_all_PR_PO' ),
+				                    'List_of_all_PR_PO'[Requirement Urgency] <> "01",
+				                    NOT ISBLANK ( 'List_of_all_PR_PO'[Net Price SAR] )
+				                )
+				        ),
+				        [HasEmergency] > 0 && [HasRegular] > 0
+				    )
+				
+				VAR GroupFilter =
+				    TREATAS (
+				        SELECTCOLUMNS (
+				            GroupsBothRoutes,
+				            "Plant",    [Plant Code : Plant Name],
+				            "Vendor",   [Vendor Code : Vendor Name],
+				            "Material", [Material : Short Text]
+				        ),
+				        'List_of_all_PR_PO'[Plant Code : Plant Name],
+				        'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				        'List_of_all_PR_PO'[Material : Short Text]
+				    )
+				
+				/* Distinct (Plant, Vendor, Material, Price) signatures */
+				VAR EmergencySig =
+				    SUMMARIZE (
+				        CALCULATETABLE (
+				            'List_of_all_PR_PO',
+				            GroupFilter,
+				            'List_of_all_PR_PO'[Requirement Urgency] = "01",
+				            NOT ISBLANK ( 'List_of_all_PR_PO'[Net Price SAR] )
+				        ),
+				        'List_of_all_PR_PO'[Plant Code : Plant Name],
+				        'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				        'List_of_all_PR_PO'[Material : Short Text],
+				        'List_of_all_PR_PO'[Net Price SAR]
+				    )
+				
+				VAR RegularSig =
+				    SUMMARIZE (
+				        CALCULATETABLE (
+				            'List_of_all_PR_PO',
+				            GroupFilter,
+				            'List_of_all_PR_PO'[Requirement Urgency] <> "01",
+				            NOT ISBLANK ( 'List_of_all_PR_PO'[Net Price SAR] )
+				        ),
+				        'List_of_all_PR_PO'[Plant Code : Plant Name],
+				        'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				        'List_of_all_PR_PO'[Material : Short Text],
+				        'List_of_all_PR_PO'[Net Price SAR]
+				    )
+				
+				/* A) Matching prices (same price exists in both routes) */
+				VAR MatchSig =
+				    INTERSECT ( EmergencySig, RegularSig )
+				
+				/* B) Mismatching prices (present in one route but not the other) */
+				VAR MismatchSig =
+				    UNION (
+				        EXCEPT ( EmergencySig, RegularSig ),
+				        EXCEPT ( RegularSig, EmergencySig )
+				    )
+				
+				/* 1) All EMERGENCY rows where price matches regular price */
+				VAR MatchingEmergencyRows =
+				    CALCULATETABLE (
+				        'List_of_all_PR_PO',
+				        'List_of_all_PR_PO'[Requirement Urgency] = "01",
+				        TREATAS (
+				            MatchSig,
+				            'List_of_all_PR_PO'[Plant Code : Plant Name],
+				            'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				            'List_of_all_PR_PO'[Material : Short Text],
+				            'List_of_all_PR_PO'[Net Price SAR]
+				        )
+				    )
+				
+				/* 2) All mismatch rows (BOTH Emergency + Regular) at differing prices */
+				VAR MismatchRows =
+				    CALCULATETABLE (
+				        'List_of_all_PR_PO',
+				        TREATAS (
+				            MismatchSig,
+				            'List_of_all_PR_PO'[Plant Code : Plant Name],
+				            'List_of_all_PR_PO'[Vendor Code : Vendor Name],
+				            'List_of_all_PR_PO'[Material : Short Text],
+				            'List_of_all_PR_PO'[Net Price SAR]
+				        )
+				    )
+				
+				RETURN
+				    DISTINCT ( UNION ( MatchingEmergencyRows, MismatchRows ) )
+
+	annotation PBI_Id = 532bc13b59b64fb7bded3639c6f14147
+

@@ -1,0 +1,56 @@
+table 'A08 - FieldWork Completed Date'
+	lineageTag: b94430b8-5768-4ac0-9ccf-c47c2943af9d
+	sourceLineageTag: [sch_TeamMate].[A08 - FieldWork Completed Date]
+
+	column ProjectPhaseId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cc5d98ae-f6b7-4728-a791-7dc697577122
+		sourceLineageTag: ProjectPhaseId
+		summarizeBy: count
+		sourceColumn: ProjectPhaseId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8d2d74cf-59fc-47d1-bb7b-4e6aa0e72d32
+		sourceLineageTag: ProjectId
+		summarizeBy: none
+		sourceColumn: ProjectId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - FieldWork Completed Date.MilestoneName'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95e6d331-bf8e-4b97-92db-ddb33a955fc4
+		sourceLineageTag: A08_00 - FieldWork Completed Date.MilestoneName
+		summarizeBy: none
+		sourceColumn: A08_00 - FieldWork Completed Date.MilestoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'A08_00 - FieldWork Completed Date.ActualEndDate'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 007183d3-8ab1-4c8c-a0e1-64a430393b2c
+		sourceLineageTag: A08_00 - FieldWork Completed Date.ActualEndDate
+		summarizeBy: none
+		sourceColumn: A08_00 - FieldWork Completed Date.ActualEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'A08 - FieldWork Completed Date' = entity
+		mode: directLake
+		source
+			entityName: A08 - FieldWork Completed Date
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

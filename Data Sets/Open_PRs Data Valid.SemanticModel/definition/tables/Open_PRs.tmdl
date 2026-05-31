@@ -1,0 +1,272 @@
+table Open_PRs
+	lineageTag: 1aaebff3-fefb-4898-9ec4-5eb0d0afee45
+
+	column 'Purchase Req.'
+		dataType: string
+		lineageTag: 6a6804c3-8f3f-49a5-8ddd-295869d7a84f
+		summarizeBy: none
+		sourceColumn: Purchase Req.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requisn Item'
+		dataType: string
+		lineageTag: aebd8c4f-3970-41fc-b7bf-60bd556c9139
+		summarizeBy: none
+		sourceColumn: Requisn Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Document Type'
+		dataType: string
+		lineageTag: 306ca8b1-986d-4b75-8205-313cc702978e
+		summarizeBy: none
+		sourceColumn: Document Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Doc. Category'
+		dataType: string
+		lineageTag: 486f8fc7-da8c-447a-baeb-07c7cd8ae8f9
+		summarizeBy: none
+		sourceColumn: Doc. Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Deletion flag for BOMs'
+		dataType: string
+		lineageTag: 766f2596-8202-4364-810f-ff9c754b2f6d
+		summarizeBy: none
+		sourceColumn: Deletion flag for BOMs
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Indicator: Release Required'
+		dataType: string
+		lineageTag: b1a51d79-5a03-4d81-9aa6-ce9ddefb297d
+		summarizeBy: none
+		sourceColumn: Indicator: Release Required
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Release State'
+		dataType: string
+		lineageTag: 27c3a68f-ba8f-4300-8f84-e41ccfa376dd
+		summarizeBy: none
+		sourceColumn: Release State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Release strategy in the purchase requisition'
+		dataType: string
+		lineageTag: d67978f6-cf53-47ca-af80-8e31ddcb8ecf
+		summarizeBy: none
+		sourceColumn: Release strategy in the purchase requisition
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purch. Group'
+		dataType: string
+		lineageTag: ec60b215-e4b7-4438-a24d-9ca6179270eb
+		summarizeBy: none
+		sourceColumn: Purch. Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created by'
+		dataType: string
+		lineageTag: de68764b-dd80-4336-a9c0-9a682222ab0e
+		summarizeBy: none
+		sourceColumn: Created by
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created on'
+		dataType: dateTime
+		formatString: dd-mmm-yy
+		lineageTag: 001c3d63-92a7-4cb0-bec5-5ec2b0ccf36f
+		summarizeBy: none
+		sourceColumn: Created on
+
+		variation Variation
+			isDefault
+			relationship: e2bf14af-ce0a-460b-aabf-031295d121ac
+			defaultHierarchy: LocalDateTable_82f2fa19-94f1-4239-bdc9-cbfa2546bbce.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Requisitioner
+		dataType: string
+		lineageTag: 9c39c4f0-15d9-4faa-ad92-2c6748c69b5c
+		summarizeBy: none
+		sourceColumn: Requisitioner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Text'
+		dataType: string
+		lineageTag: 91c6e64f-08a8-492f-ab7b-2697bfefc0ac
+		summarizeBy: none
+		sourceColumn: Short Text
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		dataType: string
+		lineageTag: ab014ba3-e4b8-4258-a51f-d73a626700b0
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plant
+		dataType: string
+		lineageTag: b442096b-dbb2-49c1-908a-2540db895014
+		summarizeBy: none
+		sourceColumn: Plant
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requirement Tracking Number'
+		dataType: string
+		lineageTag: 4dd267cb-328e-4f38-9547-636bea77c915
+		summarizeBy: none
+		sourceColumn: Requirement Tracking Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quantity in base unit of measure'
+		dataType: double
+		lineageTag: 097d6e35-deb6-4dcf-a7d0-56b7f0291869
+		summarizeBy: sum
+		sourceColumn: Quantity in base unit of measure
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Base Unit'
+		dataType: string
+		lineageTag: 7d7cbffc-c1dc-45a1-8f47-b7ddd2ac8aea
+		summarizeBy: none
+		sourceColumn: Base Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requisition Date of Material Order'
+		dataType: dateTime
+		formatString: dd-mmm-yy
+		lineageTag: 9754cb6e-5427-404a-a029-c013553975aa
+		summarizeBy: none
+		sourceColumn: Requisition Date of Material Order
+
+		variation Variation
+			isDefault
+			relationship: de8be80a-c7b0-47f4-85a0-227ba4a9eafa
+			defaultHierarchy: LocalDateTable_b49e03c1-fe00-4b71-89a8-41d725a97bdc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Price unit'
+		dataType: string
+		lineageTag: c5118a54-f2d8-4975-aaf0-89a5bede84ff
+		summarizeBy: none
+		sourceColumn: Price unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase Requisition Release Date'
+		dataType: dateTime
+		formatString: dd-mmm-yy
+		lineageTag: d79e5021-c1b2-46cd-b2ac-1c8e1ca454cc
+		summarizeBy: none
+		sourceColumn: Purchase Requisition Release Date
+
+		variation Variation
+			isDefault
+			relationship: b44bbca9-c80c-4179-99d9-66b9b52c476f
+			defaultHierarchy: LocalDateTable_c2e78520-31a8-42cc-95e1-dd622fa8e03c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Item Category'
+		dataType: string
+		lineageTag: 4efa54e6-c7f0-4188-aafd-1149a7e486f6
+		summarizeBy: none
+		sourceColumn: Item Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Assignment Category'
+		dataType: string
+		lineageTag: 3547137d-459c-452d-bf79-d3088b0a3a3a
+		summarizeBy: none
+		sourceColumn: Account Assignment Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor
+		dataType: string
+		lineageTag: 8cc9bb5a-84e1-4638-9083-b4dd8b896d13
+		summarizeBy: none
+		sourceColumn: Vendor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blocking Indicator'
+		dataType: string
+		lineageTag: 39d2afaf-3402-420c-990a-fabab46d8441
+		summarizeBy: none
+		sourceColumn: Blocking Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Blocking Text'
+		dataType: string
+		lineageTag: c284d266-e5ad-4e62-810e-75b552ed3e68
+		summarizeBy: none
+		sourceColumn: Blocking Text
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requirement Urgency'
+		dataType: string
+		lineageTag: 4e50359a-4e59-4b9f-8b79-e2ec930795f7
+		summarizeBy: none
+		sourceColumn: Requirement Urgency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Requirement Priority'
+		dataType: string
+		lineageTag: dc1a391d-6bcc-4291-9b5e-30e4259bbdae
+		summarizeBy: none
+		sourceColumn: Requirement Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Open_PRs = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("4quiwbo2nopupn6dkut4jokage-6nv4rrosqdyebioghi7mrs634e.datawarehouse.fabric.microsoft.com", "lh_IA_Bronze"),
+				    S4_Hana_vw_Open_PRs = Source{[Schema="SAPHANADB",Item="vw_Open_PRs"]}[Data]
+				in
+				    S4_Hana_vw_Open_PRs
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

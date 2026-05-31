@@ -1,0 +1,135 @@
+table 'S4_Hana viw_Param2'
+	lineageTag: e7ba6077-c902-4bfe-a598-05016c2690e8
+
+	column 'EBELN_Purchasing Doc.'
+		dataType: string
+		lineageTag: a2e068ce-4e5c-40c7-b84b-8db3f5c094f5
+		summarizeBy: none
+		sourceColumn: EBELN_Purchasing Doc.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BUKRS_Company Code'
+		dataType: string
+		lineageTag: a0a09237-aff7-4e66-8ab0-a7028a99ba74
+		summarizeBy: none
+		sourceColumn: BUKRS_Company Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'T001_Company Name'
+		dataType: string
+		lineageTag: 46ed50e4-aac7-405b-bd5c-81bc3a87ed7e
+		summarizeBy: none
+		sourceColumn: T001_Company Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BEDAT_Document Date'
+		dataType: string
+		lineageTag: a4afd1b7-0886-4b40-9887-9a56a7700787
+		summarizeBy: none
+		sourceColumn: BEDAT_Document Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LIFNR_Vendor Code'
+		dataType: string
+		lineageTag: abf69635-7169-4555-a2e0-3e4649a0f9dc
+		summarizeBy: none
+		sourceColumn: LIFNR_Vendor Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LFA1.NAME1_Vendor Name'
+		dataType: string
+		lineageTag: ddbf97d0-44bf-4414-a33c-45dc8a09c8ec
+		summarizeBy: none
+		sourceColumn: LFA1.NAME1_Vendor Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column WAERS_Currency
+		dataType: string
+		lineageTag: f9ca09e4-f1b4-45fe-8e05-0841bd99d4b8
+		summarizeBy: none
+		sourceColumn: WAERS_Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column WERKS_Plant
+		dataType: string
+		lineageTag: dd8f50eb-d90c-47de-9d5c-d39f7e74a5e9
+		summarizeBy: none
+		sourceColumn: WERKS_Plant
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BUTXT_Bank Posting Text'
+		dataType: string
+		lineageTag: 1912c4a4-302c-4e64-8ce1-8979319dab62
+		summarizeBy: none
+		sourceColumn: BUTXT_Bank Posting Text
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NETWR_Net value'
+		dataType: double
+		lineageTag: 2fbff908-1a7d-4bee-852f-b189e9d29578
+		summarizeBy: sum
+		sourceColumn: NETWR_Net value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FX_Rate_Used
+		dataType: double
+		lineageTag: eb21480f-1319-44f2-839f-c4248b70460a
+		summarizeBy: sum
+		sourceColumn: FX_Rate_Used
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net Value SAR'
+		dataType: double
+		lineageTag: ae268d68-f879-4c83-8be0-a35b17c8fdd9
+		summarizeBy: sum
+		sourceColumn: Net Value SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Purchase Year' = VALUE(LEFT(FORMAT('S4_Hana viw_Param2'[BEDAT_Document Date], "00000000"), 4))
+		dataType: int64
+		lineageTag: 908ce636-9b24-4668-8d26-2d061e772508
+		summarizeBy: sum
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Plant Name'
+		dataType: string
+		lineageTag: 4d58b53d-5643-4e2c-a95e-48ecdf89f088
+		summarizeBy: none
+		sourceColumn: Plant Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'S4_Hana viw_Param2' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("4quiwbo2nopupn6dkut4jokage-6nv4rrosqdyebioghi7mrs634e.datawarehouse.fabric.microsoft.com", "lh_IA_Bronze"),
+				    S4_Hana_viw_Param2 = Source{[Schema="SAPHANADB",Item="viw_Vendor Wise Business Volume"]}[Data]
+				in
+				    S4_Hana_viw_Param2
+
+	annotation PBI_ResultType = Table
+

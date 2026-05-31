@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "List of Emergency PR"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "95f5f77d-dd99-9f36-4738-57b29ecfab47"
+  }
+}

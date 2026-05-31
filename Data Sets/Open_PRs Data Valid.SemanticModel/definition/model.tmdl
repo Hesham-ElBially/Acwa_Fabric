@@ -1,0 +1,20 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Open_PRs"]
+
+ref table Open_PRs
+ref table DateTableTemplate_c534bece-54f6-4d81-ad29-97d4691a7eb7
+ref table LocalDateTable_82f2fa19-94f1-4239-bdc9-cbfa2546bbce
+ref table LocalDateTable_b49e03c1-fe00-4b71-89a8-41d725a97bdc
+ref table LocalDateTable_c2e78520-31a8-42cc-95e1-dd622fa8e03c
+
+ref cultureInfo en-US
+

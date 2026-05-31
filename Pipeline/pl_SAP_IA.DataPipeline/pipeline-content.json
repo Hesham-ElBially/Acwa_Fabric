@@ -1,0 +1,1091 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "WebActivity",
+        "typeProperties": {
+          "method": "POST",
+          "headers": {},
+          "body": {
+            "username": "apiconnectivity",
+            "password": "6841a5f9-110a-4975-8cfd-ebeebb0f606c"
+          }
+        },
+        "externalReferences": {
+          "connection": "9ca05f3f-71c7-47ae-abdb-cfdf90d09f90"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "controlAccounts_Token",
+        "dependsOn": []
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "RestSource",
+            "requestMethod": "GET",
+            "additionalHeaders": {
+              "Authorization": {
+                "value": "@concat('Bearer ', activity('controlAccounts_Token').output.access_token)",
+                "type": "Expression"
+              }
+            },
+            "paginationRules": {
+              "AbsoluteUrl": "$.d.__next"
+            },
+            "httpRequestTimeout": "00:01:40",
+            "requestInterval": "00.00:00:00.010",
+            "datasetSettings": {
+              "type": "RestResource",
+              "typeProperties": {
+                "relativeUrl": "https://l650131-iflmap.hcisbp.sa1.hana.ondemand.com/http/MSFabric/ADR6?sap-client=130&$format=json"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "9ca05f3f-71c7-47ae-abdb-cfdf90d09f90"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "applyVOrder": true,
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "S4_Hana",
+                "table": "S4H_E-Mail_Addresses"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "lh_InternalAudit_Bronze",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "4b403f62-6306-45cc-bf4c-14ddf856362f",
+                    "workspaceId": "a5544863-6aa9-48f3-84fa-e9a76d8dcd77",
+                    "rootFolder": "Tables"
+                  },
+                  "externalReferences": {
+                    "connection": "515f52c1-dca8-434e-bfcd-e60d636ecd9e"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Addrnumber']"
+                },
+                "sink": {
+                  "name": "Addrnumber",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Persnumber']"
+                },
+                "sink": {
+                  "name": "Persnumber",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['DateFrom']"
+                },
+                "sink": {
+                  "name": "DateFrom",
+                  "type": "String",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Consnumber']"
+                },
+                "sink": {
+                  "name": "Consnumber",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Flgdefault']"
+                },
+                "sink": {
+                  "name": "Flgdefault",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['FlgNouse']"
+                },
+                "sink": {
+                  "name": "FlgNouse",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['HomeFlag']"
+                },
+                "sink": {
+                  "name": "HomeFlag",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['SmtpAddr']"
+                },
+                "sink": {
+                  "name": "SmtpAddr",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['SmtpSrch']"
+                },
+                "sink": {
+                  "name": "SmtpSrch",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['DftReceiv']"
+                },
+                "sink": {
+                  "name": "DftReceiv",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['R3User']"
+                },
+                "sink": {
+                  "name": "R3User",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Encode']"
+                },
+                "sink": {
+                  "name": "Encode",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Tnef']"
+                },
+                "sink": {
+                  "name": "Tnef",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['ValidFrom']"
+                },
+                "sink": {
+                  "name": "ValidFrom",
+                  "type": "String",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['ValidTo']"
+                },
+                "sink": {
+                  "name": "ValidTo",
+                  "type": "String",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Dataaging']"
+                },
+                "sink": {
+                  "name": "Dataaging",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "collectionReference": "$['d']['results']"
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "cd_E-MailAddresses",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "controlAccounts_Token",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "RestSource",
+            "requestMethod": "GET",
+            "additionalHeaders": {
+              "Authorization": {
+                "value": "@concat('Bearer ', activity('controlAccounts_Token').output.access_token)",
+                "type": "Expression"
+              }
+            },
+            "paginationRules": {
+              "AbsoluteUrl": "$.d.__next"
+            },
+            "httpRequestTimeout": "00:01:40",
+            "requestInterval": "00.00:00:00.010",
+            "datasetSettings": {
+              "type": "RestResource",
+              "typeProperties": {
+                "relativeUrl": "https://l650131-iflmap.hcisbp.sa1.hana.ondemand.com/http/MSFabric/LFBK?sap-client=130&$format=json"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "9ca05f3f-71c7-47ae-abdb-cfdf90d09f90"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "applyVOrder": true,
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "S4_Hana",
+                "table": "S4H_VendorMasterBank Details"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "lh_InternalAudit_Bronze",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "4b403f62-6306-45cc-bf4c-14ddf856362f",
+                    "workspaceId": "a5544863-6aa9-48f3-84fa-e9a76d8dcd77",
+                    "rootFolder": "Tables"
+                  },
+                  "externalReferences": {
+                    "connection": "515f52c1-dca8-434e-bfcd-e60d636ecd9e"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Lifnr']"
+                },
+                "sink": {
+                  "name": "Vendor",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Banks']"
+                },
+                "sink": {
+                  "name": "BankCountrykey",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bankl']"
+                },
+                "sink": {
+                  "name": "BankKeys",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bankn']"
+                },
+                "sink": {
+                  "name": "BankAccountNumber",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bkont']"
+                },
+                "sink": {
+                  "name": "BankControlKey",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bvtyp']"
+                },
+                "sink": {
+                  "name": "PartnerBankType",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Xezer']"
+                },
+                "sink": {
+                  "name": "Indicator",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bkref']"
+                },
+                "sink": {
+                  "name": "bankDetails",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Koinh']"
+                },
+                "sink": {
+                  "name": "AccountHolderName",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['BankGuid']"
+                },
+                "sink": {
+                  "name": "BankGuid",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['TechRectyp']"
+                },
+                "sink": {
+                  "name": "TechRectyp",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['EbppAccname']"
+                },
+                "sink": {
+                  "name": "EbppAccname",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['EbppBvstatus']"
+                },
+                "sink": {
+                  "name": "EbppBvstatus",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "collectionReference": "$['d']['results']",
+            "mapComplexValuesToString": false
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "cd_VendorMasterBankDetails",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "dateformat_E-MailAddresses",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "2654f6cf-d8d6-45de-9559-305e2422c8f5",
+          "workspaceId": "a5544863-6aa9-48f3-84fa-e9a76d8dcd77"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "dateformat_E-MailAddresses",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "cd_E-MailAddresses",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "925e6a3a-9fb9-4d97-af06-548a1fa60582",
+          "workspaceId": "a5544863-6aa9-48f3-84fa-e9a76d8dcd77"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "nb_OC_ia_all_suppliers",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "cd_VendorMasterBankDetails",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "RestSource",
+            "requestMethod": "GET",
+            "additionalHeaders": {
+              "Authorization": {
+                "value": "@concat('Bearer ', activity('controlAccounts_Token').output.access_token)",
+                "type": "Expression"
+              }
+            },
+            "paginationRules": {
+              "AbsoluteUrl": "$.d.__next"
+            },
+            "httpRequestTimeout": "00:01:40",
+            "requestInterval": "00.00:00:00.010",
+            "datasetSettings": {
+              "type": "RestResource",
+              "typeProperties": {
+                "relativeUrl": "https://l650131-iflmap.hcisbp.sa1.hana.ondemand.com/http/MSFabric/EKKO?sap-client=130&$format=json&$select=Ebeln,Bukrs,Bstyp,Bsart,Statu,Aedat,Ernam,Lifnr,Ekorg,Ekgrp,Waers,Wkurs,Bedat,Frgke"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "9ca05f3f-71c7-47ae-abdb-cfdf90d09f90"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "applyVOrder": true,
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "S4_Hana",
+                "table": "S4H_EKKO_PurchasingDocumentHeader"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "lh_InternalAudit_Bronze",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "4b403f62-6306-45cc-bf4c-14ddf856362f",
+                    "workspaceId": "a5544863-6aa9-48f3-84fa-e9a76d8dcd77",
+                    "rootFolder": "Tables"
+                  },
+                  "externalReferences": {
+                    "connection": "515f52c1-dca8-434e-bfcd-e60d636ecd9e"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Ebeln']"
+                },
+                "sink": {
+                  "name": "PurchasingDocument",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bukrs']"
+                },
+                "sink": {
+                  "name": "CompanyCode",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bstyp']"
+                },
+                "sink": {
+                  "name": "PurchDocCategory",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bsart']"
+                },
+                "sink": {
+                  "name": "PurchasingDocType",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Statu']"
+                },
+                "sink": {
+                  "name": "Status",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Aedat']"
+                },
+                "sink": {
+                  "name": "CreatedOn",
+                  "type": "String",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Ernam']"
+                },
+                "sink": {
+                  "name": "CreatedBy",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Lifnr']"
+                },
+                "sink": {
+                  "name": "Supplier",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Ekorg']"
+                },
+                "sink": {
+                  "name": "PurchOrganization",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Ekgrp']"
+                },
+                "sink": {
+                  "name": "PurchasingGroup",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Waers']"
+                },
+                "sink": {
+                  "name": "Currency",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Wkurs']"
+                },
+                "sink": {
+                  "name": "ExchangeRate",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Bedat']"
+                },
+                "sink": {
+                  "name": "DocumentDate",
+                  "type": "String",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "type": "String",
+                  "path": "['Frgke']"
+                },
+                "sink": {
+                  "name": "ReleaseIndicator",
+                  "type": "String",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "collectionReference": "$['d']['results']",
+            "mapComplexValuesToString": false
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "cd_EKKO_PurchasingDocumentHeader",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [
+          {
+            "activity": "nb_OC_ia_all_suppliers",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "RestSource",
+            "requestMethod": "GET",
+            "additionalHeaders": {
+              "Authorization": {
+                "value": "@concat('Bearer ', activity('controlAccounts_Token').output.access_token)",
+                "type": "Expression"
+              }
+            },
+            "paginationRules": {
+              "AbsoluteUrl": "$.d.__next"
+            },
+            "httpRequestTimeout": "00:01:40",
+            "requestInterval": "00.00:00:00.010",
+            "datasetSettings": {
+              "type": "RestResource",
+              "typeProperties": {
+                "relativeUrl": "https://l650131-iflmap.hcisbp.sa1.hana.ondemand.com/http/MSFabric/EKPO?sap-client=130&$format=json&$select=Ebeln,Ebelp,Loekz,Txz01,Matnr,Werks,Lgort,Matkl,Menge,Meins,Netpr,Peinh,Netwr,Brtwr,Elikz,Erekz,Pstyp,Knttp,Konnr,Banfn,Bnfpo,KoPrctr,Sakto"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "9ca05f3f-71c7-47ae-abdb-cfdf90d09f90"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "applyVOrder": true,
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "S4_Hana",
+                "table": "S4H_EKPO_PurchasingDocumentItem"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "lh_InternalAudit_Bronze",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "f856362f-14dd-bf4c-45cc-63064b403f62",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "externalReferences": {
+                    "connection": "515f52c1-dca8-434e-bfcd-e60d636ecd9e"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "path": "['Ebeln']"
+                },
+                "sink": {
+                  "name": "PurchasingDoc",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Ebelp']"
+                },
+                "sink": {
+                  "name": "ARIBAItemNumber",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Loekz']"
+                },
+                "sink": {
+                  "name": "DeletionFlag",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Txz01']"
+                },
+                "sink": {
+                  "name": "ShortText",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Matnr']"
+                },
+                "sink": {
+                  "name": "Material",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Werks']"
+                },
+                "sink": {
+                  "name": "Plant",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Lgort']"
+                },
+                "sink": {
+                  "name": "StorLocation",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Matkl']"
+                },
+                "sink": {
+                  "name": "MaterialGroup",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Menge']"
+                },
+                "sink": {
+                  "name": "QuantityBaseUnit",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Meins']"
+                },
+                "sink": {
+                  "name": "BaseUnit",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Netpr']"
+                },
+                "sink": {
+                  "name": "NetPrice",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Peinh']"
+                },
+                "sink": {
+                  "name": "PriceUnit",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Netwr']"
+                },
+                "sink": {
+                  "name": "NetValue",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Brtwr']"
+                },
+                "sink": {
+                  "name": "GrossPrice",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Elikz']"
+                },
+                "sink": {
+                  "name": "DeliveryCompleted",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Erekz']"
+                },
+                "sink": {
+                  "name": "FinalInvoice",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Pstyp']"
+                },
+                "sink": {
+                  "name": "ItemCategory",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Knttp']"
+                },
+                "sink": {
+                  "name": "AccountAssignmentCategory",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Konnr']"
+                },
+                "sink": {
+                  "name": "Agreement",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['KoPrctr']"
+                },
+                "sink": {
+                  "name": "ProfitCenter",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Banfn']"
+                },
+                "sink": {
+                  "name": "PurchaseReq",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Bnfpo']"
+                },
+                "sink": {
+                  "name": "RequisnItem",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "path": "['Sakto']"
+                },
+                "sink": {
+                  "name": "GLAccount",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "collectionReference": "$['d']['results']",
+            "mapComplexValuesToString": false
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "cd_EKPO_PurchasingDocumentItem",
+        "dependsOn": [
+          {
+            "activity": "cd_EKKO_PurchasingDocumentHeader",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

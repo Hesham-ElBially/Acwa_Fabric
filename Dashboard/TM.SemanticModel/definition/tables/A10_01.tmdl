@@ -1,0 +1,587 @@
+table A10_01
+	lineageTag: 7effec9a-6313-4f3f-b4e8-d27b194775f6
+	sourceLineageTag: [sch_TeamMate].[A10_01]
+
+	measure flag =
+			
+			
+			IF(CONTAINSSTRING(MAX('A10 - Issues Root Cause'[Issues.MultiSelectCategory3]),VALUES(A10_01[@RootCauseCategory])),1,0)
+		formatString: 0
+		lineageTag: 529ace63-b591-4c03-b961-b35ffdc8b4cf
+
+		changedProperty = Name
+
+	measure 'GOV: Objectives' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Objectives", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 0591dc5e-d835-4479-9a58-fb40680ad106
+
+		changedProperty = Name
+
+	measure 'GOV: Objectives%' = ```
+			[GOV: Objectives]/[TotalSubCategory] 
+			```
+		lineageTag: 1aa9e33b-6504-4fce-aec6-1c8aa8b05dd5
+
+		changedProperty = Name
+
+	measure 'GOV: Ownership' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Ownership", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 663f93af-6544-43c0-ba3f-4d56c39079b7
+
+		changedProperty = Name
+
+	measure 'GOV: Ownership%' = [GOV: Ownership]/[TotalSubCategory]
+		lineageTag: 4704cb03-266f-4824-870d-a4416d0f5066
+
+		changedProperty = Name
+
+	measure 'GOV: Policy' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Policy", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: e03aa091-5920-4fa4-b96d-554a494ca01c
+
+		changedProperty = Name
+
+	measure 'GOV: Policy%' = [GOV: Policy]/[TotalSubCategory]
+		lineageTag: de1ddee1-c2a2-4298-b571-854cf6308897
+
+		changedProperty = Name
+
+	measure 'GOV: Structure' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV: Structure", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 0b8dd413-eeb0-4ff6-b434-b3cd7537730e
+
+		changedProperty = Name
+
+	measure 'GOV: Structure%' = [GOV: Structure]/[TotalSubCategory]
+		lineageTag: e4708241-4162-4b7a-80a1-449d5f5f5ffa
+
+		changedProperty = Name
+
+	measure Gov% = ```
+			[Governance]/[Total] 
+			```
+		lineageTag: 29e8f7ca-2692-45d0-ba69-518d474ab5b7
+
+		changedProperty = Name
+
+	measure Governance =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("GOV", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: d6f70704-f18b-4ca7-ba50-29a65965a00b
+
+		changedProperty = Name
+
+	measure 'JDG: Decision-Making' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Decision-Making", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: d58a29c2-3603-46e7-8df3-5b7033c33b9e
+
+		changedProperty = Name
+
+	measure 'JDG: Decision-Making%' = [JDG: Decision-Making]/[TotalSubCategory]
+		lineageTag: c8f4f053-cb1c-409e-aacd-8d7e9f9d29de
+
+		changedProperty = Name
+
+	measure 'JDG: Planning' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Planning", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: d8f94aff-ce08-4990-b748-b50b6661ffe5
+
+		changedProperty = Name
+
+	measure 'JDG: Planning%' = [JDG: Planning]/[TotalSubCategory]
+		lineageTag: b5b01192-dc3f-4a71-94bd-0010a1044371
+
+		changedProperty = Name
+
+	measure 'JDG: Regulation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Regulation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 1456b3cf-814e-47d2-b08d-bd12c23a3ff4
+
+		changedProperty = Name
+
+	measure 'JDG: Regulation%' = [JDG: Regulation]/[TotalSubCategory]
+		lineageTag: b5dde4be-30cd-4f80-b038-3427c4943f70
+
+		changedProperty = Name
+
+	measure 'JDG: Risk Evaluation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG: Risk Evaluation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: aa809bd3-601b-4237-b2b0-5077faae0a8a
+
+		changedProperty = Name
+
+	measure 'JDG: Risk Evaluation%' = [JDG: Risk Evaluation]/[TotalSubCategory]
+		lineageTag: 34af4a5c-62f8-4736-a214-3a1a53230c07
+
+		changedProperty = Name
+
+	measure Jdg% = [Judgement]/[Total]
+		lineageTag: b37dbdd7-f7b3-48e7-9887-8b05b3c2b4dc
+
+		changedProperty = Name
+
+	measure Judgement =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("JDG", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 599a46b3-2e1a-41c5-adf6-36d789d77a72
+
+		changedProperty = Name
+
+	measure Management =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 8c42c27a-51d6-41e8-9a46-1f12164a8044
+
+		changedProperty = Name
+
+	measure Mgmt% = [Management]/[Total]
+		lineageTag: 6e10f754-b1f1-476e-a845-a02c80aecf11
+
+		changedProperty = Name
+
+	measure 'MGT: Change' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Change", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: f8674d6c-3a12-47c0-9ad2-b64ca123d7ea
+
+		changedProperty = Name
+
+	measure 'MGT: Change%' = [MGT: Change]/[TotalSubCategory]
+		lineageTag: 9ed23d02-08ca-42fe-8942-af90adbf5877
+
+		changedProperty = Name
+
+	measure 'MGT: Communication' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Communication", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 2de1d3c5-1a60-494d-a7c0-a94d93416f83
+
+		changedProperty = Name
+
+	measure 'MGT: Communication%' = [MGT: Communication]/[TotalSubCategory]
+		lineageTag: cd2b9a07-488c-4195-bd2b-dfe8791d3ea0
+
+		changedProperty = Name
+
+	measure 'MGT: Monitoring' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Monitoring", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 3cacf254-a52a-4537-aab1-ca189b899332
+
+		changedProperty = Name
+
+	measure 'MGT: Monitoring%' = [MGT: Monitoring]/[TotalSubCategory]
+		lineageTag: 71c7723b-3b4d-4f37-a503-583ca0377801
+
+		changedProperty = Name
+
+	measure 'MGT: Resources' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("MGT: Resources", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 8511354b-36db-492d-8fc7-c4441dda78a6
+
+		changedProperty = Name
+
+	measure 'MGT: Resources%' = [MGT: Resources]/[TotalSubCategory]
+		lineageTag: 7204ddd9-2001-4f31-9491-57064f9ff501
+
+		changedProperty = Name
+
+	measure 'No. of Root Cause' =
+			COUNTROWS(FILTER(ADDCOLUMNS('A10 - Issues Root Cause',"YES",
+			 CONTAINSSTRING('A10 - Issues Root Cause'[Issues.MultiSelectCategory3],VALUES(A10_01[@RootCauseCategory]))),[YES]=true))
+		formatString: 0
+		lineageTag: 6a7233fb-feb5-4514-b92c-4af5f0a38ffb
+
+		changedProperty = Name
+
+	measure People =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 8bf84b1c-b8a2-4d7a-9bd7-438f57f69a31
+
+		changedProperty = Name
+
+	measure 'PPL: Competence' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Competence", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 7f804ebe-c0f5-4bf2-b1f3-7644f73c60a0
+
+		changedProperty = Name
+
+	measure 'PPL: Competence%' = [PPL: Competence]/[TotalSubCategory]
+		lineageTag: 62726512-7036-424e-9799-e0e4cae8043b
+
+		changedProperty = Name
+
+	measure 'PPL: Human Error' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Human Error", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 96d89d07-e1c2-43d3-96be-0b5a66c3870c
+
+		changedProperty = Name
+
+	measure 'PPL: Human Error%' = [PPL: Human Error]/[TotalSubCategory]
+		lineageTag: fec4f37e-6969-4c84-9d91-f2c59c0cd9e3
+
+		changedProperty = Name
+
+	measure 'PPL: Job Design' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Job Design", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: e6241dc3-8a7a-472f-b874-487030c6d508
+
+		changedProperty = Name
+
+	measure 'PPL: Job Design%' = [PPL: Job Design]/[TotalSubCategory]
+		lineageTag: 2b002ad9-5b34-464e-964f-b07985590707
+
+		changedProperty = Name
+
+	measure 'PPL: Training & Awareness' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PPL: Training & Awareness", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 92bf8751-4f36-4540-9735-af08438cf408
+
+		changedProperty = Name
+
+	measure 'PPL: Training & Awareness%' = [PPL: Training & Awareness]/[TotalSubCategory]
+		lineageTag: 91193928-4333-430c-8037-ac1882ce0822
+
+		changedProperty = Name
+
+	measure Ppl% = [People]/[Total]
+		lineageTag: 100f6572-4bf5-4364-bcca-27e1a385e68d
+
+		changedProperty = Name
+
+	measure 'PRO: Data Quality' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO: Data Quality", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 355e1431-9eb6-4208-84b4-4be9ed0ec23e
+
+		changedProperty = Name
+
+	measure 'PRO: Data Quality%' = [PRO: Data Quality]/[TotalSubCategory]
+		lineageTag: 62a6e7d3-f308-41f4-8567-13a97bdba264
+
+		changedProperty = Name
+
+	measure 'PRO: Documentation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO: Documentation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: c39be8b6-4a8e-4310-a229-ddce208a5034
+
+		changedProperty = Name
+
+	measure 'PRO: Process Design' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO: Process Design", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 155d5b63-fa5d-48e4-b99b-8a5cc648edfc
+
+		changedProperty = Name
+
+	measure 'PRO: Documentation%' = [PRO: Documentation]/[TotalSubCategory]
+		lineageTag: 16631e1f-528e-4d78-8205-7653d1c0a52d
+
+		changedProperty = Name
+
+	measure Pro% = [Process]/[Total]
+		lineageTag: c8373be9-5703-4523-90a0-85b9fa839787
+
+		changedProperty = Name
+
+	measure Process =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("PRO", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: d73b721e-efa4-421d-bddd-207a11c287d8
+
+		changedProperty = Name
+
+	measure 'SYS: Cybersecurity' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: Cybersecurity", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 3e4594ff-865c-41fd-b424-ced16c4ce863
+
+		changedProperty = Name
+
+	measure 'SYS: Cybersecurity%' = [SYS: Cybersecurity]/[TotalSubCategory]
+		lineageTag: a6fd28f9-c342-410e-a991-07372309eb81
+
+		changedProperty = Name
+
+	measure 'SYS: Maintenance' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: Maintenance", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 18dc9527-9665-4bc5-8a85-8c570f5e8933
+
+		changedProperty = Name
+
+	measure 'SYS: Maintenance%' = [SYS: Maintenance]/[TotalSubCategory]
+		lineageTag: 5ff71046-726d-4141-b4cc-9ceba7a2aea7
+
+		changedProperty = Name
+
+	measure 'SYS: System Design' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: System Design", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 3092e382-ac2a-4748-a53f-c24bc0bb1c1c
+
+		changedProperty = Name
+
+	measure 'SYS: System Design%' = [SYS: System Design]/[TotalSubCategory]
+		lineageTag: eb289616-03ce-4e77-a9d9-fd6aaea2ae5f
+
+		changedProperty = Name
+
+	measure 'SYS: System Operation' =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS: System Operation", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 4bb6cbd9-acfe-4297-8263-06c251aaae53
+
+		changedProperty = Name
+
+	measure 'SYS: System Operation%' = [SYS: System Operation]/[TotalSubCategory]
+		lineageTag: c5147d6b-0849-4ae4-be1c-d1c26aa67186
+
+		changedProperty = Name
+
+	measure Sys% = [System]/[Total]
+		lineageTag: f077da7d-1f1f-4a59-8934-a899ab71083c
+
+		changedProperty = Name
+
+	measure System =
+			
+			CALCULATE(
+			    COUNTROWS('A10 - Issues Root Cause'),
+			    SEARCH("SYS", 'A10 - Issues Root Cause'[Issues.MultiSelectCategory3], 1, 0) > 0
+			)
+		formatString: 0
+		lineageTag: 2a99a55e-c595-48ee-a3df-b15652876ec2
+
+		changedProperty = Name
+
+	measure Total = [Governance]+[Judgement]+[Management]+[People]+[Process]+[System]
+		formatString: 0
+		lineageTag: 30ed7cc9-280a-4df0-ab82-cd4cbbfb17e1
+
+		changedProperty = Name
+
+	measure TotalGov = [GOV: Objectives]+[GOV: Ownership]+[GOV: Policy]+[GOV: Structure]
+		formatString: 0
+		lineageTag: dcf08cc3-e3a5-4636-80da-1ac065073af7
+
+		changedProperty = Name
+
+	measure TotalJdg = [JDG: Decision-Making]+[JDG: Planning]+[JDG: Regulation]+[JDG: Risk Evaluation]
+		formatString: 0
+		lineageTag: 277d665a-93ae-4d42-a4d4-72034bf7510a
+
+		changedProperty = Name
+
+	measure TotalMgt = [MGT: Change]+[MGT: Communication]+[MGT: Monitoring]+[MGT: Resources]
+		formatString: 0
+		lineageTag: dc1d3d76-0ab9-4e8d-ab87-b1257318b872
+
+		changedProperty = Name
+
+	measure TotalPPl = [PPL: Competence]+[PPL: Human Error]+[PPL: Job Design]+[PPL: Training & Awareness]
+		formatString: 0
+		lineageTag: a7a658f4-7cad-4377-a46f-80b26f9111d1
+
+		changedProperty = Name
+
+	measure TotalPro = [PRO: Data Quality]+[PRO: Documentation]+[PRO: Process Design]
+		formatString: 0
+		lineageTag: b4fca74a-5b82-4b8b-8227-55563f6368aa
+
+		changedProperty = Name
+
+	measure TotalSubCategory = [TotalGov]+[TotalJdg]+[TotalMgt]+[TotalPPl]+[TotalPro]+[TotalSys]
+		lineageTag: 5fb7845c-31b4-475a-befd-caf390d5e19e
+
+		changedProperty = Name
+
+	measure TotalSys = [SYS: Cybersecurity]+[SYS: Maintenance]+[SYS: System Design]+[SYS: System Operation]
+		formatString: 0
+		lineageTag: c39f7f57-1245-4454-ac89-fc28cdc897d2
+
+		changedProperty = Name
+
+	measure 'PRO: Process Design%' = [PRO: Process Design]/[TotalSubCategory]
+		lineageTag: 202b249d-4e21-4d4c-8886-70875fdb3037
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column @RootCauseCategory
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 702ce448-b856-4adb-ba63-3bbf86dacf06
+		sourceLineageTag: @RootCauseCategory
+		summarizeBy: none
+		sourceColumn: @RootCauseCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Root Cause Label'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: f763399d-fb09-4e81-b19d-7612555c869b
+		sourceLineageTag: Root Cause Label
+		summarizeBy: none
+		sourceColumn: Root Cause Label
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Root Cause Sub Category'
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: 97a8d0bb-c585-4ac1-a5aa-a57ba543649f
+		sourceLineageTag: Root Cause Sub Category
+		summarizeBy: none
+		sourceColumn: Root Cause Sub Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Root Cause'
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: fd16d623-5b41-4e31-87e6-acb0d0db884f
+		sourceLineageTag: Root Cause
+		summarizeBy: none
+		sourceColumn: Root Cause
+
+		annotation SummarizationSetBy = Automatic
+
+	partition A10_01 = entity
+		mode: directLake
+		source
+			entityName: A10_01
+			schemaName: sch_TeamMate
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
