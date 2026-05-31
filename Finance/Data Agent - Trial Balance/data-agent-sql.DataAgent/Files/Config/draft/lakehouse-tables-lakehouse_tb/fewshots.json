@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/fewShots/1.0.0/schema.json",
+  "fewShots": [
+    {
+      "id": "28807f1b-db3f-43a2-8d61-43d562906e38",
+      "question": "Can you tell me the total balance for the long term inter company receivables of the Kahromaa Company as of January 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS like '%Kahromaa Company%'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS LIKE '%Long term Inter company receivable%'\r\nAND Period_Name = 'January 2024';"
+    },
+    {
+      "id": "f94fda58-aaa7-4b77-b7ad-bc031b2fca13",
+      "question": "What is the change in Other expenses for the December 2024 of ACWA POWER Company ",
+      "query": "SELECT SUM(Closing_Balance) - SUM(Opening_Balance) AS Change_In_Other_Expenses\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS like '%ACWA POWER Company%'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS LIKE '%Other expenses%'\r\nAND Period_Name = 'December 2024';"
+    },
+    {
+      "id": "fbd03383-d562-4455-bfd8-b277d989ce55",
+      "question": "What is the total expense for fixed asset default account for the Kahromaa company in October 2023?",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Expense\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS like '%Kahromaa Company%'\r\nAND Analytical_Code_Name COLLATE SQL_Latin1_General_CP1_CI_AS LIKE '%Fixed Asset Default Account%'\r\nAND Period_Name = 'October 2023';"
+    }
+  ]
+}

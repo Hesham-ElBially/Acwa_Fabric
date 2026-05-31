@@ -1,0 +1,363 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "941d78f5-711d-9a29-4968-12b021894568",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "Trial Balance 23_24 Report",
+  "type": "semantic_model",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "3be66581-0662-49c1-85d2-30ffbd9531bc",
+      "is_selected": false,
+      "display_name": "Trial_Balance",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "179a1398-2882-4bbe-9d9b-f9b650ee79fc",
+          "is_selected": true,
+          "display_name": "Ledger_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "041ff783-a0b4-4d9e-972c-57fc9a48760d",
+          "is_selected": true,
+          "display_name": "UniqueCodeKey",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6147c923-b8eb-4779-adc8-175d3d625b88",
+          "is_selected": true,
+          "display_name": "Entity_Code",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "797231dc-add0-4340-88c6-d96fe8fc6c78",
+          "is_selected": true,
+          "display_name": "Entity_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0332410c-5cfd-4984-8e70-cb592e20e8ad",
+          "is_selected": true,
+          "display_name": "Business_Line_Code",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5c73329d-e119-4cfb-a504-ed006cd82001",
+          "is_selected": true,
+          "display_name": "Business_Line_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "77e691f6-8ca7-48a7-9058-e6baa7162e52",
+          "is_selected": true,
+          "display_name": "Cost_Center_Code",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c60ff74b-cbfa-4b7a-8da7-30866d9bb225",
+          "is_selected": true,
+          "display_name": "Cost_Center_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ddc03e21-6a00-40be-8f4a-74111d286488",
+          "is_selected": true,
+          "display_name": "Project_Code",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4cec12af-8537-48ea-8bea-43c023b36fc6",
+          "is_selected": true,
+          "display_name": "Project_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2c8fb857-5ac1-44a5-9651-77ac46056b98",
+          "is_selected": true,
+          "display_name": "Intercompany_Code",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ea266212-d4ce-4488-b29d-f1d95aeb85e6",
+          "is_selected": true,
+          "display_name": "Intercompany_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6292686e-ebd4-4dda-ae87-22ceae411c2c",
+          "is_selected": true,
+          "display_name": "Account_Code",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "de2c9329-7da5-427a-936a-936a7b3777b0",
+          "is_selected": true,
+          "display_name": "Account_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "86f4b206-9981-402d-b1c9-4f497a897644",
+          "is_selected": true,
+          "display_name": "Analytical_Code",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "94f25798-0e89-46c9-9cc5-689f5ad8357c",
+          "is_selected": true,
+          "display_name": "Analytical_Code_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cd5d30bb-e704-4089-80cd-397c0abff518",
+          "is_selected": true,
+          "display_name": "Region_Code",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "16ba7039-e5f9-4155-b9ba-be17ca2ddf03",
+          "is_selected": true,
+          "display_name": "Region_Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4e9f90e6-247b-421b-9e58-c1fa6572fc9f",
+          "is_selected": true,
+          "display_name": "Period_Name",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2e67ad06-0a13-4292-bd39-6d6d38e71d56",
+          "is_selected": true,
+          "display_name": "Currency_Code",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "099dfc2b-d498-4c5f-9101-bf3d11bcdc7b",
+          "is_selected": true,
+          "display_name": "Opening_Balance",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2f0da303-815a-49da-8c84-747ea7858537",
+          "is_selected": true,
+          "display_name": "Total_Debit",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6637d701-82fe-4743-ace7-9b9d3f9e4ada",
+          "is_selected": true,
+          "display_name": "Total_Credit",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fd7c5630-2d70-4a80-8ea4-cf3828d67c59",
+          "is_selected": true,
+          "display_name": "Closing_Balance",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "879bffa7-f35e-4fa4-8885-499677ca640c",
+          "is_selected": true,
+          "display_name": "Opening_Balance_SAR",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cf1d3bd0-2b6a-49ac-b01f-e30a076af451",
+          "is_selected": true,
+          "display_name": "Total_Debit_SAR",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "26e94e30-5309-4b11-99c0-7c8b74a90e2d",
+          "is_selected": true,
+          "display_name": "Total_Credit_SAR",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d0521e36-e37e-49a3-b432-0488a291e4ef",
+          "is_selected": true,
+          "display_name": "Closing_Balance_SAR",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "73a17dac-8376-442c-b691-8a8de50ffe03",
+          "is_selected": true,
+          "display_name": "Total_Opening_Balance",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": "Calculates the sum of the opening balances from the Trial_Balance table.",
+          "children": []
+        },
+        {
+          "id": "0cdfad44-f2ed-4eb4-9359-8001864b757f",
+          "is_selected": true,
+          "display_name": "Total_Opening_Balance_SAR",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": "Calculates the total opening balance in Saudi Riyal (SAR) by summing the values in the Opening_Balance_SAR column of the Trial_Balance table.",
+          "children": []
+        },
+        {
+          "id": "e650344e-b16c-402d-9461-dfb96502630c",
+          "is_selected": true,
+          "display_name": "Total_Closing_Balance",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": "Calculates the sum of the closing balances from the Trial Balance table.",
+          "children": []
+        },
+        {
+          "id": "ddf415b1-faa2-4f2c-a374-0a313c981f48",
+          "is_selected": true,
+          "display_name": "Total_Closing_Balance_SAR",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": "Calculates the total closing balance in Saudi Riyal (SAR) by summing the values in the Closing_Balance_SAR column of the Trial_Balance table.",
+          "children": []
+        },
+        {
+          "id": "ca2568c8-b205-41c9-aeea-7128326834f0",
+          "is_selected": true,
+          "display_name": "Total_Credit_Sum",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": "Calculates the sum of the Total Credit column in the Trial Balance table.",
+          "children": []
+        },
+        {
+          "id": "e0d309e2-a517-43fb-96a2-9382817ececf",
+          "is_selected": true,
+          "display_name": "Total_Debit_Sum",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": "Calculates the sum of the Total Debit column in the Trial Balance table.",
+          "children": []
+        },
+        {
+          "id": "d4305372-6a0c-44cb-b1df-366ecf01ab00",
+          "is_selected": true,
+          "display_name": "Current Period",
+          "type": "semantic_model.measure",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "842f38ff-5636-4d8c-93e3-f1adfd9f4cef",
+          "is_selected": true,
+          "display_name": "Total_Balance",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d4b69f6f-5a68-4629-b39c-5bc55dc6aa6b",
+          "is_selected": true,
+          "display_name": "Change",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9eeda157-c158-4707-8ce4-bb5437d15cb7",
+          "is_selected": true,
+          "display_name": "Total Expense",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

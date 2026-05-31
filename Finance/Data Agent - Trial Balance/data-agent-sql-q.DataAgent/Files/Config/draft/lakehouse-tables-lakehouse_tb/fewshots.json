@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/fewShots/1.0.0/schema.json",
+  "fewShots": [
+    {
+      "id": "41879e49-21a8-40a6-8910-7a4e1d9fad5a",
+      "question": "Can you tell me the total balance for the Long term Inter company receivable of the Kahromaa Company as of January 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Kahromaa Company'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Long term Inter company receivable'\r\nAND Period_Name  = 'January 2024';"
+    },
+    {
+      "id": "86fcee84-f266-4370-8314-5eed1685d8fa",
+      "question": "What is the change in Other Expenses for the December 2024 of ACWA Power Global Services Limited",
+      "query": "SELECT SUM(Total_Debit) - SUM(Total_Credit) AS Change_In_Other_Expenses\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA Power Global Services Limited'\r\nAND Analytical_Code_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Other Expenses'\r\nAND Period_Name = 'December 2024';"
+    },
+    {
+      "id": "acb76ca5-a5f3-4ad3-91bb-575f29acd444",
+      "question": "What is the total Dividend income - Related parties – ACWA under ACWA POWER Company (Saudi Listed Joint Stock Company) for the year 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Dividend_Income_Related_Parties_ACWA\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA POWER Company (Saudi Listed Joint Stock Company)'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Dividend income - Related parties - ACWA'\r\nAND YEAR(Period_Name) = 2024;"
+    },
+    {
+      "id": "555d3085-1c35-4956-816e-8911dbb3fd67",
+      "question": "What is the Other Income - Interest Rate Swaps (IRS) for the January 2024 of ACWA Power Green Energy Holding Ltd",
+      "query": "SELECT SUM(Closing_Balance) AS Other_Income_IRS_January_2024_ACWA_Power_Green_Energy_Holding_Ltd\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name = 'ACWA Power Green Energy Holding Ltd'\r\nAND Analytical_Code_Name = 'Other Income - Interest Rate Swaps (IRS)'\r\nAND Period_Name = 'January 2024';"
+    },
+    {
+      "id": "2e06947e-f4e7-4b3d-8233-04ded4e609f2",
+      "question": "What is the total Fixed Asset Default Account for the August 2023 of Vietnam Representative Office",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Fixed_Asset_Default_Account \r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Vietnam Representative Office'\r\nAND Analytical_Code_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Fixed Asset Default Account'\r\nAND Period_Name = 'August 2023';"
+    },
+    {
+      "id": "1d0b8c42-f07f-4714-9f66-e60227e4560d",
+      "question": "What is the Other staff cost for December 2024 for ACWA Power International L.L.C",
+      "query": "SELECT SUM(Closing_Balance) AS Other_Staff_Cost_December_2024_ACWA_Power_International_LLC\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA Power International L.L.C'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Other staff cost'\r\nAND Period_Name = 'December 2024';"
+    },
+    {
+      "id": "4841d708-ee72-498c-8af9-35a47ef47aef",
+      "question": "What is the Deferred Revenue (C) for 2024 for ACWA Power Global Services Limited",
+      "query": "SELECT SUM(Closing_Balance) AS Deferred_Revenue_2024_ACWA_Power_Global_Services_Limited\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA Power Global Services Limited'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Deferred Revenue (C)'\r\nAND YEAR(Period_Name) = 2024;"
+    },
+    {
+      "id": "6a2572f0-ba42-440f-8a2a-22c6eb110249",
+      "question": "Can you tell me the total balance for the Long term Inter company receivable of the Acwa power company as of March 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS like '%Acwa Power Company%'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS LIKE '%Long Term%'\r\nAND Period_Name = 'March 2024';"
+    }
+  ]
+}

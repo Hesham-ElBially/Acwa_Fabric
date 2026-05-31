@@ -1,0 +1,328 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "941d78f5-711d-9a29-4968-12b021894568",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "Trial Balance 23_24 Report",
+  "type": "semantic_model",
+  "userDescription": null,
+  "metadata": {
+    "tableCount": "1",
+    "maxColumnCount": "38"
+  },
+  "elements": [
+    {
+      "id": "12",
+      "is_selected": true,
+      "display_name": "Trial_Balance",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "34",
+          "is_selected": true,
+          "display_name": "Account_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "35",
+          "is_selected": true,
+          "display_name": "Account_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "36",
+          "is_selected": true,
+          "display_name": "Analytical_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "37",
+          "is_selected": true,
+          "display_name": "Analytical_Code_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "26",
+          "is_selected": true,
+          "display_name": "Business_Line_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "27",
+          "is_selected": true,
+          "display_name": "Business_Line_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1586",
+          "is_selected": true,
+          "display_name": "Change",
+          "type": "semantic_model.measure",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "59",
+          "is_selected": true,
+          "display_name": "Closing_Balance",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "63",
+          "is_selected": true,
+          "display_name": "Closing_Balance_SAR",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "28",
+          "is_selected": true,
+          "display_name": "Cost_Center_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "29",
+          "is_selected": true,
+          "display_name": "Cost_Center_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "55",
+          "is_selected": true,
+          "display_name": "Currency_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1580",
+          "is_selected": true,
+          "display_name": "Current Period",
+          "type": "semantic_model.measure",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "24",
+          "is_selected": true,
+          "display_name": "Entity_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "25",
+          "is_selected": true,
+          "display_name": "Entity_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "32",
+          "is_selected": true,
+          "display_name": "Intercompany_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "33",
+          "is_selected": true,
+          "display_name": "Intercompany_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "22",
+          "is_selected": true,
+          "display_name": "Ledger_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "56",
+          "is_selected": true,
+          "display_name": "Opening_Balance",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "60",
+          "is_selected": true,
+          "display_name": "Opening_Balance_SAR",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "40",
+          "is_selected": true,
+          "display_name": "Period_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "30",
+          "is_selected": true,
+          "display_name": "Project_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "31",
+          "is_selected": true,
+          "display_name": "Project_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "38",
+          "is_selected": true,
+          "display_name": "Region_Code",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "39",
+          "is_selected": true,
+          "display_name": "Region_Name",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1598",
+          "is_selected": true,
+          "display_name": "Total Expense",
+          "type": "semantic_model.measure",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1583",
+          "is_selected": true,
+          "display_name": "Total_Balance",
+          "type": "semantic_model.measure",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1557",
+          "is_selected": true,
+          "display_name": "Total_Closing_Balance",
+          "type": "semantic_model.measure",
+          "description": "Calculates the sum of the closing balances from the Trial Balance table.",
+          "children": []
+        },
+        {
+          "id": "1560",
+          "is_selected": true,
+          "display_name": "Total_Closing_Balance_SAR",
+          "type": "semantic_model.measure",
+          "description": "Calculates the total closing balance in Saudi Riyal (SAR) by summing the values in the Closing_Balance_SAR column of the Trial_Balance table.",
+          "children": []
+        },
+        {
+          "id": "58",
+          "is_selected": true,
+          "display_name": "Total_Credit",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "62",
+          "is_selected": true,
+          "display_name": "Total_Credit_SAR",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1565",
+          "is_selected": true,
+          "display_name": "Total_Credit_Sum",
+          "type": "semantic_model.measure",
+          "description": "Calculates the sum of the Total Credit column in the Trial Balance table.",
+          "children": []
+        },
+        {
+          "id": "57",
+          "is_selected": true,
+          "display_name": "Total_Debit",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "61",
+          "is_selected": true,
+          "display_name": "Total_Debit_SAR",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1568",
+          "is_selected": true,
+          "display_name": "Total_Debit_Sum",
+          "type": "semantic_model.measure",
+          "description": "Calculates the sum of the Total Debit column in the Trial Balance table.",
+          "children": []
+        },
+        {
+          "id": "1550",
+          "is_selected": true,
+          "display_name": "Total_Opening_Balance",
+          "type": "semantic_model.measure",
+          "description": "Calculates the sum of the opening balances from the Trial_Balance table.",
+          "children": []
+        },
+        {
+          "id": "1554",
+          "is_selected": true,
+          "display_name": "Total_Opening_Balance_SAR",
+          "type": "semantic_model.measure",
+          "description": "Calculates the total opening balance in Saudi Riyal (SAR) by summing the values in the Opening_Balance_SAR column of the Trial_Balance table.",
+          "children": []
+        },
+        {
+          "id": "23",
+          "is_selected": true,
+          "display_name": "UniqueCodeKey",
+          "type": "semantic_model.column",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

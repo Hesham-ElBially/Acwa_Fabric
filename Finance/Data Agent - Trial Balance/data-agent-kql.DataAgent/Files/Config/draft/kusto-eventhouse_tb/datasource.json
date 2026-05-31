@@ -1,0 +1,256 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "c42a3e04-3006-b879-4c12-e20b1bb490d4",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "eventhouse_tb",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {
+    "tableCount": "1",
+    "maxColumnCount": "29"
+  },
+  "elements": [
+    {
+      "id": "0c9b0baf-a755-41d9-b353-fdb11d7959a4",
+      "is_selected": true,
+      "display_name": "trial_balance_mapping",
+      "type": "kusto.table",
+      "description": null,
+      "children": [
+        {
+          "id": "Account_Code",
+          "is_selected": true,
+          "display_name": "Account_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Account_Grouping",
+          "is_selected": true,
+          "display_name": "Account_Grouping",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Account_Name",
+          "is_selected": true,
+          "display_name": "Account_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Analytical_Code",
+          "is_selected": true,
+          "display_name": "Analytical_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Analytical_Code_Name",
+          "is_selected": true,
+          "display_name": "Analytical_Code_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Business_Line_Code",
+          "is_selected": true,
+          "display_name": "Business_Line_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Business_Line_Name",
+          "is_selected": true,
+          "display_name": "Business_Line_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Closing_Balance",
+          "is_selected": true,
+          "display_name": "Closing_Balance",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Closing_Balance_SAR",
+          "is_selected": true,
+          "display_name": "Closing_Balance_SAR",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Cost_Center_Code",
+          "is_selected": true,
+          "display_name": "Cost_Center_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Cost_Center_Name",
+          "is_selected": true,
+          "display_name": "Cost_Center_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Currency_Code",
+          "is_selected": true,
+          "display_name": "Currency_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Entity_Code",
+          "is_selected": true,
+          "display_name": "Entity_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Entity_Name",
+          "is_selected": true,
+          "display_name": "Entity_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "FS_Category",
+          "is_selected": true,
+          "display_name": "FS_Category",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Intercompany_Code",
+          "is_selected": true,
+          "display_name": "Intercompany_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Intercompany_Name",
+          "is_selected": true,
+          "display_name": "Intercompany_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Ledger_Name",
+          "is_selected": true,
+          "display_name": "Ledger_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Opening_Balance",
+          "is_selected": true,
+          "display_name": "Opening_Balance",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Opening_Balance_SAR",
+          "is_selected": true,
+          "display_name": "Opening_Balance_SAR",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Project_Code",
+          "is_selected": true,
+          "display_name": "Project_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Project_Name",
+          "is_selected": true,
+          "display_name": "Project_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Region_Code",
+          "is_selected": true,
+          "display_name": "Region_Code",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Region_Name",
+          "is_selected": true,
+          "display_name": "Region_Name",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Total_Credit",
+          "is_selected": true,
+          "display_name": "Total_Credit",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Total_Credit_SAR",
+          "is_selected": true,
+          "display_name": "Total_Credit_SAR",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Total_Debit",
+          "is_selected": true,
+          "display_name": "Total_Debit",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "Total_Debit_SAR",
+          "is_selected": true,
+          "display_name": "Total_Debit_SAR",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "UniqueCodeKey",
+          "is_selected": true,
+          "display_name": "UniqueCodeKey",
+          "type": "kusto.column",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

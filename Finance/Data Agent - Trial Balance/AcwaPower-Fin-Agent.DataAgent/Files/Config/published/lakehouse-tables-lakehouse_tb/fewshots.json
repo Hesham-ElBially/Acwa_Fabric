@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/fewShots/1.0.0/schema.json",
+  "fewShots": [
+    {
+      "id": "5495e0aa-cbb3-4cfa-ac68-513a9caea055",
+      "question": "What is the Long term loans and Lease(NC) in January 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance_mapping]\r\nWHERE FS_Category COLLATE SQL_Latin1_General_CP1_CI_AS = 'Long term loans and Lease(NC)'\r\nAND Period_Name  = 'January 2024';"
+    },
+    {
+      "id": "f62caad2-fffc-41a5-b0b4-b406ba0f1167",
+      "question": "What is the Accrued expenses and other payables in 2023",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance_mapping]\r\nWHERE FS_Category COLLATE SQL_Latin1_General_CP1_CI_AS = 'Accrued expenses and other payables'\r\nAND Period_Name  = '2023';"
+    },
+    {
+      "id": "3e0ecec8-72f8-4c2c-bba5-2ec88f11b0f9",
+      "question": "What is the other income category in September 2023",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance_mapping]\r\nWHERE Account_Grouping COLLATE SQL_Latin1_General_CP1_CI_AS = 'other income'\r\nAND Period_Name  = 'September 2023';"
+    },
+    {
+      "id": "16675525-c189-408e-a4ca-dcbdfb531c15",
+      "question": "Which sub-category of CIP Asset is higher in February 2024",
+      "query": "SELECT Account_Grouping, SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance_mapping]\r\nWHERE FS_Category COLLATE SQL_Latin1_General_CP1_CI_AS = 'CIP Asset'\r\nAND Period_Name  = 'February 2024'\r\nGROUP BY Account_Grouping ORDER BY SUM(Closing_Balance) DESC;"
+    },
+    {
+      "id": "012ebede-5ac0-4797-9028-8b0e17f05537",
+      "question": "Can you tell me the total balance for the Long term Inter company receivable of the Kahromaa Company as of January 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Kahromaa Company'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Long term Inter company receivable'\r\nAND Period_Name  = 'January 2024';"
+    },
+    {
+      "id": "a559fe79-3342-4b9d-8347-c855d0d6609c",
+      "question": "What is the change in Other Expenses for the December 2024 of ACWA Power Global Services Limited",
+      "query": "SELECT SUM(Total_Debit) - SUM(Total_Credit) AS Change_In_Other_Expenses\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA Power Global Services Limited'\r\nAND Analytical_Code_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Other Expenses'\r\nAND Period_Name = 'December 2024';"
+    },
+    {
+      "id": "45556afb-ea29-408c-8d13-e73033a1a73e",
+      "question": "What is the total Dividend income - Related parties – ACWA under ACWA POWER Company (Saudi Listed Joint Stock Company) for the year 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Dividend_Income_Related_Parties_ACWA\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA POWER Company (Saudi Listed Joint Stock Company)'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Dividend income - Related parties - ACWA'\r\nAND YEAR(Period_Name) = 2024;"
+    },
+    {
+      "id": "aa3f7f1b-6160-4115-b8af-d12a7ed27d38",
+      "question": "What is the Other Income - Interest Rate Swaps (IRS) for the January 2024 of ACWA Power Green Energy Holding Ltd",
+      "query": "SELECT SUM(Closing_Balance) AS Other_Income_IRS_January_2024_ACWA_Power_Green_Energy_Holding_Ltd\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name = 'ACWA Power Green Energy Holding Ltd'\r\nAND Analytical_Code_Name = 'Other Income - Interest Rate Swaps (IRS)'\r\nAND Period_Name = 'January 2024';"
+    },
+    {
+      "id": "3ea7188d-1091-48b6-bc15-3459dbe0b7db",
+      "question": "What is the total Fixed Asset Default Account for the August 2023 of Vietnam Representative Office",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Fixed_Asset_Default_Account \r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Vietnam Representative Office'\r\nAND Analytical_Code_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Fixed Asset Default Account'\r\nAND Period_Name = 'August 2023';"
+    },
+    {
+      "id": "f1fe85cf-7c6a-4ef4-b816-b5aceecf841e",
+      "question": "What is the Other staff cost for December 2024 for ACWA Power International L.L.C",
+      "query": "SELECT SUM(Closing_Balance) AS Other_Staff_Cost_December_2024_ACWA_Power_International_LLC\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA Power International L.L.C'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Other staff cost'\r\nAND Period_Name = 'December 2024';"
+    },
+    {
+      "id": "5822206e-30f8-4a9d-81f6-238a2771761a",
+      "question": "What is the Deferred Revenue (C) for 2024 for ACWA Power Global Services Limited",
+      "query": "SELECT SUM(Closing_Balance) AS Deferred_Revenue_2024_ACWA_Power_Global_Services_Limited\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'ACWA Power Global Services Limited'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS = 'Deferred Revenue (C)'\r\nAND YEAR(Period_Name) = 2024;"
+    },
+    {
+      "id": "0461b63d-18fa-4e78-b671-8f78ed17743d",
+      "question": "Can you tell me the total balance for the Long term Inter company receivable of the Acwa power company as of March 2024",
+      "query": "SELECT SUM(Closing_Balance) AS Total_Balance\r\nFROM [dbo].[trial_balance]\r\nWHERE Entity_Name COLLATE SQL_Latin1_General_CP1_CI_AS like '%Acwa Power Company%'\r\nAND Account_Name COLLATE SQL_Latin1_General_CP1_CI_AS LIKE '%Long Term%'\r\nAND Period_Name = 'March 2024';"
+    }
+  ]
+}
