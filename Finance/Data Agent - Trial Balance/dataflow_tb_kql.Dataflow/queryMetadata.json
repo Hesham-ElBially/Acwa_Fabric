@@ -1,0 +1,36 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "dataflow_tb_kql",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "trial_balance_mapping": {
+      "queryId": "08c3d040-1220-4daa-86f4-f44cd5bce181",
+      "queryName": "trial_balance_mapping",
+      "loadEnabled": false
+    },
+    "fs_mapping": {
+      "queryId": "39751fda-cf3b-4519-b845-1b402eb89834",
+      "queryName": "fs_mapping"
+    },
+    "trial_balance_mapping_DataDestination": {
+      "queryId": "8293e441-0214-42a1-92d7-8acea8c95da2",
+      "queryName": "trial_balance_mapping_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://acwapi.sharepoint.com/sites/FinancialFabricReporting",
+      "kind": "SharePoint",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"0b751eb2-4ef5-4ec6-804a-45c713674c29\"}"
+    },
+    {
+      "path": "https://trd-b0v8e90fdx0fz0gd24.z0.kusto.fabric.microsoft.com",
+      "kind": "AzureDataExplorer",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"781d0e6a-df27-470c-af3c-33ddee7134a8\"}"
+    }
+  ]
+}

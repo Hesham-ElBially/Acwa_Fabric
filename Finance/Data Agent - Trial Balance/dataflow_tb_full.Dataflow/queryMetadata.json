@@ -1,0 +1,36 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "dataflow_tb_full",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "trial_balance_mapping": {
+      "queryId": "79a5184f-7eb3-4d56-b9b3-ad4fd407afdd",
+      "queryName": "trial_balance_mapping",
+      "loadEnabled": false
+    },
+    "fs_mapping": {
+      "queryId": "82456a58-b8b2-4fb8-b277-37728c19fd70",
+      "queryName": "fs_mapping"
+    },
+    "trial_balance_mapping_DataDestination": {
+      "queryId": "4e3798b9-c2d4-490b-904a-93f4f17c790c",
+      "queryName": "trial_balance_mapping_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://acwapi.sharepoint.com/sites/FinancialFabricReporting",
+      "kind": "SharePoint",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"0b751eb2-4ef5-4ec6-804a-45c713674c29\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"1538a4c5-03a1-4779-a8d6-bea417e59f66\",\"DatasourceId\":\"5db59f45-a92c-43f1-b54f-3a17a4b3c180\"}"
+    }
+  ]
+}
