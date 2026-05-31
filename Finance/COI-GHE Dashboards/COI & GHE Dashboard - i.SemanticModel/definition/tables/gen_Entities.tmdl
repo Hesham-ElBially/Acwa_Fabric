@@ -1,0 +1,153 @@
+table gen_Entities
+	lineageTag: 169ca37d-a6db-4ac1-b40f-0f1308a4916f
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: bc9ed148-e292-4917-99ba-83812ecb3a5f
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: f3199b02-2b12-41a1-a808-93a402e87d0b
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 874fbee9-85a7-496c-9caa-7b434711170d
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: abbead0e-31bd-4f30-b2d6-214bfb3263f4
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 2ecbc93d-6a2a-4a59-ad81-89e72c560f55
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: e2921bfb-64c2-49f0-8870-306b4068a1b3
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: f7b81408-a1c1-4fb7-a047-33fec84e9135
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: f400e2be-7d45-4644-8a79-645801bbbb23
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 6285e855-4841-47cf-82d5-7b73cd472271
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: f42d00a8-fb20-49a8-af14-41a81bada912
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 4ff0287f-e784-42a2-93f1-78e202887354
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 6ac2f6dd-8cdd-44d6-955f-43944fc31502
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 9079c844-03e1-41aa-b739-707c91c245ab
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 0dee76c3-5d15-47f4-b3c8-966a2484c416
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: bb7ab50b-8c16-4442-84e6-fec45d129df7
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: adda7341-42d9-4e36-aac4-9b45e66c0186
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: 1ebf159a-1d52-406f-b628-439b00d0b212
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gen_Entities-6832187f-07a9-4d1d-a8d1-abd4c649aec2 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"3d990b8f-cb09-4ee1-9071-299a17141007" = Source{[Id="3d990b8f-cb09-4ee1-9071-299a17141007"]}[Items],
+				    #"Renamed Columns1" = Table.RenameColumns(#"3d990b8f-cb09-4ee1-9071-299a17141007",{{"ID", "ID.1"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

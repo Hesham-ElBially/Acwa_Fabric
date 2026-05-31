@@ -1,0 +1,228 @@
+table 'Offer/Recieve Status - Gift'
+	lineageTag: 6c27a44d-2184-4eea-8671-01aaa36e50c5
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: e7f0fcc5-5be4-479f-801f-957863941121
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 0493637f-fd6a-43e4-84e7-6acf93d6afe5
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: defbb2b7-8694-4b73-a477-7f31610edd55
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: c8206287-554a-4fa9-881f-55d77555a7c4
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 041459d6-1252-43d1-8d32-72caa8e2ac53
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 6288cccb-a44f-4aa9-a321-96c54cef23f2
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 6b694b6d-49b3-4ce2-bd86-bf90c7c3fb4b
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gift_Declaration_LookupId
+		dataType: string
+		lineageTag: 50405814-2c6d-4851-a989-e9aeb62ff156
+		summarizeBy: none
+		sourceColumn: Gift_Declaration_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: 3a065ac4-8490-482a-a3fa-2c527d600ff1
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_LookupId
+		dataType: string
+		lineageTag: 5d0eddd0-95cb-4dce-b5e2-8ee33b6cb418
+		summarizeBy: none
+		sourceColumn: Question_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_Response
+		dataType: string
+		lineageTag: 96295ae7-8eef-441f-a0a5-bc3be12516bf
+		summarizeBy: none
+		sourceColumn: Question_Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column Has_Responses
+		dataType: string
+		lineageTag: 5cb22a3d-0403-4911-b223-9705e63344f0
+		summarizeBy: none
+		sourceColumn: Has_Responses
+
+		annotation SummarizationSetBy = Automatic
+
+	column Get_Clarification
+		dataType: string
+		lineageTag: fa3dfad6-fc60-4505-b8d6-2ef808afb62b
+		summarizeBy: none
+		sourceColumn: Get_Clarification
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: 98e4a033-fbd9-488f-a3c7-4e40cd5741a5
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: a2ef03e4-9eb4-4a39-9917-5061f3b0532d
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6ad2ec8c-c894-4a00-8210-13d4ff9d8df1
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: cab8e896-9e3c-48aa-b18d-664070dda627
+			defaultHierarchy: LocalDateTable_bfc6ca32-55fe-43b3-995b-aa79808a885a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f184280a-2f82-4d14-bfe5-30e0a6951d55
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: a1983876-f713-4e94-b67d-6c22a7109663
+			defaultHierarchy: LocalDateTable_896beccb-4a5e-4d9e-b459-a053598c741e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 228c3568-8911-4423-9277-5f90dc6d830d
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 87b68f7c-0149-4b2b-8f7f-6f99bba0d489
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: d1b58316-e2e7-4190-9530-1c08337fe72d
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 5f7619fa-d55f-4110-9e0c-7c084ebeaaf0
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: cb81c92b-6cc0-4f5e-a9f9-847cf81415fd
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Question'
+		dataType: string
+		lineageTag: f6bfc444-ab52-402f-809d-7df145f1e14a
+		summarizeBy: none
+		sourceColumn: Question_Lookup.Question
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Sequence'
+		dataType: string
+		lineageTag: 73bcc64e-e33e-464c-b3fa-25387c079517
+		summarizeBy: none
+		sourceColumn: Question_Lookup.Sequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Question_Identifier'
+		dataType: string
+		lineageTag: 3337cc6a-d328-4a7e-a4fc-00dda75f100f
+		summarizeBy: none
+		sourceColumn: Question_Lookup.Question_Identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Offer/Recieve Status - Gift-28033581-574a-4701-87b0-72ef8d1a2b05' = m
+		mode: import
+		source =
+				let
+				    Source = ghe_Gift_Declaration_Responses,
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Question_Lookup.Question_Identifier] = "Q-1"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,168 @@
+table coi_BOD_Disclosure_Log
+	lineageTag: d68c56c7-feb9-42cc-88a0-87eee6dc5a83
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: c83fd352-c6ac-427d-8451-4d2e99e84cc7
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 3a56b0fa-0819-4e79-87d9-4cd8f4a4a7b2
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: dbecd1e8-2816-4a87-9af1-3e688fb2cb6a
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 7cb86f95-2a2b-4c96-8eff-52801684803c
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 81a4d385-a7b4-4fc9-824d-6a9081492a3f
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: b02140d0-a822-47a8-aa48-50c1cc35497e
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 8c1f8990-39e9-4d17-8132-cc677d6d9797
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: cba4dcf4-ac12-4f96-8ad4-7621ad839a9e
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: b146ceac-25e4-4e3c-afca-78829f9990d8
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 8f415089-30af-4689-acfa-a4b75ed6ab54
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 5c4f97fd-3283-457e-9c81-690022a09ee7
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: a57ab0f7-d3f5-42f5-8dc3-126a6c4e3bd2
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: b9d47387-d3a8-4230-8fe3-a85e304f39e5
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 40d55ad9-aafe-4630-aefe-758b45c84138
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 1387d9cf-dd45-455a-96aa-e67bf34b2e48
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_LC_Status_LookupId
+		dataType: string
+		lineageTag: 5118805f-8eb4-4cdb-9686-a4ce6bcbf6c6
+		summarizeBy: none
+		sourceColumn: Disclosure_LC_Status_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_Stamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5d7fa246-57ef-4c3d-8b52-bd1c910f0466
+		summarizeBy: none
+		sourceColumn: Time_Stamp
+
+		variation Variation
+			isDefault
+			relationship: 0a8db6ab-ea48-417a-af1a-3ff761f044cc
+			defaultHierarchy: LocalDateTable_0f4f1251-d37e-45bf-a36b-59a0e2c72e17.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column BOD_Disclosures_LookupId
+		dataType: string
+		lineageTag: ff19a882-9319-4cc9-ac85-2dd649cdd66b
+		summarizeBy: none
+		sourceColumn: BOD_Disclosures_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_BOD_Disclosure_Log-6b2718e8-d703-4b02-a6c9-43e8fd936446 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolutionDev", [Implementation=null, ApiVersion=15]),
+				    #"e5684b2d-8f41-42ce-aed4-3ee3df868a4f" = Source{[Id="e5684b2d-8f41-42ce-aed4-3ee3df868a4f"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"e5684b2d-8f41-42ce-aed4-3ee3df868a4f",{{"ID", "ID.1"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Time_Stamp", type datetime}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

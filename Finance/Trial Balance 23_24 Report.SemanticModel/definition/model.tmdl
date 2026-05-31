@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Trial_Balance"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.2054.0 (24.12)+334ca1c95b576cc53924655643b0d36f21caac55
+
+annotation PBI_ProTooling = ["Copilot","CopilotMeasureDescriptions","DaxQueryView_Desktop"]
+
+ref table Trial_Balance
+ref table DateTableTemplate_2cc29e4a-4f61-4503-8fd6-b4551d812ae2
+ref table LocalDateTable_87676b42-7852-4c8d-81c3-5b606e9edd63
+
+ref cultureInfo en-US
+

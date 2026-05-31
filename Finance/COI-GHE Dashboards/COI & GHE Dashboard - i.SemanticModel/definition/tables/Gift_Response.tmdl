@@ -1,0 +1,221 @@
+table Gift_Response
+	lineageTag: 4682f008-b266-49df-9e1e-5d2da7c31781
+
+	column FileSystemObjectType
+		lineageTag: 31cb0f7c-0966-4547-830e-e37dd92e7ab7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[FileSystemObjectType]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		lineageTag: 76e817f0-ce41-4872-981e-fbe4f27fc69f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		lineageTag: d9a4f512-f05d-4d66-93a6-d552e4f1496e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[ServerRedirectedEmbedUri]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		lineageTag: c71c86c1-4101-4b03-9798-83fd46b45510
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[ServerRedirectedEmbedUrl]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		lineageTag: 64972c5c-8c7c-4a0c-841a-5691e52d8d22
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[ID.1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		lineageTag: ba8d2981-e43a-4365-8fa0-1c9c7fffdd84
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[ContentTypeId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		lineageTag: 77c41741-f68c-41df-be33-950c4e731c3c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Title]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		formatString: General Date
+		lineageTag: 0dcf2321-5812-4776-97c7-e5106c889de6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Modified]
+
+		variation Variation
+			isDefault
+			relationship: 7947bf01-4539-41e1-b3e2-f17f07ff4195
+			defaultHierarchy: LocalDateTable_0ae7367d-6fa8-4b1e-85d5-02e7c134be3d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		formatString: General Date
+		lineageTag: aa750256-91af-4621-8717-25a0b834a0c6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Created]
+
+		variation Variation
+			isDefault
+			relationship: 598cb00b-a4a3-4c8b-a091-1fd6cfacd76a
+			defaultHierarchy: LocalDateTable_a02c3ee4-7a61-47fa-b284-0a7740534918.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		lineageTag: 179a4a56-8ba1-4060-991e-0e94847d3ffb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[AuthorId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		lineageTag: 5b6eab8f-b8cc-4112-a60f-447095513643
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[EditorId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		lineageTag: 1af152d9-8a73-45cb-85ce-b64c0e10b420
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[OData__UIVersionString]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		lineageTag: e0cba327-3e15-47de-a778-437a4ec2f54b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Attachments]
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		lineageTag: 5ae0c093-d98c-4185-84a4-35a37ae89d6a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[GUID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		lineageTag: a1d01f4f-26fb-41a6-a702-0b47f6d18aa0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[ComplianceAssetId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gift_Declaration_LookupId
+		lineageTag: 688d17c9-dea9-408f-8277-c2e072ca6f8f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Gift_Declaration_LookupId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		lineageTag: aea41ef3-22bc-4e60-89e5-89f7181779b8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Comments]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_LookupId
+		lineageTag: d3f78b86-a1b6-4c85-a873-3147e5874b08
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Question_LookupId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_Response
+		lineageTag: d1b8f250-80e4-4a34-9edd-f031e1ffca72
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Question_Response]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Has_Responses
+		lineageTag: 82488343-9f81-4f67-8bfd-83c2ce11d5a5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Has_Responses]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Get_Clarification
+		lineageTag: bb16715e-3d06-44d0-89b0-a3abfe296ed2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Get_Clarification]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Question'
+		lineageTag: f5a1b51a-2160-4f92-aad5-66408e7f0f44
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Question_Lookup.Question]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Sequence'
+		lineageTag: 8dc32b7f-64be-4981-8755-9ac49dae24c5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Question_Lookup.Sequence]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Question_Identifier'
+		lineageTag: 7eb50bd7-79e4-4545-ab13-833dffd7f5ab
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[Question_Lookup.Question_Identifier]
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		lineageTag: ebfe0938-76a1-4134-9b97-92ffe7b2067c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: ghe_Gift_Declaration_Responses[OData__ColorTag]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Gift_Response-faf8d530-e339-42e5-a395-b155cf346a60 = calculated
+		mode: import
+		source = ghe_Gift_Declaration_Responses
+
+	annotation PBI_Id = 8e9689ded2dd43c38e8c67154c02c66a
+

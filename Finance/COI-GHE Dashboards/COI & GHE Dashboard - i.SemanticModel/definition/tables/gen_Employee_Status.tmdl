@@ -1,0 +1,145 @@
+table gen_Employee_Status
+	lineageTag: 391714d3-2238-464f-a424-e141c7ba5265
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: c5371725-666e-4832-9138-a5ab5ab895ed
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: a0335f12-ee6c-4c8f-9ab4-b7daaeacb27c
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: fa090a18-4f4a-48d6-a888-c9b8d4bd7331
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 49444ac5-c3f8-4869-b257-82c5e3fab906
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: eb102a6c-c3c5-4488-939b-bf73e1dd954a
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 68d3ca10-4bd9-49b8-834d-bd09471085a7
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 13f6b17f-55e6-45ab-a96c-26bd01b25dd9
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: faabb2f2-4e06-471c-a2cd-054350e2f1e9
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 45b2ace1-fe26-4262-91bd-7ee2b9a25045
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 2a5d1a9a-ee30-4f6b-8e8a-9f67f6e227ea
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: e814721c-1f35-4ae0-b1ae-e48becb18ae0
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: a2d18384-5327-445c-b208-b1b0cd91446e
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 09df75b5-0d67-42ed-a1f9-9f189ae21920
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 4b2d9fbb-239e-41bc-a92e-8700a488c24e
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 054415c8-97f5-49b0-bf04-f9d4b6f6547b
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: cbe7f2b9-c4a5-42bc-a10e-10807497872f
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gen_Employee_Status-0c978eea-be9d-40ef-8780-24bc71043093 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"55e1bd24-547a-4986-85cd-066617ee6a52" = Source{[Id="55e1bd24-547a-4986-85cd-066617ee6a52"]}[Items],
+				    #"Renamed Columns1" = Table.RenameColumns(#"55e1bd24-547a-4986-85cd-066617ee6a52",{{"ID", "ID.1"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

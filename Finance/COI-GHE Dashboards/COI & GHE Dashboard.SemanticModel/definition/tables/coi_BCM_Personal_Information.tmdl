@@ -1,0 +1,257 @@
+table coi_BCM_Personal_Information
+	lineageTag: 99fb51b5-78d7-4d74-a623-ded5dd0a4ed7
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 9c23e2e1-e004-410a-bba1-59af73364856
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: b8438916-c7f6-45a4-9c4f-4321af1d81bb
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: ad5d94cb-e1db-42d9-8a05-3cc13d675bca
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: b66243e1-c0a3-4889-9c53-699c605d29f6
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID 2'
+		dataType: string
+		lineageTag: 9d128670-c6fd-4b50-96e1-fe0d08a9ae9d
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 3cd83c19-5380-494a-ba63-b5adc8c1f297
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: b1c202c4-0ba4-4550-ab8b-15b05e21534f
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: 0235e4da-f07d-4e97-bfca-bfefe805615c
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: e563aaf6-7f49-4fdc-8baf-15c4cff30ca3
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 7243bf71-c3e1-462a-b0ec-5bf0c7706fc6
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: bda2cedf-6588-460b-8b89-5d669f38b8ab
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: d450426f-8a48-4299-b231-9738bc811852
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 6ab19313-b478-43f5-88d9-57a0a2f4fd8b
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: ed022082-1ffb-4d35-9223-3b82d688ddf2
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: b2de133b-15e8-441a-b26b-1ac1837ea988
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCM_Disclosure_LookupId
+		dataType: string
+		lineageTag: a3ea9b0e-92df-42d8-a6f5-fcbc19aca25b
+		summarizeBy: none
+		sourceColumn: BCM_Disclosure_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column NationalityId
+		dataType: string
+		lineageTag: 64e87124-60c6-4251-9ff3-fedb7665533d
+		summarizeBy: none
+		sourceColumn: NationalityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_of_Birth
+		dataType: string
+		lineageTag: e2202146-4f7e-45c5-83ed-8f5e971c3bdd
+		summarizeBy: none
+		sourceColumn: Date_of_Birth
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mobile
+		dataType: string
+		lineageTag: 738a6b36-ccad-440f-be4b-3b6bb85f0d89
+		summarizeBy: none
+		sourceColumn: Mobile
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fax
+		dataType: string
+		lineageTag: d66f291c-f41c-4569-af45-dc7ede98cb10
+		summarizeBy: none
+		sourceColumn: Fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Number
+		dataType: string
+		lineageTag: 1e87c624-9a44-461c-afdb-5b84003d94d6
+		summarizeBy: none
+		sourceColumn: ID_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column No_of_Shares
+		dataType: string
+		lineageTag: 842b0570-0a1c-4ee5-b3ab-729105b5285c
+		summarizeBy: none
+		sourceColumn: No_of_Shares
+
+		annotation SummarizationSetBy = Automatic
+
+	column Full_Name
+		dataType: string
+		lineageTag: d8d2363a-c4e6-4ea2-a985-dba19b8f64f4
+		summarizeBy: none
+		sourceColumn: Full_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: d6b34d19-49e1-4570-841f-94ea8925c511
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column Office_Location
+		dataType: string
+		lineageTag: 79af388f-0b78-4e0d-8aa7-079d84f2ec19
+		summarizeBy: none
+		sourceColumn: Office_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Job_Title
+		dataType: string
+		lineageTag: e5a23aef-e4e7-4c30-95db-33d38ebd4794
+		summarizeBy: none
+		sourceColumn: Job_Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Committee_NameId
+		dataType: string
+		lineageTag: aae6fd0c-1b59-4915-af6e-c85ca91c85fa
+		summarizeBy: none
+		sourceColumn: Committee_NameId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company_Name
+		dataType: string
+		lineageTag: e6e47c6c-6886-472a-b9d5-beac42155e96
+		summarizeBy: none
+		sourceColumn: Company_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Work_Phone
+		dataType: string
+		lineageTag: dc262376-4cfb-42b6-856f-39ee94c2560b
+		summarizeBy: none
+		sourceColumn: Work_Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Committee_Name.Name'
+		dataType: string
+		lineageTag: 6b89fb48-755c-4205-b998-955323a41552
+		summarizeBy: none
+		sourceColumn: Committee_Name.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_BCM_Personal_Information-208e5162-5912-4f16-a889-a71a4ea309ec = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolutionDev", [Implementation=null, ApiVersion=15]),
+				    #"e521abbb-ca2d-4d79-9c20-4f20fb03f411" = Source{[Id="e521abbb-ca2d-4d79-9c20-4f20fb03f411"]}[Items],
+				    #"Expanded Committee_Name" = Table.ExpandRecordColumn(#"e521abbb-ca2d-4d79-9c20-4f20fb03f411", "Committee_Name", {"Name"}, {"Committee_Name.Name"})
+				in
+				    #"Expanded Committee_Name"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

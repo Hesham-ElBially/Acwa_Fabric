@@ -1,0 +1,39 @@
+relationship 6acf497c-f3ea-459d-9951-cc11c3c3f31e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Trial_Balance.Period_Name
+	toColumn: LocalDateTable_bd4fa5f6-eb94-4fa6-bc28-73c514eafd34.Date
+
+relationship AutoDetected_f73ce528-d517-4646-8371-b405e4f1ca13
+	crossFilteringBehavior: bothDirections
+	fromColumn: Trial_Balance.Entity_Code
+	toColumn: Entity.Entity_Code
+
+relationship AutoDetected_ad5fb2f7-cc50-4d0e-93cc-f0f7eb4959cd
+	crossFilteringBehavior: bothDirections
+	fromColumn: Trial_Balance.Account_Code
+	toColumn: Account.Account_Code
+
+relationship AutoDetected_5e135af4-e687-4c83-ae65-f4af2c032a7c
+	fromColumn: Trial_Balance.Business_Line_Code
+	toColumn: Business_Line.Business_Line_Code
+
+relationship AutoDetected_7552d54f-31fe-48c9-a3a9-f5b74cffc36c
+	fromColumn: Trial_Balance.Cost_Center_Code
+	toColumn: Cost_Center.Cost_Center_Code
+
+relationship AutoDetected_13c83924-fede-46b7-80b8-9d258de33d89
+	fromColumn: Trial_Balance.Project_Code
+	toColumn: Project.Project_Code
+
+relationship AutoDetected_46263109-d0e1-4a8f-94ac-49ffc680e607
+	fromColumn: Trial_Balance.Intercompany_Code
+	toColumn: Intercompany.Intercompany_Code
+
+relationship AutoDetected_f0de7fd6-bc0a-4cf8-81a8-8b6f14acd911
+	fromColumn: Trial_Balance.Analytical_Code
+	toColumn: Analytical_Code.Analytical_Code
+
+relationship AutoDetected_fac1a470-c281-44f5-bd0d-6e6e35fb925e
+	fromColumn: Trial_Balance.Region_Code
+	toColumn: Region.Region_Code
+

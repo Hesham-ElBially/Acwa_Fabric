@@ -1,0 +1,205 @@
+table coi_Employee_Resolution_Notice
+	lineageTag: 6ff45525-fc7b-4498-8438-a7cd47d70336
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 75e2f155-40d5-4878-b2c7-47dfb4ebf6f7
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: ae5ce9de-caa1-430b-9cde-ae517ca78b3f
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 19aa4c19-6ed0-4641-a2bd-ab8a5585b706
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 1c3a1d86-4c35-4fd6-985f-60ca0fb7ee1b
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: a7c79cd4-4576-40e3-b619-ad59f6b72041
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 38d07908-93b5-476d-8d72-808ca72171f6
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 63717a36-b688-4be2-80dd-27694a788330
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: 7e13cd64-0526-44f7-b50d-67d1dbc0e35d
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 3f56c69b-3b0e-4ae5-ba44-ea80c6841539
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 86d87d61-7062-4cd6-b8c1-046d784b0c3f
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: aa7a1d93-f846-45d4-9e4e-d50f62537800
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 6367c96c-7f58-441c-ae81-f3b729bc3229
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: ff9751b0-7a9f-43e3-9522-d8533afbd407
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 75184524-704c-431a-a03f-f604c66cbde4
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: ebafbad5-0bdb-4a1a-a051-2b03be04ad4b
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Disclosure_LookupId
+		dataType: string
+		lineageTag: d1b42005-6fc7-4d3b-a4fc-3f0a728a0f19
+		summarizeBy: none
+		sourceColumn: Employee_Disclosure_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nature_Of_Conflict
+		dataType: string
+		lineageTag: 9310fded-b212-4dbd-81d7-907ddcac4344
+		summarizeBy: none
+		sourceColumn: Nature_Of_Conflict
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 5bc145fb-7c01-47b7-b5e1-4e32df7cb0ab
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Methods_for_Manage
+		dataType: string
+		lineageTag: 64f061de-6460-4164-96c2-5a6862b753a8
+		summarizeBy: none
+		sourceColumn: Methods_for_Manage
+
+		annotation SummarizationSetBy = Automatic
+
+	column User_Department_LookupId
+		dataType: string
+		lineageTag: 0161f99f-cfc4-4bb9-8f9e-917425e053e8
+		summarizeBy: none
+		sourceColumn: User_Department_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_Response_Identifier
+		dataType: string
+		lineageTag: 2e03cd74-3093-4eee-a9d8-ad9beef0a191
+		summarizeBy: none
+		sourceColumn: Declaration_Response_Identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reason_For_Change
+		dataType: string
+		lineageTag: 1d60f69f-adb3-4c15-af65-aad7ba101771
+		summarizeBy: none
+		sourceColumn: Reason_For_Change
+
+		annotation SummarizationSetBy = Automatic
+
+	column Approved
+		dataType: string
+		lineageTag: 1cc4f32b-4222-434b-86ca-f4919b8b8997
+		summarizeBy: none
+		sourceColumn: Approved
+
+		annotation SummarizationSetBy = Automatic
+
+	column CT_Role_LookupId
+		dataType: string
+		lineageTag: ffa33270-92d8-45e4-a85b-6da6b564a3e5
+		summarizeBy: none
+		sourceColumn: CT_Role_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_Employee_Resolution_Notice-1cbbbe06-c704-4089-9cee-a87f008559c7 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolutionDev", [Implementation=null, ApiVersion=15]),
+				    #"a0d888c7-c5e6-4db2-aab7-11de1580d253" = Source{[Id="a0d888c7-c5e6-4db2-aab7-11de1580d253"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"a0d888c7-c5e6-4db2-aab7-11de1580d253",{{"ID", "ID.1"}})
+				in
+				    #"Renamed Columns"
+

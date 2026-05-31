@@ -1,0 +1,31 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Trial_Balance","Entity","Account","Business_Line","Cost_Center","Project","Intercompany","Analytical_Code","Region","Dax Measures"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.2054.0 (24.12)+334ca1c95b576cc53924655643b0d36f21caac55
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop"]
+
+ref table Trial_Balance
+ref table DateTableTemplate_6dbb0b9c-ef5f-4fda-9824-0d52268eef85
+ref table LocalDateTable_bd4fa5f6-eb94-4fa6-bc28-73c514eafd34
+ref table Entity
+ref table Account
+ref table Business_Line
+ref table Cost_Center
+ref table Project
+ref table Intercompany
+ref table Analytical_Code
+ref table Region
+ref table 'Dax Measures'
+
+ref cultureInfo en-US
+

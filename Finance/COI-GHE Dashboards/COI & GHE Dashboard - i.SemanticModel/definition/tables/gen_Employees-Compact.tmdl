@@ -1,0 +1,42 @@
+table gen_Employees-Compact
+	lineageTag: 91124ecb-fe0d-468b-a681-7ff709143802
+
+	column Id
+		dataType: string
+		lineageTag: e41dbef5-cfd7-49be-9f80-061747dfcb7e
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_ID_Number
+		dataType: string
+		lineageTag: 2edc8d72-c9e8-42bf-8f5f-6f807ee2b3eb
+		summarizeBy: none
+		sourceColumn: Employee_ID_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Name
+		dataType: string
+		lineageTag: 1b44a765-a788-459f-8bc8-9af67fa12e67
+		summarizeBy: none
+		sourceColumn: Employee_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gen_Employees-Compact = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"1d4da27a-3c96-42a1-9385-188ba435bc3c" = Source{[Id="1d4da27a-3c96-42a1-9385-188ba435bc3c"]}[Items],
+				    #"Renamed Columns2" = Table.RenameColumns(#"1d4da27a-3c96-42a1-9385-188ba435bc3c",{{"ID", "ID.1"}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Id", "Employee_ID_Number", "Employee_Name"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

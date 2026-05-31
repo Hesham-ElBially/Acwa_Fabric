@@ -1,0 +1,221 @@
+table Trial_Balance
+	lineageTag: eb5471b6-e3c0-43f3-801a-4a9e94501b4e
+
+	column Ledger_Name
+		dataType: string
+		lineageTag: 97b90d69-6e99-4f82-bc07-047e5ae313fd
+		summarizeBy: none
+		sourceColumn: Ledger_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column UniqueCodeKey
+		dataType: string
+		lineageTag: 5d5c747d-289a-4878-8124-3e18c7f15276
+		summarizeBy: none
+		sourceColumn: UniqueCodeKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Business_Line_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 2557dbe1-1ed7-410d-a8ff-355bdd98592d
+		summarizeBy: none
+		sourceColumn: Business_Line_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cost_Center_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: b71d2776-0b87-47e0-8353-45027183e589
+		summarizeBy: none
+		sourceColumn: Cost_Center_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 46e8106d-b507-41ce-9b38-e3d20ed58b9a
+		summarizeBy: none
+		sourceColumn: Project_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Intercompany_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: db77b4f0-5a87-4e89-8e0b-bec9ab2e3d76
+		summarizeBy: none
+		sourceColumn: Intercompany_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Analytical_Code
+		dataType: string
+		lineageTag: d79f60a0-3652-4a61-b358-c6d6cb9d2130
+		summarizeBy: none
+		sourceColumn: Analytical_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bdd7ed6-677e-42c3-8bca-25c4db492800
+		summarizeBy: none
+		sourceColumn: Region_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period_Name
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 27a9c4cc-e5a0-45fd-b0eb-6493e49dff40
+		summarizeBy: none
+		sourceColumn: Period_Name
+
+		variation Variation
+			isDefault
+			relationship: 6acf497c-f3ea-459d-9951-cc11c3c3f31e
+			defaultHierarchy: LocalDateTable_bd4fa5f6-eb94-4fa6-bc28-73c514eafd34.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Currency_Code
+		dataType: string
+		lineageTag: 66f2d5e1-6bbf-4445-9440-48336b7d8859
+		summarizeBy: none
+		sourceColumn: Currency_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Opening_Balance
+		dataType: double
+		lineageTag: cae11e2d-68a6-4336-beca-8f45e6627344
+		summarizeBy: sum
+		sourceColumn: Opening_Balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Debit
+		dataType: double
+		lineageTag: 58b815f4-dc2a-47e3-a102-1291a4f49850
+		summarizeBy: sum
+		sourceColumn: Total_Debit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Credit
+		dataType: double
+		lineageTag: 749d06a1-36ed-4798-820b-bdf55072a6d7
+		summarizeBy: sum
+		sourceColumn: Total_Credit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Closing_Balance
+		dataType: double
+		lineageTag: 8c37ff96-8417-4e70-851b-621b25b9d49b
+		summarizeBy: sum
+		sourceColumn: Closing_Balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Opening_Balance_SAR
+		dataType: double
+		lineageTag: 8f687f77-9d5e-432b-a33c-119d45fcfb7d
+		summarizeBy: sum
+		sourceColumn: Opening_Balance_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Debit_SAR
+		dataType: double
+		lineageTag: 59a0eaa0-24de-47a0-a711-ec0c7bc18961
+		summarizeBy: sum
+		sourceColumn: Total_Debit_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Credit_SAR
+		dataType: double
+		lineageTag: 7c009573-7b23-4d3e-8349-31724e0d02b2
+		summarizeBy: sum
+		sourceColumn: Total_Credit_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Closing_Balance_SAR
+		dataType: double
+		lineageTag: c760a9df-8cea-4f10-8748-6bfba4b23a27
+		summarizeBy: sum
+		sourceColumn: Closing_Balance_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Entity_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a144d89-e7e2-4771-a4be-2de96b1bae8a
+		summarizeBy: none
+		sourceColumn: Entity_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d10480a-9b2e-4d3f-bab6-d3f63fd84867
+		summarizeBy: none
+		sourceColumn: Account_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Trial_Balance = m
+		mode: import
+		source =
+				let
+				  Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/FinancialFabricReporting/", [ApiVersion = 15]),
+				  #"Filtered rows 1" = Table.SelectRows(Source, each Text.EndsWith([Name], "24.xlsx") or Text.EndsWith([Name], "23.xlsx")),
+				  #"Removed other columns" = Table.SelectColumns(#"Filtered rows 1", {"Content"}),
+				  #"Added custom" = Table.AddColumn(#"Removed other columns", "Custom", each Excel.Workbook([Content])),
+				  #"Expanded Custom" = Table.ExpandTableColumn(#"Added custom", "Custom", {"Name", "Data"}, {"Name", "Data"}),
+				  #"Filtered rows" = Table.SelectRows(#"Expanded Custom", each ([Name] = "Sheet1")),
+				  #"Removed other columns 1" = Table.Combine(Table.SelectColumns(#"Filtered rows", {"Data"})[Data]),
+				  #"Filtered rows 2" = Table.SelectRows(#"Removed other columns 1", each [Column3] <> null and [Column3] <> ""),
+				  #"Promoted headers" = Table.PromoteHeaders(#"Filtered rows 2", [PromoteAllScalars = true]),
+				  #"Filtered rows 3" = Table.SelectRows(#"Promoted headers", each ([Period Name] <> "Period Name")),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Filtered rows 3", {{"Entity", Int64.Type}, {"Business Line", Int64.Type}, {"Cost Center", Int64.Type}, {"Project", Int64.Type}, {"Intercompany", type text}, {"Account", type text}, {"Region", type text}, {"Period Name", type date}, {"Opening Balance", type number}, {"Total Debit", type number}, {"Total Credit", type number}, {"Closing Balance", type number}, {"Opening Balance_1", type number}, {"Total Debit_2", type number}, {"Total Credit_3", type number}, {"Closing Balance_4", type number}}),
+				  #"Renamed columns" = Table.RenameColumns(#"Changed column type", {{"Ledger Name", "Ledger_Name"}, {"Entity", "Entity_Code"}, {"Entity Name", "Entity_Name"}, {"Business Line", "Business_Line_Code"}, {"Business Line Name", "Business_Line_Name"}, {"Cost Center", "Cost_Center_Code"}, {"Cost Center Name", "Cost_Center_Name"}, {"Project", "Project_Code"}, {"Project Name", "Project_Name"}, {"Intercompany", "Intercompany_Code"}, {"Intercompany Name", "Intercompany_Name"}, {"Account", "Account_Code"}, {"Account Name", "Account_Name"}, {"Analytical Code", "Analytical_Code"}, {"Analytical Code Name", "Analytical_Code_Name"}, {"Region", "Region_Code"}, {"Region Description", "Region_Name"}, {"Opening Balance", "Opening_Balance"}, {"Total Debit", "Total_Debit"}, {"Total Credit", "Total_Credit"}, {"Currency", "Currency_Code"}, {"Closing Balance", "Closing_Balance"}, {"Opening Balance_1", "Opening_Balance_SAR"}, {"Total Debit_2", "Total_Debit_SAR"}, {"Total Credit_3", "Total_Credit_SAR"}, {"Closing Balance_4", "Closing_Balance_SAR"}, {" Combination", "UniqueCodeKey"}, {"Period Name", "Period_Name"}}),
+				  #"Changed column type 1" = Table.TransformColumnTypes(#"Renamed columns", {{"Intercompany_Code", Int64.Type}, {"Account_Code", Int64.Type}, {"Region_Code", Int64.Type}}),
+				  #"Removed columns" = Table.RemoveColumns(#"Changed column type 1", {"Column29"}),
+				  #"Filtered rows 4" = Table.SelectRows(#"Removed columns", each [UniqueCodeKey] <> null and [UniqueCodeKey] <> ""),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered rows 4",{"Entity_Name", "Account_Name", "Business_Line_Name", "Cost_Center_Name", "Project_Name", "Intercompany_Name", "Analytical_Code_Name", "Region_Name"})
+				in
+				  #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

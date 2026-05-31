@@ -1,0 +1,459 @@
+table ghe_Hospitality_Declarations
+	lineageTag: bdeaff4b-0c67-4a01-86cc-3dd813a1c109
+
+	measure Count_of_Approved_Hosp = ```
+			CALCULATE(COUNT(ghe_Hospitality_Declarations[Id]),FILTER(ghe_Hospitality_Declarations,ghe_Hospitality_Declarations[Declaration_LC_Status_Lookup.Name]="Signed Off"))
+			
+			```
+		formatString: 0
+		lineageTag: 0dd242d6-6b62-4011-9f5f-a9586362a060
+
+		changedProperty = IsHidden
+
+	measure Count_of_Rejected_Hosp = CALCULATE(COUNT(ghe_Hospitality_Declarations[Id]),FILTER(ghe_Hospitality_Declarations,ghe_Hospitality_Declarations[Declaration_LC_Status_Lookup.Name]="Rejected"))
+		formatString: 0
+		lineageTag: 51757f04-c945-4b12-8aad-d68694d9d9a0
+
+		changedProperty = IsHidden
+
+	measure approval_rate_hosp = ([Count_of_Approved_Hosp]/(ghe_Hospitality_Declarations[Count_of_Approved_Hosp]+[Count_of_Rejected_Hosp])) * 100
+		lineageTag: 1cffdfdf-c9e7-4c78-982b-d95ba3b59b60
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Rejection_rate_hosp = (ghe_Hospitality_Declarations[Count_of_Rejected_Hosp]/([Count_of_Approved_Hosp]+[Count_of_Rejected_Hosp])) * 100
+		lineageTag: 0bce0d2c-54bc-4800-a20c-eb996b92ad30
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure pending_approval_rate_hosp = 100 - ghe_Hospitality_Declarations[approval_rate_hosp]
+		lineageTag: a9486b56-bace-4a86-9908-067609e9f55b
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure approval_rate_hosp_F = IF(ISBLANK([approval_rate_hosp]),0,[approval_rate_hosp])
+		lineageTag: b3661de9-0769-4c8f-b0c5-ff1f577c1973
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 6a32f922-9909-4916-ac99-d4bdbd361ba7
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 9ae41309-2c49-4521-b396-f2f77c0b4615
+		summarizeBy: none
+		sourceColumn: Id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 1fa0be2b-4511-462d-a9ac-8629a75f2f0e
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 1beb8a13-9719-4eab-a145-a504dc217bb4
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: fc5a1a15-c81a-4ab1-b18c-4c60314c145d
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 47d244e9-b7e7-4414-86ba-873ae9f3ff6d
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 9e700610-b0bb-4c1f-bcb4-5d68909e8d0f
+		summarizeBy: none
+		sourceColumn: Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: acf96ace-f506-4516-8bee-732c26712d2d
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: d180343f-e42f-4d57-8776-7ed6f15707e2
+			defaultHierarchy: LocalDateTable_129b5cfa-657b-43cc-b7cf-b3c3279a5ae7.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 46ca2027-6761-4473-ac5c-8d127b1d016a
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: bc1329bf-6b54-499b-8c00-354ef0447983
+			defaultHierarchy: LocalDateTable_d2331514-7045-4a2b-bcd7-0e46bcb6f026.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: aebf015d-e450-45bb-b2ac-7bfea5b6091e
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 6059d01c-61be-412e-af74-da69825fbbb7
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 7b27f2d9-0c7f-45b1-b573-5bb24ee8fb36
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 05b4fbd2-17ac-481b-bf65-c6b14617604c
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: c0ec0f42-e3f4-45f3-bbda-28345e71f5a4
+		summarizeBy: none
+		sourceColumn: GUID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 6f66b996-212c-45b2-89da-d8b1b5ae6777
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CM LookupId'
+		dataType: string
+		lineageTag: 5e2a1871-e624-46aa-8ba7-0aee80547a23
+		summarizeBy: none
+		sourceColumn: CM LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CH LookupId'
+		dataType: string
+		lineageTag: df6cd5e2-6254-4365-a68b-b929d58fe670
+		summarizeBy: none
+		sourceColumn: CH LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_LC_Status_LookupId
+		dataType: string
+		lineageTag: 475f3557-e70c-4ffb-adbd-77c62cc97d0f
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column User_LookupId
+		dataType: string
+		lineageTag: 81086eb7-b95d-4d4c-9212-b07973c7dbec
+		summarizeBy: none
+		sourceColumn: User_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column User_LookupStringId
+		dataType: string
+		lineageTag: 18207555-0841-4a83-a72d-eb26cec700a8
+		summarizeBy: none
+		sourceColumn: User_LookupStringId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_LookupId
+		dataType: string
+		lineageTag: 1a21c82e-23fe-4c31-acc8-ecb15ab5201a
+		summarizeBy: none
+		sourceColumn: Employee_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Approval_Types_LookupId
+		dataType: string
+		lineageTag: c4f1fcc0-0c40-4472-a396-2c9a19a59b00
+		summarizeBy: none
+		sourceColumn: Approval_Types_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_LC_SubStatus_LookupId
+		dataType: string
+		lineageTag: b45c998f-6ae8-442f-9f68-cc56e788d35c
+		summarizeBy: none
+		sourceColumn: Declaration_LC_SubStatus_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_Approver_LookupId
+		dataType: string
+		lineageTag: b63681ec-8d8a-4224-a75e-46605d540afd
+		summarizeBy: none
+		sourceColumn: Declaration_Approver_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NeedClarify
+		dataType: string
+		lineageTag: ca837c39-c34b-4f1b-aaf6-0901044873fa
+		summarizeBy: none
+		sourceColumn: NeedClarify
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_Approval_Identifier
+		dataType: string
+		lineageTag: b0fab1b4-3d14-4290-8558-65654e96dd31
+		summarizeBy: none
+		sourceColumn: Declaration_Approval_Identifier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CM Lookup.Employee_Name'
+		dataType: string
+		lineageTag: 87638aa6-c4b1-4075-9ae6-76f4235ea1f5
+		summarizeBy: none
+		sourceColumn: CM Lookup.Employee_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CH Lookup.Employee_Name'
+		dataType: string
+		lineageTag: 021e06a0-8086-4b06-a2bf-c9b9838f3237
+		summarizeBy: none
+		sourceColumn: CH Lookup.Employee_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_Status_Lookup.Name'
+		dataType: string
+		lineageTag: 696ee3dd-2d5b-4aa7-8374-ffe6c5f10a4d
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_Lookup.Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_Status_Lookup.Display_Name'
+		dataType: string
+		lineageTag: d479ecc2-960d-4569-ae1c-17c3e8772ed9
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_Lookup.Display_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Lookup.Employee_ID_Number'
+		dataType: string
+		lineageTag: e580c43c-2e35-4fb0-88bb-7d4aeaaf4803
+		summarizeBy: none
+		sourceColumn: Employee_Lookup.Employee_ID_Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Lookup.Employee_Name'
+		dataType: string
+		lineageTag: 73d6c9ff-f857-4c48-a2fe-d9981a340f7e
+		summarizeBy: none
+		sourceColumn: Employee_Lookup.Employee_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Approval_Types_Lookup.Title'
+		dataType: string
+		lineageTag: 8959dd4a-06d2-4d11-ad44-059f53fd9464
+		summarizeBy: none
+		sourceColumn: Approval_Types_Lookup.Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_SubStatus_Lookup.Title'
+		dataType: string
+		lineageTag: 6ef5a9b3-fa28-43fb-8b6d-1c71531b9398
+		summarizeBy: none
+		sourceColumn: Declaration_LC_SubStatus_Lookup.Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_Approver_Lookup.Title'
+		dataType: string
+		lineageTag: 94162550-095a-46ab-99e3-4d855c133987
+		summarizeBy: none
+		sourceColumn: Declaration_Approver_Lookup.Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column approval_status = IF(ghe_Hospitality_Declarations[Declaration_LC_Status_Lookup.Name]="Signed Off","Approved",IF(ghe_Hospitality_Declarations[Declaration_LC_Status_Lookup.Name]="Rejected","Rejected","In Progress"))
+		lineageTag: 258efb6d-8ba4-4025-b93b-b0d2c1d59b34
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: f6f08910-de0f-4938-a6d6-53682dad9596
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR = YEAR(ghe_Hospitality_Declarations[Created].[Date])
+		formatString: 0
+		lineageTag: bb7cddc7-098d-4cad-8d74-5055d424dfbe
+		summarizeBy: sum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ghe_Hospitality_Declarations-245d5ddf-32c7-4504-bc4b-27b0d3b4ef5d = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"6f015579-087e-4c90-816c-cd6c1f9ce88b" = Source{[Id="6f015579-087e-4c90-816c-cd6c1f9ce88b"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"6f015579-087e-4c90-816c-cd6c1f9ce88b",{{"ID", "ID.1"}}),
+				    #"Expanded CM Lookup" = Table.ExpandRecordColumn(#"Renamed Columns", "CM Lookup", {"Employee_Name"}, {"CM Lookup.Employee_Name"}),
+				    #"Expanded CH Lookup" = Table.ExpandRecordColumn(#"Expanded CM Lookup", "CH Lookup", {"Employee_Name"}, {"CH Lookup.Employee_Name"}),
+				    #"Expanded Declaration_LC_Status_Lookup" = Table.ExpandRecordColumn(#"Expanded CH Lookup", "Declaration_LC_Status_Lookup", {"Name", "Display_Name"}, {"Declaration_LC_Status_Lookup.Name", "Declaration_LC_Status_Lookup.Display_Name"}),
+				    #"Expanded Employee_Lookup" = Table.ExpandRecordColumn(#"Expanded Declaration_LC_Status_Lookup", "Employee_Lookup", {"Employee_ID_Number", "Employee_Name"}, {"Employee_Lookup.Employee_ID_Number", "Employee_Lookup.Employee_Name"}),
+				    #"Expanded Approval_Types_Lookup" = Table.ExpandRecordColumn(#"Expanded Employee_Lookup", "Approval_Types_Lookup", {"Title"}, {"Approval_Types_Lookup.Title"}),
+				    #"Expanded Declaration_LC_SubStatus_Lookup" = Table.ExpandRecordColumn(#"Expanded Approval_Types_Lookup", "Declaration_LC_SubStatus_Lookup", {"Title"}, {"Declaration_LC_SubStatus_Lookup.Title"}),
+				    #"Expanded Declaration_Approver_Lookup" = Table.ExpandRecordColumn(#"Expanded Declaration_LC_SubStatus_Lookup", "Declaration_Approver_Lookup", {"Title"}, {"Declaration_Approver_Lookup.Title"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Declaration_Approver_Lookup",{{"Created", type datetime}, {"Modified", type datetime}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

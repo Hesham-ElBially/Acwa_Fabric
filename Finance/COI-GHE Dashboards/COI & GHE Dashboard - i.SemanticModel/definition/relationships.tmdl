@@ -1,0 +1,380 @@
+relationship 901af186-51bf-471b-99e9-2e85c74c5d5a
+	crossFilteringBehavior: bothDirections
+	fromColumn: coi_Employee_Disclosure_Log.Employee_Disclosure_LookupId
+	toColumn: coi_Employee_Disclosures.Id
+
+relationship b944fdc7-f261-48ad-afd6-88fe41450f02
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_Employee_Disclosure_Log.Time_Stamp
+	toColumn: LocalDateTable_be48b2cf-0908-41a1-9e6d-0e9dac643a3b.Date
+
+relationship 551d96e3-f742-4047-a843-c1dcda895058
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_Employee_Disclosure_Log.Initiating_date
+	toColumn: LocalDateTable_f44128a9-3479-4da6-b2cc-f43d1165d5f4.Date
+
+relationship 6a66cc80-f2d6-4502-8225-1d97f4c11662
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_Employee_Disclosures.Modified
+	toColumn: LocalDateTable_69c3374e-bc69-43d4-acf9-53a91f78fb29.Date
+
+relationship 74cf23f6-1394-40fe-95fd-af37def8dc93
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_Employee_Disclosures.Created
+	toColumn: LocalDateTable_96c83404-c95d-4733-b47b-42eb73b9f13b.Date
+
+relationship 21adfa28-d313-45eb-a7b3-b5c5f6343d15
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: coi_BCM_Disclosure_Log.Id
+	toColumn: gen_Employees.Id
+
+relationship 7cfef6bc-3826-40ce-b5c2-031f9bd32129
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_BCM_Disclosure_Log.Time_Stamp
+	toColumn: LocalDateTable_eb3a1968-bbfe-4aa4-a616-951fd47c0962.Date
+
+relationship dbadb37e-fcd6-4bbe-8a6a-2eba6d0403be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_BOD_Disclosures.Member_Date
+	toColumn: LocalDateTable_788040c9-42c9-404f-868e-1588687e074e.Date
+
+relationship 8659ea5f-0aa4-4b85-aee5-cadfd7462f69
+	fromColumn: coi_BCM_Disclosures.'SM_LookUp.Employee_ID_Number'
+	toColumn: gen_Employees.Employee_ID_Number
+
+relationship f00f622c-445b-4e01-a7ed-0f18d27ea191
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_BCM_Disclosures.Modified
+	toColumn: LocalDateTable_708f4b97-a6a9-474b-8fc3-a2b34c50dabd.Date
+
+relationship fccf9667-4144-46ea-9003-cf45bf420189
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_BCM_Disclosures.Created
+	toColumn: LocalDateTable_acba7599-d741-4654-83bf-1a31c2a1ae91.Date
+
+relationship 58bf1197-8e10-4d71-9c3f-f61ddfd2ad6e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_BOD_Disclosures.Modified
+	toColumn: LocalDateTable_1d84aa97-40d5-424a-9b2d-75730bb8ea3a.Date
+
+relationship 6f1a502b-9068-4264-abd6-0d544ec2500a
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: coi_BCM_Personal_Information.BCM_Disclosure_LookupId
+	toColumn: coi_BCM_Disclosures.Id
+
+relationship 0a8db6ab-ea48-417a-af1a-3ff761f044cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_BOD_Disclosure_Log.Time_Stamp
+	toColumn: LocalDateTable_0f4f1251-d37e-45bf-a36b-59a0e2c72e17.Date
+
+relationship b928cab3-5904-42ad-a40c-5cff38fc65ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_MCM_Disclosure_Logs.Time_Stamp
+	toColumn: LocalDateTable_c33f4d6f-2dd1-4def-8711-171cfcb11cc6.Date
+
+relationship 4db749db-e51f-4b97-b4c5-783f72a7c4c8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_MCM_Disclosures.Modified
+	toColumn: LocalDateTable_0b71d052-ea0d-4b24-80e0-e2f7e69c7552.Date
+
+relationship 5b0c111f-df27-4fc4-a62d-2ba3250cad21
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_MCM_Disclosures.Created
+	toColumn: LocalDateTable_d8bf28d6-b3f1-408a-8929-cb5fb6cf6674.Date
+
+relationship ac9d8600-7fa0-447c-8ae9-d3203dc5df48
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: coi_MCM_Disclosures.'ID.1'
+	toColumn: coi_MCM_Personal_Information.'ID.1'
+
+relationship 93bcfa34-8108-4fb3-89cb-7440ef33cc85
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Gift_Declaration_Logs.Time_Stamp
+	toColumn: LocalDateTable_3a864fd1-5794-4e6a-848f-a166bfd453ff.Date
+
+relationship 15e19c97-443d-4fd5-ada6-22c0021e3ae8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Gift_Declarations.Modified
+	toColumn: LocalDateTable_2c44c7ae-a01b-4589-ab4b-96c124cc87d1.Date
+
+relationship 43aef7b1-2184-4ea9-9ff9-5d66b177c5c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Gift_Declarations.Created
+	toColumn: LocalDateTable_1c1b01dd-fb67-42fd-a0c6-e9dc4024073e.Date
+
+relationship fab81c50-0d86-4028-b4da-edbde3a9ccc6
+	fromColumn: ghe_Entertainment_Declarations.'Employee_Lookup.Employee_ID_Number'
+	toColumn: gen_Employee_Relationships.'Employee_Lookup.Employee_ID_Number'
+
+relationship dafd2dc2-0c95-445c-93cc-dceeab05e6b5
+	isActive: false
+	fromColumn: ghe_Entertainment_Declarations.'Employee_Lookup.Employee_ID_Number'
+	toColumn: gen_Employees.Employee_ID_Number
+
+relationship bc1329bf-6b54-499b-8c00-354ef0447983
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Hospitality_Declarations.Created
+	toColumn: LocalDateTable_d2331514-7045-4a2b-bcd7-0e46bcb6f026.Date
+
+relationship effce1fb-6d9e-4938-9eda-a5d6d66f9f0e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Entertainment_Declarations.Modified
+	toColumn: LocalDateTable_492aa870-f185-4eef-9e30-bb32b38118b0.Date
+
+relationship 109a3284-9871-4f9f-81f2-4ad8de2f88e8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Hospitality_Declaration_Logs.Time_Stamp
+	toColumn: LocalDateTable_a9c59547-ef1c-4a96-b121-be9e4ea9155b.Date
+
+relationship 4a70f9c5-0893-46cf-9623-96e88bc8709c
+	isActive: false
+	fromColumn: coi_MCM_Disclosures.'MCM_Lookup.Employee_ID_Number'
+	toColumn: gen_Employee_Relationships.'Employee_Lookup.Employee_ID_Number'
+
+relationship f44f2290-078e-47ca-b343-ee866f6c98a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Gift_Declaration_Responses.Modified
+	toColumn: LocalDateTable_32cdeedd-afbd-4e8c-a1e8-6ac863dd2c4e.Date
+
+relationship 12f8faf9-5392-4d92-b53a-5ab2711e4a86
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Gift_Declaration_Responses.Created
+	toColumn: LocalDateTable_80608762-ae4a-4a99-9bde-be22688ba163.Date
+
+relationship d1af9fab-d429-4775-a2b7-7ff63ba7c79f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Hospitality_Declaration_Responses.Modified
+	toColumn: LocalDateTable_f18532b9-4780-43d2-89a8-41d265287f18.Date
+
+relationship f561e151-ea7d-4184-8041-33ecf45f8e36
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Hospitality_Declaration_Responses.Created
+	toColumn: LocalDateTable_3a10f0cf-1614-4aa9-b638-5defe81c0a43.Date
+
+relationship 3519be0e-a73c-4aab-9d68-be413969940e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Entertainment_Declaration_Responses.Modified
+	toColumn: LocalDateTable_7dd0e391-b74e-4702-853b-12a6a44f5c85.Date
+
+relationship bafe8f1f-67fe-4f0b-9661-3901bc85aca1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Entertainment_Declaration_Responses.Created
+	toColumn: LocalDateTable_8a15dbc1-bce4-4ab0-b975-0105992e7723.Date
+
+relationship 71e6b17a-5dc6-490a-97e3-93bcf702c04e
+	fromColumn: ghe_Gift_Declaration_Responses.Gift_Declaration_LookupId
+	toColumn: ghe_Gift_Declarations.Id
+
+relationship b1cd4aa5-8c65-4307-a964-f0d63a2cb2a9
+	fromColumn: coi_MCM_Disclosure_Logs.'MCM_Disclosures_Lookup.ID'
+	toColumn: coi_MCM_Disclosures.Id
+
+relationship 0f7ff548-8c7f-4b37-914a-564007ef2988
+	crossFilteringBehavior: bothDirections
+	fromColumn: ghe_Gift_Declaration_Logs.Gift_Declaration_LookupId
+	toColumn: ghe_Gift_Declarations.Id
+
+relationship aec010a5-7590-454b-9e4f-dba474756c64
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: ghe_Gift_Declaration_Logs.Gift_Declaration_LookupId
+	toColumn: ghe_Gift_Declaration_Responses.Gift_Declaration_LookupId
+
+relationship d180343f-e42f-4d57-8776-7ed6f15707e2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Hospitality_Declarations.Modified
+	toColumn: LocalDateTable_129b5cfa-657b-43cc-b7cf-b3c3279a5ae7.Date
+
+relationship 43daa667-ecb4-46f6-8d3e-86c298afe8c5
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: ghe_Hospitality_Declaration_Logs.Hospitality_Declaration_LookupId
+	toColumn: ghe_Hospitality_Declaration_Responses.Hospitality_Dec_LookupId
+
+relationship e7967e29-0312-4354-bbf1-6ae1dfe70ca8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Entertainment_Declarations.Created
+	toColumn: LocalDateTable_a6f04b7c-220c-4627-904f-d214478ea20e.Date
+
+relationship c7d469f3-94ca-414b-b50b-5724f9af99ee
+	crossFilteringBehavior: bothDirections
+	fromColumn: ghe_Entertainment_Declaration_Logs.Entertainment_Declaration_LookupId
+	toColumn: ghe_Entertainment_Declarations.Id
+
+relationship 18003ec3-74e2-4e86-bd96-f44b2a0efa53
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_BOD_Disclosures.Created
+	toColumn: LocalDateTable_06edd852-18ce-4a10-93b7-fc341df19cf7.Date
+
+relationship d45b231f-3cc8-4108-8ab1-b8485a370f55
+	fromColumn: coi_BOD_Disclosure_Log.BOD_Disclosures_LookupId
+	toColumn: coi_BOD_Disclosures.Id
+
+relationship 82d8cdfe-ccf3-4852-8577-490f2ee03d5d
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: coi_BCM_Disclosure_Log.Id
+	toColumn: coi_BCM_Personal_Information.BCM_Disclosure_LookupId
+
+relationship 7947bf01-4539-41e1-b3e2-f17f07ff4195
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Gift_Response.Modified
+	toColumn: LocalDateTable_0ae7367d-6fa8-4b1e-85d5-02e7c134be3d.Date
+
+relationship 598cb00b-a4a3-4c8b-a091-1fd6cfacd76a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Gift_Response.Created
+	toColumn: LocalDateTable_a02c3ee4-7a61-47fa-b284-0a7740534918.Date
+
+relationship cab8e896-9e3c-48aa-b18d-664070dda627
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Offer/Recieve Status - Gift'.Modified
+	toColumn: LocalDateTable_bfc6ca32-55fe-43b3-995b-aa79808a885a.Date
+
+relationship a1983876-f713-4e94-b67d-6c22a7109663
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Offer/Recieve Status - Gift'.Created
+	toColumn: LocalDateTable_896beccb-4a5e-4d9e-b459-a053598c741e.Date
+
+relationship 232a138d-c112-4cf4-a155-7259fa009cb7
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Offer/Recieve Status - Gift'.Gift_Declaration_LookupId
+	toColumn: ghe_Gift_Declarations.Id
+
+relationship 51a58991-1a1d-45ab-b036-447076ebe61d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_Employee_Disclosure_Log.'Status Date'
+	toColumn: LocalDateTable_95d1a3e3-c944-4c67-8a1d-3716068779fe.Date
+
+relationship 5b32e529-b7c9-490f-9f1d-d59abe03d16e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Gift_Declaration_Logs.Initiated_Date
+	toColumn: LocalDateTable_a6f1b0e7-3c3a-4809-abb9-182d75a28afc.Date
+
+relationship 646f0d9a-3bca-47cf-bdf0-f4297d1200ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Gift_Declaration_Logs.'Status Date'
+	toColumn: LocalDateTable_0e50ba9f-e3da-4cf0-89bc-b0e3fafae499.Date
+
+relationship ebb060af-f646-482c-9454-4588baa979f1
+	crossFilteringBehavior: bothDirections
+	fromColumn: ghe_Hospitality_Declarations.'Employee_Lookup.Employee_ID_Number'
+	toColumn: gen_Employees.Employee_ID_Number
+
+relationship 57a6c063-ecc0-40b6-beaa-5c8b06e270bf
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: gen_Employee_Relationships.'Employee_Lookup.Employee_ID_Number'
+	toColumn: gen_Employees.Employee_ID_Number
+
+relationship e93b6897-98f7-469a-941a-0ef56ebf231d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Offer/Receieve Status - Hospitality'.Modified
+	toColumn: LocalDateTable_7e650f70-4610-4d03-8ebd-9a2bc2bda533.Date
+
+relationship 5815c001-8a4b-4f11-93d9-09d5a80871ba
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Offer/Receieve Status - Hospitality'.Created
+	toColumn: LocalDateTable_e0336123-3f3b-4292-b133-f20acb7937a5.Date
+
+relationship 846b9cd3-d2a2-489c-a02e-46bdd2228876
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Hospitality_Declaration_Logs.Initiated_Date
+	toColumn: LocalDateTable_34e3738b-5f60-4ad5-b40e-8c06bb289add.Date
+
+relationship aa08ab15-88f4-43fa-ac77-3b66f7e3da1e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Hospitality_Declaration_Logs.'Status Date'
+	toColumn: LocalDateTable_e79680e0-edb5-4c8c-add1-8a4ad0817ca2.Date
+
+relationship e45b1808-0652-4eda-9aab-9ef48f755743
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ghe_Entertainment_Declaration_Logs.'Status Date'
+	toColumn: LocalDateTable_877ed83a-435e-46c5-bd79-72920e4b433a.Date
+
+relationship 0aa7d1a1-9e57-4607-a9d1-0d890d0eb2c7
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: ghe_Entertainment_Declaration_Logs.Entertainment_Declaration_LookupId
+	toColumn: ghe_Entertainment_Declaration_Responses.Entertainment_Declaration_LookupId
+
+relationship 84d13f56-ff89-48d0-b465-5fc335708485
+	crossFilteringBehavior: bothDirections
+	fromColumn: ghe_Entertainment_Declaration_Responses.Entertainment_Declaration_LookupId
+	toColumn: ghe_Entertainment_Declarations.Id
+
+relationship c68ea30f-d4b3-47dc-9dba-af24e4829be1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Offer/Receieve Status - Hospitality'.Hospitality_Dec_LookupId
+	toColumn: ghe_Hospitality_Declarations.Id
+
+relationship 4d67877d-0e98-43a4-a406-32f76670027d
+	crossFilteringBehavior: bothDirections
+	fromColumn: ghe_Hospitality_Declaration_Logs.Hospitality_Declaration_LookupId
+	toColumn: ghe_Hospitality_Declarations.Id
+
+relationship 0694b0f3-0d4a-4ac2-ad1f-ded48d00a515
+	fromColumn: ghe_Hospitality_Declaration_Responses.Hospitality_Dec_LookupId
+	toColumn: ghe_Hospitality_Declarations.Id
+
+relationship 96015dcd-5e74-4461-a1ef-2c0f1ae7fda4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Offer/Receive Status - Entertainment'.Modified
+	toColumn: LocalDateTable_ab503eaf-c1ec-4b33-85b6-3c33272d019d.Date
+
+relationship 11e055e6-0d7a-44a9-9457-225cfd15e5a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Offer/Receive Status - Entertainment'.Created
+	toColumn: LocalDateTable_a184ad29-05cf-435d-94fa-ad9995f87621.Date
+
+relationship daa0740b-9f05-43fc-9c4c-24c728bf2900
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Offer/Receive Status - Entertainment'.Entertainment_Declaration_LookupId
+	toColumn: ghe_Entertainment_Declarations.Id
+
+relationship 7dd3de7f-6107-4b04-b577-cdc9762999a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: coi_Employee_Disclosure_Log.Initiated_Date
+	toColumn: LocalDateTable_41a31459-75c8-480d-80e7-ec1221be227b.Date
+
+relationship AutoDetected_f8404a09-32b2-4a3b-8c58-472396c926ad
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: gen_Departments.'ID.1'
+	toColumn: coi_Employee_Disclosure_Log.'ID.1'
+
+relationship AutoDetected_f79903c7-7c79-485e-970d-287a5c393056
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: gen_Departments.'ID.1'
+	toColumn: coi_Employee_Disclosures.'ID.1'
+
+relationship AutoDetected_172f8fd2-423b-44be-bfec-e5d9dc0154fc
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: gen_Departments.'ID.1'
+	toColumn: coi_MCM_Disclosure_Logs.'ID.1'
+
+relationship 4ea77a30-c1a6-b28e-60d3-a1a1108e8861
+	crossFilteringBehavior: bothDirections
+	fromColumn: coi_Employee_Disclosures.Employee_LookupId
+	toColumn: gen_Employees-Compact.Id
+
+relationship 376920ea-b724-3ca7-68fb-78703fbbe511
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: gen_Employees-Compact.Id
+	toColumn: gen_Employees.Id
+

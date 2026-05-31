@@ -1,0 +1,233 @@
+table ghe_Hospitality_Declaration_Logs
+	lineageTag: 40945b67-5aab-4a41-bb47-1a67a990ff3b
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 942724bb-1cb0-4b40-b278-a2c26eeabd15
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: ba87b2b3-9497-4486-8b95-7fc6be446edc
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: aa7ac474-f26b-4f4b-a37a-054cb1c7e3dd
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 37c9a2a1-6ae8-4689-b50b-a39174e1e7da
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: cfb1bbb8-7008-4d42-8f41-b58f74bcbf13
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 4402fd5a-6235-46af-99d1-78cf91a53863
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: d35f7d61-1d62-4da0-9ec9-eddfd30a8b30
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: 1a5148c1-84e3-4e3f-8da9-ca977f82f5ce
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: f10b7637-e319-4117-870b-72ae06bfff25
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 893f70ef-b9e9-422c-906c-1871fe997a49
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 23ce6949-f31d-4f4c-a4dd-f8fc6bab4610
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 888c2681-5ba5-4186-aa82-c670e1af34a5
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 49e9e16b-0bca-4b45-aa13-242f4dd9beb4
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 82aa237f-f82a-4558-9f79-0209c6a8dd46
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 02c4a9fc-4a10-47ed-9280-1a8bd5b5deed
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hospitality_Declaration_LookupId
+		dataType: string
+		lineageTag: 41dafff4-ed83-49ae-8448-70a811882b0a
+		summarizeBy: none
+		sourceColumn: Hospitality_Declaration_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_Stamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2a1adabf-36be-41cd-8974-62e7bc415511
+		summarizeBy: none
+		sourceColumn: Time_Stamp
+
+		variation Variation
+			isDefault
+			relationship: 109a3284-9871-4f9f-81f2-4ad8de2f88e8
+			defaultHierarchy: LocalDateTable_a9c59547-ef1c-4a96-b121-be9e4ea9155b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_LC_Status_LookupId
+		dataType: string
+		lineageTag: 4fc13065-eb1f-46ef-92e2-513516b35dcc
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_LC_SubStatus_LookupId
+		dataType: string
+		lineageTag: d1e583d9-4902-46b8-bfba-477f1030f78d
+		summarizeBy: none
+		sourceColumn: Declaration_LC_SubStatus_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ct_Comments
+		dataType: string
+		lineageTag: 8259f778-9476-46d1-91e4-6465f8e17943
+		summarizeBy: none
+		sourceColumn: ct_Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column ct_RoleLookupId
+		dataType: string
+		lineageTag: 7b6a2ec4-0250-40b3-8d73-ae50a62c3b1a
+		summarizeBy: none
+		sourceColumn: ct_RoleLookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: d3535575-d039-4b75-a11f-427df12dadf1
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_Status_Lookup.Name'
+		dataType: string
+		lineageTag: 0bbccc69-78c1-4f21-b272-4b21606e5fbc
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_Lookup.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Initiated_Date = CALCULATE(selectedvalue(ghe_Hospitality_Declaration_Logs[Time_Stamp]),ALLEXCEPT(ghe_Hospitality_Declaration_Logs,ghe_Hospitality_Declaration_Logs[Hospitality_Declaration_LookupId]),ghe_Hospitality_Declaration_Logs[Declaration_LC_Status_Lookup.Name]="Draft")
+		formatString: General Date
+		lineageTag: a00a3ae1-7e85-4955-9e02-ce3cee24c716
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 846b9cd3-d2a2-489c-a02e-46bdd2228876
+			defaultHierarchy: LocalDateTable_34e3738b-5f60-4ad5-b40e-8c06bb289add.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status Date' = CALCULATE(MAX(ghe_Hospitality_Declaration_Logs[Time_Stamp]),ALLEXCEPT(ghe_Hospitality_Declaration_Logs,ghe_Hospitality_Declaration_Logs[Hospitality_Declaration_LookupId]))
+		formatString: General Date
+		lineageTag: 2d8a7cda-6311-4739-afbf-51be89746b96
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: aa08ab15-88f4-43fa-ac77-3b66f7e3da1e
+			defaultHierarchy: LocalDateTable_e79680e0-edb5-4c8c-add1-8a4ad0817ca2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ghe_Hospitality_Declaration_Logs-7650d141-e427-4e5e-bf7f-244e8c47b1e9 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"7da382fa-a582-4816-9be8-926749f6b4d7" = Source{[Id="7da382fa-a582-4816-9be8-926749f6b4d7"]}[Items],
+				    #"Renamed Columns1" = Table.RenameColumns(#"7da382fa-a582-4816-9be8-926749f6b4d7",{{"ID", "ID.1"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns1",{{"Time_Stamp", type datetime}}),
+				    #"Expanded Declaration_LC_Status_Lookup" = Table.ExpandRecordColumn(#"Changed Type", "Declaration_LC_Status_Lookup", {"Name"}, {"Declaration_LC_Status_Lookup.Name"})
+				in
+				    #"Expanded Declaration_LC_Status_Lookup"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

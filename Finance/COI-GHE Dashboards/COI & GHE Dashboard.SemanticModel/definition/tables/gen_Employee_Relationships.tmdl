@@ -1,0 +1,266 @@
+table gen_Employee_Relationships
+	lineageTag: 6d9448b3-06f9-4815-87f1-a00683380ee2
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 4681c19e-21f5-421b-9dd4-b8c2b1373dc1
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 498e1d76-566c-45ef-87df-38f1481804d5
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 84d61933-a451-4135-9759-c770266b2876
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 88d534b6-5585-43d2-9ccd-f5a90f3a5d08
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: aa9d8698-33f1-471a-a989-0fefdfa95a0e
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 08d62f58-2929-4d3e-b9ce-a74049f4957c
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: adef2913-d7a5-441c-9898-64cc82d2e2d6
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: ae9eaa63-2a24-41fd-a84d-377e6a44c70a
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 0b7d7c01-68bb-4f96-816b-955e63eb212e
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 35c599a7-dd5b-451d-8322-5514a07d5f6b
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 87f91a9f-5cac-462f-b231-4124a7bf80ea
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 2544453f-2cae-47ea-bbb2-9bf9676d524e
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 26508edf-6e25-45af-8652-ecc3b6abd4af
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: d4cafc62-010e-4c7b-90e5-a034f261781d
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 944c62e2-e8d1-49f4-88a1-113b747a7385
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_LookupId
+		dataType: string
+		lineageTag: e44dadde-b779-4bd8-aade-b8531e654cb2
+		summarizeBy: none
+		sourceColumn: Employee_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mobile_Number
+		dataType: string
+		lineageTag: 437163fa-40ec-409f-9b41-d06095c0f9ff
+		summarizeBy: none
+		sourceColumn: Mobile_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Office_Number
+		dataType: string
+		lineageTag: 566beada-1b25-4205-9949-402872e7f84d
+		summarizeBy: none
+		sourceColumn: Office_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department_LookupId
+		dataType: string
+		lineageTag: 75ba37ff-ca42-4aef-8975-7054b58f21f2
+		summarizeBy: none
+		sourceColumn: Department_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Supervisor_LookupId
+		dataType: string
+		lineageTag: ce67cba7-3f46-4f50-8c86-676b1f8b39ed
+		summarizeBy: none
+		sourceColumn: Employee_Supervisor_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_HR_Partner_LookupId
+		dataType: string
+		lineageTag: 2e60393d-07d6-4858-af44-122c758611a5
+		summarizeBy: none
+		sourceColumn: Employee_HR_Partner_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Job_Title_ID
+		dataType: string
+		lineageTag: 46b5e5a8-c8a0-4e50-bc13-bb1dece18d8b
+		summarizeBy: none
+		sourceColumn: Employee_Job_Title_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Job_Title_Name
+		dataType: string
+		lineageTag: 47948c53-1ec1-4eb4-80fa-babedea72b60
+		summarizeBy: none
+		sourceColumn: Employee_Job_Title_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entity_LookupId
+		dataType: string
+		lineageTag: e90676a8-c04c-495b-9ee5-981432ec31e1
+		summarizeBy: none
+		sourceColumn: Entity_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Department_Lookup.Name'
+		dataType: string
+		lineageTag: 2c8b88f0-70fa-41cf-8f4d-8e125e91bd5b
+		summarizeBy: none
+		sourceColumn: Department_Lookup.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Lookup.Employee_ID_Number'
+		dataType: string
+		lineageTag: 3a17891c-14cc-491c-b83b-5b3cf61430ca
+		summarizeBy: none
+		sourceColumn: Employee_Lookup.Employee_ID_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Lookup.Employee_Name'
+		dataType: string
+		lineageTag: 5bf25ef3-401a-481f-81f5-e15f5b4a44ae
+		summarizeBy: none
+		sourceColumn: Employee_Lookup.Employee_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Lookup.Employee_Work_Email_ID'
+		dataType: string
+		lineageTag: 693eb0c9-94b4-4183-a879-c8fb236f008b
+		summarizeBy: none
+		sourceColumn: Employee_Lookup.Employee_Work_Email_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: 6adef995-d851-44a2-941e-6869b58e5515
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Supervisor_Lookup.Employee_Name'
+		dataType: string
+		lineageTag: d0914a46-609d-4888-9afc-64b919efec6e
+		summarizeBy: none
+		sourceColumn: Employee_Supervisor_Lookup.Employee_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column employee_supervisor_email = LOOKUPVALUE(gen_Employees[Employee_Work_Email_ID],gen_Employees[Id],gen_Employee_Relationships[Employee_Supervisor_LookupId])
+		lineageTag: 3441d122-61b3-49c8-9043-5957bde23338
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gen_Employee_Relationships-ff1f895c-92cd-4145-a864-6e8748b14ddd = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"39af3f26-9f7d-4f5d-b493-dc1d960b8996" = Source{[Id="39af3f26-9f7d-4f5d-b493-dc1d960b8996"]}[Items],
+				    #"Renamed Columns1" = Table.RenameColumns(#"39af3f26-9f7d-4f5d-b493-dc1d960b8996",{{"ID", "ID.1"}}),
+				    #"Expanded Department_Lookup" = Table.ExpandRecordColumn(#"Renamed Columns1", "Department_Lookup", {"Name"}, {"Department_Lookup.Name"}),
+				    #"Expanded Employee_Lookup" = Table.ExpandRecordColumn(#"Expanded Department_Lookup", "Employee_Lookup", {"Employee_ID_Number", "Employee_Name", "Employee_Work_Email_ID"}, {"Employee_Lookup.Employee_ID_Number", "Employee_Lookup.Employee_Name", "Employee_Lookup.Employee_Work_Email_ID"}),
+				    #"Expanded Employee_Supervisor_Lookup" = Table.ExpandRecordColumn(#"Expanded Employee_Lookup", "Employee_Supervisor_Lookup", {"Employee_Name"}, {"Employee_Supervisor_Lookup.Employee_Name"})
+				in
+				    #"Expanded Employee_Supervisor_Lookup"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,242 @@
+table coi_Employee_Disclosure_Log
+	lineageTag: d9c6118d-4ca8-4853-82e6-9d56ffcbae2a
+
+	refreshPolicy
+		policyType: basic
+		rollingWindowGranularity: year
+		rollingWindowPeriods: 5
+		incrementalGranularity: day
+		incrementalPeriods: 2
+		sourceExpression =
+			let
+			    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+			    #"768917e0-3987-410c-9010-76f3537b82b6" = Source{[Id="768917e0-3987-410c-9010-76f3537b82b6"]}[Items],
+			    #"Removed Columns1" = Table.RemoveColumns(#"768917e0-3987-410c-9010-76f3537b82b6",{"FileSystemObjectType", "ServerRedirectedEmbedUri", "ServerRedirectedEmbedUrl", "ContentTypeId", "CT_Role_LookupId", "OData__ColorTag", "AuthorId", "EditorId", "OData__UIVersionString", "Attachments", "GUID"}),
+			    #"Filtered Rows" = Table.SelectRows(#"Removed Columns1", each [Time_Stamp] <= RangeEnd and [Time_Stamp] >= RangeStart),
+			    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows",{{"ID", "ID.1"}}),
+			    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"FirstUniqueAncestorSecurableObject", "RoleAssignments", "AttachmentFiles", "ContentType", "GetDlpPolicyTip", "FieldValuesAsHtml", "FieldValuesAsText", "FieldValuesForEdit", "File", "Folder", "LikedByInformation", "ParentList", "Properties", "Versions", "Employee_Disclosure_Lookup", "Author", "Editor"}),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Removed Columns",{{"Time_Stamp", type datetime}}),
+			    #"Expanded Disclosure_Lifecycle_Status_Look" = Table.ExpandRecordColumn(#"Changed Type", "Disclosure_Lifecycle_Status_Look", {"Name"}, {"Disclosure_Lifecycle_Status_Look.Name"}),
+			    #"Expanded CT_Role_Lookup" = Table.ExpandRecordColumn(#"Expanded Disclosure_Lifecycle_Status_Look", "CT_Role_Lookup", {"Name", "Code"}, {"CT_Role_Lookup.Name", "CT_Role_Lookup.Code"})
+			in
+			    #"Expanded CT_Role_Lookup"
+
+	measure initiated_status = CALCULATE(COUNT(coi_Employee_Disclosure_Log[Id]),FILTER(coi_Employee_Disclosure_Log,coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name] = "Initiated"))
+		formatString: 0
+		lineageTag: 690854c5-859d-4c21-bb80-3936870023d1
+
+	measure submission_status = CALCULATE(DISTINCTCOUNT(coi_Employee_Disclosure_Log[Employee_Disclosure_LookupId]),FILTER(coi_Employee_Disclosure_Log,coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="Process Closed" || coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="Waiting for Additional Information" || coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="RN Creation in progress" || coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="RN under review by Senior Manager" || coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="Waiting for RN Approval" || coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="Approved" || coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="COI Resolution Notice" ))
+		formatString: 0
+		lineageTag: 832badf9-c7b9-4611-b57b-1796be5fa923
+
+	measure submission_progression_rate = (coi_Employee_Disclosure_Log[submission_status]/gen_Employees[employee_count])*100
+		lineageTag: 3c803e1b-8560-451f-b33f-152ebc9925cd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure completion_Status = CALCULATE(DISTINCTCOUNT(coi_Employee_Disclosure_Log[Employee_Disclosure_LookupId]),FILTER(coi_Employee_Disclosure_Log,coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="Process Closed" ||  coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="COI Resolution Notice" ))
+		formatString: 0
+		lineageTag: ba88c8ee-8222-4086-831c-07f4ca2ded89
+
+	measure processing_progression_rate = (coi_Employee_Disclosure_Log[completion_Status]/coi_Employee_Disclosure_Log[submission_status])*100
+		lineageTag: 07f42f4e-5a72-4209-ba69-4edaf111d796
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure test = 100 - coi_Employee_Disclosure_Log[submission_progression_rate]
+		lineageTag: 6943c6a0-7b41-46fa-81f1-ef389226cbc9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure pending_submission_progression_rate = 100-coi_Employee_Disclosure_Log[submission_progression_rate]
+		lineageTag: 612088ee-a8cb-4618-98c9-b5882e9f15dd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure pensing_progress_process_rate = 100-coi_Employee_Disclosure_Log[processing_progression_rate]
+		lineageTag: f2a191f7-e6ce-4da1-a00b-dac5138dda12
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure submission_progression_rate_F = IF(ISBLANK([submission_progression_rate]),0,[submission_progression_rate])
+		lineageTag: 98470954-0891-4bd4-9d3b-855ab7c70d72
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure processing_progression_rate_F = IF(ISBLANK([processing_progression_rate]),0,[processing_progression_rate])
+		lineageTag: c8417d1d-ddb6-4535-9e2c-d15cb29454cb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Id
+		dataType: string
+		lineageTag: cca4715a-51e3-48fb-adb3-0059bd4642ce
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 820837b4-434d-4934-8545-ed12c45e218f
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: bda38240-81da-4151-8bce-1a0a6c785d69
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: dd95a781-1db1-4b12-8e43-1bb7c16c849a
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: f4d92a9e-0763-42ff-92c5-a6a1e28716db
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 307da537-a123-4a32-b595-2365892bf1e6
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Disclosure_LookupId
+		dataType: string
+		lineageTag: 26468bf0-c712-4cdd-8cd4-139abdf7cede
+		summarizeBy: none
+		sourceColumn: Employee_Disclosure_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_Stamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f1ef9c1e-20e7-4064-9a5e-a3847b86591e
+		summarizeBy: none
+		sourceColumn: Time_Stamp
+
+		variation Variation
+			isDefault
+			relationship: b944fdc7-f261-48ad-afd6-88fe41450f02
+			defaultHierarchy: LocalDateTable_be48b2cf-0908-41a1-9e6d-0e9dac643a3b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_Lifecycle_Status_LookId
+		dataType: string
+		lineageTag: c0d6e4e5-4768-4d94-967e-f2fd9f157705
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status_LookId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CT_Comments
+		dataType: string
+		lineageTag: 7dd8becb-3b72-499c-adfd-2b6d58f9eca2
+		summarizeBy: none
+		sourceColumn: CT_Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column Initiating_date = coi_Employee_Disclosure_Log[Time_Stamp]
+		formatString: Short Date
+		lineageTag: 6db2af67-ab85-49a3-8b94-2433e3471b5d
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 551d96e3-f742-4047-a843-c1dcda895058
+			defaultHierarchy: LocalDateTable_f44128a9-3479-4da6-b2cc-f43d1165d5f4.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Disclosure_Lifecycle_Status_Look.Name'
+		dataType: string
+		lineageTag: 9aca4d0d-4a72-47bf-a881-926053074dfb
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status_Look.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CT_Role_Lookup.Name'
+		dataType: string
+		lineageTag: cabdf816-6d4f-406b-8659-9d53382806f9
+		summarizeBy: none
+		sourceColumn: CT_Role_Lookup.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CT_Role_Lookup.Code'
+		dataType: string
+		lineageTag: ed12684d-3c3d-41f3-af19-663df8cd1f59
+		summarizeBy: none
+		sourceColumn: CT_Role_Lookup.Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Initiated_Date = CALCULATE(selectedvalue(coi_Employee_Disclosure_Log[Time_Stamp]),ALLEXCEPT(coi_Employee_Disclosure_Log,coi_Employee_Disclosure_Log[Employee_Disclosure_LookupId]),coi_Employee_Disclosure_Log[Disclosure_Lifecycle_Status_Look.Name]="Initiated")
+		formatString: General Date
+		lineageTag: a3b76566-c966-4495-81de-bf03c64dcf47
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 7dd3de7f-6107-4b04-b577-cdc9762999a0
+			defaultHierarchy: LocalDateTable_41a31459-75c8-480d-80e7-ec1221be227b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status Date' = CALCULATE(MAX(coi_Employee_Disclosure_Log[Time_Stamp]),ALLEXCEPT(coi_Employee_Disclosure_Log,coi_Employee_Disclosure_Log[Employee_Disclosure_LookupId]))
+		formatString: General Date
+		lineageTag: 85a3858b-037c-44be-9cce-f74602599f74
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 51a58991-1a1d-45ab-b036-447076ebe61d
+			defaultHierarchy: LocalDateTable_95d1a3e3-c944-4c67-8a1d-3716068779fe.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_Employee_Disclosure_Log = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"768917e0-3987-410c-9010-76f3537b82b6" = Source{[Id="768917e0-3987-410c-9010-76f3537b82b6"]}[Items],
+				    #"Removed Columns1" = Table.RemoveColumns(#"768917e0-3987-410c-9010-76f3537b82b6",{"FileSystemObjectType", "ServerRedirectedEmbedUri", "ServerRedirectedEmbedUrl", "ContentTypeId", "CT_Role_LookupId", "OData__ColorTag", "AuthorId", "EditorId", "OData__UIVersionString", "Attachments", "GUID"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Columns1", each [Time_Stamp] <= RangeEnd and [Time_Stamp] >= RangeStart),
+				    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows",{{"ID", "ID.1"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"FirstUniqueAncestorSecurableObject", "RoleAssignments", "AttachmentFiles", "ContentType", "GetDlpPolicyTip", "FieldValuesAsHtml", "FieldValuesAsText", "FieldValuesForEdit", "File", "Folder", "LikedByInformation", "ParentList", "Properties", "Versions", "Employee_Disclosure_Lookup", "Author", "Editor"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Removed Columns",{{"Time_Stamp", type datetime}}),
+				    #"Expanded Disclosure_Lifecycle_Status_Look" = Table.ExpandRecordColumn(#"Changed Type", "Disclosure_Lifecycle_Status_Look", {"Name"}, {"Disclosure_Lifecycle_Status_Look.Name"}),
+				    #"Expanded CT_Role_Lookup" = Table.ExpandRecordColumn(#"Expanded Disclosure_Lifecycle_Status_Look", "CT_Role_Lookup", {"Name", "Code"}, {"CT_Role_Lookup.Name", "CT_Role_Lookup.Code"})
+				in
+				    #"Expanded CT_Role_Lookup"
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

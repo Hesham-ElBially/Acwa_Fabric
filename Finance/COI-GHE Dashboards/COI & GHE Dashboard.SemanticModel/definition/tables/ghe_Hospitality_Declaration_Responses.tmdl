@@ -1,0 +1,206 @@
+table ghe_Hospitality_Declaration_Responses
+	lineageTag: ae561fad-cfee-4ddf-9e3c-de343196913d
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 4c110bac-1314-47c8-9f0b-35ca4e24d959
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: feb5b453-6e28-44e3-b75f-1ad4a0d698f6
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: e65305f1-56ef-42e5-b0de-177703259edf
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 01295d96-c2bb-4deb-aa1a-d3ff458ffd05
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 222c5983-73af-40bc-bab6-ef9028d31446
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 07f111fc-2346-48fd-82c2-ca4122aa3b2c
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: cdf78f3f-6785-42a3-9ff2-7c4e9eb241ff
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b6b723c8-af26-4650-a679-b5d3bb75d35e
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: d1af9fab-d429-4775-a2b7-7ff63ba7c79f
+			defaultHierarchy: LocalDateTable_f18532b9-4780-43d2-89a8-41d265287f18.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e3c16bc7-79e7-438a-92c8-ea84ec194a39
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: f561e151-ea7d-4184-8041-33ecf45f8e36
+			defaultHierarchy: LocalDateTable_3a10f0cf-1614-4aa9-b638-5defe81c0a43.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 67a02de8-ee3d-4131-a998-dabce62053a2
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: d6b142c3-9d13-426a-9145-8bd05589b347
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 69e88b00-867e-4b77-b2db-2d06c7467d97
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: e470a5ed-cbc3-43ed-b3cc-80e0e07fe899
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 22c6e9d6-6d19-4d82-923f-d45ea0c88c73
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 6b65c026-e0d4-4843-ae4f-8e84e57b864c
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: 9cc786eb-0100-4788-a28c-335498e1d2dd
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hospitality_Dec_LookupId
+		dataType: string
+		lineageTag: 4e280ced-26b0-46e0-a78a-dae9fd53e5db
+		summarizeBy: none
+		sourceColumn: Hospitality_Dec_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_LookupId
+		dataType: string
+		lineageTag: 3bc15f61-9a3c-4496-a718-139c85acb9ed
+		summarizeBy: none
+		sourceColumn: Question_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_Response
+		dataType: string
+		lineageTag: 7a101d9b-9a5f-472d-bd5f-7b05809d3dc2
+		summarizeBy: none
+		sourceColumn: Question_Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column Has_Responses
+		dataType: string
+		lineageTag: a217f966-4851-42c4-9978-665c2091edd9
+		summarizeBy: none
+		sourceColumn: Has_Responses
+
+		annotation SummarizationSetBy = Automatic
+
+	column Get_Clarification
+		dataType: string
+		lineageTag: d4c6a882-46d8-45d4-829f-80fbd7aaca2a
+		summarizeBy: none
+		sourceColumn: Get_Clarification
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: 0c2309a0-d481-4e0b-892a-4f4e14854611
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ghe_Hospitality_Declaration_Responses-b17395e1-013c-4345-a2bc-6432a2da8997 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"b9c62240-3911-411e-8db1-9c4f6792abc6" = Source{[Id="b9c62240-3911-411e-8db1-9c4f6792abc6"]}[Items],
+				    #"Renamed Columns1" = Table.RenameColumns(#"b9c62240-3911-411e-8db1-9c4f6792abc6",{{"ID", "ID.1"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns1",{{"Created", type datetime}, {"Modified", type datetime}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

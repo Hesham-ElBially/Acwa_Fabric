@@ -1,0 +1,280 @@
+table coi_BCM_Disclosures
+	lineageTag: 61445a75-aa22-40d3-ad24-a19f052b0f71
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 18882c55-16c3-4449-8c2a-12a5e3a85fff
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 69f488c9-7e39-45c2-b2ab-e7df86dd5e66
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: dbe406ea-aedf-490c-bfd8-895dddd6cf72
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 3d1cb3c6-16b7-4979-9bb5-27c9d04114b7
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 3e429b79-2164-4c2b-a934-45a5f16734fd
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 960fcfd3-31da-4c4c-9f6d-68694e2db296
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 13e42902-ae90-4a95-bf47-df7ebfbc95e7
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b9f0681e-fd56-4703-9aa9-f6bd57605314
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: f00f622c-445b-4e01-a7ed-0f18d27ea191
+			defaultHierarchy: LocalDateTable_708f4b97-a6a9-474b-8fc3-a2b34c50dabd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ec843429-7720-4f05-8a1f-db5ed47d9201
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: fccf9667-4144-46ea-9003-cf45bf420189
+			defaultHierarchy: LocalDateTable_acba7599-d741-4654-83bf-1a31c2a1ae91.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: e78c654f-d68c-4f13-8b6b-f137a3ada432
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 3e102b89-fbe0-4197-a3dc-ad7ab365b23d
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: bfce7f73-8872-4a6b-811c-91a35b6fc27c
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: f53079ae-cfc7-4bd1-baa8-b8068803ead3
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 99cbe144-e7e0-4a1a-b37f-b69b62fc4118
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 91afbb87-df12-42a8-ab30-271a86572db8
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_Lifecycle_StatusId
+		dataType: string
+		lineageTag: 421d0c97-cc48-4ebd-8116-d58ac7b52944
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_StatusId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Submission_by_Delegate
+		dataType: string
+		lineageTag: 866839a8-97d9-4028-ab16-aff13123dee6
+		summarizeBy: none
+		sourceColumn: Submission_by_Delegate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Acknowledgement_Status
+		dataType: string
+		lineageTag: 4e52993f-9c37-4a37-a8fb-8d611784ba1f
+		summarizeBy: none
+		sourceColumn: Acknowledgement_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Year
+		dataType: string
+		lineageTag: 1e5d3f22-9f67-48be-95de-5d86dcccda9b
+		summarizeBy: none
+		sourceColumn: Financial_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_Type_LookupId
+		dataType: string
+		lineageTag: a3543bb2-50dd-469b-a27a-c6ab85e3cb33
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SM_LookUpId
+		dataType: string
+		lineageTag: 499e5f94-8f2b-49b8-96a3-fed0984e44c5
+		summarizeBy: none
+		sourceColumn: SM_LookUpId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCM_LookupId
+		dataType: string
+		lineageTag: 35f59f2a-a40d-4588-9419-290d70009585
+		summarizeBy: none
+		sourceColumn: BCM_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCM_LookupStringId
+		dataType: string
+		lineageTag: 30ccde3c-51bf-4195-bf66-e3659ed43cd0
+		summarizeBy: none
+		sourceColumn: BCM_LookupStringId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Lifecycle_Status.Name'
+		dataType: string
+		lineageTag: c08f0d9e-f52d-4e94-bb66-ee0f4be9b6be
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Lifecycle_Status.Display_Name'
+		dataType: string
+		lineageTag: 052d2054-7a58-42e5-b5fe-59267d86b4a6
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status.Display_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Type_Lookup.Title'
+		dataType: string
+		lineageTag: dba34984-6953-48c7-b18b-0869ffa3c884
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_Lookup.Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Type_Lookup.Reporting_Types'
+		dataType: string
+		lineageTag: 69a7dde9-cdb2-4793-a50e-cf8c3574f210
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_Lookup.Reporting_Types
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SM_LookUp.Employee_ID_Number'
+		dataType: string
+		lineageTag: 4c2e3c42-1db2-4a0c-bcd3-23c68ef46297
+		summarizeBy: none
+		sourceColumn: SM_LookUp.Employee_ID_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SM_LookUp.Employee_Name'
+		dataType: string
+		lineageTag: 35f89298-0e1a-40fe-8745-6bb1fa4dd7f6
+		summarizeBy: none
+		sourceColumn: SM_LookUp.Employee_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BCM_Lookup.Title'
+		dataType: string
+		lineageTag: ef8e27e2-47bc-466c-9e5a-d5a3596b566f
+		summarizeBy: none
+		sourceColumn: BCM_Lookup.Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BCM_Lookup.Name'
+		dataType: string
+		lineageTag: 812c622d-867b-483d-bb5f-6b9e2764030f
+		summarizeBy: none
+		sourceColumn: BCM_Lookup.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_BCM_Disclosures-8e8498bf-5ee5-4470-ae31-c6c9f64b66d7 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolutionDev", [Implementation=null, ApiVersion=15]),
+				    #"8a1edca6-0357-4a96-a225-59ea2108e2e9" = Source{[Id="8a1edca6-0357-4a96-a225-59ea2108e2e9"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"8a1edca6-0357-4a96-a225-59ea2108e2e9",{{"ID", "ID.1"}}),
+				    #"Expanded Disclosure_Lifecycle_Status" = Table.ExpandRecordColumn(#"Renamed Columns", "Disclosure_Lifecycle_Status", {"Name", "Display_Name"}, {"Disclosure_Lifecycle_Status.Name", "Disclosure_Lifecycle_Status.Display_Name"}),
+				    #"Expanded Disclosure_Type_Lookup" = Table.ExpandRecordColumn(#"Expanded Disclosure_Lifecycle_Status", "Disclosure_Type_Lookup", {"Title", "Reporting_Types"}, {"Disclosure_Type_Lookup.Title", "Disclosure_Type_Lookup.Reporting_Types"}),
+				    #"Expanded SM_LookUp" = Table.ExpandRecordColumn(#"Expanded Disclosure_Type_Lookup", "SM_LookUp", {"Employee_ID_Number", "Employee_Name"}, {"SM_LookUp.Employee_ID_Number", "SM_LookUp.Employee_Name"}),
+				    #"Expanded BCM_Lookup" = Table.ExpandRecordColumn(#"Expanded SM_LookUp", "BCM_Lookup", {"Title", "Name"}, {"BCM_Lookup.Title", "BCM_Lookup.Name"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded BCM_Lookup",{{"Modified", type datetime}, {"Created", type datetime}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

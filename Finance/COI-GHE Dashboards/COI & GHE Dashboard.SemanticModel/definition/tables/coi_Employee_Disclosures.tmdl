@@ -1,0 +1,451 @@
+table coi_Employee_Disclosures
+	lineageTag: fdd9cd59-3a43-4e8e-a370-6d3362640c33
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 28992e52-2ab7-4524-929d-04ab9fb5789f
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: eaa8c82c-1b33-4382-8808-255b7b915ba7
+		summarizeBy: none
+		sourceColumn: Id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: aa8e8e99-72dc-4862-8b7a-6390d30c968a
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: c158e4d1-1113-4472-a089-38e98ba35452
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 9acf98f3-ce51-419a-ad22-49b5f711f267
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: b9f4ac74-2c53-4e60-a464-ec3ae6616cd9
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: b6297cdf-65b2-43f4-97ec-ad3e9492b597
+		summarizeBy: none
+		sourceColumn: Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 36b59eb7-bc09-46e6-9020-8ad12a8347d1
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: 6a66cc80-f2d6-4502-8225-1d97f4c11662
+			defaultHierarchy: LocalDateTable_69c3374e-bc69-43d4-acf9-53a91f78fb29.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f96274d0-fe0a-49ae-adc9-a1ef3f08a9e7
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: 74cf23f6-1394-40fe-95fd-af37def8dc93
+			defaultHierarchy: LocalDateTable_96c83404-c95d-4733-b47b-42eb73b9f13b.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: b834fc15-b9ab-4258-9d2d-01095a3188d8
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 1194468a-781d-4bec-8aa6-8cd87bf1899d
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: d1c7216d-239b-49b7-b56d-4cf95078ee3e
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 66b30723-fc4f-4b24-9223-0728c7b5a9b8
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: eb7d5d24-12a7-4bc0-83ce-23df0bceeea9
+		summarizeBy: none
+		sourceColumn: GUID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 28bfdcf8-774b-40ba-aea3-0d4345b38cbb
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_Type_LookupId
+		dataType: string
+		lineageTag: 6a3bb88c-2910-45a7-8810-ba4ad42a4222
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Year
+		dataType: string
+		lineageTag: 16ae4ad7-96d5-43e9-be2b-d2b270f62bd9
+		summarizeBy: none
+		sourceColumn: Financial_Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CM_LookupId
+		dataType: string
+		lineageTag: 601a31d6-236e-461d-81bd-5490be6e5f7a
+		summarizeBy: none
+		sourceColumn: CM_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SM_LookupId
+		dataType: string
+		lineageTag: 35e1700a-7782-4c4e-8448-04daedf6f27a
+		summarizeBy: none
+		sourceColumn: SM_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CH_LookupId
+		dataType: string
+		lineageTag: 3e2343e3-7a70-4426-84b6-f6bda74bb911
+		summarizeBy: none
+		sourceColumn: CH_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_Lifecycle_StatusId
+		dataType: string
+		lineageTag: 93777236-7831-4486-90c3-5e1fae66bf27
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_StatusId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column RN_Required
+		dataType: string
+		lineageTag: cdd92000-d7cd-4cab-949b-2c8b6ff2bf9b
+		summarizeBy: none
+		sourceColumn: RN_Required
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_LookupId
+		dataType: string
+		lineageTag: fc15cd0d-b8f9-44e9-946a-4b0ecde4b097
+		summarizeBy: none
+		sourceColumn: Employee_LookupId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Acknowledgement_Status
+		dataType: string
+		lineageTag: de0d573a-55b3-4a97-b8c3-75107a8929cc
+		summarizeBy: none
+		sourceColumn: Acknowledgement_Status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Require_Clarifications
+		dataType: string
+		lineageTag: e7010827-34d0-4696-aa2d-9143ee58e649
+		summarizeBy: none
+		sourceColumn: Require_Clarifications
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Guideline_Acknowledgement
+		dataType: string
+		lineageTag: 6750792b-9e9f-4676-90a4-f997f9c4adee
+		summarizeBy: none
+		sourceColumn: Guideline_Acknowledgement
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Type_Lookup.Reporting_Types'
+		dataType: string
+		lineageTag: 6c662d56-277c-414b-83e4-1e49b59631dc
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_Lookup.Reporting_Types
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Type_Lookup.Title'
+		dataType: string
+		lineageTag: 50568368-4b84-483d-8e7f-a0d29c514c23
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_Lookup.Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CM_Lookup.Employee_ID_Number'
+		dataType: string
+		lineageTag: 3772b817-dd76-4fd6-b8a9-95c65b70dffe
+		summarizeBy: none
+		sourceColumn: CM_Lookup.Employee_ID_Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SM_Lookup.Employee_ID_Number'
+		dataType: string
+		lineageTag: 9f988a02-231a-4056-92cf-81d9680286c4
+		summarizeBy: none
+		sourceColumn: SM_Lookup.Employee_ID_Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CH_Lookup.Employee_ID_Number'
+		dataType: string
+		lineageTag: b99f728d-de31-4649-94c8-137d6bec7fb2
+		summarizeBy: none
+		sourceColumn: CH_Lookup.Employee_ID_Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Lifecycle_Status.Name'
+		dataType: string
+		lineageTag: d912b90a-42b8-437e-98b3-432b09a93670
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status.Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Lifecycle_Status.Display_Name'
+		dataType: string
+		lineageTag: e37c63ee-9515-4483-89c0-0ae7d683ed13
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status.Display_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Lookup.Employee_ID_Number'
+		dataType: string
+		lineageTag: d443a136-cf32-475a-8540-d5a18ef23e1a
+		summarizeBy: none
+		sourceColumn: Employee_Lookup.Employee_ID_Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee_Lookup.Employee_Name'
+		dataType: string
+		lineageTag: 15bf3b17-cb19-4774-9327-3e5d8dda9cfa
+		summarizeBy: none
+		sourceColumn: Employee_Lookup.Employee_Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'conflict detection' = IF(coi_Employee_Disclosures[conflict detection_status]="Conflict Detected","Conflict Detected",if(coi_Employee_Disclosures[conflict detection_status]="No Conflicts","No Conflicts","In Progress"))
+		lineageTag: 94c85a8b-78d2-4639-bd0e-48179613913f
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resolution_notice_status = IF(coi_Employee_Disclosures[RN_Required]="Yes" && coi_Employee_Disclosures[Disclosure_Lifecycle_Status.Name]="COI Resolution Notice","Resolution Notice Created",IF(coi_Employee_Disclosures[RN_Required]="Yes" && coi_Employee_Disclosures[Disclosure_Lifecycle_Status.Name] <> "COI Resolution Notice","Resolution Notice Pending"))
+		lineageTag: ca63e718-730f-4a40-9b93-88ba38826c08
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department = RELATED(gen_Employee_Relationships[Department_Lookup.Name])
+		lineageTag: 59584e56-753b-4885-835a-467a3cc39963
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'conflict detection_status' = IF(coi_Employee_Disclosures[RN_Required] = "Yes","Conflict Detected",IF((coi_Employee_Disclosures[RN_Required]=BLANK() || coi_Employee_Disclosures[RN_Required] ="No") && (coi_Employee_Disclosures[Disclosure_Lifecycle_Status.Name]<>"Initiated"),"No Conflicts"))
+		lineageTag: 1eca6d4c-71b1-4409-8eb3-627e8b408f16
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column timestamp
+		type: calculated
+		lineageTag: 6eb0c01c-ec06-4479-bfe2-85b84ab2a0ec
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = To use special characters in a column name, enclose the entire name in brackets ( [] ) and add a ] to any closing brackets in the name.
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: 671c2489-2984-4d8a-b813-605bb2c18341
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column year = RIGHT(coi_Employee_Disclosures[Financial_Year],4)
+		lineageTag: 5330e05f-9b2f-4cc3-8c0d-c4c79bd465f0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'COI - Detected Yes/No' = IF(coi_Employee_Disclosures[conflict detection_status]="No Conflicts","No",IF(coi_Employee_Disclosures[conflict detection_status]="Conflict Detected","Yes",BLANK()))
+		lineageTag: 13861939-c106-4ab7-bb99-411e8b0005da
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_Employee_Disclosures-3478d219-cb18-4116-9fc8-b48a21011f1c = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"04378187-0e9b-4084-acf9-ea8cb2c8839a" = Source{[Id="04378187-0e9b-4084-acf9-ea8cb2c8839a"]}[Items],
+				    #"Renamed Columns1" = Table.RenameColumns(#"04378187-0e9b-4084-acf9-ea8cb2c8839a",{{"ID", "ID.1"}}),
+				    #"Expanded Disclosure_Type_Lookup" = Table.ExpandRecordColumn(#"Renamed Columns1", "Disclosure_Type_Lookup", {"Title", "Reporting_Types"}, {"Disclosure_Type_Lookup.Title", "Disclosure_Type_Lookup.Reporting_Types"}),
+				    #"Expanded CM_Lookup" = Table.ExpandRecordColumn(#"Expanded Disclosure_Type_Lookup", "CM_Lookup", {"Employee_ID_Number"}, {"CM_Lookup.Employee_ID_Number"}),
+				    #"Expanded SM_Lookup" = Table.ExpandRecordColumn(#"Expanded CM_Lookup", "SM_Lookup", {"Employee_ID_Number"}, {"SM_Lookup.Employee_ID_Number"}),
+				    #"Expanded CH_Lookup" = Table.ExpandRecordColumn(#"Expanded SM_Lookup", "CH_Lookup", {"Employee_ID_Number"}, {"CH_Lookup.Employee_ID_Number"}),
+				    #"Expanded Disclosure_Lifecycle_Status" = Table.ExpandRecordColumn(#"Expanded CH_Lookup", "Disclosure_Lifecycle_Status", {"Name", "Display_Name"}, {"Disclosure_Lifecycle_Status.Name", "Disclosure_Lifecycle_Status.Display_Name"}),
+				    #"Expanded Employee_Lookup" = Table.ExpandRecordColumn(#"Expanded Disclosure_Lifecycle_Status", "Employee_Lookup", {"Employee_ID_Number", "Employee_Name"}, {"Employee_Lookup.Employee_ID_Number", "Employee_Lookup.Employee_Name"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Employee_Lookup",{{"Modified", type datetime}, {"Created", type datetime}})
+				in
+				    #"Changed Type"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

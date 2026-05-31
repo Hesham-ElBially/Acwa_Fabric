@@ -1,0 +1,317 @@
+table coi_BOD_Disclosures
+	lineageTag: 3673c056-5438-47cc-b01b-fd0d0d842250
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 29dcbb90-91dd-4909-b385-07389d32df57
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 904d3a79-7704-4d7f-b51b-c5f0f00f50c4
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 140867dc-0177-4002-ad77-32ab939c0660
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 64cef1b7-821d-47fe-95f0-25de4729232c
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 9ce0dda3-603a-415b-ae7c-eb47d5cadca6
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: ba84d9e0-5e50-4ef0-8653-4b4fefe4e48d
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 8a863282-8bec-41e3-ad12-cf0a568ff10d
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 247f0b88-b33f-4c0f-8ebd-00a6956580fd
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: 58bf1197-8e10-4d71-9c3f-f61ddfd2ad6e
+			defaultHierarchy: LocalDateTable_1d84aa97-40d5-424a-9b2d-75730bb8ea3a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a91a839b-ee1a-4351-8511-1c4e01cf4943
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: 18003ec3-74e2-4e86-bd96-f44b2a0efa53
+			defaultHierarchy: LocalDateTable_06edd852-18ce-4a10-93b7-fc341df19cf7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: dc3d1fad-f057-4810-854e-cfcc4fb7bee1
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 681b22bc-a95a-4819-9fc7-af34b94ee4ad
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 4820c923-e36c-4c28-97f7-2648a761822b
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 472a382b-21df-4b2b-ba0e-615696ca92aa
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: eb21be43-0bcd-4c07-8229-f29d750f3d10
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 20f132a2-9427-4503-a599-c3caaa11a87c
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_Lifecycle_StatusId
+		dataType: string
+		lineageTag: ad07a9f8-bb2d-4c64-a3cb-a90388c1be8f
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_StatusId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Submission_by_Delegate
+		dataType: string
+		lineageTag: f88927f8-e4eb-4a05-8dee-7d4e6a585df7
+		summarizeBy: none
+		sourceColumn: Submission_by_Delegate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Acknowledgement_Status
+		dataType: string
+		lineageTag: 2da09633-4341-468c-b079-af6d140be4c2
+		summarizeBy: none
+		sourceColumn: Acknowledgement_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Financial_Year
+		dataType: string
+		lineageTag: 11a2760f-5a91-47d3-b8e7-88a1021bc126
+		summarizeBy: none
+		sourceColumn: Financial_Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_Type_LookupId
+		dataType: string
+		lineageTag: f7d507a1-2630-4199-96ce-cb1e5038d589
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SM_LookUpId
+		dataType: string
+		lineageTag: a8d68ce8-93b0-4de0-8420-2239c40cbbe2
+		summarizeBy: none
+		sourceColumn: SM_LookUpId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Name
+		dataType: string
+		lineageTag: 87662687-c8e3-4701-98c1-f11aa1390caf
+		summarizeBy: none
+		sourceColumn: Member_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Position
+		dataType: string
+		lineageTag: 1700b58c-f020-4f91-8a91-70b055f0cf04
+		summarizeBy: none
+		sourceColumn: Member_Position
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name_of_Personto_Sign
+		dataType: string
+		lineageTag: bcb4d42f-f37a-4b19-948a-8739311fe7eb
+		summarizeBy: none
+		sourceColumn: Name_of_Personto_Sign
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9c9f50d8-e5d2-48de-821a-2543f7ef3fc9
+		summarizeBy: none
+		sourceColumn: Member_Date
+
+		variation Variation
+			isDefault
+			relationship: dbadb37e-fcd6-4bbe-8a6a-2eba6d0403be
+			defaultHierarchy: LocalDateTable_788040c9-42c9-404f-868e-1588687e074e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Delegate_UserId
+		dataType: string
+		lineageTag: f390c997-d9f2-4ddd-be27-7fac0482e21f
+		summarizeBy: none
+		sourceColumn: Delegate_UserId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Delegate_UserStringId
+		dataType: string
+		lineageTag: 03429420-4ff8-4078-8e93-f1718ee98a3d
+		summarizeBy: none
+		sourceColumn: Delegate_UserStringId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BOD_LookupId
+		dataType: string
+		lineageTag: 78ebc720-243b-4d0e-9ae2-718740c5b609
+		summarizeBy: none
+		sourceColumn: BOD_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BOD_LookupStringId
+		dataType: string
+		lineageTag: 581e9bc6-9540-47e6-8398-c8a0e1824c3d
+		summarizeBy: none
+		sourceColumn: BOD_LookupStringId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Lifecycle_Status.Name'
+		dataType: string
+		lineageTag: cb557325-a332-428a-8580-8fd5fd57d08a
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Lifecycle_Status.Display_Name'
+		dataType: string
+		lineageTag: 3f2e3051-8a69-49b0-a056-d15e2c49f980
+		summarizeBy: none
+		sourceColumn: Disclosure_Lifecycle_Status.Display_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Type_Lookup.Title'
+		dataType: string
+		lineageTag: 8ed684ef-3b47-454a-9c9f-ec6d7f3fd383
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_Lookup.Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_Type_Lookup.Reporting_Types'
+		dataType: string
+		lineageTag: 0ab25589-276b-46d6-a5f5-c28faa25702c
+		summarizeBy: none
+		sourceColumn: Disclosure_Type_Lookup.Reporting_Types
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BOD_Lookup.Title'
+		dataType: string
+		lineageTag: faefcebf-270c-423a-95b3-4adb1ad5d009
+		summarizeBy: none
+		sourceColumn: BOD_Lookup.Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BOD_Lookup.ID'
+		dataType: string
+		lineageTag: aadc3732-d9e8-42e4-81f8-883d1af812dc
+		summarizeBy: none
+		sourceColumn: BOD_Lookup.ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_BOD_Disclosures-809a7731-ac84-4150-ace3-8f5deebc9462 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolutionDev", [Implementation=null, ApiVersion=15]),
+				    #"a7b0f6ec-4155-4c9a-96a4-855fa481c39a" = Source{[Id="a7b0f6ec-4155-4c9a-96a4-855fa481c39a"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"a7b0f6ec-4155-4c9a-96a4-855fa481c39a",{{"ID", "ID.1"}}),
+				    #"Expanded Disclosure_Lifecycle_Status" = Table.ExpandRecordColumn(#"Renamed Columns", "Disclosure_Lifecycle_Status", {"Name", "Display_Name"}, {"Disclosure_Lifecycle_Status.Name", "Disclosure_Lifecycle_Status.Display_Name"}),
+				    #"Expanded Disclosure_Type_Lookup" = Table.ExpandRecordColumn(#"Expanded Disclosure_Lifecycle_Status", "Disclosure_Type_Lookup", {"Title", "Reporting_Types"}, {"Disclosure_Type_Lookup.Title", "Disclosure_Type_Lookup.Reporting_Types"}),
+				    #"Expanded BOD_Lookup" = Table.ExpandRecordColumn(#"Expanded Disclosure_Type_Lookup", "BOD_Lookup", {"Title", "ID"}, {"BOD_Lookup.Title", "BOD_Lookup.ID"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded BOD_Lookup",{{"Member_Date", type datetime}, {"Modified", type datetime}, {"Created", type datetime}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

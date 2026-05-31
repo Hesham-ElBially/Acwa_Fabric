@@ -1,0 +1,91 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["coi_Employee_Disclosure_Log","coi_Employee_Disclosures","coi_Employee_Resolution_Notice","gen_Employee_Relationships","gen_Employee_Status","gen_Employees","gen_Entities","coi_BCM_Disclosure_Log","coi_BCM_Disclosures","coi_BOD_Disclosure_Log","coi_BOD_Disclosures","coi_BCM_Personal_Information","ghe_Hospitality_Declarations","ghe_Hospitality_Declaration_Logs","ghe_Gift_Declaration_Logs","ghe_Entertainment_Declarations","ghe_Gift_Declarations","ghe_Entertainment_Declaration_Logs","coi_MCM_Disclosure_Logs","coi_MCM_Disclosures","coi_MCM_Personal_Information","ghe_Gift_Declaration_Responses","ghe_Hospitality_Declaration_Responses","ghe_Entertainment_Declaration_Responses","Offer/Recieve Status - Gift","Offer/Receieve Status - Hospitality","Offer/Receive Status - Entertainment","gen_Departments","RangeStart","RangeEnd","gen_Employees-Compact"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.2054.0 (24.12)+334ca1c95b576cc53924655643b0d36f21caac55
+
+ref table DateTableTemplate_8a0bf5bc-e720-4d74-bbd0-fe35670f53e0
+ref table coi_Employee_Disclosure_Log
+ref table coi_Employee_Disclosures
+ref table coi_Employee_Resolution_Notice
+ref table gen_Employee_Relationships
+ref table gen_Employee_Status
+ref table gen_Employees
+ref table gen_Entities
+ref table LocalDateTable_be48b2cf-0908-41a1-9e6d-0e9dac643a3b
+ref table LocalDateTable_f44128a9-3479-4da6-b2cc-f43d1165d5f4
+ref table LocalDateTable_69c3374e-bc69-43d4-acf9-53a91f78fb29
+ref table LocalDateTable_96c83404-c95d-4733-b47b-42eb73b9f13b
+ref table coi_BCM_Disclosure_Log
+ref table coi_BCM_Disclosures
+ref table coi_BOD_Disclosure_Log
+ref table coi_BOD_Disclosures
+ref table LocalDateTable_eb3a1968-bbfe-4aa4-a616-951fd47c0962
+ref table LocalDateTable_788040c9-42c9-404f-868e-1588687e074e
+ref table LocalDateTable_708f4b97-a6a9-474b-8fc3-a2b34c50dabd
+ref table LocalDateTable_acba7599-d741-4654-83bf-1a31c2a1ae91
+ref table LocalDateTable_1d84aa97-40d5-424a-9b2d-75730bb8ea3a
+ref table coi_BCM_Personal_Information
+ref table LocalDateTable_0f4f1251-d37e-45bf-a36b-59a0e2c72e17
+ref table ghe_Hospitality_Declarations
+ref table ghe_Hospitality_Declaration_Logs
+ref table ghe_Gift_Declaration_Logs
+ref table ghe_Entertainment_Declarations
+ref table ghe_Gift_Declarations
+ref table ghe_Entertainment_Declaration_Logs
+ref table coi_MCM_Disclosure_Logs
+ref table LocalDateTable_c33f4d6f-2dd1-4def-8711-171cfcb11cc6
+ref table coi_MCM_Disclosures
+ref table LocalDateTable_0b71d052-ea0d-4b24-80e0-e2f7e69c7552
+ref table LocalDateTable_d8bf28d6-b3f1-408a-8929-cb5fb6cf6674
+ref table coi_MCM_Personal_Information
+ref table LocalDateTable_3a864fd1-5794-4e6a-848f-a166bfd453ff
+ref table LocalDateTable_2c44c7ae-a01b-4589-ab4b-96c124cc87d1
+ref table LocalDateTable_1c1b01dd-fb67-42fd-a0c6-e9dc4024073e
+ref table LocalDateTable_d2331514-7045-4a2b-bcd7-0e46bcb6f026
+ref table LocalDateTable_492aa870-f185-4eef-9e30-bb32b38118b0
+ref table LocalDateTable_a9c59547-ef1c-4a96-b121-be9e4ea9155b
+ref table ghe_Gift_Declaration_Responses
+ref table ghe_Hospitality_Declaration_Responses
+ref table ghe_Entertainment_Declaration_Responses
+ref table LocalDateTable_32cdeedd-afbd-4e8c-a1e8-6ac863dd2c4e
+ref table LocalDateTable_80608762-ae4a-4a99-9bde-be22688ba163
+ref table LocalDateTable_f18532b9-4780-43d2-89a8-41d265287f18
+ref table LocalDateTable_3a10f0cf-1614-4aa9-b638-5defe81c0a43
+ref table LocalDateTable_7dd0e391-b74e-4702-853b-12a6a44f5c85
+ref table LocalDateTable_8a15dbc1-bce4-4ab0-b975-0105992e7723
+ref table LocalDateTable_129b5cfa-657b-43cc-b7cf-b3c3279a5ae7
+ref table LocalDateTable_a6f04b7c-220c-4627-904f-d214478ea20e
+ref table LocalDateTable_06edd852-18ce-4a10-93b7-fc341df19cf7
+ref table Gift_Response
+ref table LocalDateTable_0ae7367d-6fa8-4b1e-85d5-02e7c134be3d
+ref table LocalDateTable_a02c3ee4-7a61-47fa-b284-0a7740534918
+ref table 'Offer/Recieve Status - Gift'
+ref table LocalDateTable_bfc6ca32-55fe-43b3-995b-aa79808a885a
+ref table LocalDateTable_896beccb-4a5e-4d9e-b459-a053598c741e
+ref table LocalDateTable_95d1a3e3-c944-4c67-8a1d-3716068779fe
+ref table LocalDateTable_a6f1b0e7-3c3a-4809-abb9-182d75a28afc
+ref table LocalDateTable_0e50ba9f-e3da-4cf0-89bc-b0e3fafae499
+ref table 'Offer/Receieve Status - Hospitality'
+ref table LocalDateTable_7e650f70-4610-4d03-8ebd-9a2bc2bda533
+ref table LocalDateTable_e0336123-3f3b-4292-b133-f20acb7937a5
+ref table LocalDateTable_34e3738b-5f60-4ad5-b40e-8c06bb289add
+ref table LocalDateTable_e79680e0-edb5-4c8c-add1-8a4ad0817ca2
+ref table LocalDateTable_877ed83a-435e-46c5-bd79-72920e4b433a
+ref table 'Offer/Receive Status - Entertainment'
+ref table LocalDateTable_ab503eaf-c1ec-4b33-85b6-3c33272d019d
+ref table LocalDateTable_a184ad29-05cf-435d-94fa-ad9995f87621
+ref table LocalDateTable_41a31459-75c8-480d-80e7-ec1221be227b
+ref table gen_Departments
+ref table gen_Employees-Compact
+
+ref cultureInfo en-US
+

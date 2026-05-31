@@ -1,0 +1,202 @@
+table coi_BCM_Disclosure_Log
+	lineageTag: c83fb61d-4012-4b6e-8d80-8b03783697d0
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: d67b156f-f4f9-4ec2-97a1-c63cbccdd628
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: ce6ef7fd-47ad-430f-8475-1d16df32e4b8
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: e2cd36e5-2b42-4698-8644-8b11abffabb7
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 39d297d4-4d03-4a8c-8e40-21a88191a04a
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: c2700956-de59-4709-8a26-4614cd219728
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: eeed7dc2-c1ae-4abe-a9f3-c70b1b1f9903
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: e850d8ee-b283-4508-bc3d-5a63b25e5b9e
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: aee5fa60-c6e4-4f0a-9a4d-4ad6fbbd4f79
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 9ed995cb-415b-4259-a554-f02d4e4302ef
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: dd06d0a8-be30-4f8e-920e-7494da94b87f
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 49f69211-b218-4786-89f4-526cc44618f9
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: a038264e-2e7f-49bb-a876-870f9ae35c7d
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: f71700dd-e1a7-4099-9b52-236d13755580
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: f2ab9ec9-87f2-4e9a-8481-2c0195a5cf4c
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 72c26bbc-01a2-41b0-a383-9755571a4749
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCM_Disclosures_LookupId
+		dataType: string
+		lineageTag: 3b356c8b-97d0-4da0-aab8-1585b27b8ea2
+		summarizeBy: none
+		sourceColumn: BCM_Disclosures_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_Stamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cab90586-e923-4410-8d8d-b20fdb141a2f
+		summarizeBy: none
+		sourceColumn: Time_Stamp
+
+		variation Variation
+			isDefault
+			relationship: 7cfef6bc-3826-40ce-b5c2-031f9bd32129
+			defaultHierarchy: LocalDateTable_eb3a1968-bbfe-4aa4-a616-951fd47c0962.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disclosure_LC_Status_LookupId
+		dataType: string
+		lineageTag: a1dfb4d5-ee95-4047-b0eb-406066b029bf
+		summarizeBy: none
+		sourceColumn: Disclosure_LC_Status_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CT_Comments
+		dataType: string
+		lineageTag: 244e1eb2-7619-46ca-838a-442f43c16867
+		summarizeBy: none
+		sourceColumn: CT_Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column CT_Role_LookupId
+		dataType: string
+		lineageTag: ce168540-90da-4385-8f29-db5d6580b48a
+		summarizeBy: none
+		sourceColumn: CT_Role_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Disclosure_LC_Status_Lookup.Name'
+		dataType: string
+		lineageTag: 30300361-db2d-442c-a9fc-959748e01921
+		summarizeBy: none
+		sourceColumn: Disclosure_LC_Status_Lookup.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: cf5c5ba2-afc2-4a15-906c-109da37e589e
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_BCM_Disclosure_Log-30b58ac5-8fa0-4726-a008-184c4ac59168 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolutionDev", [Implementation=null, ApiVersion=15]),
+				    #"ad8b8e9e-140a-429f-9034-021fb5a7abce" = Source{[Id="ad8b8e9e-140a-429f-9034-021fb5a7abce"]}[Items],
+				    #"Removed Columns" = Table.RemoveColumns(#"ad8b8e9e-140a-429f-9034-021fb5a7abce",{"FirstUniqueAncestorSecurableObject", "RoleAssignments", "AttachmentFiles", "ContentType", "GetDlpPolicyTip", "FieldValuesAsHtml", "FieldValuesAsText", "FieldValuesForEdit", "File", "Folder", "LikedByInformation", "ParentList", "Properties", "Versions", "Author", "Editor", "BCM_Disclosures_Lookup", "CT_Role_Lookup"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"ID", "ID.1"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Time_Stamp", type datetime}}),
+				    #"Expanded Disclosure_LC_Status_Lookup" = Table.ExpandRecordColumn(#"Changed Type", "Disclosure_LC_Status_Lookup", {"Name"}, {"Disclosure_LC_Status_Lookup.Name"})
+				in
+				    #"Expanded Disclosure_LC_Status_Lookup"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

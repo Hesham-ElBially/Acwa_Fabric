@@ -1,0 +1,233 @@
+table 'Offer/Receive Status - Entertainment'
+	lineageTag: 3aa25c1a-6d72-4b68-972f-e5a188e52747
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 13284e11-e317-4ce1-9968-b0a61b74611b
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: e095acbb-2a0c-49d4-9b7d-69558032bd73
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: f6ca1363-b547-47e2-be3b-ab06f4c2b485
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 0c8ef044-b535-4d98-8a15-6b3216c4d169
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 91331ee7-83e9-44bc-8362-5694f2d245c1
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: f965b848-10f0-4f58-b49d-82360c637ef7
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 9e3f76fe-81a2-4bab-82cd-6fe92c1fd071
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entertainment_Declaration_LookupId
+		dataType: string
+		lineageTag: 87828daa-5e1b-4598-bbd4-2bbb3213bbc1
+		summarizeBy: none
+		sourceColumn: Entertainment_Declaration_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: abc89c41-2055-4125-b471-a0e3b2001c66
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_Response
+		dataType: string
+		lineageTag: b86fc175-6a40-4355-99d2-bc2d35ebc11f
+		summarizeBy: none
+		sourceColumn: Question_Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_LookupId
+		dataType: string
+		lineageTag: a219e78d-beda-4de3-be04-c147d7ae325b
+		summarizeBy: none
+		sourceColumn: Question_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Has_Responses
+		dataType: string
+		lineageTag: 8cfbfaed-46bb-437a-84e2-ab64b1052d74
+		summarizeBy: none
+		sourceColumn: Has_Responses
+
+		annotation SummarizationSetBy = Automatic
+
+	column Get_Clarification
+		dataType: string
+		lineageTag: d6978320-59b4-44bd-a832-6d4f14d72a9d
+		summarizeBy: none
+		sourceColumn: Get_Clarification
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: a717464d-f4ae-46d0-bf0e-952f24aa763e
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 90dbcc9e-9608-4408-a9aa-b307f20426d3
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: de48022c-642e-4aef-b24c-84eefc7acbf3
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: 96015dcd-5e74-4461-a1ef-2c0f1ae7fda4
+			defaultHierarchy: LocalDateTable_ab503eaf-c1ec-4b33-85b6-3c33272d019d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7f0a4934-7f52-4053-ae99-578658cc714c
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: 11e055e6-0d7a-44a9-9457-225cfd15e5a0
+			defaultHierarchy: LocalDateTable_a184ad29-05cf-435d-94fa-ad9995f87621.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 1b75e8af-f748-494a-8d32-8c78423c698b
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: c5cf510c-2576-43e6-8d27-267e5806050e
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 76cf483b-cde1-4cdc-ab5e-d0a6992c6fff
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: d8af6395-ad0f-41df-97e7-8217a4f92179
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 284a4dd7-2efa-4fb2-bc0a-b502f7ea3621
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Id'
+		dataType: string
+		lineageTag: 800ade94-9ddd-406f-93f7-2505d9e4d03c
+		summarizeBy: none
+		sourceColumn: Question_Lookup.Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Question'
+		dataType: string
+		lineageTag: 7520daa9-1402-4998-851a-c1de17458990
+		summarizeBy: none
+		sourceColumn: Question_Lookup.Question
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Question_Lookup.Question_Identifier'
+		dataType: string
+		lineageTag: f304567d-cec7-4e8d-b216-d9394d99bfef
+		summarizeBy: none
+		sourceColumn: Question_Lookup.Question_Identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Offer/Receive Status - Entertainment-77e42c8a-2717-48a6-aa86-cae218db184c' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"0e466cdf-36b1-41c7-ae69-8cd081e95be9" = Source{[Id="0e466cdf-36b1-41c7-ae69-8cd081e95be9"]}[Items],
+				    #"Renamed Columns1" = Table.RenameColumns(#"0e466cdf-36b1-41c7-ae69-8cd081e95be9",{{"ID", "ID.1"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns1",{{"Modified", type datetime}, {"Created", type datetime}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each true),
+				    #"Expanded Question_Lookup" = Table.ExpandRecordColumn(#"Filtered Rows", "Question_Lookup", {"Id", "Question", "Question_Identifier"}, {"Question_Lookup.Id", "Question_Lookup.Question", "Question_Lookup.Question_Identifier"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Expanded Question_Lookup", each ([Question_Lookup.Question_Identifier] = "Q-1"))
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

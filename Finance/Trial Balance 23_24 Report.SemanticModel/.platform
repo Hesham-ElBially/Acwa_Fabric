@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Trial Balance 23_24 Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "941d78f5-711d-9a29-4968-12b021894568"
+  }
+}

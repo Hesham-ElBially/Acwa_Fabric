@@ -1,0 +1,207 @@
+table ghe_Entertainment_Declaration_Responses
+	lineageTag: 67157491-af5b-4c15-9821-0c9328ff4420
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 5202b4c3-340d-4a09-a02a-54443f65add9
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: b3ccf52c-15e7-484c-84eb-35af56bd2546
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 36c7a62b-bc00-4971-9f74-3030f5093bcd
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: a6077e24-ce00-40c0-a0b7-11a2903eae2f
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 6fde5ec9-64eb-4e58-b7aa-494d2365596f
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 633a3614-e0b7-4a04-a3a7-c6e02be9ab56
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 9a6979a5-ec4a-4f81-892c-c75b57270dbf
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d365800a-728c-499b-a23d-9dbbe09158b0
+		summarizeBy: none
+		sourceColumn: Modified
+
+		variation Variation
+			isDefault
+			relationship: 3519be0e-a73c-4aab-9d68-be413969940e
+			defaultHierarchy: LocalDateTable_7dd0e391-b74e-4702-853b-12a6a44f5c85.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 25f4b35b-f8f6-4433-b994-f2c999f9b3b9
+		summarizeBy: none
+		sourceColumn: Created
+
+		variation Variation
+			isDefault
+			relationship: bafe8f1f-67fe-4f0b-9661-3901bc85aca1
+			defaultHierarchy: LocalDateTable_8a15dbc1-bce4-4ab0-b975-0105992e7723.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 512a52f0-2d49-46d9-b465-c2737a5b44e0
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 5ead50de-08bf-430c-91f4-2a4bd6b3cabe
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: fae53cb5-3666-4676-a4ba-22f597bfa413
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: 3c02d144-5ef9-4830-924b-a0decf5cd522
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 06fd9bed-8acf-4599-b2f7-73a3c11aa91c
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 36e5a711-b232-4b01-b53d-7d1fb1967d7d
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entertainment_Declaration_LookupId
+		dataType: string
+		lineageTag: 3071b7b5-37b1-42a1-8319-cd2326afd801
+		summarizeBy: none
+		sourceColumn: Entertainment_Declaration_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: 8593829f-32e2-4fee-9dd7-2743d4fdff89
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_Response
+		dataType: string
+		lineageTag: 1c86c480-6425-4c34-9a77-65da63d4db02
+		summarizeBy: none
+		sourceColumn: Question_Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column Question_LookupId
+		dataType: string
+		lineageTag: e31b64b9-6c1f-44b8-97e9-024f013f094c
+		summarizeBy: none
+		sourceColumn: Question_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Has_Responses
+		dataType: string
+		lineageTag: e30c0f82-7b78-4058-8cb2-91524c40b17a
+		summarizeBy: none
+		sourceColumn: Has_Responses
+
+		annotation SummarizationSetBy = Automatic
+
+	column Get_Clarification
+		dataType: string
+		lineageTag: 4551c57b-64ec-4de0-91bf-c94aec5885cc
+		summarizeBy: none
+		sourceColumn: Get_Clarification
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: df2312de-0fdb-4e12-86ee-97e90fe1bb03
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ghe_Entertainment_Declaration_Responses-7d9018ab-fcba-4b0a-8c2b-d6b4b6a7c2cd = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"0e466cdf-36b1-41c7-ae69-8cd081e95be9" = Source{[Id="0e466cdf-36b1-41c7-ae69-8cd081e95be9"]}[Items],
+				    #"Removed Columns" = Table.RemoveColumns(#"0e466cdf-36b1-41c7-ae69-8cd081e95be9",{"FirstUniqueAncestorSecurableObject", "RoleAssignments", "AttachmentFiles", "ContentType", "GetDlpPolicyTip", "FieldValuesAsHtml", "FieldValuesAsText", "FieldValuesForEdit", "File", "Folder", "LikedByInformation", "ParentList", "Properties", "Versions", "Entertainment_Declaration_Lookup", "Question_Lookup", "Author", "Editor"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns",{{"ID", "ID.1"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns1",{{"Modified", type datetime}, {"Created", type datetime}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

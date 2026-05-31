@@ -1,0 +1,248 @@
+table gen_Employees
+	lineageTag: 7c47d7a6-3550-4868-b6b0-0eafcba604f6
+
+	measure employee_count = DISTINCTCOUNT(gen_Employees[Id])
+		formatString: 0
+		lineageTag: b686f2db-b779-4835-8ab4-2d15c0484b98
+
+	measure NonFilersPerYear = ```
+			
+			var employees_gen = SELECTCOLUMNS(gen_Employees,gen_Employees[Employee_ID_Number])
+			var disclosures = CALCULATETABLE(SELECTCOLUMNS(coi_Employee_Disclosures,coi_Employee_Disclosures[Employee_Lookup.Employee_ID_Number]),FILTER(coi_Employee_Disclosures, coi_Employee_Disclosures[year] = SELECTEDVALUE(coi_Employee_Disclosures[year]) && coi_Employee_Disclosures[Disclosure_Lifecycle_Status.Name]<>"Initiated" && coi_Employee_Disclosures[Disclosure_Type_Lookup.Title] = "Annual"))
+			 
+			return
+			 
+			IF((COUNTROWS(EXCEPT(employees_gen,disclosures)))=1,"Submission Pending","Disclosure Submitted")
+			```
+		lineageTag: badebe6a-2b9d-4e9b-ada9-517bcd15afc6
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: e81fb3c2-83a4-4a11-bc8b-da9a0d32728a
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 0714af9c-470a-48ca-81e2-2ca15f3bec20
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 5acb922b-3b11-4a2b-acf7-360cf7049d68
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 475f3995-83f7-4f41-aecb-43a2cc3a7d84
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: d207488e-bd1c-4ee5-b5a4-51494de98b49
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 511cf51d-9f87-4203-9907-de79ed9d4a82
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 213b27e5-0efc-4178-8d5d-7e3c609b4342
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: 22b87a86-a898-4197-a458-5f31276681cf
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 77f3c0a1-e196-4fc7-b73f-408160f6d79f
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: c181f17e-e6f5-44c0-939e-f03ea0866807
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: ca018d9c-d115-4be4-8bac-fdd717355a04
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: f26842c9-e564-4295-9cea-7bcbbdc1ca38
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: e5ecc0a9-7a2a-430c-b3b5-d2dbc3705c45
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: ab4989be-0fbf-418f-bce0-bc00aee25047
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 79a80ef7-467f-4334-8075-889d1939e32f
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_ID_Number
+		dataType: string
+		lineageTag: 3acdbeb5-136d-4d74-8e24-95fecc12477b
+		summarizeBy: none
+		sourceColumn: Employee_ID_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Name
+		dataType: string
+		lineageTag: a4fe78c8-4959-40ab-a71c-81f95d7dccec
+		summarizeBy: none
+		sourceColumn: Employee_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_First_Name
+		dataType: string
+		lineageTag: 58d7cc58-e4e1-47eb-831a-3c0dfffd5150
+		summarizeBy: none
+		sourceColumn: Employee_First_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Middle_Name
+		dataType: string
+		lineageTag: 8a4b1db5-cb4f-4d57-92ac-3ac5b20bb7b6
+		summarizeBy: none
+		sourceColumn: Employee_Middle_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Last_Name
+		dataType: string
+		lineageTag: 0085f4f7-d0ad-485f-8fe8-ba66ccfd912b
+		summarizeBy: none
+		sourceColumn: Employee_Last_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Work_Email_ID
+		dataType: string
+		lineageTag: 02d06597-e08a-470e-9edd-3820d84d39f7
+		summarizeBy: none
+		sourceColumn: Employee_Work_Email_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Joining_Date
+		dataType: string
+		lineageTag: dff620df-4126-476a-affa-dbe6b538e199
+		summarizeBy: none
+		sourceColumn: Employee_Joining_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Leaving_Date
+		dataType: string
+		lineageTag: 780d86c4-1790-45fe-8383-4e27a219032f
+		summarizeBy: none
+		sourceColumn: Employee_Leaving_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Employment_StatusId
+		dataType: string
+		lineageTag: af53e459-2146-47cb-a245-1f9921f56257
+		summarizeBy: none
+		sourceColumn: Employee_Employment_StatusId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalutationId
+		dataType: string
+		lineageTag: 3397026c-61a5-408d-a346-4ea848449e0e
+		summarizeBy: none
+		sourceColumn: SalutationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Employee_Person_Number
+		dataType: string
+		lineageTag: 3cf1d81c-2017-4623-97ec-56e3262cb67d
+		summarizeBy: none
+		sourceColumn: Employee_Person_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: 3d2862e8-060c-462c-af8d-2210ea071cbc
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gen_Employees-0c3ba147-2e44-48ce-8c49-c42855c34ff1 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"1d4da27a-3c96-42a1-9385-188ba435bc3c" = Source{[Id="1d4da27a-3c96-42a1-9385-188ba435bc3c"]}[Items],
+				    #"Renamed Columns2" = Table.RenameColumns(#"1d4da27a-3c96-42a1-9385-188ba435bc3c",{{"ID", "ID.1"}})
+				in
+				    #"Renamed Columns2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

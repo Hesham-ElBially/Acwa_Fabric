@@ -1,0 +1,199 @@
+table gen_Departments
+	lineageTag: 84917005-4ca7-4260-9242-24fb9ae1e557
+
+	refreshPolicy
+		policyType: basic
+		rollingWindowGranularity: year
+		rollingWindowPeriods: 5
+		incrementalGranularity: day
+		incrementalPeriods: 2
+		sourceExpression =
+			let
+			    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+			    #"81079820-2ff1-48f6-be9a-fda202fe5a54" = Source{[Id="81079820-2ff1-48f6-be9a-fda202fe5a54"]}[Items],
+			    #"Removed Columns" = Table.RemoveColumns(#"81079820-2ff1-48f6-be9a-fda202fe5a54",{"FirstUniqueAncestorSecurableObject", "RoleAssignments", "AttachmentFiles", "ContentType", "GetDlpPolicyTip", "FieldValuesAsHtml", "FieldValuesAsText", "FieldValuesForEdit", "File", "Folder", "LikedByInformation", "ParentList", "Properties", "Versions", "Entity_Lookup", "Department_Head_Lookup", "Author", "Editor"}),
+			    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"ID", "ID.1"}}),
+			    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each [Created] <= RangeEnd and [Created] >= RangeStart),
+			    #"Sorted Rows" = Table.Sort(#"Filtered Rows",{{"Id", Order.Ascending}, {"Modified", Order.Descending}}),
+			    #"Removed Duplicates" = Table.Distinct(#"Sorted Rows", {"Id"})
+			in
+			    #"Removed Duplicates"
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: afac12b5-7c3c-4212-b1bb-aad15575d0c2
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 747eac70-f83a-498e-bf8f-a20a2107b4f0
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 513c22ed-36b0-40e5-bcc4-c4c4505b187b
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: 8c509522-a0a9-4e4e-82d0-99c47388cdf4
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: ebf2d077-fa2c-463a-8f50-dc68e1ef0726
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 3f959016-41d4-4003-8e36-193947ca9c4a
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: 748a1cd4-a38e-4f1c-a1d2-3f34066a23af
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department_ID_Number
+		dataType: string
+		lineageTag: baffaad8-ed09-4aa8-abe6-0b88c10cfe96
+		summarizeBy: none
+		sourceColumn: Department_ID_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: dbcfdb18-f89b-4a3d-8b22-0075db7e6747
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entity_LookupId
+		dataType: string
+		lineageTag: 01e0b740-42df-4fc2-ac4d-2c66949a5baf
+		summarizeBy: none
+		sourceColumn: Entity_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department_Head_LookupId
+		dataType: string
+		lineageTag: 36f8d519-b635-4373-8aec-c3f8ab546442
+		summarizeBy: none
+		sourceColumn: Department_Head_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: 65e708f4-f6ec-47d0-af97-c1f6feeac604
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: ff73897d-4035-43aa-bec0-c9912e988496
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: 0cf6fc5e-b8b5-4034-bb0e-da47a433302f
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 0c3e7d2c-9302-493e-a669-dbd2aea00f66
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: e2efce6a-b10d-4a59-992f-959c023ee1f6
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: f94c00c1-e0ab-4a64-8269-1ea0ede1d4dd
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: 82c01e06-2fff-4c7b-bf54-05d11df5eaae
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: c643685c-d30e-4d83-b335-2c4946d8faf9
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 7bb1ac98-a4d0-4c4e-a248-7b37da675b30
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gen_Departments = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"81079820-2ff1-48f6-be9a-fda202fe5a54" = Source{[Id="81079820-2ff1-48f6-be9a-fda202fe5a54"]}[Items],
+				    #"Removed Columns" = Table.RemoveColumns(#"81079820-2ff1-48f6-be9a-fda202fe5a54",{"FirstUniqueAncestorSecurableObject", "RoleAssignments", "AttachmentFiles", "ContentType", "GetDlpPolicyTip", "FieldValuesAsHtml", "FieldValuesAsText", "FieldValuesForEdit", "File", "Folder", "LikedByInformation", "ParentList", "Properties", "Versions", "Entity_Lookup", "Department_Head_Lookup", "Author", "Editor"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns",{{"ID", "ID.1"}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each [Created] <= RangeEnd and [Created] >= RangeStart),
+				    #"Sorted Rows" = Table.Sort(#"Filtered Rows",{{"Id", Order.Ascending}, {"Modified", Order.Descending}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Sorted Rows", {"Id"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,361 @@
+table Trial_Balance
+	lineageTag: 3be66581-0662-49c1-85d2-30ffbd9531bc
+
+	/// Calculates the sum of the opening balances from the Trial_Balance table.
+	measure Total_Opening_Balance =
+			
+			IF(
+			    ISBLANK(SUM(Trial_Balance[Opening_Balance])),
+			    0,
+			    SUM(Trial_Balance[Opening_Balance])
+			)
+		lineageTag: 73a17dac-8376-442c-b691-8a8de50ffe03
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Calculates the total opening balance in Saudi Riyal (SAR) by summing the values in the Opening_Balance_SAR column of the Trial_Balance table.
+	measure Total_Opening_Balance_SAR = SUM(Trial_Balance[Opening_Balance_SAR])
+		lineageTag: 0cdfad44-f2ed-4eb4-9359-8001864b757f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Calculates the sum of the closing balances from the Trial Balance table.
+	measure Total_Closing_Balance =
+			
+			IF(
+			    ISBLANK(SUM(Trial_Balance[Closing_Balance])),
+			    0,
+			    SUM(Trial_Balance[Closing_Balance])
+			)
+		lineageTag: e650344e-b16c-402d-9461-dfb96502630c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Calculates the total closing balance in Saudi Riyal (SAR) by summing the values in the Closing_Balance_SAR column of the Trial_Balance table.
+	measure Total_Closing_Balance_SAR = SUM(Trial_Balance[Closing_Balance_SAR])
+		lineageTag: ddf415b1-faa2-4f2c-a374-0a313c981f48
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Calculates the sum of the Total Credit column in the Trial Balance table.
+	measure Total_Credit_Sum = SUM(Trial_Balance[Total_Credit])
+		lineageTag: ca2568c8-b205-41c9-aeea-7128326834f0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Calculates the sum of the Total Debit column in the Trial Balance table.
+	measure Total_Debit_Sum = SUM(Trial_Balance[Total_Debit])
+		lineageTag: e0d309e2-a517-43fb-96a2-9382817ececf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Current Period' = MAX(Trial_Balance[Period_Name])
+		formatString: General Date
+		lineageTag: d4305372-6a0c-44cb-b1df-366ecf01ab00
+
+	measure Total_Balance =
+			
+			IF(
+			    ISBLANK(SUM(Trial_Balance[Closing_Balance])),
+			    0,
+			    SUM(Trial_Balance[Closing_Balance])
+			)
+		lineageTag: 842f38ff-5636-4d8c-93e3-f1adfd9f4cef
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Change =
+			
+			IF(
+			    ISBLANK([Total_Closing_Balance] - [Total_Opening_Balance]),
+			    0,
+			    [Total_Closing_Balance] - [Total_Opening_Balance]
+			)
+		lineageTag: d4b69f6f-5a68-4629-b39c-5bc55dc6aa6b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Expense' =
+			
+			IF(
+			    ISBLANK([Total_Closing_Balance] - [Total_Opening_Balance]),
+			    0,
+			    [Total_Closing_Balance] - [Total_Opening_Balance]
+			)
+		lineageTag: 9eeda157-c158-4707-8ce4-bb5437d15cb7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ledger_Name
+		dataType: string
+		lineageTag: 179a1398-2882-4bbe-9d9b-f9b650ee79fc
+		summarizeBy: none
+		sourceColumn: Ledger_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column UniqueCodeKey
+		dataType: string
+		lineageTag: 041ff783-a0b4-4d9e-972c-57fc9a48760d
+		summarizeBy: none
+		sourceColumn: UniqueCodeKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entity_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 6147c923-b8eb-4779-adc8-175d3d625b88
+		summarizeBy: count
+		sourceColumn: Entity_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entity_Name
+		dataType: string
+		lineageTag: 797231dc-add0-4340-88c6-d96fe8fc6c78
+		summarizeBy: none
+		sourceColumn: Entity_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Business_Line_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 0332410c-5cfd-4984-8e70-cb592e20e8ad
+		summarizeBy: count
+		sourceColumn: Business_Line_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Business_Line_Name
+		dataType: string
+		lineageTag: 5c73329d-e119-4cfb-a504-ed006cd82001
+		summarizeBy: none
+		sourceColumn: Business_Line_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cost_Center_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 77e691f6-8ca7-48a7-9058-e6baa7162e52
+		summarizeBy: count
+		sourceColumn: Cost_Center_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cost_Center_Name
+		dataType: string
+		lineageTag: c60ff74b-cbfa-4b7a-8da7-30866d9bb225
+		summarizeBy: none
+		sourceColumn: Cost_Center_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: ddc03e21-6a00-40be-8f4a-74111d286488
+		summarizeBy: count
+		sourceColumn: Project_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_Name
+		dataType: string
+		lineageTag: 4cec12af-8537-48ea-8bea-43c023b36fc6
+		summarizeBy: none
+		sourceColumn: Project_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Intercompany_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c8fb857-5ac1-44a5-9651-77ac46056b98
+		summarizeBy: count
+		sourceColumn: Intercompany_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Intercompany_Name
+		dataType: string
+		lineageTag: ea266212-d4ce-4488-b29d-f1d95aeb85e6
+		summarizeBy: none
+		sourceColumn: Intercompany_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 6292686e-ebd4-4dda-ae87-22ceae411c2c
+		summarizeBy: count
+		sourceColumn: Account_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account_Name
+		dataType: string
+		lineageTag: de2c9329-7da5-427a-936a-936a7b3777b0
+		summarizeBy: none
+		sourceColumn: Account_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Analytical_Code
+		dataType: string
+		lineageTag: 86f4b206-9981-402d-b1c9-4f497a897644
+		summarizeBy: none
+		sourceColumn: Analytical_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Analytical_Code_Name
+		dataType: string
+		lineageTag: 94f25798-0e89-46c9-9cc5-689f5ad8357c
+		summarizeBy: none
+		sourceColumn: Analytical_Code_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region_Code
+		dataType: int64
+		formatString: 0
+		lineageTag: cd5d30bb-e704-4089-80cd-397c0abff518
+		summarizeBy: count
+		sourceColumn: Region_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region_Name
+		dataType: string
+		lineageTag: 16ba7039-e5f9-4155-b9ba-be17ca2ddf03
+		summarizeBy: none
+		sourceColumn: Region_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period_Name
+		dataType: dateTime
+		formatString: mmmm\, yyyy
+		lineageTag: 4e9f90e6-247b-421b-9e58-c1fa6572fc9f
+		summarizeBy: none
+		sourceColumn: Period_Name
+
+		variation Variation
+			isDefault
+			relationship: f0a35066-f7e8-4d67-ba12-de5254b89594
+			defaultHierarchy: LocalDateTable_87676b42-7852-4c8d-81c3-5b606e9edd63.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Currency_Code
+		dataType: string
+		lineageTag: 2e67ad06-0a13-4292-bd39-6d6d38e71d56
+		summarizeBy: none
+		sourceColumn: Currency_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Opening_Balance
+		dataType: double
+		lineageTag: 099dfc2b-d498-4c5f-9101-bf3d11bcdc7b
+		summarizeBy: sum
+		sourceColumn: Opening_Balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Debit
+		dataType: double
+		lineageTag: 2f0da303-815a-49da-8c84-747ea7858537
+		summarizeBy: sum
+		sourceColumn: Total_Debit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Credit
+		dataType: double
+		lineageTag: 6637d701-82fe-4743-ace7-9b9d3f9e4ada
+		summarizeBy: sum
+		sourceColumn: Total_Credit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Closing_Balance
+		dataType: double
+		lineageTag: fd7c5630-2d70-4a80-8ea4-cf3828d67c59
+		summarizeBy: sum
+		sourceColumn: Closing_Balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Opening_Balance_SAR
+		dataType: double
+		lineageTag: 879bffa7-f35e-4fa4-8885-499677ca640c
+		summarizeBy: sum
+		sourceColumn: Opening_Balance_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Debit_SAR
+		dataType: double
+		lineageTag: cf1d3bd0-2b6a-49ac-b01f-e30a076af451
+		summarizeBy: sum
+		sourceColumn: Total_Debit_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Credit_SAR
+		dataType: double
+		lineageTag: 26e94e30-5309-4b11-99c0-7c8b74a90e2d
+		summarizeBy: sum
+		sourceColumn: Total_Credit_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Closing_Balance_SAR
+		dataType: double
+		lineageTag: d0521e36-e37e-49a3-b432-0488a291e4ef
+		summarizeBy: sum
+		sourceColumn: Closing_Balance_SAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Trial_Balance = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"e2a25230-9fe1-4608-8c6b-1abae78c86ab" = Workspaces{[workspaceId="e2a25230-9fe1-4608-8c6b-1abae78c86ab"]}[Data],
+				    #"36a95431-9caf-481f-bc76-ba8cd5660b0c" = #"e2a25230-9fe1-4608-8c6b-1abae78c86ab"{[dataflowId="36a95431-9caf-481f-bc76-ba8cd5660b0c"]}[Data],
+				    Trial_Balance_ = #"36a95431-9caf-481f-bc76-ba8cd5660b0c"{[entity="Trial_Balance",version=""]}[Data]
+				in
+				    Trial_Balance_
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

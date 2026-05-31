@@ -1,0 +1,247 @@
+table ghe_Entertainment_Declaration_Logs
+	lineageTag: 03e57ab8-e1fe-4d6a-9813-ccf2f8f69eb8
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 9e47ca5f-a69b-46f8-960b-1c3280448de6
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: f3e564e0-93fe-46d9-8fe6-d9d20d2c64a8
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: 7b7188a5-4e67-45d4-960e-ba6e7980d00a
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: af92af42-2c2d-438c-8a89-99ef6ef69f04
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: 4f904214-3848-4901-b082-085faa3267be
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 0614ad7a-e7c0-444e-a450-bd5fe7a3eb7c
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 0b5aa77e-7400-4d5e-8643-58fea89956a1
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: 289bd0a9-3e7c-4f3b-9127-b485040bd3f0
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 421e26f5-b071-40d2-a4c0-ba522c0ae01b
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: d1e4be91-2b73-4ff4-8584-258ac17196f2
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: a4aa166d-22cd-40c6-b9c6-03cc69c32530
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: afd5af2d-ce59-4ef6-a39d-1dd3b6ae09b3
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: f4f60cd5-98bf-46fa-8f4a-e53f8050720c
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 36dcfaf2-916b-4248-92ee-7e574b51532a
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: c76ce300-1fdc-429e-a337-161af94eedd3
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entertainment_Declaration_LookupId
+		dataType: string
+		lineageTag: 6aa5ecde-9163-4929-a133-b5ef57da5e2a
+		summarizeBy: none
+		sourceColumn: Entertainment_Declaration_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_Stamp
+		dataType: string
+		lineageTag: 4622b959-0352-4436-a373-61e63753ccb2
+		summarizeBy: none
+		sourceColumn: Time_Stamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_LC_Status_LookupId
+		dataType: string
+		lineageTag: 6d01513b-47fb-484e-b072-8ba33fc581c7
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ct_Comments
+		dataType: string
+		lineageTag: e901f1fa-04a7-400a-ac3d-289fcd5af7b8
+		summarizeBy: none
+		sourceColumn: ct_Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column ct_RoleLookupId
+		dataType: string
+		lineageTag: aed9c75f-2110-467a-8659-0e237bca3e9d
+		summarizeBy: none
+		sourceColumn: ct_RoleLookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Declaration_LC_SubStatus_LookupId
+		dataType: string
+		lineageTag: 3a1b0fd2-ea94-4416-bc28-767f4db5d418
+		summarizeBy: none
+		sourceColumn: Declaration_LC_SubStatus_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__ColorTag
+		dataType: string
+		lineageTag: aea73c74-9923-4949-aa08-641eba114024
+		summarizeBy: none
+		sourceColumn: OData__ColorTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status Date' = CALCULATE(MAX(ghe_Entertainment_Declaration_Logs[Time_Stamp]),ALLEXCEPT(ghe_Entertainment_Declaration_Logs,ghe_Entertainment_Declaration_Logs[Entertainment_Declaration_LookupId]))
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8cd2cdbe-9c2b-488c-8c5a-b3f8175910cd
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: e45b1808-0652-4eda-9aab-9ef48f755743
+			defaultHierarchy: LocalDateTable_877ed83a-435e-46c5-bd79-72920e4b433a.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_Status_Lookup.Name'
+		dataType: string
+		lineageTag: 82880cc9-8131-4f5b-b8e7-4d12cee95d04
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_Lookup.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_Status_Lookup.Value'
+		dataType: string
+		lineageTag: 2e2abf6e-5ca3-4e33-bbf1-eda3c3459870
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_Lookup.Value
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_Status_Lookup.Display_Name'
+		dataType: string
+		lineageTag: 95759dfb-e655-41d1-a71b-0d380851954d
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_Lookup.Display_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Declaration_LC_Status_Lookup.ID'
+		dataType: string
+		lineageTag: 302cd0e4-ba11-4584-96c5-1b327270c403
+		summarizeBy: none
+		sourceColumn: Declaration_LC_Status_Lookup.ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Initiated_Date = CALCULATE(selectedvalue(ghe_Entertainment_Declaration_Logs[Time_Stamp]),ALLEXCEPT(ghe_Entertainment_Declaration_Logs,ghe_Entertainment_Declaration_Logs[Entertainment_Declaration_LookupId]),ghe_Entertainment_Declaration_Logs[Declaration_LC_Status_Lookup.Name]="Draft")
+		lineageTag: 34882bec-f9bc-429a-951d-8c43ade8d55e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ghe_Entertainment_Declaration_Logs-c8834ced-dc4f-4e99-9c12-938d762759da = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolution-PROD", [Implementation=null, ApiVersion=15]),
+				    #"fc341437-3a8d-4810-a844-8ee47a789b58" = Source{[Id="fc341437-3a8d-4810-a844-8ee47a789b58"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"fc341437-3a8d-4810-a844-8ee47a789b58",{{"ID", "ID.1"}}),
+				    #"Expanded Declaration_LC_Status_Lookup" = Table.ExpandRecordColumn(#"Renamed Columns", "Declaration_LC_Status_Lookup", {"Name", "Value", "Display_Name", "ID"}, {"Declaration_LC_Status_Lookup.Name", "Declaration_LC_Status_Lookup.Value", "Declaration_LC_Status_Lookup.Display_Name", "Declaration_LC_Status_Lookup.ID"})
+				in
+				    #"Expanded Declaration_LC_Status_Lookup"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "COI & GHE Dashboard - i"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d6fb4686-a8fe-9f60-422d-0ec9b2079299"
+  }
+}

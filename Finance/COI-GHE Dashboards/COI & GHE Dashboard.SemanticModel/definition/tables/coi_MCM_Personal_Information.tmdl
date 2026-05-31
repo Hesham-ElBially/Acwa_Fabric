@@ -1,0 +1,265 @@
+table coi_MCM_Personal_Information
+	lineageTag: 1bd848bf-b2bb-4fd9-b3c8-eaa9cbfcf110
+
+	column FileSystemObjectType
+		dataType: string
+		lineageTag: 44d9231a-37ae-4663-a18c-b8849a7da230
+		summarizeBy: none
+		sourceColumn: FileSystemObjectType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: 5878f0e0-67d8-436a-b02f-18592a9e5653
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUri
+		dataType: string
+		lineageTag: de4a944d-20df-4fdf-b0b4-2870ec596a7b
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUri
+
+		annotation SummarizationSetBy = Automatic
+
+	column ServerRedirectedEmbedUrl
+		dataType: string
+		lineageTag: b28dcd97-b0ca-4728-ad15-158a72c762fa
+		summarizeBy: none
+		sourceColumn: ServerRedirectedEmbedUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID.1'
+		dataType: string
+		lineageTag: fdfe0f3d-558f-4d80-8857-468b93c50b6c
+		summarizeBy: none
+		sourceColumn: ID.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContentTypeId
+		dataType: string
+		lineageTag: 233d0369-3966-4452-aae8-3eede871276e
+		summarizeBy: none
+		sourceColumn: ContentTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 37afbdcf-b8ef-4602-86e8-a401eaf3046e
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: string
+		lineageTag: b8135662-3f96-4c3d-bff3-670bf5c765f9
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: string
+		lineageTag: 9fce949e-94cd-473e-bbd8-345d4807cb37
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column AuthorId
+		dataType: string
+		lineageTag: 85ba49de-a166-4143-8cd5-c3569bcf0373
+		summarizeBy: none
+		sourceColumn: AuthorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EditorId
+		dataType: string
+		lineageTag: 5f82974c-facf-4e69-9c96-eee3daa197e3
+		summarizeBy: none
+		sourceColumn: EditorId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OData__UIVersionString
+		dataType: string
+		lineageTag: f50f5c8f-0493-4920-8138-6507fde91e23
+		summarizeBy: none
+		sourceColumn: OData__UIVersionString
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		lineageTag: e728f5b4-6022-4c79-89ba-6866d939754b
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID
+		dataType: string
+		lineageTag: 0f25569c-0beb-4da3-819b-50b4aac0b964
+		summarizeBy: none
+		sourceColumn: GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComplianceAssetId
+		dataType: string
+		lineageTag: af3925c5-39a7-43de-8cf7-f305b23ea235
+		summarizeBy: none
+		sourceColumn: ComplianceAssetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company_Name
+		dataType: string
+		lineageTag: 92c4cbac-2c60-4fd7-a75a-59b3f515ab4f
+		summarizeBy: none
+		sourceColumn: Company_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_of_Appointment
+		dataType: string
+		lineageTag: f6c8d0bb-9c07-44f2-8226-0f5bafce2359
+		summarizeBy: none
+		sourceColumn: Date_of_Appointment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Expiry_date_of_board_term
+		dataType: string
+		lineageTag: e7e29f5a-9539-4889-94e2-86d45d728495
+		summarizeBy: none
+		sourceColumn: Expiry_date_of_board_term
+
+		annotation SummarizationSetBy = Automatic
+
+	column Full_Name
+		dataType: string
+		lineageTag: 270dc8a9-0965-405e-bf7d-daafc71acd9f
+		summarizeBy: none
+		sourceColumn: Full_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column NationalityId
+		dataType: string
+		lineageTag: 6f296888-71f5-4b01-ba25-38a83b538e32
+		summarizeBy: none
+		sourceColumn: NationalityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date_of_Birth
+		dataType: string
+		lineageTag: 623488b2-54d4-4137-b694-73cf620636fa
+		summarizeBy: none
+		sourceColumn: Date_of_Birth
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: a62f3107-b049-458e-b813-1d17dc4f5de4
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column Office_Location
+		dataType: string
+		lineageTag: 574bdee6-c0c1-4fa5-b960-d455cc8ba1fb
+		summarizeBy: none
+		sourceColumn: Office_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Job_Title
+		dataType: string
+		lineageTag: aeeb4a63-87d2-4a38-b0b8-297cafaceb19
+		summarizeBy: none
+		sourceColumn: Job_Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Work_Phone
+		dataType: string
+		lineageTag: 6f499d68-dca8-453c-9f48-d6957b540a54
+		summarizeBy: none
+		sourceColumn: Work_Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mobile
+		dataType: string
+		lineageTag: 3eb4716e-843a-4e84-990e-c0125866b62f
+		summarizeBy: none
+		sourceColumn: Mobile
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fax
+		dataType: string
+		lineageTag: 10dedee1-5436-4807-8779-0f73ab847262
+		summarizeBy: none
+		sourceColumn: Fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_Number
+		dataType: string
+		lineageTag: 1611fa35-82d9-4699-8e97-41786c9aafc8
+		summarizeBy: none
+		sourceColumn: ID_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Shares_member
+		dataType: string
+		lineageTag: c4c5f4e1-b99f-4960-9eb9-8b5672091f5f
+		summarizeBy: none
+		sourceColumn: Number_of_Shares_member
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Shares_legal_person
+		dataType: string
+		lineageTag: 90503931-641d-4a87-9935-92dbfc64c4f5
+		summarizeBy: none
+		sourceColumn: Number_of_Shares_legal_person
+
+		annotation SummarizationSetBy = Automatic
+
+	column MCM_Disclosure_LookupId
+		dataType: string
+		lineageTag: fc26ffcc-4e3f-4c72-ab73-787a89ad641c
+		summarizeBy: none
+		sourceColumn: MCM_Disclosure_LookupId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coi_MCM_Personal_Information-1907b53f-9660-4f3c-a7c7-7d331f2fb857 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Tables("https://acwapi.sharepoint.com/sites/ComplianceSolutionDev", [Implementation=null, ApiVersion=15]),
+				    #"7ee64b27-1629-42c7-a1da-31533eab47de" = Source{[Id="7ee64b27-1629-42c7-a1da-31533eab47de"]}[Items],
+				    #"Renamed Columns" = Table.RenameColumns(#"7ee64b27-1629-42c7-a1da-31533eab47de",{{"ID", "ID.1"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
