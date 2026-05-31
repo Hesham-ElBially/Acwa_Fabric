@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "5cdec1b3-40a2-4cfe-8d4c-e633bc87f484",
+        "clusterUri": "",
+        "type": "Fabric",
+        "databaseItemId": "c42a3e04-3006-b879-4c12-e20b1bb490d4",
+        "databaseItemName": "eventhouse_tb"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "e4090455-cdd8-44d9-a1fc-364f9d448f61",
+        "content": "",
+        "title": "Tab",
+        "dataSourceId": "5cdec1b3-40a2-4cfe-8d4c-e633bc87f484"
+      }
+    ]
+  }
+}

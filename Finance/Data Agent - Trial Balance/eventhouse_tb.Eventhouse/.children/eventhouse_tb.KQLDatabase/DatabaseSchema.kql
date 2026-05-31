@@ -1,0 +1,5 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table trial_balance_mapping (Ledger_Name:string, UniqueCodeKey:string, Entity_Code:long, Entity_Name:string, Business_Line_Code:long, Business_Line_Name:string, Cost_Center_Code:long, Cost_Center_Name:string, Project_Code:long, Project_Name:string, Intercompany_Code:long, Intercompany_Name:string, Account_Code:long, Account_Name:string, Analytical_Code:string, Analytical_Code_Name:string, Region_Code:long, Region_Name:string, Currency_Code:string, Opening_Balance:real, Total_Debit:real, Total_Credit:real, Closing_Balance:real, Opening_Balance_SAR:real, Total_Debit_SAR:real, Total_Credit_SAR:real, Closing_Balance_SAR:real, FS_Category:string, Account_Grouping:string) 
