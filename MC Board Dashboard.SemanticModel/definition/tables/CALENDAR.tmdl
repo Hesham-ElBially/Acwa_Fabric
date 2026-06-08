@@ -1,0 +1,29 @@
+table CALENDAR
+	lineageTag: 35b917f3-6111-452a-a444-795dc3dee5be
+
+	column Date
+		formatString: General Date
+		lineageTag: 4f6216fc-e6b0-4894-bb4c-37d33b81a238
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: b61058e2-2896-4d2c-9fb6-d7b39aa22740
+			defaultHierarchy: LocalDateTable_7c382cc7-6ccc-4713-91bd-05d0946bac26.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="3082" Group="GeneralDateTimeLong" FormatString="G" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####not a type
+
+	partition CALENDAR-9c7eb6ff-4e6e-4f1d-a585-fad69ed1dca2 = calculated
+		mode: import
+		source =
+				
+				CALENDAR(DATE(2000,01,01),DATE(2025,12,31))
+
+	annotation PBI_Id = f6edaaea2e7440b7840b96e05b505d4b
+

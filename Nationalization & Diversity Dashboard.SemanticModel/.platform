@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Nationalization & Diversity Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "72dfc58a-3f7a-80d4-4d43-cf2f5632f088"
+  }
+}

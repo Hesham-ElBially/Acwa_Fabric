@@ -1,0 +1,144 @@
+relationship 356debda-2886-4e6d-84cd-f81ccc58cb7f
+	fromColumn: Goals.'User Id'
+	toColumn: 'Review Report DY'.'User Id'
+
+relationship 82fecbc3-fca4-40b8-ab28-fa64c937a845
+	fromColumn: 'Goald details'.'Actual Goal Start Date'
+	toColumn: LocalDateTable_e7264bdb-783c-4718-90bb-0fe003fef4db.Date
+
+relationship 2d096572-a84b-4bba-81ef-d7a48ccd3bf6
+	fromColumn: 'Goald details'.'Actual Goal Completion Date'
+	toColumn: LocalDateTable_f3b0ba7f-8a87-4835-8df3-129b540a55e8.Date
+
+relationship 9b005c61-84e1-4082-bc70-dfdea321160c
+	fromColumn: 'Review Report DY'.'Initiated On'
+	toColumn: LocalDateTable_7055bee0-6ba9-4a1f-8202-a0c0a9b3b1ef.Date
+
+relationship 921e65d0-4e86-4fdf-a1eb-7894e16dd4d8
+	fromColumn: 'Review Report DY'.'Self Assessment Submitted On'
+	toColumn: LocalDateTable_a7f4fe1a-c004-4335-b987-7d064c58432b.Date
+
+relationship 602daa41-74e2-4dc4-942b-7a7b2c328f16
+	fromColumn: 'Review Report DY'.'Matrix Manager Assessment Submitted On'
+	toColumn: LocalDateTable_1b39c6d5-89ca-4f56-8b27-d6187562c0b8.Date
+
+relationship bbd133f9-d584-408b-9550-810d2ad22f22
+	fromColumn: 'Review Report DY'.'Manager Assessment Submitted On'
+	toColumn: LocalDateTable_ae6b7a76-b668-408e-9970-3e04afd78352.Date
+
+relationship adc3a896-96d1-4885-8297-31226fef5fa9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Review Report DY'.'User Id'
+	toColumn: 'Review Report EY'.'User Id'
+
+relationship 3ef93fad-47de-4065-8653-ea73750cbdd6
+	fromColumn: 'Review Report EY'.'Initiated On'
+	toColumn: LocalDateTable_d547f11d-1aec-4688-94e6-77718165e842.Date
+
+relationship 9941d371-4b9c-4cfa-b652-a2c6a558108a
+	fromColumn: 'Review Report EY'.'Review Completed On'
+	toColumn: LocalDateTable_9643b706-0335-4a76-a07e-9fcc7e82ce07.Date
+
+relationship 5617f068-8e33-464a-807a-07dee51d59f6
+	fromColumn: 'Review Report EY'.'Self Assessment Submitted On'
+	toColumn: LocalDateTable_2a8f3041-2d64-4a5b-8cf0-42b259874ca5.Date
+
+relationship 115ddaac-1f3b-4fe3-a214-64eb5b83bdd8
+	fromColumn: 'Review Report EY'.'Matrix Manager Assessment Submitted On'
+	toColumn: LocalDateTable_3e89e8a0-0a18-4493-a104-d740ea5cf6c7.Date
+
+relationship a892667f-ee5b-4704-95ca-de9f461a0518
+	fromColumn: 'Review Report EY'.'Manager Assessment Submitted On'
+	toColumn: LocalDateTable_13cd6a93-9871-4a7f-975a-809d3393d8e9.Date
+
+relationship 8a0757ef-cac1-4958-a747-599fa338eca5
+	fromColumn: 'Review Report EY'.'Employee Sign Off Submitted On'
+	toColumn: LocalDateTable_8c323c7e-ffae-4a79-8051-f0eb9d1126ad.Date
+
+relationship 4e1ebce2-5508-4547-8e50-006725d701c6
+	fromColumn: v_g_JobPersonal.ji_rec_efStartDate
+	toColumn: LocalDateTable_05ba4313-7266-4595-bbf1-e58409c474f2.Date
+
+relationship 67dd3ee5-4b00-43da-add5-cb46ba9c6b48
+	fromColumn: v_g_JobPersonal.ji_rec_efEndDate
+	toColumn: LocalDateTable_0ff98b55-d4e1-478a-8d00-4b64ddf2b22b.Date
+
+relationship 3b1ca7a0-6353-45aa-a2ab-facf4e3bb82e
+	fromColumn: v_g_JobPersonal.ppi_rec_efStartDate
+	toColumn: LocalDateTable_e4d5b204-7515-4935-a146-1c816e4bd061.Date
+
+relationship d8f25816-4787-4fdd-a0f7-642896f7a474
+	fromColumn: v_g_JobPersonal.ppi_rec_efEndDate
+	toColumn: LocalDateTable_62f842ef-8946-4696-93b0-8838667932d2.Date
+
+relationship 1b6b4119-c773-4117-9631-fbbe2cb904ed
+	fromColumn: v_g_JobPersonal.groupJoiningDate
+	toColumn: LocalDateTable_7d13701d-3d88-474c-9811-fb67638a7cda.Date
+
+relationship 1d93886d-b4e7-4b81-92ed-a6c52b924062
+	fromColumn: v_g_JobPersonal.hireDate
+	toColumn: LocalDateTable_c3c31b49-fcaa-4de8-bcc2-63449f876296.Date
+
+relationship 209f66d4-523d-4d8a-ab4f-4668d2d6ef5b
+	fromColumn: v_g_JobPersonal.endOfServiceDate
+	toColumn: LocalDateTable_95436085-bc7b-4a78-94f5-bd58314f34bf.Date
+
+relationship d051124d-fe66-46eb-ac2a-27ac1f2fdd93
+	fromColumn: v_g_JobPersonal.terminationDate
+	toColumn: LocalDateTable_4ae30515-dd63-4bf0-9eab-ab427a544b4e.Date
+
+relationship 8c191317-8549-4f48-a93a-b1908f829432
+	fromColumn: v_g_JobPersonal.dateOfBirth
+	toColumn: LocalDateTable_82e32d25-7c73-4e77-9aa7-3997d8bfbc9a.Date
+
+relationship 65dd126b-20ad-495c-b992-6e6bce082c86
+	fromColumn: v_g_JobPersonal.contractEndDate
+	toColumn: LocalDateTable_84c37ea2-6307-41f0-80de-3704cb135ae3.Date
+
+relationship fe0a7526-f266-b262-e0fa-3a1bb09de83e
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: none
+	fromColumn: v_g_JobPersonal.email
+	toColumn: Goals.Email
+
+relationship dc7872e5-301a-40e3-b225-2424d2038f8c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Performance.'Initiated On'
+	toColumn: LocalDateTable_69ac57bd-39f0-4696-86fe-1ad5a9131b41.Date
+
+relationship b05af295-4e14-4385-8a60-ee6bfdfb5a83
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Performance.'Review Completed On'
+	toColumn: LocalDateTable_91a52260-c1c3-4fe9-9899-dbe65bb6e629.Date
+
+relationship dac96ca8-bbb5-4d5f-a5ad-2d6db3c07afb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Performance.'Actual Termination Date'
+	toColumn: LocalDateTable_c543b814-797c-4364-8502-7e43b8afc01e.Date
+
+relationship 21ee6269-2b74-4a9d-a83f-5fbf9476a4c0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Performance.'Probation End Date'
+	toColumn: LocalDateTable_d871803f-b0fb-4a23-8a9c-2fa9efa71331.Date
+
+relationship d442acc4-07eb-4407-9a26-50186cd8aa2e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Performance.'Group joining date'
+	toColumn: LocalDateTable_33c5a951-c11f-405a-9632-b8ad77eae5d0.Date
+
+relationship 784af202-d22b-aca3-8fe2-0daf86b45f27
+	securityFilteringBehavior: none
+	fromColumn: v_g_JobPersonal.email
+	toColumn: Performance.'Self Assessment Email Id'
+
+relationship e78c94ea-779f-4db6-9ec5-bd5a8e90b378
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Goal details 2'.'Actual Goal Start Date'
+	toColumn: LocalDateTable_2a526db2-a2d6-41a6-ab07-3df1a30361d9.Date
+
+relationship 9a564474-f464-4de3-853d-1c71ef76931d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Goal details 2'.'Actual Goal Completion Date'
+	toColumn: LocalDateTable_8e879d91-ab15-4468-8440-66c79146c336.Date
+

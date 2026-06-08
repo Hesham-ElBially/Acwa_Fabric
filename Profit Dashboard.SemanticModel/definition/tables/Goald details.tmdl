@@ -1,0 +1,273 @@
+table 'Goald details'
+	lineageTag: 868f2cff-dc65-4b9e-8d12-f520e1090f18
+	sourceLineageTag: 36a0e598-3934-4f6d-a9c0-2c929d22d428
+
+	column 'Goal Name'
+		dataType: string
+		lineageTag: ab61b32f-4c03-4091-87c1-11d8013d6233
+		sourceLineageTag: f8ae43f0-e9b3-4f15-a150-c48fda7f46bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Goal Name
+
+		annotation SummarizationSetBy = User
+
+	column Description
+		dataType: string
+		lineageTag: 42f24fce-ae4e-4664-9165-bf8226e02bfc
+		sourceLineageTag: b1cf1e47-3b08-4c4e-8afa-17f4e9a0b393
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = User
+
+	column 'Target Period'
+		dataType: string
+		lineageTag: ff6edb83-093d-417b-8bfa-c59fffd17f00
+		sourceLineageTag: c9ad6dc9-1bbf-4a76-a8e0-aaab7c0b91cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Target Period
+
+		annotation SummarizationSetBy = User
+
+	column Assignee
+		dataType: string
+		lineageTag: 2ef34421-084b-403f-9d8d-4fb2aa193a2f
+		sourceLineageTag: ee659e37-ae72-49cb-be9d-d48cc9ba46fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Assignee
+
+		annotation SummarizationSetBy = User
+
+	column 'Assignee Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 01fc744b-b87c-4ed1-a393-5f8c44d967a5
+		sourceLineageTag: be5cde44-6f8c-4024-bfea-022641168750
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Assignee Id
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: c2fac8a8-9bab-42e3-9d4a-fdf0bd1cd403
+		sourceLineageTag: c9da8821-102a-45ac-9997-8e7c9963c1a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column Priority
+		dataType: string
+		lineageTag: 548582d6-22e4-455c-8f87-d2814e829e18
+		sourceLineageTag: eed19d99-6aaa-41ec-bcf3-9be7101d751e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = User
+
+	column Sharing
+		dataType: string
+		lineageTag: b06846f4-6732-4a2a-9bea-36e02b7f4505
+		sourceLineageTag: 99f501b4-4c5a-43ad-918d-2b3c7f4f40a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sharing
+
+		annotation SummarizationSetBy = User
+
+	column Weight
+		dataType: double
+		lineageTag: 0a06bde3-52e2-410b-85de-6fd4ea9e7ceb
+		sourceLineageTag: 0c567035-491d-4e7e-831b-4a7b9ff81ee3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = User
+
+	column 'Associated KR'
+		dataType: string
+		lineageTag: 4b49a4f5-d269-455a-9b2c-a64db04cf65a
+		sourceLineageTag: e1684513-cf3b-4587-9f30-2837a515882f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Associated KR
+
+		annotation SummarizationSetBy = User
+
+	column Progress
+		dataType: double
+		lineageTag: 562fab90-b1cc-4518-a729-d14b4552d79f
+		sourceLineageTag: 5322da7d-6b43-4f5a-a1a4-208f574a1eec
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Progress
+
+		annotation SummarizationSetBy = User
+
+	column 'Last Comment'
+		dataType: string
+		lineageTag: f4dc6422-145e-4531-a130-461b0193f32f
+		sourceLineageTag: 310e15a5-660f-40bb-a60b-599eb70be3b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last Comment
+
+		annotation SummarizationSetBy = User
+
+	column 'Last Notes'
+		dataType: string
+		lineageTag: 4a26dfd4-6c07-4be8-9bfb-cf555aa1d635
+		sourceLineageTag: db5e7e3f-2f36-4e2b-a95b-41f9796f2d42
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last Notes
+
+		annotation SummarizationSetBy = User
+
+	column 'Type of Goal'
+		dataType: string
+		lineageTag: 13e939c9-0ced-47a5-9a23-9db29dcb260f
+		sourceLineageTag: 9f9e1433-1e9d-41ab-a2ff-6410ceab894f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type of Goal
+
+		annotation SummarizationSetBy = User
+
+	column '70% - Experiential: On-the-job learning - practical activities, projects, tasks, work assignments, work rotations'
+		dataType: string
+		lineageTag: abba7b00-abff-4945-93ed-cf89aedbbe41
+		sourceLineageTag: 47b2fc33-0038-4c1c-ad07-18b4d600736a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: 70% - Experiential: On-the-job learning - practical activities, projects, tasks, work assignments, work rotations
+
+		annotation SummarizationSetBy = User
+
+	column ' 20% - Social: Near-the-job learning - coaching, mentoring, feedback, collaboration'
+		dataType: string
+		lineageTag: 68ce2406-fe93-426d-954e-c4b3ede67f03
+		sourceLineageTag: 5da472b8-e05b-42ff-85ce-96a864e1a19a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: " 20% - Social: Near-the-job learning - coaching, mentoring, feedback, collaboration"
+
+		annotation SummarizationSetBy = User
+
+	column '10% - Formal: Off-the-job learning - MISHKATY courses, LinkedIn Learning, Bookboon, classroom and virtual trainings'
+		dataType: string
+		lineageTag: 0b66ef23-d351-4068-ac56-d6c3cfce5ac3
+		sourceLineageTag: c32ba6ab-579c-4900-bedc-191c792f474c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: 10% - Formal: Off-the-job learning - MISHKATY courses, LinkedIn Learning, Bookboon, classroom and virtual trainings
+
+		annotation SummarizationSetBy = User
+
+	column 'Actual Goal Start Date'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 13b72bf7-beb6-465c-ad4a-f6dc372f8275
+		sourceLineageTag: 85636674-aaa7-4f48-bd11-c6bd0feabee5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Actual Goal Start Date
+
+		variation Variation
+			isDefault
+			relationship: 82fecbc3-fca4-40b8-ab28-fa64c937a845
+			defaultHierarchy: LocalDateTable_e7264bdb-783c-4718-90bb-0fe003fef4db.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'Actual Goal Completion Date'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: e7e21a99-4668-46b4-b0fa-bc33f43b682a
+		sourceLineageTag: 0400ded3-8a9b-4a08-ae69-4fb1ee13d0f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Actual Goal Completion Date
+
+		variation Variation
+			isDefault
+			relationship: 2d096572-a84b-4bba-81ef-d7a48ccd3bf6
+			defaultHierarchy: LocalDateTable_f3b0ba7f-8a87-4835-8df3-129b540a55e8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'Goal Actual Date'
+		dataType: string
+		lineageTag: 6706fced-142c-4743-ac61-f3b3ec3b58f4
+		sourceLineageTag: f55b92eb-0e9d-4786-b8ab-7430f84f9e52
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Goal Actual Date
+
+		annotation SummarizationSetBy = User
+
+	column 'Success Criteria'
+		dataType: string
+		lineageTag: 00b28371-af2b-4012-badb-f97f5506307d
+		sourceLineageTag: e59bef4e-71ba-4451-ab51-4a578768f0a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Success Criteria
+
+		annotation SummarizationSetBy = User
+
+	column 'Employee Comment'
+		dataType: string
+		lineageTag: e0f346d2-74e1-4d9d-99e0-d8b000ca226c
+		sourceLineageTag: d2b7f0e6-0f6b-4f10-850a-6f00eb2233af
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Employee Comment
+
+		annotation SummarizationSetBy = User
+
+	column 'Manager Comment'
+		dataType: string
+		lineageTag: d0031cb2-7036-49ea-8817-47dc3b3e9993
+		sourceLineageTag: 31215f40-1df6-48cb-a2f6-b3415aca7b6a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Manager Comment
+
+		annotation SummarizationSetBy = User
+
+	column 'Percentage Completion'
+		dataType: double
+		lineageTag: 27e74a86-3059-480e-b31f-5a0dbaddafde
+		sourceLineageTag: 80b4a3f5-ac7f-4cea-be09-e08703297152
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Percentage Completion
+
+		annotation SummarizationSetBy = User
+
+	column Classification
+		dataType: string
+		lineageTag: 2b35dae3-c1e0-45f6-bcde-8a6ef9910a1e
+		sourceLineageTag: 2728ce32-fa5e-46c7-b1b6-b6e5fb0955a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Classification
+
+		annotation SummarizationSetBy = User
+
+	partition 'Goald details' = entity
+		mode: directQuery
+		source
+			entityName: Goald details
+			expressionSource: 'DirectQuery to AS - Profit'
+

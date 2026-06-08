@@ -1,0 +1,18 @@
+table TDA
+	lineageTag: 058890eb-5d92-4233-9348-03b957447f38
+
+	column TDA
+		formatString: 0
+		lineageTag: 52839a1e-f378-4ce0-ba79-490f08480006
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Table[TDA]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TDA-4969525c-8439-4f88-83a1-dec5177cbd04 = calculated
+		mode: import
+		source = DISTINCT('Table'[TDA])
+
+	annotation PBI_Id = 344bdd78888b4245a696abb7dd010823
+

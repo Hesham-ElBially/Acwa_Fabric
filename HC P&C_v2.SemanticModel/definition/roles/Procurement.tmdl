@@ -1,0 +1,7 @@
+role Procurement
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Procurement"
+
+	annotation PBI_Id = 88dada02516a4205820beba81ecfdf0b
+

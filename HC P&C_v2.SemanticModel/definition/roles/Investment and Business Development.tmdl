@@ -1,0 +1,7 @@
+role 'Investment and Business Development'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Investment and Business Development"
+
+	annotation PBI_Id = 68df8227d49e489aa635fee6029db1fc
+

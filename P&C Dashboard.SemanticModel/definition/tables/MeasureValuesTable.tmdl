@@ -1,0 +1,33 @@
+table MeasureValuesTable
+	lineageTag: 5eb31dec-a683-449a-8610-af98939c09ee
+
+	column Values
+		formatString: 0
+		lineageTag: 386d5b06-af18-45c3-9ccf-d8fce40fa702
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Values]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Joiners
+		lineageTag: 0c1bda8d-ea08-4b27-948c-5b1a63992e0d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Joiners]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MeasureValuesTable = calculated
+		mode: import
+		source = ```
+				
+				UNION(
+				    ROW("Joiners", "Joiners", "Values", [joiners_ytd_maxmonth]),
+				    ROW("Leavers", "Leavers", "Values", [Leavers_ytd_maxmonth])
+				)
+				
+				```
+
+	annotation PBI_Id = f3c7b255cad64c45b41c9c66004c4cb8
+

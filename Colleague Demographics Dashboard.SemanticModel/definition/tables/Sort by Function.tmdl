@@ -1,0 +1,31 @@
+table 'Sort by Function'
+	lineageTag: 4eed7126-b96b-441f-802c-9157f4d06dea
+
+	column Function
+		dataType: string
+		lineageTag: 20d1949d-c6d5-4229-abc1-d9e7e6483ffe
+		summarizeBy: none
+		sourceColumn: Function
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sort Function'
+		dataType: int64
+		formatString: 0
+		lineageTag: fc4e50e3-17f0-4700-b87a-e4a9702add6b
+		summarizeBy: none
+		sourceColumn: Sort Function
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sort by Function-6a50b103-3970-4f0e-8b13-b4b33c3c6590' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Lc6xDoIwFIXhV2k6M1RU1FGvMZJASqxxQQZCJKIECQkDbw+nx+3/boeePNcSWx3olS6CpbMUCIkLev1/EIE21B29ZZ/REfvmHLSjrh57Ij4CByLxXxoP+xyNCaMUF654iLJ13VQvnLjFqWz4fWDucWPft5OSd9l0uHLXqS27L7hMK2Y=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Function = _t, #"Sort Function" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Function", type text}, {"Sort Function", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

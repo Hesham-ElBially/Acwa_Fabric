@@ -1,0 +1,47 @@
+expression 'DirectQuery to AS - Profit' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/P%26C%20Data%20Hub", "Profit"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 6f7edc26-83e6-4529-b9b3-ef9660b9614d
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+expression 'DirectQuery to AS - SAPSF_EC_DataLake' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/P%26C%20Data%20Hub", "SAPSF_EC_DataLake"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 0ac00672-7114-4a57-b4c7-338fc04ecc62
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"7d3c06a3-a46b-42ec-8bc3-9f7a65e4e1b2"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"36505f26-87da-43ff-aa49-e5a3940cecc9"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"14a3b6d0-22a6-4d26-a498-606f5920f7ee"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"9c007d41-e534-46f2-8dac-9a0f10b0bc27"}},"objectType":"Table"}]
+
+expression 'Errors in Performance' =
+		let
+		Source = Performance,
+		  #"Detected Type Mismatches" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "The type of the value does not match the type of the column.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Source, pairs),
+		  #"Added Index" = Table.AddIndexColumn(#"Detected Type Mismatches", "Row Number" ,1),
+		  #"Kept Errors" = Table.SelectRowsWithErrors(#"Added Index", {"Review #", "Review Name", "Description", "Review Template", "Q&A Template", "Joined Before", "Auto Close", "Period", "Initiated By", "Initiated By Email Id", "Initiated On", "Review Status", "Review Completed On", "HR Business Partner", "Overall Percentage", "lasted", "User Id", "Self Assessment", "Self Assessment Email Id", "Job Title", "Department", "Grade", "Questions", "Answers", "Goals Name", "Goals Weight", "Goals Rating", "Goals Rating Name", "Goals Comment", "Okrs Name", "Okrs Weight", "Okrs Rating", "Okrs Rating Name", "Okrs Comment", "Bscs Comment", "Tasks Comment", "User Id_1", "Matrix Manager Assessment", "Matrix Manager Assessment Email Id", "Questions_2", "Answers_3", "Goals Name_4", "Goals Weight_5", "Goals Rating_6", "Goals Rating Name_7", "Goals Comment_8", "Okrs Name_9", "Okrs Weight_10", "Okrs Rating_11", "Okrs Rating Name_12", "Okrs Comment_13", "Bscs Comment_14", "Matrix Manager Overall Comment", "User Id_15", "Manager Assessment", "Manager Assessment Email Id", "Questions_16", "Answers_17", "Goals Name_18", "Goals Weight_19", "Goals Rating_20", "Goals Rating Name_21", "Goals Comment_22", "Okrs Name_23", "Okrs Weight_24", "Okrs Rating_25", "Okrs Rating Name_26", "Okrs Comment_27", "Bscs Comment_28", "Manager Overall Comment", "Business Unit", "Company", "Legal Employer", "Manager Number", "Matrix Manager Number", "Seconded Department", "Work Location/Project Name", "Country", "Region", "Nationality", "Gender", "Job Title_29", "Length of Service", "N - Reporting ", "Assignment Category", "Actual Termination Date", "Probation End Date", "Date of Birth.", "Function/BU", "Full Name", "Group joining date", "Employment Type", "Previous User ID", "Employer Name", "Employee Transfer Date"}),
+		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "Review #", "Review Name", "Description", "Review Template", "Q&A Template", "Joined Before", "Auto Close", "Period", "Initiated By", "Initiated By Email Id", "Initiated On", "Review Status", "Review Completed On", "HR Business Partner", "Overall Percentage", "lasted", "User Id", "Self Assessment", "Self Assessment Email Id", "Job Title", "Department", "Grade", "Questions", "Answers", "Goals Name", "Goals Weight", "Goals Rating", "Goals Rating Name", "Goals Comment", "Okrs Name", "Okrs Weight", "Okrs Rating", "Okrs Rating Name", "Okrs Comment", "Bscs Comment", "Tasks Comment", "User Id_1", "Matrix Manager Assessment", "Matrix Manager Assessment Email Id", "Questions_2", "Answers_3", "Goals Name_4", "Goals Weight_5", "Goals Rating_6", "Goals Rating Name_7", "Goals Comment_8", "Okrs Name_9", "Okrs Weight_10", "Okrs Rating_11", "Okrs Rating Name_12", "Okrs Comment_13", "Bscs Comment_14", "Matrix Manager Overall Comment", "User Id_15", "Manager Assessment", "Manager Assessment Email Id", "Questions_16", "Answers_17", "Goals Name_18", "Goals Weight_19", "Goals Rating_20", "Goals Rating Name_21", "Goals Comment_22", "Okrs Name_23", "Okrs Weight_24", "Okrs Rating_25", "Okrs Rating Name_26", "Okrs Comment_27", "Bscs Comment_28", "Manager Overall Comment", "Business Unit", "Company", "Legal Employer", "Manager Number", "Matrix Manager Number", "Seconded Department", "Work Location/Project Name", "Country", "Region", "Nationality", "Gender", "Job Title_29", "Length of Service", "N - Reporting ", "Assignment Category", "Actual Termination Date", "Probation End Date", "Date of Birth.", "Function/BU", "Full Name", "Group joining date", "Employment Type", "Previous User ID", "Employer Name", "Employee Transfer Date"})
+		in
+		  #"Reordered Columns"
+	lineageTag: 6e77ef76-2232-489f-9c28-208ed28f748a
+	queryGroup: 'Query Errors - 22/04/2025 2:55:49 PM'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

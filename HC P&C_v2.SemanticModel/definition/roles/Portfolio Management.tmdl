@@ -1,0 +1,7 @@
+role 'Portfolio Management'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Portfolio Management"
+
+	annotation PBI_Id = 064cb1dc3dcf4f2abf21bf86541a062f
+

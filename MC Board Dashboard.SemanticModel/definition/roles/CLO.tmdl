@@ -1,0 +1,11 @@
+role CLO
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "CLO"
+
+	tablePermission 'public employees (2)' = [bu_fu] = "CLO"
+
+	tablePermission 'public employees_per_year' = [bu_fu] = "CLO"
+
+	annotation PBI_Id = 6e9f98223c6c4fe7b9c0d86fca950226
+

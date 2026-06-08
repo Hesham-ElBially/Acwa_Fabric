@@ -1,0 +1,31 @@
+role Function
+	modelPermission: read
+
+	tablePermission 'gdm f_employees_per_month' = ```
+			VAR userEmail = USERPRINCIPALNAME()
+			
+			VAR userAccess = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "ACCESS")
+			
+			VAR userFunction = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "Function")
+			
+			VAR userRegion = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "Region")
+			
+			RETURN 
+			    if(
+			        userAccess="GLOBAL",
+			        TRUE,
+			        if(
+			            userAccess="NONE",
+			            FALSE,
+			            if(
+			                not isempty(userFunction),
+			                CONTAINSROW(userFunction, 'gdm f_employees_per_month'[bu_fu])
+			                 ,
+			                true
+			            )
+			        )
+			    )
+			```
+
+	annotation PBI_Id = b3970903cf8f4fe0a32ac9c99cee2053
+

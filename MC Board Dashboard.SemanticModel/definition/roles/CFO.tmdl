@@ -1,0 +1,11 @@
+role CFO
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "CFO"
+
+	tablePermission 'public employees (2)' = [bu_fu] = "CFO"
+
+	tablePermission 'public employees_per_year' = [bu_fu] = "CFO"
+
+	annotation PBI_Id = 5416d6dd0138450d97e4034fb9696049
+

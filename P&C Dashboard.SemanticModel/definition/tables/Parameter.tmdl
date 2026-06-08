@@ -1,0 +1,50 @@
+table Parameter
+	lineageTag: e9b21219-fc75-4679-8f36-271babd3d007
+
+	column Parameter
+		lineageTag: 466eb5f1-735a-4078-b159-9ae47d0c33d0
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		isHidden
+		lineageTag: 3d7fc532-f962-4a69-a259-f1c0b2d80dde
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: 5d3f89d6-78c8-4efd-951b-7aca4c0efa9a
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Parameter = calculated
+		mode: import
+		source =
+				{
+				    ("Country", NAMEOF('gdm f_employees_per_month'[country_name]), 0),
+				    ("BU", NAMEOF('gdm f_employees_per_month'[bu_fu]), 1),
+				    ("Dept.", NAMEOF('gdm f_employees_per_month'[department]), 2),
+				    ("Level", NAMEOF('gdm f_employees_per_month'[level]), 3)
+				}
+
+	annotation PBI_Id = ba8d727ed704401cb2e34bb72ae59da3
+

@@ -1,0 +1,904 @@
+table Performance
+	lineageTag: 04679854-2e49-491a-97ca-6f4434e8fce8
+
+	measure count_percentage_complete = DIVIDE(CALCULATE(COUNTROWS(Performance), 'Performance'[Review Status] = "Completed"),COUNTROWS(Performance),0) * 100
+		lineageTag: a38c3939-0ce1-408f-bc98-fd4c0463010e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure count_percentage_on_track = DIVIDE(CALCULATE(COUNTROWS(Performance), 'Performance'[Goals Rating Name] = "On Track"),COUNTROWS(Performance),0) * 100
+		lineageTag: acc440eb-c87a-4f3a-847e-9a29340d39bc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure count_percentage_above_90 = DIVIDE(CALCULATE(COUNTROWS(Performance), 'Performance'[Overall Percentage] > 0.9 ),COUNTROWS(Performance),0) * 100
+		lineageTag: 517375cf-8141-4949-9dda-26abadd3f04f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Review #'
+		dataType: int64
+		formatString: 0
+		lineageTag: ccafc6f9-2d81-4731-91a9-05fbc2fd300c
+		summarizeBy: sum
+		sourceColumn: Review #
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Review Name'
+		dataType: string
+		lineageTag: aa89f5c6-b430-48c9-9a54-5054ed47a59e
+		summarizeBy: none
+		sourceColumn: Review Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 8231c5c9-2029-44b7-bb92-f030f4e7ebdf
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Review Template'
+		dataType: string
+		lineageTag: e95bf4b4-0132-42f0-b633-a1644b58b3d3
+		summarizeBy: none
+		sourceColumn: Review Template
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Q&A Template'
+		dataType: string
+		lineageTag: d66a653b-23f4-4009-baa4-350d98d08fdc
+		summarizeBy: none
+		sourceColumn: Q&A Template
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Joined Before'
+		dataType: string
+		lineageTag: 43fc5276-c203-44c6-a4f6-f163022ffffc
+		summarizeBy: none
+		sourceColumn: Joined Before
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auto Close'
+		dataType: string
+		lineageTag: a4113a4b-5e86-4040-807f-95f444b6899c
+		summarizeBy: none
+		sourceColumn: Auto Close
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: string
+		lineageTag: 1370bdcb-2ecf-4375-b388-635d526ce43c
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Initiated By'
+		dataType: string
+		lineageTag: 247dd707-4b3e-4a68-ab25-ca68e2d4be58
+		summarizeBy: none
+		sourceColumn: Initiated By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Initiated By Email Id'
+		dataType: string
+		lineageTag: a802ca4f-6798-41a3-9820-b9faf87826e6
+		summarizeBy: none
+		sourceColumn: Initiated By Email Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Initiated On'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a79c72d0-3c38-43f5-98fe-6077da7bb18a
+		summarizeBy: none
+		sourceColumn: Initiated On
+
+		variation Variation
+			isDefault
+			relationship: dc7872e5-301a-40e3-b225-2424d2038f8c
+			defaultHierarchy: LocalDateTable_69ac57bd-39f0-4696-86fe-1ad5a9131b41.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Review Status'
+		dataType: string
+		lineageTag: ac2a7c12-d9e4-4108-b2ff-ad1ce0677188
+		summarizeBy: none
+		sourceColumn: Review Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Review Completed On'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 264d09b1-0380-4b05-8e24-d40aaca67bca
+		summarizeBy: none
+		sourceColumn: Review Completed On
+
+		variation Variation
+			isDefault
+			relationship: b05af295-4e14-4385-8a60-ee6bfdfb5a83
+			defaultHierarchy: LocalDateTable_91a52260-c1c3-4fe9-9899-dbe65bb6e629.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'HR Business Partner'
+		dataType: string
+		lineageTag: 7a415ad4-a58a-46b5-933f-b7df1a444199
+		summarizeBy: none
+		sourceColumn: HR Business Partner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Overall Percentage'
+		dataType: double
+		lineageTag: 15717e34-0573-452a-a646-267adc2dd463
+		summarizeBy: sum
+		sourceColumn: Overall Percentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lasted
+		dataType: int64
+		formatString: 0
+		lineageTag: b478b7e4-93e3-41bf-8f6a-f417fee1ca21
+		summarizeBy: sum
+		sourceColumn: lasted
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Performance","TableItemName":"lasted (groups)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column 'User Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 537d9ccf-5444-4e12-ba90-59f837133b2b
+		summarizeBy: count
+		sourceColumn: User Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Self Assessment'
+		dataType: string
+		lineageTag: f0439537-1fa0-4b72-b2a5-b4d5efad4b36
+		summarizeBy: none
+		sourceColumn: Self Assessment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Self Assessment Email Id'
+		dataType: string
+		lineageTag: c7e6b6ef-5daa-4a82-b165-cd25e1019719
+		summarizeBy: none
+		sourceColumn: Self Assessment Email Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Job Title'
+		dataType: string
+		lineageTag: a7dfe06c-79a0-4239-8000-2aefaf756890
+		summarizeBy: none
+		sourceColumn: Job Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		lineageTag: 02a96766-c896-4e07-86c0-308babcf2e5d
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grade
+		dataType: string
+		lineageTag: c7ec5b22-f872-4a12-89ab-5d1c39e4ab26
+		summarizeBy: none
+		sourceColumn: Grade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Questions
+		dataType: string
+		lineageTag: c3bfbf1a-c5ec-4642-a461-46a61e2183ef
+		summarizeBy: none
+		sourceColumn: Questions
+
+		annotation SummarizationSetBy = Automatic
+
+	column Answers
+		dataType: string
+		lineageTag: 8736df2a-1f94-475d-bdde-28fbd4f52215
+		summarizeBy: none
+		sourceColumn: Answers
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Name'
+		dataType: string
+		lineageTag: 07e4f638-52b6-4317-b968-117dd20f4142
+		summarizeBy: none
+		sourceColumn: Goals Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Weight'
+		dataType: double
+		lineageTag: 070da6c0-932d-4865-b845-3f1eaa6a43d7
+		summarizeBy: sum
+		sourceColumn: Goals Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Goals Rating'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3054c22c-4100-44da-8030-bec9bcb82eff
+		summarizeBy: sum
+		sourceColumn: Goals Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Rating Name'
+		dataType: string
+		lineageTag: 09a43e51-9827-40d7-adea-3336c2543273
+		summarizeBy: none
+		sourceColumn: Goals Rating Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Comment'
+		dataType: string
+		lineageTag: e72b085e-d75e-4f0b-86f9-3104e4447bde
+		summarizeBy: none
+		sourceColumn: Goals Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Name'
+		dataType: string
+		lineageTag: 125c73b8-cb5f-4a34-b049-e143dad6efe5
+		summarizeBy: none
+		sourceColumn: Okrs Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Weight'
+		dataType: double
+		lineageTag: 40bd1d27-7bff-4eec-b3bb-ebcba3e959c3
+		summarizeBy: sum
+		sourceColumn: Okrs Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Okrs Rating'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3467e2a6-3e06-4b11-8e3c-38a9db9501b8
+		summarizeBy: sum
+		sourceColumn: Okrs Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Rating Name'
+		dataType: string
+		lineageTag: 1f5cc56f-9ca3-4cd7-9712-5d7b4dcf3b91
+		summarizeBy: none
+		sourceColumn: Okrs Rating Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Comment'
+		dataType: string
+		lineageTag: 2ca0f14c-5fe5-4ab4-8f15-0d5eee5705a3
+		summarizeBy: none
+		sourceColumn: Okrs Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bscs Comment'
+		dataType: string
+		lineageTag: ab47ff5b-5119-4179-9c26-ee37209046dd
+		summarizeBy: none
+		sourceColumn: Bscs Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tasks Comment'
+		dataType: string
+		lineageTag: bb9b4545-cbf8-42bf-b7ae-8ecde704018f
+		summarizeBy: none
+		sourceColumn: Tasks Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'User Id_1'
+		dataType: int64
+		formatString: 0
+		lineageTag: f341c7aa-cf85-4827-9aca-5c4149b86ac1
+		summarizeBy: sum
+		sourceColumn: User Id_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Matrix Manager Assessment'
+		dataType: string
+		lineageTag: aa7e6ccf-4f8d-4282-9825-643b502dbb43
+		summarizeBy: none
+		sourceColumn: Matrix Manager Assessment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Matrix Manager Assessment Email Id'
+		dataType: string
+		lineageTag: 939502d2-e894-4eb4-8831-b428647d4ff7
+		summarizeBy: none
+		sourceColumn: Matrix Manager Assessment Email Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Questions_2
+		dataType: string
+		lineageTag: 279cb212-a735-4444-92f8-46a23731aeca
+		summarizeBy: none
+		sourceColumn: Questions_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Answers_3
+		dataType: string
+		lineageTag: 4d935347-1231-4214-9ade-c6d7a97b7c4f
+		summarizeBy: none
+		sourceColumn: Answers_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Name_4'
+		dataType: string
+		lineageTag: 7fb244be-c203-4cbd-85ab-22fe35a1344c
+		summarizeBy: none
+		sourceColumn: Goals Name_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Weight_5'
+		dataType: string
+		lineageTag: 223f614f-a4c9-44ca-b72f-a3fec1c899e9
+		summarizeBy: none
+		sourceColumn: Goals Weight_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Rating_6'
+		dataType: string
+		lineageTag: 4ce045b4-06b5-4420-b289-f1a8a3f02c5a
+		summarizeBy: none
+		sourceColumn: Goals Rating_6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Rating Name_7'
+		dataType: string
+		lineageTag: 3261c36d-8807-4e31-a817-e3003ea49615
+		summarizeBy: none
+		sourceColumn: Goals Rating Name_7
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Comment_8'
+		dataType: string
+		lineageTag: dd226c07-d9da-43ea-b8b3-52ee2a4676f5
+		summarizeBy: none
+		sourceColumn: Goals Comment_8
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Name_9'
+		dataType: string
+		lineageTag: e70eed37-ce59-4c6c-a85a-426de3a552b6
+		summarizeBy: none
+		sourceColumn: Okrs Name_9
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Weight_10'
+		dataType: string
+		lineageTag: 55672939-1e5b-43c6-9afa-476c344dcda4
+		summarizeBy: none
+		sourceColumn: Okrs Weight_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Rating_11'
+		dataType: string
+		lineageTag: 7fe6b8ab-ed37-4f02-8f3f-c1ef7d0cbd17
+		summarizeBy: none
+		sourceColumn: Okrs Rating_11
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Rating Name_12'
+		dataType: string
+		lineageTag: 54666c5a-42df-4961-af3b-a584897372a9
+		summarizeBy: none
+		sourceColumn: Okrs Rating Name_12
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Comment_13'
+		dataType: string
+		lineageTag: cc8af58b-9590-431a-9e8e-8081631c3c3f
+		summarizeBy: none
+		sourceColumn: Okrs Comment_13
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bscs Comment_14'
+		dataType: string
+		lineageTag: 0455c325-d262-4aa8-9f2d-95efbffde392
+		summarizeBy: none
+		sourceColumn: Bscs Comment_14
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Matrix Manager Overall Comment'
+		dataType: string
+		lineageTag: 5e3e41d4-095c-4225-a8a8-1f9887156301
+		summarizeBy: none
+		sourceColumn: Matrix Manager Overall Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'User Id_15'
+		dataType: int64
+		formatString: 0
+		lineageTag: fe62444c-513b-44f4-a976-7cb83ee8b55c
+		summarizeBy: sum
+		sourceColumn: User Id_15
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Manager Assessment'
+		dataType: string
+		lineageTag: 1b08ad91-11f3-461f-87f4-11b5f6ffeebd
+		summarizeBy: none
+		sourceColumn: Manager Assessment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Manager Assessment Email Id'
+		dataType: string
+		lineageTag: e59c3867-3b32-4715-acce-3d05c9906447
+		summarizeBy: none
+		sourceColumn: Manager Assessment Email Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Questions_16
+		dataType: string
+		lineageTag: 7b8bbd17-39ab-4033-90bd-2c4e1c2a9fb6
+		summarizeBy: none
+		sourceColumn: Questions_16
+
+		annotation SummarizationSetBy = Automatic
+
+	column Answers_17
+		dataType: string
+		lineageTag: 958bc925-30db-407e-957c-260e06c03ba8
+		summarizeBy: none
+		sourceColumn: Answers_17
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Name_18'
+		dataType: string
+		lineageTag: 884ef7f0-2960-48e0-aaf0-10008db75dfd
+		summarizeBy: none
+		sourceColumn: Goals Name_18
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Weight_19'
+		dataType: double
+		lineageTag: 0b056b6a-7c73-4972-9718-d6c3fe3bdfaa
+		summarizeBy: sum
+		sourceColumn: Goals Weight_19
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Goals Rating_20'
+		dataType: int64
+		formatString: 0
+		lineageTag: 78440d26-af82-4638-805a-c5f7da8853e4
+		summarizeBy: sum
+		sourceColumn: Goals Rating_20
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Rating Name_21'
+		dataType: string
+		lineageTag: 70cced74-fa1d-43c5-8445-36953be569a7
+		summarizeBy: none
+		sourceColumn: Goals Rating Name_21
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goals Comment_22'
+		dataType: string
+		lineageTag: d10cefb4-e339-46ac-a04d-274274ab2ef2
+		summarizeBy: none
+		sourceColumn: Goals Comment_22
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Name_23'
+		dataType: string
+		lineageTag: e2e07e22-384c-47d4-b986-8a9749ce73ad
+		summarizeBy: none
+		sourceColumn: Okrs Name_23
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Weight_24'
+		dataType: double
+		lineageTag: 37592681-7780-4d13-9e4c-eec76da4293b
+		summarizeBy: sum
+		sourceColumn: Okrs Weight_24
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Okrs Rating_25'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9771e7ff-5092-416d-8635-3ab6d45a89e6
+		summarizeBy: sum
+		sourceColumn: Okrs Rating_25
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Rating Name_26'
+		dataType: string
+		lineageTag: 0dae129f-1c47-4e56-a396-3811fae2da8a
+		summarizeBy: none
+		sourceColumn: Okrs Rating Name_26
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Okrs Comment_27'
+		dataType: string
+		lineageTag: 35cef61b-49a4-4a82-979b-a5d7abdd32f9
+		summarizeBy: none
+		sourceColumn: Okrs Comment_27
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bscs Comment_28'
+		dataType: string
+		lineageTag: 5cabd623-b22e-41b8-8a0e-3a6ba5da2eb0
+		summarizeBy: none
+		sourceColumn: Bscs Comment_28
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Manager Overall Comment'
+		dataType: string
+		lineageTag: f455a386-a6e1-4723-bb1e-0804060b0567
+		summarizeBy: none
+		sourceColumn: Manager Overall Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Unit'
+		dataType: string
+		lineageTag: ba7541f1-ddbb-4071-b82a-3c6906f92a7b
+		summarizeBy: none
+		sourceColumn: Business Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company
+		dataType: string
+		lineageTag: 079a5b94-3b4b-4976-be95-eae574c31099
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Legal Employer'
+		dataType: string
+		lineageTag: c0b80ea2-ec2f-4c1e-a902-1ed90f0f310a
+		summarizeBy: none
+		sourceColumn: Legal Employer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Manager Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0298d50b-78bc-4a03-a2b8-7798fea73279
+		summarizeBy: sum
+		sourceColumn: Manager Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Matrix Manager Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: a4f4008d-818a-4d43-8bca-0bd7d9626f41
+		summarizeBy: sum
+		sourceColumn: Matrix Manager Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Seconded Department'
+		dataType: string
+		lineageTag: 0833646d-4669-47ee-8d29-cb56c8e26b6f
+		summarizeBy: none
+		sourceColumn: Seconded Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Work Location/Project Name'
+		dataType: string
+		lineageTag: f42b8f30-33ef-4ae9-bda8-32d385848344
+		summarizeBy: none
+		sourceColumn: Work Location/Project Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 9fcfc55e-0339-42ea-bd4d-af8b0beea5fb
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: e071b04a-2382-4901-a3c6-f0e9e52d33a3
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nationality
+		dataType: string
+		lineageTag: 0c374bbb-5f12-4902-ba21-e1528c0e2e8e
+		summarizeBy: none
+		sourceColumn: Nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 65e5a462-a3d5-43b5-bee0-f15353a47ef9
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Job Title_29'
+		dataType: string
+		lineageTag: 0f4a0336-fb2c-4a74-901a-e9b96e8e97b2
+		summarizeBy: none
+		sourceColumn: Job Title_29
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Length of Service'
+		dataType: double
+		lineageTag: 3f201330-4e2d-46f2-be34-f7e6a727972a
+		summarizeBy: sum
+		sourceColumn: Length of Service
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'N - Reporting '
+		dataType: string
+		lineageTag: b3aff0b6-d50f-4981-aaf0-c61b956386b5
+		summarizeBy: none
+		sourceColumn: "N - Reporting "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assignment Category'
+		dataType: string
+		lineageTag: 35b1fa01-f687-4d54-80d0-e34f502c9a42
+		summarizeBy: none
+		sourceColumn: Assignment Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual Termination Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c9ddc7c4-8e67-4c6f-aa1d-5568d5442347
+		summarizeBy: none
+		sourceColumn: Actual Termination Date
+
+		variation Variation
+			isDefault
+			relationship: dac96ca8-bbb5-4d5f-a5ad-2d6db3c07afb
+			defaultHierarchy: LocalDateTable_c543b814-797c-4364-8502-7e43b8afc01e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Probation End Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cf6cc846-b1fb-42e5-9b0c-8980efd72878
+		summarizeBy: none
+		sourceColumn: Probation End Date
+
+		variation Variation
+			isDefault
+			relationship: 21ee6269-2b74-4a9d-a83f-5fbf9476a4c0
+			defaultHierarchy: LocalDateTable_d871803f-b0fb-4a23-8a9c-2fa9efa71331.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date of Birth.'
+		dataType: string
+		lineageTag: a6d6c4de-982d-4115-9a62-0b2298ac8a6a
+		summarizeBy: none
+		sourceColumn: Date of Birth.
+
+		annotation SummarizationSetBy = Automatic
+
+	column Function/BU
+		dataType: string
+		lineageTag: 3bd7c897-ce75-42b4-adc5-38982a155689
+		summarizeBy: none
+		sourceColumn: Function/BU
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Full Name'
+		dataType: string
+		lineageTag: 3e081903-3467-4a70-bc0e-1d0a5b0abae0
+		summarizeBy: none
+		sourceColumn: Full Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Group joining date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 342c8eab-8aed-4aef-8982-0afbc9bc2b53
+		summarizeBy: none
+		sourceColumn: Group joining date
+
+		variation Variation
+			isDefault
+			relationship: d442acc4-07eb-4407-9a26-50186cd8aa2e
+			defaultHierarchy: LocalDateTable_33c5a951-c11f-405a-9632-b8ad77eae5d0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employment Type'
+		dataType: string
+		lineageTag: 5317fe10-2b28-472b-a6e0-a2c1302838ab
+		summarizeBy: none
+		sourceColumn: Employment Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Previous User ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 19e44b81-3922-4082-b1bb-fbfe0187bd3a
+		summarizeBy: count
+		sourceColumn: Previous User ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employer Name'
+		dataType: string
+		lineageTag: fb249eea-503d-48ba-bebd-1819c4c6ee20
+		summarizeBy: none
+		sourceColumn: Employer Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee Transfer Date'
+		dataType: string
+		lineageTag: 7752ed8f-8985-4774-af1b-9120cffdcb91
+		summarizeBy: none
+		sourceColumn: Employee Transfer Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'lasted (groups)' =
+			SWITCH(
+				TRUE,
+				ISBLANK('Performance'[lasted]),
+				"(Blank)",
+				'Performance'[lasted] IN {11,
+					40,
+					41},
+				"0_45",
+				'Performance'[lasted] IN {254,
+					284,
+					285,
+					325},
+				"200-400",
+				'Performance'[lasted] IN {79,
+					80,
+					81,
+					85,
+					88,
+					91,
+					92,
+					93,
+					95,
+					96},
+				"45_100",
+				"100_200"
+			)
+		lineageTag: 145f0425-5265-4479-ad24-9898892d8bda
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "Performance"
+				          }
+				        },
+				        "Property": "lasted"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"p","Entity":"Performance"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"p"}},"Property":"lasted"}}],"GroupItems":[{"DisplayName":"(Blank)","BlankDefaultPlaceholder":true},{"DisplayName":"0_45","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"p"}},"Property":"lasted"}}],"Values":[[{"Literal":{"Value":"11L"}}],[{"Literal":{"Value":"40L"}}],[{"Literal":{"Value":"41L"}}]]}}},{"DisplayName":"200-400","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"p"}},"Property":"lasted"}}],"Values":[[{"Literal":{"Value":"254L"}}],[{"Literal":{"Value":"284L"}}],[{"Literal":{"Value":"285L"}}],[{"Literal":{"Value":"325L"}}]]}}},{"DisplayName":"45_100","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"p"}},"Property":"lasted"}}],"Values":[[{"Literal":{"Value":"79L"}}],[{"Literal":{"Value":"80L"}}],[{"Literal":{"Value":"81L"}}],[{"Literal":{"Value":"85L"}}],[{"Literal":{"Value":"88L"}}],[{"Literal":{"Value":"91L"}}],[{"Literal":{"Value":"92L"}}],[{"Literal":{"Value":"93L"}}],[{"Literal":{"Value":"95L"}}],[{"Literal":{"Value":"96L"}}]]}}},{"DisplayName":"100_200"}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Performance = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mvisibelli\Desktop\PowerBI\evaluation_clean_data.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Review #", Int64.Type}, {"Review Name", type text}, {"Description", type any}, {"Review Template", type text}, {"Q&A Template", type text}, {"Joined Before", type any}, {"Auto Close", type any}, {"Period", type text}, {"Initiated By", type text}, {"Initiated By Email Id", type text}, {"Initiated On", type date}, {"Review Status", type text}, {"Review Completed On", type date}, {"HR Business Partner", type text}, {"Overall Percentage", type number}, {"lasted", Int64.Type}, {"User Id", Int64.Type}, {"Self Assessment", type text}, {"Self Assessment Email Id", type text}, {"Job Title", type any}, {"Department", type text}, {"Grade", type any}, {"Questions", type text}, {"Answers", type text}, {"Goals Name", type text}, {"Goals Weight", type number}, {"Goals Rating", Int64.Type}, {"Goals Rating Name", type text}, {"Goals Comment", type text}, {"Okrs Name", type text}, {"Okrs Weight", type number}, {"Okrs Rating", Int64.Type}, {"Okrs Rating Name", type text}, {"Okrs Comment", type text}, {"Bscs Comment", type any}, {"Tasks Comment", type any}, {"User Id_1", Int64.Type}, {"Matrix Manager Assessment", type text}, {"Matrix Manager Assessment Email Id", type text}, {"Questions_2", type text}, {"Answers_3", type text}, {"Goals Name_4", type any}, {"Goals Weight_5", type any}, {"Goals Rating_6", type any}, {"Goals Rating Name_7", type any}, {"Goals Comment_8", type any}, {"Okrs Name_9", type any}, {"Okrs Weight_10", type any}, {"Okrs Rating_11", type any}, {"Okrs Rating Name_12", type any}, {"Okrs Comment_13", type any}, {"Bscs Comment_14", type any}, {"Matrix Manager Overall Comment", type text}, {"User Id_15", Int64.Type}, {"Manager Assessment", type text}, {"Manager Assessment Email Id", type text}, {"Questions_16", type text}, {"Answers_17", type text}, {"Goals Name_18", type text}, {"Goals Weight_19", type number}, {"Goals Rating_20", Int64.Type}, {"Goals Rating Name_21", type text}, {"Goals Comment_22", type text}, {"Okrs Name_23", type text}, {"Okrs Weight_24", type number}, {"Okrs Rating_25", Int64.Type}, {"Okrs Rating Name_26", type text}, {"Okrs Comment_27", type any}, {"Bscs Comment_28", type any}, {"Manager Overall Comment", type text}, {"Business Unit", type text}, {"Company", type any}, {"Legal Employer", type text}, {"Manager Number", Int64.Type}, {"Matrix Manager Number", Int64.Type}, {"Seconded Department", type any}, {"Work Location/Project Name", type text}, {"Country", type text}, {"Region", type text}, {"Nationality", type text}, {"Gender", type text}, {"Job Title_29", type text}, {"Length of Service", type number}, {"N - Reporting ", type text}, {"Assignment Category", type any}, {"Actual Termination Date", type datetime}, {"Probation End Date", type datetime}, {"Date of Birth.", type any}, {"Function/BU", type text}, {"Full Name", type text}, {"Group joining date", type datetime}, {"Employment Type", type text}, {"Previous User ID", Int64.Type}, {"Employer Name", type text}, {"Employee Transfer Date", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

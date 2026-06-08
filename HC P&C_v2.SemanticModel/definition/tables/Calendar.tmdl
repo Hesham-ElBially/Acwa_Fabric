@@ -1,0 +1,141 @@
+table Calendar
+	lineageTag: 4676865e-193e-493b-9d79-afdcca69da95
+
+	measure Measure = ```
+			
+			VAR EndDatePervisual= MAX('Calendar'[Date])
+			VAR Result= 
+			CALCULATE(
+			    [HC All],
+			    REMOVEFILTERS('Calendar'),
+			    'Employee List Including Inactive'[Date of Joining] <= EndDatePervisual,
+			    'Employee List Including Inactive'[Employment Details Termination Date] > EndDatePervisual
+			    ||
+			    ISBLANK('Employee List Including Inactive'[Employment Details Termination Date])
+			)
+			RETURN
+			EndDatePervisual
+			```
+		formatString: General Date
+		lineageTag: 622cbbd7-93f2-4b74-a8df-4bbeb90a0b4d
+
+	column Date
+		formatString: General Date
+		lineageTag: da302139-af49-473b-b4a1-ee49bde10d45
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 14410409-2913-473d-999d-7455ef7e3530
+			defaultHierarchy: LocalDateTable_a644a5b1-3578-4b98-a9da-3d7ee6c12225.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: ab6ab06c-3c75-4207-bd4b-d6ffe3a7cf69
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: 19c0a01d-e480-43d5-93d8-daa8695d121f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 078c3a40-8d63-49a6-ae8c-e80799bcfc63
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month Number'
+		formatString: 0
+		lineageTag: 9b222f9f-4fbc-43b4-8661-c1d2e3c3116b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month'
+		lineageTag: 030f7414-e989-466d-b0d8-d6b3d00d8ecc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Number'
+		formatString: 0
+		lineageTag: 52bdba5e-c9e8-4f03-b7ff-e86a570965db
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Week Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Number and Year'
+		lineageTag: 86160548-7778-4eb6-8f51-ae6db7da83e6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Week Number and Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekYearNumber
+		lineageTag: 4df6df24-ba01-4fcb-b298-b56f4a1e2f57
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekYearNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Working Day'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7d1fc993-b22c-45c9-ad63-24c104702d68
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Is Working Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Remaining Months' = DATEDIFF(TODAY() ,'Calendar'[Date],MONTH)
+		formatString: 0
+		lineageTag: 1b672ff3-bf2d-46c2-9d48-40a0c5c0d509
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source =
+				
+				VAR Min_Date = MIN(MIN('Employee List Including Inactive'[Date of Joining]), MIN('Employee List Including Inactive'[Employment Details Termination Date]))
+				VAR Max_Date = MAX(MAX('Employee List Including Inactive'[Date of Joining]), MAX('Employee List Including Inactive'[Employment Details Termination Date]))
+				VAR Days = CALENDAR ( Min_Date,Max_Date )
+				RETURN ADDCOLUMNS (
+				    Days,
+				    "Year", YEAR ( [Date] ),
+				    "Month Number", MONTH ( [Date] ),
+				    "Month", FORMAT ( [Date], "mmmm" ),
+				    "Year Month Number", YEAR ( [Date] ) * 12 + MONTH ( [Date] ) - 1,
+				    "Year Month", FORMAT ( [Date], "mmm yy" ),
+				    "Week Number", WEEKNUM ( [Date] ),
+				"Week Number and Year", "W" & WEEKNUM ( [Date] ) & " " & YEAR ( [Date] ),
+				"WeekYearNumber", YEAR ( [Date] ) & 100 + WEEKNUM ( [Date] ),
+				"Is Working Day",not WEEKDAY([Date]) in {1,7}
+				)
+
+	annotation PBI_Id = 2bebb3cf1dce493c8935b9a36f68d791
+

@@ -1,0 +1,7 @@
+role 'All in'
+	modelPermission: read
+
+	tablePermission 'gdm d_employees_new' = TRUE()
+
+	annotation PBI_Id = 1e535bfa41c34aef9d753c6b0687116e
+

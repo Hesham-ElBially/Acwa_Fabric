@@ -1,0 +1,795 @@
+table v_g_JobPersonal
+	lineageTag: 55c39f09-65a4-4157-a154-f5ad849475c4
+	sourceLineageTag: 5eee4d48-46d6-46bf-9f68-8791f63b5ae1
+
+	measure count_emploee = count(v_g_JobPersonal[username])
+		formatString: 0
+		lineageTag: a3f8cf7c-775e-424c-8456-113eae9ea126
+
+		changedProperty = Name
+
+	column personId
+		dataType: string
+		lineageTag: f0fbcf67-bee0-4c06-b908-5ff53f243009
+		sourceLineageTag: 9eb848a0-1a98-4111-87cf-cfe21d2325ad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: personId
+
+		annotation SummarizationSetBy = User
+
+	column userSysId
+		dataType: string
+		lineageTag: c8228555-0467-402b-afdc-1310b245e3e3
+		sourceLineageTag: a4daaf13-2946-45ef-a1d2-d00d0231c3f8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: userSysId
+
+		annotation SummarizationSetBy = User
+
+	column username
+		dataType: string
+		lineageTag: 7993f65b-e3ef-437d-b76a-d238611d12aa
+		sourceLineageTag: 58c0bb28-a544-4043-b52b-a158813c3d8e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: username
+
+		annotation SummarizationSetBy = User
+
+	column email
+		dataType: string
+		lineageTag: cae1f81a-ddd3-4a83-baae-cca2e29bf156
+		sourceLineageTag: 358b2542-81d6-467b-885f-c938fed5ce59
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = User
+
+	column employeeStatus
+		dataType: string
+		lineageTag: 4e01ad86-6b54-4675-bda7-a1fee77aa658
+		sourceLineageTag: 2136133d-effc-451d-8949-e74f7e619df2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: employeeStatus
+
+		annotation SummarizationSetBy = User
+
+	column ji_rec_efStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ad80c3a3-3cd4-4902-a35a-581a2783b0fc
+		sourceLineageTag: 2f6d2449-e529-4da5-b04d-0f3b977cff6a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ji_rec_efStartDate
+
+		variation Variation
+			isDefault
+			relationship: 4e1ebce2-5508-4547-8e50-006725d701c6
+			defaultHierarchy: LocalDateTable_05ba4313-7266-4595-bbf1-e58409c474f2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column ji_rec_efEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4d7a9955-7d00-4e2a-8dc6-33464753a373
+		sourceLineageTag: 6a50cbe4-9aa5-4bf4-9fac-10398b08bf02
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ji_rec_efEndDate
+
+		variation Variation
+			isDefault
+			relationship: 67dd3ee5-4b00-43da-add5-cb46ba9c6b48
+			defaultHierarchy: LocalDateTable_0ff98b55-d4e1-478a-8d00-4b64ddf2b22b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column event
+		dataType: string
+		lineageTag: f5cbb0e4-802c-4d01-adba-b4fce574aa05
+		sourceLineageTag: 6a2a96c0-bc8f-4473-9625-1ede83498b59
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: event
+
+		annotation SummarizationSetBy = User
+
+	column eventReason
+		dataType: string
+		lineageTag: c27be9a0-7212-43d4-9f3a-6e8f24e523f2
+		sourceLineageTag: a1a6aded-4bbb-4290-81ce-831ffb7c4dc9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: eventReason
+
+		annotation SummarizationSetBy = User
+
+	column ppi_rec_efStartDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 60a1c7b7-887b-4ee7-a572-ec4e7946c377
+		sourceLineageTag: 7f74a814-45c5-4211-97f6-5791da91b249
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ppi_rec_efStartDate
+
+		variation Variation
+			isDefault
+			relationship: 3b1ca7a0-6353-45aa-a2ab-facf4e3bb82e
+			defaultHierarchy: LocalDateTable_e4d5b204-7515-4935-a146-1c816e4bd061.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column ppi_rec_efEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 79ede396-8add-4fb2-8d38-73af100f8180
+		sourceLineageTag: a97dcae1-d412-47d2-9379-05920913c935
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ppi_rec_efEndDate
+
+		variation Variation
+			isDefault
+			relationship: d8f25816-4787-4fdd-a0f7-642896f7a474
+			defaultHierarchy: LocalDateTable_62f842ef-8946-4696-93b0-8838667932d2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column groupJoiningDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e152472-190d-4fdc-92fd-bce546273de2
+		sourceLineageTag: 8864e1fb-5adb-46eb-8171-d1e99c09c74b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: groupJoiningDate
+
+		variation Variation
+			isDefault
+			relationship: 1b6b4119-c773-4117-9631-fbbe2cb904ed
+			defaultHierarchy: LocalDateTable_7d13701d-3d88-474c-9811-fb67638a7cda.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column hireDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: eed10818-dde9-4b50-ae85-655e5b6a17e1
+		sourceLineageTag: 218ca0cb-efd1-4721-bbf0-d1222abca424
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: hireDate
+
+		variation Variation
+			isDefault
+			relationship: 1d93886d-b4e7-4b81-92ed-a6c52b924062
+			defaultHierarchy: LocalDateTable_c3c31b49-fcaa-4de8-bcc2-63449f876296.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column endOfServiceDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e0e181c8-f352-41cc-902f-1f0065ee1b17
+		sourceLineageTag: 9a5391ac-c6a7-4afc-8bd5-9f4f285e86b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: endOfServiceDate
+
+		variation Variation
+			isDefault
+			relationship: 209f66d4-523d-4d8a-ab4f-4668d2d6ef5b
+			defaultHierarchy: LocalDateTable_95436085-bc7b-4a78-94f5-bd58314f34bf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column terminationDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6b77a361-d21c-48c8-b24d-5778b65e120d
+		sourceLineageTag: 46f1bfca-44de-4ddc-8d75-19ea53a54796
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: terminationDate
+
+		variation Variation
+			isDefault
+			relationship: d051124d-fe66-46eb-ac2a-27ac1f2fdd93
+			defaultHierarchy: LocalDateTable_4ae30515-dd63-4bf0-9eab-ab427a544b4e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column displayName
+		dataType: string
+		lineageTag: d2063f5e-7b93-40bb-9a41-34f68c7cf0c3
+		sourceLineageTag: 31bc3c0c-11bd-4b59-bede-1d62647a37d0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: displayName
+
+		annotation SummarizationSetBy = User
+
+	column firstName
+		dataType: string
+		lineageTag: 2ef325a7-8e2a-47bb-ae25-9d3757a6f2d9
+		sourceLineageTag: 2f096fa0-85e4-4ac8-b5cb-6b5974871a52
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: firstName
+
+		annotation SummarizationSetBy = User
+
+	column lastName
+		dataType: string
+		lineageTag: 4550f047-835d-42c3-8ed9-2cc8f464890f
+		sourceLineageTag: 101b1434-bd16-4b64-b8f2-d1989c11cb0b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lastName
+
+		annotation SummarizationSetBy = User
+
+	column gender
+		dataType: string
+		lineageTag: 6a64f258-77e8-4c6c-a5bb-84caab7c9ae1
+		sourceLineageTag: 2c8b95ce-2a11-45f0-80df-43bb905967ed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = User
+
+	column dateOfBirth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dc488d09-0189-4da4-9082-16780cead58c
+		sourceLineageTag: 58f160e0-3888-4c0e-9796-6b3c5860cc9f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dateOfBirth
+
+		variation Variation
+			isDefault
+			relationship: 8c191317-8549-4f48-a93a-b1908f829432
+			defaultHierarchy: LocalDateTable_82e32d25-7c73-4e77-9aa7-3997d8bfbc9a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column age
+		dataType: double
+		lineageTag: 208cd66b-a911-403e-93da-33ce4c26cd16
+		sourceLineageTag: 81d0dd9d-5749-4f19-84e7-c2a02b97b6da
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = User
+
+	column countryOfBirthDefVal
+		dataType: string
+		lineageTag: 8b9df7f5-314f-4151-9736-9a000bf20e2b
+		sourceLineageTag: 59998a99-9e87-4106-8ae0-2880e8c84963
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: countryOfBirthDefVal
+
+		annotation SummarizationSetBy = User
+
+	column bloodGroupVal
+		dataType: string
+		lineageTag: 68730ea6-6d1e-44cc-a232-57164eadfc64
+		sourceLineageTag: 54ab1c30-fca4-4b96-8187-333ad06c3e21
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bloodGroupVal
+
+		annotation SummarizationSetBy = User
+
+	column religionVal
+		dataType: string
+		lineageTag: 7dbe8879-4619-481f-bb41-d1266d1a2cba
+		sourceLineageTag: db1ef867-e534-4abd-b8a6-9156c171c0e4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: religionVal
+
+		annotation SummarizationSetBy = User
+
+	column maritalStatusVal
+		dataType: string
+		lineageTag: 626293cf-14c9-4814-b737-d241d10bb650
+		sourceLineageTag: 0f0a454a-4a35-44fb-be92-51c1ff953e3e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: maritalStatusVal
+
+		annotation SummarizationSetBy = User
+
+	column nationalityVal
+		dataType: string
+		lineageTag: 423d0fe5-0283-4b2b-876a-c4b3138fa5de
+		sourceLineageTag: 76e4c161-df52-444d-9759-be95991b26e1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: nationalityVal
+
+		annotation SummarizationSetBy = User
+
+	column secondNationalityVal
+		dataType: string
+		lineageTag: 29eff1cb-48f7-46dc-8f30-8803d482fcbe
+		sourceLineageTag: 074d3dba-6139-4f6a-b57e-7df5019d0651
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: secondNationalityVal
+
+		annotation SummarizationSetBy = User
+
+	column jobTitle
+		dataType: string
+		lineageTag: 8933a5ae-3800-4174-b9f4-9b25a38a6260
+		sourceLineageTag: d6b33019-3a36-4491-ae40-cb337846cf75
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: jobTitle
+
+		annotation SummarizationSetBy = User
+
+	column payGrade
+		dataType: string
+		lineageTag: 66a858d3-3ed4-4e4c-961a-cb02240cee5d
+		sourceLineageTag: c988ddf1-e528-46ad-baa2-11a80f350c87
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: payGrade
+
+		annotation SummarizationSetBy = User
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"v_g_JobPersonal","TableItemName":"payGrade (groups)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column countryOfCompany
+		dataType: string
+		lineageTag: 5ea16ff2-3be2-4d37-bc1b-040c3dd53b44
+		sourceLineageTag: 9e789ed5-bafa-4396-a4ea-bb3da0d6b3b0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: countryOfCompany
+
+		annotation SummarizationSetBy = User
+
+	column location
+		dataType: string
+		lineageTag: d61c1c4f-83ba-4e52-96f6-46018263161c
+		sourceLineageTag: 123c39a6-6fd5-4b02-9d46-cd4358af170c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = User
+
+	column buCode
+		dataType: string
+		lineageTag: 2dd92c75-ddfd-4e8c-8f58-d9ef43816122
+		sourceLineageTag: a76494dd-e672-4ae8-83d5-f636067d5212
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: buCode
+
+		annotation SummarizationSetBy = User
+
+	column buName
+		dataType: string
+		lineageTag: 2610e329-5e63-4283-adc1-4dcbba556394
+		sourceLineageTag: 09a51b29-beb3-427d-882c-022bb1049dfb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: buName
+
+		annotation SummarizationSetBy = User
+
+	column geoName
+		dataType: string
+		lineageTag: 20e3afc7-4718-4d4b-9e37-07850db52497
+		sourceLineageTag: 8dbe3a79-80e0-48c8-861f-e51ef022e388
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: geoName
+
+		annotation SummarizationSetBy = User
+
+	column geoCountry
+		dataType: string
+		lineageTag: ab08e6b1-7eef-4607-9f39-a488337cc17d
+		sourceLineageTag: 01d18dfe-22c8-45ff-9f3c-f38564debbeb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: geoCountry
+
+		annotation SummarizationSetBy = User
+
+	column geoCluster
+		dataType: string
+		lineageTag: 96d6b2c1-6f1d-43f3-9c6c-27d2c3f91086
+		sourceLineageTag: 36d1b5be-7ac0-4af9-aa76-23b32761dd8f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: geoCluster
+
+		annotation SummarizationSetBy = User
+
+	column deptCode
+		dataType: string
+		lineageTag: 78853d1d-05ff-4c07-bdb1-967e03bdfe55
+		sourceLineageTag: 6040aae9-b542-4999-a73e-fbd1c18d362b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: deptCode
+
+		annotation SummarizationSetBy = User
+
+	column departmentName
+		dataType: string
+		lineageTag: 020cc0c4-e415-4e80-bbf9-087686136292
+		sourceLineageTag: 59a16c4d-33fc-4312-ab61-c7065039c399
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: departmentName
+
+		annotation SummarizationSetBy = User
+
+	column costCenterCode
+		dataType: string
+		lineageTag: 9d49b30a-d845-4de6-8b91-2529f99e329e
+		sourceLineageTag: ddbd5464-500d-48d5-a765-5e954a3aa389
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: costCenterCode
+
+		annotation SummarizationSetBy = User
+
+	column CC_defaultValue
+		dataType: string
+		lineageTag: 9b4a1ee9-13b0-48f0-9d94-362f523c8b9f
+		sourceLineageTag: 657d7b29-9ac4-42e3-ab06-86f8525bb8b2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CC_defaultValue
+
+		annotation SummarizationSetBy = User
+
+	column employmentType
+		dataType: string
+		lineageTag: f6162ae2-dacc-45f5-9fd5-41f7152066fa
+		sourceLineageTag: 49a26374-a3da-4e1f-b46c-2c741ded92a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: employmentType
+
+		annotation SummarizationSetBy = User
+
+	column employmentSubType
+		dataType: string
+		lineageTag: 34815b6c-9438-4333-b7d4-6454b967ed15
+		sourceLineageTag: d75f86cc-df90-43d2-a9c5-70bd577ccb24
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: employmentSubType
+
+		annotation SummarizationSetBy = User
+
+	column employeeClass
+		dataType: string
+		lineageTag: aa0e536c-5509-44c6-9cef-155f6b4bf35c
+		sourceLineageTag: 75fdb246-72a2-480b-b704-517c271f6ff3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: employeeClass
+
+		annotation SummarizationSetBy = User
+
+	column employerName
+		dataType: string
+		lineageTag: 785a5e79-7575-4272-b916-95e4ad440dc8
+		sourceLineageTag: 0068bfc6-82d7-4b65-821c-f050f8c63dc0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: employerName
+
+		annotation SummarizationSetBy = User
+
+	column supervisor
+		dataType: string
+		lineageTag: f0ec0ef6-1113-452a-9b37-478c8ae442e5
+		sourceLineageTag: aa80e5c4-f27f-45b4-8314-02208be6d649
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: supervisor
+
+		annotation SummarizationSetBy = User
+
+	column supervisorLastName
+		dataType: string
+		lineageTag: fa653b8d-dbcf-4ca4-b8f8-eea7cc5821ff
+		sourceLineageTag: b33c8cba-abc1-4afe-b534-70b627dc9f88
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: supervisorLastName
+
+		annotation SummarizationSetBy = User
+
+	column supervisorFirstName
+		dataType: string
+		lineageTag: dab52d94-3eeb-4a84-9334-8a8409ccd87d
+		sourceLineageTag: 7dbd84a7-f86c-41a5-bc6a-6a15e28454a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: supervisorFirstName
+
+		annotation SummarizationSetBy = User
+
+	column hrbpLastName
+		dataType: string
+		lineageTag: 1b4e3f41-7e1c-4a1c-8ea5-8998f6d95ec1
+		sourceLineageTag: cc5258bf-0e3b-49f2-8bd5-b0512e145d5f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: hrbpLastName
+
+		annotation SummarizationSetBy = User
+
+	column hrbpFirstName
+		dataType: string
+		lineageTag: c0ee2959-e0cf-4c81-b24d-b01b7a944715
+		sourceLineageTag: b97dac07-2b2e-4536-9f63-be38069fd720
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: hrbpFirstName
+
+		annotation SummarizationSetBy = User
+
+	column hrbpUserId
+		dataType: string
+		lineageTag: e97849fa-6af9-42fa-afd5-a6f1321f17cb
+		sourceLineageTag: ebe9a40d-44f9-4a12-b540-77eff36014c8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: hrbpUserId
+
+		annotation SummarizationSetBy = User
+
+	column matrixManagerLastName
+		dataType: string
+		lineageTag: 5b48036c-2302-4aa2-9f7a-8401f571e44b
+		sourceLineageTag: 82bbf043-6b3f-465e-9144-6961ade6104e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: matrixManagerLastName
+
+		annotation SummarizationSetBy = User
+
+	column matrixManagerFirstName
+		dataType: string
+		lineageTag: bdce7a0b-6a98-4c81-8487-afd3cbbe2f90
+		sourceLineageTag: 3d001986-e9a3-46a0-bf46-7e2007d6758e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: matrixManagerFirstName
+
+		annotation SummarizationSetBy = User
+
+	column matrixManagerUserId
+		dataType: string
+		lineageTag: 895011dc-79ff-46e4-8ea6-2f048597c316
+		sourceLineageTag: d7bfd2d7-5fa4-4b91-bdcc-ca5ab4422644
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: matrixManagerUserId
+
+		annotation SummarizationSetBy = User
+
+	column companyCode
+		dataType: string
+		lineageTag: 603cc637-69fd-4511-bacf-3045467c1ad5
+		sourceLineageTag: 5c1291e4-78c4-49be-98ca-ca72ca4fdd1f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: companyCode
+
+		annotation SummarizationSetBy = User
+
+	column companyName
+		dataType: string
+		lineageTag: 5d45e796-9e6d-4988-aec5-d8271a3d56c6
+		sourceLineageTag: 2d46c764-2943-4013-801f-e4c21876d78d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: companyName
+
+		annotation SummarizationSetBy = User
+
+	column parentEntity
+		dataType: string
+		lineageTag: e66526ac-9947-45b7-8dd1-6530aed176af
+		sourceLineageTag: 1802b859-4471-4edc-8218-17dfa5e2c821
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: parentEntity
+
+		annotation SummarizationSetBy = User
+
+	column contractEndDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f6f26fa9-ff05-434d-9392-daedff784b85
+		sourceLineageTag: 315449ff-1b1f-4516-8f71-ff31cb965399
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: contractEndDate
+
+		variation Variation
+			isDefault
+			relationship: 65dd126b-20ad-495c-b992-6e6bce082c86
+			defaultHierarchy: LocalDateTable_84c37ea2-6307-41f0-80de-3704cb135ae3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column globalMobilityContractType
+		dataType: string
+		lineageTag: 8126d2c5-0d13-464c-baeb-264040c7a3e6
+		sourceLineageTag: 5cc3d90f-5d38-4cbf-96f3-3225d92e760e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: globalMobilityContractType
+
+		annotation SummarizationSetBy = User
+
+	column globalMobilitySeconded
+		dataType: string
+		lineageTag: 6e22aa51-521a-48d1-b73c-67ae4075ba43
+		sourceLineageTag: 13cb72df-eb36-4338-92eb-cca77728a9f2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: globalMobilitySeconded
+
+		annotation SummarizationSetBy = User
+
+	column globalMobilityProjectDepartment
+		dataType: string
+		lineageTag: 3e3f4886-cbf2-4932-a37a-0d73cb0982db
+		sourceLineageTag: a478cbe9-6b44-4b78-b317-30b79cc42c19
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: globalMobilityProjectDepartment
+
+		annotation SummarizationSetBy = User
+
+	column employeeWithSpecialNeedsVal
+		dataType: string
+		lineageTag: 64b82ac3-2097-4572-ab47-fa8587e72929
+		sourceLineageTag: f0b37b67-72ba-4a54-b909-2313ff72aa77
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: employeeWithSpecialNeedsVal
+
+		annotation SummarizationSetBy = User
+
+	column specialNeedsCategoryVal
+		dataType: string
+		lineageTag: b44ba7eb-a6bf-4487-80cf-00dc5765e1ff
+		sourceLineageTag: 7241db8a-3591-49a0-a399-cab05db6fb27
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: specialNeedsCategoryVal
+
+		annotation SummarizationSetBy = User
+
+	column specialNeedsTypeVal
+		dataType: string
+		lineageTag: ce5b4462-16be-4fb0-a403-e29a7a60df5a
+		sourceLineageTag: cce8d0c1-53c8-48b0-9ae7-b2c215710fb0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: specialNeedsTypeVal
+
+		annotation SummarizationSetBy = User
+
+	column positionCode
+		dataType: string
+		lineageTag: 36778c42-9c5e-48b4-8211-71ff6195787e
+		sourceLineageTag: 751ad28d-438e-4726-a7d0-5c0b471a31d2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: positionCode
+
+		annotation SummarizationSetBy = User
+
+	column 'payGrade (groups)' =
+			SWITCH(
+				TRUE,
+				ISBLANK('v_g_JobPersonal'[payGrade]),
+				"(Blank)",
+				'v_g_JobPersonal'[payGrade] IN {"01",
+					"03",
+					"05",
+					"06",
+					"08",
+					"09",
+					"10",
+					"11",
+					"12",
+					"13",
+					"14",
+					"15",
+					"16",
+					"17",
+					"18",
+					"19",
+					"20",
+					"21",
+					"22",
+					"23"},
+				"Associates",
+				'v_g_JobPersonal'[payGrade] IN {"M1",
+					"M2",
+					"M3"},
+				"Middle Mgt",
+				'v_g_JobPersonal'[payGrade] IN {"L10",
+					"L11",
+					"L12",
+					"L13",
+					"L15",
+					"L3",
+					"L4",
+					"L5",
+					"L6",
+					"L7",
+					"L8",
+					"L9",
+					"PGM"},
+				"Old",
+				'v_g_JobPersonal'[payGrade] IN {"E1",
+					"E2",
+					"E3",
+					"E4",
+					"E5",
+					"E6"},
+				"Senior Mgt",
+				'v_g_JobPersonal'[payGrade]
+			)
+		lineageTag: db4d2d47-393f-4638-98a7-346f641a0fdb
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "v_g_JobPersonal"
+				          }
+				        },
+				        "Property": "payGrade"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"v","Entity":"v_g_JobPersonal"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"payGrade"}}],"GroupItems":[{"DisplayName":"(Blank)","BlankDefaultPlaceholder":true},{"DisplayName":"Associates","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"payGrade"}}],"Values":[[{"Literal":{"Value":"'01'"}}],[{"Literal":{"Value":"'03'"}}],[{"Literal":{"Value":"'05'"}}],[{"Literal":{"Value":"'06'"}}],[{"Literal":{"Value":"'08'"}}],[{"Literal":{"Value":"'09'"}}],[{"Literal":{"Value":"'10'"}}],[{"Literal":{"Value":"'11'"}}],[{"Literal":{"Value":"'12'"}}],[{"Literal":{"Value":"'13'"}}],[{"Literal":{"Value":"'14'"}}],[{"Literal":{"Value":"'15'"}}],[{"Literal":{"Value":"'16'"}}],[{"Literal":{"Value":"'17'"}}],[{"Literal":{"Value":"'18'"}}],[{"Literal":{"Value":"'19'"}}],[{"Literal":{"Value":"'20'"}}],[{"Literal":{"Value":"'21'"}}],[{"Literal":{"Value":"'22'"}}],[{"Literal":{"Value":"'23'"}}]]}}},{"DisplayName":"Middle Mgt","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"payGrade"}}],"Values":[[{"Literal":{"Value":"'M1'"}}],[{"Literal":{"Value":"'M2'"}}],[{"Literal":{"Value":"'M3'"}}]]}}},{"DisplayName":"Old","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"payGrade"}}],"Values":[[{"Literal":{"Value":"'L10'"}}],[{"Literal":{"Value":"'L11'"}}],[{"Literal":{"Value":"'L12'"}}],[{"Literal":{"Value":"'L13'"}}],[{"Literal":{"Value":"'L15'"}}],[{"Literal":{"Value":"'L3'"}}],[{"Literal":{"Value":"'L4'"}}],[{"Literal":{"Value":"'L5'"}}],[{"Literal":{"Value":"'L6'"}}],[{"Literal":{"Value":"'L7'"}}],[{"Literal":{"Value":"'L8'"}}],[{"Literal":{"Value":"'L9'"}}],[{"Literal":{"Value":"'PGM'"}}]]}}},{"DisplayName":"Senior Mgt","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"payGrade"}}],"Values":[[{"Literal":{"Value":"'E1'"}}],[{"Literal":{"Value":"'E2'"}}],[{"Literal":{"Value":"'E3'"}}],[{"Literal":{"Value":"'E4'"}}],[{"Literal":{"Value":"'E5'"}}],[{"Literal":{"Value":"'E6'"}}]]}}}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition v_g_JobPersonal = entity
+		mode: directQuery
+		source
+			entityName: v_g_JobPersonal
+			expressionSource: 'DirectQuery to AS - SAPSF_EC_DataLake'
+

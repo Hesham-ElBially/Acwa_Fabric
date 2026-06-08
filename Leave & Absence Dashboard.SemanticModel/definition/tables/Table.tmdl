@@ -1,0 +1,66 @@
+table Table
+	lineageTag: aa1e13d3-d462-4f34-91fb-42a30be08db3
+
+	measure 'Background Color' =
+			
+			var sv_tda = SELECTEDVALUE('TDA'[TDA])
+			var sv_tap = SELECTEDVALUE('TAP'[TAP])
+			var multi = sv_tap*sv_tda
+			return
+			SWITCH(
+			    TRUE(),
+			    and(sv_tap<=30, sv_tda <=1),"Green",
+			    and(sv_tap<=12, sv_tda <=2),"Green",and(sv_tap<=5, sv_tda <=3),"Green", and(sv_tap<=20, sv_tda >=5),"Red",and(sv_tap>=7, sv_tda >=4),"Red",and(sv_tap>=12, sv_tda >=3),"Red","Yellow"
+			    )
+		lineageTag: 435a6dbf-fc82-4e3f-9b51-ac6708706081
+
+	measure 'Font Color' = if([BFS]=0,[Background Color])
+		lineageTag: 4cca363e-13e1-4eb4-a8fe-6cd7693ee8ba
+
+	measure BFS = (SUM('TDA'[TDA])*SUM('TDA'[TDA]))* (SUM('TAP'[TAP]))
+		formatString: 0
+		lineageTag: 4080e341-969a-44b1-961b-72eb3c50314b
+
+	measure 'BF Heat Map' = IF( OR('Table'[BFS]='public employee_absences'[Bradford Factor 2021],'Table'[BFS]='public employee_absences'[Bradford Factor 2022]),1,0 )
+		formatString: 0
+		lineageTag: e4844099-694f-4208-b253-8cb5f6ab3741
+
+	column TAP
+		dataType: int64
+		formatString: 0
+		lineageTag: 45a0b8eb-5ecc-4ae7-a89e-d0f39897e8aa
+		summarizeBy: none
+		sourceColumn: TAP
+
+		annotation SummarizationSetBy = User
+
+	column TDA
+		dataType: int64
+		formatString: 0
+		lineageTag: 056d67a5-030c-4e94-ac1e-502def3680ad
+		summarizeBy: none
+		sourceColumn: TDA
+
+		annotation SummarizationSetBy = Automatic
+
+	column BF
+		dataType: string
+		lineageTag: 674d716c-cc74-4ba3-af7c-884369a6b662
+		summarizeBy: none
+		sourceColumn: BF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	partition Table-75ceccd0-eacf-4c44-9f44-e3c85d668d92 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("VZdJjiQxDAP/0uc5WPL+lsb8/xuDpESLc+gGqNQSlV5Y9fv7Yz9/8u/vn98fT+VPfX8Hquez/hSy/UmENuTI3PEUcteTyC/5/a1Inlk6nwJGe/IrHfX0Kz31FOUej1e2Wk+h1XjyazVLfq1uJaPVbE+jQX6Gna33U2h9nvxar/4kXki+q83eez6N3rOeo8WI+pOzzlPfrO5PfrN2SczyysY7bO1pzDr1HLNu1aMmWW/Ovk95rdzN2ceexOwxnsbsXI6bs7vXc7ybUfWYvas9cjymW+NebaU/nCH647miAbQkAKIpASBpBpi0B16aDgGpUuS/fMn2DpWVBugoDdBbGqD5yc0ImlvEjKBXMrCRuvTAajYZAtArFAFqBOV5z9U2nvhxSuPcNwmA9EoFTqW2xGHqkgHSIz1AuiSAxd5SEqTct8bbx3ppzPbSyLFdAVw8RO8kze2IAEiXZOAwdumBE9FlCo5Em8IRqO8N8PKzURqoqzTKXAJIcqkA6pSWuJKaZAD1SA+gXgkA1brUBOogKi9bm6WxgPIcqF0SgDokA1lbMoCqGbjStMeHenUKUF05AnUSlZd5XsDG6zxtw3if8/Yx3ug+pQL82hLBLRlAPdID129ziQTrlaJgXWxMd+BepD9wo9EgjLuIFuE8AfSIwc1Kk1gmGRt7U3oE65ExYO1bQIJ1k5XuYqc0jqyXBuuSAFiPVIB1SkuwDskA3pEeGGxTImAdU4qC9ZCVbmS3NFhXabBuqwCOG88NPWlwu9KU1pEMvLguPU7sThlzY/kEJFhvsjrNykXj5hPd49NVAKxageOlLbFFNQOs2iNYNXJj+RQMNPQrp1+5lQbrKB2stwJgzW8CTsOauV+dhrWnZMT2c2kC2D5kzo3dKSQBS8/y9x3VSwP2lAbslQBgp1QAdkpLwF7JCNgtTQA7mkQC9khVwNK2nLblvTQKvTRibVcAsHlXOG1r5o512tZxyQCsuTQJ2C1zAHuWkAQsjctpXHnXOY0rbzqncfEgOI2rH6mAAWhLwC7JCNgtTU6cJokA9g6pClhe3k7r4oajdZkmgFYzQKwZoNUMXPCaAdr/moB2aQ4uoqY5QfuOLt0rLd/Xox0VAG2XAGhNSgA4pSdou2QE7ZYmQbskcuM8SVXQvo9E/+J+2o/2VAC0+RPFaWD81uc0sMVtSwPjlzyngVl3aQLa7TInaI+gBC0dzOlgLKKD8feW08L4A8tpYWNICdZae8aLaZISuFu6BO6VCHB9SVXg0sScJsZr8D7cVQHgLqsAcLmIdLHNHXcf7pAU4A6XLsA5Uwbd2HPCErg8Ap0+1kXHD38JxE9/CQD3SAC4UwKBqymBq12Ae3XQjU2nbJgPK/v7Dw==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [TAP = _t, TDA = _t, BF = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"TAP", Int64.Type}, {"TDA", Int64.Type}, {"BF", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

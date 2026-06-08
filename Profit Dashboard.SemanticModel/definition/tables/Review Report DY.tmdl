@@ -1,0 +1,449 @@
+table 'Review Report DY'
+	lineageTag: 963cd4c5-6400-4189-8d93-2e3a53a8367c
+	sourceLineageTag: 4cecca1a-6098-4a4d-bc3c-1e918032d0a9
+
+	column 'Review Name'
+		dataType: string
+		lineageTag: 5af5571f-c7cb-4cf5-b989-1446c0025c6e
+		sourceLineageTag: 640b37c9-66e4-4f1a-9616-2fe04e24d644
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Review Name
+
+		annotation SummarizationSetBy = User
+
+	column Description
+		dataType: string
+		lineageTag: 230fdb02-4bc0-4b38-978b-701d1851de54
+		sourceLineageTag: 390e56e0-7603-4b87-8f76-7d7485d5982f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = User
+
+	column 'Review Template'
+		dataType: string
+		lineageTag: fb11ba08-9c3f-4dae-a409-3e419aeadd45
+		sourceLineageTag: 24abc05c-7683-407d-84a6-1454c0f1e602
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Review Template
+
+		annotation SummarizationSetBy = User
+
+	column 'Q&A Template'
+		dataType: string
+		lineageTag: 67588806-855f-4e55-aeaa-9109d3000bdf
+		sourceLineageTag: 5e945972-faec-45b1-b0e9-11a4bceae0b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Q&A Template
+
+		annotation SummarizationSetBy = User
+
+	column 'Joined Before'
+		dataType: string
+		lineageTag: 2197ef6c-51c0-47ed-a9e5-1b0819e1b683
+		sourceLineageTag: 41afd7dc-3c94-47fc-8068-6f02fefb6fb6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Joined Before
+
+		annotation SummarizationSetBy = User
+
+	column 'Auto Close'
+		dataType: string
+		lineageTag: 5451fcc6-d7fc-4307-b09f-c62d84554487
+		sourceLineageTag: ea11dbc3-25db-424d-9ce8-4492eb3f1fc0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Auto Close
+
+		annotation SummarizationSetBy = User
+
+	column Period
+		dataType: string
+		lineageTag: 482343af-2649-404f-9be8-c6c3af3062e0
+		sourceLineageTag: a91371ab-d883-45f5-be85-ddc5f7cc405e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = User
+
+	column 'Initiated By'
+		dataType: string
+		lineageTag: 3bcece23-a2a8-4e83-b195-b45cd658b34f
+		sourceLineageTag: 10601b82-9a5f-44a0-8494-2c12b0b0d980
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Initiated By
+
+		annotation SummarizationSetBy = User
+
+	column 'Initiated By Email Id'
+		dataType: string
+		lineageTag: 2509dabf-c967-4e0b-9591-de47616727d1
+		sourceLineageTag: 02ab315b-2a31-44fb-9c27-ecf47fb8a347
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Initiated By Email Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Initiated On'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b42d3661-485b-4001-9be8-972e0e9b495d
+		sourceLineageTag: c8097c4d-c5a0-4e46-a730-2071f7a4fb6d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Initiated On
+
+		variation Variation
+			isDefault
+			relationship: 9b005c61-84e1-4082-bc70-dfdea321160c
+			defaultHierarchy: LocalDateTable_7055bee0-6ba9-4a1f-8202-a0c0a9b3b1ef.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'Review Status'
+		dataType: string
+		lineageTag: 93dbfed2-418f-4399-9d7c-b3c4aeb5d199
+		sourceLineageTag: 7e94ceba-82ae-4d9f-a8c2-897e36f2b3d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Review Status
+
+		annotation SummarizationSetBy = User
+
+	column 'Review Completed On'
+		dataType: string
+		lineageTag: 601ac6b2-be42-49ee-b036-a8a8944b2377
+		sourceLineageTag: 71b2f87a-351e-4aec-8d21-ab7c14637e39
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Review Completed On
+
+		annotation SummarizationSetBy = User
+
+	column 'User Id'
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: a1aa370d-1942-443f-9a98-243ddbb2e178
+		sourceLineageTag: 96e87de9-a18d-4798-b2ff-5d521adae055
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: User Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Job Title'
+		dataType: string
+		lineageTag: 75626eee-c291-4b7d-b059-6da2c7831408
+		sourceLineageTag: 3de97c54-206d-42f2-85f0-795e4eb36887
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Job Title
+
+		annotation SummarizationSetBy = User
+
+	column Department
+		dataType: string
+		lineageTag: 64fa7266-78cd-4cf1-a223-90cafeadbfd7
+		sourceLineageTag: f599981c-e0ca-4e11-aa04-86b2c5813a96
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = User
+
+	column Grade
+		dataType: string
+		lineageTag: a3d33c21-0767-4ac6-ae0f-acec6521c498
+		sourceLineageTag: 52d54b40-1192-479e-91b5-353afb872098
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Grade
+
+		annotation SummarizationSetBy = User
+
+	column 'HR Business Partner'
+		dataType: string
+		lineageTag: 0944ef5c-8e29-43f9-95a3-01643e045ec0
+		sourceLineageTag: d77f9c4e-b42c-476e-9c42-29c4cd95f8ad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: HR Business Partner
+
+		annotation SummarizationSetBy = User
+
+	column 'Self Assessment'
+		dataType: string
+		lineageTag: 7316f3ab-a654-4c95-8471-6d0db9b1bf3d
+		sourceLineageTag: b6b5d00c-24dc-4c67-aa10-57cb75a047a9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Self Assessment
+
+		annotation SummarizationSetBy = User
+
+	column 'Self Assessment Email Id'
+		dataType: string
+		lineageTag: 49f69dfe-acd1-4b19-8088-08f50c2a3c05
+		sourceLineageTag: 92c3fdf0-7968-40ff-9205-9f946052bffc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Self Assessment Email Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Self Assessment Status'
+		dataType: string
+		lineageTag: 3bb58063-38f5-43c7-b6d0-4276996a1cac
+		sourceLineageTag: d3abfd6d-3a09-428d-b7b3-f019f1e4c14c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Self Assessment Status
+
+		annotation SummarizationSetBy = User
+
+	column 'Self Assessment Submitted On'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b1c2db20-253f-4631-bd30-92017f60eed1
+		sourceLineageTag: a5b0156a-ac04-4ad3-9902-07775133cf01
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Self Assessment Submitted On
+
+		variation Variation
+			isDefault
+			relationship: 921e65d0-4e86-4fdf-a1eb-7894e16dd4d8
+			defaultHierarchy: LocalDateTable_a7f4fe1a-c004-4335-b987-7d064c58432b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'User Id_1'
+		dataType: int64
+		formatString: 0
+		lineageTag: 19a73dc3-1059-47ae-9c6f-5857f2028a5a
+		sourceLineageTag: b0b1f3e7-fa32-439a-9d01-b7f5f3e8300c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: User Id_1
+
+		annotation SummarizationSetBy = User
+
+	column 'Matrix Manager Assessment'
+		dataType: string
+		lineageTag: ca1e4552-1467-4808-b9fd-eab96f8098e2
+		sourceLineageTag: c867fd74-f060-4080-8dab-3782dd580598
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Matrix Manager Assessment
+
+		annotation SummarizationSetBy = User
+
+	column 'Matrix Manager Assessment Email Id'
+		dataType: string
+		lineageTag: 7c43cd26-680d-4cd9-8649-69b03283b900
+		sourceLineageTag: 2d181fed-8790-4657-9172-c9419237f9cf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Matrix Manager Assessment Email Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Matrix Manager Assessment Status'
+		dataType: string
+		lineageTag: c5a7a1c5-7403-47d0-a650-1c21eb2bda2a
+		sourceLineageTag: 3de0a497-cd8b-4a41-b0dc-47f1d77fd23d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Matrix Manager Assessment Status
+
+		annotation SummarizationSetBy = User
+
+	column 'Matrix Manager Assessment Submitted On'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 11be9675-98ee-42b0-be43-25b29ec80ad0
+		sourceLineageTag: fb28b0e9-8daa-4892-924b-4f89c86b2f04
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Matrix Manager Assessment Submitted On
+
+		variation Variation
+			isDefault
+			relationship: 602daa41-74e2-4dc4-942b-7a7b2c328f16
+			defaultHierarchy: LocalDateTable_1b39c6d5-89ca-4f56-8b27-d6187562c0b8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'User Id_2'
+		dataType: int64
+		formatString: 0
+		lineageTag: e2dde5e6-70b3-43bb-9c67-7b4b269b4753
+		sourceLineageTag: 81513802-df22-4dc3-9686-14658d19b8c3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: User Id_2
+
+		annotation SummarizationSetBy = User
+
+	column 'Manager Name'
+		dataType: string
+		lineageTag: 84c85cfa-2dbb-4391-8198-1199d64e585f
+		sourceLineageTag: 3a1ecbb4-600b-420c-9201-4caadedd7dfc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Manager Name
+
+		annotation SummarizationSetBy = User
+
+	column 'Manager Assessment Email Id'
+		dataType: string
+		lineageTag: 3d5b3b9d-0e1a-494e-bf8e-08c512caec49
+		sourceLineageTag: 5636801d-c185-4170-850e-616ab3cbc5a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Manager Assessment Email Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Manager Assessment'
+		dataType: string
+		lineageTag: 2fcae977-8642-4a4a-9ceb-c7b98fc80ba2
+		sourceLineageTag: 216ca872-72bc-492c-90d5-9bca83a74612
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Manager Assessment
+
+		annotation SummarizationSetBy = User
+
+	column 'Manager Assessment Submitted On'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: de61489c-2149-4a48-9210-0473fa6b654f
+		sourceLineageTag: e28023ec-d085-43a1-b77f-519f8a71e552
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Manager Assessment Submitted On
+
+		variation Variation
+			isDefault
+			relationship: bbd133f9-d584-408b-9550-810d2ad22f22
+			defaultHierarchy: LocalDateTable_ae6b7a76-b668-408e-9970-3e04afd78352.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column 'Manager Comments'
+		dataType: string
+		lineageTag: 4f8149c2-ec77-4d31-a127-b9ad255e963a
+		sourceLineageTag: a7899a8a-8e17-4939-adf3-6a5f9e971c10
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Manager Comments
+
+		annotation SummarizationSetBy = User
+
+	column 'User Id_3'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2081f9c6-9a49-42ca-a6be-2421b399bd6c
+		sourceLineageTag: 6b131959-55f1-4c2a-b9b6-f6c593aa6cac
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: User Id_3
+
+		annotation SummarizationSetBy = User
+
+	column 'Secondary Reviewer'
+		dataType: string
+		lineageTag: 93c6d570-fe69-4e75-8ab5-9528aee9d0cf
+		sourceLineageTag: 8e3560fd-23cc-4e3d-a35e-3f62f4c18d81
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Secondary Reviewer
+
+		annotation SummarizationSetBy = User
+
+	column 'Secondary Reviewer Email Id'
+		dataType: string
+		lineageTag: acfe2cfa-c0a2-4dd8-bfc6-3a762e56ef91
+		sourceLineageTag: 92ac2936-049c-4732-bafd-da8fd9b5adaf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Secondary Reviewer Email Id
+
+		annotation SummarizationSetBy = User
+
+	column 'Secondary Reviewer Submitted On'
+		dataType: string
+		lineageTag: c12e705a-42fa-40ae-b0aa-684685f1d1bd
+		sourceLineageTag: a6020b6b-39c6-4ad3-8af7-5f308bf28937
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Secondary Reviewer Submitted On
+
+		annotation SummarizationSetBy = User
+
+	column 'Secondary reviewer comments'
+		dataType: string
+		lineageTag: 32077538-b209-440f-9897-085840f056a9
+		sourceLineageTag: 501feb71-de90-409b-9359-0ebcaea55a17
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Secondary reviewer comments
+
+		annotation SummarizationSetBy = User
+
+	column 'Employee Sign Off'
+		dataType: string
+		lineageTag: 083133fc-17a2-4c0d-abd4-fa3c903568af
+		sourceLineageTag: b19aaeec-fe32-418d-b577-7dce41f0cc78
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Employee Sign Off
+
+		annotation SummarizationSetBy = User
+
+	column 'Employee Sign Off Submitted On'
+		dataType: string
+		lineageTag: 1a33de26-ccb3-468c-9ccb-5a11311cf8da
+		sourceLineageTag: 73af6357-edbe-4f58-8e8f-8514e06806a8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Employee Sign Off Submitted On
+
+		annotation SummarizationSetBy = User
+
+	column 'Employee Sign Off Comments'
+		dataType: string
+		lineageTag: bd14d475-8423-4a94-91ff-f6b2a1b5464b
+		sourceLineageTag: 2dae88af-fc2e-43df-85e7-4195c93b33a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Employee Sign Off Comments
+
+		annotation SummarizationSetBy = User
+
+	column 'Potential Score'
+		dataType: string
+		lineageTag: 537f1efd-22d3-4327-b342-23b6964d0b28
+		sourceLineageTag: 463eadbd-1ffa-4a13-8b1c-b37827cac9dc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Potential Score
+
+		annotation SummarizationSetBy = User
+
+	partition 'Review Report DY' = entity
+		mode: directQuery
+		source
+			entityName: Review Report DY
+			expressionSource: 'DirectQuery to AS - Profit'
+

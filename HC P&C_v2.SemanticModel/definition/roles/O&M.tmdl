@@ -1,0 +1,7 @@
+role O&M
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Construction" || [Name] == "Operations" || [Name] == "Geography KSA"
+
+	annotation PBI_Id = bb75552369ca43b9bef442af8e41dab7
+

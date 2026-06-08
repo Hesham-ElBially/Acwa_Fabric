@@ -1,0 +1,7 @@
+role 'Corporate Affairs & Sustainability'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Corporate Affairs & Sustainability"
+
+	annotation PBI_Id = 73bc592f6f954a809687156824bd5952
+

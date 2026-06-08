@@ -1,0 +1,49 @@
+table 'Parameter 2'
+	lineageTag: 4b1980ae-c111-44b2-ac1c-8b1a0628bbf8
+
+	column Parameter
+		lineageTag: 4fa4ac10-39e9-4eb9-a967-e9ac02e4e2e9
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		isHidden
+		lineageTag: 676a7efa-0661-402e-8853-9cf6532e0cf0
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: c9516566-a2c0-4f0c-a3e6-6e2118b7d7c3
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parameter 2' = calculated
+		mode: import
+		source =
+				{
+				    ("BU", NAMEOF('gdm f_employees_per_month'[bu_fu]), 0),
+				    ("Department", NAMEOF('gdm f_employees_per_month'[department]), 1),
+				    ("Level", NAMEOF('gdm f_employees_per_month'[level]), 2)
+				}
+
+	annotation PBI_Id = 976472539561491b814d4997e9e8c7ff
+

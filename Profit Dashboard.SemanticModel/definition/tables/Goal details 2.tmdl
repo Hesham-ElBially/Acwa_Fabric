@@ -1,0 +1,237 @@
+table 'Goal details 2'
+	lineageTag: a699151d-d0bf-4381-b7db-7cf757e34e27
+
+	column 'Goal Name'
+		dataType: string
+		lineageTag: eb4079a8-44ad-4671-805a-605cb42a39ae
+		summarizeBy: none
+		sourceColumn: Goal Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: a2467f79-a6cb-448c-8c6d-b19387bcbd48
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Target Period'
+		dataType: string
+		lineageTag: 5438ab94-5c23-4e32-9da1-1f621b268c42
+		summarizeBy: none
+		sourceColumn: Target Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assignee
+		dataType: string
+		lineageTag: 79594ff0-48f7-4f09-8b2e-d435d2520879
+		summarizeBy: none
+		sourceColumn: Assignee
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Assignee Id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0fb88a61-5482-4862-b4cc-7c24340a9a7d
+		summarizeBy: count
+		sourceColumn: Assignee Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 52c27393-ba91-4755-9c34-44b1b670387f
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Priority
+		dataType: string
+		lineageTag: 13546543-4f66-43b3-ae69-9e9f49d2d7eb
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sharing
+		dataType: string
+		lineageTag: 55683391-ffa9-4cbd-a231-686e02221b73
+		summarizeBy: none
+		sourceColumn: Sharing
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: double
+		lineageTag: b5bef787-4ac4-46e4-8c17-1a16a4f0d41e
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Associated KR'
+		dataType: string
+		lineageTag: c3ad08b7-44f1-4f19-b563-848cd44f157d
+		summarizeBy: none
+		sourceColumn: Associated KR
+
+		annotation SummarizationSetBy = Automatic
+
+	column Progress
+		dataType: double
+		lineageTag: 5660cbf0-c476-42b8-bd88-50c565ca17cc
+		summarizeBy: sum
+		sourceColumn: Progress
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Last Comment'
+		dataType: string
+		lineageTag: 2f829a15-2fa9-4254-a86c-d6fbeb229e15
+		summarizeBy: none
+		sourceColumn: Last Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Notes'
+		dataType: string
+		lineageTag: 6ac4215c-f426-4150-ba06-5d5dbb367d3d
+		summarizeBy: none
+		sourceColumn: Last Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type of Goal'
+		dataType: string
+		lineageTag: 8430ba33-b162-4d53-a5be-6df4d18d36b2
+		summarizeBy: none
+		sourceColumn: Type of Goal
+
+		annotation SummarizationSetBy = Automatic
+
+	column '70% - Experiential: On-the-job learning - practical activities, projects, tasks, work assignments, work rotations'
+		dataType: string
+		lineageTag: c9ed7ab9-cd56-4bcc-83d7-98eed8a5f8e7
+		summarizeBy: none
+		sourceColumn: 70% - Experiential: On-the-job learning - practical activities, projects, tasks, work assignments, work rotations
+
+		annotation SummarizationSetBy = Automatic
+
+	column ' 20% - Social: Near-the-job learning - coaching, mentoring, feedback, collaboration'
+		dataType: string
+		lineageTag: 804432ca-390b-4085-9ba9-28b52d92d37d
+		summarizeBy: none
+		sourceColumn: " 20% - Social: Near-the-job learning - coaching, mentoring, feedback, collaboration"
+
+		annotation SummarizationSetBy = Automatic
+
+	column '10% - Formal: Off-the-job learning - MISHKATY courses, LinkedIn Learning, Bookboon, classroom and virtual trainings'
+		dataType: string
+		lineageTag: 80679057-fea5-4777-b06d-1657fb76fe7d
+		summarizeBy: none
+		sourceColumn: 10% - Formal: Off-the-job learning - MISHKATY courses, LinkedIn Learning, Bookboon, classroom and virtual trainings
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual Goal Start Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 68c4b4dc-d8e8-4623-a035-cb3f26d680fa
+		summarizeBy: none
+		sourceColumn: Actual Goal Start Date
+
+		variation Variation
+			isDefault
+			relationship: e78c94ea-779f-4db6-9ec5-bd5a8e90b378
+			defaultHierarchy: LocalDateTable_2a526db2-a2d6-41a6-ab07-3df1a30361d9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual Goal Completion Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ea098c39-8a97-4b1c-a22c-d6342c436ef0
+		summarizeBy: none
+		sourceColumn: Actual Goal Completion Date
+
+		variation Variation
+			isDefault
+			relationship: 9a564474-f464-4de3-853d-1c71ef76931d
+			defaultHierarchy: LocalDateTable_8e879d91-ab15-4468-8440-66c79146c336.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goal Actual Date'
+		dataType: string
+		lineageTag: 25da0116-bf6b-4d8d-9bce-eecb006760ca
+		summarizeBy: none
+		sourceColumn: Goal Actual Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Success Criteria'
+		dataType: string
+		lineageTag: 999b6e26-101d-4738-8655-2c375d2f876a
+		summarizeBy: none
+		sourceColumn: Success Criteria
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee Comment'
+		dataType: string
+		lineageTag: 38476f3c-0959-4325-a5a3-1edf4a9fd10b
+		summarizeBy: none
+		sourceColumn: Employee Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Manager Comment'
+		dataType: string
+		lineageTag: 2f229520-4e59-49df-ab79-9b57ff8c47b8
+		summarizeBy: none
+		sourceColumn: Manager Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Percentage Completion'
+		dataType: double
+		lineageTag: 6404dd84-7e56-48d4-823e-f7e0bc007ebe
+		summarizeBy: sum
+		sourceColumn: Percentage Completion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Classification
+		dataType: string
+		lineageTag: 87e15684-1d88-49da-b700-e3d74f9e0497
+		summarizeBy: none
+		sourceColumn: Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Goal details 2' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mvisibelli\Desktop\Profit\Data_impor_goals_details.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Goal Name", type any}, {"Description", type any}, {"Target Period", type text}, {"Assignee", type text}, {"Assignee Id", Int64.Type}, {"Status", type text}, {"Priority", type text}, {"Sharing", type any}, {"Weight", type number}, {"Associated KR", type any}, {"Progress", type number}, {"Last Comment", type text}, {"Last Notes", type text}, {"Type of Goal", type text}, {"70% - Experiential: On-the-job learning - practical activities, projects, tasks, work assignments, work rotations", type text}, {" 20% - Social: Near-the-job learning - coaching, mentoring, feedback, collaboration", type text}, {"10% - Formal: Off-the-job learning - MISHKATY courses, LinkedIn Learning, Bookboon, classroom and virtual trainings", type text}, {"Actual Goal Start Date", type datetime}, {"Actual Goal Completion Date", type datetime}, {"Goal Actual Date", type text}, {"Success Criteria", type text}, {"Employee Comment", type text}, {"Manager Comment", type text}, {"Percentage Completion", type number}, {"Classification", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

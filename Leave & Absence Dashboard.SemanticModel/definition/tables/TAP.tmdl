@@ -1,0 +1,18 @@
+table TAP
+	lineageTag: fd9bb1bf-adef-442a-bad2-1080317f8edc
+
+	column TAP
+		formatString: 0
+		lineageTag: 96eff172-b997-4cad-bf7a-41a24a2c0ad3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Table[TAP]
+
+		annotation SummarizationSetBy = User
+
+	partition TAP-aa2edcc7-5fcb-4f32-8af1-ecca123533dd = calculated
+		mode: import
+		source = DISTINCT('Table'[TAP])
+
+	annotation PBI_Id = 3db4269a41294fa39900ecc09703da20
+

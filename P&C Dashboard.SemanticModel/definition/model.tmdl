@@ -1,0 +1,81 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Transform File from Query1 (3)'
+
+	annotation PBI_QueryGroupOrder = 4
+
+queryGroup 'Transform File from Query1 (3)\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from Query1 (4)'
+
+	annotation PBI_QueryGroupOrder = 6
+
+queryGroup 'Transform File from Query1 (4)\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from Query1 (5)'
+
+	annotation PBI_QueryGroupOrder = 8
+
+queryGroup 'Transform File from Query1 (5)\Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Helper Queries'
+
+	annotation PBI_QueryGroupOrder = 9
+
+annotation PBI_QueryOrder = ["gdm f_employees_per_month","gdm d_employees_new","Month dummy","PVM","Walk","gdm w_hr_performance","Milestone","Parameter2","Sample File (2)","Transform File (2)","Project Performance","Parameter3","Sample File (3)","Transform File (3)","Summary","Sample File (4)","Transform File (4)","Overview of project","Parameter5","Transform Sample File (5)","Sample File (5)","Transform File (5)","Table","gdm user_access_pbi"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.126.927.0 (24.02)
+
+ref table DateTableTemplate_39f4d024-f8f0-421b-87d8-914dc4fc0e73
+ref table 'gdm f_employees_per_month'
+ref table LocalDateTable_b0f9b3de-a737-47d4-a0e6-394651ed997a
+ref table LocalDateTable_0a14bc88-7240-4d65-b0ed-b0ac2e14d3fe
+ref table 'gdm d_employees_new'
+ref table LocalDateTable_983e7ef1-aa7d-4658-8d7c-b9b134acb25f
+ref table LocalDateTable_2c1381f9-9837-4f09-8541-05741365da9e
+ref table LocalDateTable_338d2c73-fdba-4fb3-863a-6a9ab250647d
+ref table LocalDateTable_ba2c94e6-5fd4-4091-adfa-c565e79d3256
+ref table LocalDateTable_86308b0b-e0bb-4967-9d43-6ec9c7e0af03
+ref table 'Month dummy'
+ref table Parameter
+ref table PVM
+ref table Walk
+ref table MeasureValuesTable
+ref table 'Parameter 2'
+ref table LocalDateTable_55aaa082-8a9e-4de6-ac7a-12581019cf7c
+ref table LocalDateTable_370368a7-4ec2-47e6-990b-46e402c50e33
+ref table 'gdm w_hr_performance'
+ref table Milestone
+ref table LocalDateTable_2b25c9b3-f261-428b-b429-fae458284db6
+ref table 'Project Performance'
+ref table Summary
+ref table 'Overview of project'
+ref table LocalDateTable_004c57d8-722e-4755-8f52-8b57400bd1b1
+ref table LocalDateTable_cf7d234d-d257-4bc0-91b9-8068a4f4381e
+ref table LocalDateTable_6cd4290d-ef41-4363-a3a7-e53d4366877b
+ref table LocalDateTable_a145495f-b4b1-4dbe-9c5b-bead1a939af5
+ref table Table
+ref table 'gdm user_access_pbi'
+
+ref role Region
+ref role Function&Region
+ref role FunctionORRegion
+ref role Function
+ref role 'All in'
+
+ref cultureInfo en-US
+

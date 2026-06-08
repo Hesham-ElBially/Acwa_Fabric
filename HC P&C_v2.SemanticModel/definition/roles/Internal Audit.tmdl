@@ -1,0 +1,7 @@
+role 'Internal Audit'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Internal Audit"
+
+	annotation PBI_Id = 6972068543a04942a1e0fd0e5432b497
+

@@ -1,0 +1,420 @@
+/// Profit Goals
+table Goals
+	isHidden
+	lineageTag: fcdb5d77-943b-4494-ab63-81006f96fd6b
+	sourceLineageTag: cf2517de-26d9-4d89-97e6-d684c2cafd70
+
+	measure '% approved goals' = TRUNC(COUNTAX(Goals,IF(Goals[Approved goals] <>"0",1))/COUNTROWS(Goals),4)
+		isHidden
+		lineageTag: 6db93045-0c1e-4433-97af-3f0e2da946d0
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Completed_goals = COUNTROWS(FILTER(Goals,VALUE(Goals[# of Goals]) <> 0 && (VALUE(Goals[# of Goals])- VALUE(Goals[Completed])) = 0 ))/COUNTROWS(Goals)
+		isHidden
+		lineageTag: 365a2c3e-7e15-4a3c-9a2c-ca357af4fa21
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% without goals' = TRUNC(COUNTAX(Goals,IF(Goals[Approved goals] = "0",1))/COUNTROWS(Goals),4)
+		isHidden
+		lineageTag: 9a9eb920-ed47-465b-a486-0061296250b4
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Avergage_approved_goals = AVERAGE(Goals[Numb_approved_goals])
+		formatString: 0
+		isHidden
+		lineageTag: 32404cb6-d9d1-4147-9030-b23e228257ae
+
+		changedProperty = Name
+
+		changedProperty = IsHidden
+
+	column 'User Id'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a3de1503-9bee-4b1b-9c83-c1db73b5a056
+		sourceLineageTag: 632d3ed7-6bcd-4cd7-98bc-a5a4e914732e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: User Id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Name
+		dataType: string
+		isHidden
+		lineageTag: 44e52cb7-29a1-480f-8ee7-9f003fd91d0b
+		sourceLineageTag: f7087eaa-1cf4-460b-9244-fc9001204332
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Email
+		dataType: string
+		isHidden
+		lineageTag: 3c4e1562-e610-417d-9488-1af3ab2a0823
+		sourceLineageTag: 91e6f95b-5d21-4c71-9974-e08cbd12680e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Email
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Manager
+		dataType: string
+		isHidden
+		lineageTag: 1b83a7a8-5426-49af-b568-029bd0de05da
+		sourceLineageTag: cc5ce39a-4bcf-40a2-b531-21f3e46ff737
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Manager
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Department
+		dataType: string
+		isHidden
+		lineageTag: a4ce3bd7-37b9-4bef-bf04-229907243d4d
+		sourceLineageTag: e5357f3e-57b7-42e5-a798-6382aea51f20
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Department
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Job Title'
+		dataType: string
+		isHidden
+		lineageTag: fc49c9bd-a23b-4850-941f-6d49e68087ee
+		sourceLineageTag: c0891188-1485-4115-b545-a615ccd46aae
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Job Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column '# of Goals'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2e585cdd-7391-41e8-ad88-85d424dc1409
+		sourceLineageTag: 4f32c237-3ab0-4569-81ac-d4366138a127
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: # of Goals
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'In Progress'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1d32d704-c475-492d-866b-4ad74636e6b8
+		sourceLineageTag: cacc8c42-49b3-4c60-bd56-9c0a9079d4cb
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: In Progress
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Completed
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0ff94b82-067c-4c78-90a7-f305c9c71909
+		sourceLineageTag: 34deb2ee-6c3b-42e5-9427-2f1f69cf32cf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Completed
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Pending Submission'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3895b784-96c2-467d-a864-2727de285882
+		sourceLineageTag: 3dd33aba-681c-47ef-9809-5d964bf8bbc3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pending Submission
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Pending Approval'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6aabe838-8f4d-4f51-bad3-ad574e559f8e
+		sourceLineageTag: 02e5c72b-6352-4c6a-adbb-98a8a285d223
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pending Approval
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Pending Delete'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 25b82d1a-e8bb-4ae7-8d17-2fa3812c7a08
+		sourceLineageTag: ff1561ff-f136-4129-abbc-801bee7a809a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pending Delete
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Not Started'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 49cbd4d5-e1b5-4c5f-828d-be7e76903348
+		sourceLineageTag: 3cde131c-befb-485e-bbea-604023efb682
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Not Started
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'At Risk'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3152cb0b-7fd0-40b0-9bb3-e389b7974cf5
+		sourceLineageTag: ea3c5166-b4cc-49fd-a549-5bd25fa83fe7
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: At Risk
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Cancel
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 63432d8c-8add-478e-9681-757bd5fb7084
+		sourceLineageTag: 2247a267-1cfe-434b-8e9b-f0f427fdae39
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Cancel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'In Trouble'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d3b52eff-62f0-4136-b0cc-572f0fac76f1
+		sourceLineageTag: 07723a31-138e-484b-9f48-f710f6935e87
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: In Trouble
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Revisions Requested'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8adae4cb-f4db-42a9-a4c6-801cbcfd82f7
+		sourceLineageTag: 1c54357c-2e95-4bd1-9146-f9c8464dce59
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Revisions Requested
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'On Track'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b6dbb39c-841a-4cfc-8581-7edf2cee1aab
+		sourceLineageTag: de8e1b38-6219-4ffe-8657-7539bc0263dd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: On Track
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Approved goals'
+		dataType: string
+		isHidden
+		lineageTag: 1cf2d53d-1ec3-4d53-a42e-0bc0c87bebd1
+		sourceLineageTag: e239f93c-ea02-46cd-bca3-da59526de4ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Approved goals
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Goals","TableItemName":"Approved goals (groups)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column 'Goal status'
+		dataType: string
+		isHidden
+		lineageTag: bcd3a228-18da-4670-8491-d56e9321159b
+		sourceLineageTag: 50089ebe-6504-4208-8b75-8ba71d10e4c2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Goal status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Numb_approved_goals = VALUE(Goals[Approved goals])
+		isHidden
+		lineageTag: 69924cbc-ec57-42cf-b23a-c56b2f0901a3
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Approved goals (groups)' =
+			SWITCH(
+				TRUE,
+				ISBLANK('Goals'[Approved goals]),
+				"(Blank)",
+				'Goals'[Approved goals] IN {"0",
+					"1",
+					"2",
+					"3"},
+				"0_3",
+				'Goals'[Approved goals] IN {"10",
+					"11",
+					"12"},
+				"10_12",
+				'Goals'[Approved goals] IN {"13",
+					"14",
+					"15"},
+				"13_15",
+				'Goals'[Approved goals] IN {"16",
+					"17",
+					"18"},
+				"16_18",
+				'Goals'[Approved goals] IN {"19",
+					"20",
+					"21"},
+				"19_21",
+				'Goals'[Approved goals] IN {"22",
+					"23",
+					"24"},
+				"22_24",
+				'Goals'[Approved goals] IN {"25",
+					"28",
+					"29"},
+				"25_29",
+				'Goals'[Approved goals] IN {"4",
+					"5",
+					"6"},
+				"4_6",
+				'Goals'[Approved goals] IN {"7",
+					"8",
+					"9"},
+				"7_9",
+				'Goals'[Approved goals]
+			)
+		isHidden
+		lineageTag: edbd82fa-4c8c-4fc1-99e3-3b2e48d55b35
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "Goals"
+				          }
+				        },
+				        "Property": "Approved goals"
+				      }
+				    }
+				  ]
+				}
+
+		changedProperty = IsHidden
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"g","Entity":"Goals"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"GroupItems":[{"DisplayName":"(Blank)","BlankDefaultPlaceholder":true},{"DisplayName":"0_3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'0'"}}],[{"Literal":{"Value":"'1'"}}],[{"Literal":{"Value":"'2'"}}],[{"Literal":{"Value":"'3'"}}]]}}},{"DisplayName":"10_12","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'10'"}}],[{"Literal":{"Value":"'11'"}}],[{"Literal":{"Value":"'12'"}}]]}}},{"DisplayName":"13_15","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'13'"}}],[{"Literal":{"Value":"'14'"}}],[{"Literal":{"Value":"'15'"}}]]}}},{"DisplayName":"16_18","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'16'"}}],[{"Literal":{"Value":"'17'"}}],[{"Literal":{"Value":"'18'"}}]]}}},{"DisplayName":"19_21","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'19'"}}],[{"Literal":{"Value":"'20'"}}],[{"Literal":{"Value":"'21'"}}]]}}},{"DisplayName":"22_24","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'22'"}}],[{"Literal":{"Value":"'23'"}}],[{"Literal":{"Value":"'24'"}}]]}}},{"DisplayName":"25_29","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'25'"}}],[{"Literal":{"Value":"'28'"}}],[{"Literal":{"Value":"'29'"}}]]}}},{"DisplayName":"4_6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'4'"}}],[{"Literal":{"Value":"'5'"}}],[{"Literal":{"Value":"'6'"}}]]}}},{"DisplayName":"7_9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"Approved goals"}}],"Values":[[{"Literal":{"Value":"'7'"}}],[{"Literal":{"Value":"'8'"}}],[{"Literal":{"Value":"'9'"}}]]}}}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = ```
+			2024 
+			```
+		isHidden
+		formatString: 0
+		lineageTag: 7fb66db8-45d7-45bc-a72a-c5d8d8f652c1
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Goals = entity
+		mode: directQuery
+		source
+			entityName: Goals
+			expressionSource: 'DirectQuery to AS - Profit'
+
+	changedProperty = IsHidden
+

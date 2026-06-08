@@ -1,0 +1,11 @@
+role CRSSO
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "CRSSO"
+
+	tablePermission 'public employees (2)' = [bu_fu] = "CRSSO"
+
+	tablePermission 'public employees_per_year' = [bu_fu] = "CRSSO"
+
+	annotation PBI_Id = 83a807e725394fcf9a054af701568834
+

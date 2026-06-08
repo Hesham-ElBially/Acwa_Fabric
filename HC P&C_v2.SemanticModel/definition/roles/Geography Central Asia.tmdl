@@ -1,0 +1,7 @@
+role 'Geography Central Asia'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Geography Central Asia" || [GEO Name] == "Central Asia"
+
+	annotation PBI_Id = 2dddc91bdb1f4d0c8dc407cf41afd6e0
+

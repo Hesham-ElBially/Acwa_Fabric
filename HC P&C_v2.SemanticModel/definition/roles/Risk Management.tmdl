@@ -1,0 +1,7 @@
+role 'Risk Management'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Risk Management"
+
+	annotation PBI_Id = ffef1b3c1fdb48e881601f96f368ab68
+

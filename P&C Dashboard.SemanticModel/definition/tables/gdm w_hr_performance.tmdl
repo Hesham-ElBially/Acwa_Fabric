@@ -1,0 +1,40 @@
+table 'gdm w_hr_performance'
+	lineageTag: 55a64b78-610d-4827-bf40-0da90a925c5f
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: fc90a32a-490e-4439-8222-c07c0a40c9c1
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_number
+		dataType: string
+		lineageTag: 864e57fc-5d2f-4af9-bb3d-4793f4baeb98
+		summarizeBy: none
+		sourceColumn: person_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column high_performer_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0e37a6f0-d200-4f33-909c-5f75c7aad72b
+		summarizeBy: none
+		sourceColumn: high_performer_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'gdm w_hr_performance' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("acwa-prod-psdb-acwadp.postgres.database.azure.com", "postgres"),
+				    gdm_w_hr_performance = Source{[Schema="gdm",Item="w_hr_performance"]}[Data]
+				in
+				    gdm_w_hr_performance
+
+	annotation PBI_ResultType = Table
+

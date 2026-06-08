@@ -1,0 +1,17 @@
+table BF
+	lineageTag: 67b608a1-0e7f-4226-9e73-029d52f7f1f7
+
+	column BF
+		lineageTag: e7b50e43-f723-4469-aacf-c56a7738392b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Table[BF]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BF-2837df2e-bd58-4a4e-b0f8-697461161dde = calculated
+		mode: import
+		source = DISTINCT('Table'[BF])
+
+	annotation PBI_Id = 1f4d47101df94e83bc3094cfbeec85e5
+

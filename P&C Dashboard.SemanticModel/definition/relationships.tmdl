@@ -1,0 +1,103 @@
+relationship 5d4adc2c-4838-484f-b4ce-236e9d8ab5a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm f_employees_per_month'.hire_date
+	toColumn: LocalDateTable_b0f9b3de-a737-47d4-a0e6-394651ed997a.Date
+
+relationship 061f3d63-d286-453c-911a-d9514c77da3c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm f_employees_per_month'.actual_termination_date
+	toColumn: LocalDateTable_0a14bc88-7240-4d65-b0ed-b0ac2e14d3fe.Date
+
+relationship 55778897-9741-4154-af5b-a6da400afb97
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm d_employees_new'.hire_date
+	toColumn: LocalDateTable_983e7ef1-aa7d-4658-8d7c-b9b134acb25f.Date
+
+relationship e83a898c-0b7c-46c4-9bcd-9eaf7e36667d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm d_employees_new'.sinority_date
+	toColumn: LocalDateTable_2c1381f9-9837-4f09-8541-05741365da9e.Date
+
+relationship 380e0701-4af5-4a7d-9f6d-0e5e0bc1b68f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm d_employees_new'.actual_termination_date
+	toColumn: LocalDateTable_338d2c73-fdba-4fb3-863a-6a9ab250647d.Date
+
+relationship 817a6264-6836-4fd9-ae3b-31ecbc9cead6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm d_employees_new'.date_of_birth
+	toColumn: LocalDateTable_ba2c94e6-5fd4-4091-adfa-c565e79d3256.Date
+
+relationship f6e245b0-c27a-4622-96e5-fc885e4abfe1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm d_employees_new'.transfer_date
+	toColumn: LocalDateTable_86308b0b-e0bb-4967-9d43-6ec9c7e0af03.Date
+
+relationship c246a22d-686a-4b8b-8e0c-9291878c124b
+	fromColumn: 'gdm f_employees_per_month'.month_short
+	toColumn: 'Month dummy'.Month
+
+relationship 6bcc305a-9e1c-4b8e-ae94-2d172162c736
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm f_employees_per_month'.ref_date
+	toColumn: LocalDateTable_55aaa082-8a9e-4de6-ac7a-12581019cf7c.Date
+
+relationship 2ed07ae0-c9c4-43e0-ae7e-bd4a928add67
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm f_employees_per_month'.seniority_date
+	toColumn: LocalDateTable_370368a7-4ec2-47e6-990b-46e402c50e33.Date
+
+relationship 1aa267b1-eded-48bf-904f-e7ffbcd400c2
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'gdm f_employees_per_month'.person_number
+	toColumn: 'gdm w_hr_performance'.person_number
+
+relationship a038e828-ae0a-b512-4ee9-3850b64e4de6
+	toCardinality: many
+	fromColumn: 'gdm f_employees_per_month'.person_number
+	toColumn: 'gdm d_employees_new'.person_number
+
+relationship c5bf3f8a-dc94-42cb-b744-94c50586e39e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Milestone.'Due Date '
+	toColumn: LocalDateTable_2b25c9b3-f261-428b-b429-fae458284db6.Date
+
+relationship 97149ee8-cf69-46e7-80ac-22d401b84a35
+	fromColumn: 'Project Performance'.Month
+	toColumn: 'Month dummy'.Month
+
+relationship 534ab9fc-3541-4acd-9f6f-76adfc2cc306
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Overview of project'.'Start Date '
+	toColumn: LocalDateTable_004c57d8-722e-4755-8f52-8b57400bd1b1.Date
+
+relationship 40b19b62-8ecf-499a-ac86-f5842bd063fc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Overview of project'.'End Date'
+	toColumn: LocalDateTable_cf7d234d-d257-4bc0-91b9-8068a4f4381e.Date
+
+relationship b3e49c94-adb7-4e4a-b325-a57952242bb6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Overview of project'.'Kickoff Date '
+	toColumn: LocalDateTable_6cd4290d-ef41-4363-a3a7-e53d4366877b.Date
+
+relationship 6d769d2a-3d15-46ce-8fcb-788de07674cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gdm f_employees_per_month'.date_of_birth
+	toColumn: LocalDateTable_a145495f-b4b1-4dbe-9c5b-bead1a939af5.Date
+
+relationship 871fbfac-7d5e-fd75-d86e-49176e51f1b4
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Summary.'Project Code '
+	toColumn: 'Overview of project'.'Project Code '
+
+relationship 7eea04f4-ab37-be94-ceeb-555edaea85ba
+	fromColumn: Milestone.'Project Code '
+	toColumn: 'Overview of project'.'Project Code '
+
+relationship 3be4797f-e93e-2f1f-5844-919612348526
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Project Performance'.'Project Code '
+	toColumn: 'Overview of project'.'Project Code '
+

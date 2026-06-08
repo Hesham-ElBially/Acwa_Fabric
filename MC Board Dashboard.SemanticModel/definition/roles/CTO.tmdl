@@ -1,0 +1,11 @@
+role CTO
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "CTO"
+
+	tablePermission 'public employees (2)' = [bu_fu] = "CTO"
+
+	tablePermission 'public employees_per_year' = [bu_fu] = "CTO"
+
+	annotation PBI_Id = 782a051763e04cda9f9b7e799a5a9cac
+

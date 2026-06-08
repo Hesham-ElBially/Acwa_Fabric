@@ -1,0 +1,7 @@
+role 'Geography KSA'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Geography KSA"
+
+	annotation PBI_Id = 4b11316736ea49b393e1a64767a1baf7
+

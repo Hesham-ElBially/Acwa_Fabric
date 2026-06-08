@@ -1,0 +1,59 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Errors in queries that were loaded on 1/8/2025 10:29:33 AM.
+queryGroup 'Query Errors - 1/8/2025 10:29:33 AM'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["Employee List Including Inactive","Errors in Employee List Including Inactive"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.131.901.0 (24.07)
+
+ref table 'Employee List Including Inactive'
+ref table DateTableTemplate_91ada7d4-de57-4dcb-ac2e-a4cb7b0f0bcf
+ref table Calendar
+ref table LocalDateTable_6465eed5-4bc2-42ab-a94c-99c8d4c9c71d
+ref table LocalDateTable_8622c2a1-f3ab-4c45-98d5-c6386b6a3298
+ref table LocalDateTable_4fd2075d-c7d0-4840-83d3-60f3054d1440
+ref table LocalDateTable_9c6fca44-8e21-4c51-8cc1-0eb979ccd261
+ref table LocalDateTable_5f8ab98f-4e95-4959-b20a-8ccdd57d9092
+ref table LocalDateTable_73ab7b3f-18d3-4c9d-96eb-8cabd1ac0c29
+ref table LocalDateTable_a644a5b1-3578-4b98-a9da-3d7ee6c12225
+
+ref role EF
+ref role EF1-Ali
+ref role EF2-M
+ref role KSA
+ref role O&M
+ref role BD
+ref role Finance
+ref role Legal
+ref role 'Investment and Business Development'
+ref role 'Corporate Affairs & Sustainability'
+ref role Technical
+ref role 'Executive Office'
+ref role 'Vice Chairman''s Office'
+ref role Construction
+ref role 'Risk Management'
+ref role Operations
+ref role 'Geography KSA'
+ref role 'Portfolio Management'
+ref role 'Internal Audit'
+ref role Procurement
+ref role H
+ref role D
+ref role Fahad
+ref role 'Geography Central Asia'
+ref role 'Geography MEASEA'
+ref role 'Geography China'
+
+ref cultureInfo en-US
+

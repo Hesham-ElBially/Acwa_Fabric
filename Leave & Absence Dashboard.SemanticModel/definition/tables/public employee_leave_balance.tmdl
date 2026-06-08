@@ -1,0 +1,116 @@
+table 'public employee_leave_balance'
+	lineageTag: 919c78d9-0b49-4b25-a334-8ee5983d297f
+
+	column ori
+		dataType: string
+		lineageTag: 489317ef-ec36-4e6c-8be7-775e37dac101
+		summarizeBy: none
+		sourceColumn: ori
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_date
+		dataType: string
+		lineageTag: d72a91cf-b846-48ed-8f3f-5e6e53a6480a
+		summarizeBy: none
+		sourceColumn: group_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_number
+		dataType: string
+		lineageTag: 29659234-f312-48f9-b77d-68bbdde35ac7
+		summarizeBy: none
+		sourceColumn: person_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column adjustment
+		dataType: double
+		lineageTag: e6def0bc-a12c-4215-8ea3-67f627406149
+		summarizeBy: sum
+		sourceColumn: adjustment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column monthly_increment
+		dataType: double
+		lineageTag: ecb7b317-3d7b-4ae3-b731-72d5bdb48b18
+		summarizeBy: sum
+		sourceColumn: monthly_increment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column absences
+		dataType: double
+		lineageTag: c27b1791-4806-424e-852a-34f32f3d82d0
+		summarizeBy: sum
+		sourceColumn: absences
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column init_month
+		dataType: double
+		lineageTag: dc3d6696-5b58-4b65-8e1e-759c611bd9f1
+		summarizeBy: sum
+		sourceColumn: init_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column end_month_balance
+		dataType: int64
+		lineageTag: 07f4d738-8d61-4b15-9e66-a474786de9a3
+		summarizeBy: sum
+		sourceColumn: end_month_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column month_balance
+		dataType: double
+		lineageTag: e11252e4-17b6-41a2-85bd-6331c4e02634
+		summarizeBy: sum
+		sourceColumn: month_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column month_end_day
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3f6af584-a2bd-4b81-abba-749949773804
+		summarizeBy: none
+		sourceColumn: month_end_day
+
+		variation Variation
+			isDefault
+			relationship: 97d20074-a480-4894-beea-05c85d8cbd5f
+			defaultHierarchy: LocalDateTable_740a0187-6e84-4772-95bb-7bc4beb77249.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'public employee_leave_balance-bab2b554-b13d-487d-8f53-a28def5b7365' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("acwa-uaen-pdb01.postgres.database.azure.com", "data_centralized"),
+				    public_employee_leave_balance = Source{[Schema="public",Item="employee_leave_balance"]}[Data]
+				in
+				    public_employee_leave_balance
+
+	annotation PBI_ResultType = Table
+

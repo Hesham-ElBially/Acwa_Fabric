@@ -1,0 +1,7 @@
+role BD
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Investment and Business Development"
+
+	annotation PBI_Id = 8b985976831d42828742945e29bc951d
+

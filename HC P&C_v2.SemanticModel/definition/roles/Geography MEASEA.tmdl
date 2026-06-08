@@ -1,0 +1,7 @@
+role 'Geography MEASEA'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Geography MEASEA" || [GEO Name] == "MEASEA"
+
+	annotation PBI_Id = 284f7824b2d74a99ac53f8a29255ccdc
+

@@ -1,0 +1,11 @@
+role CPMO
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "CPMO"
+
+	tablePermission 'public employees (2)' = [bu_fu] = "CPMO"
+
+	tablePermission 'public employees_per_year' = [bu_fu] = "CPMO"
+
+	annotation PBI_Id = 0c892983e83843deb290148a035b8b25
+

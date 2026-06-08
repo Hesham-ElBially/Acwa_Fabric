@@ -1,0 +1,7 @@
+role 'Vice Chairman''s Office'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Vice Chairman's Office"
+
+	annotation PBI_Id = f081e708621e4827be0ecc000e39e2d5
+

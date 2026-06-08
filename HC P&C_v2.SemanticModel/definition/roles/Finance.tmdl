@@ -1,0 +1,7 @@
+role Finance
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Finance"
+
+	annotation PBI_Id = 1c2f94ad46ea4a4aa54aef1b0ff00568
+

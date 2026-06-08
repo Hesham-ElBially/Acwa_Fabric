@@ -1,0 +1,7 @@
+role D
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Digital"
+
+	annotation PBI_Id = b1454d0ad08f4110876ad6356f2502af
+

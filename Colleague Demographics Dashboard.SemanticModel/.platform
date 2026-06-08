@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Colleague Demographics Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d2e39db5-b0e3-a996-44ef-be0779e27b07"
+  }
+}

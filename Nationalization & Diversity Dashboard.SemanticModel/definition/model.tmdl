@@ -1,0 +1,36 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBIDesktopVersion = 2.111.590.0 (22.11)
+
+annotation PBI_QueryOrder = ["public employees_per_month","public employees","Worker type sort","public employees_per_year","Sort by Function"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+ref table 'public employees'
+ref table DateTableTemplate_a74eb9d6-a10a-4b69-ae88-21a3ee142841
+ref table LocalDateTable_2e3af9f5-1dd3-4db1-8455-7730955ba68f
+ref table LocalDateTable_3abb6899-f6b1-4bee-8879-bccd5d17f4b9
+ref table LocalDateTable_7b7c3999-d540-4dbf-a8cb-e94dc9fea579
+ref table LocalDateTable_7c6994ce-6445-4fe6-a90a-3e66168c2700
+ref table LocalDateTable_ff9b0ce7-175d-41b1-a708-100145e5fd78
+ref table 'public employees_per_month'
+ref table LocalDateTable_0e587a0f-6f59-4d70-b2b3-d7e822fde292
+ref table Year
+ref table 'Worker type sort'
+ref table 'public employees_per_year'
+ref table 'Sort by Function'
+ref table LocalDateTable_07918cec-cf23-4345-a38e-683ba65d2f29
+ref table LocalDateTable_816fae9a-a19f-441b-828a-d06356e296f6
+
+ref role ACWA
+ref role NOMAC
+ref role ALL
+
+ref cultureInfo en-US
+

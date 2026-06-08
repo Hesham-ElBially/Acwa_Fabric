@@ -1,0 +1,7 @@
+role EF1-Ali
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Technical" || [Name] == "Internal Audit" || [Name] == "Heath, Safety, Security & Environment" || [Name] == "Risk Management" || [Name] == "People & Culture"
+
+	annotation PBI_Id = 6f06f2a17de14aef977d04745bdd143f
+

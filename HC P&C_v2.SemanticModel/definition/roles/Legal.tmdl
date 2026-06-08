@@ -1,0 +1,7 @@
+role Legal
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Legal"
+
+	annotation PBI_Id = c1af0aaa39044fb19b3f858a1272535d
+

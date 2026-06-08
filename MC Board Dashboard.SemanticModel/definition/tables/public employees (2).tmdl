@@ -1,0 +1,978 @@
+table 'public employees (2)'
+	lineageTag: 210f71af-4eac-4a96-b191-4bc939cc137a
+
+	column person_number
+		dataType: string
+		lineageTag: 2f21dff0-5ed2-41cd-8176-4df4b8dfe3c0
+		summarizeBy: none
+		sourceColumn: person_number
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = person_number
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column manager_number
+		dataType: string
+		lineageTag: f8506ce3-4d83-4894-8be2-7c72ea300512
+		summarizeBy: none
+		sourceColumn: manager_number
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = manager_number
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column legal_employer
+		dataType: string
+		lineageTag: 1e0c91fc-687c-4bed-8e78-abbfeb07f284
+		summarizeBy: none
+		sourceColumn: legal_employer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = legal_employer
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column location
+		dataType: string
+		lineageTag: 7d3ae740-ce45-422b-801d-5a51c71c9a8c
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = location
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column bu_fu
+		dataType: string
+		lineageTag: 52f96ed3-6005-40da-8ce6-8d639bb838ff
+		summarizeBy: none
+		sourceColumn: bu_fu
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = bu_fu
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column position
+		dataType: string
+		lineageTag: 86fae929-1aab-4a33-9510-f21253a6a502
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = position
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column display_name
+		dataType: string
+		lineageTag: faba02ef-0fae-4dd1-a2a8-06d449266d8b
+		summarizeBy: none
+		sourceColumn: display_name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = display_name
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column department
+		dataType: string
+		lineageTag: ba749d73-5a82-4c63-b686-c3f9bc676bb1
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = department
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column department_cost_centre
+		dataType: string
+		lineageTag: 84cb0ffb-4b8b-44ff-8310-bff95d0f29d3
+		summarizeBy: none
+		sourceColumn: department_cost_centre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = department_cost_centre
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column job
+		dataType: string
+		lineageTag: 6d03d4d9-3408-45a7-9088-a896cdc42bd6
+		summarizeBy: none
+		sourceColumn: job
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = job
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column manager_name
+		dataType: string
+		lineageTag: 809297f1-7026-4d55-a4cf-2623e9752a51
+		summarizeBy: none
+		sourceColumn: manager_name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = manager_name
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column sex
+		dataType: string
+		lineageTag: 60a8447a-9b77-431a-bcdd-736353b2cfc4
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = sex
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column marital_status
+		dataType: string
+		lineageTag: 391de5a7-be0a-42fb-b562-d65501355660
+		summarizeBy: none
+		sourceColumn: marital_status
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = marital_status
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column leaving_type
+		dataType: string
+		lineageTag: 23bbdd53-b4d6-4413-9ab2-29fd087cdb62
+		summarizeBy: none
+		sourceColumn: leaving_type
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = leaving_type
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column year_of_hire
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c9861f0-6d75-4e7e-aeee-3bd410aa4a9d
+		summarizeBy: sum
+		sourceColumn: year_of_hire
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation PBI_NameAtRefresh = year_of_hire
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column month_of_hire
+		dataType: int64
+		formatString: 0
+		lineageTag: 4949604d-23ac-4705-a36a-f762b16f61a9
+		summarizeBy: sum
+		sourceColumn: month_of_hire
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation PBI_NameAtRefresh = month_of_hire
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column year_of_leaving
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c23aa80-fa5a-4846-9f26-44e071cbd90a
+		summarizeBy: sum
+		sourceColumn: year_of_leaving
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation PBI_NameAtRefresh = year_of_leaving
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column month_of_leaving
+		dataType: int64
+		formatString: 0
+		lineageTag: 7915f0a2-1a39-40c4-ae62-f9f0b4b7197d
+		summarizeBy: sum
+		sourceColumn: month_of_leaving
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation PBI_NameAtRefresh = month_of_leaving
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column los
+		dataType: double
+		lineageTag: c605d2e7-8215-48cf-b4aa-d0445c8d966d
+		summarizeBy: sum
+		sourceColumn: los
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="General" />
+
+		annotation DataTypeAtRefresh = Double#####not a type
+
+		annotation PBI_NameAtRefresh = los
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: cf6c8d5e-1e5d-4497-9c56-1cd00e4ec769
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation PBI_NameAtRefresh = age
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column age_band
+		dataType: string
+		lineageTag: 62bffd5c-09ba-4c46-b7a1-9bb2d95f19e7
+		summarizeBy: none
+		sourceColumn: age_band
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = age_band
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column tenure
+		dataType: string
+		lineageTag: 8dde3ce9-c2b1-458e-b294-7edfc81316e2
+		summarizeBy: none
+		sourceColumn: tenure
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = tenure
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column hire_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 82f94750-1604-4859-b0be-8781d8cf17f3
+		summarizeBy: none
+		sourceColumn: hire_date
+
+		variation Variación
+			isDefault
+			relationship: 6b2ad348-d64c-4c5f-ad85-2353a2816861
+			defaultHierarchy: LocalDateTable_5edd543c-01cd-485d-9ef8-440451f43417.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="3082" Group="LongDate" FormatString="D" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation PBI_NameAtRefresh = hire_date
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column sinority_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f4f8069e-1291-4954-9b2e-a46d382626e3
+		summarizeBy: none
+		sourceColumn: sinority_date
+
+		variation Variación
+			isDefault
+			relationship: 9f59d97f-e074-4621-af0d-78076a4d3ec6
+			defaultHierarchy: LocalDateTable_cecbd5dc-7f1d-4d52-8cd6-6fdc6d27b479.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="3082" Group="LongDate" FormatString="D" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation PBI_NameAtRefresh = sinority_date
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column actual_termination_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 27871cfb-0842-48df-915b-511e6e9da092
+		summarizeBy: none
+		sourceColumn: actual_termination_date
+
+		variation Variación
+			isDefault
+			relationship: 2863940d-d549-45e8-8a97-a9a99dac203f
+			defaultHierarchy: LocalDateTable_b5064206-565c-4c33-81f4-a26b829e5d97.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="3082" Group="LongDate" FormatString="D" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation PBI_NameAtRefresh = actual_termination_date
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column date_of_birth
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 331bc909-79a7-4c9b-8c33-9e1524514787
+		summarizeBy: none
+		sourceColumn: date_of_birth
+
+		variation Variación
+			isDefault
+			relationship: 57f6e300-8d47-4e91-ba0f-6ff62dff5df3
+			defaultHierarchy: LocalDateTable_954840d9-b301-4ff5-a101-06dc5995f2b8.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="3082" Group="LongDate" FormatString="D" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation PBI_NameAtRefresh = date_of_birth
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column ori
+		dataType: string
+		lineageTag: 92c171b7-a161-4e96-bbbb-446f6d1934ec
+		summarizeBy: none
+		sourceColumn: ori
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = ori
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column grade
+		dataType: string
+		lineageTag: f64ae024-d1af-41c7-b6dc-797e50144283
+		summarizeBy: none
+		sourceColumn: grade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = grade
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column country_name
+		dataType: string
+		lineageTag: 1de43b1d-ed38-4c9b-a661-d3db434c0108
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = country_name
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column company_type
+		dataType: string
+		lineageTag: de53adc0-ec36-4d39-958a-48acca87cbf5
+		summarizeBy: none
+		sourceColumn: company_type
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = company_type
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column parent_entity
+		dataType: string
+		lineageTag: af7772d4-ae32-4ce5-ad87-e6e233fcd6b1
+		summarizeBy: none
+		sourceColumn: parent_entity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = parent_entity
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column overtime_hours
+		dataType: double
+		lineageTag: 17676d42-d1a9-4087-bf05-5cf17d37075d
+		summarizeBy: sum
+		sourceColumn: overtime_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="General" />
+
+		annotation DataTypeAtRefresh = Double#####not a type
+
+		annotation PBI_NameAtRefresh = overtime_hours
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column absence_days
+		dataType: double
+		lineageTag: 4b6f6f68-c28c-47e0-b3e3-8f46e0a3b6c8
+		summarizeBy: sum
+		sourceColumn: absence_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="General" />
+
+		annotation DataTypeAtRefresh = Double#####not a type
+
+		annotation PBI_NameAtRefresh = absence_days
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column annual_leave_balance
+		dataType: double
+		lineageTag: 21b64211-dd09-4b5a-ad47-eb9ce0d8447c
+		summarizeBy: sum
+		sourceColumn: annual_leave_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="General" />
+
+		annotation DataTypeAtRefresh = Double#####not a type
+
+		annotation PBI_NameAtRefresh = annual_leave_balance
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column bank_leave_balance
+		dataType: double
+		lineageTag: 5774d893-9c7f-4fa6-9129-47dd0bc40e83
+		summarizeBy: sum
+		sourceColumn: bank_leave_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="General" />
+
+		annotation DataTypeAtRefresh = Double#####not a type
+
+		annotation PBI_NameAtRefresh = bank_leave_balance
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column nationalisation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3d228aab-e7fb-4100-baf0-96ec8144f1e9
+		summarizeBy: none
+		sourceColumn: nationalisation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Boolean" />
+
+		annotation DataTypeAtRefresh = Boolean#####not a type
+
+		annotation PBI_NameAtRefresh = nationalisation
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column colleague_type
+		dataType: string
+		lineageTag: c3b85019-7ae3-4627-b44b-0b4391861bf2
+		summarizeBy: none
+		sourceColumn: colleague_type
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = colleague_type
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column department_head
+		dataType: string
+		lineageTag: f400d9ce-823e-4696-9cff-540e2e2d4563
+		summarizeBy: none
+		sourceColumn: department_head
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = department_head
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column function_head
+		dataType: string
+		lineageTag: 9199bd61-e67f-4700-83e3-09804eb6592e
+		summarizeBy: none
+		sourceColumn: function_head
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = function_head
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column hrbp
+		dataType: string
+		lineageTag: 96385846-f4db-4895-b3a3-79c1397cd701
+		summarizeBy: none
+		sourceColumn: hrbp
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = hrbp
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column nationality_group
+		dataType: string
+		lineageTag: 4b91ca28-9e97-4d89-affe-71b93080e212
+		summarizeBy: none
+		sourceColumn: nationality_group
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = nationality_group
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column mc_member
+		dataType: string
+		lineageTag: 21fc1cd1-d79a-4c15-9a9b-19fa0766ad8c
+		summarizeBy: none
+		sourceColumn: mc_member
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = mc_member
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column contract_type
+		dataType: string
+		lineageTag: 1f5fdf87-f5c0-4c34-b3fd-8b1bba4eaaeb
+		summarizeBy: none
+		sourceColumn: contract_type
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = contract_type
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column los_band
+		dataType: string
+		lineageTag: 43fa519e-0a50-4e3a-af63-a4e9dad86248
+		summarizeBy: none
+		sourceColumn: los_band
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = los_band
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column new_hire_type
+		dataType: string
+		lineageTag: 03464b7e-082b-438d-97f4-5bc94b10e40e
+		summarizeBy: none
+		sourceColumn: new_hire_type
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = new_hire_type
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column reporting_matrix
+		dataType: string
+		lineageTag: 67cec617-1879-43bf-98be-7c255a17d450
+		summarizeBy: none
+		sourceColumn: reporting_matrix
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = reporting_matrix
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column saudisation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0ce98950-b744-426a-a170-079ae912b44d
+		summarizeBy: none
+		sourceColumn: saudisation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Boolean" />
+
+		annotation DataTypeAtRefresh = Boolean#####not a type
+
+		annotation PBI_NameAtRefresh = saudisation
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column leaving_reason
+		dataType: string
+		lineageTag: ddffbcd1-1d2e-4319-bdf5-cd6fce9c6251
+		summarizeBy: none
+		sourceColumn: leaving_reason
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = leaving_reason
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column nationality
+		dataType: string
+		lineageTag: 5c40c692-eaaa-444e-b5ce-23ec870a54b0
+		summarizeBy: none
+		sourceColumn: nationality
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = nationality
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column worker_type
+		dataType: string
+		lineageTag: 5381d565-0b12-4539-9921-39a320347c99
+		summarizeBy: none
+		sourceColumn: worker_type
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = worker_type
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column transfer
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c26e7606-4bac-4ace-b061-2bada3a3463e
+		summarizeBy: none
+		sourceColumn: transfer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Boolean" />
+
+		annotation DataTypeAtRefresh = Boolean#####not a type
+
+		annotation PBI_NameAtRefresh = transfer
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column leaving_type_visualization
+		dataType: string
+		lineageTag: eb2f3287-8b89-4e9f-a427-83396402f8b6
+		summarizeBy: none
+		sourceColumn: leaving_type_visualization
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = leaving_type_visualization
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column management_level
+		dataType: string
+		lineageTag: f8c50aa5-8b37-4e92-9b9c-b6b32e21c754
+		summarizeBy: none
+		sourceColumn: management_level
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = management_level
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column transfer_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 921e6d7a-552b-47f6-983d-2cff0e03f3c4
+		summarizeBy: none
+		sourceColumn: transfer_date
+
+		variation Variación
+			isDefault
+			relationship: c5b60726-90d5-4a72-b1cb-8987350bf9d9
+			defaultHierarchy: LocalDateTable_7c1554dd-35b7-4eef-8cb1-a6d868607ac3.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="3082" Group="LongDate" FormatString="D" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation PBI_NameAtRefresh = transfer_date
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column is_corporate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5675635d-800e-43b1-ada8-18b562c1845f
+		summarizeBy: none
+		sourceColumn: is_corporate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Boolean" />
+
+		annotation DataTypeAtRefresh = Boolean#####not a type
+
+		annotation PBI_NameAtRefresh = is_corporate
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column int_ext
+		dataType: string
+		lineageTag: a3ff0c73-2428-469f-9bda-4e5b0891254b
+		summarizeBy: none
+		sourceColumn: int_ext
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = int_ext
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column gen_band
+		dataType: string
+		lineageTag: 1860a7cd-f23d-4d0f-9adc-02b969e1db97
+		summarizeBy: none
+		sourceColumn: gen_band
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation PBI_NameAtRefresh = gen_band
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	partition 'public employees (2)-e2819701-dcb7-456f-a78c-026755ba2c6e' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("acwa-uaen-pdb01.postgres.database.azure.com", "data_centralized"),
+				    public_employees = Origen{[Schema="public",Item="employees"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(public_employees,{{"sex", "sex"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_DescriptionAtRefresh
+
+	annotation PBI_ResultType = Table
+

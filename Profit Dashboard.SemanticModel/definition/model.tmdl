@@ -1,0 +1,59 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Errors in queries that were loaded on 22/04/2025 2:55:49 PM.
+queryGroup 'Query Errors - 22/04/2025 2:55:49 PM'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["DirectQuery to AS - Profit","DirectQuery to AS - SAPSF_EC_DataLake","Performance","Errors in Performance","Goal details 2"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.141.1754.0 (25.03)+e4409ed908ce97a5e9747f7dc48da475cf1c71a2
+
+ref table Goals
+ref table 'Goald details'
+ref table 'Review Report DY'
+ref table 'Review Report EY'
+ref table LocalDateTable_e7264bdb-783c-4718-90bb-0fe003fef4db
+ref table LocalDateTable_f3b0ba7f-8a87-4835-8df3-129b540a55e8
+ref table LocalDateTable_7055bee0-6ba9-4a1f-8202-a0c0a9b3b1ef
+ref table LocalDateTable_a7f4fe1a-c004-4335-b987-7d064c58432b
+ref table LocalDateTable_1b39c6d5-89ca-4f56-8b27-d6187562c0b8
+ref table LocalDateTable_ae6b7a76-b668-408e-9970-3e04afd78352
+ref table LocalDateTable_d547f11d-1aec-4688-94e6-77718165e842
+ref table LocalDateTable_9643b706-0335-4a76-a07e-9fcc7e82ce07
+ref table LocalDateTable_2a8f3041-2d64-4a5b-8cf0-42b259874ca5
+ref table LocalDateTable_3e89e8a0-0a18-4493-a104-d740ea5cf6c7
+ref table LocalDateTable_13cd6a93-9871-4a7f-975a-809d3393d8e9
+ref table LocalDateTable_8c323c7e-ffae-4a79-8051-f0eb9d1126ad
+ref table v_g_JobPersonal
+ref table LocalDateTable_05ba4313-7266-4595-bbf1-e58409c474f2
+ref table LocalDateTable_0ff98b55-d4e1-478a-8d00-4b64ddf2b22b
+ref table LocalDateTable_e4d5b204-7515-4935-a146-1c816e4bd061
+ref table LocalDateTable_62f842ef-8946-4696-93b0-8838667932d2
+ref table LocalDateTable_7d13701d-3d88-474c-9811-fb67638a7cda
+ref table LocalDateTable_c3c31b49-fcaa-4de8-bcc2-63449f876296
+ref table LocalDateTable_95436085-bc7b-4a78-94f5-bd58314f34bf
+ref table LocalDateTable_4ae30515-dd63-4bf0-9eab-ab427a544b4e
+ref table LocalDateTable_82e32d25-7c73-4e77-9aa7-3997d8bfbc9a
+ref table LocalDateTable_84c37ea2-6307-41f0-80de-3704cb135ae3
+ref table Performance
+ref table DateTableTemplate_32b73f93-67d7-48d4-ace3-01d5d95a4789
+ref table LocalDateTable_69ac57bd-39f0-4696-86fe-1ad5a9131b41
+ref table LocalDateTable_91a52260-c1c3-4fe9-9899-dbe65bb6e629
+ref table LocalDateTable_c543b814-797c-4364-8502-7e43b8afc01e
+ref table LocalDateTable_d871803f-b0fb-4a23-8a9c-2fa9efa71331
+ref table LocalDateTable_33c5a951-c11f-405a-9632-b8ad77eae5d0
+ref table 'Goal details 2'
+ref table LocalDateTable_2a526db2-a2d6-41a6-ab07-3df1a30361d9
+ref table LocalDateTable_8e879d91-ab15-4468-8440-66c79146c336
+
+ref cultureInfo en-US
+

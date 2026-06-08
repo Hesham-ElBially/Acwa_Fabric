@@ -1,0 +1,69 @@
+relationship b73080d4-2c54-46a5-886f-8c7350e2e6cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.sinority_date
+	toColumn: LocalDateTable_613fe5ac-5ffb-4bb8-9c5d-34e711357cc5.Date
+
+relationship d36f6c77-5d78-4a69-9488-e741b35c3cd4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.actual_termination_date
+	toColumn: LocalDateTable_c3c228ab-f9fe-4951-986f-a2593bf0f479.Date
+
+relationship c496c635-b325-40fe-9689-7881d529e8b6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.date_of_birth
+	toColumn: LocalDateTable_a6d5f4ce-7ee8-4b05-9e7e-cae364d8499a.Date
+
+relationship eca4e072-bbb8-4fa9-8387-21e0d94808e0
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'public employees'.person_number
+	toColumn: 'public employees_per_year'.person_number
+
+relationship b61058e2-2896-4d2c-9fb6-d7b39aa22740
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CALENDAR.Date
+	toColumn: LocalDateTable_7c382cc7-6ccc-4713-91bd-05d0946bac26.Date
+
+relationship 63e1dd87-d70c-4cfe-b9a7-67d3b8ebc3c3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.hire_date
+	toColumn: LocalDateTable_f6fc917c-e889-4cf5-8601-4059595c1bd4.Date
+
+relationship 94d7f2e0-7b14-45ab-8f42-b04fcb85b442
+	fromColumn: 'public employees'.year_of_hire
+	toColumn: Year.Year
+
+relationship efc072f7-9930-4101-9ad5-4bfc50b228d6
+	fromColumn: 'public employees_per_year'.year_date
+	toColumn: 'Year Date'.'Year Date'
+
+relationship 5a85613e-68f2-4701-85bb-68a6092e95f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.transfer_date
+	toColumn: LocalDateTable_63bbe82b-627f-4adf-84b4-297e03683d71.Date
+
+relationship 6b2ad348-d64c-4c5f-ad85-2353a2816861
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees (2)'.hire_date
+	toColumn: LocalDateTable_5edd543c-01cd-485d-9ef8-440451f43417.Date
+
+relationship 9f59d97f-e074-4621-af0d-78076a4d3ec6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees (2)'.sinority_date
+	toColumn: LocalDateTable_cecbd5dc-7f1d-4d52-8cd6-6fdc6d27b479.Date
+
+relationship 2863940d-d549-45e8-8a97-a9a99dac203f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees (2)'.actual_termination_date
+	toColumn: LocalDateTable_b5064206-565c-4c33-81f4-a26b829e5d97.Date
+
+relationship 57f6e300-8d47-4e91-ba0f-6ff62dff5df3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees (2)'.date_of_birth
+	toColumn: LocalDateTable_954840d9-b301-4ff5-a101-06dc5995f2b8.Date
+
+relationship c5b60726-90d5-4a72-b1cb-8987350bf9d9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees (2)'.transfer_date
+	toColumn: LocalDateTable_7c1554dd-35b7-4eef-8cb1-a6d868607ac3.Date
+

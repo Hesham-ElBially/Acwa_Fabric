@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Leave & Absence Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "30d14aef-a61f-8de0-4301-20dc36712fc6"
+  }
+}

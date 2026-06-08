@@ -1,0 +1,7 @@
+role 'Geography China'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Geography China" || [GEO Name] == "China"
+
+	annotation PBI_Id = b9cf0a5a7ed6412b9754121312c120cf
+

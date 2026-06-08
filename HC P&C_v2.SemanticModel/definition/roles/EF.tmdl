@@ -1,0 +1,7 @@
+role EF
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Finance" || [Name] == "Corporate Affairs & Sustainability" || [Name] == "Legal" || [Name] == "Technical" || [Name] == "People & Culture" || [Name] == "Executive Office" || [Name] == "Heath, Safety, Security & Environment" || [Name] == "Vice Chairman's Office" || [Name] == "Risk Management" || [Name] == "Internal Audit"
+
+	annotation PBI_Id = 64391293b9404d9f88fae39fc50dbc77
+

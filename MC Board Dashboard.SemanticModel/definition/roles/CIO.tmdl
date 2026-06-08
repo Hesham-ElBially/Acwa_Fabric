@@ -1,0 +1,17 @@
+role CIO
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "CIO"
+
+	tablePermission 'public employees (2)' = ```
+			[bu_fu] = "CIO"
+			
+			```
+
+	tablePermission 'public employees_per_year' = ```
+			[bu_fu] = "CIO"
+			
+			```
+
+	annotation PBI_Id = 0bc3e83afae8496da3e6ac7fd8f27899
+

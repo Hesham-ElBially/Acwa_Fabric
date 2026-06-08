@@ -1,0 +1,7 @@
+role 'Executive Office'
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Executive Office"
+
+	annotation PBI_Id = 28ec8ed238244a109c3759c91c58862a
+

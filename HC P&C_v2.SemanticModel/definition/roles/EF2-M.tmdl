@@ -1,0 +1,7 @@
+role EF2-M
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Corporate Affairs & Sustainability" || [Name] == "Finance" || [Name] == "Legal"
+
+	annotation PBI_Id = 483cf5d177aa420e8d26ae357979bbd0
+

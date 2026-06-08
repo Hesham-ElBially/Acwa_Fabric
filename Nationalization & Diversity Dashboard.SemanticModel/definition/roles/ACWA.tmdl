@@ -1,0 +1,9 @@
+role ACWA
+	modelPermission: read
+
+	tablePermission 'public employees' = [parent_entity] = "ACWA"
+
+	tablePermission 'public employees_per_month' = [parent_entity] = "ACWA"
+
+	annotation PBI_Id = dfc78f63d0d64c3388afab21edc99081
+

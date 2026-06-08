@@ -1,0 +1,11 @@
+role CPCCO
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "CPCCO"
+
+	tablePermission 'public employees (2)' = [bu_fu] = "CPCCO"
+
+	tablePermission 'public employees_per_year' = [bu_fu] = "CPCCO"
+
+	annotation PBI_Id = eabae44f21c94a819646407be2090b20
+

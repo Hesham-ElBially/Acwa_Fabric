@@ -1,0 +1,11 @@
+role ACWA
+	modelPermission: read
+
+	tablePermission 'public employees' = [parent_entity] = "ACWA" && [bu_fu] <> "CIO" && [bu_fu] <> "CPMO"
+
+	tablePermission 'public employees (2)' = [parent_entity] = "ACWA" && [bu_fu] <> "CIO" && [bu_fu] <> "CPMO"
+
+	tablePermission 'public employees_per_year' = [parent_entity] = "ACWA" && [bu_fu] <> "CIO" && [bu_fu] <> "CPMO"
+
+	annotation PBI_Id = 854553ba39154e6d83ab1a6897ae9726
+

@@ -1,0 +1,63 @@
+relationship c273f091-498c-49aa-89b1-76a226d2135d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.hire_date
+	toColumn: LocalDateTable_4e2508ed-0ba5-4959-a1db-2614a3af8885.Date
+
+relationship 52284cfc-0cbb-4306-b026-a91ad4f943d0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.sinority_date
+	toColumn: LocalDateTable_b0026e0f-ea16-49c6-9af1-e54f990a9287.Date
+
+relationship 190ae643-3340-45a1-a2ab-0ec42ed2747d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.actual_termination_date
+	toColumn: LocalDateTable_c36c9167-d5db-4aa1-9694-bd57bfef49b7.Date
+
+relationship 04125ab5-3571-4e4e-ac88-da4f96480145
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.date_of_birth
+	toColumn: LocalDateTable_5109c60a-093e-43c2-b07f-d5a11b90f918.Date
+
+relationship 49650ca4-1b73-45e9-9716-8ce2ccaf3c27
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employees'.transfer_date
+	toColumn: LocalDateTable_0c26ce3c-d09d-42d8-85f9-eaa77a80fbf2.Date
+
+relationship 97d20074-a480-4894-beea-05c85d8cbd5f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employee_leave_balance'.month_end_day
+	toColumn: LocalDateTable_740a0187-6e84-4772-95bb-7bc4beb77249.Date
+
+relationship dfa282da-d7bb-49f9-91dd-0e9395b00054
+	toCardinality: many
+	fromColumn: 'public employees_per_month'.person_number
+	toColumn: 'public employees'.person_number
+
+relationship a0823a18-c325-4b9a-be67-ef4c25649c97
+	toCardinality: many
+	fromColumn: 'public employee_leave_balance'.person_number
+	toColumn: 'public employees'.person_number
+
+relationship a1079d47-473d-4c8b-979d-ab0a429fd0bc
+	fromColumn: Table.TDA
+	toColumn: TDA.TDA
+
+relationship 8aefbf2e-a407-425b-a50f-1ab73219e368
+	fromColumn: Table.TAP
+	toColumn: TAP.TAP
+
+relationship 5cee60f0-0025-4d70-9487-73d80f21378f
+	toCardinality: many
+	fromColumn: 'public employee_absences'.person_number
+	toColumn: 'public employees'.person_number
+
+relationship 599938aa-1a8e-4d54-aa4b-a77902b98927
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employee_absences'.'Total Absence days - Copy - Copy'
+	toColumn: LocalDateTable_c4194097-caf7-413b-8ab9-5e64b40e7058.Date
+
+relationship aa1f86d7-8fe7-43a7-ae3d-a89ac292a187
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public employee_absences'.'Total Absence days - Copy'
+	toColumn: LocalDateTable_2a9e4b86-65eb-4eb1-bfdd-29d0df1a8547.Date
+

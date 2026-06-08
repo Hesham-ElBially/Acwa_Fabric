@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "HC P&C_v2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bc0bda58-4581-8f64-4957-ea7d14548a00"
+  }
+}

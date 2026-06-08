@@ -1,0 +1,29 @@
+{
+  "version": "2.0.1",
+  "author": {
+    "name": "Microsoft",
+    "email": "pbicvsupport@microsoft.com"
+  },
+  "resources": [
+    {
+      "resourceId": "rId0",
+      "sourceType": 5,
+      "file": "resources/Sunburst1445472000808.pbiviz.json"
+    }
+  ],
+  "visual": {
+    "guid": "Sunburst1445472000808",
+    "name": "Sunburst",
+    "displayName": "Sunburst",
+    "version": "2.0.1",
+    "description": "Sunburst is a multilevel donut chart, used to visualize hierarchical data, depicted by concentric circles.",
+    "supportUrl": "https://community.powerbi.com",
+    "gitHubUrl": "https://github.com/Microsoft/powerbi-visuals-sunburst",
+    "visualClassName": "Sunburst"
+  },
+  "metadata": {
+    "pbivizjson": {
+      "resourceId": "rId0"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+table Year
+	lineageTag: d8222980-270f-496d-88de-52fc3d822421
+
+	measure 'Year Value' = ```
+			SELECTEDVALUE('Year'[Year], 2021) 
+			```
+		formatString: 0
+		lineageTag: 31830063-ad7e-474e-8b0d-de9d555f7d4a
+
+	column Year
+		formatString: 0
+		lineageTag: 65f5424f-8e2d-4097-b2a1-b464dcfaa246
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = User
+
+	partition Year-d6ae6672-6bc0-4a1e-b0e7-86ac68e13940 = calculated
+		mode: import
+		source = GENERATESERIES(2000, 2025, 1)
+
+	annotation PBI_Id = 1bbf0e20a1514d6db4060465d7eac55e
+

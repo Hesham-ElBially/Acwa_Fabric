@@ -1,0 +1,31 @@
+table 'Worker type sort'
+	lineageTag: 242b9a8e-eeb1-432c-9765-b1fe75250026
+
+	column 'Woker type '
+		dataType: string
+		lineageTag: 9828f7cd-6027-4b56-9266-5ac6764cf532
+		summarizeBy: none
+		sourceColumn: "Woker type "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Woker type sort'
+		dataType: int64
+		formatString: 0
+		lineageTag: fe41d927-946d-49b7-959a-64a3fe64e053
+		summarizeBy: none
+		sourceColumn: Woker type sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Worker type sort-1946c623-b0ee-4071-83c6-a7cae72330eb' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8lMoyVfw0zVW0lEyVIrViVbyT0vLTE5VCC5JTEsDChqBBQPcffVdff2BfGMw3y0zNScFrsZEKTYWAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Woker type " = _t, #"Woker type sort" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Woker type ", type text}, {"Woker type sort", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

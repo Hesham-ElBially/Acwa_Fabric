@@ -1,0 +1,7 @@
+role Operations
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Operations"
+
+	annotation PBI_Id = f46765d7e3154a9e949956b5ec7c8655
+

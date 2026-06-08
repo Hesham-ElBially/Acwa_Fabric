@@ -1,0 +1,831 @@
+table 'public employees'
+	lineageTag: 24f4bf09-498d-4412-b71c-09c2c7ccfb68
+
+	measure 'Saudization rate' = SUM('public employees'[KSA])/((SUM('public employees'[KSA]) + SUM('public employees'[Non KSA])))
+		lineageTag: d1987e09-88fd-4e9c-b615-04afcd2a7562
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KSA ratio' = SUM('public employees'[KSA])/((SUM('public employees'[KSA]) + SUM('public employees'[Non KSA])))
+		lineageTag: 0f1eb672-74c5-42a8-b369-c43d2ca75ffd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Non KSA ratio' = SUM('public employees'[Non KSA])/((SUM('public employees'[KSA]) + SUM('public employees'[Non KSA])))
+		lineageTag: 5fe2e910-be40-4059-9c1a-b670f81e4072
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Person %' =
+			
+			VAR base = COUNTROWS(ALLSELECTED('public employees'))
+			VAR selected = COUNTROWS('public employees')
+			return selected/base * 100
+		lineageTag: 44145337-064f-48bc-9c2f-09ec80ce9cdb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nats.rate' = SUM('public employees'[Nationals])/((SUM('public employees'[Nationals]) + SUM('public employees'[Expats])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f5f6a097-e019-43fa-8b81-fdbf64f6c4db
+
+	measure 'Expats.rate' = SUM('public employees'[Expats])/((SUM ('public employees'[Nationals]) + SUM('public employees'[Expats])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: e9585766-d176-44cc-ac4e-0bc16df9de3b
+
+	measure 'Male rate' = SUM('public employees'[Male])/((SUM ('public employees'[Male]) + SUM('public employees'[Female])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 38485ec6-aaa4-4bb9-90d7-dbd270813126
+
+	measure 'Female rate' = SUM('public employees'[Female])/((SUM ('public employees'[Male]) + SUM('public employees'[Female])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 80ae4cc3-3d9c-4aa8-98f6-1e2e0371d291
+
+	column person_number
+		dataType: string
+		lineageTag: 182b1ca3-d2b0-45e1-a6ba-985c71ca60ac
+		summarizeBy: none
+		sourceColumn: person_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_number
+		dataType: string
+		lineageTag: d1fdf5ee-6d28-436b-a0df-d99485326378
+		summarizeBy: none
+		sourceColumn: manager_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_employer
+		dataType: string
+		lineageTag: 7c031310-c17f-4004-b820-035abe393e0d
+		summarizeBy: none
+		sourceColumn: legal_employer
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 5cc57cda-b59a-4b06-a4fc-5f29095d9749
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column bu_fu
+		dataType: string
+		lineageTag: 14925f2c-fb6f-4800-aeaf-2701423ef8b9
+		summarizeBy: none
+		sourceColumn: bu_fu
+		sortByColumn: SortbyFunction_Rltd
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: string
+		lineageTag: 38a0a1e6-6943-48d6-b786-c4b64d98bd0a
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column display_name
+		dataType: string
+		lineageTag: cea8386b-dc5a-4ce4-88f2-1625279ae9ff
+		summarizeBy: none
+		sourceColumn: display_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: 1cacf4ba-6ff6-4c12-b504-4d0664a8acba
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_cost_centre
+		dataType: string
+		lineageTag: 57ae3a38-8eff-475b-b286-d449bce59373
+		summarizeBy: none
+		sourceColumn: department_cost_centre
+
+		annotation SummarizationSetBy = Automatic
+
+	column job
+		dataType: string
+		lineageTag: dd664a6f-080e-49f0-be6f-c3ebfaf01867
+		summarizeBy: none
+		sourceColumn: job
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_name
+		dataType: string
+		lineageTag: ce3bbad5-29b4-447e-a5e3-672649fd36d5
+		summarizeBy: none
+		sourceColumn: manager_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column sex
+		dataType: string
+		lineageTag: 47739a6d-244d-4976-a7b4-67195a7099fc
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column marital_status
+		dataType: string
+		lineageTag: 686a4552-0107-4d07-8240-6f6282f0f864
+		summarizeBy: none
+		sourceColumn: marital_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column leaving_type
+		dataType: string
+		lineageTag: 168b2afd-4011-4033-a7bb-3b06d11763ee
+		summarizeBy: none
+		sourceColumn: leaving_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_of_hire
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f40fcf6-00aa-4275-bd77-ac8729e24cf4
+		summarizeBy: none
+		sourceColumn: year_of_hire
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_of_hire
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d0e1780-b38e-439b-86bb-62888b826fc9
+		summarizeBy: sum
+		sourceColumn: month_of_hire
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_of_leaving
+		dataType: int64
+		formatString: 0
+		lineageTag: c61f454e-cf42-4241-add9-3d7263310fc1
+		summarizeBy: sum
+		sourceColumn: year_of_leaving
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_of_leaving
+		dataType: int64
+		formatString: 0
+		lineageTag: 01cd94b9-eeb4-4181-8227-3cd920bfa05c
+		summarizeBy: sum
+		sourceColumn: month_of_leaving
+
+		annotation SummarizationSetBy = Automatic
+
+	column los
+		dataType: double
+		lineageTag: 6b2b6d9e-93df-4c32-9a9a-ce497deee479
+		summarizeBy: sum
+		sourceColumn: los
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: b81608bf-f042-4f04-baef-6c23aaadaffa
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_band
+		dataType: string
+		lineageTag: ee3ee392-0a14-4d7f-9409-ced8c3d5acc2
+		summarizeBy: none
+		sourceColumn: age_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure
+		dataType: string
+		lineageTag: b2cce0fb-b0b5-4d36-b1e0-233a0398ef12
+		summarizeBy: none
+		sourceColumn: tenure
+
+		annotation SummarizationSetBy = Automatic
+
+	column hire_date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c9ad7232-eff8-452e-95a2-b3e210637885
+		summarizeBy: none
+		sourceColumn: hire_date
+
+		variation Variation
+			isDefault
+			relationship: e92c617f-5706-430e-8e1e-c41e1cb57034
+			defaultHierarchy: LocalDateTable_2e3af9f5-1dd3-4db1-8455-7730955ba68f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column sinority_date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 405eba1c-be6a-432c-82de-e8fe741eb8e6
+		summarizeBy: none
+		sourceColumn: sinority_date
+
+		variation Variation
+			isDefault
+			relationship: a807ac33-5452-48b3-87ac-5ae1ff414520
+			defaultHierarchy: LocalDateTable_3abb6899-f6b1-4bee-8879-bccd5d17f4b9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column actual_termination_date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c93d5a53-f34b-4666-8b89-229269ab75a9
+		summarizeBy: none
+		sourceColumn: actual_termination_date
+
+		variation Variation
+			isDefault
+			relationship: 0b013947-bd92-4292-89f9-5cfe1e378caf
+			defaultHierarchy: LocalDateTable_7b7c3999-d540-4dbf-a8cb-e94dc9fea579.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column date_of_birth
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 57beb561-e1dd-43af-b4d1-2a66634e5dea
+		summarizeBy: none
+		sourceColumn: date_of_birth
+
+		variation Variation
+			isDefault
+			relationship: 4ed70b82-fbcb-4398-aa3b-1ffacd4bcb2e
+			defaultHierarchy: LocalDateTable_7c6994ce-6445-4fe6-a90a-3e66168c2700.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ori
+		dataType: string
+		lineageTag: 2115d4d4-275e-4ffb-9e0f-61f3a5412351
+		summarizeBy: none
+		sourceColumn: ori
+
+		annotation SummarizationSetBy = Automatic
+
+	column grade
+		dataType: string
+		lineageTag: 2dc23b80-724f-4ddd-899f-b59a429edfa0
+		summarizeBy: none
+		sourceColumn: grade
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: bbe68ecf-1797-4561-a2e6-79136c184064
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_type
+		dataType: string
+		lineageTag: 716fb9c9-27ec-446f-b7a3-77f97019a1e1
+		summarizeBy: none
+		sourceColumn: company_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_entity
+		dataType: string
+		lineageTag: 3359d8a6-c0f1-4d1d-98db-9e3a2295a01b
+		summarizeBy: none
+		sourceColumn: parent_entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column overtime_hours
+		dataType: double
+		lineageTag: d6d5c790-d789-42e1-be3c-4bb31af5854b
+		summarizeBy: sum
+		sourceColumn: overtime_hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column absence_days
+		dataType: double
+		lineageTag: f6e20f16-a132-42cd-a98c-2f5aae1687fd
+		summarizeBy: none
+		sourceColumn: absence_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column annual_leave_balance
+		dataType: double
+		lineageTag: 3752c016-935a-4aeb-a413-529bf6a2982e
+		summarizeBy: sum
+		sourceColumn: annual_leave_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bank_leave_balance
+		dataType: double
+		lineageTag: aee5f4c8-11b3-46fc-9db8-b8d6b56a4875
+		summarizeBy: sum
+		sourceColumn: bank_leave_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nationalisation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 94f8f60d-4e54-4d3d-b723-42970640e743
+		summarizeBy: none
+		sourceColumn: nationalisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column colleague_type
+		dataType: string
+		lineageTag: 677e5a0d-0920-43a4-9fb6-9cc45f573cc2
+		summarizeBy: none
+		sourceColumn: colleague_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_head
+		dataType: string
+		lineageTag: 6a9ad84e-f19a-413b-9792-a76842a4411d
+		summarizeBy: none
+		sourceColumn: department_head
+
+		annotation SummarizationSetBy = Automatic
+
+	column function_head
+		dataType: string
+		lineageTag: 2f777435-6574-466f-a3f0-c60958bb5f1a
+		summarizeBy: none
+		sourceColumn: function_head
+
+		annotation SummarizationSetBy = Automatic
+
+	column hrbp
+		dataType: string
+		lineageTag: 2782cc30-829c-4ad5-8c41-22bdb837e59e
+		summarizeBy: none
+		sourceColumn: hrbp
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality_group
+		dataType: string
+		lineageTag: 8e26d8ee-54f8-4d3c-8e29-f8b3cacd1f1e
+		summarizeBy: none
+		sourceColumn: nationality_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column mc_member
+		dataType: string
+		lineageTag: 63391b0b-0bd3-4d80-88f4-c4aa1db9610b
+		summarizeBy: none
+		sourceColumn: mc_member
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_type
+		dataType: string
+		lineageTag: c9a80b9d-ca4e-402e-99ae-4f86eb6e5d24
+		summarizeBy: none
+		sourceColumn: contract_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column los_band
+		dataType: string
+		lineageTag: 0f17d046-98d5-430a-bf4d-22fb5844a7a7
+		summarizeBy: none
+		sourceColumn: los_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column new_hire_type
+		dataType: string
+		lineageTag: 611b278b-fd4a-4dca-bf95-8ec7561ea16b
+		summarizeBy: none
+		sourceColumn: new_hire_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column reporting_matrix
+		dataType: string
+		lineageTag: d37a6dac-9eb0-4397-9190-e8c80ba87be7
+		summarizeBy: none
+		sourceColumn: reporting_matrix
+
+		annotation SummarizationSetBy = Automatic
+
+	column saudisation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 60af8827-a5a5-41ee-ba5e-fc1d7bcd31a2
+		summarizeBy: none
+		sourceColumn: saudisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column leaving_reason
+		dataType: string
+		lineageTag: 487b96b5-a344-46a7-a040-61ba5c7fc287
+		summarizeBy: none
+		sourceColumn: leaving_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality
+		dataType: string
+		lineageTag: f2cb4d53-5fd2-49a4-b468-78299a495789
+		summarizeBy: none
+		sourceColumn: nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	column worker_type
+		dataType: string
+		lineageTag: 9712e546-2bcb-4376-a443-2959d9fa8fa3
+		summarizeBy: none
+		sourceColumn: worker_type
+		sortByColumn: 'Worker type sort'
+
+		annotation SummarizationSetBy = Automatic
+
+	column transfer
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 00f3feba-8685-442b-8d5a-6ce07a941643
+		summarizeBy: none
+		sourceColumn: transfer
+
+		annotation SummarizationSetBy = Automatic
+
+	column leaving_type_visualization
+		dataType: string
+		lineageTag: 62870ead-3452-4071-98dd-df717f169166
+		summarizeBy: none
+		sourceColumn: leaving_type_visualization
+
+		annotation SummarizationSetBy = Automatic
+
+	column management_level
+		dataType: string
+		lineageTag: 72567940-56eb-45cd-80d0-45a64e39accf
+		summarizeBy: none
+		sourceColumn: management_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column transfer_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a795327c-aff9-42ba-a4f2-c7da7484dc0e
+		summarizeBy: none
+		sourceColumn: transfer_date
+
+		variation Variation
+			isDefault
+			relationship: 6ce97b12-dd62-44df-a5e5-aee5cfea9d22
+			defaultHierarchy: LocalDateTable_ff9b0ce7-175d-41b1-a708-100145e5fd78.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column is_corporate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3a033302-87ae-45aa-9fbf-4f01c03820cc
+		summarizeBy: none
+		sourceColumn: is_corporate
+
+		annotation SummarizationSetBy = Automatic
+
+	column KSA
+		dataType: int64
+		formatString: 0
+		lineageTag: 717bbf6f-6918-46d5-9e01-46f82199bdd0
+		summarizeBy: sum
+		sourceColumn: KSA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Non KSA'
+		dataType: int64
+		formatString: 0
+		lineageTag: 40c1ba34-1f7f-4944-804a-8473d91a14d3
+		summarizeBy: sum
+		sourceColumn: Non KSA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Saudi
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 00a36d33-5191-402c-83a5-ffa5ace84614
+		summarizeBy: none
+		sourceColumn: Saudi
+
+		annotation SummarizationSetBy = Automatic
+
+	column int_ext
+		dataType: string
+		lineageTag: 08b52e38-0e97-4773-bb33-2a2ee5f51009
+		summarizeBy: none
+		sourceColumn: int_ext
+
+		annotation SummarizationSetBy = Automatic
+
+	column gen_band
+		dataType: string
+		lineageTag: c23b0d91-caf1-49a7-a73e-08f048aec8da
+		summarizeBy: none
+		sourceColumn: gen_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Saudi/Non Saudi'
+		dataType: string
+		lineageTag: 091a0132-97ca-455c-a2ab-af5a51efd870
+		summarizeBy: none
+		sourceColumn: Saudi/Non Saudi
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'National Saudi/Non saudi'
+		dataType: string
+		lineageTag: 436bcdb0-fd68-4a78-991e-3ef06f8e192c
+		summarizeBy: none
+		sourceColumn: National Saudi/Non saudi
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nationals
+		dataType: int64
+		formatString: 0
+		lineageTag: 46f3a31f-0372-4d88-88a2-f5e3fed7cd37
+		summarizeBy: sum
+		sourceColumn: Nationals
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column Expats
+		dataType: int64
+		formatString: 0
+		lineageTag: 12e31662-8e5a-46fa-8c74-8b87853e6b13
+		summarizeBy: sum
+		sourceColumn: Expats
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'National vs Expats'
+		dataType: string
+		lineageTag: 0a141f49-8a19-4e3d-a6c1-0ae55e4e91df
+		summarizeBy: none
+		sourceColumn: National vs Expats
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Worker type sort' = RELATED('Worker type sort'[Woker type sort] )
+		formatString: 0
+		lineageTag: 457b701b-97dd-4cc3-aa10-eceaf6c4cec0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Male
+		dataType: int64
+		formatString: 0
+		lineageTag: 2125e7c1-ecdd-40c3-bed0-4e1a53190ccd
+		summarizeBy: sum
+		sourceColumn: Male
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column Female
+		dataType: int64
+		formatString: 0
+		lineageTag: dcbfbec0-98ef-4e7b-a360-8c8a2c5dde9e
+		summarizeBy: sum
+		sourceColumn: Female
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Generation Band'
+		dataType: string
+		lineageTag: 2ac82097-c898-44cf-97fc-66b9a4d6435b
+		summarizeBy: none
+		sourceColumn: Generation Band
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortbyFunction_Rltd = RELATED('Sort by Function'[Sort Function])
+		formatString: 0
+		lineageTag: 0a3efd7e-78f3-4e00-a86a-3e7ce66723b9
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'sinority_date - Copy'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 8495c19b-35f8-4985-b148-db20257fa09a
+		summarizeBy: none
+		sourceColumn: sinority_date - Copy
+
+		variation Variation
+			isDefault
+			relationship: bbdd05d4-0c5e-4f60-9f3e-b97fd70cbded
+			defaultHierarchy: LocalDateTable_07918cec-cf23-4345-a38e-683ba65d2f29.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year_seniority
+		dataType: int64
+		formatString: 0
+		lineageTag: 12cf95d6-a4fe-46cf-8a83-0c685aa67154
+		summarizeBy: none
+		sourceColumn: year_seniority
+
+		annotation SummarizationSetBy = User
+
+	column new_hire_date
+		dataType: string
+		lineageTag: ab8cc39e-7afd-46ba-9c91-4125d6d08298
+		summarizeBy: none
+		sourceColumn: new_hire_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Internal mobility'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4fbef38a-7fa5-4916-96e9-035eb93b2412
+		summarizeBy: sum
+		sourceColumn: Internal mobility
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'hire_date - Copy'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 8d15b135-9b25-427e-89b4-8f271acbbd46
+		summarizeBy: none
+		sourceColumn: hire_date - Copy
+
+		variation Variation
+			isDefault
+			relationship: 98ad3767-2fbd-4dc8-a1c2-42c236132be7
+			defaultHierarchy: LocalDateTable_816fae9a-a19f-441b-828a-d06356e296f6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year_hire_date
+		dataType: int64
+		formatString: 0
+		lineageTag: cbd5ea98-21f5-40d9-93ed-566b438060d8
+		summarizeBy: sum
+		sourceColumn: year_hire_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Corporate
+		dataType: string
+		lineageTag: 26cac114-bf75-4bb4-8525-6c9510d6e105
+		summarizeBy: none
+		sourceColumn: Corporate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gen Band Name'
+		dataType: string
+		lineageTag: 8db8f80b-96cc-455e-abc1-2f15af0427e6
+		summarizeBy: none
+		sourceColumn: Gen Band Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column reporting_group
+		dataType: string
+		lineageTag: aa83cdca-23fc-49f0-98c0-3a78d303b5a4
+		summarizeBy: none
+		sourceColumn: reporting_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 1d0fd7b4-475f-48b9-8f01-46f5363efb39
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column work_email
+		dataType: string
+		lineageTag: b175133b-d6fb-4895-8361-3db8359fcc22
+		summarizeBy: none
+		sourceColumn: work_email
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public employees-597f1ecd-b169-4481-908b-c19b488c6c0d' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("acwa-uaen-pdb01.postgres.database.azure.com", "data_centralized"),
+				    public_employees = Source{[Schema="public",Item="employees"]}[Data],
+				    #"Added Conditional Column" = Table.AddColumn(public_employees, "KSA", each if [saudisation] = true then 1 else 0),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Added Conditional Column", "Non KSA", each if [saudisation] = false then 1 else 0),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Conditional Column1",{"KSA", "Non KSA"}),
+				    #"Added Conditional Column2" = Table.AddColumn(#"Removed Columns", "KSA", each if [saudisation] = true then 1 else 0),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Added Conditional Column2",{{"KSA", Int64.Type}}),
+				    #"Added Conditional Column3" = Table.AddColumn(#"Changed Type", "Non KSA", each if [saudisation] = false then 1 else 0),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column3",{{"Non KSA", Int64.Type}}),
+				    #"Added Conditional Column4" = Table.AddColumn(#"Changed Type1", "Saudi", each if [saudisation] = true then true else false),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column4",{{"Saudi", type logical}}),
+				    #"Added Conditional Column5" = Table.AddColumn(#"Changed Type2", "Saudi/Non Saudi", each if [Saudi] = true then "Saudi" else if [Saudi] = false then "Non Saudi" else 0),
+				    #"Added Conditional Column6" = Table.AddColumn(#"Added Conditional Column5", "National Saudi/Non saudi", each if [nationality] = "Saudi" then "Saudi" else "Non Saudi"),
+				    #"Added Conditional Column7" = Table.AddColumn(#"Added Conditional Column6", "Nationals", each if [nationalisation] = true then 1 else 0),
+				    #"Added Conditional Column8" = Table.AddColumn(#"Added Conditional Column7", "Expats", each if [nationalisation] = false then 1 else 0),
+				    #"Added Conditional Column9" = Table.AddColumn(#"Added Conditional Column8", "National vs Expats", each if [nationalisation] = true then "National" else if [nationalisation] = false then "Expats" else null),
+				    #"Added Conditional Column10" = Table.AddColumn(#"Added Conditional Column9", "Worker type number", each if [worker_type] = "N to N-3" then 1 else if [worker_type] = "Office Staff" then 2 else if [worker_type] = "PGM/EMO" then 3 else if [worker_type] = "Field Staff" then 4 else 0),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Added Conditional Column10",{"Worker type number"}),
+				    #"Added Conditional Column11" = Table.AddColumn(#"Removed Columns1", "Male", each if [sex] = "M" then 1 else 0),
+				    #"Added Conditional Column12" = Table.AddColumn(#"Added Conditional Column11", "Female", each if [sex] = "F" then 1 else 0),
+				    #"Added Conditional Column13" = Table.AddColumn(#"Added Conditional Column12", "Custom", each if [gen_band] = "Baby Boomers" then ">56" else if [gen_band] = "Gen X" then ">40" else if [gen_band] = "Gen Y" then ">25" else if [gen_band] = "Zoomers" then "<25" else 0),
+				    #"Renamed Columns" = Table.RenameColumns(#"Added Conditional Column13",{{"Custom", "Generation Band"}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns", each true),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Filtered Rows", "sinority_date", "sinority_date - Copy"),
+				    #"Inserted Year" = Table.AddColumn(#"Duplicated Column", "Year", each Date.Year([#"sinority_date - Copy"]), Int64.Type),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Year",{{"Year", "year_seniority"}}),
+				    #"Added Conditional Column14" = Table.AddColumn(#"Renamed Columns1", "new_hire_date", each if  [year_of_hire] = [year_seniority] then [year_of_hire] else if [year_seniority] = null then [year_of_hire] else 0),
+				    #"Filtered Rows2" = Table.SelectRows(#"Added Conditional Column14", each true),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Filtered Rows2", "hire_date", "hire_date - Copy"),
+				    #"Inserted Year1" = Table.AddColumn(#"Duplicated Column1", "Year", each Date.Year([#"hire_date - Copy"]), Int64.Type),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Inserted Year1",{{"Year", "year_hire_date"}}),
+				    #"Added Conditional Column15" = Table.AddColumn(#"Renamed Columns2", "Internal mobility", each if [year_hire_date]=[year_of_hire ] and [year_seniority] <> [year_hire_date] then 1 else 0),
+				    #"Filtered Rows1" = Table.SelectRows(#"Added Conditional Column15", each true),
+				    #"Added Conditional Column16" = Table.AddColumn(#"Filtered Rows1", "Corporate", each if [is_corporate] = true then "Corporate" else if [is_corporate] = false then "Project" else 0),
+				    #"Added Conditional Column17" = Table.AddColumn(#"Added Conditional Column16", "Gen Band Name", each if [Generation Band] = ">40" and [gen_band] = "Gen X" then ">40 Gen X" else if [Generation Band] = ">56" and [gen_band] = "Baby Boomers" then ">56 Baby Boomers" else if [Generation Band] = ">25" and [gen_band] = "Gen Y" then ">25 Gen Y" else if [Generation Band] = "<25" and [gen_band] = "Zoomers" then "<25 Zoomers
+				" else 0)
+				in
+				    #"Added Conditional Column17"
+
+	annotation PBI_ResultType = Table
+

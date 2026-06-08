@@ -1,0 +1,23 @@
+expression 'Errors in Employee List Including Inactive' =
+		let
+		Source = #"Employee List Including Inactive",
+		  #"Detected Type Mismatches" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "The type of the value does not match the type of the column.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Source, pairs),
+		  #"Added Index" = Table.AddIndexColumn(#"Detected Type Mismatches", "Row Number" ,1),
+		  #"Kept Errors" = Table.SelectRowsWithErrors(#"Added Index", {"Employment Details Hire Date", "Employment Details Group Joining Date", "Employment Details Termination Date", "Person Id", "Gender", "Date Of Birth", "Pay Grade Name", "GEO Name", "Employment Details Employer Name", "Name", "Employment Type", "Employee Status", "Country/Region", "Nationality", "Event Reason", "User/Employee ID", "User/Employee Name", "Probationary Period End Date", "Position Entry Date", "Employment Details Contract End Date", "Age", "Date of Joining", "# of Joined employees", "Employment Type - Copy", "ET Saudi"}),
+		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "Employment Details Hire Date", "Employment Details Group Joining Date", "Employment Details Termination Date", "Person Id", "Gender", "Date Of Birth", "Pay Grade Name", "GEO Name", "Employment Details Employer Name", "Name", "Employment Type", "Employee Status", "Country/Region", "Nationality", "Event Reason", "User/Employee ID", "User/Employee Name", "Probationary Period End Date", "Position Entry Date", "Employment Details Contract End Date", "Age", "Date of Joining", "# of Joined employees", "Employment Type - Copy", "ET Saudi"})
+		in
+		  #"Reordered Columns"
+	lineageTag: 9ff97f45-6a08-4c9b-a24c-97df27f12238
+	queryGroup: 'Query Errors - 1/8/2025 10:29:33 AM'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

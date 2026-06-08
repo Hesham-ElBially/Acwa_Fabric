@@ -1,0 +1,75 @@
+table Summary
+	lineageTag: 9d8187bd-5116-4606-b574-873965e41aa6
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 4ce374c9-2a28-4742-a071-ddfbad27f2e3
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year '
+		dataType: string
+		lineageTag: fe5ad7d2-5d48-49a1-90ff-96774d3269dd
+		summarizeBy: none
+		sourceColumn: "Year "
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: 59138271-6d2f-4e72-b993-1b7968e7423d
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Code '
+		dataType: string
+		lineageTag: 69922af9-e225-4292-bc52-685940c45e06
+		summarizeBy: none
+		sourceColumn: "Project Code "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Title'
+		dataType: string
+		lineageTag: d8252ee8-ed9e-480b-807b-db50caeb8bac
+		summarizeBy: none
+		sourceColumn: Project Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PMO RAG'
+		dataType: string
+		lineageTag: cc9d2455-1bb5-4706-81a1-6c1e9ee48a9f
+		summarizeBy: none
+		sourceColumn: PMO RAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BUSINESS UPDATE'
+		dataType: string
+		lineageTag: 0249a47a-c051-4f37-a593-db46cc5eec3c
+		summarizeBy: none
+		sourceColumn: BUSINESS UPDATE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Summary = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File (4)", each #"Transform File (4)"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File (4)"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File (4)", Table.ColumnNames(#"Transform File (4)"(#"Sample File (4)"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"Year ", type any}, {"Month", type any}, {"Project Code ", type any}, {"Project Title", type text}, {"PMO RAG", type text}, {"BUSINESS UPDATE", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

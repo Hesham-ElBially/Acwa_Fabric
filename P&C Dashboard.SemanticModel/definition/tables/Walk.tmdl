@@ -1,0 +1,34 @@
+table Walk
+	lineageTag: 31ffc8ad-50c0-49b6-a81b-8a7cc3ef490e
+
+	column Walkstart
+		dataType: string
+		lineageTag: 032d674a-4463-47e8-ba34-aac39a254ccd
+		summarizeBy: none
+		sourceColumn: Walkstart
+		sortByColumn: Walksort
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Walksort
+		dataType: int64
+		formatString: 0
+		lineageTag: 82aba999-61ba-4c14-9610-8e3731f58b03
+		summarizeBy: sum
+		sourceColumn: Walksort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Walk = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCi5JLCpR0lEyUIrViVbySswDsg3BbLfUJCDbCMz2TSwCso3BbMcCENsEKl4JZJtC9JaC9JpB2TlAtjlEfWk6kG0BZgenFgDZlmC2fzLIXkOIxX75ZSAOxGaX1GQQB2h1LAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Walkstart = _t, Walksort = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Walkstart", type text}, {"Walksort", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

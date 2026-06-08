@@ -1,0 +1,145 @@
+table 'Project Performance'
+	lineageTag: d23674b8-6211-4487-bea6-32caf2a35dd1
+
+	measure '% Actual Accomplishment' =
+			
+			Var num=sum('Project Performance'[% Actual Accomplished])
+			Var den=count('Project Performance'[Project Title])
+			return if(den<>0,num/den,0)
+		formatString: 0%;-0%;0%
+		lineageTag: 0151a073-7b43-4713-afb1-af36fef172cb
+
+	measure Blank_n = "                                                                                     "
+		lineageTag: 872cf293-f216-4cfc-b155-c0232f925f0f
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: 982f99d4-2ab0-4ee5-b7e3-ee7c2794899c
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Code '
+		dataType: string
+		lineageTag: 80b5e0ee-15fd-4b1c-9941-0e6030be5542
+		summarizeBy: none
+		sourceColumn: "Project Code "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Title'
+		dataType: string
+		lineageTag: 9cb3702c-651e-4bb5-8c97-f6c85d53ce50
+		summarizeBy: none
+		sourceColumn: Project Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year '
+		dataType: int64
+		formatString: 0
+		lineageTag: 48906e83-b36a-4517-ba4c-de7a5d8794f4
+		summarizeBy: sum
+		sourceColumn: "Year "
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: 5c407c50-a36e-4d09-ba3d-cf6643005540
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'launching Status '
+		dataType: string
+		lineageTag: 562d0053-62a8-4107-b5ab-377f3ca9ee84
+		summarizeBy: none
+		sourceColumn: "launching Status "
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% Planned Accomplished'
+		dataType: string
+		lineageTag: 291f5114-430e-4763-9897-9159716bcf0a
+		summarizeBy: none
+		sourceColumn: % Planned Accomplished
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% Actual Accomplished'
+		dataType: double
+		formatString: 0%;-0%;0%
+		lineageTag: aa416518-2015-4784-be36-00ff2fecaeed
+		summarizeBy: sum
+		sourceColumn: % Actual Accomplished
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Status '
+		dataType: string
+		lineageTag: ee5b7739-233d-41fa-a9d9-f15deb2c6b1a
+		summarizeBy: none
+		sourceColumn: "Project Status "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget '
+		dataType: int64
+		formatString: 0
+		lineageTag: 48072e6d-861f-4ef2-a201-bd2013c3bbda
+		summarizeBy: sum
+		sourceColumn: "Budget "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual cost'
+		dataType: string
+		lineageTag: b1f21972-b431-49a8-9ff0-0457af4800db
+		summarizeBy: none
+		sourceColumn: Actual cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column '# Risks '
+		dataType: string
+		lineageTag: e1b8214d-7fb3-42ca-903b-1ce51569bc5b
+		summarizeBy: none
+		sourceColumn: "# Risks "
+
+		annotation SummarizationSetBy = Automatic
+
+	column '# Challenges '
+		dataType: string
+		lineageTag: 2e183d9c-1094-4c9c-b9a7-de0e061b7be2
+		summarizeBy: none
+		sourceColumn: "# Challenges "
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dependencies
+		dataType: string
+		lineageTag: b74e8e42-1daf-43bd-bdea-0bd67764ed6b
+		summarizeBy: none
+		sourceColumn: Dependencies
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Project Performance' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File (3)", each #"Transform File (3)"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File (3)"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File (3)", Table.ColumnNames(#"Transform File (3)"(#"Sample File (3)"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"Project Code ", type any}, {"Project Title", type text}, {"Year ", Int64.Type}, {"Month", type text}, {"launching Status ", type any}, {"% Planned Accomplished", type any}, {"% Actual Accomplished", type number}, {"Project Status ", type text}, {"Budget ", Int64.Type}, {"Actual cost", type any}, {"# Risks ", type text}, {"# Challenges ", type text}, {"Dependencies", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

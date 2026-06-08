@@ -1,0 +1,121 @@
+table Milestone
+	lineageTag: 1ebd4dfd-db85-4a4e-a093-d461e37a6b07
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: e309e624-7a82-41f8-ab34-84fbc8daa0a6
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Code '
+		dataType: string
+		lineageTag: dd4cd02f-b25e-4dae-8695-42693a57f0f1
+		summarizeBy: none
+		sourceColumn: "Project Code "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Title'
+		dataType: string
+		lineageTag: 1ba0834b-197c-4a80-ad99-0ecbbc5f7a68
+		summarizeBy: none
+		sourceColumn: Project Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year '
+		dataType: string
+		lineageTag: b744b0b2-7e65-4622-a246-9b452dba8747
+		summarizeBy: none
+		sourceColumn: "Year "
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: 176b7d02-a8bc-45ec-ae95-1355589ad100
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Phases and Milestone '
+		dataType: string
+		lineageTag: b9d6baac-2be2-4edf-b16d-f0c375c535cf
+		summarizeBy: none
+		sourceColumn: "Phases and Milestone "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start Date'
+		dataType: string
+		lineageTag: cb00ebc8-8e9b-4202-852d-70e4cbf4bf98
+		summarizeBy: none
+		sourceColumn: Start Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Due Date '
+		dataType: dateTime
+		formatString: d mmmm\, yyyy
+		lineageTag: a16598f1-9552-4db3-a9af-cfb92f48409f
+		summarizeBy: none
+		sourceColumn: "Due Date "
+
+		variation Variation
+			isDefault
+			relationship: c5bf3f8a-dc94-42cb-b744-94c50586e39e
+			defaultHierarchy: LocalDateTable_2b25c9b3-f261-428b-b429-fae458284db6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column '% Plan'
+		dataType: string
+		lineageTag: 71a9b825-5a0e-4852-94a7-fab9dd940c4a
+		summarizeBy: none
+		sourceColumn: % Plan
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% Completed '
+		dataType: double
+		formatString: 0%;-0%;0%
+		lineageTag: 61a09d63-a65e-4f5a-a597-185eec13293f
+		summarizeBy: sum
+		sourceColumn: "% Completed "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status '
+		dataType: string
+		lineageTag: 0d9387e3-695c-4052-a29f-b5294e43f0f0
+		summarizeBy: none
+		sourceColumn: "Status "
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Milestone = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File (2)", each #"Transform File (2)"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File (2)"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File (2)", Table.ColumnNames(#"Transform File (2)"(#"Sample File (2)"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"Project Code ", type any}, {"Project Title", type text}, {"Year ", type any}, {"Month", type any}, {"Phases and Milestone ", type text}, {"Start Date", type any}, {"Due Date ", type date}, {"% Plan", type any}, {"% Completed ", type number}, {"Status ", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each true)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

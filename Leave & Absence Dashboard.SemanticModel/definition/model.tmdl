@@ -1,0 +1,34 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBIDesktopVersion = 2.111.590.0 (22.11)
+
+annotation PBI_QueryOrder = ["public employees","public employees_per_month","public employee_absences","public employee_leave_balance","Table"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+ref table 'public employees'
+ref table DateTableTemplate_39dbe0af-7dc7-4b39-8881-35892df728a0
+ref table LocalDateTable_4e2508ed-0ba5-4959-a1db-2614a3af8885
+ref table LocalDateTable_b0026e0f-ea16-49c6-9af1-e54f990a9287
+ref table LocalDateTable_c36c9167-d5db-4aa1-9694-bd57bfef49b7
+ref table LocalDateTable_5109c60a-093e-43c2-b07f-d5a11b90f918
+ref table LocalDateTable_0c26ce3c-d09d-42d8-85f9-eaa77a80fbf2
+ref table 'public employees_per_month'
+ref table 'public employee_absences'
+ref table 'public employee_leave_balance'
+ref table LocalDateTable_740a0187-6e84-4772-95bb-7bc4beb77249
+ref table TDA
+ref table Table
+ref table TAP
+ref table LocalDateTable_c4194097-caf7-413b-8ab9-5e64b40e7058
+ref table LocalDateTable_2a9e4b86-65eb-4eb1-bfdd-29d0df1a8547
+ref table BF
+
+ref cultureInfo en-US
+

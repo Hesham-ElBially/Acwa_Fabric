@@ -1,0 +1,11 @@
+role 'VC Office'
+	modelPermission: read
+
+	tablePermission 'public employees' = [bu_fu] = "VC Office"
+
+	tablePermission 'public employees (2)' = [bu_fu] = "VC Office"
+
+	tablePermission 'public employees_per_year' = [bu_fu] = "VC Office"
+
+	annotation PBI_Id = a07fa7cd053946ab91eefc00743a9946
+

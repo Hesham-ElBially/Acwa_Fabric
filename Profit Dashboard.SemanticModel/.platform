@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Profit Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "815ae33c-1e12-ad99-4ceb-432685314e03"
+  }
+}

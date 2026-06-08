@@ -1,0 +1,1964 @@
+table 'gdm f_employees_per_month'
+	lineageTag: a6a2a43e-7ff1-4cc2-bc9b-a9548b5e791d
+
+	measure H-perform_vol_leavers_ytd_% = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[high_performer_flag] = TRUE(), 'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary")
+			VAR b = [Headcount_ytd_maxmonth]
+			VAR division_result = DIVIDE(a, b)
+			VAR formatted_result = FORMAT(division_result, "0.00%")
+			RETURN 
+			    IF(
+			        a = 0 || ISBLANK(division_result) || division_result = 0,
+			        "0 (0.00%)",
+			        a & " (" & formatted_result & ")"
+			    )
+			
+			```
+		lineageTag: 86b24c5b-9e92-4db9-9f61-8f6ed383275d
+
+	measure vol_potential_leavers_ytd_% = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[Potential] = 1, 'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary")
+			VAR b = [Headcount_ytd_maxmonth]
+			VAR division_result = DIVIDE(a, b)
+			VAR c = FORMAT(division_result, "0.00%")
+			RETURN 
+			    IF(
+			        ISBLANK(division_result) || division_result = 0,
+			        "0 (0.00%)",
+			        a & " (" & c & ")"
+			    )
+			
+			```
+		lineageTag: 415ce88c-5c0c-4e0e-9285-9eda435f671c
+
+	measure Leavers_mm_sum_adjusted =
+			
+			calculate(sum('gdm f_employees_per_month'[leavers_mm]))
+		formatString: 0
+		lineageTag: 7de41275-a572-4ee0-837a-bd376ed27aa2
+
+	measure Delta_ytd =
+			
+			Var a=[joiners_ytd_maxmonth]-[Leavers_ytd_maxmonth]
+			Return if(a<>0,a,0)
+		lineageTag: b6229be0-1e51-45be-9c88-516c7bedacb1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Delta_ytd_withsign =
+			
+			if([Delta_ytd]>=0,"+ " & [Delta_ytd], [Delta_ytd])
+		lineageTag: 2c58c75a-6465-46a2-859a-6d3bdfbcedb6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Delta_mm = ```
+			
+			-sum('gdm f_employees_per_month'[leavers_mm])+sum('gdm f_employees_per_month'[joiners_mm])
+			
+			```
+		formatString: 0
+		lineageTag: 59285731-c951-47b7-9964-b966802ef28b
+
+	measure Leavers/Corporate =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a1=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			Var a=format(a1,"#,##")
+			Var b1=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm d_employees_new'[corp_prj_flag]="Corporate",'gdm f_employees_per_month'[month]=max_month)
+			Var b=format(b1,"#,##")
+			Var c=format(divide(a,b),"0.00%")
+			return a & "/" &b & "     " & c
+		lineageTag: 90e481a3-e4de-471f-abff-4a5d3c9f042a
+
+	measure vol_leavers_ytd1_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary",'gdm f_employees_per_month'[month]=max_month)
+			Var b= calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Var c=format(divide(a,b),"0.00%")
+			return a
+		formatString: 0
+		lineageTag: 8c28d564-66ee-47b4-bc54-e0c1ee468534
+
+	measure vol_female_leavers_ytd1_% = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			VAR a = CALCULATE(
+			    SUM('gdm f_employees_per_month'[leavers_ytd]),
+			    'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary",
+			    'gdm f_employees_per_month'[sex]="F",
+			    'gdm f_employees_per_month'[month]=max_month
+			
+			)
+			VAR b = calculate(SUM('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			VAR c = IF(
+			    ISBLANK(DIVIDE(a, b)),
+			    "0.00%",
+			    FORMAT(DIVIDE(a, b), "0.00%")
+			)
+			RETURN if(a<>0,a,0)
+			
+			```
+		formatString: 0
+		lineageTag: 7270ea2b-7a42-40d5-a2b1-eef8683fb809
+
+	measure vol_leavers_ytd = ```
+			
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			return a 
+			```
+		formatString: 0
+		lineageTag: 5cdaa072-112c-42a7-876e-5b89e9ad8680
+
+	measure Saudi_leavers =
+			
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm d_employees_new'[nationality]="Saudi")
+			Var b= sum('gdm f_employees_per_month'[leavers_ytd])
+			Var c=format(divide(a,b),"0.00%")
+			return a & "    " & "("&c&")"
+		lineageTag: f7084233-ee25-42e4-8d82-99338ac95801
+
+	measure HC_vol =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary",'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: ccb8c41f-eb7d-46cd-803f-f753b987dfff
+
+	measure vol_female_leavers_ytd = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			VAR a = CALCULATE(
+			    SUM('gdm f_employees_per_month'[leavers_ytd]),
+			    'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary",
+			    'gdm f_employees_per_month'[sex]="F",
+			    'gdm f_employees_per_month'[month]=max_month
+			)
+			VAR b = SUM('gdm f_employees_per_month'[headcount])
+			VAR c = IF(
+			    ISBLANK(DIVIDE(a, b)),
+			    "0.00%",
+			    FORMAT(DIVIDE(a, b), "0.00%")
+			)
+			RETURN if(a<>0,a,0) 
+			
+			```
+		formatString: 0
+		lineageTag: 71237980-c511-43a5-a2dc-767b4b47f23f
+
+	measure Test =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var min_month=calculate(min('gdm f_employees_per_month'[month]),all('gdm f_employees_per_month'[month_short]))
+			
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			Var b1=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month,all('gdm f_employees_per_month'[month_short]))
+			Var b=(b1+b2)/2
+			
+			Return b2
+		formatString: 0
+		lineageTag: 715953b3-9cbc-47b3-b884-807fc0110702
+
+	measure Year_YTD = SELECTEDVALUE('gdm f_employees_per_month'[year]) & " YTD"
+		lineageTag: 47dcd94d-d8e3-4fc6-b0a8-43ab85ebded0
+
+	measure Headcount_ytd_maxmonth =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Return if(a<>0,a,0)
+		formatString: #,0
+		lineageTag: 34d8dfb0-ffa4-486c-b385-72b4635b7889
+
+	measure joiners_ytd_maxmonth = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[joiners_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0) 
+			```
+		formatString: #,0
+		lineageTag: 7952fa5f-f08b-4f15-970c-8b7f6ae811e8
+
+	measure Leavers_ytd_maxmonth =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0)
+		formatString: #,0
+		lineageTag: 5c2efb8c-db75-4694-9107-49d3cc068184
+
+	measure Leavers_sum_mm =
+			
+			Var a=sum('gdm f_employees_per_month'[leavers_mm])
+			return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: d1502713-353f-43ec-8ea9-0f26fad2154e
+
+	measure voluntary_attrition_mm_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month,'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			Var b1=[Headcount_ytd_maxmonth]
+			Var min_month=min('gdm f_employees_per_month'[month])
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month)
+			return a/((b1+b2)/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 79bab3f6-f2b5-482c-b022-96fd9bd01d5c
+
+	measure total_attrition_mm_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			Var b1=[Headcount_ytd_maxmonth]
+			Var min_month=min('gdm f_employees_per_month'[month])
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month)
+			return if((b1+b2)<>0,a/((b1+b2)/2),0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 09d5381b-a804-4ec3-948f-d4de5f5c8e97
+
+	measure other_attrition_mm_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month,'gdm f_employees_per_month'[vol_unvol_flag]<>"Voluntary")
+			Var b1=[Headcount_ytd_maxmonth]
+			Var min_month=min('gdm f_employees_per_month'[month])
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month)
+			return a/((b1+b2)/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 935238be-2c48-47de-bd11-9502352465a2
+
+	measure other_attrition_mm =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month,'gdm f_employees_per_month'[vol_unvol_flag]<>"Voluntary")
+			Var b1=[Headcount_ytd_maxmonth]
+			Var min_month=min('gdm f_employees_per_month'[month])
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month)
+			return a
+		formatString: 0
+		lineageTag: c9d7974d-42bb-46d8-89b5-72868a9003a9
+
+	measure total_attrition_mm =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			Var b1=[Headcount_ytd_maxmonth]
+			Var min_month=min('gdm f_employees_per_month'[month])
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month)
+			return a
+		lineageTag: fdc2acd7-4e0f-48a1-b429-ac7323c10a1b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure voluntary_attrition_mm =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month,'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			Var b1=[Headcount_ytd_maxmonth]
+			Var min_month=min('gdm f_employees_per_month'[month])
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month)
+			return a
+		formatString: 0
+		lineageTag: aef91ba0-83d3-4ac2-88b7-f4b51ac591f1
+
+	measure Blank = ```
+			"--" 
+			```
+		lineageTag: de4a6b81-9ebe-422d-8cba-f7da6de72ea5
+
+	measure vol_leavers_ytd2_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary",'gdm f_employees_per_month'[month]=max_month)
+			Var b= calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Var c=format(divide(a,b),"0.00%")
+			return "(" & c & ")"
+		lineageTag: 7622d887-9cc2-4cb4-8662-f311e83655c3
+
+	measure vol_female_leavers_ytd2_% = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			VAR a = CALCULATE(
+			    SUM('gdm f_employees_per_month'[leavers_ytd]),
+			    'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary",
+			    'gdm f_employees_per_month'[sex]="F",
+			    'gdm f_employees_per_month'[month]=max_month
+			
+			)
+			VAR b = calculate(SUM('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			VAR c = IF(
+			    ISBLANK(DIVIDE(a, b)),
+			    "0.00%",
+			    FORMAT(DIVIDE(a, b), "0.00%")
+			)
+			RETURN "("&c&")"
+			
+			```
+		lineageTag: 8389f0ed-4987-4ec8-b6fd-45cc7f48d254
+
+	measure Delta_mm_fake = -sum('gdm f_employees_per_month'[leavers_mm])+sum('gdm f_employees_per_month'[joiners_mm])+1000000
+		formatString: 0
+		lineageTag: c8f293b3-6d1c-4bd1-bd71-5a41e303e656
+
+	measure Delta_mm_label =
+			
+			if([Delta_mm]>0,"+" & [Delta_mm] & " ▲",if([Delta_mm]=0,[Delta_mm],if([Delta_mm]<0,[Delta_mm] & " " & " ▼")))
+		lineageTag: 1c5a1394-00b5-4be3-a7b7-e45d94aba972
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Upper_Chart_limit_hc = [Headcount_ytd_maxmonth]+[Headcount_ytd_maxmonth]/8
+		formatString: 0
+		lineageTag: 2207b9b9-b0ae-4013-a3f9-db6e8d5b1534
+
+	measure female_%_nonformatted_trend = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate([Headcount_ytd_maxmonth],'gdm f_employees_per_month'[sex]="F")
+			Var b=[Corp_headcount_ytd_maxmonth]
+			return if(b<>0,a/b,0)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b35141f2-c360-480f-b15f-9c731e0e3197
+
+	measure High_performer_% = ```
+			
+			VAR high_performer_count = 
+			    CALCULATE(
+			        [Headcount_ytd_maxmonth],
+			        'gdm f_employees_per_month'[high_performer_flag] = TRUE()
+			    )
+			VAR total_headcount = [Headcount_ytd_maxmonth]
+			VAR high_performer_percentage = 
+			    IF(
+			        total_headcount <> 0,
+			        high_performer_count / total_headcount,
+			        BLANK()
+			    )
+			RETURN
+			IF(
+			    ISBLANK(high_performer_count),
+			    "0 (0.0%)",
+			    FORMAT(high_performer_count, "#,0") & " (" & FORMAT(high_performer_percentage, "0.0%") & ")"
+			)
+			
+			```
+		lineageTag: 5f40f4bb-6f15-4a33-b9b9-1284abbad3fe
+
+	measure Headcount_ytd_maxmonth_project =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month,'gdm d_employees_new'[corp_prj_flag]="Project")
+			Return if(a<>0,a,0)
+		formatString: #,0
+		lineageTag: 359b4697-0c34-4ca9-b374-f06621330c60
+
+	measure Headcount_ytd_maxmonth_corporate =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month,'gdm d_employees_new'[corp_prj_flag]="Corporate")
+			Return if(a<>0,a,0)
+		formatString: #,0
+		lineageTag: 47653f82-967b-429e-8617-d0f695ee3a18
+
+	measure Delta_mm_withsign = ```
+			
+			VAR a = -SUM('gdm f_employees_per_month'[leavers_mm]) + SUM('gdm f_employees_per_month'[joiners_mm])
+			RETURN
+			IF(
+			    a > 0,
+			    "+" & a,
+			    if(a<0,
+			    "-" & a,
+			    0       )
+			)
+			
+			```
+		lineageTag: 5c7bdb3c-ecf6-4d30-abdf-466854112f4e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Delta_mm_withdummymonth =
+			
+			Var a=-sum('gdm f_employees_per_month'[leavers_mm])+sum('gdm f_employees_per_month'[joiners_mm])
+			Return if(a<>0,a," ")
+		formatString: 0
+		lineageTag: 12d1322b-f97b-4b88-acac-b1cbe38e910b
+
+	measure Headcount_ytd_maxmonth_drill =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Return if(a<>0,"(" & a & ")",0)
+		lineageTag: 7baba260-54c8-4bb5-8340-8352c5fa2e65
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Female_drill = "(" & [Headcount_ytd_maxmonth] & ")"
+		lineageTag: 4ac49de3-9f06-4166-b176-989467be0266
+
+	measure Joiners_drill = "(" & [joiners_ytd_maxmonth] & ")"
+		lineageTag: 295dda6b-3c41-422b-87a3-2280c3ecb15b
+
+	measure Leavers_drill = "(" & [Leavers_ytd_maxmonth] & ")"
+		lineageTag: edcd410c-355d-48fb-965a-abc6844a5102
+
+	measure Joiners_mm_sum_adjusted = sum('gdm f_employees_per_month'[joiners_mm])
+		formatString: 0
+		lineageTag: dc9c8d38-57fb-44b4-80ed-26644fa4d216
+
+	measure HC = sum('gdm f_employees_per_month'[headcount])
+		formatString: 0
+		lineageTag: 4b3ec027-74ac-4e6d-b366-c1537de177b0
+
+	measure female_vol_attrition_% = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[sex] = "F",'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			VAR division_result = DIVIDE(a, [Headcount_ytd_maxmonth])
+			VAR formatted_result = FORMAT(division_result, "#,0.00%")
+			RETURN 
+			    IF(
+			        ISBLANK(division_result) || division_result = 0 || a = 0,
+			        "0 (0.00%)",
+			        a & " (" & formatted_result & ")"
+			    )
+			
+			```
+		lineageTag: cbc1511f-f873-4466-a8fd-6efc7dc2c16b
+
+	measure Potential_% =
+			
+			Var a=calculate([Headcount_ytd_maxmonth],'gdm f_employees_per_month'[Potential]=1)
+			VAR b =[Headcount_ytd_maxmonth]
+			VAR c = IF(
+			    ISBLANK(DIVIDE(a, b)),
+			    "0.00%",
+			    FORMAT(DIVIDE(a, b), "0.00%")
+			)
+			RETURN if(a<>0,a & "  (" & c & ")",0)
+		formatString: 0
+		lineageTag: b385ee2e-3f6b-49c8-8f87-7a8b9948cde7
+
+	measure Joiners_label =
+			
+			if( sum('gdm f_employees_per_month'[joiners_mm])>0,"+" & sum('gdm f_employees_per_month'[joiners_mm]),sum('gdm f_employees_per_month'[joiners_mm]))
+		lineageTag: fae2dc5e-7a2e-41a0-b5df-288a1c220d97
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Leavers_label =
+			
+			if(sum('gdm f_employees_per_month'[leavers_mm])>0,
+			"-" & sum('gdm f_employees_per_month'[leavers_mm]),sum('gdm f_employees_per_month'[leavers_mm]))
+		lineageTag: ab1aff72-bab9-4078-8f39-900b272d51cc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Delta_mm_label2 =
+			
+			if([Delta_mm]>0,"+" & [Delta_mm],[Delta_mm])
+		lineageTag: 48651a60-2f79-4966-ba21-1a4bf114353e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PersonNumber_ytd_maxmonth = ```
+			
+			VAR SelectedMonth = 
+			    MAX('gdm f_employees_per_month'[month])
+			
+			VAR a = 
+			    CALCULATE(
+			        COUNT('gdm f_employees_per_month'[person_number]), 
+			        FILTER(
+			            ALL('gdm f_employees_per_month'),
+			            'gdm f_employees_per_month'[month] <= SelectedMonth
+			        )
+			    )
+			
+			RETURN
+			    a
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: 3a7d79c3-a6fa-4aa6-af11-ae44c5fd8fb9
+
+	measure Delta_mm2 = ```
+			
+			sum('gdm f_employees_per_month'[joiners_mm])-sum('gdm f_employees_per_month'[leavers_mm])
+			
+			```
+		formatString: 0
+		lineageTag: 83944e3c-3da1-44b1-8bc6-802a421938ee
+
+	measure voluntary_attrition_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var min_month=calculate(min('gdm f_employees_per_month'[month]),all('gdm f_employees_per_month'[month_short]))
+			
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month,'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			Var b1=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month,all('gdm f_employees_per_month'[month_short]))
+			Var b=(b1+b2)/2
+			Var c=if(b<>0,a/b,0)
+			
+			return if(c>=1,1,c)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a919e367-03a3-4ecb-a4e4-2092e299b614
+
+	measure promotions_ytd_maxmonth =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[promotions_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: 5d5f02e6-45ea-4e13-a1b3-5711521ec1ba
+
+	measure salary_actions_ytd_maxmonth =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[salary_actions_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: 31fc6cb9-a0f0-4efd-b5d1-ae68cd55ac57
+
+	measure succession_ytd_maxmonth =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[successions_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: fd48855d-42b4-45c9-a4b9-0178345d510f
+
+	measure Delta_ytd_male = ```
+			
+			-calculate([Leavers_ytd_maxmonth],'gdm f_employees_per_month'[sex]="M")+calculate([joiners_ytd_maxmonth],'gdm f_employees_per_month'[sex]="M")
+			
+			```
+		formatString: 0
+		lineageTag: a8b2524d-5f98-49c4-a812-a0e5a7c45934
+
+	measure Delta_ytd_female = ```
+			
+			-calculate([Leavers_ytd_maxmonth],'gdm f_employees_per_month'[sex]="F")+calculate([joiners_ytd_maxmonth],'gdm f_employees_per_month'[sex]="F")
+			
+			```
+		formatString: 0
+		lineageTag: 6ddfd263-6d65-4b93-a474-a196884f8336
+
+	measure Delta_mm_NA = ```
+			
+			-calculate([Leavers_ytd_maxmonth],'gdm f_employees_per_month'[sex]="N/A")+calculate([joiners_ytd_maxmonth],'gdm f_employees_per_month'[sex]="N/A")
+			
+			```
+		formatString: 0
+		lineageTag: c1725293-9fd8-4974-90c5-420bd36497c5
+
+	measure Headcount_ytd_maxmonth_nationals =
+			
+			calculate([Headcount_ytd_maxmonth],'gdm f_employees_per_month'[nationalisation]=1)
+		formatString: #,0
+		lineageTag: a26c597e-1390-4b51-ad63-9521d54fd365
+
+	measure Headcount_ytd_maxmonth_custom = ```
+			
+			IF (
+			    MAX('gdm f_employees_per_month'[year]) = 2022,
+			    500,
+			    1000
+			)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 499697ee-bc5c-4bb5-a13b-edfba852c7fa
+
+	measure female_% = ```
+			
+			VAR a = CALCULATE([Headcount_ytd_maxmonth], 'gdm f_employees_per_month'[sex] = "F")
+			VAR division_result = DIVIDE(a, [Headcount_ytd_maxmonth])
+			VAR formatted_result = FORMAT(division_result, "#,0.0%")
+			RETURN 
+			    IF(
+			        ISBLANK(division_result) || division_result = 0 || a = 0,
+			        "0 (0.0%)",
+			        formatted_result
+			    )
+			
+			```
+		lineageTag: 9a956d87-4ea7-43c4-affb-85dcdbfe7a23
+
+	measure Joiners_ytd_label =
+			
+			if([joiners_ytd_maxmonth]>0,"+" & [joiners_ytd_maxmonth],[joiners_ytd_maxmonth])
+		lineageTag: bc8cda66-ef45-49fb-bde7-e6bc8424b07f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Leavers_ytd_label =
+			
+			if([Leavers_ytd_maxmonth]>0,
+			"-" & [Leavers_ytd_maxmonth],[Leavers_ytd_maxmonth])
+		lineageTag: 2cb05ea2-8b4f-47e6-b7b2-88c8e6abdfca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure vol_attrition_ytd_num =
+			
+			
+			Var a=calculate([Leavers_ytd_maxmonth],'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			
+			return a
+		formatString: 0
+		lineageTag: 3be02c53-4cd4-4bfa-8a8c-40a0443bbe0f
+
+	measure H-perform_vol_leavers_ytd = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[high_performer_flag] = TRUE(), 'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary")
+			RETURN if(a<>0,a,0)
+			
+			```
+		formatString: 0
+		lineageTag: dd206f50-f2d0-41fd-8794-2397e1813da8
+
+	measure vol_potential_leavers_ytd = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[Potential] = 1, 'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary")
+			
+			RETURN if(a<>0,a,0)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 3bba5cc9-3ff2-47ea-a04d-e3b9d935deec
+
+	measure 'PVM bridge' = ```
+			
+			
+			Var Yearstart=-CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Jan")+CALCULATE(SUM('gdm f_employees_per_month'[leavers_mm]), 'gdm f_employees_per_month'[month_short] = "Jan")+CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Jan")
+			
+			Var	Leavers_Jan = CALCULATE(SUM('gdm f_employees_per_month'[leavers_mm]), 'gdm f_employees_per_month'[month_short] = "Jan")
+			Var	Leavers_Feb = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Feb")
+			Var	Leavers_Mar = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Mar") 
+			Var	Leavers_Apr = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Apr") 
+			Var	Leavers_May = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "May") 
+			Var	Leavers_Jun = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Jun")
+			Var	Leavers_Jul = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Jul") 
+			Var	Leavers_Aug = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Aug") 
+			Var	Leavers_Sep = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Sep") 
+			Var	Leavers_Oct = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Oct") 
+			Var	Leavers_Nov = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Nov")
+			Var	Leavers_Dec = CALCULATE(SUM('gdm f_employees_per_month'[leavers_ytd]), 'gdm f_employees_per_month'[month_short] = "Dec")
+			
+			Var Headcount_Jan=CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Jan")
+			Var Headcount_Feb = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Feb")
+			Var Headcount_Mar = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Mar")
+			Var Headcount_Apr = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Apr")
+			Var Headcount_May = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "May")
+			Var Headcount_Jun = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Jun")
+			Var Headcount_Jul = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Jul")
+			Var Headcount_Aug = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Aug")
+			Var Headcount_Sep = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Sep")
+			Var Headcount_Oct = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Oct")
+			Var Headcount_Nov = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Nov")
+			Var Headcount_Dec = CALCULATE(SUM('gdm f_employees_per_month'[headcount]), 'gdm f_employees_per_month'[month_short] = "Dec")
+			
+			
+			Var	Joiners_Jan = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Jan")+Yearstart
+			Var	Joiners_Feb = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Feb")+Joiners_Jan
+			Var	Joiners_Mar = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Mar")+Joiners_Feb
+			Var Joiners_Apr = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Apr") + Joiners_Mar
+			Var Joiners_May = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "May") + Joiners_Apr
+			Var Joiners_Jun = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Jun") + Joiners_May
+			Var Joiners_Jul = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Jul") + Joiners_Jun
+			Var Joiners_Aug = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Aug") + Joiners_Jul
+			Var Joiners_Sep = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Sep") + Joiners_Aug
+			Var Joiners_Oct = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Oct") + Joiners_Sep
+			Var Joiners_Nov = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Nov") + Joiners_Oct
+			Var Joiners_Dec = CALCULATE(SUM('gdm f_employees_per_month'[joiners_mm]), 'gdm f_employees_per_month'[month_short] = "Dec") + Joiners_Nov
+			
+			
+			
+			return
+			switch(
+			    SELECTEDVALUE('Walk'[Walksort]),
+			    0,
+			    IF(
+			        ISBLANK(Headcount_Jan),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", 0,
+			            "Joiners", Yearstart,
+			            Yearstart
+			        )
+			    ),
+			    1,
+			    IF(
+			        ISBLANK(Headcount_Jan),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -Leavers_Jan,
+			            "Joiners", Joiners_Jan,
+			            Headcount_Jan
+			        )
+			    ),
+			    2,
+			    IF(
+			        ISBLANK(Headcount_Feb),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Feb,
+			            "Joiners", Joiners_Feb,
+			            Headcount_Feb
+			        )
+			    ),
+			    3,
+			    IF(
+			        ISBLANK(Headcount_Mar),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Mar,
+			            "Joiners", Joiners_Mar,
+			            Headcount_Mar
+			        )
+			    ),
+			    4,
+			    IF(
+			        ISBLANK(Headcount_Apr),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Apr,
+			            "Joiners", Joiners_Apr,
+			            Headcount_Apr
+			        )
+			    ),
+			    5,
+			    IF(
+			        ISBLANK(Headcount_May),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_May,
+			            "Joiners", Joiners_May,
+			            Headcount_May
+			        )
+			    ),
+			    6,
+			    IF(
+			        ISBLANK(Headcount_Jun),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Jun,
+			            "Joiners", Joiners_Jun,
+			            Headcount_Jun
+			        )
+			    ),
+			    7,
+			    IF(
+			        ISBLANK(Headcount_Jul),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Jul,
+			            "Joiners", Joiners_Jul,
+			            Headcount_Jul
+			        )
+			    ),
+			    8,
+			    IF(
+			        ISBLANK(Headcount_Aug),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Aug,
+			            "Joiners", Joiners_Aug,
+			            Headcount_Aug
+			        )
+			    ),
+			    9,
+			    IF(
+			        ISBLANK(Headcount_Sep),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Sep,
+			            "Joiners", Joiners_Sep,
+			            Headcount_Sep
+			        )
+			    ),
+			    10,
+			    IF(
+			        ISBLANK(Headcount_Oct),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Oct,
+			            "Joiners", Joiners_Oct,
+			            Headcount_Oct
+			        )
+			    ),
+			    11,
+			    IF(
+			        ISBLANK(Headcount_Nov),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Nov,
+			            "Joiners", Joiners_Nov,
+			            Headcount_Nov
+			        )
+			    ),
+			    12,
+			    IF(
+			        ISBLANK(Headcount_Dec),
+			        BLANK(),
+			        switch(
+			            SELECTEDVALUE(PVM[PVM]),
+			            "Leavers", -1*Leavers_Dec,
+			            "Joiners", Joiners_Dec,
+			            Headcount_Dec
+			        )
+			    )
+			)
+			
+			
+			```
+		formatString: #,0
+		lineageTag: eca96e3b-e735-4f3b-b411-fbb1d02400a0
+
+	measure Headcount_ytd_maxmonth1 =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Return if(a<>0,a,0)
+		formatString: #,0
+		lineageTag: 5d8f7903-ed29-4be4-81cc-85e615943cf7
+
+	measure female1 = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate([Headcount_ytd_maxmonth],'gdm f_employees_per_month'[sex]="F")
+			return a
+			
+			```
+		formatString: 0
+		lineageTag: 442c05aa-af93-48e7-9a60-cbae2151e5e6
+
+	measure joiners_ytd_maxmonth1 = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[joiners_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0) 
+			```
+		formatString: #,0
+		lineageTag: f8787fe2-3109-4a0e-b23d-430d4119f93c
+
+	measure Leavers_ytd_maxmonth1 =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0)
+		formatString: #,0
+		lineageTag: 625d0393-ccbe-4499-9451-8ab2dd0237d2
+
+	measure total_attrition_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var min_month=calculate(min('gdm f_employees_per_month'[month]),all('gdm f_employees_per_month'[month_short]))
+			
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			Var b1=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month,all('gdm f_employees_per_month'[month_short]))
+			Var b=(b1+b2)/2
+			
+			return if(b<>0,a/b,0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: f39aa4c4-c35e-4854-88d7-b4864859f290
+
+	measure Check = ```
+			
+			-sum('gdm f_employees_per_month'[leavers_ytd])+sum('gdm f_employees_per_month'[joiners_ytd])+3734
+			
+			
+			```
+		formatString: 0
+		lineageTag: bbf69d1e-ecf6-427f-a953-34a5354ff57c
+
+	measure Delta = [joiners_ytd_maxmonth]-[Leavers_ytd_maxmonth]
+		formatString: 0
+		lineageTag: 9f428b37-1e68-4955-9ac0-c84b60120690
+
+	measure voluntary_attrition_1_% =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var min_month=calculate(min('gdm f_employees_per_month'[month]),all('gdm f_employees_per_month'[month_short]))
+			
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month,'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			Var b1=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month,all('gdm f_employees_per_month'[month_short]))
+			Var b=(b1+b2)/2
+			
+			
+			return if(b<>0,a/b,0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 7a8d76cc-f442-40ca-913f-226f7ebef1b6
+
+	measure vol_potential_leavers_ytd_1_% = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[Potential] = 1, 'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary")
+			VAR b = [Headcount_ytd_maxmonth]
+			VAR division_result = DIVIDE(a, b)
+			VAR c = FORMAT(division_result, "0.00%")
+			RETURN 
+			    IF(
+			        ISBLANK(division_result) || division_result = 0,
+			        "0 (0.00%)",
+			        a & " (" & c & ")"
+			    )
+			
+			```
+		lineageTag: 9dd909ac-1d7b-410b-8f59-d5c52972e5a6
+
+	measure female_vol_attrition_1_% = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[sex] = "F",'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			VAR division_result = DIVIDE(a, [Headcount_ytd_maxmonth])
+			VAR formatted_result = FORMAT(division_result, "#,0.00%")
+			RETURN 
+			    IF(
+			        ISBLANK(division_result) || division_result = 0 || a = 0,
+			        "0 (0.00%)",
+			        a & " (" & formatted_result & ")"
+			    )
+			
+			```
+		lineageTag: 9aa44ed9-ec43-4a85-8d82-80ec7e13e8ee
+
+	measure H-perform_vol_leavers_ytd_1_% = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[high_performer_flag] = TRUE(), 'gdm f_employees_per_month'[vol_unvol_flag] = "Voluntary")
+			VAR b = calculate(DISTINCTCOUNT('gdm w_hr_performance'[person_number]),    ALL('gdm f_employees_per_month'))
+			VAR division_result = DIVIDE(a, b)
+			VAR formatted_result = FORMAT(division_result, "0.00%")
+			RETURN 
+			    IF(
+			        a = 0 || ISBLANK(division_result) || division_result = 0,
+			        "0 (0.00%)",
+			        a & " (" & formatted_result & ")"
+			    )
+			
+			```
+		lineageTag: b8cf513f-84e5-417e-8df1-7d84b6383fd0
+
+	measure Headcount_ytd_maxmonth2 = ```
+			
+			VAR CurrentYear = calculate(Min('gdm f_employees_per_month'[year]),REMOVEFILTERS('gdm f_employees_per_month'))
+			VAR a =calculate(sum('gdm f_employees_per_month'[headcount]),ALLEXCEPT('gdm f_employees_per_month','gdm f_employees_per_month'[month]))
+			return a
+			
+			```
+		formatString: 0
+		lineageTag: de8a6552-d707-472d-b88d-68022e0bb585
+
+	measure Leavers_ytd_maxmonth_negative =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=-calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month)
+			return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: 3827c68c-a085-4567-b761-70cbdd200c8e
+
+	measure joiners_last_year_ytd_maxmonth = ```
+			
+			VAR max_month = MAX('gdm f_employees_per_month'[month])
+			VAR last_year=max('gdm f_employees_per_month'[year])-1
+			VAR joiners_ly_ytd =
+			    CALCULATE(
+			        sum('gdm f_employees_per_month'[joiners_ytd]),
+			        'gdm f_employees_per_month'[year]=last_year,
+			        ALL('gdm f_employees_per_month'[year]), // Removes the year filter
+			        ALL('gdm f_employees_per_month'[month_short])
+			        )
+			    
+			RETURN
+			joiners_ly_ytd
+			
+			```
+		formatString: 0
+		lineageTag: 9ecc5669-5bf5-4e9b-923c-3c00f1f88fce
+
+	measure Joiners_% =
+			
+			Var a=[joiners_ytd_maxmonth]
+			Var b=[joiners_last_year_ytd_maxmonth]
+			
+			Return if(b<>0,a/b-1,0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ef0e1ed1-4a94-4836-a116-c8a01c769983
+
+	measure leavers_last_year_ytd_maxmonth = ```
+			
+			VAR max_month = MAX('gdm f_employees_per_month'[month])
+			VAR last_year=max('gdm f_employees_per_month'[year])-1
+			VAR leavers_ly_ytd =
+			    CALCULATE(
+			        sum('gdm f_employees_per_month'[leavers_ytd]),
+			        'gdm f_employees_per_month'[year]=last_year,
+			        ALL('gdm f_employees_per_month'[year]), // Removes the year filter
+			        ALL('gdm f_employees_per_month'[month_short])
+			
+			        )
+			    
+			RETURN
+			leavers_ly_ytd
+			```
+		formatString: 0
+		lineageTag: 9cee9f7f-ff4a-48f3-8e9e-eb3aad586aca
+
+	measure Leavers_% =
+			
+			Var a=[leavers_ytd_maxmonth]
+			Var b=[leavers_last_year_ytd_maxmonth]
+			
+			Return if(b<>0,a/b-1)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 83f56efc-0576-4b69-80b7-90598a671c16
+
+	measure Delta_ytd_withsigns =
+			
+			Var a=[joiners_ytd_maxmonth]-[Leavers_ytd_maxmonth]
+			Return if(a<>0,if(a>0,"+" & a,a),0)
+		lineageTag: e80b543e-00b9-4c6c-88c8-89d710e1441c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure N/A = "N/A"
+		lineageTag: 6309cb82-3433-4a5a-ab19-1653ee0f81e5
+
+	measure Saudi_delta =
+			
+			Var a = calculate([joiners_ytd_maxmonth]-[Leavers_ytd_maxmonth],'gdm f_employees_per_month'[nationality]="Saudi Arabia")
+			return if(a>0,"+" & a,a)
+		lineageTag: 6ef95fd0-deb7-474c-a846-3838234f50cb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Measure 3' = ```
+			
+			CALCULATE(
+			    SUM('gdm f_employees_per_month'[headcount]), 
+			    ALL('gdm f_employees_per_month'[month_short])
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 1ba48582-6e57-43a2-bdf9-997535ee7f5c
+
+	measure Delta_mm_withdummymonth_corporate =
+			
+			Var a=calculate(-sum('gdm f_employees_per_month'[leavers_mm])+sum('gdm f_employees_per_month'[joiners_mm]),'gdm d_employees_new'[corp_prj_flag]="Corporate")
+			Return if(a<>0,a," ")
+		lineageTag: 6c895da6-1115-4ff2-bac1-ece3a3e15aa3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Blank HC distribution' = "                      "
+		lineageTag: 09959ab6-1e6f-48b2-bd49-7e1c81755d51
+
+	measure 'Blank joiners/leaver by level' = "                  "
+		lineageTag: c89a9bec-1877-4ec6-bf19-791cb12edb8e
+
+	measure 'Blank joiners/leaver' = "                     "
+		lineageTag: 649d024c-f78b-4fc3-8593-849dcc402c36
+
+	measure 'Blank diversity' = "                    "
+		lineageTag: e95138de-4221-4f4d-85a7-d707b7ec6ad1
+
+	measure Measure
+		lineageTag: d2528bab-81bb-418d-8120-3e8c8c3be730
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure 'Blank Corp/Proj' = "      "
+		lineageTag: 4d95a82c-8fb3-4fa6-97eb-50283cdb039e
+
+	measure 'Blank diversity nationals' = "                 "
+		lineageTag: 266c7453-dfbf-4c3a-a259-a566095e4a7a
+
+	measure Corp_headcount_ytd_maxmonth =
+			
+			calculate([Headcount_ytd_maxmonth],'gdm f_employees_per_month'[corp_prj_flag]="Corporate")
+		formatString: #,0
+		lineageTag: d6c94ff9-0d18-430d-9dce-01fb06c70e24
+
+	measure 72% = "72%"
+		lineageTag: ea289203-beb9-402b-9a2e-5ad4a32e7c58
+
+	measure 42days = "42 days"
+		lineageTag: 4205f6b1-7f32-4ae4-b0f9-2dd48f545d3f
+
+	measure female =
+			
+			VAR a = CALCULATE([Headcount_ytd_maxmonth], 'gdm f_employees_per_month'[sex] = "F")
+			return a
+		formatString: 0
+		lineageTag: 3ed13914-147a-46c5-b03c-91eff10254ac
+
+	measure Max_HC_for_chart_levels =
+			
+			Var a=calculate([joiners_ytd_maxmonth])
+			Var b=calculate([Leavers_ytd_maxmonth])
+			return max(a,b)*1.2
+		lineageTag: d5385415-c9a1-4943-b3a4-0ee4eb7d6e78
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure delta_vol_attrition =
+			
+			Var max_Year=max('gdm f_employees_per_month'[year])
+			Var max_date=max('gdm f_employees_per_month'[ref_date])
+			Var prevmonth=PREVIOUSMONTH('gdm f_employees_per_month'[ref_date])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),all('gdm f_employees_per_month'),prevmonth)
+			return a
+		formatString: 0
+		lineageTag: d0f4503b-0842-47c0-9f55-1e6ce70896c7
+
+	measure Corp/HC =
+			
+			calculate([Headcount_ytd_maxmonth],'gdm f_employees_per_month'[corp_prj_flag]="Corporate") & "/" & calculate([Headcount_ytd_maxmonth],all('gdm f_employees_per_month'[corp_prj_flag]))
+		lineageTag: 3f9c6abe-d5fa-4b57-8d34-7f52de4aa9a8
+
+	measure Lower_Chart_limit_hc = [Headcount_ytd_maxmonth]/4
+		lineageTag: e20ccf72-4b65-43ec-8368-7ef6f4e9fc39
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure female_trend_%_count_label =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate([Headcount_ytd_maxmonth],'gdm f_employees_per_month'[sex]="F")
+			Var b=[Corp_headcount_ytd_maxmonth]
+			Var c=if(b<>0,a/b,0)
+			return
+			IF(
+			    SELECTEDVALUE('Table'[Slicer]) = "Count",
+			    [female],
+			    FORMAT([female_%_nonformatted_trend] * 100, "0.#") & "%"
+			)
+		formatString: 0.0
+		lineageTag: 0219c56a-5fa5-4bc4-a2e5-b8b8f0ba7dfd
+
+	measure female_trend_%_count =
+			
+			if(SELECTEDVALUE('Table'[Slicer])="Count",[female],[female_%_nonformatted_trend])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8c076b53-e1cb-4254-9448-da60cdf3f843
+
+	measure nationalisation_trend_%_count =
+			
+			if(selectedvalue('Table'[Slicer])="Count",
+			[Headcount_ytd_maxmonth_nationals],
+			[nationalisation_%])
+		formatString: 0
+		lineageTag: 8e7fc2b4-7c58-44e4-884a-48715c0b06b3
+
+	measure Nationals_% =
+			
+			Var a=[Headcount_ytd_maxmonth_nationals]
+			Var b=[Headcount_ytd_maxmonth]
+			return if(b<>0,a/b,0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 80afdd23-f490-4ab7-bbe2-ed56c99494f2
+
+	measure nationalisation_trend_%_count_label = ```
+			
+			Var a=[nationalisation_%]
+			return IF(
+			    SELECTEDVALUE('Table'[Slicer]) = "Count",
+			    [Headcount_ytd_maxmonth_nationals],
+			    FORMAT([nationalisation_%], "0.0%")
+			)
+			
+			```
+		lineageTag: f6fc3dff-2653-4234-97ba-0aa36e33c6c6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure female_1% = ```
+			
+			VAR a = CALCULATE([Headcount_ytd_maxmonth], 'gdm f_employees_per_month'[sex] = "F")
+			VAR division_result = DIVIDE(a, [Headcount_ytd_maxmonth])
+			VAR formatted_result = FORMAT(division_result, "#,0.0%")
+			RETURN 
+			    IF(
+			        ISBLANK(division_result) || division_result = 0 || a = 0,
+			        "0 (0.0%)",
+			        formatted_result
+			    )
+			
+			```
+		lineageTag: dd17fbd7-8993-4564-8f1e-e5f1040cee98
+
+	measure female_visual_%_count =
+			
+			if(SELECTEDVALUE('Table'[Slicer])="Count",[female],[female_%_nonformatted_visual])
+		lineageTag: 6da9b5e5-b0fa-45c5-a239-ee163696a439
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure female_%_nonformatted_visual = ```
+			
+			Var a=calculate([Corp_headcount_ytd_maxmonth],'gdm f_employees_per_month'[sex]="F")
+			Var b=calculate([Corp_headcount_ytd_maxmonth])
+			return if(b<>0,a/b,0)
+			
+			```
+		lineageTag: f402749a-c8de-45a5-8def-e937ac6c7a01
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure female_visual_%_count_label = ```
+			
+			IF(
+			    SELECTEDVALUE('Table'[Slicer]) = "Count",
+			    [female],
+			    FORMAT([female_%_nonformatted_visual],"0.00%")
+			)
+			
+			```
+		lineageTag: 3f12d6f2-b337-414f-a40f-7d6f9dd8e9a3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure nationalisation_visual_%_count =
+			
+			if(SELECTEDVALUE('Table'[Slicer])="Count",[Headcount_ytd_maxmonth_nationals],
+			[nationalisation_visual_%])
+		lineageTag: 50545356-eb1f-407a-869b-db683cf16c2f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure nationalisation_visual_% =
+			
+			Var a=calculate([Corp_headcount_ytd_maxmonth],'gdm f_employees_per_month'[nationalisation]=1)
+			Var b=calculate([Corp_headcount_ytd_maxmonth])
+			return if(b<>0,a/b,0)
+		lineageTag: b4a05fd7-5d59-40e8-8859-447f4abb61e3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure nationalisation_visual_%_count_label =
+			
+			Var a=[nationalisation_visual_%]
+			return if(SELECTEDVALUE('Table'[Slicer])="Count",[Headcount_ytd_maxmonth_nationals],format(a,"0.00%"))
+		lineageTag: 3a05dd12-23fe-4df5-b529-cd6f11c7d5e3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure saudi_vol_attrition_1_% = ```
+			
+			VAR a = CALCULATE([Leavers_ytd_maxmonth], 'gdm f_employees_per_month'[country_name] = "Saudi Arabia",'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			VAR division_result = DIVIDE(a, [Headcount_ytd_maxmonth])
+			VAR formatted_result = FORMAT(division_result, "#,0.00%")
+			RETURN 
+			    IF(
+			        ISBLANK(division_result) || division_result = 0 || a = 0,
+			        "0 (0.00%)",
+			        a & " (" & formatted_result & ")"
+			    )
+			
+			```
+		lineageTag: 4617c571-f25b-48af-87ea-9afbe8a81434
+
+	measure 'Blank Leavers' = " "
+		lineageTag: e1d1bcf0-02e5-4446-8d76-a6c7e5c0ab41
+
+	measure 'Blank Female' = " "
+		lineageTag: 76aea87c-5d6f-48de-961d-a12006e5063d
+
+	measure voluntary_attrition_2_% = ```
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var min_month=calculate(min('gdm f_employees_per_month'[month]),all('gdm f_employees_per_month'[month_short]))
+			
+			Var a=calculate(sum('gdm f_employees_per_month'[leavers_ytd]),'gdm f_employees_per_month'[month]=max_month,'gdm f_employees_per_month'[vol_unvol_flag]="Voluntary")
+			Var b1=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month)
+			Var b2=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=min_month,all('gdm f_employees_per_month'[month_short]))
+			Var b=(b1+b2)/2
+			
+			VAR division_result = DIVIDE(a, b)
+			VAR formatted_result = FORMAT(division_result, "0.00%")
+			RETURN 
+			    IF(
+			        a = 0 || ISBLANK(division_result) || division_result = 0,
+			        "0 (0.00%)",
+			        a & " (" & formatted_result & ")"
+			    )
+			```
+		lineageTag: bee34e6a-84e5-4a9c-9e26-4eeb31d9a41a
+
+	measure Headcount_ytd_maxmonth_exclusion_corp =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month,all('gdm f_employees_per_month'[corp_prj_flag]),'gdm f_employees_per_month'[corp_prj_flag]="Corporate")
+			Return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: 36898fe7-9502-4096-8458-a6fbd12a61fc
+
+	measure Headcount_ytd_maxmonth_exclusion_project =
+			
+			Var max_month=max('gdm f_employees_per_month'[month])
+			Var a=calculate(sum('gdm f_employees_per_month'[headcount]),'gdm f_employees_per_month'[month]=max_month,all('gdm f_employees_per_month'[corp_prj_flag]),'gdm f_employees_per_month'[corp_prj_flag]="Project")
+			Return if(a<>0,a,0)
+		formatString: 0
+		lineageTag: 91c87e42-1346-4896-850d-16912052210f
+
+	measure Avg_age1 = ```
+			
+			Var b=CALCULATE(AVERAGE('gdm f_employees_per_month'[age]),'gdm f_employees_per_month'[age]>1,'gdm f_employees_per_month'[headcount]=1)
+			Var a=format(b,"#,0.0") & if(AVERAGE('gdm d_employees_new'[age])>0, " yrs","")
+			return 
+			if(b>0,a,"N/A")
+			
+			```
+		lineageTag: 27933dac-f9f3-45c7-863e-43f49c55a00a
+
+	column ref_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b12b61bc-fb88-4f82-a505-9506a73d11ef
+		summarizeBy: none
+		sourceColumn: ref_date
+
+		variation Variation
+			isDefault
+			relationship: 6bcc305a-9e1c-4b8e-ae94-2d172162c736
+			defaultHierarchy: LocalDateTable_55aaa082-8a9e-4de6-ac7a-12581019cf7c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 64a8d34c-7cf2-4e32-846d-5b1f336822c5
+		summarizeBy: sum
+		sourceColumn: year
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: double
+		formatString: 0
+		lineageTag: 55d892ef-7575-439d-a900-b7ab4d888f5a
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_number
+		dataType: string
+		lineageTag: d58d17d6-a8d2-46ec-91c6-42109bca9ee9
+		summarizeBy: none
+		sourceColumn: person_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column display_name
+		dataType: string
+		lineageTag: 988ebefc-e648-453e-95b1-320c030f0b6a
+		summarizeBy: none
+		sourceColumn: display_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column hire_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 78f83e79-f6d7-416d-9cda-e6fa9f5cbdf4
+		summarizeBy: none
+		sourceColumn: hire_date
+
+		variation Variation
+			isDefault
+			relationship: 5d4adc2c-4838-484f-b4ce-236e9d8ab5a0
+			defaultHierarchy: LocalDateTable_b0f9b3de-a737-47d4-a0e6-394651ed997a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column leaving_type
+		dataType: string
+		lineageTag: f1368c9a-00c2-42b3-9528-df72fd813c3b
+		summarizeBy: none
+		sourceColumn: leaving_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_termination_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: df4066b8-6055-4b36-b7f0-cec8aa1d7c09
+		summarizeBy: none
+		sourceColumn: actual_termination_date
+
+		variation Variation
+			isDefault
+			relationship: 061f3d63-d286-453c-911a-d9514c77da3c
+			defaultHierarchy: LocalDateTable_0a14bc88-7240-4d65-b0ed-b0ac2e14d3fe.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column colleague_type
+		dataType: string
+		lineageTag: 7eb574d7-30d7-4e9c-adc4-3fb354532e86
+		summarizeBy: none
+		sourceColumn: colleague_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column worker_type
+		dataType: string
+		lineageTag: 03e02b3e-8fc9-4365-9b5e-d0f0bbea5a37
+		summarizeBy: none
+		sourceColumn: worker_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ori
+		dataType: string
+		lineageTag: 140f2791-dba1-48f7-9cd9-393851198ac1
+		summarizeBy: none
+		sourceColumn: ori
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_entity
+		dataType: string
+		lineageTag: 2baa5cad-47e9-4d25-9c2e-b159ba9fc8dd
+		summarizeBy: none
+		sourceColumn: parent_entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column corp_prj_flag
+		dataType: string
+		lineageTag: c0b8f70c-d4fa-4bd0-b116-5512bdfad491
+		summarizeBy: none
+		sourceColumn: corp_prj_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 9e0fafb0-3758-4fcd-886d-bc7d83d5d050
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: 211ff61e-f814-4fc9-be23-93a57c5af65e
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality
+		dataType: string
+		lineageTag: 8463bab4-55ad-46e6-bfd9-38d6b7572bea
+		summarizeBy: none
+		sourceColumn: nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	column sex
+		dataType: string
+		lineageTag: d76ed0da-19aa-4977-ac4b-97d9544f72cb
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_employer
+		dataType: string
+		lineageTag: 45db76a9-9bb4-4adc-90d5-566da23321f4
+		summarizeBy: none
+		sourceColumn: legal_employer
+
+		annotation SummarizationSetBy = Automatic
+
+	column bu_fu
+		dataType: string
+		lineageTag: cf487c8c-d100-4894-a811-c7ade0fe8c85
+		summarizeBy: none
+		sourceColumn: bu_fu
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: 73ed810a-3b58-47f3-924d-ab67be435bfc
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	column grade
+		dataType: string
+		lineageTag: db3ea11b-dc6b-4905-8393-a6cb0933cbde
+		summarizeBy: none
+		sourceColumn: grade
+
+		annotation SummarizationSetBy = Automatic
+
+	column job
+		dataType: string
+		lineageTag: 7046156b-6e8d-4d1a-ad8e-796c91262bdd
+		summarizeBy: none
+		sourceColumn: job
+
+		annotation SummarizationSetBy = Automatic
+
+	column vol_unvol_flag
+		dataType: string
+		lineageTag: fed409e5-4e73-4c54-a5ab-fe7602ec9b6b
+		summarizeBy: none
+		sourceColumn: vol_unvol_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column headcount
+		dataType: int64
+		formatString: 0
+		lineageTag: b1e69f20-718c-4f4a-8ba0-2c25e56f6afb
+		summarizeBy: sum
+		sourceColumn: headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers_mm
+		dataType: int64
+		formatString: 0
+		lineageTag: ed6acd7c-0e62-4a8b-89f0-69e01eb4bf96
+		summarizeBy: sum
+		sourceColumn: leavers_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers_ytd
+		dataType: int64
+		formatString: 0
+		lineageTag: 56eb3779-8a51-4fd5-b0cd-d6fc0b8a83d3
+		summarizeBy: sum
+		sourceColumn: leavers_ytd
+
+		annotation SummarizationSetBy = Automatic
+
+	column joiners_mm
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cc88f33-3f49-41be-ba9e-69fa25dae6b0
+		summarizeBy: sum
+		sourceColumn: joiners_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column joiners_ytd
+		dataType: int64
+		formatString: 0
+		lineageTag: 7172b756-34bd-436e-ad97-e17d268fd58d
+		summarizeBy: sum
+		sourceColumn: joiners_ytd
+
+		annotation SummarizationSetBy = Automatic
+
+	column high_performer_flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 30bd1d7d-178c-449c-91e8-d81f5a0900de
+		summarizeBy: none
+		sourceColumn: high_performer_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_short = format('gdm f_employees_per_month'[ref_date],"MMM")
+		dataType: string
+		lineageTag: de5344a7-0e6c-46d4-9204-b58a90c267b8
+		summarizeBy: none
+		sortByColumn: month
+
+		changedProperty = SortByColumn
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter = "Q" & quarter('gdm f_employees_per_month'[ref_date].[Date])
+		lineageTag: b661b5b0-1f94-4179-b341-eb290c70d5f4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Blank1 = ""
+		lineageTag: 1212ddc5-55f2-414e-9eb3-a02a8baa98cb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column level
+		dataType: string
+		lineageTag: e3d20ea6-fa23-42b6-9831-89371bdfcd6d
+		summarizeBy: none
+		sourceColumn: level
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotions_mm
+		dataType: int64
+		formatString: 0
+		lineageTag: 922acbb7-87b6-465b-afe0-fd07989ce185
+		summarizeBy: sum
+		sourceColumn: promotions_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotions_ytd
+		dataType: int64
+		formatString: 0
+		lineageTag: c689a4e7-1fda-43c0-a7be-9462001f3bd5
+		summarizeBy: sum
+		sourceColumn: promotions_ytd
+
+		annotation SummarizationSetBy = Automatic
+
+	column successions_mm
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d832de7-0b48-4473-8764-7d8eac66cabf
+		summarizeBy: sum
+		sourceColumn: successions_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column successions_ytd
+		dataType: int64
+		formatString: 0
+		lineageTag: 6169b4be-70b3-48e4-8a07-0aa2302fad43
+		summarizeBy: sum
+		sourceColumn: successions_ytd
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary_actions_mm
+		dataType: int64
+		formatString: 0
+		lineageTag: 84c92e18-3a12-4e7d-be74-763825174e66
+		summarizeBy: sum
+		sourceColumn: salary_actions_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary_actions_ytd
+		dataType: int64
+		formatString: 0
+		lineageTag: 3792b5ab-5680-4533-a135-d9e1af18ce13
+		summarizeBy: sum
+		sourceColumn: salary_actions_ytd
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality1 =
+			
+			if('gdm f_employees_per_month'[nationality]="Saudi Arabia","Saudi","Other")
+		lineageTag: 9932f3e5-d1c7-4046-b0a9-9086b94d77ab
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type =
+			
+			if('gdm f_employees_per_month'[joiners_mm]=1,"Joiner",if('gdm f_employees_per_month'[leavers_mm]=1,"Leavers",if('gdm f_employees_per_month'[headcount]=1 && 'gdm f_employees_per_month'[leavers_mm]=0 && 'gdm f_employees_per_month'[joiners_mm]=0,"Joiner")))
+		lineageTag: d619b3f6-0315-4f7e-9ad4-ddc5712812ea
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active =
+			
+			if('gdm f_employees_per_month'[leavers_mm]=1,1,if('gdm f_employees_per_month'[joiners_mm]=1,1,if('gdm f_employees_per_month'[headcount]=1,1,0)))
+		formatString: 0
+		lineageTag: bb9c4bb3-0a70-418f-a4ff-7dd6ea8af267
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential =
+			
+			Var a=if(left('gdm f_employees_per_month'[grade],1)="E",1,0)
+			Return a
+		formatString: 0
+		lineageTag: fab2540b-38c7-4a16-8567-eab95698a2c2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Join/Leave =
+			
+			if('gdm f_employees_per_month'[joiners_mm]=1,"Joiner",if('gdm f_employees_per_month'[leavers_mm]=1,"Leaver","N/A"))
+		lineageTag: e339a175-0107-4636-a12e-542892cf9881
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Joiner/Leaver =
+			
+			if('gdm f_employees_per_month'[joiners_mm]=1,"Joiner",if('gdm f_employees_per_month'[leavers_mm]=1,"Leavers","Other"))
+		lineageTag: 3dc4fc49-6bdf-4728-aafe-8ee44c7fc423
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column
+		type: calculated
+		lineageTag: 75b076ea-6b4a-4252-9f9c-87553ed5ed09
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	column Gender_complete =
+			
+			if('gdm f_employees_per_month'[sex]="M","Male",if('gdm f_employees_per_month'[sex]="F","Female","N/A"))
+		lineageTag: 19b8aaab-3f24-4c68-80b9-c789b4e7cd5e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column seniority_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2eb52664-be0e-46cb-8b89-ad47e9055e69
+		summarizeBy: none
+		sourceColumn: seniority_date
+
+		variation Variation
+			isDefault
+			relationship: 2ed07ae0-c9c4-43e0-ae7e-bd4a928add67
+			defaultHierarchy: LocalDateTable_370368a7-4ec2-47e6-990b-46e402c50e33.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column corp_proj_flag1 = 'gdm f_employees_per_month'[corp_prj_flag]
+		lineageTag: d9babf58-fb0f-4f48-bc76-74e8d1a86286
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Joiner_or_Leaver =
+			
+			if('gdm f_employees_per_month'[joiners_ytd]=1 || 'gdm f_employees_per_month'[leavers_ytd]=1,1,0)
+		formatString: 0
+		lineageTag: d5949b52-8447-40a1-a788-32034e4b4cde
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: daf6a36d-9f38-405b-9f15-8ed8ee44a170
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_range_custom =
+			
+			if('gdm f_employees_per_month'[age]<25,"<25",
+			if('gdm f_employees_per_month'[age]<35 && 'gdm f_employees_per_month'[age]>=25,"25-35",
+			if('gdm f_employees_per_month'[age]<45 && 'gdm f_employees_per_month'[age]>=35 ,"35-45",
+			if('gdm f_employees_per_month'[age]<55 && 'gdm f_employees_per_month'[age]>=45 ,"45-55",
+			if('gdm f_employees_per_month'[age]>=55 ,"55+",""
+			)))
+			))
+		lineageTag: 47c93929-da74-4f15-9c03-6a87068274f5
+		summarizeBy: none
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column saudisation
+		dataType: int64
+		formatString: 0
+		lineageTag: dedfc41e-582a-4474-a960-4ee80af7d415
+		summarizeBy: sum
+		sourceColumn: saudisation
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationalisation
+		dataType: int64
+		formatString: 0
+		lineageTag: b277a32e-0b84-4667-8772-6c3a7d659e32
+		summarizeBy: sum
+		sourceColumn: nationalisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sort_age_range =
+			
+			if('gdm f_employees_per_month'[age]<25,1,
+			if('gdm f_employees_per_month'[age]<35,2,
+			if('gdm f_employees_per_month'[age]<45,3,
+			if('gdm f_employees_per_month'[age]<55,4,5
+			))))
+		formatString: 0
+		lineageTag: c9844e0b-f598-41fe-8453-8608cb9429ab
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column assignment_status
+		dataType: string
+		lineageTag: 12d337d0-69a1-425e-9a62-07618f492f48
+		summarizeBy: none
+		sourceColumn: assignment_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: f90d394d-d604-4cf0-a672-4721403c97da
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column emergency_phone
+		dataType: string
+		lineageTag: 4bf38018-ee57-4004-bbcf-f76e9556784f
+		summarizeBy: none
+		sourceColumn: emergency_phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Custom_Country =
+			
+			if('gdm f_employees_per_month'[country_name]="Saudi Arabia","KSA",if('gdm f_employees_per_month'[country_name]="United Arab Emirates","UAE","Others"))
+		lineageTag: 3ec5c3d0-1f6a-4f28-ade2-13abd63dae28
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_of_birth
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 54a21f43-f113-4ab7-94ea-3ebaa9859918
+		summarizeBy: none
+		sourceColumn: date_of_birth
+
+		variation Variation
+			isDefault
+			relationship: 6d769d2a-3d15-46ce-8fcb-788de07674cc
+			defaultHierarchy: LocalDateTable_a145495f-b4b1-4dbe-9c5b-bead1a939af5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Exclude_saudisation = ```
+			
+			IF (
+			    NOT (
+			        'gdm f_employees_per_month'[worker_type] IN {
+			            "Other Sponsor",
+			            "Haka",
+			            "Jadarah",
+			            "Elite",
+			            "Fan Rabigh"
+			        }
+			    ),
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: f6613471-b7b8-4b4d-8ac1-a424ffa155c4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column mail
+		dataType: string
+		lineageTag: b930d39a-baa6-46b5-90ae-a3928a744dfa
+		summarizeBy: none
+		sourceColumn: mail
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: string
+		lineageTag: da4dcce2-38e6-46a5-adad-3ba796f9374b
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: db473eb3-91fb-4e8d-825c-2a85aa20ae67
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Column 2' = 'gdm f_employees_per_month'[bu_fu]
+		lineageTag: 7cd36b1c-5f48-4097-b675-864df166094c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column costcenter
+		dataType: string
+		lineageTag: a026abc5-4bfc-4d1e-b960-e812f30eb21c
+		summarizeBy: none
+		sourceColumn: costcenter
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'gdm f_employees_per_month' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("acwa-prod-psdb-acwadp.postgres.database.azure.com", "postgres"),
+				    gdm_f_employees_per_month = Source{[Schema="gdm",Item="f_employees_per_month"]}[Data],
+				    #"Replaced Value" = Table.ReplaceValue(gdm_f_employees_per_month,"","N/A",Replacer.ReplaceValue,{"bu_fu", "grade"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","","N/A",Replacer.ReplaceValue,{"worker_type", "parent_entity", "region", "country_name", "nationality", "sex", "bu_fu",  "grade", "job"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1",null,"N/A",Replacer.ReplaceValue,{"region", "country_name", "nationality", "legal_employer", "bu_fu", "department", "grade", "job"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","-","N/A",Replacer.ReplaceText,{"colleague_type", "worker_type", "parent_entity", "region", "country_name", "nationality", "sex","bu_fu", "grade", "job"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3",null,"N/A",Replacer.ReplaceValue,{"colleague_type", "worker_type", "parent_entity", "region", "country_name", "nationality", "sex", "legal_employer", "bu_fu", "department", "grade", "job"})
+				in
+				    #"Replaced Value4"
+
+	annotation PBI_ResultType = Table
+

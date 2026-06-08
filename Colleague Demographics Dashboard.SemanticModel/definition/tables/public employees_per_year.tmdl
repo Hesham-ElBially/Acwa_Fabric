@@ -1,0 +1,246 @@
+table 'public employees_per_year'
+	lineageTag: 88f12b85-ae3f-4393-b67d-f2a97a8314d6
+
+	column person_number
+		dataType: string
+		lineageTag: b37f8478-5cf5-40e0-a44a-2371de36662c
+		summarizeBy: none
+		sourceColumn: person_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_number
+		dataType: string
+		lineageTag: d31a2701-018a-4744-9f18-564d351d4fa1
+		summarizeBy: none
+		sourceColumn: manager_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_employer
+		dataType: string
+		lineageTag: a974c2b0-f0c0-4fbe-9dd8-dd9cb7c12e82
+		summarizeBy: none
+		sourceColumn: legal_employer
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 8426e2d8-516d-454b-963b-ab055806db4f
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column bu_fu
+		dataType: string
+		lineageTag: 7afb4784-3240-45ce-93e8-145f585c0360
+		summarizeBy: none
+		sourceColumn: bu_fu
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: string
+		lineageTag: 547a1f30-0766-4c0a-848d-097ccdb18f22
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: 26d2864e-9697-4c73-adb7-40a06721877c
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_cost_centre
+		dataType: string
+		lineageTag: 3a1005f5-11d1-41ac-8ed5-67ce3acadd83
+		summarizeBy: none
+		sourceColumn: department_cost_centre
+
+		annotation SummarizationSetBy = Automatic
+
+	column job
+		dataType: string
+		lineageTag: 676a5d24-b2bf-4013-89ea-4bdc7043612a
+		summarizeBy: none
+		sourceColumn: job
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_name
+		dataType: string
+		lineageTag: 859385bd-a9ed-4736-b7b7-f0ec15037849
+		summarizeBy: none
+		sourceColumn: manager_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_date
+		dataType: int64
+		formatString: 0
+		lineageTag: 8369973e-1457-4759-ba3b-2db1b67648a3
+		summarizeBy: sum
+		sourceColumn: year_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column init_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 68b83e3c-3ca8-4f02-896a-6166ce84b0f5
+		summarizeBy: sum
+		sourceColumn: init_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column hires
+		dataType: int64
+		formatString: 0
+		lineageTag: e27bcf8b-7129-4eb3-bcbe-e49b5c1851bb
+		summarizeBy: sum
+		sourceColumn: hires
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers
+		dataType: int64
+		formatString: 0
+		lineageTag: 725911fa-0a4f-4cbe-8339-1ef734eb8885
+		summarizeBy: sum
+		sourceColumn: leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 4788f793-adfe-42d9-8e4d-b813833ce72e
+		summarizeBy: sum
+		sourceColumn: end_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column ori
+		dataType: string
+		lineageTag: 847f68bc-0ee8-4b7d-9b08-1fa8e31bb3e2
+		summarizeBy: none
+		sourceColumn: ori
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: 43054063-61b4-435e-bf1a-304ba3167726
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_type
+		dataType: string
+		lineageTag: 5844d05f-03ad-472a-a216-87a890383dcc
+		summarizeBy: none
+		sourceColumn: company_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_entity
+		dataType: string
+		lineageTag: 5a90982e-3ddf-493d-b92c-4a6c688724fd
+		summarizeBy: none
+		sourceColumn: parent_entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationalisation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7f54ee16-db7e-42da-9c7b-f26929da7bfc
+		summarizeBy: none
+		sourceColumn: nationalisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column mc_member
+		dataType: string
+		lineageTag: 55484810-4edf-4e76-8fd4-f01f59780e46
+		summarizeBy: none
+		sourceColumn: mc_member
+
+		annotation SummarizationSetBy = Automatic
+
+	column reporting_matrix
+		dataType: string
+		lineageTag: e87622da-5c10-4600-816b-8b9ae5b33363
+		summarizeBy: none
+		sourceColumn: reporting_matrix
+
+		annotation SummarizationSetBy = Automatic
+
+	column leaving_reason
+		dataType: string
+		lineageTag: ddbe2eb7-7bcd-4e6f-9200-0181b7e1bde0
+		summarizeBy: none
+		sourceColumn: leaving_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column worker_type
+		dataType: string
+		lineageTag: 57e0fba9-afeb-4778-b35d-eb6011320aba
+		summarizeBy: none
+		sourceColumn: worker_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column grade
+		dataType: string
+		lineageTag: 8844d99a-03b7-47d4-aca5-ce1cea26316e
+		summarizeBy: none
+		sourceColumn: grade
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_leavers
+		dataType: int64
+		formatString: 0
+		lineageTag: 9356a1bc-1970-480e-8a2d-33be43715cff
+		summarizeBy: sum
+		sourceColumn: total_leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_corporate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 383313b8-a927-4156-a327-9d92fb9610aa
+		summarizeBy: none
+		sourceColumn: is_corporate
+
+		annotation SummarizationSetBy = Automatic
+
+	column reporting_group
+		dataType: string
+		lineageTag: 66192240-6b95-428f-b621-420d3ac1e49f
+		summarizeBy: none
+		sourceColumn: reporting_group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public employees_per_year-653e9a0f-0182-4697-a253-90e8603e3494' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("acwa-uaen-pdb01.postgres.database.azure.com", "data_centralized"),
+				    public_employees_per_year = Source{[Schema="public",Item="employees_per_year"]}[Data]
+				in
+				    public_employees_per_year
+
+	annotation PBI_ResultType = Table
+

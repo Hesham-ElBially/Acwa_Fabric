@@ -1,0 +1,230 @@
+table 'Overview of project'
+	lineageTag: a93230ea-128f-43fe-ab50-a8332bda795b
+
+	measure Strategy = COUNT('Overview of project'[Category of Project])/42
+		formatString: 0%;-0%;0%
+		lineageTag: 3992156f-2f4a-42fd-9e71-30b786ace812
+
+	measure Number_activated_project =
+			
+			var a=calculate(count('Overview of project'[Project Code ]),all('Project Performance'[Year ]),all('Project Performance'[Month]),
+			year('Overview of project'[Start Date ])=selectedvalue('Project Performance'[Year ]))
+			return  if(a<>0,a,0)
+		formatString: 0
+		lineageTag: bc81c783-dacc-4eda-838d-33930e3ac035
+
+	measure Count_project_end_thisyear =
+			
+			calculate(count('Overview of project'[Program Title ]),all('Project Performance'[Year ]),all('Project Performance'[Month]),'Overview of project'[Target end (Year)]=value(SELECTEDVALUE('Project Performance'[Year ])))
+		formatString: 0
+		lineageTag: 50f74e4f-1c87-463b-a977-27e5ff1f279b
+
+	measure 'Measure 2'
+		lineageTag: e80bb156-f1a0-44a1-9027-7adb87c21fcd
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure Number_closed_project =
+			
+			var a=calculate(count('Overview of project'[Project Code ]),all('Project Performance'[Year ]),all('Project Performance'[Month]),
+			year('Overview of project'[End Date])=selectedvalue('Project Performance'[Year ]))
+			return  if(a<>0,a,0)
+		formatString: 0
+		lineageTag: 45982b93-b8e8-42a7-82dc-131405bb950e
+
+	column 'Source.Name'
+		dataType: string
+		lineageTag: d20a2c08-1c1d-4e3b-8bf0-b266a53d953a
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column #
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d6f5b76-442f-4d1d-9bb7-7d51d602b58c
+		summarizeBy: sum
+		sourceColumn: #
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Program Title '
+		dataType: string
+		lineageTag: 86d51191-cdc5-48e1-ab0f-b852f6c7adc5
+		summarizeBy: none
+		sourceColumn: "Program Title "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Code '
+		dataType: string
+		lineageTag: f8864a19-2b46-47b1-bec9-22e8bb9738f0
+		summarizeBy: none
+		sourceColumn: "Project Code "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Title'
+		dataType: string
+		lineageTag: c15431dd-9a45-477b-912a-3df27925e483
+		summarizeBy: none
+		sourceColumn: Project Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Category of Project'
+		dataType: string
+		lineageTag: d165fe41-252c-4506-9c32-1a43f495918d
+		summarizeBy: none
+		sourceColumn: Category of Project
+
+		annotation SummarizationSetBy = Automatic
+
+	column Priority
+		dataType: string
+		lineageTag: 7e774d7d-beeb-42c2-86e9-ca6388293858
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column Theme
+		dataType: string
+		lineageTag: 3c54405b-ac6c-4133-b179-de5c9fbf7e42
+		summarizeBy: none
+		sourceColumn: Theme
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phase
+		dataType: string
+		lineageTag: b85a8d17-5881-445a-93a6-fa6252d0aeb8
+		summarizeBy: none
+		sourceColumn: Phase
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Department '
+		dataType: string
+		lineageTag: 4f13c648-ba16-47e3-b56d-37290598d104
+		summarizeBy: none
+		sourceColumn: "Department "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LT Owner'
+		dataType: string
+		lineageTag: 65079b9e-6062-4058-b8cf-523a150879b8
+		summarizeBy: none
+		sourceColumn: LT Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Owner'
+		dataType: string
+		lineageTag: ab741e59-2a97-49cd-8460-df3f7b21acb0
+		summarizeBy: none
+		sourceColumn: Business Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget (K) SAR'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8615e86a-7038-45e0-a883-dfa8f05fe20f
+		summarizeBy: sum
+		sourceColumn: Budget (K) SAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Start Date '
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1b766795-d91f-46fc-b6e4-2c56e3fc4d7c
+		summarizeBy: none
+		sourceColumn: "Start Date "
+
+		variation Variation
+			isDefault
+			relationship: 534ab9fc-3541-4acd-9f6f-76adfc2cc306
+			defaultHierarchy: LocalDateTable_004c57d8-722e-4755-8f52-8b57400bd1b1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'End Date'
+		dataType: dateTime
+		formatString: d mmmm\, yyyy
+		lineageTag: 4f9f0671-e6e2-409c-8a86-aa4c006f0e1e
+		summarizeBy: none
+		sourceColumn: End Date
+
+		variation Variation
+			isDefault
+			relationship: 40b19b62-8ecf-499a-ac86-f5842bd063fc
+			defaultHierarchy: LocalDateTable_cf7d234d-d257-4bc0-91b9-8068a4f4381e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Target end (Year)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 309d021a-1036-4833-b57e-8a68e86621c0
+		summarizeBy: sum
+		sourceColumn: Target end (Year)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Kickoff Date '
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 14de751f-137b-446d-8a32-902c735f8a86
+		summarizeBy: none
+		sourceColumn: "Kickoff Date "
+
+		variation Variation
+			isDefault
+			relationship: b3e49c94-adb7-4e4a-b325-a57952242bb6
+			defaultHierarchy: LocalDateTable_6cd4290d-ef41-4363-a3a7-e53d4366877b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Remining Dayes' = DATEDIFF(TODAY() ,'Overview of project'[End Date] , DAY)
+		formatString: 0
+		lineageTag: 96c85c76-399b-4e92-81cb-ef4478b40ecd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Remining Days 0' = IF('Overview of project'[Remining Dayes]<=0,"Finished",FORMAT('Overview of project'[Remining Dayes],"##"))
+		lineageTag: b39d72d6-bef5-4b9e-b98f-efd0227956b0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Overview of project' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+				    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File (5)", each #"Transform File (5)"([Content])),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File (5)"}),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File (5)", Table.ColumnNames(#"Transform File (5)"(#"Sample File (5)"))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Source.Name", type text}, {"#", Int64.Type}, {"Program Title ", type text}, {"Project Code ", type any}, {"Project Title", type text}, {"Category of Project", type text}, {"Priority", type text}, {"Theme", type text}, {"Phase", type text}, {"Department ", type text}, {"LT Owner", type text}, {"Business Owner", type text}, {"Budget (K) SAR", Int64.Type}, {"Start Date ", type date}, {"End Date", type date}, {"Target end (Year)", Int64.Type}, {"Kickoff Date ", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

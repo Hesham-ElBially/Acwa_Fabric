@@ -1,0 +1,7 @@
+role H
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Heath, Safety, Security & Environment"
+
+	annotation PBI_Id = 14c0f3af7ca74210b83b257c25f63129
+

@@ -1,0 +1,39 @@
+role FunctionORRegion
+	modelPermission: read
+
+	tablePermission 'gdm f_employees_per_month' = ```
+			VAR userEmail = USERPRINCIPALNAME()
+			
+			VAR userAccess = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "ACCESS")
+			
+			VAR userFunction = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "Function")
+			
+			VAR userRegion = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "Region")
+			
+			VAR userParentEntity = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "Parent Entity")
+			
+			
+			VAR userCountry = CALCULATETABLE(VALUES('gdm user_access_pbi'[AccessValue]), 'gdm user_access_pbi'[UserEmail] = userEmail, 'gdm user_access_pbi'[AccessLevel] = "Country")
+			
+			RETURN 
+			    if(
+			        userAccess="GLOBAL",
+			        TRUE,
+			        if(
+			            userAccess="NONE",
+			            FALSE,
+			            if(
+			                not isempty(userRegion) || not isempty(userFunction),
+			                CONTAINSROW(userRegion, 'gdm f_employees_per_month'[Region])
+			                ||    CONTAINSROW(userFunction, 'gdm f_employees_per_month'[bu_fu])
+			                ||     CONTAINSROW(userParentEntity, 'gdm f_employees_per_month'[parent_entity])
+			                ||     CONTAINSROW(userCountry, 'gdm f_employees_per_month'[country_name])
+			                 ,
+			                true
+			            )
+			        )
+			    )
+			```
+
+	annotation PBI_Id = 59ba55c905d2451e90fc55a30a760f4f
+

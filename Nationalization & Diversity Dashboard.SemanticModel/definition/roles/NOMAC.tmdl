@@ -1,0 +1,9 @@
+role NOMAC
+	modelPermission: read
+
+	tablePermission 'public employees' = [parent_entity] = "NOMAC"
+
+	tablePermission 'public employees_per_month' = [parent_entity] = "NOMAC"
+
+	annotation PBI_Id = 4ee5dada3f324cf08c39de5137ec57a3
+

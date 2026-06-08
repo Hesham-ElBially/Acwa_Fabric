@@ -1,0 +1,7 @@
+role Technical
+	modelPermission: read
+
+	tablePermission 'Employee List Including Inactive' = [Name] == "Technical"
+
+	annotation PBI_Id = affc776564734c309b5ff336b38a2a1f
+

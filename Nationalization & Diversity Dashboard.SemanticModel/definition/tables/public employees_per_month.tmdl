@@ -1,0 +1,1190 @@
+table 'public employees_per_month'
+	lineageTag: 8da8dd58-e82a-483d-b717-4d48046598a6
+
+	measure 'Overall attrition' = SUM('public employees_per_month'[total_leavers])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b3eff46e-6aee-47d4-aaab-b89c836f22a1
+
+	measure 'Person percentage' =
+			
+			VAR base = COUNTROWS(ALLSELECTED('public employees_per_month'))
+			VAR selected = COUNTROWS('public employees_per_month')
+			return selected/base * 100
+		lineageTag: 5fb9ffa0-d206-4d45-a498-b58332e45549
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Saudi/Saudi = SUM('public employees_per_month'[Saudi Leavers])/((SUM('public employees_per_month'[active_month_saudis]) + SUM('public employees_per_month'[end_month_saudi]))/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 54fa8c07-64fa-43ee-9b6c-b7932f4a977f
+
+	measure 'Saudi ratio monthly' = SUM('public employees_per_month'[Saudis])/((SUM('public employees_per_month'[Saudis]) + SUM('public employees_per_month'[Non Saudi])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 6daae0e8-b179-4564-9e57-f93530788540
+
+	measure 'Non Saudi ratio monthly' = SUM('public employees_per_month'[Non Saudi])/((SUM('public employees_per_month'[Saudis]) + SUM('public employees_per_month'[Non Saudi])))
+		lineageTag: b060c47b-6652-4ac3-9615-02bc6fbdcea4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Saudi/Overall = SUM('public employees_per_month'[Saudi Leavers])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 336d52ac-7fcd-4fe3-b1fa-2f0e3abafc0f
+
+	measure 'Overall year attrition' = SUM('public employees_per_month'[total_leavers])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 2c845652-5a2e-4237-84d2-f12fd84637f9
+
+	measure 'Saudi/Overalll year attrition' = SUM('public employees_per_month'[Saudi Leavers])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 0c21beab-b003-4d62-b1ce-346f19442ca3
+
+	measure 'Saudi/Saudi year attrition' = SUM('public employees_per_month'[Saudi Leavers])/((SUM('public employees_per_month'[Saudi Init Year]) + SUM('public employees_per_month'[Saudi End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: c1f4b9ac-2189-45fb-ae03-7fdf9456289f
+
+	measure National/National = SUM('public employees_per_month'[National Leavers])/((SUM('public employees_per_month'[active month Nationals ]) + SUM('public employees_per_month'[end month Nationals]))/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b8f2cc8e-f4b5-4217-8d0c-60c026b435f1
+
+	measure National/Overall = SUM('public employees_per_month'[National Leavers])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 58e78947-430c-4128-8715-182814d50a27
+
+	measure 'National/Overall year attrition' = SUM('public employees_per_month'[National Leavers])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 62a2a98e-47bb-4112-a2ab-808c41fa2c00
+
+	measure 'National/National year attrition' = SUM('public employees_per_month'[National Leavers])/((SUM('public employees_per_month'[National Init Year]) + SUM('public employees_per_month'[National End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 4063611a-1e7f-4ba1-abd7-f93e9b63cd56
+
+	measure 'Sum overall attrition' =
+			SUMX(KEEPFILTERS(VALUES('public employees_per_month'[Month Calendar] )),
+				CALCULATE('public employees_per_month'[Overall attrition])
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: be06d9b8-685b-44ca-a629-1e82174bb77c
+
+	measure 'Sum national/national' =
+			SUMX(KEEPFILTERS(VALUES('public employees_per_month'[Month Calendar] )),
+				CALCULATE('public employees_per_month'[National/National]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 6796ebb3-b260-4224-801b-940b54006288
+
+	measure 'Sum national/overall' =
+			SUMX(KEEPFILTERS(VALUES('public employees_per_month'[Month Calendar] )),
+				CALCULATE('public employees_per_month'[National/Overall]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 87697700-b09c-4d0d-83a8-bdb07012da36
+
+	measure 'Sum saudi/saudi' =
+			SUMX(KEEPFILTERS(VALUES('public employees_per_month'[Month Calendar] )),
+				CALCULATE('public employees_per_month'[Saudi/Saudi]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2a05d525-a584-4e16-b4e4-f909fc57dccb
+
+	measure 'Sum saudi overall' =
+			SUMX(KEEPFILTERS(VALUES('public employees_per_month'[Month Calendar] )),
+				CALCULATE('public employees_per_month'[Saudi/Overall]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3caa30de-61cd-4cbb-846d-c357ecfe6ea8
+
+	measure 'Overall attrition leaving type' = CALCULATE(SUM('public employees_per_month'[total_leavers])/(SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2,ALLEXCEPT('public employees_per_month','public employees_per_month'[active_month],'public employees_per_month'[end_month]))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3074be00-ca9c-4f64-917b-1a71a0ea6a12
+
+	measure 'Overall attrition leavers' = ```
+			SUM('public employees_per_month'[leavers])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+			
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: d7f6f73a-3b62-447c-8d48-1dd8c2c2c4f2
+
+	measure 'Overall attrition termination' = SUM('public employees_per_month'[terminations])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 62af19b7-fe86-45b5-b51c-1082c12f0e40
+
+	measure 'National/National resignation' = SUM('public employees_per_month'[National resignation])/((SUM('public employees_per_month'[active month Nationals ]) + SUM('public employees_per_month'[end month Nationals]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 60d39999-c6e6-458b-b976-c8af1f7b8537
+
+	measure 'National/National termination' = SUM('public employees_per_month'[National termination])/((SUM('public employees_per_month'[active month Nationals ]) + SUM('public employees_per_month'[end month Nationals]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: f98a10b9-4bd0-4091-8efb-fa4e0cff2846
+
+	measure 'National/Overall resignation' = SUM('public employees_per_month'[National resignation])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 4bb8e85a-bebc-45d6-a001-8c186a5b6319
+
+	measure 'National/Overall termination' = SUM('public employees_per_month'[National termination])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: 09be284d-70e3-4159-b9ee-8358d3df69dd
+
+	measure 'Saudi/Saudi resignation' = SUM('public employees_per_month'[Saudi resignations])/((SUM('public employees_per_month'[active_month_saudis]) + SUM('public employees_per_month'[end_month_saudi]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: f8ba9ca7-490a-43dc-8d97-8c580c142e5d
+
+	measure 'Saudi/Saudi terminations' = SUM('public employees_per_month'[Saudi terminations])/((SUM('public employees_per_month'[active_month_saudis]) + SUM('public employees_per_month'[end_month_saudi]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: 47fa920e-f6d0-4177-b73a-7f11717038e5
+
+	measure 'Saudi/Overall resignation' = SUM('public employees_per_month'[Saudi resignations])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 5b75c923-053f-4333-9390-0887fb4b7d6c
+
+	measure 'Saudi/Overall terminations' = SUM('public employees_per_month'[Saudi terminations])/((SUM('public employees_per_month'[active_month]) + SUM('public employees_per_month'[end_month]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: 20200486-519c-40e1-b3b4-10831a3b8239
+
+	measure 'Overall year resignation' = SUM('public employees_per_month'[leavers])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 529e42f1-007b-4dc3-b48e-024f45fc9235
+
+	measure 'Overall year termination' = SUM('public employees_per_month'[terminations])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f845117b-678d-4bdf-98bb-50036a0ebea5
+
+	measure 'National/National year resignation' = SUM('public employees_per_month'[National resignation])/((SUM('public employees_per_month'[National Init Year]) + SUM('public employees_per_month'[National End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 1b34f3ba-4458-48b1-b690-6c4dba7a2269
+
+	measure 'National/National year termination' = SUM('public employees_per_month'[National termination])/((SUM('public employees_per_month'[National Init Year]) + SUM('public employees_per_month'[National End Year]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: 5e771878-e8f9-44c0-8423-c9133fb1543b
+
+	measure 'National/Overall year resignation' = SUM('public employees_per_month'[National resignation])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: f54f52ee-6d0f-40ad-8760-eee094ebb890
+
+	measure 'National/Overall year termination' = SUM('public employees_per_month'[National termination])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: 6df87ad2-81d2-46c9-a36c-39b9e5e825da
+
+	measure 'Saudi/Saudi year resignation' = SUM('public employees_per_month'[Saudi resignations])/((SUM('public employees_per_month'[Saudi Init Year]) + SUM('public employees_per_month'[Saudi End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: c23a76a8-ffbc-4157-9b7a-d7ce7a755992
+
+	measure 'Saudi/Saudi year termination' = SUM('public employees_per_month'[Saudi terminations])/((SUM('public employees_per_month'[Saudi Init Year]) + SUM('public employees_per_month'[Saudi End Year]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: b608f8bd-64b3-4f2e-9f88-d55aa05e7401
+
+	measure 'Saudi/Overalll year resignation' = SUM('public employees_per_month'[Saudi resignations])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 7af40f2b-d7c0-45d8-babe-ec1f2eb3f24e
+
+	measure 'Saudi/Overalll year termination' = SUM('public employees_per_month'[Saudi terminations])/((SUM('public employees_per_month'[Init Year]) + SUM('public employees_per_month'[End Year]))/2)
+		formatString: 0%;-0%;0%
+		lineageTag: 409f64f2-4747-4af4-a94e-12dc67999db4
+
+	measure 'N rate' = SUM('public employees_per_month'[Nationals])/((SUM('public employees_per_month'[Nationals]) + SUM('public employees_per_month'[Expats])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 1a4ae0a5-1f58-47b5-9aa8-e6c142e3588d
+
+	measure 'National Year' = SUM('public employees_per_month'[National End Year])/((SUM('public employees_per_month'[National End Year]) + SUM('public employees_per_month'[Expats end year] )))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bd3d49ad-f7d2-4040-844f-8b9bb3d0a403
+
+	measure 'Expats Year' = SUM('public employees_per_month'[Expats End Year])/((SUM('public employees_per_month'[National End Year]) + SUM('public employees_per_month'[Expats end year] )))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 75e3251e-b6c0-4862-a57b-706d6b1269d1
+
+	measure 'E rate' = SUM('public employees_per_month'[Expats])/((SUM('public employees_per_month'[Nationals]) + SUM('public employees_per_month'[Expats])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 35c8a2c2-8394-4541-87f6-c13206166042
+
+	measure 'M rate' = SUM('public employees_per_month'[Male] )/((SUM('public employees_per_month'[Male]) + SUM('public employees_per_month'[Female])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 94868b30-f1d1-4d14-8aa5-767bb9a5b6e5
+
+	measure 'F rate' = SUM('public employees_per_month'[Female] )/((SUM('public employees_per_month'[Male]) + SUM('public employees_per_month'[Female])))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8effa825-124f-495c-9ed2-ebb8ff07d847
+
+	measure headcount = ```
+			
+			var max_date= max('public employees_per_month'[date])
+			 
+			var headct = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1)
+			return headct
+			```
+		formatString: 0
+		lineageTag: 0b6ff849-d696-467d-ab7e-29d75de5a1c4
+
+	measure 'nationals headcount' = ```
+			
+			var max_date= max('public employees_per_month'[date])
+			 
+			var headct = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[nationalisation]= TRUE)
+			return headct
+			```
+		formatString: 0
+		lineageTag: e48421e6-7228-4768-bdc9-bb0e31ac6623
+
+	measure 'expats headcount' = ```
+			
+			var max_date= max('public employees_per_month'[date])
+			 
+			var headct = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[nationalisation]= FALSE)
+			return headct
+			```
+		formatString: 0
+		lineageTag: 2a868048-5ebc-4e64-a61e-289a8276d8d6
+
+	measure 'male headcount' = ```
+			
+			 var max_date= max('public employees_per_month'[date])
+			 
+			var headct = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[sex]= "M")
+			return headct
+			```
+		formatString: 0
+		lineageTag: 955fc1f7-1e02-444c-b7cb-02d0573b6d60
+
+	measure 'female headcount' = ```
+			
+			var max_date= max('public employees_per_month'[date])
+			 
+			var headct = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[sex]= "F")
+			return headct
+			```
+		formatString: 0
+		lineageTag: b70f1420-f8b6-4457-8e05-91b773500af4
+
+	measure 'N  rate' =
+			
+			var max_date= max('public employees_per_month'[date])
+			var nat = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[nationalisation]= TRUE)
+			var exp = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[nationalisation]= false)
+			var rate =nat/(nat+exp)
+			return rate
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 81fe68a5-03dc-4b3f-b171-d3c00075e707
+
+		annotation PBI_ChangedProperties = ["FormatString"]
+
+	measure 'E  rate' =
+			
+			var max_date= max('public employees_per_month'[date])
+			var nat = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[nationalisation]= TRUE)
+			var exp = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[nationalisation]= false)
+			var rate =exp/(nat+exp)
+			return rate
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 49382217-4da2-4f45-8793-2aa6c89532ee
+
+		annotation PBI_ChangedProperties = ["FormatString"]
+
+	measure 'F  rate' =
+			
+			var max_date= max('public employees_per_month'[date])
+			var male = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[sex]= "M")
+			var fem = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[sex]= "F")
+			var rate =fem/(male+fem)
+			return rate
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c6cbeb94-0ce6-4077-ad2f-c5ae31fb56e3
+
+		annotation PBI_ChangedProperties = ["FormatString"]
+
+	measure 'M  rate' =
+			
+			var max_date= max('public employees_per_month'[date])
+			var male = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[sex]= "M")
+			var fem = calculate(distinctcount('public employees_per_month'[person_number]), 'public employees_per_month'[date] = max_date, 'public employees_per_month'[end_month]=1, 'public employees_per_month'[sex]= "F")
+			var rate =male/(male+fem)
+			return rate
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: e2a664c0-85d2-463f-bee7-8a03bfffb7ce
+
+		annotation PBI_ChangedProperties = ["FormatString"]
+
+	column person_number
+		dataType: string
+		lineageTag: 9d45fab5-38a6-4a84-9fe4-17a4653f5587
+		summarizeBy: none
+		sourceColumn: person_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_number
+		dataType: string
+		lineageTag: 9bdaee71-d068-4924-80b2-6434fa0396de
+		summarizeBy: none
+		sourceColumn: manager_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_employer
+		dataType: string
+		lineageTag: 006ec03c-2854-42ba-9936-922b9933277e
+		summarizeBy: none
+		sourceColumn: legal_employer
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 6101471c-5eaf-4be7-8f75-f04ae2966fb5
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column bu_fu
+		dataType: string
+		lineageTag: e2021c64-e22a-4933-a38c-5bfd8c6d47a2
+		summarizeBy: none
+		sourceColumn: bu_fu
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: string
+		lineageTag: 851fd940-d10c-4925-899c-6a929c58c81f
+		summarizeBy: none
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: d6cb60d7-4b09-4767-a129-59af0c131f61
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_cost_centre
+		dataType: string
+		lineageTag: ce4ca465-7347-41e5-b32b-80173b4da86c
+		summarizeBy: none
+		sourceColumn: department_cost_centre
+
+		annotation SummarizationSetBy = Automatic
+
+	column job
+		dataType: string
+		lineageTag: cb54e4b0-7c56-40c5-a574-4b443fb4811d
+		summarizeBy: none
+		sourceColumn: job
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_name
+		dataType: string
+		lineageTag: f29132dd-892a-446e-8f91-42ea99c93c07
+		summarizeBy: none
+		sourceColumn: manager_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 961a5709-bcc4-4c8e-8c52-e21ce28664ea
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: c8e2f436-bd77-4d80-8c62-a98c933c25ab
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 3405675e-af97-42a3-aa73-41220e253952
+		summarizeBy: sum
+		sourceColumn: active_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column hires
+		dataType: int64
+		formatString: 0
+		lineageTag: b66ac11d-1c06-4e2a-96ef-98b3a13a469b
+		summarizeBy: sum
+		sourceColumn: hires
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers
+		dataType: int64
+		formatString: 0
+		lineageTag: c4d80580-275a-46c7-9acf-17aad7523523
+		summarizeBy: sum
+		sourceColumn: leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column transfers
+		dataType: int64
+		formatString: 0
+		lineageTag: cbb8fc4e-811d-4a60-9deb-2be30ce7fb01
+		summarizeBy: sum
+		sourceColumn: transfers
+
+		annotation SummarizationSetBy = Automatic
+
+	column terminations
+		dataType: int64
+		formatString: 0
+		lineageTag: ea3f2c9b-a4c9-4edb-8f6e-9b01540d0e46
+		summarizeBy: sum
+		sourceColumn: terminations
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_month
+		dataType: int64
+		formatString: 0
+		lineageTag: e7801322-36c4-436f-9933-1c1507259ef0
+		summarizeBy: sum
+		sourceColumn: end_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_date
+		dataType: string
+		lineageTag: 88aecca1-73b5-4d80-a67e-30b88f229b16
+		summarizeBy: none
+		sourceColumn: month_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column ori
+		dataType: string
+		lineageTag: 3eb70a05-896d-4f50-8fb0-1c6651d801f1
+		summarizeBy: none
+		sourceColumn: ori
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: 213f1dc8-53fe-4526-853e-c494a74ca9a0
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_type
+		dataType: string
+		lineageTag: aa7ce11d-974e-4fcf-b667-61032395b368
+		summarizeBy: none
+		sourceColumn: company_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_entity
+		dataType: string
+		lineageTag: 933e8c50-95b1-488c-bbcc-82b6de083efb
+		summarizeBy: none
+		sourceColumn: parent_entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationalisation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b721c4d9-0096-442c-8769-3f85cfb10f62
+		summarizeBy: none
+		sourceColumn: nationalisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column saudisation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d46b7079-146c-4e5f-b999-0e0f75285c3c
+		summarizeBy: none
+		sourceColumn: saudisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column management_level
+		dataType: string
+		lineageTag: 32cf2d65-55d7-441e-93de-7f8a67b728c8
+		summarizeBy: none
+		sourceColumn: management_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column los
+		dataType: double
+		lineageTag: 075adf41-67c2-4a59-b5d2-7a56c0187f5a
+		summarizeBy: sum
+		sourceColumn: los
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: cd5ea771-5357-4337-b306-2bd980d053b4
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_band
+		dataType: string
+		lineageTag: dbbfd5b4-794c-4b63-8034-98e9ddea83bc
+		summarizeBy: none
+		sourceColumn: age_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column sex
+		dataType: string
+		lineageTag: 8cd24e6d-9c11-40ea-8ccf-45d195906950
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column los_band
+		dataType: string
+		lineageTag: b3421fb0-f899-4cc5-b52b-a55db05ec3b3
+		summarizeBy: none
+		sourceColumn: los_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column new_hire_type
+		dataType: string
+		lineageTag: cabd3d7e-afbc-4f0e-9897-d5c65e490d0a
+		summarizeBy: none
+		sourceColumn: new_hire_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column mc_member
+		dataType: string
+		lineageTag: f8d4cda3-ec85-450d-845e-876f2e026ada
+		summarizeBy: none
+		sourceColumn: mc_member
+
+		annotation SummarizationSetBy = Automatic
+
+	column reporting_matrix
+		dataType: string
+		lineageTag: f5059556-9780-4f29-9a4e-d8bf5b3c5c9d
+		summarizeBy: none
+		sourceColumn: reporting_matrix
+
+		annotation SummarizationSetBy = Automatic
+
+	column leaving_reason
+		dataType: string
+		lineageTag: 0aa7eb9d-6048-4fa2-9b64-7f21fd0127da
+		summarizeBy: none
+		sourceColumn: leaving_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column worker_type
+		dataType: string
+		lineageTag: 3bad173d-30cf-43cc-8e53-ced71b02dff2
+		summarizeBy: none
+		sourceColumn: worker_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column grade
+		dataType: string
+		lineageTag: a2ff375a-910d-4975-b6d7-c852909d13fc
+		summarizeBy: none
+		sourceColumn: grade
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_leavers
+		dataType: int64
+		formatString: 0
+		lineageTag: 9295ce3b-9366-429f-b12b-b06780f71b2c
+		summarizeBy: sum
+		sourceColumn: total_leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_corporate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f1146442-435a-4f13-bf0d-2d46751652cb
+		summarizeBy: none
+		sourceColumn: is_corporate
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationality
+		dataType: string
+		lineageTag: f9992e96-e507-4f74-a260-63a2cee7214f
+		summarizeBy: none
+		sourceColumn: nationality
+
+		annotation SummarizationSetBy = Automatic
+
+	column int_ext
+		dataType: string
+		lineageTag: 0ecd1798-de70-4964-94e8-839c3a8ddfdd
+		summarizeBy: none
+		sourceColumn: int_ext
+
+		annotation SummarizationSetBy = Automatic
+
+	column gen_band
+		dataType: string
+		lineageTag: a7afc1b5-337e-49d7-9da1-e5b43e25e12e
+		summarizeBy: none
+		sourceColumn: gen_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Calendar'
+		dataType: string
+		lineageTag: e2ec8246-32a2-4d6b-ae3f-65fa8b7fe285
+		summarizeBy: none
+		sourceColumn: Month Calendar
+		sortByColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Saudis
+		dataType: int64
+		formatString: 0
+		lineageTag: 95cd3d00-912f-4ec6-ab18-c730df1f4688
+		summarizeBy: sum
+		sourceColumn: Saudis
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Saudi Leavers'
+		dataType: int64
+		formatString: 0
+		lineageTag: 310a1e39-f2c7-4a0b-89b2-306037043939
+		summarizeBy: sum
+		sourceColumn: Saudi Leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nationals/Expats
+		dataType: string
+		lineageTag: 04e190da-7dd9-4955-ae5c-02b3afe4a64e
+		summarizeBy: none
+		sourceColumn: Nationals/Expats
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Non Saudi'
+		dataType: int64
+		formatString: 0
+		lineageTag: ab8b8578-a282-4181-a37e-6105ddc20496
+		summarizeBy: sum
+		sourceColumn: Non Saudi
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Saudi/Non Saudi'
+		dataType: string
+		lineageTag: d8de1540-dad7-49a9-9d6e-a5e40ae06245
+		summarizeBy: none
+		sourceColumn: Saudi/Non Saudi
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_month_saudis
+		dataType: int64
+		formatString: 0
+		lineageTag: 581da816-82ac-40b8-8c87-ae0aa31b2598
+		summarizeBy: sum
+		sourceColumn: active_month_saudis
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_month_saudi
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cfe7667-9ef8-46c7-9a5c-7f227ca57c5e
+		summarizeBy: sum
+		sourceColumn: end_month_saudi
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		lineageTag: e7ba912d-3731-4eae-abae-ac3d55a1f514
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: 6504ceec-93db-4610-b1be-e7a92759f01a
+			defaultHierarchy: LocalDateTable_0e587a0f-6f59-4d70-b2b3-d7e822fde292.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'End Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: c0e5422c-a793-4107-a413-b31cabec89c1
+		summarizeBy: sum
+		sourceColumn: End Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Init Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: ed9fa320-c361-440a-ae8e-678525df931b
+		summarizeBy: sum
+		sourceColumn: Init Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Saudi Init Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d708a52-d2e1-4258-aeb6-a09ccaf5e812
+		summarizeBy: sum
+		sourceColumn: Saudi Init Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Saudi End Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: a57649a8-10ff-4885-92a5-49db5936c208
+		summarizeBy: sum
+		sourceColumn: Saudi End Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column Nationals
+		dataType: int64
+		formatString: 0
+		lineageTag: f1048305-063d-486a-9fd9-bbee2fa4e125
+		summarizeBy: sum
+		sourceColumn: Nationals
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column Expats
+		dataType: int64
+		formatString: 0
+		lineageTag: 334682cb-86bd-45fc-b7ac-d9669d55ebcf
+		summarizeBy: sum
+		sourceColumn: Expats
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'National Leavers'
+		dataType: int64
+		formatString: 0
+		lineageTag: 44ac195a-b094-4876-a1ae-a512bb30f43d
+		summarizeBy: sum
+		sourceColumn: National Leavers
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'active month Nationals '
+		dataType: int64
+		formatString: 0
+		lineageTag: dae257d5-7b78-441a-823d-5eb6a3d385b8
+		summarizeBy: sum
+		sourceColumn: "active month Nationals "
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'end month Nationals'
+		dataType: int64
+		formatString: 0
+		lineageTag: d5e08974-5fe4-4d4d-9303-3ce1e3bb5d0a
+		summarizeBy: sum
+		sourceColumn: end month Nationals
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'National Init Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 32605cac-9088-42f6-9644-8c328b7cac6f
+		summarizeBy: sum
+		sourceColumn: National Init Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'National End Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a505840-2acf-495e-b296-6445091d811e
+		summarizeBy: sum
+		sourceColumn: National End Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column Male
+		dataType: int64
+		formatString: 0
+		lineageTag: adfeb01c-7381-4eb5-9582-e34313eff379
+		summarizeBy: sum
+		sourceColumn: Male
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column Female
+		dataType: int64
+		formatString: 0
+		lineageTag: 39a3a693-f99a-4732-afe5-6e298c06edbf
+		summarizeBy: sum
+		sourceColumn: Female
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'National M/F'
+		dataType: string
+		lineageTag: be6c2ce6-1a9e-4b1f-b73a-505e7bf59068
+		summarizeBy: none
+		sourceColumn: National M/F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expats end year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d5161d1-8a19-48d3-88e7-3d0fa2beca6a
+		summarizeBy: sum
+		sourceColumn: Expats end year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'National/Expats Year '
+		dataType: string
+		lineageTag: 8a65b2bc-6bc4-4043-8e98-0427c5e1a7d2
+		summarizeBy: none
+		sourceColumn: "National/Expats Year "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Generation Band'
+		dataType: string
+		lineageTag: ffaeba4b-7df4-4289-b004-db22bc82698d
+		summarizeBy: none
+		sourceColumn: Generation Band
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'National M end year'
+		dataType: string
+		lineageTag: c5dd1064-f880-4fc2-95cf-360d1f60f6b8
+		summarizeBy: none
+		sourceColumn: National M end year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'National F end year'
+		dataType: string
+		lineageTag: f561ce60-a294-4e33-b8c3-9c73c3bdd288
+		summarizeBy: none
+		sourceColumn: National F end year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expats M end year'
+		dataType: string
+		lineageTag: df90a07a-d101-48ed-b6c8-b9bad0160db7
+		summarizeBy: none
+		sourceColumn: Expats M end year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expats F end year'
+		dataType: string
+		lineageTag: b0b4c9d7-5c82-47e7-bdaa-0b816d1d8f2f
+		summarizeBy: none
+		sourceColumn: Expats F end year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'National/Expat M/F year'
+		dataType: string
+		lineageTag: d0b59d82-879e-4e39-9b15-54e3541c96c3
+		summarizeBy: none
+		sourceColumn: National/Expat M/F year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Leaving type'
+		dataType: string
+		lineageTag: 87a096a0-95e8-4801-bede-a5bdc6dfde55
+		summarizeBy: none
+		sourceColumn: Leaving type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Attrition leavers'
+		dataType: int64
+		formatString: 0
+		lineageTag: b091d416-e4dd-4608-8efa-c5978678aa8f
+		summarizeBy: sum
+		sourceColumn: Attrition leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'National resignation'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bf23a58-bdc4-4978-afbb-b804c822630c
+		summarizeBy: sum
+		sourceColumn: National resignation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'National termination'
+		dataType: int64
+		formatString: 0
+		lineageTag: f8eee54a-709e-4e74-a6a4-a02df8d503b3
+		summarizeBy: sum
+		sourceColumn: National termination
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Saudi resignations'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f22a887-4d32-4ff4-b44e-30ecb294a97f
+		summarizeBy: sum
+		sourceColumn: Saudi resignations
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Saudi terminations'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e81cece-85c2-4dbe-a50a-a5fc391643ca
+		summarizeBy: sum
+		sourceColumn: Saudi terminations
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column 'Gen Band Title'
+		dataType: string
+		lineageTag: 74bab5ac-6fe6-40b8-9ef9-915855a74f0f
+		summarizeBy: none
+		sourceColumn: Gen Band Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'end month Expats'
+		dataType: int64
+		formatString: 0
+		lineageTag: f2f121c5-1201-43f5-b2f3-9a9f0d76c3b7
+		summarizeBy: sum
+		sourceColumn: end month Expats
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_ChangedProperties = ["DataType"]
+
+	column reporting_group
+		dataType: string
+		lineageTag: 6b431570-0657-4e04-b6dd-60a29cace520
+		summarizeBy: none
+		sourceColumn: reporting_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column N
+		dataType: string
+		lineageTag: ea7dac55-742c-4f5b-a143-37ddfecc6ccf
+		summarizeBy: none
+		sourceColumn: N
+
+		annotation SummarizationSetBy = Automatic
+
+	column E
+		dataType: string
+		lineageTag: b9828253-a8f0-4880-bf68-9f1af9ddc157
+		summarizeBy: none
+		sourceColumn: E
+
+		annotation SummarizationSetBy = Automatic
+
+	column M
+		dataType: string
+		lineageTag: b59e630f-e835-4963-b688-18a01f352997
+		summarizeBy: none
+		sourceColumn: M
+
+		annotation SummarizationSetBy = Automatic
+
+	column F
+		dataType: string
+		lineageTag: 81414845-7c34-4054-86d6-cc6c6e4c08d3
+		summarizeBy: none
+		sourceColumn: F
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'National/Expats month'
+		dataType: string
+		lineageTag: acc555fc-9030-43b1-b9ce-2d0ceb150df0
+		summarizeBy: none
+		sourceColumn: National/Expats month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gen Band display'
+		dataType: string
+		lineageTag: c7a1bc7c-5e79-49fd-8782-bd1e37a24706
+		summarizeBy: none
+		sourceColumn: Gen Band display
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'National/Expats M/F' =
+			
+			if ('public employees_per_month'[nationalisation]=true, if('public employees_per_month'[sex]="M", "Nationals M",  if('public employees_per_month'[sex]="F", "Nationals F")),
+			if('public employees_per_month'[nationalisation]=false,  if('public employees_per_month'[sex]="M", "Expats M",  if('public employees_per_month'[sex]="F", "Expats F"))))
+		lineageTag: 43384cdc-9896-4175-89c9-571b43a2d838
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column National/Expat =
+			
+			if ('public employees_per_month'[nationalisation]=true, "Nationals",
+			if('public employees_per_month'[nationalisation]=false,  "Expats"))
+		lineageTag: 2c4405cf-516e-4cb4-9f9c-847349d7593c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public employees_per_month-05b2a143-3085-4e7b-80af-d93225530238' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("acwa-uaen-pdb01.postgres.database.azure.com", "data_centralized"),
+				    public_employees_per_month = Source{[Schema="public",Item="employees_per_month"]}[Data],
+				    #"Added Conditional Column" = Table.AddColumn(public_employees_per_month, "Month Calendar", each if [month] = 1 then "Jan" else if [month] = 2 then "Feb" else if [month] = 3 then "Mar" else if [month] = 4 then "Apr" else if [month] = 5 then "May" else if [month] = 6 then "Jun" else if [month] = 7 then "Jul" else if [month] = 8 then "Aug" else if [month] = 9 then "Sep" else if [month] = 10 then "Oct" else if [month] = 11 then "Nov" else if [month] = 12 then "Dec" else 0),
+				    #"Added Custom" = Table.AddColumn(public_employees_per_month , "Saudi leavers" , each if [leavers] = 1 and [Saudis] = 1 then true else false),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Saudi leavers", type logical}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Saudi leavers", "Saudi leavers T/F"}}),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Renamed Columns", "Saudi Leavers", each if [#"Saudi leavers T/F"] = true then 1 else 0),
+				    #"Added Custom1" = Table.AddColumn(public_employees_per_month, "Month Calendar", each if [month] = 1 then "Jan" else if [month] = 2 then "Feb" else if [month] = 3 then "Mar" else if [month] = 4 then "Apr" else if [month] = 5 then "May" else if [month] = 6 then "Jun" else if [month] = 7 then "Jul" else if [month] = 8 then "Aug" else if [month] = 9 then "Sep" else if [month] = 10 then "Oct" else if [month] = 11 then "Nov" else if [month] = 12 then "Dec" else 0),
+				    #"Added Conditional Column2" = Table.AddColumn(#"Added Custom1", "Saudis", each if [nationalisation] = true and [nationality] = "Saudi" then 1 else 0),
+				    #"Added Conditional Column3" = Table.AddColumn(#"Added Conditional Column2", "Saudi Leavers", each if [Saudis] = 1 and [total_leavers] = 1 then 1 else 0),
+				    #"Filtered Rows" = Table.SelectRows(#"Added Conditional Column3", each true),
+				    #"Added Conditional Column4" = Table.AddColumn(#"Filtered Rows", "Nationals/Expats", each if [nationalisation] = true then "National" else if [nationalisation] = false then "Expat" else null),
+				    #"Added Conditional Column5" = Table.AddColumn(#"Added Conditional Column4", "Non Saudi", each if [Saudis] = 0 then 1 else 0),
+				    #"Added Conditional Column6" = Table.AddColumn(#"Added Conditional Column5", "Saudi/Non Saudi", each if [Saudis] = 1 then "Saudi" else "Non Saudi"),
+				    #"Added Conditional Column7" = Table.AddColumn(#"Added Conditional Column6", "active_month_saudis", each if [Saudis] = 1 then [active_month] else 0),
+				    #"Added Custom2" = Table.AddColumn(#"Added Conditional Column7", "end_month_saudi", each if [Saudis] = 1 then [end_month] else 0),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom2",{{"end_month_saudi", Int64.Type}, {"active_month_saudis", Int64.Type}, {"Saudi Leavers", Int64.Type}, {"Saudis", Int64.Type}}),
+				    #"Added Custom3" = Table.AddColumn(#"Changed Type1", "date", each #date([year],[month],1)),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom3",{{"date", type date}}),
+				    #"Added Conditional Column8" = Table.AddColumn(#"Changed Type2", "Active Year", each if [active_month] = 1 then 1 else 0),
+				    #"Added Conditional Column9" = Table.AddColumn(#"Added Conditional Column8", "End Year", each if [end_month] = 1 then 1 else 0),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Conditional Column9",{"Active Year", "End Year"}),
+				    #"Added Conditional Column10" = Table.AddColumn(#"Removed Columns", "End Year", each if  Date.Year(DateTime.LocalNow())> [year] and [month] = 12 then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) then [end_month] else 0),
+				    #"Added Conditional Column11" = Table.AddColumn(#"Added Conditional Column10", "Init Year", each if Date.Year(DateTime.LocalNow()) = [year] and [month] = 1 then [active_month] else if Date.Year(DateTime.LocalNow())> [year] and [month] = 1 then [active_month] else if [year] = 2020 and [month] = 1 then [active_month] else if [year] = 2019 and [month] = 1 then [active_month] else 0),
+				    #"Added Conditional Column12" = Table.AddColumn(#"Added Conditional Column11", "Saudi Init Year", each if Date.Year(DateTime.LocalNow())= [year] and [month] = 1 and [Saudis] = 1 then [active_month] else if Date.Year(DateTime.LocalNow())> [year] and [month] = 1 and [Saudis] = 1 then [active_month] else if [year] = 2020 and [month] = 1 and [Saudis] = 1 then [active_month] else if [year] = 2019 and [month] = 1 and [Saudis] = 1 then [active_month] else 0),
+				    #"Added Conditional Column13" = Table.AddColumn(#"Added Conditional Column12", "Saudi End Year", each if Date.Year(DateTime.LocalNow())> [year] and [month] = 12 and [Saudis] = 1 then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) and [Saudis] = 1 then [end_month] else 0),
+				    #"Added Conditional Column14" = Table.AddColumn(#"Added Conditional Column13", "Nationals", each if [nationalisation] = true then 1 else 0),
+				    #"Added Conditional Column15" = Table.AddColumn(#"Added Conditional Column14", "Expats", each if [nationalisation] = false then 1 else 0),
+				    #"Added Conditional Column16" = Table.AddColumn(#"Added Conditional Column15", "National Leavers", each if [total_leavers] = 1 and [nationalisation] = true then 1 else 0),
+				    #"Added Conditional Column17" = Table.AddColumn(#"Added Conditional Column16", "active month Nationals ", each if [nationalisation] = true then [active_month] else 0),
+				    #"Added Conditional Column18" = Table.AddColumn(#"Added Conditional Column17", "end month Nationals", each if [nationalisation] = true then [end_month] else 0),
+				    #"Added Conditional Column19" = Table.AddColumn(#"Added Conditional Column18", "National Init Year", each if Date.Year(DateTime.LocalNow())= [year] and [month] = 1 and [nationalisation] = true then [active_month] else if  Date.Year(DateTime.LocalNow())> [year] and [month] = 1 and [nationalisation] = true then [active_month] else if [year] = 2020 and [month] = 1 and [nationalisation] = true then [active_month] else if [year] = 2019 and [month] = 1 and [nationalisation] = true then [active_month] else 0),
+				    #"Added Conditional Column20" = Table.AddColumn(#"Added Conditional Column19", "National End Year", each if  Date.Year(DateTime.LocalNow())> [year] and [month] = 12 and [nationalisation] = true then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) and [nationalisation] = true then [end_month] else 0),
+				    #"Added Conditional Column21" = Table.AddColumn(#"Added Conditional Column20", "Male", each if [sex] = "M" then 1 else 0),
+				    #"Added Conditional Column22" = Table.AddColumn(#"Added Conditional Column21", "Female", each if [sex] = "F" then 1 else 0),
+				    #"Added Conditional Column23" = Table.AddColumn(#"Added Conditional Column22", "National M/F", each if [nationalisation] = true and [sex] = "M" then "National M" else if  [nationalisation] = true and [sex] = "F" then "National F" else if [nationalisation] = false and [sex] = "M" then "Expats M" else if  [nationalisation] = false and [sex] = "F" then "Expats F" else 0),
+				    #"Added Conditional Column24" = Table.AddColumn(#"Added Conditional Column23", "Expats end year", each if Date.Year(DateTime.LocalNow())> [year] and [month] = 12 and [nationalisation] = false then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) and [nationalisation] = false then [end_month] else 0),
+				    #"Added Conditional Column25" = Table.AddColumn(#"Added Conditional Column24", "National/Expats Year ", each if [National End Year] = 1 then "National" else if [Expats end year] = 1 then "Expats" else 0),
+				    #"Added Conditional Column26" = Table.AddColumn(#"Added Conditional Column25", "Custom", each if [gen_band] = "Baby Boomers" then "57-75 y" else if [gen_band] = "Gen X" then "41-56 y" else if [gen_band] = "Gen Y" then "25-40 y" else if [gen_band] = "Zoomers" then "<25 y" else 0),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Added Conditional Column26",{{"Custom", "Generation Band"}}),
+				    #"Added Conditional Column27" = Table.AddColumn(#"Renamed Columns1", "National M end year", each if Date.Year(DateTime.LocalNow())> [year] and [month] = 12 and [nationalisation] = true and [sex] = "M"  then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) and [nationalisation] = true and [sex] = "M" then [end_month] else 0),
+				    #"Added Conditional Column28" = Table.AddColumn(#"Added Conditional Column27", "National F end year", each if  Date.Year(DateTime.LocalNow())> [year] and [month] = 12 and [nationalisation] = true and [sex] = "F"  then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) and [nationalisation] = true and [sex] = "F"  then [end_month] else 0),
+				    #"Added Conditional Column29" = Table.AddColumn(#"Added Conditional Column28", "Expats M end year", each if  Date.Year(DateTime.LocalNow())> [year] and [month] = 12 and [nationalisation] = false and [sex] = "M"  then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) and [nationalisation] = false and [sex] = "M"  then [end_month] else 0),
+				    #"Added Conditional Column30" = Table.AddColumn(#"Added Conditional Column29", "Expats F end year", each if  Date.Year(DateTime.LocalNow())> [year] and [month] = 12 and [nationalisation] = false and [sex] = "F"  then [end_month] else if Date.Year(DateTime.LocalNow())= [year] and Date.Month(DateTime.LocalNow())= ([month] + 1) and [nationalisation] = false and [sex] = "F"  then [end_month] else 0),
+				    #"Added Conditional Column31" = Table.AddColumn(#"Added Conditional Column30", "National/Expat M/F year", each if [National M end year] = 1 then "National M" else if [Expats M end year] = 1 then "Expats M" else if [National F end year] = 1 then "National F" else if [Expats F end year] = 1 then "Expat F"else 0),
+				    #"Filtered Rows1" = Table.SelectRows(#"Added Conditional Column31", each true),
+				    #"Added Conditional Column32" = Table.AddColumn(#"Filtered Rows1", "Leaving type", each if [terminations] = 1 then "Termination" else if [leavers] = 1 then "Resignation" else if [transfers] = 1 then "Transfer" else 0),
+				    #"Filtered Rows2" = Table.SelectRows(#"Added Conditional Column32", each true),
+				    #"Added Conditional Column33" = Table.AddColumn(#"Filtered Rows2", "Attrition leavers", each if [Leaving type] = "Termination"  then  [terminations] = 1 else if [Leaving type] = "Resignation" then  [leavers] = 1 else if [Leaving type] ="Transfer" then  [transfers]= 1 else 0),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Conditional Column33",{{"Attrition leavers", Int64.Type}}),
+				    #"Filtered Rows3" = Table.SelectRows(#"Changed Type3", each true),
+				    #"Added Conditional Column34" = Table.AddColumn(#"Filtered Rows3", "National resignation", each if [leavers] = 1 and [nationalisation] = true then 1 else 0),
+				    #"Added Conditional Column35" = Table.AddColumn(#"Added Conditional Column34", "National termination", each if [terminations] = 1 and [nationalisation] = true then 1 else 0),
+				    #"Added Conditional Column36" = Table.AddColumn(#"Added Conditional Column35", "Saudi resignations", each if [Saudis] = 1 and [leavers] = 1 then 1 else 0),
+				    #"Added Conditional Column37" = Table.AddColumn(#"Added Conditional Column36", "Saudi terminations", each if [Saudis] = 1 and [terminations] = 1 then 1 else 0),
+				    #"Added Conditional Column38" = Table.AddColumn(#"Added Conditional Column37", "Gen Band Title", each if [Generation Band] = ">40" and [gen_band] = "Gen X" then ">40 Gen X" else if [Generation Band] = ">56" and [gen_band] = "Baby Boomers" then ">56 Baby Boomers" else if [Generation Band] = ">25" and [gen_band] = "Gen Y" then ">25 Gen Y" else if [Generation Band] = "<25" and [gen_band] = "Zoomers" then "<25 Zoomers
+				" else 0),
+				    #"Filtered Rows4" = Table.SelectRows(#"Added Conditional Column38", each true),
+				    #"Added Conditional Column39" = Table.AddColumn(#"Filtered Rows4", "end month Expats", each if [nationalisation] = false then [end_month] else 0),
+				    #"Added Conditional Column40" = Table.AddColumn(#"Added Conditional Column39", "N", each if [nationalisation] = true then "person_number" else 0),
+				    #"Filtered Rows5" = Table.SelectRows(#"Added Conditional Column40", each true),
+				    #"Added Conditional Column41" = Table.AddColumn(#"Filtered Rows5", "E", each if [nationalisation] = false then "person_number" else 0),
+				    #"Added Conditional Column42" = Table.AddColumn(#"Added Conditional Column41", "M", each if [sex] = "male" then "person_number" else 0),
+				    #"Added Conditional Column43" = Table.AddColumn(#"Added Conditional Column42", "F", each if [sex] = "female" then "person_number" else 0),
+				    #"Added Conditional Column44" = Table.AddColumn(#"Added Conditional Column43", "National/Expats month",  each if [end month Nationals] = 1 then "National" else if [end month Expats] = 1 then "Expats" else 0),
+				    #"Added Conditional Column45" = Table.AddColumn(#"Added Conditional Column44", "Gen Band display", each if [Generation Band] = ">40" and [gen_band] = "Gen X" then ">40 Gen X" else if [Generation Band] = ">56" and [gen_band] = "Baby Boomers" then ">56 Baby Boomers" else if [Generation Band] = ">25" and [gen_band] = "Gen Y" then ">25 Gen Y" else if [Generation Band] = "<25" and [gen_band] = "Zoomers" then "<25 Zoomers
+				" else 0)
+				in
+				    #"Added Conditional Column45"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,137 @@
+expression Parameter2 = #"Sample File (2)" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File (2)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 867aebda-6541-4f75-88fe-86caf2372eb6
+	queryGroup: 'Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Sample File (2)' =
+		let
+		    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 02a2b287-397b-45ce-8d98-08325be4d510
+	queryGroup: 'Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File (2)' =
+		let
+		    Source = (Parameter2 as binary) => let
+		    Source = Excel.Workbook(Parameter2, null, true),
+		    #"Milestone _Sheet" = Source{[Item="Milestone ",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Milestone _Sheet", [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	lineageTag: 739918c3-340f-438b-acba-0756bbd03240
+	queryGroup: 'Helper Queries'
+
+	annotation PBI_ResultType = Function
+
+expression Parameter3 = #"Sample File (3)" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File (3)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 9d6fa9ad-0c15-4e82-a164-c5e26788d803
+	queryGroup: 'Transform File from Query1 (3)\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Sample File (3)' =
+		let
+		    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: bac5d41d-7df1-4710-b33a-619e18f83c6f
+	queryGroup: 'Transform File from Query1 (3)\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File (3)' =
+		let
+		    Source = (Parameter3 as binary) => let
+		    Source = Excel.Workbook(Parameter3, null, true),
+		    #"Project Performance_Sheet" = Source{[Item="Project Performance",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Project Performance_Sheet", [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	lineageTag: e6ea77b1-3d1d-452f-814a-bb039b7637e1
+	queryGroup: 'Transform File from Query1 (3)\Helper Queries'
+
+	annotation PBI_ResultType = Function
+
+expression 'Sample File (4)' =
+		let
+		    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 0c2c802e-2eb7-4947-a888-1f30f228f97e
+	queryGroup: 'Transform File from Query1 (4)\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File (4)' =
+		let
+		    Source = (Parameter4 as binary) => let
+		    Source = Excel.Workbook(Parameter4, null, true),
+		    #"Summary _Sheet" = Source{[Item="Summary ",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Summary _Sheet", [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	lineageTag: c402da27-b9a5-45e7-b28c-fc642aaffc90
+	queryGroup: 'Transform File from Query1 (4)\Helper Queries'
+
+	annotation PBI_ResultType = Function
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression Parameter5 = #"Sample File (5)" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File (5)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 5c96c517-1617-4358-bbd3-7612935ee7be
+	queryGroup: 'Transform File from Query1 (5)\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File (5)' =
+		let
+		    Source = Excel.Workbook(Parameter5, null, true),
+		    #"Overview of project_Sheet" = Source{[Item="Overview of project",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Overview of project_Sheet", [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+	lineageTag: bf54f091-9eff-4f4e-9c79-6d1432670c92
+	queryGroup: 'Transform File from Query1 (5)'
+
+	annotation PBI_ResultType = Table
+
+expression 'Sample File (5)' =
+		let
+		    Source = SharePoint.Files("https://acwapi.sharepoint.com/sites/RepositoryforPCProject/", [ApiVersion = 15]),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: b1f4f258-e4d3-436f-8db9-1ccbbf24d8b0
+	queryGroup: 'Transform File from Query1 (5)\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform File (5)' =
+		let
+		    Source = (Parameter5 as binary) => let
+		    Source = Excel.Workbook(Parameter5, null, true),
+		    #"Overview of project_Sheet" = Source{[Item="Overview of project",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Overview of project_Sheet", [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File (5)""}" ]
+	lineageTag: 6de30ded-2b81-49a6-bfde-aaf46e8d9558
+	queryGroup: 'Transform File from Query1 (5)\Helper Queries'
+
+	annotation PBI_ResultType = Function
+

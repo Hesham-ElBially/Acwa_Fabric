@@ -1,0 +1,38 @@
+table 'gdm user_access_pbi'
+	lineageTag: 6b159e3e-857b-4460-8ac4-3dbe2fe2d65d
+
+	column useremail
+		dataType: string
+		lineageTag: 3bd118bc-dd82-4651-b5b1-6ef874faa36d
+		summarizeBy: none
+		sourceColumn: useremail
+
+		annotation SummarizationSetBy = Automatic
+
+	column accesslevel
+		dataType: string
+		lineageTag: 99c236eb-6a64-4f9d-b440-6b83e850224a
+		summarizeBy: none
+		sourceColumn: accesslevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column accessvalue
+		dataType: string
+		lineageTag: 2029bb2e-8c98-4d87-a9ac-d0bcda6d083e
+		summarizeBy: none
+		sourceColumn: accessvalue
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'gdm user_access_pbi' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("acwa-prod-psdb-acwadp.postgres.database.azure.com", "postgres"),
+				    gdm_user_access_pbi = Source{[Schema="gdm",Item="user_access_pbi"]}[Data]
+				in
+				    gdm_user_access_pbi
+
+	annotation PBI_ResultType = Table
+

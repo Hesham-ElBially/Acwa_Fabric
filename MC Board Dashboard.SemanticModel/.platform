@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "MC Board Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1160249a-6e6d-ba73-4899-4f212ed87f71"
+  }
+}
